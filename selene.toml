@@ -1,0 +1,12 @@
+std = "roblox"
+roblox-std-source = "pinned"
+exclude = ["Packages/**", "**/Packages/**", "vendor/**", "**/vendor/**"]
+
+[lints]
+global_usage = "deny"
+incorrect_standard_library_use = "deny"
+undefined_variable = "deny"
+unscoped_variables = "deny"
+unused_variable = "warn"
+shadowing = "warn"
+high_cyclomatic_complexity = "warn"

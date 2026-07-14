@@ -1,0 +1,22 @@
+# Roblox Studio local place files and backups
+*.rbxl
+*.rbxlx
+*.rbxl.lock
+*.rbxlx.lock
+*.autosave
+
+# Generated tooling output
+sourcemap.json
+*.log
+
+# Editors and operating systems
+.idea/
+.vscode/*.local.json
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.bak
+*.tmp
+*~
