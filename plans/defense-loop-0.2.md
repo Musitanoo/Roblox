@@ -2,7 +2,7 @@
 
 ## Status
 
-Preparation only. No Defense Loop 0.2 gameplay implementation has begun.
+Milestone 2 graybox readability is complete. No Defense Loop 0.2 gameplay implementation has begun.
 
 ## Outcome
 
@@ -113,6 +113,10 @@ Runtime verification uses the connected Studio instance, real prompts/UI input w
 - 2026-07-15: 0.2 scope reduced to one added route, one added enemy type, one diagnosis, and one observable rematch improvement; no gameplay implementation started.
 - 2026-07-15: ignored local Studio snapshot captured and verified against the tracked manifest: identity, byte length, SHA-256, and critical inventory all passed.
 - 2026-07-15: current baseline smoke start observed server `PREPARATION`, core 500, two remotes, zero runtime enemies/defenses, and the client `DefenseLoopUI` with status, build, and review panels. Output remained limited to the normal ready message and Studio returned to Edit mode.
+- 2026-07-15: created only the Studio-authoritative `Lane02`, `EnemySpawn02`, and primitive `Brute`. Route 2 uses cyan directional language and an orange labeled entrance; route 1 retains yellow arrows and its red entrance. Overview and close-up inspection proved the two routes and the Brute silhouette remain distinguishable before gameplay integration.
+- 2026-07-15: `Lane02` has exactly four direct BasePart nodes and 20 nested readability Parts. The Brute has 14 primitive Parts, bounds 12.1×11.2×5.73, `Root` as PrimaryPart, and zero scripts. The temporary readability clone was removed.
+- 2026-07-15: post-graybox 0.1 smoke test observed `PREPARATION`, core 500, two remotes, zero runtime enemies, complete client UI, and empty server/client warning/error histories. Studio returned to Edit mode.
+- 2026-07-15: ignored `studio/DefenseLoop-0.2-graybox.rbxl` captured at 108498 bytes with SHA-256 `90A4BA9BD5748650B1D5BA4A1CB3A222DA696EAC28BB24BC44D133823FDB4B9B`; its tracked manifest and dedicated checker record the exact delivered delta.
 
 ## Recovery strategy
 
@@ -125,5 +129,5 @@ Runtime verification uses the connected Studio instance, real prompts/UI input w
 ## Remaining unknowns for implementation
 
 - Final Brute tuning and exact wave composition require measured desktop playtests; the 90–150 second challenge target and content budget are fixed, but numbers are not guessed in this preparation phase.
-- Exact secondary-lane geometry must be grayboxed and inspected against turret range before implementation locks the causal baseline/rematch layouts.
+- The first secondary-lane geometry is now fixed and visually inspected. Its measured pad-to-nearest-node distances are 12.1, 25.3, 10.3, and 19 studs for Pad01 through Pad04; causal baseline/rematch layouts still require runtime turret and Brute tuning.
 - The 0.2 slice cannot be declared `PASS` until every applicable acceptance check is observed.

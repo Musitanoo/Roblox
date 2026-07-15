@@ -95,3 +95,16 @@ No check may be promoted to `PASS` from source inspection alone.
 ## Stop conditions
 
 Stop and reassess instead of expanding scope if either route cannot be understood in graybox, the Brute requires a new pathfinding framework, the autopsy cannot be derived from bounded server events, or the modified layout has no observable causal effect after tuning within the fixed content budget.
+
+## Graybox milestone evidence
+
+The first 0.2 milestone is complete without gameplay changes:
+
+- `Lane02` uses exactly four direct navigation Parts on the left flank, with blue-black asphalt, cyan borders, and cyan forward arrows.
+- `EnemySpawn02` is an orange Neon 7×0.5×7 Part at `(-18, 0.25, 27)` labeled `ROUTE 2 / ENTRÉE BRUTE`.
+- The primitive `Brute` is 12.1×11.2×5.73 studs versus 4.85×6.45×3 for `BasicZombie`, with a wide armored silhouette, oversized shoulders/fists, red eyes, and no Script.
+- Observed overview and close-up Studio views kept route 1 identifiable by yellow arrows/red entrance, route 2 by cyan/orange, and the Brute by silhouette plus `BRUTE • BRISE-MURS`.
+- A temporary Workspace clone used for close-up inspection was deleted before delivery.
+- A 0.1 smoke start remained in `PREPARATION` with core 500, two remotes, zero runtime enemies, the complete client UI, and zero server/client runtime warning or error.
+
+No 0.2 enemy spawning, movement, damage, wave, counter, autopsy, or client behavior exists yet.

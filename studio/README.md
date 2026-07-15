@@ -30,3 +30,19 @@ The checksum proves the ignored local file has not changed. The tracked manifest
 - synchronized `Server`, `Shared`, and `Client` roots present, with exactly one enabled Legacy `DefenseLoopClient` LocalScript.
 
 Do not commit `.rbxl`, `.rbxlx`, lock, autosave, or backup files. Do not use a snapshot as evidence that current disk source reached Studio; verify Script Sync separately.
+
+## Defense Loop 0.2 graybox milestone
+
+- Local file: `studio/DefenseLoop-0.2-graybox.rbxl`
+- Versioned inventory: `studio/DefenseLoop-0.2-graybox.manifest.json`
+- Captured UTC: `2026-07-15T10:01:10.8349299Z`
+- Length: `108498` bytes
+- SHA-256: `90A4BA9BD5748650B1D5BA4A1CB3A222DA696EAC28BB24BC44D133823FDB4B9B`
+- Added Studio-authoritative instances only: `Workspace.Prototype.Lane02`, `Workspace.Prototype.EnemySpawn02`, and `ServerStorage.GameTemplates.Brute`.
+- No Defense Loop 0.2 gameplay source is included in this milestone.
+
+Validate it with:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\check-studio-graybox.ps1
+```

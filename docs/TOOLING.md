@@ -45,9 +45,12 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\check.ps1
 
 # Validate the ignored local Studio 0.1 recovery snapshot against its tracked manifest
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\check-studio-baseline.ps1
+
+# Validate the ignored local Studio 0.2 graybox snapshot against its tracked manifest
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\check-studio-graybox.ps1
 ```
 
-The default checks target `data/src` and `tests` when present and validate the tracked Studio baseline manifest as JSON. The dedicated Studio baseline check is intentionally separate because a fresh clone does not contain the ignored local `.rbxl` recovery file.
+The default checks target `data/src` and `tests` when present and validate every tracked Studio manifest as JSON. The dedicated Studio snapshot checks are intentionally separate because a fresh clone does not contain the ignored local `.rbxl` recovery files.
 
 ## Script Sync mappings
 

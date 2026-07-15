@@ -9,7 +9,9 @@ try {
     Get-Content -Raw -LiteralPath ".luaurc" | ConvertFrom-Json | Out-Null
     Get-Content -Raw -LiteralPath ".vscode\extensions.json" | ConvertFrom-Json | Out-Null
     Get-Content -Raw -LiteralPath ".vscode\settings.json" | ConvertFrom-Json | Out-Null
-    Get-Content -Raw -LiteralPath "studio\DefenseLoop-0.1-baseline.manifest.json" | ConvertFrom-Json | Out-Null
+    Get-ChildItem -LiteralPath "studio" -Filter "*.manifest.json" -File | ForEach-Object {
+        Get-Content -Raw -LiteralPath $_.FullName | ConvertFrom-Json | Out-Null
+    }
     Write-Output "PASS configuration JSON"
 
     $stylua = Resolve-RokitTool -Alias "stylua" -RepositoryRoot $repositoryRoot
