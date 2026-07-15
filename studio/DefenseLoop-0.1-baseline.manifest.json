@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "slice": "Defense Loop 0.1",
+  "localSnapshot": {
+    "relativePath": "studio/DefenseLoop-0.1-baseline.rbxl",
+    "format": "rbxl",
+    "length": 106896,
+    "sha256": "FCD493534B212B801B48A7A2920957626A34D6410615F891C4A5E0DD51AA94C5",
+    "capturedUtc": "2026-07-15T07:47:48.2551455Z"
+  },
+  "prototype": {
+    "className": "Folder",
+    "directChildren": 8,
+    "baseFloor": {
+      "name": "BaseFloor",
+      "className": "Part",
+      "position": { "x": 0, "y": -0.5, "z": 0 },
+      "size": { "x": 64, "y": 1, "z": 64 },
+      "material": "Slate",
+      "color": { "r": 42, "g": 48, "b": 59 },
+      "anchored": true
+    },
+    "objectiveCore": {
+      "name": "ObjectiveCore",
+      "className": "Part",
+      "position": { "x": 0, "y": 3.5, "z": -25 },
+      "size": { "x": 8, "y": 7, "z": 8 },
+      "material": "Neon",
+      "color": { "r": 40, "g": 126, "b": 255 },
+      "anchored": true
+    },
+    "playerSpawn": {
+      "name": "PlayerSpawn",
+      "className": "SpawnLocation",
+      "position": { "x": 12, "y": 0.5, "z": -24 },
+      "size": { "x": 6, "y": 1, "z": 6 },
+      "material": "SmoothPlastic",
+      "color": { "r": 225, "g": 225, "b": 225 },
+      "anchored": true
+    },
+    "challengeConsole": {
+      "name": "ChallengeConsole",
+      "className": "Part",
+      "position": { "x": -12, "y": 2, "z": -24 },
+      "size": { "x": 5, "y": 4, "z": 5 },
+      "material": "Neon",
+      "color": { "r": 255, "g": 211, "b": 45 },
+      "anchored": true
+    },
+    "enemySpawn": {
+      "name": "EnemySpawn",
+      "className": "Part",
+      "position": { "x": 0, "y": 0.25, "z": 27 },
+      "size": { "x": 7, "y": 0.5, "z": 7 },
+      "material": "Neon",
+      "color": { "r": 230, "g": 65, "b": 65 },
+      "anchored": true
+    },
+    "lane": [
+      { "name": "Node01", "className": "Part", "position": { "x": 0, "y": 0.1, "z": 19 }, "size": { "x": 8, "y": 0.2, "z": 10.5 }, "material": "Asphalt", "color": { "r": 25, "g": 30, "b": 39 }, "anchored": true },
+      { "name": "Node02", "className": "Part", "position": { "x": 0, "y": 0.1, "z": 8 }, "size": { "x": 8, "y": 0.2, "z": 10.5 }, "material": "Asphalt", "color": { "r": 25, "g": 30, "b": 39 }, "anchored": true },
+      { "name": "Node03", "className": "Part", "position": { "x": 0, "y": 0.1, "z": -3 }, "size": { "x": 8, "y": 0.2, "z": 10.5 }, "material": "Asphalt", "color": { "r": 25, "g": 30, "b": 39 }, "anchored": true },
+      { "name": "Node04", "className": "Part", "position": { "x": 0, "y": 0.1, "z": -14 }, "size": { "x": 8, "y": 0.2, "z": 10.5 }, "material": "Asphalt", "color": { "r": 25, "g": 30, "b": 39 }, "anchored": true }
+    ],
+    "buildPads": [
+      { "name": "Pad01", "className": "Part", "position": { "x": -7, "y": 0.2, "z": 14 }, "size": { "x": 8, "y": 0.4, "z": 8 }, "material": "Neon", "color": { "r": 73, "g": 190, "b": 103 }, "anchored": true },
+      { "name": "Pad02", "className": "Part", "position": { "x": 7, "y": 0.2, "z": 5 }, "size": { "x": 8, "y": 0.4, "z": 8 }, "material": "Neon", "color": { "r": 73, "g": 190, "b": 103 }, "anchored": true },
+      { "name": "Pad03", "className": "Part", "position": { "x": -7, "y": 0.2, "z": -5 }, "size": { "x": 8, "y": 0.4, "z": 8 }, "material": "Neon", "color": { "r": 73, "g": 190, "b": 103 }, "anchored": true },
+      { "name": "Pad04", "className": "Part", "position": { "x": 7, "y": 0.2, "z": -14 }, "size": { "x": 8, "y": 0.4, "z": 8 }, "material": "Neon", "color": { "r": 73, "g": 190, "b": 103 }, "anchored": true }
+    ],
+    "readabilityVisualParts": 10
+  },
+  "templates": [
+    { "name": "BasicZombie", "className": "Model", "primaryPart": "Root", "descendants": 13 },
+    { "name": "Wall", "className": "Model", "primaryPart": "Root", "descendants": 12 },
+    { "name": "Turret", "className": "Model", "primaryPart": "Base", "descendants": 9 }
+  ],
+  "scriptSync": {
+    "serverRoot": true,
+    "sharedRoot": true,
+    "clientRoot": true,
+    "defenseLoopClientClass": "LocalScript",
+    "defenseLoopClientEnabled": true
+  }
+}

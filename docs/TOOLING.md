@@ -42,9 +42,12 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\format.ps1 -Check
 
 # Validate configuration, format, lint, and type analysis
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\check.ps1
+
+# Validate the ignored local Studio 0.1 recovery snapshot against its tracked manifest
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\check-studio-baseline.ps1
 ```
 
-Checks target `data/src` and `tests` when present.
+The default checks target `data/src` and `tests` when present and validate the tracked Studio baseline manifest as JSON. The dedicated Studio baseline check is intentionally separate because a fresh clone does not contain the ignored local `.rbxl` recovery file.
 
 ## Script Sync mappings
 
@@ -59,6 +62,10 @@ Configure these roots in Roblox Studio Explorer with **Script Sync → Sync to..
 On Windows, select the common parent directory `C:\Project\Roblox\data\src` for each of the three Folder instances. Script Sync then binds the instance names `Server`, `Shared`, and `Client` to the existing case-insensitive directories `server`, `shared`, and `client`. Do not select an individual child directory such as `data/src/server`: Studio would create the unwanted nested path `data/src/server/Server`.
 
 After configuration, confirm that each Folder shows the Script Sync icon in Explorer and that the local tree contains no nested `server/Server`, `shared/Shared`, or `client/Client` directory.
+
+If a synchronized root is paused, use **Script Sync → Reprendre la synchronisation**. When Studio reports a disk/instance conflict during Codex work, select **Version disque** because locally synchronized scripts are authoritative. For `DefenseLoopClient.local.luau`, verify that Studio retains exactly one enabled `LocalScript` named `DefenseLoopClient` with `RunContext=Legacy`; do not replace it with a client-context `Script`.
+
+Prove a repaired binding with a harmless temporary comment added on disk: it must appear automatically in Studio and disappear automatically after removal. Never keep the witness or repair the source by manually pasting it into Studio.
 
 Do not configure Rojo over any of these roots. Studio remains authoritative for unsynced geometry, terrain, lighting, assets, and manual instance composition.
 
