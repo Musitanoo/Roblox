@@ -1,110 +1,214 @@
-# Defense Loop 0.2
+# Defense Loop 0.2 — Two-Lane Failure-to-Learning Slice
 
-## Product question
+## Product outcome
 
-Defense Loop 0.2 must answer one question: after a second route and one wall-breaking Brute expose a real weakness, can the player understand the short autopsy, modify the four-pad layout, and observe a better rematch?
+Defense Loop 0.2 must prove one causal loop:
 
-This is still one voluntary challenge and one graybox arena. It does not validate adaptive hordes, progression, persistence, free placement, or content scale.
+> weakness observed → cause understood → base modified → voluntary rematch
 
-## Player-visible loop
+The player has two fixed attack lanes and eight fixed BuildPads. An eight-point
+budget forces a coverage tradeoff. Roamers generally seek the cheaper lane,
+while the announced Brute seeks fortifications and destroys walls quickly.
+Review presents server-authored facts, never a prescribed solution.
 
-1. In `PREPARATION`, configure the same four pads as `Empty`, `Wall`, or `Turret`.
-2. Start the single available challenge voluntarily.
-3. Standard zombies pressure the primary route while a clearly telegraphed Brute pressures the secondary route and attacks nearby walls.
-4. Finish in victory or defeat for a readable spatial reason.
-5. In `REVIEW`, see a compact autopsy naming the most damaging route and the Brute's structural impact.
-6. Return to `PREPARATION`, modify at least one pad, and rematch immediately.
-7. Observe whether the changed layout improves the relevant metric.
+Victory is useful, but it is not the primary proof. The slice succeeds when a
+player can identify the first breach, explain why the core suffered, change the
+layout, and start another attempt.
 
-## Fixed content budget
+## Fixed scope
 
-- Two routes: the existing primary lane plus one new secondary lane.
-- Two enemy types: `BasicZombie` and `Brute`.
-- Three waves in the existing 90–150 second target.
-- Four existing BuildPads; no extra pad and no free grid.
-- One challenge only; no difficulty selector.
-- One compact autopsy panel; no history, analytics backend, reward, or recommendation engine.
+- One graybox arena, approximately 96 × 72 studs.
+- Two fixed routes converging near the core.
+- Eight fixed BuildPads: `Left01`–`Left03`, `Right01`–`Right03`,
+  `CoreLeft`, and `CoreRight`.
+- Four build choices: `Empty`, `Wall`, `SlowTrap`, and `Turret`.
+- One eight-point server-owned construction budget.
+- Two enemy types: `Roamer` and `Brute`.
+- One challenge, `Challenge2_FirstBreach`, with three waves.
+- One current-run factual autopsy and immediate rematch.
+- One to two players; no persistent data and no publication.
 
-All health, damage, movement, spawn composition, and timing values remain centralized in shared configuration modules.
+Explicit exclusions: DataStore, progression, materials, crafting, expeditions,
+trading, monetization, player weapons, active repair, free placement, adaptive
+persistent hordes, final art, public assets, and unrelated refactoring.
 
-## Architectural weakness to test
+## Authoritative tuning
 
-The two routes must create a genuine coverage tradeoff. A layout concentrated on the primary route leaves the secondary route materially weaker. The Brute must make that weakness visible by prioritizing and damaging a nearby wall; it must never teleport, receive hidden buffs, or select a route adaptively.
+All values live in shared immutable configuration modules.
 
-The graybox must make both routes, their spawn origins, and their relationship to the four pads visible before the challenge starts. The intended weak route must be reproducible from configuration, not chosen from player telemetry.
+| Element | Values |
+| --- | --- |
+| Core | `MaxHealth = 1000` |
+| Wall | `MaxHealth = 700`, `Cost = 1`, blocking |
+| SlowTrap | `MaxHealth = 250`, `Cost = 1`, `SlowMultiplier = 0.55`, `EffectDuration = 1.25`, non-blocking |
+| Turret | `MaxHealth = 350`, `Cost = 2`, `Range = 28`, `Damage = 18`, `Cooldown = 0.35` |
+| Roamer | `MaxHealth = 100`, `MoveSpeed = 8`, `CoreDamage = 40`, `StructureDPS = 20` |
+| Brute | `MaxHealth = 450`, `MoveSpeed = 4.5`, `CoreDamage = 120`, `StructureDPS = 85` |
+| Runtime cap | `MaxActiveEnemies = 24` |
 
-## Elementary autopsy
+The initial target challenge duration is four to five minutes. Timing must be
+measured in Studio and reported honestly; it is tuning evidence, not a reason
+to add content.
 
-The server records bounded counters for the current challenge only:
+## World contract
 
-- enemies reaching the core per route;
-- core damage attributed per route;
-- wall damage caused by the Brute;
-- first structure destroyed, including its cause when known.
+```text
+Workspace/Prototype
+├── BaseFloor
+├── ObjectiveCore
+├── PlayerSpawn
+├── ChallengeConsole
+├── EnemySpawns
+│   ├── LeftSpawn
+│   └── RightSpawn
+├── Lanes
+│   ├── LeftLane/Node01..Node05
+│   └── RightLane/Node01..Node05
+├── BuildPads
+│   ├── Left01..Left03
+│   ├── Right01..Right03
+│   ├── CoreLeft
+│   └── CoreRight
+├── ReviewMarkers
+│   ├── LeftLaneMarker
+│   ├── RightLaneMarker
+│   └── FirstBreachMarker
+└── Runtime
+    ├── Enemies
+    └── Defenses
+```
 
-`REVIEW` displays only:
+The routes start separately and converge only near the core. Lateral pads affect
+their named lane; the two core pads form the last line. Every navigation route
+is an ordered five-node graph. No global pathfinding or per-frame route
+recalculation is permitted.
 
-- victory or defeat and remaining core health;
-- the route that caused the most core damage, or `Aucune` if neither did;
-- the Brute's wall damage and first destroyed structure;
-- `Modifier et retenter`.
+## Build and route rules
 
-Tie-breaking must be deterministic and documented. No persistent history is stored. The client renders replicated server results and never computes the diagnosis.
+Costs are `Empty = 0`, `Wall = 1`, `SlowTrap = 1`, and `Turret = 2`. The server
+validates state, player permission, pad identity, requested closed-set type,
+distance, budget, rate, occupancy, and concurrent processing. The client never
+sends a cost.
 
-## Server authority and limits
+Route cost is base travel cost plus 40 per blocking Wall and 15 per SlowTrap.
+Turrets do not change route cost.
 
-- Extend the existing four services; do not add a fifth service.
-- Reuse `RequestBuild` and `RequestStartChallenge`; no new client remote is required.
-- The server selects enemy type and route from immutable wave configuration.
-- Spawn requests remain bounded by `maxActiveEnemies` and the challenge run token.
-- Enemy type and route identifiers are validated against shared closed sets.
-- Brute damage, wall targeting, counters, results, snapshot restoration, and phase transitions remain server-owned.
-- Runtime counters are cleared on every start and every return to preparation.
+- A Roamer chooses the cheapest lane 75% of the time and the other lane 25% of
+  the time. Its route is immutable after spawn.
+- A Brute chooses the lane with the highest sum of live blocking-wall health.
+  Ties alternate deterministically.
+- In wave 3, if both lanes contain Walls, assign one Brute to each. Otherwise,
+  assign the first to the most fortified lane and the second to the other lane.
+- A Brute is announced six seconds before spawn and attacks the first blocking
+  Wall it reaches.
 
-## Explicit exclusions
+## Challenge 2 — Première Brèche
 
-Do not add DataStore, progression, rewards, multiple difficulties, adaptive route selection, adaptive horde logic, free placement, new defenses, player weapons, repair, farming maps, inventory, crafting, trading, monetization, final art, commercial audio, external assets, or publication.
+- Wave 1: six Roamers, three per lane, 0.9-second spawn interval, then eight
+  seconds of breathing room.
+- Wave 2: eight Roamers and one announced Brute, then ten seconds of breathing
+  room.
+- Wave 3: ten Roamers and two Brutes under the assignment rule above.
+- No boss and no persistent reward.
 
-## Acceptance contract
+`STARTING` captures the prepared layout, resets statistics and health, locks
+construction, and counts down three seconds. `DEFENDING` owns waves, routes,
+damage, and results. `REVIEW` locks construction, shows at most four cards, and
+activates bounded 3D markers. Returning to `PREPARATION` removes enemies,
+restores the captured layout at full health, hides markers, and waits for an
+explicit modification or rematch.
 
-The slice is `PASS` only when all applicable checks are observed:
+## Combat and autopsy
 
-1. Both routes are visible and used by server-spawned enemies.
-2. `BasicZombie` and `Brute` are visually distinguishable before contact.
-3. The Brute attacks a nearby wall and deals configured server-owned damage.
-4. Standard zombies retain the 0.1 movement, wall interaction, and core behavior.
-5. Enemy type and route are selected only by server wave configuration.
-6. Invalid enemy types, route identifiers, duplicate starts, and builds during `DEFENDING` fail closed.
-7. Concentrating defenses on the primary route produces the expected secondary-route weakness.
-8. Review attributes match observed route/core/wall events.
-9. The autopsy names the materially weak route for the baseline weak layout.
-10. Returning to preparation clears both enemy types and all current-run counters.
-11. The exact defensive snapshot is restored before modification.
-12. After a relevant pad change, rematch improves at least one declared metric: remaining core health, secondary-route core damage, secondary-route arrivals, or Brute wall damage.
-13. The autopsy updates to reflect the rematch rather than retaining stale values.
-14. Victory and defeat remain reachable for understandable configurations.
-15. Ten alternating baseline/rematch cycles complete without retained runtime instances or new Output warnings/errors.
-16. Solo and Server & Clients with two clients observe the same authoritative state and review.
-17. With 200 ms simulated incoming replication lag, no duplicate challenge or stale review is produced.
-18. A real touch sequence in iPhone landscape opens the build menu, changes a defense after review, launches the rematch, and keeps the autopsy controls in bounds.
-19. The complete 0.1 regression checklist still passes.
-20. No publication or persistence API access occurs.
+Roamers and Brutes attack the next blocking Wall, otherwise the core. They do
+not intentionally target Turrets or SlowTraps in this slice. Turrets select the
+living in-range enemy furthest along its route. SlowTrap effects refresh but do
+not multiply. The first enemy-caused Wall destruction is recorded once.
 
-No check may be promoted to `PASS` from source inspection alone.
+The server freezes these current-run fields:
 
-## Stop conditions
+`Result`, `ChallengeId`, `ChallengeDuration`, `CoreHealthRemaining`,
+`LeftLaneEnemyCount`, `RightLaneEnemyCount`, `LeftLaneCoreHits`,
+`RightLaneCoreHits`, `FirstBreachTime`, `FirstBreachLane`,
+`FirstBreachPadId`, `FirstBreachEnemyType`, `TotalWallDamageAbsorbed`,
+`TotalTurretDamage`, `TotalEnemiesSlowed`, and `EnemiesReachedCore`.
 
-Stop and reassess instead of expanding scope if either route cannot be understood in graybox, the Brute requires a new pathfinding framework, the autopsy cannot be derived from bounded server events, or the modified layout has no observable causal effect after tuning within the fixed content budget.
+Review displays four cards maximum: result/core health, lane traffic, first
+breach, and aggregate defense contribution. Lane markers visualize traffic and
+the first-breach pad is marked red. These are facts, not strategy instructions.
 
-## Graybox milestone evidence
+## Source architecture
 
-The first 0.2 milestone is complete without gameplay changes:
+The repository's established Script Sync mapping remains authoritative:
 
-- `Lane02` uses exactly four direct navigation Parts on the left flank, with blue-black asphalt, cyan borders, and cyan forward arrows.
-- `EnemySpawn02` is an orange Neon 7×0.5×7 Part at `(-18, 0.25, 27)` labeled `ROUTE 2 / ENTRÉE BRUTE`.
-- The primitive `Brute` is 12.1×11.2×5.73 studs versus 4.85×6.45×3 for `BasicZombie`, with a wide armored silhouette, oversized shoulders/fists, red eyes, and no Script.
-- Observed overview and close-up Studio views kept route 1 identifiable by yellow arrows/red entrance, route 2 by cyan/orange, and the Brute by silhouette plus `BRUTE • BRISE-MURS`.
-- A temporary Workspace clone used for close-up inspection was deleted before delivery.
-- A 0.1 smoke start remained in `PREPARATION` with core 500, two remotes, zero runtime enemies, the complete client UI, and zero server/client runtime warning or error.
+- shared contracts/config: `ReplicatedStorage/Shared/Game`;
+- runtime remotes/state: `ReplicatedStorage/Game`;
+- server systems: `ServerScriptService/Server/Game`;
+- client entrypoint/controllers: `StarterPlayerScripts/Client`.
 
-No 0.2 enemy spawning, movement, damage, wave, counter, autopsy, or client behavior exists yet.
+Use exactly the required seven server modules:
+
+`GameStateService`, `BuildService`, `ChallengeService`, `RouteService`,
+`EnemyService`, `DefenseService`, and `CombatStatsService`.
+
+Remotes are `RequestBuild`, `RequestStartChallenge`,
+`RequestReturnToPreparation`, and `StateChanged`. The server owns state, budget,
+construction, routes, spawns, damage, health, first breach, outcome, and report.
+
+## Acceptance matrix
+
+| ID | Required observation |
+| --- | --- |
+| T01 | Clean startup in `PREPARATION`. |
+| T02 | A fifth Turret is rejected by the eight-point budget. |
+| T03 | Both lanes are used when neither contains a Wall. |
+| T04 | Roamers use a fortified lane less often over a meaningful sample. |
+| T05 | The Brute selects the walled lane and destroys a Wall. |
+| T06 | `FirstBreach` is unique and matches lane, pad, time, and enemy type. |
+| T07 | SlowTrap slows and refreshes without multiplicative stacking. |
+| T08 | Turret targeting, server damage, and accumulated damage agree. |
+| T09 | A build request during `DEFENDING` is rejected. |
+| T10 | A duplicate start request cannot create a second challenge. |
+| T11 | Victory transitions to `REVIEW`. |
+| T12 | Defeat transitions to `REVIEW`. |
+| T13 | The captured layout and full health are restored. |
+| T14 | The player modifies the layout and starts a rematch. |
+| T15 | Ten cycles leave no runtime residue, error, warning, or obvious growth. |
+| T16 | A server and two clients share authoritative state and report. |
+| T17 | About 150 ms simulated latency produces no duplicate operation. |
+| T18 | Essential controls work through real touch on a small emulated screen. |
+
+Every row receives `PASS`, `FAIL`, `PARTIAL`, or `UNKNOWN`; source inspection
+alone cannot prove runtime behavior. Technical `PASS` additionally requires no
+DataStore use, no publication, server authority, a bounded diff, and applicable
+static checks passing.
+
+## Human gate
+
+After technical validation, test five to ten unbriefed players. Provisional
+thresholds are 70% correctly naming the weakness, 50% modifying the base without
+prompting, and 40% voluntarily rematching.
+
+## Decision record — provisional pass without a human gate
+
+Founder decision, 2026-07-15: an unbriefed human panel is not currently
+available. Defense Loop 0.2 therefore receives `PASS TECHNIQUE` and
+`PASS PROVISOIRE / GO CONDITIONNEL` for the next reversible slice. Human
+comprehension remains explicitly `UNKNOWN`; this decision must never be reported
+as a measured `PASS PRODUIT`.
+
+The temporary replacement is a synthetic causal gate:
+
+- compare deterministic baseline and modified layouts over repeatable seeds;
+- require the rematch to improve at least two declared measures: core health by
+  at least 150, first breach by at least 15 seconds, at least three fewer core
+  arrivals, or a measurable reduction of damage on the weak lane;
+- verify that the six-second Brute warning, route choice, unique FirstBreach,
+  factual review, mobile controls, reset, and rematch stay exact;
+- use independent zero-context visual reviews as supporting evidence only, never
+  as a claim that human understanding was measured.
+
+Defense Loop 0.3 may proceed provisionally only while its work remains narrow,
+reversible, and free of persistence, progression, economy, monetization, or
+content expansion. The first available real-player traffic must reopen the human
+gate and measure understand → modify → rematch before any broader product claim.

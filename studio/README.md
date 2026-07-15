@@ -46,3 +46,19 @@ Validate it with:
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\check-studio-graybox.ps1
 ```
+
+## Defense Loop 0.2 full graybox recovery
+
+- Local file: `studio/DefenseLoop-0.2-full.rbxl`
+- Versioned inventory: `studio/DefenseLoop-0.2-full.manifest.json`
+- Captured UTC: `2026-07-15T11:13:43.2964558Z`
+- Length: `111499` bytes
+- SHA-256: `4586DE0D61F4C75D3B63C67A8C0ACD96ED691F2847CB7CFB90315345F625B4BD`
+- Intended Studio instance: `Expérience sans titre`
+  (`7f5fb084-b3e7-4e9d-9e20-04bd7519705e`), Edit mode.
+- Publication: not performed.
+
+This recovery copy contains the exact two-lane/eight-pad graybox, review markers,
+runtime folders, and five primitive templates used by the 0.2 playtests. It does
+not replace the synchronized Luau on disk. After opening it, reconnect the three
+native Script Sync roots and choose the local disk source for synchronized code.

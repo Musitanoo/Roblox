@@ -1,7 +1,6 @@
 --!strict
 
 type GameState = "PREPARATION" | "STARTING" | "DEFENDING" | "VICTORY" | "DEFEAT" | "REVIEW"
-type Outcome = "VICTORY" | "DEFEAT"
 
 local ALLOWED_TRANSITIONS: { [GameState]: { [GameState]: boolean } } = {
 	PREPARATION = { STARTING = true },
@@ -15,37 +14,10 @@ local ALLOWED_TRANSITIONS: { [GameState]: { [GameState]: boolean } } = {
 local GameStateService = {}
 GameStateService.__index = GameStateService
 
-local function getHealthColor(ratio: number): Color3
-	if ratio <= 0.3 then
-		return Color3.fromRGB(230, 65, 65)
-	end
-	if ratio <= 0.6 then
-		return Color3.fromRGB(255, 196, 61)
-	end
-	return Color3.fromRGB(73, 190, 103)
-end
-
-local function updateCoreVisual(core: BasePart, health: number, maxHealth: number)
-	local ratio = if maxHealth > 0 then math.clamp(health / maxHealth, 0, 1) else 0
-	local billboard = core:FindFirstChild("CoreBillboard")
-	if billboard and billboard:IsA("BillboardGui") then
-		local fill = billboard:FindFirstChild("Fill", true)
-		if fill and fill:IsA("Frame") then
-			fill.Size = UDim2.fromScale(ratio, 1)
-			fill.BackgroundColor3 = getHealthColor(ratio)
-		end
-	end
-
-	local light = core:FindFirstChild("CoreLight")
-	if light and light:IsA("PointLight") then
-		light.Color = if ratio <= 0.3 then Color3.fromRGB(255, 88, 88) else core.Color
-		light.Brightness = 1.5 + ratio * 2.5
-	end
-end
-
 export type Service = typeof(setmetatable(
 	{} :: {
 		_replicaRoot: Folder,
+		_stateChanged: RemoteEvent,
 		_core: BasePart,
 		_phase: GameState,
 		_coreMaxHealth: number,
@@ -53,9 +25,28 @@ export type Service = typeof(setmetatable(
 	GameStateService
 ))
 
-function GameStateService.new(replicaRoot: Folder, core: BasePart, coreMaxHealth: number): Service
+local function updateCoreVisual(core: BasePart, health: number, maxHealth: number)
+	local ratio = if maxHealth > 0 then math.clamp(health / maxHealth, 0, 1) else 0
+	core.Color = if ratio <= 0.3
+		then Color3.fromRGB(255, 70, 70)
+		elseif ratio <= 0.6 then Color3.fromRGB(255, 188, 65)
+		else Color3.fromRGB(45, 145, 255)
+
+	local label = core:FindFirstChild("Label", true)
+	if label and label:IsA("TextLabel") then
+		label.Text = string.format("NOYAU • %d PV", math.floor(health + 0.5))
+	end
+end
+
+function GameStateService.new(
+	replicaRoot: Folder,
+	stateChanged: RemoteEvent,
+	core: BasePart,
+	coreMaxHealth: number
+): Service
 	local self: Service = setmetatable({
 		_replicaRoot = replicaRoot,
+		_stateChanged = stateChanged,
 		_core = core,
 		_phase = "PREPARATION" :: GameState,
 		_coreMaxHealth = coreMaxHealth,
@@ -65,12 +56,10 @@ function GameStateService.new(replicaRoot: Folder, core: BasePart, coreMaxHealth
 	replicaRoot:SetAttribute("Countdown", 0)
 	replicaRoot:SetAttribute("Wave", 0)
 	replicaRoot:SetAttribute("TotalWaves", 0)
-	replicaRoot:SetAttribute("Outcome", "")
-	replicaRoot:SetAttribute("FirstDestroyed", "Aucune")
-	replicaRoot:SetAttribute("ReachedCore", 0)
+	replicaRoot:SetAttribute("EnemiesRemaining", 0)
+	replicaRoot:SetAttribute("BruteWarning", "")
 	replicaRoot:SetAttribute("CoreMaxHealth", coreMaxHealth)
 	self:restoreCore()
-
 	return self
 end
 
@@ -82,14 +71,13 @@ function GameStateService.setPhase(self: Service, nextPhase: GameState): boolean
 	if nextPhase == self._phase then
 		return true
 	end
-
-	local allowedFromCurrent = ALLOWED_TRANSITIONS[self._phase]
-	if allowedFromCurrent[nextPhase] ~= true then
+	if ALLOWED_TRANSITIONS[self._phase][nextPhase] ~= true then
 		return false
 	end
 
 	self._phase = nextPhase
 	self._replicaRoot:SetAttribute("Phase", nextPhase)
+	self._stateChanged:FireAllClients(nextPhase)
 	return true
 end
 
@@ -102,6 +90,14 @@ function GameStateService.setWave(self: Service, wave: number, totalWaves: numbe
 	self._replicaRoot:SetAttribute("TotalWaves", math.max(0, math.floor(totalWaves)))
 end
 
+function GameStateService.setEnemiesRemaining(self: Service, count: number)
+	self._replicaRoot:SetAttribute("EnemiesRemaining", math.max(0, math.floor(count)))
+end
+
+function GameStateService.setBruteWarning(self: Service, message: string)
+	self._replicaRoot:SetAttribute("BruteWarning", string.sub(message, 1, 80))
+end
+
 function GameStateService.restoreCore(self: Service)
 	self._core:SetAttribute("MaxHealth", self._coreMaxHealth)
 	self._core:SetAttribute("Health", self._coreMaxHealth)
@@ -109,37 +105,24 @@ function GameStateService.restoreCore(self: Service)
 	updateCoreVisual(self._core, self._coreMaxHealth, self._coreMaxHealth)
 end
 
+function GameStateService.getCoreHealth(self: Service): number
+	local value = self._core:GetAttribute("Health")
+	return if typeof(value) == "number" then value else self._coreMaxHealth
+end
+
 function GameStateService.damageCore(self: Service, damage: number): number
-	local currentHealth = self._core:GetAttribute("Health")
-	local health = if typeof(currentHealth) == "number" then currentHealth else self._coreMaxHealth
-	local nextHealth = math.max(0, health - math.max(0, damage))
+	local nextHealth = math.max(0, self:getCoreHealth() - math.max(0, damage))
 	self._core:SetAttribute("Health", nextHealth)
 	self._replicaRoot:SetAttribute("CoreHealth", nextHealth)
 	updateCoreVisual(self._core, nextHealth, self._coreMaxHealth)
 	return nextHealth
 end
 
-function GameStateService.setReachedCore(self: Service, count: number)
-	self._replicaRoot:SetAttribute("ReachedCore", math.max(0, math.floor(count)))
-end
-
-function GameStateService.setReview(
-	self: Service,
-	outcome: Outcome,
-	firstDestroyed: string,
-	reachedCore: number
-)
-	self._replicaRoot:SetAttribute("Outcome", outcome)
-	self._replicaRoot:SetAttribute("FirstDestroyed", firstDestroyed)
-	self:setReachedCore(reachedCore)
-end
-
-function GameStateService.clearReview(self: Service)
-	self._replicaRoot:SetAttribute("Outcome", "")
-	self._replicaRoot:SetAttribute("FirstDestroyed", "Aucune")
-	self._replicaRoot:SetAttribute("ReachedCore", 0)
+function GameStateService.clearTransient(self: Service)
 	self:setCountdown(0)
 	self:setWave(0, 0)
+	self:setEnemiesRemaining(0)
+	self:setBruteWarning("")
 end
 
 return GameStateService

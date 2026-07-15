@@ -1,98 +1,126 @@
 # Defense Loop 0.2 — ExecPlan
 
-## Status
+## Status and outcome
 
-Milestone 2 graybox readability is complete. No Defense Loop 0.2 gameplay implementation has begun.
+Implementation is complete in the synchronized source roots and the active
+Studio graybox. The technical acceptance suite is observed; the separate human
+gate with unbriefed players remains outside this implementation run.
 
-## Outcome
+The previous minimal two-route graybox milestone remains recoverable in Git and
+in the local Studio recovery snapshot. The founder's current 0.2 specification
+supersedes its four-pad/four-service/90–150-second constraints.
 
-Extend the validated 0.1 loop with exactly one secondary route, one wall-breaking Brute, one reproducible architectural weakness, and one elementary server-authored autopsy. A player must be able to read the weakness, change the existing four-pad configuration, rematch, and observe an improvement in a declared metric.
+Deliver the smallest authoritative implementation that proves:
 
-The product contract is `docs/DEFENSE_LOOP_0_2.md`. Its 20 checks are authoritative for this slice.
+> architectural weakness → factual autopsy → modification → voluntary rematch
 
-## Baseline prerequisites
+The product contract is `docs/DEFENSE_LOOP_0_2.md`. No commit or publication is
+authorized for this execution.
 
-- Defense Loop 0.1 source, tooling documentation, and acceptance evidence are committed before implementation starts.
-- The active Studio place is saved to the local ignored recovery path documented in `studio/README.md`.
-- Studio is in Edit mode, the intended instance is selected, and Script Sync delivers the three authoritative disk roots.
-- Repository static checks pass and the 0.1 Output baseline contains no new warning or error.
-- No nested `server/Server`, `shared/Shared`, or `client/Client` synchronization directory exists.
+## Baseline audit — 2026-07-15
 
-If any prerequisite fails, 0.2 implementation does not start.
+- Repository: `C:\Project\Roblox`, branch `agent/defense-loop-0.2`.
+- Worktree was clean before this plan update.
+- One intended Studio instance was selected in Edit mode.
+- Native Script Sync maps the three authoritative disk roots documented in
+  `AGENTS.md`; no nested duplicate mapping was found.
+- Present: 0.1 state machine, server-validated four-pad placement, snapshot and
+  reset, BasicZombie, Wall, Turret, and the readability-only Lane02/Spawn02/
+  Brute milestone.
+- Missing: the exact 96 × 72 hierarchy, eight pads, build budget, SlowTrap,
+  two-route runtime choice, Challenge 2, three required services, current-run
+  autopsy, new remotes, and 0.2 client UI.
+- Incompatible: the old four-pad world, single-lane `EnemyService`, combat-owned
+  `BuildService`, 500-health core config, old waves, and monolithic 0.1 UI.
+- Overwrite audit: no uncommitted user file was identified. Studio migration
+  replaces only project-owned prototype geometry/templates. The ignored 0.1 and
+  0.2 graybox place files plus tracked manifests provide recovery.
 
-## DataModel delta
+## Implementation decisions
 
-Keep existing instance names and add only:
+1. Preserve the existing repository mappings instead of inventing the literal
+   top-level paths from the product diagram. Shared config therefore remains at
+   `ReplicatedStorage/Shared/Game`, while `ReplicatedStorage/Game` holds mutable
+   replicated state and remotes.
+2. Migrate the world atomically to the exact two-lane/eight-pad hierarchy. Do
+   not retain compatibility aliases for the old `Lane`, `Lane02`, `EnemySpawn`,
+   or `Pad01`–`Pad04` names.
+3. Keep exactly seven focused server modules. Split combat ownership out of the
+   old `BuildService`; do not add a framework or general service container.
+4. Use closed identifiers: routes `Left`/`Right`, enemies `Roamer`/`Brute`, and
+   defenses `Empty`/`Wall`/`SlowTrap`/`Turret`.
+5. Keep route selection deterministic enough to test: injectable seeded random
+   selection for the 75/25 Roamer rule and alternating Brute tie resolution.
+6. Record only bounded current-run counters. Freeze one report at result, clear
+   it on the next run/return, and never persist it.
+7. Preserve the 0.1 client entrypoint for Script Sync and compose three local
+   controller ModuleScripts beneath `data/src/client/GameClient`.
 
-```text
-Workspace/Prototype
-├── EnemySpawn02
-└── Lane02
-    ├── Node01
-    ├── Node02
-    ├── Node03
-    └── Node04
+## Intended source delta
 
-ServerStorage/GameTemplates
-└── Brute
-```
+Shared:
 
-`EnemySpawn` and `Lane` remain the primary route to avoid an unnecessary world migration. The four existing BuildPads remain unchanged in count and interaction model.
+- update `GameTypes.luau`, `ChallengeConfig.luau`, `DefenseConfig.luau`, and
+  `EnemyConfig.luau`;
+- add `RouteConfig.luau` and `StateConstants.luau`.
 
-## Source delta
+Server:
 
-Expected edits, kept within the current architecture:
+- update `GameServer.server.luau`, `GameStateService.luau`, `BuildService.luau`,
+  `ChallengeService.luau`, and `EnemyService.luau`;
+- add `RouteService.luau`, `DefenseService.luau`, and
+  `CombatStatsService.luau`.
 
-- `data/src/shared/Game/GameTypes.luau`: closed `EnemyType` and `RouteId` types plus validators.
-- `data/src/shared/Game/Config/ChallengeConfig.luau`: typed wave entries containing enemy type and route.
-- `data/src/shared/Game/Config/EnemyConfig.luau`: separate immutable BasicZombie and Brute tuning.
-- `data/src/server/Game/Services/EnemyService.luau`: two route definitions, typed spawn, per-type movement and wall damage, bounded event callbacks.
-- `data/src/server/Game/Services/ChallengeService.luau`: config-driven spawns and current-run autopsy counters.
-- `data/src/server/Game/Services/GameStateService.luau`: replicated, resettable autopsy result attributes.
-- `data/src/client/DefenseLoopClient.local.luau`: compact autopsy presentation and route labels only.
-- Studio-authoritative graybox and `Brute` primitive template.
+Client:
 
-`BuildService`, `GameServer`, and `DefenseConfig` should remain unchanged unless implementation evidence shows a concrete 0.2 requirement. No new service, RemoteEvent, framework, package, or persistence adapter is planned.
+- update `DefenseLoopClient.local.luau`;
+- add `GameClient/BuildController.luau`, `HUDController.luau`, and
+  `ReviewController.luau`.
 
-## Proposed immutable identifiers
+Studio-owned delta:
 
-- Enemy types: `BasicZombie`, `Brute`.
-- Routes: `Primary`, `Secondary`.
+- migrate `Workspace/Prototype` to `EnemySpawns`, `Lanes`, eight `BuildPads`,
+  three `ReviewMarkers`, and empty `Runtime/Enemies` and `Runtime/Defenses`;
+- add/tune primitive `SlowTrap`, `Roamer`, and `Brute` templates under
+  `ServerStorage/GameTemplates` without external assets.
 
-These identifiers are server-selected from configuration. They are never accepted as authoritative client inputs.
+## Service responsibilities and boundaries
 
-## Autopsy contract
+- `GameStateService`: legal transitions, core health, state replication.
+- `BuildService`: pad registry, budget, build validation, prepared snapshot, and
+  restoration. It never trusts cost from the client.
+- `RouteService`: fixed node graph, route costs, wall-health BarrierScore,
+  Roamer/Brute choices, and review marker presentation.
+- `EnemyService`: bounded spawn records, movement, wall attacks, core arrival,
+  slows, deaths, and route progress.
+- `DefenseService`: template lifecycle, defense health, turret target/damage,
+  SlowTrap effects, wall destruction, and cleanup.
+- `CombatStatsService`: bounded counters, unique FirstBreach, frozen report,
+  and replicated report attributes.
+- `ChallengeService`: remote validation, run token, snapshot, countdown, wave
+  schedule, Brute warning, win/defeat, review, reset, and rematch.
 
-Maintain a single current-run record inside `ChallengeService` with bounded numeric counters:
-
-- arrivals and core damage indexed by the two fixed route identifiers;
-- Brute wall damage;
-- first destroyed structure and cause.
-
-At finish, select the weak route by highest core damage, then highest arrivals, then stable route order (`Primary`, `Secondary`). If both routes caused zero core damage, report `None`. Replicate only the final compact fields needed by the client. Clear them before every challenge and on return to preparation.
-
-## Security and failure analysis
-
-- Keep run-token cancellation around every spawn loop, intermission, finish, and delayed review transition.
-- Reject unknown config identifiers during service construction rather than degrading to an arbitrary template or route.
-- Keep `maxActiveEnemies` as a hard server cap across both enemy types.
-- Clamp all damage to non-negative configured values; never accept damage, type, route, counters, or diagnosis from the client.
-- Destroy both enemy types on finish/reset and clear their records before restoring the snapshot.
-- Ensure duplicated, delayed, and reordered client requests cannot start a second run or return stale review data.
-- Avoid per-frame scans beyond the bounded active-enemy and four-defense sets already present in 0.1.
+Dependencies are wired explicitly in `GameServer`. Cycles use narrow callbacks
+registered after construction. All client-triggered paths fail closed and are
+rate-limited.
 
 ## Milestones
 
-1. Reconfirm baseline commit, Studio recovery file, Script Sync, and 0.1 smoke test.
-2. Graybox `Lane02`/`EnemySpawn02` and primitive `Brute`; prove route readability before code expansion.
-3. Extend shared types/config and make `EnemyService.spawn(enemyType, routeId)` fail closed.
-4. Add config-driven mixed waves and prove both routes plus Brute wall damage.
-5. Add bounded autopsy counters and server-replicated review fields.
-6. Complete baseline weakness → review → modification → improved rematch on desktop.
-7. Execute abuse, reset, ten-cycle, two-client, latency, and real-touch mobile tests.
-8. Re-run the complete 0.1 regression matrix, audit the diff, and record final evidence.
-
-Each milestone must leave a playable, recoverable state. Do not begin a later milestone while an earlier runtime invariant is failing.
+1. Contract and recovery: update this plan/product contract; verify clean
+   baseline, active Studio, mappings, and recovery artifacts.
+2. World migration: create exact two-lane hierarchy and templates; inspect
+   overview, lane convergence, pad ownership, marker hiding, and template
+   readability before gameplay integration.
+3. Shared/server core: implement configs, types, seven services, four remotes,
+   build budget, routes, combat, wave lifecycle, report, and restoration.
+4. Client: implement touch-first preparation, defending HUD, Brute warning,
+   four-card review, return, modification, and rematch.
+5. Static validation: format, format check, Selene/Luau analysis, diff check, and
+   source audit for DataStore/publication/client-owned authority.
+6. Runtime validation: execute and record T01–T18 with server/client Output,
+   observable state, screenshots, two clients, latency, and Device Emulator.
+7. Handoff: inspect the complete unstaged diff, record every unproven behavior,
+   and deliver a truthful global verdict without commit or publication.
 
 ## Verification commands
 
@@ -104,30 +132,71 @@ git diff --check
 git status --short
 ```
 
-Runtime verification uses the connected Studio instance, real prompts/UI input when relevant, server and client state inspection, Output review, Server & Clients with two clients, 200 ms simulated incoming replication lag, and iPhone landscape Device Emulator touch input. No place publication occurs.
+Runtime checks use the selected Studio place, Client/Server inspection, Server &
+Clients with two clients, approximately 150 ms simulated latency, and a real
+touch sequence in a small-screen Device Emulator. Screenshots prove only visual
+state; server attributes/instances and Output prove the corresponding logic.
+
+## Recovery and stop conditions
+
+- Disk remains authoritative for synchronized scripts; Studio remains
+  authoritative for unsynchronized geometry/templates.
+- If Script Sync is not observed after a source edit, stop before assigning a
+  runtime verdict.
+- If world migration fails, return to Edit mode and use the local graybox
+  snapshot only for recovery, then re-establish Script Sync from disk.
+- Run tokens cancel delayed wave/review work before cleanup. Runtime folders and
+  connections must be empty/bounded after every cycle.
+- Stop rather than expanding scope if fixed routes cannot express the mechanic,
+  if a general pathfinding framework appears necessary, or if review facts do
+  not explain an observable event.
 
 ## Evidence ledger
 
-- 2026-07-15: 0.1 source and acceptance evidence audited; repository checks passed with StyLua, Selene (0 errors, 0 warnings, 0 parse errors), and Luau LSP.
-- 2026-07-15: one intended Studio instance identified in Edit mode; Output contained only `Defense Loop 0.1 server ready`.
-- 2026-07-15: 0.2 scope reduced to one added route, one added enemy type, one diagnosis, and one observable rematch improvement; no gameplay implementation started.
-- 2026-07-15: ignored local Studio snapshot captured and verified against the tracked manifest: identity, byte length, SHA-256, and critical inventory all passed.
-- 2026-07-15: current baseline smoke start observed server `PREPARATION`, core 500, two remotes, zero runtime enemies/defenses, and the client `DefenseLoopUI` with status, build, and review panels. Output remained limited to the normal ready message and Studio returned to Edit mode.
-- 2026-07-15: created only the Studio-authoritative `Lane02`, `EnemySpawn02`, and primitive `Brute`. Route 2 uses cyan directional language and an orange labeled entrance; route 1 retains yellow arrows and its red entrance. Overview and close-up inspection proved the two routes and the Brute silhouette remain distinguishable before gameplay integration.
-- 2026-07-15: `Lane02` has exactly four direct BasePart nodes and 20 nested readability Parts. The Brute has 14 primitive Parts, bounds 12.1×11.2×5.73, `Root` as PrimaryPart, and zero scripts. The temporary readability clone was removed.
-- 2026-07-15: post-graybox 0.1 smoke test observed `PREPARATION`, core 500, two remotes, zero runtime enemies, complete client UI, and empty server/client warning/error histories. Studio returned to Edit mode.
-- 2026-07-15: ignored `studio/DefenseLoop-0.2-graybox.rbxl` captured at 108498 bytes with SHA-256 `90A4BA9BD5748650B1D5BA4A1CB3A222DA696EAC28BB24BC44D133823FDB4B9B`; its tracked manifest and dedicated checker record the exact delivered delta.
-
-## Recovery strategy
-
-- Git provides the authoritative 0.1 code and documentation checkpoint.
-- The ignored local Studio snapshot provides emergency recovery for unsynchronized world geometry and templates; it must never replace the disk-authoritative Script Sync roots during normal work.
-- Before world edits, verify the snapshot path and checksum recorded in `studio/README.md`.
-- If a Studio edit fails, stop play, reopen the recovery snapshot only if necessary, restore Script Sync from disk, and rerun the 0.1 smoke test before resuming.
-- Never publish as a recovery mechanism.
-
-## Remaining unknowns for implementation
-
-- Final Brute tuning and exact wave composition require measured desktop playtests; the 90–150 second challenge target and content budget are fixed, but numbers are not guessed in this preparation phase.
-- The first secondary-lane geometry is now fixed and visually inspected. Its measured pad-to-nearest-node distances are 12.1, 25.3, 10.3, and 19 studs for Pad01 through Pad04; causal baseline/rematch layouts still require runtime turret and Brute tuning.
-- The 0.2 slice cannot be declared `PASS` until every applicable acceptance check is observed.
+- 2026-07-15: audit completed; the clean 0.1 plus readability-only 0.2 milestone
+  is recoverable and synchronized.
+- 2026-07-15: new founder specification reconciled. The old four-pad/four-service
+  contract is explicitly superseded; no user-authored uncommitted change is at
+  risk.
+- 2026-07-15: Studio world migrated to the exact two-lane/eight-pad hierarchy.
+  Left and right routes, separate spawns, convergence, review markers, runtime
+  folders, and all five primitive templates were inspected in the intended
+  Studio instance. No external asset was introduced.
+- 2026-07-15: Script Sync exposed all seven server services, four remotes, shared
+  configs/types, and three client controller modules in the active Edit
+  DataModel. A later grep in Studio observed the final unique-slow counter fix.
+- 2026-07-15: budget refusal, two-route use, seeded 75/25 route bias, Brute lane
+  choice/wall destruction, unique FirstBreach, turret damage, locked building,
+  rejected double start, victory, defeat, snapshot restoration, and rematch were
+  observed through authoritative runtime attributes and instances.
+- 2026-07-15: an actual iPhone 7 landscape touch sequence returned from REVIEW,
+  selected `SlowTrap` on a physical pad, and launched the rematch. All essential
+  preparation, build, defending, and four-card review controls remained within
+  the measured 667 × 375 viewport.
+- 2026-07-15: a server with two clients showed the same defeat report on both
+  clients. A separate 150 ms incoming-replication-lag run kept client/server on
+  the same phase and wave while two start requests produced one challenge.
+- 2026-07-15: a controlled runtime overlap placed two SlowTraps over one live
+  Roamer. The observed multiplier was `0.55` before and after refresh, never a
+  multiplicative `0.3025`. The counter now records each enemy only once.
+- 2026-07-15: initial complete challenges measured 72.6–90.3 seconds. Wave 2
+  and 3 pacing was tuned without changing counts or enemy rules. A first
+  confirmation measured 236.7 seconds; the final measured victory was 241.2
+  seconds, inside the 240–300-second target.
+- 2026-07-15: a temporary Studio-only hook exercised the real state, challenge,
+  enemy, report, cleanup, and restoration services for ten consecutive cycles
+  after one warm-up. Every sample returned `PREPARATION`, core `1000`, zero
+  enemies, and zero defenses; Runtime retained only its two folders. Memory tags
+  did not grow (`LuaHeap` 680.94→677.63 MB, `Instances` 35.08→35.06 MB,
+  `Signals` 13.47→13.45 MB). The hook was removed before final verification.
+- 2026-07-15: the final synchronized configuration also produced a no-defense
+  defeat in 155.9 seconds: core `0`, 19 enemies reached it, traffic 11 Left / 8
+  Right, and no runtime enemy remained in REVIEW. Returning cleared the report
+  and restored `PREPARATION`, core `1000`, budget `0`, and both runtime folders
+  empty. Runtime Output contained only `Defense Loop 0.2 server ready`.
+- 2026-07-15: founder decision recorded because an unbriefed human panel is not
+  currently available. The slice keeps `PASS TECHNIQUE` and receives
+  `PASS PROVISOIRE / GO CONDITIONNEL` for narrow, reversible 0.3 work. Human
+  comprehension remains `UNKNOWN`, a synthetic causal gate supplies the interim
+  evidence, and the first available real-player traffic must reopen the human
+  gate before any `PASS PRODUIT` claim.

@@ -8,37 +8,23 @@ type EnemyType = "Roamer" | "Brute"
 type RouteId = "Left" | "Right"
 type StateService = {
 	getPhase: (self: StateService) -> GameState,
-	damageCore: (self: StateService, damage: number) -> number,
-	setEnemiesRemaining: (self: StateService, count: number) -> (),
+	damageCore: (self: StateService, number) -> number,
+	setEnemiesRemaining: (self: StateService, number) -> (),
 }
 type RouteService = {
-	getSpawn: (self: RouteService, routeId: RouteId) -> BasePart,
-	getNodes: (self: RouteService, routeId: RouteId) -> { BasePart },
+	getSpawn: (self: RouteService, RouteId) -> BasePart,
+	getPath: (self: RouteService, RouteId, EnemyType) -> { Vector3 },
 }
 type DefenseService = {
-	findBlockingWall: (
-		self: DefenseService,
-		routeId: RouteId,
-		position: Vector3,
-		range: number
-	) -> Model?,
-	damageWall: (
-		self: DefenseService,
-		wall: Model,
-		damage: number,
-		enemyType: EnemyType
-	) -> boolean,
+	findBlockingWall: (self: DefenseService, RouteId, Vector3, number) -> Model?,
+	damageWall: (self: DefenseService, Model, number, EnemyType) -> boolean,
 }
 type StatsService = {
-	recordEnemySpawn: (self: StatsService, routeId: RouteId) -> (),
-	recordCoreHit: (self: StatsService, routeId: RouteId) -> (),
+	recordEnemySpawn: (self: StatsService, RouteId) -> (),
+	recordCoreHit: (self: StatsService, RouteId) -> (),
 }
-type EnemyTuning = {
-	maxHealth: number,
-	moveSpeed: number,
-	coreDamage: number,
-	structureDPS: number,
-}
+type EnemyTuning =
+	{ maxHealth: number, moveSpeed: number, coreDamage: number, structureDPS: number }
 type EnemyConfigType = {
 	maxActiveEnemies: number,
 	wallDetectionRange: number,
@@ -46,22 +32,14 @@ type EnemyConfigType = {
 	roamer: EnemyTuning,
 	brute: EnemyTuning,
 }
-
-local runtimeRequire = require
-local configFolder =
-	ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Game"):WaitForChild("Config")
-local EnemyConfig =
-	runtimeRequire(configFolder:WaitForChild("EnemyConfig") :: ModuleScript) :: EnemyConfigType
-
 type EnemyRecord = {
 	model: Model,
 	root: BasePart,
 	enemyType: EnemyType,
 	routeId: RouteId,
-	nodes: { BasePart },
-	nodeIndex: number,
+	points: { Vector3 },
+	pointIndex: number,
 	health: number,
-	maxHealth: number,
 	moveSpeed: number,
 	coreDamage: number,
 	structureDPS: number,
@@ -69,19 +47,20 @@ type EnemyRecord = {
 	slowUntil: number,
 	wasEverSlowed: boolean,
 }
-type EnemyTemplates = { Roamer: Model, Brute: Model }
+type CoreReachedCallback = (RouteId, number) -> ()
 
-type CoreReachedCallback = (routeId: RouteId, healthRemaining: number) -> ()
+local config = ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Game"):WaitForChild("Config")
+local EnemyConfig = require(config:WaitForChild("EnemyConfig") :: ModuleScript) :: EnemyConfigType
 
-local EnemyService = {}
-EnemyService.__index = EnemyService
+local GridEnemyService = {}
+GridEnemyService.__index = GridEnemyService
 
 export type Service = typeof(setmetatable(
 	{} :: {
 		_stateService: StateService,
 		_routeService: RouteService,
 		_statsService: StatsService,
-		_templates: EnemyTemplates,
+		_templates: { Roamer: Model, Brute: Model },
 		_core: BasePart,
 		_runtimeEnemies: Folder,
 		_active: { [Model]: EnemyRecord },
@@ -90,7 +69,7 @@ export type Service = typeof(setmetatable(
 		_coreReachedCallback: CoreReachedCallback?,
 		_heartbeatConnection: RBXScriptConnection,
 	},
-	EnemyService
+	GridEnemyService
 ))
 
 local function findOrCreateFolder(parent: Instance, name: string): Folder
@@ -105,43 +84,35 @@ local function findOrCreateFolder(parent: Instance, name: string): Folder
 	return folder
 end
 
-local function tuningFor(enemyType: EnemyType): EnemyTuning
-	return if enemyType == "Brute" then EnemyConfig.brute else EnemyConfig.roamer
-end
-
-function EnemyService.new(
+function GridEnemyService.new(
 	prototype: Folder,
 	templates: Folder,
 	stateService: StateService,
 	routeService: RouteService,
 	statsService: StatsService
 ): Service
-	local objectiveCore = prototype:FindFirstChild("ObjectiveCore")
-	assert(objectiveCore and objectiveCore:IsA("BasePart"), "Prototype.ObjectiveCore is required")
-	local basicZombie = templates:FindFirstChild("BasicZombie")
+	local core = prototype:FindFirstChild("ObjectiveCore")
+	local roamer = templates:FindFirstChild("BasicZombie")
 	local brute = templates:FindFirstChild("Brute")
-	assert(
-		basicZombie and basicZombie:IsA("Model") and basicZombie.PrimaryPart,
-		"BasicZombie template is invalid"
-	)
+	assert(core and core:IsA("BasePart"), "Prototype.ObjectiveCore is required")
+	assert(roamer and roamer:IsA("Model") and roamer.PrimaryPart, "BasicZombie template is invalid")
 	assert(brute and brute:IsA("Model") and brute.PrimaryPart, "Brute template is invalid")
 	local runtime = findOrCreateFolder(prototype, "Runtime")
 	local runtimeEnemies = findOrCreateFolder(runtime, "Enemies")
-
 	local placeholder = RunService.Heartbeat:Connect(function() end)
 	local self: Service = setmetatable({
 		_stateService = stateService,
 		_routeService = routeService,
 		_statsService = statsService,
-		_templates = { Roamer = basicZombie, Brute = brute },
-		_core = objectiveCore,
+		_templates = { Roamer = roamer, Brute = brute },
+		_core = core,
 		_runtimeEnemies = runtimeEnemies,
 		_active = {},
 		_spawnSerial = 0,
 		_defenseService = nil,
 		_coreReachedCallback = nil,
 		_heartbeatConnection = placeholder,
-	}, EnemyService)
+	}, GridEnemyService)
 	placeholder:Disconnect()
 	self._heartbeatConnection = RunService.Heartbeat:Connect(function(deltaTime: number)
 		self:_update(math.min(deltaTime, 0.1))
@@ -149,28 +120,28 @@ function EnemyService.new(
 	return self
 end
 
-function EnemyService.setDefenseService(self: Service, defenseService: DefenseService)
+function GridEnemyService.setDefenseService(self: Service, defenseService: DefenseService)
 	self._defenseService = defenseService
 end
 
-function EnemyService.setCoreReachedCallback(self: Service, callback: CoreReachedCallback)
+function GridEnemyService.setCoreReachedCallback(self: Service, callback: CoreReachedCallback)
 	self._coreReachedCallback = callback
 end
 
-function EnemyService.spawn(self: Service, enemyType: EnemyType, routeId: RouteId): boolean
+function GridEnemyService.spawn(self: Service, enemyType: EnemyType, routeId: RouteId): boolean
 	if
 		self._stateService:getPhase() ~= "DEFENDING"
 		or self:getActiveCount() >= EnemyConfig.maxActiveEnemies
 	then
 		return false
 	end
+	local tuning = if enemyType == "Brute" then EnemyConfig.brute else EnemyConfig.roamer
 	local template = self._templates[enemyType]
 	local spawnPart = self._routeService:getSpawn(routeId)
-	local tuning = tuningFor(enemyType)
-	if not template or not spawnPart then
+	local points = self._routeService:getPath(routeId, enemyType)
+	if #points == 0 then
 		return false
 	end
-
 	local model = template:Clone()
 	local root = model.PrimaryPart
 	assert(root, "Enemy template requires PrimaryPart")
@@ -184,16 +155,14 @@ function EnemyService.spawn(self: Service, enemyType: EnemyType, routeId: RouteI
 	local y = spawnPart.Position.Y + model:GetExtentsSize().Y * 0.5
 	model:PivotTo(CFrame.new(spawnPart.Position.X, y, spawnPart.Position.Z))
 	model.Parent = self._runtimeEnemies
-
 	self._active[model] = {
 		model = model,
 		root = root,
 		enemyType = enemyType,
 		routeId = routeId,
-		nodes = self._routeService:getNodes(routeId),
-		nodeIndex = 1,
+		points = points,
+		pointIndex = 1,
 		health = tuning.maxHealth,
-		maxHealth = tuning.maxHealth,
 		moveSpeed = tuning.moveSpeed,
 		coreDamage = tuning.coreDamage,
 		structureDPS = tuning.structureDPS,
@@ -206,7 +175,7 @@ function EnemyService.spawn(self: Service, enemyType: EnemyType, routeId: RouteI
 	return true
 end
 
-function EnemyService.getActiveCount(self: Service): number
+function GridEnemyService.getActiveCount(self: Service): number
 	local count = 0
 	for _ in self._active do
 		count += 1
@@ -214,7 +183,7 @@ function EnemyService.getActiveCount(self: Service): number
 	return count
 end
 
-function EnemyService.findPriorityEnemy(self: Service, position: Vector3, range: number): Model?
+function GridEnemyService.findPriorityEnemy(self: Service, position: Vector3, range: number): Model?
 	local selected: Model? = nil
 	local selectedCoreDistance = math.huge
 	for model, record in self._active do
@@ -233,21 +202,21 @@ function EnemyService.findPriorityEnemy(self: Service, position: Vector3, range:
 	return selected
 end
 
-function EnemyService.damageEnemy(self: Service, enemy: Model, damage: number): number
+function GridEnemyService.damageEnemy(self: Service, enemy: Model, damage: number): number
 	local record = self._active[enemy]
 	if not record or record.health <= 0 then
 		return 0
 	end
-	local actualDamage = math.min(record.health, math.max(0, damage))
-	record.health -= actualDamage
+	local actual = math.min(record.health, math.max(0, damage))
+	record.health -= actual
 	enemy:SetAttribute("Health", record.health)
 	if record.health <= 0 then
 		self:_remove(record)
 	end
-	return actualDamage
+	return actual
 end
 
-function EnemyService.applySlowInRadius(
+function GridEnemyService.applySlowInRadius(
 	self: Service,
 	position: Vector3,
 	radius: number,
@@ -271,7 +240,7 @@ function EnemyService.applySlowInRadius(
 	return newlyAffected
 end
 
-function EnemyService.clear(self: Service)
+function GridEnemyService.clear(self: Service)
 	for _, record in self._active do
 		record.model:Destroy()
 	end
@@ -279,23 +248,22 @@ function EnemyService.clear(self: Service)
 	self._stateService:setEnemiesRemaining(0)
 end
 
-function EnemyService._remove(self: Service, record: EnemyRecord)
+function GridEnemyService._remove(self: Service, record: EnemyRecord)
 	self._active[record.model] = nil
 	record.model:Destroy()
 	self._stateService:setEnemiesRemaining(self:getActiveCount())
 end
 
-function EnemyService._reachCore(self: Service, record: EnemyRecord)
-	local routeId = record.routeId
-	local healthRemaining = self._stateService:damageCore(record.coreDamage)
-	self._statsService:recordCoreHit(if routeId == "Left" then "Left" else "Right")
+function GridEnemyService._reachCore(self: Service, record: EnemyRecord)
+	local health = self._stateService:damageCore(record.coreDamage)
+	self._statsService:recordCoreHit(record.routeId)
 	self:_remove(record)
 	if self._coreReachedCallback then
-		self._coreReachedCallback(if routeId == "Left" then "Left" else "Right", healthRemaining)
+		self._coreReachedCallback(record.routeId, health)
 	end
 end
 
-function EnemyService._update(self: Service, deltaTime: number)
+function GridEnemyService._update(self: Service, deltaTime: number)
 	if self._stateService:getPhase() ~= "DEFENDING" then
 		return
 	end
@@ -305,7 +273,6 @@ function EnemyService._update(self: Service, deltaTime: number)
 			self._active[model] = nil
 			continue
 		end
-
 		local defenseService = self._defenseService
 		local wall = if defenseService
 			then defenseService:findBlockingWall(
@@ -318,36 +285,34 @@ function EnemyService._update(self: Service, deltaTime: number)
 			defenseService:damageWall(wall, record.structureDPS * deltaTime, record.enemyType)
 			continue
 		end
-
 		if now >= record.slowUntil then
 			record.slowMultiplier = 1
 			record.model:SetAttribute("SlowMultiplier", 1)
 		end
-		local targetPosition: Vector3
-		if record.nodeIndex <= #record.nodes then
-			local nodePosition = record.nodes[record.nodeIndex].Position
-			targetPosition = Vector3.new(nodePosition.X, record.root.Position.Y, nodePosition.Z)
-		else
-			targetPosition =
-				Vector3.new(self._core.Position.X, record.root.Position.Y, self._core.Position.Z)
-		end
-
-		local offset = targetPosition - record.root.Position
+		local point = record.points[record.pointIndex]
+		local target = if point
+			then Vector3.new(point.X, record.root.Position.Y, point.Z)
+			else Vector3.new(
+				self._core.Position.X,
+				record.root.Position.Y,
+				self._core.Position.Z
+			)
+		local offset = target - record.root.Position
 		local distance = offset.Magnitude
 		if distance <= EnemyConfig.arrivalDistance then
-			if record.nodeIndex <= #record.nodes then
-				record.nodeIndex += 1
+			if point then
+				record.pointIndex += 1
 			else
 				self:_reachCore(record)
 			end
 			continue
 		end
-
 		local movement = math.min(distance, record.moveSpeed * record.slowMultiplier * deltaTime)
 		local nextPosition = record.root.Position + offset.Unit * movement
-		local lookPosition = Vector3.new(targetPosition.X, nextPosition.Y, targetPosition.Z)
-		record.model:PivotTo(CFrame.lookAt(nextPosition, lookPosition))
+		record.model:PivotTo(
+			CFrame.lookAt(nextPosition, Vector3.new(target.X, nextPosition.Y, target.Z))
+		)
 	end
 end
 
-return EnemyService
+return GridEnemyService

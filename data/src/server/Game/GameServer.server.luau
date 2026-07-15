@@ -4,37 +4,71 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local ServerStorage = game:GetService("ServerStorage")
 local Workspace = game:GetService("Workspace")
 
-type OpaqueStateService = {}
-type OpaqueBuildService = {}
-type OpaqueEnemyService = {}
-type ChallengeConfigType = {
-	coreMaxHealth: number,
+type RouteId = "Left" | "Right"
+type PieceType = "Wall" | "SlowTrap" | "Turret"
+type BuildPieceData = {
+	id: string,
+	pieceType: PieceType,
+	cellX: number,
+	cellZ: number,
+	rotation: number,
 }
+type BuildPlan = { schemaVersion: number, revision: number, pieces: { [string]: BuildPieceData } }
+type StateService = {}
+type StatsService = {}
+type BuildService = {
+	setPlanChangedCallback: (self: BuildService, callback: (BuildPlan) -> ()) -> (),
+	getPlan: (self: BuildService) -> BuildPlan,
+}
+type RouteService = {
+	setPlanQuery: (self: RouteService, callback: () -> BuildPlan) -> (),
+}
+type EnemyService = {
+	setDefenseService: (self: EnemyService, defenseService: DefenseService) -> (),
+}
+type DefenseService = {
+	setEnemyService: (self: DefenseService, enemyService: EnemyService) -> (),
+	syncPlan: (self: DefenseService, plan: BuildPlan) -> (),
+}
+type ChallengeConfigType = { coreMaxHealth: number }
 type GameStateServiceModule = {
-	new: (replicaRoot: Folder, core: BasePart, coreMaxHealth: number) -> OpaqueStateService,
+	new: (Folder, RemoteEvent, BasePart, number) -> StateService,
 }
+type CombatStatsServiceModule = { new: (Folder) -> StatsService }
 type BuildServiceModule = {
 	new: (
-		prototype: Folder,
-		templates: Folder,
-		requestBuild: RemoteEvent,
-		stateService: OpaqueStateService
-	) -> OpaqueBuildService,
+		Folder,
+		RemoteEvent,
+		RemoteEvent,
+		StateService,
+		Folder,
+		{},
+		{},
+		{},
+		{}
+	) -> BuildService,
 }
+type RouteServiceModule = { new: (Folder, Random?) -> RouteService }
 type EnemyServiceModule = {
-	new: (
-		prototype: Folder,
-		templates: Folder,
-		stateService: OpaqueStateService
-	) -> OpaqueEnemyService,
+	new: (Folder, Folder, StateService, RouteService, StatsService) -> EnemyService,
 }
+type DefenseServiceModule = {
+	new: (Folder, Folder, StateService, StatsService) -> DefenseService,
+}
+type BuildPlanStoreModule = { new: () -> {} }
+type BuildHistoryModule = { new: () -> {} }
+type BuildRendererModule = { new: (Folder, Folder) -> {} }
+type BuildValidatorModule = { new: (Folder, {}) -> {} }
 type ChallengeServiceModule = {
 	new: (
-		prototype: Folder,
-		requestStartChallenge: RemoteEvent,
-		stateService: OpaqueStateService,
-		buildService: OpaqueBuildService,
-		enemyService: OpaqueEnemyService
+		Folder,
+		RemoteEvent,
+		RemoteEvent,
+		StateService,
+		BuildService,
+		RouteService,
+		EnemyService,
+		StatsService
 	) -> {},
 }
 
@@ -43,34 +77,17 @@ local runtimeRequire = require
 local function loadModule(moduleInstance: Instance): unknown
 	assert(
 		moduleInstance:IsA("ModuleScript"),
-		string.format("%s must be a ModuleScript", moduleInstance:GetFullName())
+		moduleInstance:GetFullName() .. " must be a ModuleScript"
 	)
 	return runtimeRequire(moduleInstance)
 end
 
-local sharedGame = ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Game")
-local configFolder = sharedGame:WaitForChild("Config")
-local ChallengeConfig =
-	loadModule(configFolder:WaitForChild("ChallengeConfig")) :: ChallengeConfigType
-
-local gameFolder = script.Parent
-assert(gameFolder and gameFolder:IsA("Folder"), "GameServer must be parented to the Game folder")
-local servicesFolder = gameFolder:WaitForChild("Services")
-
-local BuildService = loadModule(servicesFolder:WaitForChild("BuildService")) :: BuildServiceModule
-local ChallengeService =
-	loadModule(servicesFolder:WaitForChild("ChallengeService")) :: ChallengeServiceModule
-local EnemyService = loadModule(servicesFolder:WaitForChild("EnemyService")) :: EnemyServiceModule
-local GameStateService =
-	loadModule(servicesFolder:WaitForChild("GameStateService")) :: GameStateServiceModule
-
 local function findOrCreateFolder(parent: Instance, name: string): Folder
 	local existing = parent:FindFirstChild(name)
 	if existing then
-		assert(existing:IsA("Folder"), string.format("%s must be a Folder", existing:GetFullName()))
+		assert(existing:IsA("Folder"), existing:GetFullName() .. " must be a Folder")
 		return existing
 	end
-
 	local folder = Instance.new("Folder")
 	folder.Name = name
 	folder.Parent = parent
@@ -80,42 +97,111 @@ end
 local function findOrCreateRemote(parent: Folder, name: string): RemoteEvent
 	local existing = parent:FindFirstChild(name)
 	if existing then
-		assert(
-			existing:IsA("RemoteEvent"),
-			string.format("%s must be a RemoteEvent", existing:GetFullName())
-		)
+		assert(existing:IsA("RemoteEvent"), existing:GetFullName() .. " must be a RemoteEvent")
 		return existing
 	end
-
 	local remote = Instance.new("RemoteEvent")
 	remote.Name = name
 	remote.Parent = parent
 	return remote
 end
 
+local sharedGame = ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Game")
+local configFolder = sharedGame:WaitForChild("Config")
+local ChallengeConfig =
+	loadModule(configFolder:WaitForChild("ChallengeConfig")) :: ChallengeConfigType
+
+local gameFolder = script.Parent
+assert(gameFolder and gameFolder:IsA("Folder"), "GameServer must be under Server.Game")
+local servicesFolder = gameFolder:WaitForChild("Services")
+local GameStateService =
+	loadModule(servicesFolder:WaitForChild("GameStateService")) :: GameStateServiceModule
+local BuildService =
+	loadModule(servicesFolder:WaitForChild("GridBuildService")) :: BuildServiceModule
+local ChallengeService =
+	loadModule(servicesFolder:WaitForChild("ChallengeService")) :: ChallengeServiceModule
+local RouteService =
+	loadModule(servicesFolder:WaitForChild("GridRouteService")) :: RouteServiceModule
+local EnemyService =
+	loadModule(servicesFolder:WaitForChild("GridEnemyService")) :: EnemyServiceModule
+local DefenseService =
+	loadModule(servicesFolder:WaitForChild("GridDefenseService")) :: DefenseServiceModule
+local CombatStatsService =
+	loadModule(servicesFolder:WaitForChild("CombatStatsService")) :: CombatStatsServiceModule
+local buildFolder = gameFolder:WaitForChild("Build")
+local BuildPlanStore =
+	loadModule(buildFolder:WaitForChild("BuildPlanStore")) :: BuildPlanStoreModule
+local BuildHistory = loadModule(buildFolder:WaitForChild("BuildHistory")) :: BuildHistoryModule
+local BuildRenderer = loadModule(buildFolder:WaitForChild("BuildRenderer")) :: BuildRendererModule
+local BuildValidator =
+	loadModule(buildFolder:WaitForChild("BuildValidator")) :: BuildValidatorModule
+
 local prototype = Workspace:WaitForChild("Prototype", 10)
 assert(prototype and prototype:IsA("Folder"), "Workspace.Prototype is required")
-
 local objectiveCore = prototype:FindFirstChild("ObjectiveCore")
 assert(objectiveCore and objectiveCore:IsA("BasePart"), "Prototype.ObjectiveCore is required")
-
 local templates = ServerStorage:WaitForChild("GameTemplates", 10)
 assert(templates and templates:IsA("Folder"), "ServerStorage.GameTemplates is required")
 
 local replicationRoot = findOrCreateFolder(ReplicatedStorage, "Game")
+replicationRoot:SetAttribute("Ready", false)
+replicationRoot:SetAttribute("FirstDestroyed", nil)
+replicationRoot:SetAttribute("ReachedCore", nil)
 local remotes = findOrCreateFolder(replicationRoot, "Remotes")
-local requestBuild = findOrCreateRemote(remotes, "RequestBuild")
-local requestStartChallenge = findOrCreateRemote(remotes, "RequestStartChallenge")
+local buildRequest = findOrCreateRemote(remotes, "BuildRequest")
+local buildResult = findOrCreateRemote(remotes, "BuildResult")
+local requestStart = findOrCreateRemote(remotes, "RequestStartChallenge")
+local requestReturn = findOrCreateRemote(remotes, "RequestReturnToPreparation")
+local stateChanged = findOrCreateRemote(remotes, "StateChanged")
 
-local stateService =
-	GameStateService.new(replicationRoot, objectiveCore, ChallengeConfig.coreMaxHealth)
-local buildService = BuildService.new(prototype, templates, requestBuild, stateService)
-local enemyService = EnemyService.new(prototype, templates, stateService)
-local challengeService =
-	ChallengeService.new(prototype, requestStartChallenge, stateService, buildService, enemyService)
+local stateService = GameStateService.new(
+	replicationRoot,
+	stateChanged,
+	objectiveCore,
+	ChallengeConfig.coreMaxHealth
+)
+local statsService = CombatStatsService.new(replicationRoot)
+local routeService = RouteService.new(prototype, nil)
+local buildPlanStore = BuildPlanStore.new()
+local buildHistory = BuildHistory.new()
+local buildRenderer = BuildRenderer.new(prototype, templates)
+local buildValidator = BuildValidator.new(prototype, buildRenderer)
+local buildService = BuildService.new(
+	remotes,
+	buildRequest,
+	buildResult,
+	stateService,
+	replicationRoot,
+	buildPlanStore,
+	buildHistory,
+	buildRenderer,
+	buildValidator
+)
+local enemyService =
+	EnemyService.new(prototype, templates, stateService, routeService, statsService)
+local defenseService = DefenseService.new(prototype, templates, stateService, statsService)
 
-replicationRoot:SetAttribute("Version", "Defense Loop 0.1")
+buildService:setPlanChangedCallback(function(plan: BuildPlan)
+	defenseService:syncPlan(plan)
+end)
+routeService:setPlanQuery(function(): BuildPlan
+	return buildService:getPlan()
+end)
+enemyService:setDefenseService(defenseService)
+defenseService:setEnemyService(enemyService)
+
+local challengeService = ChallengeService.new(
+	prototype,
+	requestStart,
+	requestReturn,
+	stateService,
+	buildService,
+	routeService,
+	enemyService,
+	statsService
+)
+
+replicationRoot:SetAttribute("Version", "Build Loop 0.3")
+replicationRoot:SetAttribute("ServiceCount", if challengeService then 7 else 0)
 replicationRoot:SetAttribute("Ready", true)
-replicationRoot:SetAttribute("ServiceCount", if challengeService then 4 else 0)
-
-print("Defense Loop 0.1 server ready")
+print("Build Loop 0.3 server ready")

@@ -1,207 +1,247 @@
 --!strict
 
-local Debris = game:GetService("Debris")
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local RunService = game:GetService("RunService")
 
 type GameState = "PREPARATION" | "STARTING" | "DEFENDING" | "VICTORY" | "DEFEAT" | "REVIEW"
-type DefenseType = "Empty" | "Wall" | "Turret"
+type DefenseType = "Empty" | "Wall" | "SlowTrap" | "Turret"
 type DefenseSnapshot = { [string]: DefenseType }
 type StateService = {
 	getPhase: (self: StateService) -> GameState,
 }
 type DefenseConfigType = {
+	maxBudget: number,
 	interactionDistance: number,
 	requestCooldownSeconds: number,
-	wall: {
-		maxHealth: number,
-	},
-	turret: {
-		range: number,
-		damage: number,
-		cooldownSeconds: number,
-	},
+	costs: { [string]: number },
 }
 type GameTypesModule = {
 	isDefenseType: (value: unknown) -> boolean,
 }
+type PlacementCallback = (pad: BasePart, defenseType: DefenseType) -> ()
 
 local runtimeRequire = require
-
-local function loadModule(moduleInstance: Instance): unknown
-	assert(
-		moduleInstance:IsA("ModuleScript"),
-		string.format("%s must be a ModuleScript", moduleInstance:GetFullName())
-	)
-	return runtimeRequire(moduleInstance)
-end
-
 local sharedGame = ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Game")
 local configFolder = sharedGame:WaitForChild("Config")
-local DefenseConfig = loadModule(configFolder:WaitForChild("DefenseConfig")) :: DefenseConfigType
-local GameTypes = loadModule(sharedGame:WaitForChild("GameTypes")) :: GameTypesModule
-
-type FindNearestEnemy = (position: Vector3, range: number) -> Model?
-type DamageEnemy = (enemy: Model, damage: number) -> ()
-type DestroyedCallback = (description: string) -> ()
+local DefenseConfig =
+	runtimeRequire(configFolder:WaitForChild("DefenseConfig") :: ModuleScript) :: DefenseConfigType
+local GameTypes =
+	runtimeRequire(sharedGame:WaitForChild("GameTypes") :: ModuleScript) :: GameTypesModule
 
 local BuildService = {}
 BuildService.__index = BuildService
 
 export type Service = typeof(setmetatable(
 	{} :: {
+		_replicaRoot: Folder,
 		_stateService: StateService,
-		_templates: Folder,
+		_requestBuild: RemoteEvent,
 		_buildPads: Folder,
-		_runtimeDefenses: Folder,
 		_pads: { [string]: BasePart },
-		_currentByPad: { [string]: Model },
+		_currentTypes: { [string]: DefenseType },
+		_usedBudget: number,
 		_requestTimes: { [Player]: number },
-		_findNearestEnemy: FindNearestEnemy?,
-		_damageEnemy: DamageEnemy?,
-		_destroyedCallback: DestroyedCallback?,
-		_heartbeatConnection: RBXScriptConnection?,
+		_processing: { [Player]: boolean },
+		_placementCallback: PlacementCallback?,
 	},
 	BuildService
 ))
-
-local function findOrCreateFolder(parent: Instance, name: string): Folder
-	local existing = parent:FindFirstChild(name)
-	if existing then
-		assert(existing:IsA("Folder"), string.format("%s must be a Folder", existing:GetFullName()))
-		return existing
-	end
-
-	local folder = Instance.new("Folder")
-	folder.Name = name
-	folder.Parent = parent
-	return folder
-end
-
-local function getHealthColor(ratio: number): Color3
-	if ratio <= 0.3 then
-		return Color3.fromRGB(230, 65, 65)
-	end
-	if ratio <= 0.6 then
-		return Color3.fromRGB(255, 196, 61)
-	end
-	return Color3.fromRGB(73, 190, 103)
-end
-
-local function updateHealthBar(model: Model, health: number, maxHealth: number)
-	local billboard = model:FindFirstChild("HealthBillboard", true)
-	if not billboard or not billboard:IsA("BillboardGui") then
-		return
-	end
-
-	local fill = billboard:FindFirstChild("Fill", true)
-	if not fill or not fill:IsA("Frame") then
-		return
-	end
-
-	local ratio = if maxHealth > 0 then math.clamp(health / maxHealth, 0, 1) else 0
-	fill.Size = UDim2.fromScale(ratio, 1)
-	fill.BackgroundColor3 = getHealthColor(ratio)
-end
-
-local function showTracer(parent: Instance, origin: Vector3, target: Vector3)
-	local offset = target - origin
-	local distance = offset.Magnitude
-	if distance <= 0.1 then
-		return
-	end
-
-	local tracer = Instance.new("Part")
-	tracer.Name = "TurretTracer"
-	tracer.Anchored = true
-	tracer.CanCollide = false
-	tracer.CanQuery = false
-	tracer.CanTouch = false
-	tracer.CastShadow = false
-	tracer.Material = Enum.Material.Neon
-	tracer.Color = Color3.fromRGB(82, 210, 255)
-	tracer.Size = Vector3.new(0.16, 0.16, distance)
-	tracer.CFrame = CFrame.lookAt(origin, target) * CFrame.new(0, 0, -distance / 2)
-	tracer.Parent = parent
-	Debris:AddItem(tracer, 0.09)
-end
 
 local function getPlayerRoot(player: Player): BasePart?
 	local character = player.Character
 	if not character then
 		return nil
 	end
-
 	local root = character:FindFirstChild("HumanoidRootPart")
-	if root and root:IsA("BasePart") then
-		return root
-	end
-
-	return nil
+	return if root and root:IsA("BasePart") then root else nil
 end
 
 function BuildService.new(
 	prototype: Folder,
-	templates: Folder,
 	requestBuild: RemoteEvent,
-	stateService: StateService
+	stateService: StateService,
+	replicaRoot: Folder
 ): Service
 	local buildPads = prototype:FindFirstChild("BuildPads")
 	assert(buildPads and buildPads:IsA("Folder"), "Prototype.BuildPads is required")
 
-	local runtime = findOrCreateFolder(prototype, "Runtime")
-	local runtimeDefenses = findOrCreateFolder(runtime, "Defenses")
-
 	local pads: { [string]: BasePart } = {}
+	local currentTypes: { [string]: DefenseType } = {}
 	for _, child in buildPads:GetChildren() do
 		if child:IsA("BasePart") then
+			assert(
+				typeof(child:GetAttribute("RouteId")) == "string",
+				child.Name .. " requires RouteId"
+			)
 			pads[child.Name] = child
+			currentTypes[child.Name] = "Empty"
+			child:SetAttribute("DefenseType", "Empty")
 		end
 	end
+	assert(#buildPads:GetChildren() == 8, "Defense Loop 0.2 requires exactly eight BuildPads")
 
 	local self: Service = setmetatable({
+		_replicaRoot = replicaRoot,
 		_stateService = stateService,
-		_templates = templates,
+		_requestBuild = requestBuild,
 		_buildPads = buildPads,
-		_runtimeDefenses = runtimeDefenses,
 		_pads = pads,
-		_currentByPad = {},
+		_currentTypes = currentTypes,
+		_usedBudget = 0,
 		_requestTimes = {},
-		_findNearestEnemy = nil,
-		_damageEnemy = nil,
-		_destroyedCallback = nil,
-		_heartbeatConnection = nil,
+		_processing = {},
+		_placementCallback = nil,
 	}, BuildService)
 
+	replicaRoot:SetAttribute("BudgetUsed", 0)
+	replicaRoot:SetAttribute("BudgetMax", DefenseConfig.maxBudget)
 	requestBuild.OnServerEvent:Connect(
-		function(player: Player, padName: unknown, defenseType: unknown)
-			self:_handleRequest(player, padName, defenseType)
+		function(player: Player, padId: unknown, defenseType: unknown)
+			self:_handleRequest(player, padId, defenseType)
 		end
 	)
-
 	Players.PlayerRemoving:Connect(function(player: Player)
 		self._requestTimes[player] = nil
+		self._processing[player] = nil
 	end)
-
-	self._heartbeatConnection = RunService.Heartbeat:Connect(function()
-		self:_updateTurrets()
-	end)
-
 	return self
 end
 
-function BuildService.setEnemyCallbacks(
-	self: Service,
-	findNearestEnemy: FindNearestEnemy,
-	damageEnemy: DamageEnemy
-)
-	self._findNearestEnemy = findNearestEnemy
-	self._damageEnemy = damageEnemy
+function BuildService.setPlacementCallback(self: Service, callback: PlacementCallback)
+	self._placementCallback = callback
 end
 
-function BuildService.setDestroyedCallback(self: Service, callback: DestroyedCallback)
-	self._destroyedCallback = callback
+function BuildService._reply(self: Service, player: Player, accepted: boolean, message: string)
+	self._requestBuild:FireClient(player, accepted, string.sub(message, 1, 64))
+end
+
+function BuildService._handleRequest(
+	self: Service,
+	player: Player,
+	padIdValue: unknown,
+	defenseTypeValue: unknown
+)
+	if player.Parent ~= Players or self._processing[player] then
+		return
+	end
+	self._processing[player] = true
+
+	local function reject(message: string)
+		self._processing[player] = nil
+		self:_reply(player, false, message)
+	end
+
+	if typeof(padIdValue) ~= "string" or #padIdValue > 20 then
+		reject("Emplacement invalide")
+		return
+	end
+	if not GameTypes.isDefenseType(defenseTypeValue) then
+		reject("Défense invalide")
+		return
+	end
+
+	local now = os.clock()
+	local previous = self._requestTimes[player]
+	if previous and now - previous < DefenseConfig.requestCooldownSeconds then
+		reject("Action trop rapide")
+		return
+	end
+	self._requestTimes[player] = now
+
+	if self._stateService:getPhase() ~= "PREPARATION" then
+		reject("Construction verrouillée")
+		return
+	end
+
+	local pad = self._pads[padIdValue]
+	if not pad or pad.Parent ~= self._buildPads then
+		reject("Emplacement invalide")
+		return
+	end
+	local root = getPlayerRoot(player)
+	if not root or (root.Position - pad.Position).Magnitude > DefenseConfig.interactionDistance then
+		reject("Approchez-vous du pad")
+		return
+	end
+
+	local defenseType: DefenseType
+	if defenseTypeValue == "Wall" then
+		defenseType = "Wall"
+	elseif defenseTypeValue == "SlowTrap" then
+		defenseType = "SlowTrap"
+	elseif defenseTypeValue == "Turret" then
+		defenseType = "Turret"
+	else
+		defenseType = "Empty"
+	end
+	local previousType = self._currentTypes[padIdValue]
+	local nextBudget = self._usedBudget
+		- (DefenseConfig.costs[previousType] or 0)
+		+ (DefenseConfig.costs[defenseType] or DefenseConfig.maxBudget + 1)
+	if nextBudget > DefenseConfig.maxBudget then
+		reject("Budget insuffisant")
+		return
+	end
+
+	self:_apply(padIdValue, defenseType)
+	self._processing[player] = nil
+	self:_reply(player, true, "Construction mise à jour")
+end
+
+function BuildService._updatePadLabel(_self: Service, pad: BasePart, defenseType: DefenseType)
+	local label = pad:FindFirstChild("Label", true)
+	if label and label:IsA("TextLabel") then
+		local display = if defenseType == "Empty"
+			then "VIDE"
+			elseif defenseType == "SlowTrap" then "PIÈGE"
+			elseif defenseType == "Wall" then "MUR"
+			else "TOURELLE"
+		label.Text = string.format("%s\n%s", pad.Name, display)
+	end
+end
+
+function BuildService._recalculateBudget(self: Service)
+	local used = 0
+	for _, defenseType in self._currentTypes do
+		used += DefenseConfig.costs[defenseType] or 0
+	end
+	self._usedBudget = used
+	self._replicaRoot:SetAttribute("BudgetUsed", used)
+end
+
+function BuildService._apply(self: Service, padId: string, defenseType: DefenseType)
+	local pad = self._pads[padId]
+	assert(pad, "Unknown BuildPad " .. padId)
+	self._currentTypes[padId] = defenseType
+	pad:SetAttribute("DefenseType", defenseType)
+	self:_updatePadLabel(pad, defenseType)
+	if self._placementCallback then
+		self._placementCallback(pad, defenseType)
+	end
+	self:_recalculateBudget()
+end
+
+function BuildService.snapshot(self: Service): DefenseSnapshot
+	local snapshot = table.clone(self._currentTypes) :: DefenseSnapshot
+	return snapshot
+end
+
+function BuildService.restore(self: Service, snapshot: DefenseSnapshot)
+	for padId in self._pads do
+		local snapshotType = snapshot[padId]
+		local defenseType: DefenseType
+		if snapshotType == "Wall" then
+			defenseType = "Wall"
+		elseif snapshotType == "SlowTrap" then
+			defenseType = "SlowTrap"
+		elseif snapshotType == "Turret" then
+			defenseType = "Turret"
+		else
+			defenseType = "Empty"
+		end
+		self:_apply(padId, defenseType)
+	end
+	self:_recalculateBudget()
 end
 
 function BuildService.setBuildEnabled(self: Service, enabled: boolean)
@@ -213,192 +253,16 @@ function BuildService.setBuildEnabled(self: Service, enabled: boolean)
 	end
 end
 
-function BuildService._handleRequest(
-	self: Service,
-	player: Player,
-	padNameValue: unknown,
-	defenseTypeValue: unknown
-)
-	if player.Parent ~= Players then
-		return
-	end
-	if typeof(padNameValue) ~= "string" or #padNameValue > 16 then
-		return
-	end
-	if not GameTypes.isDefenseType(defenseTypeValue) then
-		return
-	end
-
-	local now = os.clock()
-	local previousRequest = self._requestTimes[player]
-	if previousRequest and now - previousRequest < DefenseConfig.requestCooldownSeconds then
-		return
-	end
-	self._requestTimes[player] = now
-
-	if self._stateService:getPhase() ~= "PREPARATION" then
-		return
-	end
-
-	local pad = self._pads[padNameValue]
-	if not pad or pad.Parent ~= self._buildPads then
-		return
-	end
-
-	local playerRoot = getPlayerRoot(player)
-	if not playerRoot then
-		return
-	end
-	if (playerRoot.Position - pad.Position).Magnitude > DefenseConfig.interactionDistance then
-		return
-	end
-
-	self:_place(padNameValue, defenseTypeValue :: DefenseType)
+function BuildService.getPad(self: Service, padId: string): BasePart?
+	return self._pads[padId]
 end
 
-function BuildService._place(self: Service, padName: string, defenseType: DefenseType)
-	local pad = self._pads[padName]
-	if not pad then
-		return
-	end
-
-	local current = self._currentByPad[padName]
-	if current then
-		current:Destroy()
-		self._currentByPad[padName] = nil
-	end
-
-	pad:SetAttribute("DefenseType", defenseType)
-	if defenseType == "Empty" then
-		return
-	end
-
-	local template = self._templates:FindFirstChild(defenseType)
-	assert(template and template:IsA("Model"), string.format("Missing %s template", defenseType))
-
-	local model = template:Clone()
-	model.Name = string.format("%s_%s", padName, defenseType)
-	model:SetAttribute("DefenseType", defenseType)
-	model:SetAttribute("PadName", padName)
-
-	if defenseType == "Wall" then
-		model:SetAttribute("MaxHealth", DefenseConfig.wall.maxHealth)
-		model:SetAttribute("Health", DefenseConfig.wall.maxHealth)
-		model:PivotTo(pad.CFrame * CFrame.new(0, 3.2, 0))
-	else
-		model:SetAttribute("NextShotAt", 0)
-		model:PivotTo(pad.CFrame * CFrame.new(0, 0.7, 0))
-	end
-
-	model.Parent = self._runtimeDefenses
-	self._currentByPad[padName] = model
-	if defenseType == "Wall" then
-		updateHealthBar(model, DefenseConfig.wall.maxHealth, DefenseConfig.wall.maxHealth)
-	end
+function BuildService.getDefenseType(self: Service, padId: string): DefenseType?
+	return self._currentTypes[padId]
 end
 
-function BuildService.snapshot(self: Service): DefenseSnapshot
-	local snapshot: DefenseSnapshot = {}
-	for padName, pad in self._pads do
-		local defenseType = pad:GetAttribute("DefenseType")
-		if GameTypes.isDefenseType(defenseType) then
-			snapshot[padName] = defenseType :: DefenseType
-		else
-			snapshot[padName] = "Empty"
-		end
-	end
-	return snapshot
-end
-
-function BuildService.restore(self: Service, snapshot: DefenseSnapshot)
-	for padName in self._pads do
-		local defenseType: DefenseType = snapshot[padName]
-		if not defenseType then
-			defenseType = "Empty"
-		end
-		self:_place(padName, defenseType)
-	end
-end
-
-function BuildService.findNearestWall(self: Service, position: Vector3, range: number): Model?
-	local nearest: Model? = nil
-	local nearestDistance = range
-
-	for _, model in self._currentByPad do
-		if model.Parent and model:GetAttribute("DefenseType") == "Wall" then
-			local primaryPart = model.PrimaryPart
-			local health = model:GetAttribute("Health")
-			if primaryPart and typeof(health) == "number" and health > 0 then
-				local distance = (primaryPart.Position - position).Magnitude
-				if distance <= nearestDistance then
-					nearest = model
-					nearestDistance = distance
-				end
-			end
-		end
-	end
-
-	return nearest
-end
-
-function BuildService.damageWall(self: Service, wall: Model, damage: number): boolean
-	local padName = wall:GetAttribute("PadName")
-	if typeof(padName) ~= "string" or self._currentByPad[padName] ~= wall then
-		return false
-	end
-
-	local currentHealth = wall:GetAttribute("Health")
-	if typeof(currentHealth) ~= "number" or currentHealth <= 0 then
-		return false
-	end
-
-	local nextHealth = math.max(0, currentHealth - math.max(0, damage))
-	wall:SetAttribute("Health", nextHealth)
-	updateHealthBar(wall, nextHealth, DefenseConfig.wall.maxHealth)
-	if nextHealth > 0 then
-		return false
-	end
-
-	self._currentByPad[padName] = nil
-	wall:Destroy()
-	if self._destroyedCallback then
-		self._destroyedCallback(string.format("%s (Mur)", padName))
-	end
-	return true
-end
-
-function BuildService._updateTurrets(self: Service)
-	if self._stateService:getPhase() ~= "DEFENDING" then
-		return
-	end
-	if not self._findNearestEnemy or not self._damageEnemy then
-		return
-	end
-
-	local now = os.clock()
-	for _, model in self._currentByPad do
-		if model.Parent and model:GetAttribute("DefenseType") == "Turret" then
-			local primaryPart = model.PrimaryPart
-			local nextShotAt = model:GetAttribute("NextShotAt")
-			if primaryPart and (typeof(nextShotAt) ~= "number" or now >= nextShotAt) then
-				local enemy =
-					self._findNearestEnemy(primaryPart.Position, DefenseConfig.turret.range)
-				if enemy then
-					model:SetAttribute("NextShotAt", now + DefenseConfig.turret.cooldownSeconds)
-					local targetPart = enemy.PrimaryPart
-					local muzzle = model:FindFirstChild("Muzzle", true)
-					local originPart: BasePart = primaryPart
-					if muzzle and muzzle:IsA("BasePart") then
-						originPart = muzzle
-					end
-					if targetPart then
-						showTracer(self._runtimeDefenses, originPart.Position, targetPart.Position)
-					end
-					self._damageEnemy(enemy, DefenseConfig.turret.damage)
-				end
-			end
-		end
-	end
+function BuildService.getUsedBudget(self: Service): number
+	return self._usedBudget
 end
 
 return BuildService

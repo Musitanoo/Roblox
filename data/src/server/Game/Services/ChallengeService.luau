@@ -5,101 +5,106 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 type GameState = "PREPARATION" | "STARTING" | "DEFENDING" | "VICTORY" | "DEFEAT" | "REVIEW"
 type Outcome = "VICTORY" | "DEFEAT"
-type StartAction = "Start" | "ReturnToPreparation"
-type DefenseType = "Empty" | "Wall" | "Turret"
-type DefenseSnapshot = { [string]: DefenseType }
-type WaveConfig = {
-	count: number,
-	spawnIntervalSeconds: number,
+type EnemyType = "Roamer" | "Brute"
+type RouteId = "Left" | "Right"
+type PieceType = "Wall" | "SlowTrap" | "Turret"
+type BuildPieceData = {
+	id: string,
+	pieceType: PieceType,
+	cellX: number,
+	cellZ: number,
+	rotation: number,
+}
+type DefenseSnapshot = {
+	schemaVersion: number,
+	revision: number,
+	pieces: { [string]: BuildPieceData },
+}
+type ChallengeWave = {
+	id: number,
+	roamerCount: number,
+	roamerIntervalSeconds: number,
+	fixedLeftRoamers: number,
+	fixedRightRoamers: number,
+	bruteCount: number,
+	restSeconds: number,
 }
 type ChallengeConfigType = {
+	challengeId: string,
 	countdownSeconds: number,
-	intermissionSeconds: number,
+	bruteWarningSeconds: number,
 	outcomeDisplaySeconds: number,
-	coreDamagePerEnemy: number,
 	interactionDistance: number,
 	requestCooldownSeconds: number,
-	waves: { WaveConfig },
-}
-type GameTypesModule = {
-	isStartAction: (value: unknown) -> boolean,
+	waves: { ChallengeWave },
 }
 type StateService = {
 	getPhase: (self: StateService) -> GameState,
 	setPhase: (self: StateService, phase: GameState) -> boolean,
-	setCountdown: (self: StateService, secondsRemaining: number) -> (),
-	setWave: (self: StateService, wave: number, totalWaves: number) -> (),
 	restoreCore: (self: StateService) -> (),
-	damageCore: (self: StateService, damage: number) -> number,
-	setReachedCore: (self: StateService, count: number) -> (),
-	setReview: (
-		self: StateService,
-		outcome: Outcome,
-		firstDestroyed: string,
-		reachedCore: number
-	) -> (),
-	clearReview: (self: StateService) -> (),
+	getCoreHealth: (self: StateService) -> number,
+	setCountdown: (self: StateService, seconds: number) -> (),
+	setWave: (self: StateService, wave: number, total: number) -> (),
+	setBruteWarning: (self: StateService, message: string) -> (),
+	clearTransient: (self: StateService) -> (),
 }
-type BuildServiceContract = {
-	setEnemyCallbacks: (
-		self: BuildServiceContract,
-		findNearestEnemy: (position: Vector3, range: number) -> Model?,
-		damageEnemy: (enemy: Model, damage: number) -> ()
-	) -> (),
-	setDestroyedCallback: (
-		self: BuildServiceContract,
-		callback: (description: string) -> ()
-	) -> (),
-	setBuildEnabled: (self: BuildServiceContract, enabled: boolean) -> (),
-	snapshot: (self: BuildServiceContract) -> DefenseSnapshot,
-	restore: (self: BuildServiceContract, snapshot: DefenseSnapshot) -> (),
-	findNearestWall: (self: BuildServiceContract, position: Vector3, range: number) -> Model?,
-	damageWall: (self: BuildServiceContract, wall: Model, damage: number) -> boolean,
+type BuildService = {
+	snapshot: (self: BuildService) -> DefenseSnapshot,
+	restore: (self: BuildService, snapshot: DefenseSnapshot) -> (),
+	setBuildEnabled: (self: BuildService, enabled: boolean) -> (),
 }
-type EnemyServiceContract = {
-	setCombatCallbacks: (
-		self: EnemyServiceContract,
-		findNearestWall: (position: Vector3, range: number) -> Model?,
-		damageWall: (wall: Model, damage: number) -> boolean,
-		reachedCore: () -> ()
+type RouteService = {
+	chooseRoamerRoute: (self: RouteService) -> RouteId,
+	chooseBruteRoute: (self: RouteService) -> RouteId,
+	chooseWaveThreeBruteRoutes: (self: RouteService) -> { RouteId },
+	hideReviewMarkers: (self: RouteService) -> (),
+	showReviewMarkers: (self: RouteService, report: ReviewReport) -> (),
+}
+type EnemyService = {
+	spawn: (self: EnemyService, enemyType: EnemyType, routeId: RouteId) -> boolean,
+	getActiveCount: (self: EnemyService) -> number,
+	clear: (self: EnemyService) -> (),
+	setCoreReachedCallback: (
+		self: EnemyService,
+		callback: (routeId: RouteId, healthRemaining: number) -> ()
 	) -> (),
-	spawn: (self: EnemyServiceContract) -> boolean,
-	getActiveCount: (self: EnemyServiceContract) -> number,
-	findNearestEnemy: (self: EnemyServiceContract, position: Vector3, range: number) -> Model?,
-	damageEnemy: (self: EnemyServiceContract, enemy: Model, damage: number) -> boolean,
-	clear: (self: EnemyServiceContract) -> (),
+}
+type StatsService = {
+	begin: (self: StatsService, challengeId: string) -> (),
+	finish: (self: StatsService, outcome: Outcome, coreHealth: number) -> ReviewReport,
+	clear: (self: StatsService) -> (),
+}
+type ReviewReport = {
+	LeftLaneEnemyCount: number,
+	RightLaneEnemyCount: number,
+	FirstBreachLane: string,
+	FirstBreachPadId: string,
 }
 
 local runtimeRequire = require
-
-local function loadModule(moduleInstance: Instance): unknown
-	assert(
-		moduleInstance:IsA("ModuleScript"),
-		string.format("%s must be a ModuleScript", moduleInstance:GetFullName())
-	)
-	return runtimeRequire(moduleInstance)
-end
-
-local sharedGame = ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Game")
-local configFolder = sharedGame:WaitForChild("Config")
+local configFolder =
+	ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Game"):WaitForChild("Config")
 local ChallengeConfig =
-	loadModule(configFolder:WaitForChild("ChallengeConfig")) :: ChallengeConfigType
-local GameTypes = loadModule(sharedGame:WaitForChild("GameTypes")) :: GameTypesModule
+	runtimeRequire(configFolder:WaitForChild("ChallengeConfig") :: ModuleScript) :: ChallengeConfigType
 
 local ChallengeService = {}
 ChallengeService.__index = ChallengeService
 
 export type Service = typeof(setmetatable(
 	{} :: {
-		_stateService: StateService,
-		_buildService: BuildServiceContract,
-		_enemyService: EnemyServiceContract,
 		_console: BasePart,
-		_requestTimes: { [Player]: number },
-		_runToken: number,
+		_requestStart: RemoteEvent,
+		_requestReturn: RemoteEvent,
+		_stateService: StateService,
+		_buildService: BuildService,
+		_routeService: RouteService,
+		_enemyService: EnemyService,
+		_statsService: StatsService,
 		_snapshot: DefenseSnapshot?,
-		_firstDestroyed: string,
-		_reachedCore: number,
+		_runToken: number,
+		_transitioning: boolean,
+		_finishing: boolean,
+		_requestTimes: { [Player]: number },
 	},
 	ChallengeService
 ))
@@ -109,243 +114,281 @@ local function getPlayerRoot(player: Player): BasePart?
 	if not character then
 		return nil
 	end
-
 	local root = character:FindFirstChild("HumanoidRootPart")
-	if root and root:IsA("BasePart") then
-		return root
-	end
+	return if root and root:IsA("BasePart") then root else nil
+end
 
-	return nil
+local function routeDisplay(routeId: RouteId): string
+	return if routeId == "Left" then "GAUCHE" else "DROITE"
 end
 
 function ChallengeService.new(
 	prototype: Folder,
-	requestStartChallenge: RemoteEvent,
+	requestStart: RemoteEvent,
+	requestReturn: RemoteEvent,
 	stateService: StateService,
-	buildService: BuildServiceContract,
-	enemyService: EnemyServiceContract
+	buildService: BuildService,
+	routeService: RouteService,
+	enemyService: EnemyService,
+	statsService: StatsService
 ): Service
-	local challengeConsole = prototype:FindFirstChild("ChallengeConsole")
-	assert(
-		challengeConsole and challengeConsole:IsA("BasePart"),
-		"Prototype.ChallengeConsole is required"
-	)
-
+	local console = prototype:FindFirstChild("ChallengeConsole")
+	assert(console and console:IsA("BasePart"), "Prototype.ChallengeConsole is required")
 	local self: Service = setmetatable({
+		_console = console,
+		_requestStart = requestStart,
+		_requestReturn = requestReturn,
 		_stateService = stateService,
 		_buildService = buildService,
+		_routeService = routeService,
 		_enemyService = enemyService,
-		_console = challengeConsole,
-		_requestTimes = {},
-		_runToken = 0,
+		_statsService = statsService,
 		_snapshot = nil,
-		_firstDestroyed = "Aucune",
-		_reachedCore = 0,
+		_runToken = 0,
+		_transitioning = false,
+		_finishing = false,
+		_requestTimes = {},
 	}, ChallengeService)
 
-	buildService:setEnemyCallbacks(function(position: Vector3, range: number): Model?
-		return enemyService:findNearestEnemy(position, range)
-	end, function(enemy: Model, damage: number)
-		enemyService:damageEnemy(enemy, damage)
+	requestStart.OnServerEvent:Connect(function(player: Player)
+		self:_handleStartRequest(player)
 	end)
-
-	buildService:setDestroyedCallback(function(description: string)
-		self:_onStructureDestroyed(description)
+	requestReturn.OnServerEvent:Connect(function(player: Player)
+		self:_handleReturnRequest(player)
 	end)
-
-	enemyService:setCombatCallbacks(function(position: Vector3, range: number): Model?
-		return buildService:findNearestWall(position, range)
-	end, function(wall: Model, damage: number): boolean
-		return buildService:damageWall(wall, damage)
-	end, function()
-		self:_onEnemyReachedCore()
-	end)
-
-	requestStartChallenge.OnServerEvent:Connect(function(player: Player, action: unknown)
-		self:_handleRequest(player, action)
-	end)
-
 	Players.PlayerRemoving:Connect(function(player: Player)
 		self._requestTimes[player] = nil
 	end)
-
-	self:_setConsoleEnabled(true)
+	enemyService:setCoreReachedCallback(function(_routeId: RouteId, healthRemaining: number)
+		if healthRemaining <= 0 then
+			self:_finish("DEFEAT")
+		end
+	end)
+	buildService:setBuildEnabled(true)
 	return self
 end
 
-function ChallengeService._handleRequest(self: Service, player: Player, actionValue: unknown)
-	if player.Parent ~= Players or not GameTypes.isStartAction(actionValue) then
-		return
-	end
-
-	local now = os.clock()
-	local previousRequest = self._requestTimes[player]
-	if previousRequest and now - previousRequest < ChallengeConfig.requestCooldownSeconds then
-		return
-	end
-	self._requestTimes[player] = now
-
-	local action = actionValue :: StartAction
-	if action == "ReturnToPreparation" then
-		if self._stateService:getPhase() == "REVIEW" then
-			self:_returnToPreparation()
-		end
-		return
-	end
-
-	if self._stateService:getPhase() ~= "PREPARATION" then
-		return
-	end
-
-	local playerRoot = getPlayerRoot(player)
-	if not playerRoot then
-		return
-	end
-	if
-		(playerRoot.Position - self._console.Position).Magnitude
-		> ChallengeConfig.interactionDistance
-	then
-		return
-	end
-
-	self:_beginChallenge()
+function ChallengeService._reply(
+	remote: RemoteEvent,
+	player: Player,
+	accepted: boolean,
+	message: string
+)
+	remote:FireClient(player, accepted, string.sub(message, 1, 64))
 end
 
-function ChallengeService._beginChallenge(self: Service)
-	if self._stateService:getPhase() ~= "PREPARATION" then
+function ChallengeService._rateLimited(self: Service, player: Player): boolean
+	local now = os.clock()
+	local previous = self._requestTimes[player]
+	self._requestTimes[player] = now
+	return previous ~= nil and now - previous < ChallengeConfig.requestCooldownSeconds
+end
+
+function ChallengeService._handleStartRequest(self: Service, player: Player)
+	if player.Parent ~= Players or self:_rateLimited(player) then
 		return
 	end
-	if not self._stateService:setPhase("STARTING") then
+	if self._transitioning or self._finishing or self._stateService:getPhase() ~= "PREPARATION" then
+		ChallengeService._reply(self._requestStart, player, false, "Challenge déjà en cours")
+		return
+	end
+	local root = getPlayerRoot(player)
+	if
+		not root
+		or (root.Position - self._console.Position).Magnitude
+			> ChallengeConfig.interactionDistance
+	then
+		ChallengeService._reply(self._requestStart, player, false, "Approchez-vous de la console")
 		return
 	end
 
+	self:_start()
+	ChallengeService._reply(self._requestStart, player, true, "Challenge lancé")
+end
+
+function ChallengeService._handleReturnRequest(self: Service, player: Player)
+	if player.Parent ~= Players or self:_rateLimited(player) then
+		return
+	end
+	if self._transitioning or self._finishing or self._stateService:getPhase() ~= "REVIEW" then
+		ChallengeService._reply(self._requestReturn, player, false, "Autopsie indisponible")
+		return
+	end
+	self:_returnToPreparation()
+	ChallengeService._reply(self._requestReturn, player, true, "Base modifiable")
+end
+
+function ChallengeService._start(self: Service)
+	self._transitioning = true
 	self._runToken += 1
 	local token = self._runToken
-	self._snapshot = self._buildService:snapshot()
-	self._firstDestroyed = "Aucune"
-	self._reachedCore = 0
-	self._enemyService:clear()
-	self._stateService:clearReview()
-	self._stateService:restoreCore()
-	self._stateService:setWave(0, #ChallengeConfig.waves)
+	local snapshot = self._buildService:snapshot()
+	self._snapshot = snapshot
 	self._buildService:setBuildEnabled(false)
-	self:_setConsoleEnabled(false)
-
+	self._routeService:hideReviewMarkers()
+	self._enemyService:clear()
+	self._statsService:begin(ChallengeConfig.challengeId)
+	self._stateService:clearTransient()
+	self._stateService:restoreCore()
+	self._buildService:restore(snapshot)
+	assert(self._stateService:setPhase("STARTING"), "PREPARATION to STARTING failed")
+	self._transitioning = false
 	task.spawn(function()
-		self:_runChallenge(token)
+		self:_run(token)
 	end)
 end
 
-function ChallengeService._runChallenge(self: Service, token: number)
-	for secondsRemaining = ChallengeConfig.countdownSeconds, 1, -1 do
-		if token ~= self._runToken or self._stateService:getPhase() ~= "STARTING" then
+function ChallengeService._wait(self: Service, seconds: number, token: number): boolean
+	local deadline = os.clock() + math.max(0, seconds)
+	repeat
+		if token ~= self._runToken then
+			return false
+		end
+		task.wait(math.min(0.1, math.max(0, deadline - os.clock())))
+	until os.clock() >= deadline
+	return token == self._runToken
+end
+
+function ChallengeService._run(self: Service, token: number)
+	for seconds = ChallengeConfig.countdownSeconds, 1, -1 do
+		self._stateService:setCountdown(seconds)
+		if not self:_wait(1, token) then
 			return
 		end
-		self._stateService:setCountdown(secondsRemaining)
-		task.wait(1)
 	end
-
+	self._stateService:setCountdown(0)
 	if token ~= self._runToken or not self._stateService:setPhase("DEFENDING") then
 		return
 	end
-	self._stateService:setCountdown(0)
 
-	for waveIndex, wave in ChallengeConfig.waves do
-		if token ~= self._runToken or self._stateService:getPhase() ~= "DEFENDING" then
+	local totalWaves = #ChallengeConfig.waves
+	for _, wave in ChallengeConfig.waves do
+		if not self:_runWave(wave, totalWaves, token) then
 			return
 		end
-
-		self._stateService:setWave(waveIndex, #ChallengeConfig.waves)
-		for _ = 1, wave.count do
-			if token ~= self._runToken or self._stateService:getPhase() ~= "DEFENDING" then
-				return
-			end
-			self._enemyService:spawn()
-			task.wait(wave.spawnIntervalSeconds)
-		end
-
-		if waveIndex < #ChallengeConfig.waves then
-			task.wait(ChallengeConfig.intermissionSeconds)
-		end
 	end
-
-	while
-		token == self._runToken
-		and self._stateService:getPhase() == "DEFENDING"
-		and self._enemyService:getActiveCount() > 0
-	do
-		task.wait(0.25)
-	end
-
 	if token == self._runToken and self._stateService:getPhase() == "DEFENDING" then
 		self:_finish("VICTORY")
 	end
 end
 
-function ChallengeService._onStructureDestroyed(self: Service, description: string)
-	if self._stateService:getPhase() == "DEFENDING" and self._firstDestroyed == "Aucune" then
-		self._firstDestroyed = description
+function ChallengeService._announceAndSpawnBrutes(
+	self: Service,
+	wave: ChallengeWave,
+	token: number
+): boolean
+	if wave.bruteCount <= 0 then
+		return true
 	end
+	local routes: { RouteId }
+	if wave.bruteCount == 2 then
+		routes = self._routeService:chooseWaveThreeBruteRoutes()
+	else
+		routes = { self._routeService:chooseBruteRoute() }
+	end
+	local routeNames = routeDisplay(routes[1])
+	if routes[2] then
+		routeNames ..= " + " .. routeDisplay(routes[2])
+	end
+	self._stateService:setBruteWarning(
+		string.format(
+			"BRUTE ANNONCÉE • %s • %d s",
+			routeNames,
+			ChallengeConfig.bruteWarningSeconds
+		)
+	)
+	if not self:_wait(ChallengeConfig.bruteWarningSeconds, token) then
+		return false
+	end
+	self._stateService:setBruteWarning("")
+	for index = 1, wave.bruteCount do
+		if not self._enemyService:spawn("Brute", routes[index]) then
+			return false
+		end
+	end
+	return true
 end
 
-function ChallengeService._onEnemyReachedCore(self: Service)
-	if self._stateService:getPhase() ~= "DEFENDING" then
-		return
+function ChallengeService._roamerRoute(self: Service, wave: ChallengeWave, index: number): RouteId
+	if wave.fixedLeftRoamers > 0 or wave.fixedRightRoamers > 0 then
+		if index % 2 == 1 and math.ceil(index / 2) <= wave.fixedLeftRoamers then
+			return "Left"
+		end
+		return "Right"
 	end
+	return self._routeService:chooseRoamerRoute()
+end
 
-	self._reachedCore += 1
-	self._stateService:setReachedCore(self._reachedCore)
-	local coreHealth = self._stateService:damageCore(ChallengeConfig.coreDamagePerEnemy)
-	if coreHealth <= 0 then
-		self:_finish("DEFEAT")
+function ChallengeService._runWave(
+	self: Service,
+	wave: ChallengeWave,
+	totalWaves: number,
+	token: number
+): boolean
+	self._stateService:setWave(wave.id, totalWaves)
+	if not self:_announceAndSpawnBrutes(wave, token) then
+		return false
 	end
+	for index = 1, wave.roamerCount do
+		if token ~= self._runToken or self._stateService:getPhase() ~= "DEFENDING" then
+			return false
+		end
+		if not self._enemyService:spawn("Roamer", self:_roamerRoute(wave, index)) then
+			return false
+		end
+		if index < wave.roamerCount and not self:_wait(wave.roamerIntervalSeconds, token) then
+			return false
+		end
+	end
+	if wave.id == totalWaves then
+		while self._enemyService:getActiveCount() > 0 do
+			if token ~= self._runToken or self._stateService:getPhase() ~= "DEFENDING" then
+				return false
+			end
+			if not self:_wait(0.25, token) then
+				return false
+			end
+		end
+	end
+	return wave.restSeconds <= 0 or self:_wait(wave.restSeconds, token)
 end
 
 function ChallengeService._finish(self: Service, outcome: Outcome)
-	if self._stateService:getPhase() ~= "DEFENDING" then
+	if self._finishing or self._stateService:getPhase() ~= "DEFENDING" then
 		return
 	end
-	if not self._stateService:setPhase(outcome) then
-		return
-	end
-
+	self._finishing = true
 	self._runToken += 1
+	local token = self._runToken
+	assert(self._stateService:setPhase(outcome), "DEFENDING to outcome failed")
+	self._stateService:setBruteWarning("")
 	self._enemyService:clear()
-	self._buildService:setBuildEnabled(false)
-	self:_setConsoleEnabled(false)
-	self._stateService:setReview(outcome, self._firstDestroyed, self._reachedCore)
-
-	task.delay(ChallengeConfig.outcomeDisplaySeconds, function()
-		if self._stateService:getPhase() == outcome then
-			self._stateService:setPhase("REVIEW")
+	local report = self._statsService:finish(outcome, self._stateService:getCoreHealth())
+	self._routeService:showReviewMarkers(report)
+	task.spawn(function()
+		self:_wait(ChallengeConfig.outcomeDisplaySeconds, token)
+		if token == self._runToken and self._stateService:getPhase() == outcome then
+			assert(self._stateService:setPhase("REVIEW"), "Outcome to REVIEW failed")
 		end
+		self._finishing = false
 	end)
 end
 
 function ChallengeService._returnToPreparation(self: Service)
-	if self._stateService:getPhase() ~= "REVIEW" then
-		return
-	end
-
+	self._transitioning = true
 	self._runToken += 1
 	self._enemyService:clear()
-	if self._snapshot then
-		self._buildService:restore(self._snapshot)
+	local snapshot = self._snapshot
+	if snapshot then
+		self._buildService:restore(snapshot)
 	end
 	self._stateService:restoreCore()
-	self._stateService:clearReview()
-	if not self._stateService:setPhase("PREPARATION") then
-		return
-	end
+	self._stateService:clearTransient()
+	self._routeService:hideReviewMarkers()
+	self._statsService:clear()
+	assert(self._stateService:setPhase("PREPARATION"), "REVIEW to PREPARATION failed")
 	self._buildService:setBuildEnabled(true)
-	self:_setConsoleEnabled(true)
-end
-
-function ChallengeService._setConsoleEnabled(self: Service, enabled: boolean)
-	local prompt = self._console:FindFirstChild("StartChallengePrompt")
-	if prompt and prompt:IsA("ProximityPrompt") then
-		prompt.Enabled = enabled
-	end
+	self._transitioning = false
 end
 
 return ChallengeService
