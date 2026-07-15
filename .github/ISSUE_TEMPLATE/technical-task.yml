@@ -1,0 +1,39 @@
+name: Tâche technique
+description: Planifier une correction d'architecture, d'outillage ou de maintenance.
+title: "chore: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problème technique
+      description: Décrire le problème concret, sans anticiper une infrastructure hypothétique.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Résultat attendu
+      description: Quel état vérifiable doit être atteint ?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critères d'acceptation
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Périmètre et risques
+      description: Fichiers, systèmes, migrations, sécurité, performance et stratégie de retour arrière.
+  - type: textarea
+    id: verification
+    attributes:
+      label: Vérification
+      description: Commandes exactes et scénario runtime éventuel.
+    validations:
+      required: true

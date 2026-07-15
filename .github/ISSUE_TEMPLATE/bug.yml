@@ -1,0 +1,41 @@
+name: Bug
+description: Signaler un comportement incorrect ou une régression.
+title: "fix: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problème observé
+      description: Décrire ce qui se passe et son impact joueur ou développeur.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Donner les étapes minimales, le mode Studio et la fréquence.
+      placeholder: |
+        1. Ouvrir...
+        2. Lancer...
+        3. Observer...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Résultat attendu
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Preuves et contexte
+      description: Logs, captures, branche, commit, appareil ou version de place.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Risques
+      options:
+        - label: Le bug peut affecter les données joueur ou l'économie.
+        - label: Le bug peut être exploité depuis le client.
+        - label: Le bug bloque la boucle de jeu principale.
