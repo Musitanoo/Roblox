@@ -1,0 +1,229 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/camera-rig.schema.json",
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "fieldOfView",
+    "coordinateContract",
+    "gameplayCamera",
+    "validationCameras",
+    "resolutions",
+    "backgrounds",
+    "cameraValidation",
+    "rule"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/camera-rig.schema.json"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "fieldOfView": {
+      "type": "object",
+      "properties": {
+        "degrees": {
+          "type": "number",
+          "exclusiveMinimum": 1,
+          "maximum": 120
+        },
+        "mode": {
+          "const": "Vertical"
+        }
+      },
+      "required": [
+        "degrees",
+        "mode"
+      ],
+      "unevaluatedProperties": false
+    },
+    "coordinateContract": {
+      "type": "object",
+      "properties": {
+        "forwardAxis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lookAt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "positionFormula": {
+          "type": "string",
+          "minLength": 1
+        },
+        "targetPoint": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": [
+        "forwardAxis",
+        "lookAt",
+        "positionFormula",
+        "targetPoint"
+      ]
+    },
+    "gameplayCamera": {
+      "type": "object",
+      "properties": {
+        "azimuthDegrees": {
+          "type": "number",
+          "minimum": 0
+        },
+        "distanceStuds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "elevationDegrees": {
+          "type": "number",
+          "minimum": 0
+        },
+        "targetHeightStuds": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": [
+        "azimuthDegrees",
+        "distanceStuds",
+        "elevationDegrees",
+        "targetHeightStuds"
+      ]
+    },
+    "validationCameras": {
+      "type": "object",
+      "required": [
+        "near",
+        "mid",
+        "far",
+        "front",
+        "back",
+        "three_quarter"
+      ],
+      "additionalProperties": false,
+      "patternProperties": {
+        "^(near|mid|far|front|back|three_quarter)$": {
+          "type": "object",
+          "properties": {
+            "distanceStuds": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "azimuthDegrees": {
+              "type": "number",
+              "minimum": -360,
+              "maximum": 360
+            },
+            "elevationDegrees": {
+              "type": "number",
+              "minimum": -89,
+              "maximum": 89
+            },
+            "targetHeightStuds": {
+              "type": "number",
+              "minimum": 0
+            },
+            "derivedCameraHeightStuds": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "distanceStuds",
+            "azimuthDegrees",
+            "elevationDegrees",
+            "targetHeightStuds",
+            "derivedCameraHeightStuds"
+          ],
+          "unevaluatedProperties": false
+        }
+      }
+    },
+    "resolutions": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_\\-]*$"
+          },
+          "width": {
+            "type": "integer",
+            "minimum": 240,
+            "maximum": 4096
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 240,
+            "maximum": 4096
+          },
+          "orientation": {
+            "enum": [
+              "landscape",
+              "portrait"
+            ]
+          },
+          "required": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "width",
+          "height",
+          "orientation",
+          "required"
+        ],
+        "unevaluatedProperties": false
+      }
+    },
+    "backgrounds": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "const": "world_neutral_light"
+        },
+        {
+          "const": "world_neutral_dark"
+        }
+      ],
+      "items": false
+    },
+    "cameraValidation": {
+      "type": "object",
+      "properties": {
+        "positionToleranceStuds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "rotationToleranceDegrees": {
+          "type": "number",
+          "minimum": 0
+        },
+        "verticalFovToleranceDegrees": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": [
+        "positionToleranceStuds",
+        "rotationToleranceDegrees",
+        "verticalFovToleranceDegrees"
+      ]
+    },
+    "rule": {
+      "type": "string",
+      "minLength": 20
+    }
+  },
+  "unevaluatedProperties": false
+}

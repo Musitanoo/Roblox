@@ -16,6 +16,10 @@
 
 # Preserve the exact upstream Luau LSP definitions snapshot.
 tools/luau-lsp/globalTypes.d.luau whitespace=-blank-at-eof
+tools/roblox-art-bible-sota-v3/studio/tooling/globalTypes.d.luau whitespace=-blank-at-eof
+
+# Preserve deterministic generated review markup without rewriting package evidence.
+tools/roblox-art-bible-sota-v3/build-iteration-v5/review/index.html whitespace=-trailing-space
 
 *.rbxl binary
 *.rbxm binary

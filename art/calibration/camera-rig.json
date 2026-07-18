@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0.0",
+  "fieldOfViewDegrees": 70.0,
+  "fieldOfViewMode": "Vertical",
+  "targetConvention": "asset_bounds_center",
+  "validationCameras": {
+    "near": {"distanceStuds": 15.0, "azimuthDegrees": 35.0, "elevationDegrees": 22.0},
+    "mid": {"distanceStuds": 30.0, "azimuthDegrees": 35.0, "elevationDegrees": 18.0},
+    "far": {"distanceStuds": 60.0, "azimuthDegrees": 35.0, "elevationDegrees": 14.0},
+    "front": {"distanceStuds": 20.0, "azimuthDegrees": 0.0, "elevationDegrees": 8.0},
+    "back": {"distanceStuds": 20.0, "azimuthDegrees": 180.0, "elevationDegrees": 8.0},
+    "left": {"distanceStuds": 20.0, "azimuthDegrees": -90.0, "elevationDegrees": 8.0},
+    "right": {"distanceStuds": 20.0, "azimuthDegrees": 90.0, "elevationDegrees": 8.0},
+    "top": {"distanceStuds": 24.0, "azimuthDegrees": 0.0, "elevationDegrees": 89.0}
+  },
+  "resolutions": [
+    {"name": "mobile-hard", "width": 640, "height": 360},
+    {"name": "mobile-standard", "width": 960, "height": 540},
+    {"name": "review-master", "width": 1280, "height": 720},
+    {"name": "mobile-portrait", "width": 540, "height": 960}
+  ],
+  "screenSpaceGates": {
+    "silhouetteCriticalAt60StudsPixels": 3,
+    "functionalAt30StudsPixels": 3,
+    "tertiaryAt15StudsPixels": 2,
+    "guidesAreCalibrationHypotheses": true
+  }
+}

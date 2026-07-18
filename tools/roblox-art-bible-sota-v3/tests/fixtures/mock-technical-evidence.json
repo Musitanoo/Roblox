@@ -1,0 +1,4 @@
+{
+  "testOnly": true,
+  "purpose": "Regression-test fixture for scorer path/hash verification. This is never production evidence."
+}

@@ -1,8 +1,27 @@
 # Build Loop 0.3 — Rapport de validation
 
-Date : 2026-07-15  
-Place vérifiée : `Place de pasdideepfffff : 07142026_1` (`81801089784379`)  
-Verdict global : `PARTIAL`
+| Champ | Valeur |
+| --- | --- |
+| ID | `EVIDENCE-BUILD-003` |
+| Classe | `EVIDENCE` |
+| Cycle de vie | `RECORDED` |
+| Propriétaire | Engineering |
+| Scope | Exécution historique T01–T32 du build et de la place observés le 2026-07-15 |
+| Contrat testé | [BUILD_LOOP_0_3.md](BUILD_LOOP_0_3.md) v0.3.0 |
+| Source | Playtests Studio, sorties client/serveur et scénarios consignés ci-dessous |
+| Date de preuve | 2026-07-15 |
+| Place vérifiée | `Place de pasdideepfffff : 07142026_1` (`81801089784379`) |
+| Environnement | Roblox Studio local ; solo, Device Emulator et Server & Clients ; version Studio exacte non enregistrée |
+| Révision testée | Commit/build exact non enregistré ; preuve bornée à la place et aux observations ci-dessous |
+| Artefacts | Matrice T01–T32 et observations de ce rapport ; logs bruts non versionnés |
+| Dernière revue | 2026-07-17 |
+| Revue suivante | Addendum après toute modification runtime ou nouvelle exécution |
+| Verdict global | `PASS TECHNIQUE` |
+
+> Addendum documentaire du 2026-07-17 : le libellé global historique `PASS` est
+> normalisé en `PASS TECHNIQUE`. Aucune observation ni ligne T01–T32 n'a été
+> réécrite, et ce rapport ne couvre pas les modifications ultérieures du
+> worktree.
 
 ## Résultat livré
 
@@ -45,14 +64,14 @@ solution de retour arrière et ne sont plus actifs dans `Workspace/Prototype`.
 | T22 | PASS | Avec la gauche fortifiée, le Brute choisit la gauche. |
 | T23 | PASS | Mutation en DEFENDING refusée `WRONG_STATE`, sans changement de révision. |
 | T24 | PASS | Destruction runtime d'un Wall : runtime vide, mais plan/révision/budget intacts. |
-| T25 | PARTIAL | Le démarrage rerend le Wall détruit à 700 PV; le retour complet REVIEW→PREPARATION n'a pas été rejoué après la dernière correction client. |
+| T25 | PASS | Wall `P00001` détruit au runtime puis restauré à 700/700 PV en REVIEW et après REVIEW→PREPARATION; révision 1, Structure 2, noyau 1000, zéro ennemi et marqueur masqué. |
 | T26 | PASS | Le premier joueur, propriétaire `UserId=-1`, place une pièce; révision et budget avancent. |
-| T27 | PARTIAL | L'observateur est en mode lecture seule et ses contrôles ne mutent pas le plan; une requête hostile forgée depuis ce client n'a pas été observée. |
+| T27 | PASS | En Server & Clients, l'observateur `UserId=-2` a forgé un PLACE contre l'owner `-1`; le serveur est resté à révision 0, zéro défense et Structure 0. |
 | T28 | PASS | Deux clients voient Structure 0→2 et le même modèle après le placement du propriétaire. |
 | T29 | PASS | Avec `IncomingReplicationLag=0.15`, deux DELETE identiques produisent exactement révision 1→2 et un seul retrait. |
 | T30 | PASS | iPhone 17 Pro 874×402, viewport 749×361 : tap, rotation, confirmation, pan tactile et zoom tactile observés; boutons 44 px. |
-| T31 | PARTIAL | Bindings A/X/Y et flèches présents; aucune session avec contrôleur virtuel n'a validé déplacer/annuler de bout en bout. |
-| T32 | UNKNOWN | Dix cycles complets consécutifs avec mesure des connexions n'ont pas été exécutés. |
+| T31 | PASS | Émulateur de contrôleur Studio : D-pad déplace le ghost de X=-30 à -22, X tourne 0→90°, A place `P00001` en (3,1) R90, B masque le ghost et A après annulation ne change pas la révision 1. |
+| T32 | PASS | Dix cycles avec un ennemi runtime chacun : DEFENDING→DEFEAT→REVIEW→PREPARATION, ennemi 1→0, noyau 0→1000; Runtime 2, Prototype 125, Replica 6, une UI et un ghost restent constants. |
 
 ## Preuves complémentaires
 
@@ -66,6 +85,21 @@ solution de retour arrière et ne sont plus actifs dans `Workspace/Prototype`.
 - Combat : après correction de l'indexation par attribut PieceId, un Wall a été
   détruit par le Brute, FirstBreach a été enregistré une seule fois et le plan
   n'a pas muté.
+- Restauration : le Wall `P00001`, supprimé du dossier runtime avant le départ,
+  réapparaît avec le même identifiant et 700/700 PV en REVIEW puis en
+  PREPARATION; le plan reste à la révision 1 et le budget à Structure 2.
+- Sécurité deux clients : le client observateur a imprimé
+  `T27_OBSERVER_SENT -2 -1 0`; le serveur a confirmé
+  `T27_SERVER 2 -1 0 0 0`, soit deux joueurs, owner -1, révision 0, zéro
+  défense et Structure 0 après la requête forgée.
+- Manette : l'Émulateur de contrôleur officiel a été utilisé directement. Le
+  conflit entre `ButtonX` et `StartPrompt` a été retiré en affectant le prompt
+  physique à `ButtonSelect`; X reste réservé à la rotation pendant la
+  construction.
+- Endurance : chacun des dix cycles accélérés a réellement créé un Rôdeur,
+  enregistré `EnemiesReachedCore=1`, produit DEFEAT/REVIEW, puis nettoyé le
+  runtime et restauré PREPARATION. La configuration accélérée n'a servi qu'au
+  playtest et les valeurs Challenge 2 normales ont ensuite été resynchronisées.
 - Output des playtests solo finaux : uniquement `Build Loop 0.3 server ready`;
   aucun nouvel avertissement ou erreur.
 - Vérifications locales : `format.ps1 -Check`, `check.ps1` et
@@ -78,7 +112,12 @@ solution de retour arrière et ne sont plus actifs dans `Workspace/Prototype`.
   le serveur utilise les modules `Grid*`. Cette dette doit être nettoyée dans une
   tâche bornée après stabilisation, sans double gestion au runtime.
 - `ContextActionService` est utilisé pour la manette au lieu du nouvel Input
-  Action System.
+  Action System; le parcours exigé par T31 est néanmoins observé de bout en bout.
+- Un essai de stress non retenu dans les verdicts a volontairement injecté 24
+  ennemis presque simultanés : la limite active a refusé un spawn et la phase a
+  pu rester DEFENDING. Le Challenge 2 normal n'utilise pas ce rythme, mais la
+  gestion future d'un refus de spawn devra terminer ou reporter proprement la
+  vague avant toute augmentation de densité.
 - Le geste pinch existe dans le code, mais le zoom mobile prouvé utilise aussi
   deux boutons tactiles explicites afin de rester accessible et testable.
 - Aucun DataStore, progression, économie, nouvelle menace ou publication n'a été
@@ -86,10 +125,11 @@ solution de retour arrière et ne sont plus actifs dans `Workspace/Prototype`.
 
 ## Gate
 
-Tous les tests critiques exigés par la spécification sont `PASS`, dont T04, T07,
-T10, T12, T13, T14, T17, T20, T23, T24, T28, T29 et T30. Le verdict global reste
-cependant `PARTIAL` tant que T25, T27, T31 et T32 ne sont pas fermés.
+T01 à T32 sont désormais `PASS`, y compris tous les tests critiques exigés par
+la spécification. Le verdict technique global de Build Loop 0.3 est
+`PASS TECHNIQUE`.
 
-Le gate humain demeure `UNKNOWN`. Le projet conserve donc le
-`PASS PROVISOIRE / GO CONDITIONNEL` technique; il ne devient pas une preuve de
-compréhension humaine mesurée.
+Le gate humain demeure séparément `UNKNOWN`. Ce PASS technique ne devient pas
+une preuve de compréhension, de confort ou de rematch volontaire mesurés auprès
+de joueurs non briefés; l'autorisation produit reste un
+`PASS PROVISOIRE / GO CONDITIONNEL` jusqu'à G3.

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0.0",
+  "states": [
+    {
+      "id": "damaged",
+      "visualChange": "A compact directional impact explains one serious but repairable hit with one wedge, one arc and two large fragments. Primary shape uses the lower approved scale and lifetime. Two large fragments and a short residual trail reinforce direction.",
+      "invariants": [
+        "Impact-center pivot and four-stud bounds remain fixed.",
+        "The dominant shape aligns with the real incoming-force vector.",
+        "Target, direction and severity remain readable without color.",
+        "Hit flash, primary shape and residual durations remain within calibration limits.",
+        "The effect never persists as collidable or queryable gameplay geometry."
+      ]
+    }
+  ],
+  "independentStateDesignForbidden": true
+}

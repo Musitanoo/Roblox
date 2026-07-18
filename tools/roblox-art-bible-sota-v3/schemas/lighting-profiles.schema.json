@@ -1,0 +1,1096 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/lighting-profiles.schema.json",
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "status",
+    "protectedPropertyPolicy",
+    "profiles"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/lighting-profiles.schema.json"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "status": {
+      "const": "CALIBRATION"
+    },
+    "protectedPropertyPolicy": {
+      "type": "object",
+      "properties": {
+        "behavior": {
+          "type": "string",
+          "minLength": 1
+        },
+        "failureMode": {
+          "type": "string",
+          "minLength": 1
+        },
+        "properties": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": [
+        "behavior",
+        "failureMode",
+        "properties"
+      ]
+    },
+    "profiles": {
+      "type": "object",
+      "required": [
+        "Lighting_Gameplay_Default",
+        "Lighting_HighContrast",
+        "Lighting_Adverse_Night",
+        "Lighting_Neutral_QA"
+      ],
+      "properties": {
+        "Lighting_Gameplay_Default": {
+          "type": "object",
+          "properties": {
+            "studioManualPreconditions": {
+              "type": "object",
+              "properties": {
+                "LightingStyle": {
+                  "enum": [
+                    "Soft",
+                    "Realistic"
+                  ]
+                },
+                "PrioritizeLightingQuality": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "LightingStyle",
+                "PrioritizeLightingQuality"
+              ],
+              "unevaluatedProperties": false
+            },
+            "scriptMutable": {
+              "type": "object",
+              "properties": {
+                "Lighting": {
+                  "type": "object",
+                  "properties": {
+                    "Ambient": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "Brightness": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "ClockTime": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "ColorShift_Bottom": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "ColorShift_Top": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "EnvironmentDiffuseScale": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "EnvironmentSpecularScale": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "ExposureCompensation": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "GeographicLatitude": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "GlobalShadows": {
+                      "type": "boolean"
+                    },
+                    "OutdoorAmbient": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "ShadowSoftness": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  },
+                  "unevaluatedProperties": false,
+                  "required": [
+                    "Ambient",
+                    "Brightness",
+                    "ClockTime",
+                    "ColorShift_Bottom",
+                    "ColorShift_Top",
+                    "EnvironmentDiffuseScale",
+                    "EnvironmentSpecularScale",
+                    "ExposureCompensation",
+                    "GeographicLatitude",
+                    "GlobalShadows",
+                    "OutdoorAmbient",
+                    "ShadowSoftness"
+                  ]
+                },
+                "Atmosphere": {
+                  "type": "object",
+                  "properties": {
+                    "Color": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "Decay": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "Density": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Glare": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Haze": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Offset": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  },
+                  "unevaluatedProperties": false,
+                  "required": [
+                    "Color",
+                    "Decay",
+                    "Density",
+                    "Glare",
+                    "Haze",
+                    "Offset"
+                  ]
+                },
+                "ColorCorrectionEffect": {
+                  "type": "object",
+                  "properties": {
+                    "Brightness": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Contrast": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Saturation": {
+                      "type": "number"
+                    },
+                    "TintColor": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    }
+                  },
+                  "unevaluatedProperties": false,
+                  "required": [
+                    "Brightness",
+                    "Contrast",
+                    "Saturation",
+                    "TintColor"
+                  ]
+                },
+                "BloomEffect": {
+                  "type": "object",
+                  "properties": {
+                    "Enabled": {
+                      "type": "boolean"
+                    },
+                    "Intensity": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Size": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Threshold": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  },
+                  "unevaluatedProperties": false,
+                  "required": [
+                    "Enabled",
+                    "Intensity",
+                    "Size",
+                    "Threshold"
+                  ]
+                }
+              },
+              "required": [
+                "Lighting",
+                "Atmosphere",
+                "ColorCorrectionEffect",
+                "BloomEffect"
+              ],
+              "unevaluatedProperties": false
+            },
+            "readbackTolerance": {
+              "type": "object",
+              "properties": {
+                "booleanExact": {
+                  "type": "boolean"
+                },
+                "colorChannel": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "numberAbsolute": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              },
+              "unevaluatedProperties": false,
+              "required": [
+                "booleanExact",
+                "colorChannel",
+                "numberAbsolute"
+              ]
+            }
+          },
+          "required": [
+            "studioManualPreconditions",
+            "scriptMutable",
+            "readbackTolerance"
+          ],
+          "unevaluatedProperties": false
+        },
+        "Lighting_HighContrast": {
+          "type": "object",
+          "properties": {
+            "studioManualPreconditions": {
+              "type": "object",
+              "properties": {
+                "LightingStyle": {
+                  "enum": [
+                    "Soft",
+                    "Realistic"
+                  ]
+                },
+                "PrioritizeLightingQuality": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "LightingStyle",
+                "PrioritizeLightingQuality"
+              ],
+              "unevaluatedProperties": false
+            },
+            "scriptMutable": {
+              "type": "object",
+              "properties": {
+                "Lighting": {
+                  "type": "object",
+                  "properties": {
+                    "Ambient": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "Brightness": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "ClockTime": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "ColorShift_Bottom": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "ColorShift_Top": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "EnvironmentDiffuseScale": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "EnvironmentSpecularScale": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "ExposureCompensation": {
+                      "type": "number"
+                    },
+                    "GeographicLatitude": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "GlobalShadows": {
+                      "type": "boolean"
+                    },
+                    "OutdoorAmbient": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "ShadowSoftness": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  },
+                  "unevaluatedProperties": false,
+                  "required": [
+                    "Ambient",
+                    "Brightness",
+                    "ClockTime",
+                    "ColorShift_Bottom",
+                    "ColorShift_Top",
+                    "EnvironmentDiffuseScale",
+                    "EnvironmentSpecularScale",
+                    "ExposureCompensation",
+                    "GeographicLatitude",
+                    "GlobalShadows",
+                    "OutdoorAmbient",
+                    "ShadowSoftness"
+                  ]
+                },
+                "Atmosphere": {
+                  "type": "object",
+                  "properties": {
+                    "Color": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "Decay": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "Density": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Glare": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Haze": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Offset": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  },
+                  "unevaluatedProperties": false,
+                  "required": [
+                    "Color",
+                    "Decay",
+                    "Density",
+                    "Glare",
+                    "Haze",
+                    "Offset"
+                  ]
+                },
+                "ColorCorrectionEffect": {
+                  "type": "object",
+                  "properties": {
+                    "Brightness": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Contrast": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Saturation": {
+                      "type": "number"
+                    },
+                    "TintColor": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    }
+                  },
+                  "unevaluatedProperties": false,
+                  "required": [
+                    "Brightness",
+                    "Contrast",
+                    "Saturation",
+                    "TintColor"
+                  ]
+                },
+                "BloomEffect": {
+                  "type": "object",
+                  "properties": {
+                    "Enabled": {
+                      "type": "boolean"
+                    },
+                    "Intensity": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Size": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Threshold": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  },
+                  "unevaluatedProperties": false,
+                  "required": [
+                    "Enabled",
+                    "Intensity",
+                    "Size",
+                    "Threshold"
+                  ]
+                }
+              },
+              "required": [
+                "Lighting",
+                "Atmosphere",
+                "ColorCorrectionEffect",
+                "BloomEffect"
+              ],
+              "unevaluatedProperties": false
+            },
+            "readbackTolerance": {
+              "type": "object",
+              "properties": {
+                "booleanExact": {
+                  "type": "boolean"
+                },
+                "colorChannel": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "numberAbsolute": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              },
+              "unevaluatedProperties": false,
+              "required": [
+                "booleanExact",
+                "colorChannel",
+                "numberAbsolute"
+              ]
+            }
+          },
+          "required": [
+            "studioManualPreconditions",
+            "scriptMutable",
+            "readbackTolerance"
+          ],
+          "unevaluatedProperties": false
+        },
+        "Lighting_Adverse_Night": {
+          "type": "object",
+          "properties": {
+            "studioManualPreconditions": {
+              "type": "object",
+              "properties": {
+                "LightingStyle": {
+                  "enum": [
+                    "Soft",
+                    "Realistic"
+                  ]
+                },
+                "PrioritizeLightingQuality": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "LightingStyle",
+                "PrioritizeLightingQuality"
+              ],
+              "unevaluatedProperties": false
+            },
+            "scriptMutable": {
+              "type": "object",
+              "properties": {
+                "Lighting": {
+                  "type": "object",
+                  "properties": {
+                    "Ambient": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "Brightness": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "ClockTime": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "ColorShift_Bottom": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "ColorShift_Top": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "EnvironmentDiffuseScale": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "EnvironmentSpecularScale": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "ExposureCompensation": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "GeographicLatitude": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "GlobalShadows": {
+                      "type": "boolean"
+                    },
+                    "OutdoorAmbient": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "ShadowSoftness": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  },
+                  "unevaluatedProperties": false,
+                  "required": [
+                    "Ambient",
+                    "Brightness",
+                    "ClockTime",
+                    "ColorShift_Bottom",
+                    "ColorShift_Top",
+                    "EnvironmentDiffuseScale",
+                    "EnvironmentSpecularScale",
+                    "ExposureCompensation",
+                    "GeographicLatitude",
+                    "GlobalShadows",
+                    "OutdoorAmbient",
+                    "ShadowSoftness"
+                  ]
+                },
+                "Atmosphere": {
+                  "type": "object",
+                  "properties": {
+                    "Color": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "Decay": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "Density": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Glare": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Haze": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Offset": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  },
+                  "unevaluatedProperties": false,
+                  "required": [
+                    "Color",
+                    "Decay",
+                    "Density",
+                    "Glare",
+                    "Haze",
+                    "Offset"
+                  ]
+                },
+                "ColorCorrectionEffect": {
+                  "type": "object",
+                  "properties": {
+                    "Brightness": {
+                      "type": "number"
+                    },
+                    "Contrast": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Saturation": {
+                      "type": "number"
+                    },
+                    "TintColor": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    }
+                  },
+                  "unevaluatedProperties": false,
+                  "required": [
+                    "Brightness",
+                    "Contrast",
+                    "Saturation",
+                    "TintColor"
+                  ]
+                },
+                "BloomEffect": {
+                  "type": "object",
+                  "properties": {
+                    "Enabled": {
+                      "type": "boolean"
+                    },
+                    "Intensity": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Size": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Threshold": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  },
+                  "unevaluatedProperties": false,
+                  "required": [
+                    "Enabled",
+                    "Intensity",
+                    "Size",
+                    "Threshold"
+                  ]
+                }
+              },
+              "required": [
+                "Lighting",
+                "Atmosphere",
+                "ColorCorrectionEffect",
+                "BloomEffect"
+              ],
+              "unevaluatedProperties": false
+            },
+            "readbackTolerance": {
+              "type": "object",
+              "properties": {
+                "booleanExact": {
+                  "type": "boolean"
+                },
+                "colorChannel": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "numberAbsolute": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              },
+              "unevaluatedProperties": false,
+              "required": [
+                "booleanExact",
+                "colorChannel",
+                "numberAbsolute"
+              ]
+            }
+          },
+          "required": [
+            "studioManualPreconditions",
+            "scriptMutable",
+            "readbackTolerance"
+          ],
+          "unevaluatedProperties": false
+        },
+        "Lighting_Neutral_QA": {
+          "type": "object",
+          "properties": {
+            "studioManualPreconditions": {
+              "type": "object",
+              "properties": {
+                "LightingStyle": {
+                  "enum": [
+                    "Soft",
+                    "Realistic"
+                  ]
+                },
+                "PrioritizeLightingQuality": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "LightingStyle",
+                "PrioritizeLightingQuality"
+              ],
+              "unevaluatedProperties": false
+            },
+            "scriptMutable": {
+              "type": "object",
+              "properties": {
+                "Lighting": {
+                  "type": "object",
+                  "properties": {
+                    "Ambient": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "Brightness": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "ClockTime": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "ColorShift_Bottom": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "ColorShift_Top": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "EnvironmentDiffuseScale": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "EnvironmentSpecularScale": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "ExposureCompensation": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "GeographicLatitude": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "GlobalShadows": {
+                      "type": "boolean"
+                    },
+                    "OutdoorAmbient": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "ShadowSoftness": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  },
+                  "unevaluatedProperties": false,
+                  "required": [
+                    "Ambient",
+                    "Brightness",
+                    "ClockTime",
+                    "ColorShift_Bottom",
+                    "ColorShift_Top",
+                    "EnvironmentDiffuseScale",
+                    "EnvironmentSpecularScale",
+                    "ExposureCompensation",
+                    "GeographicLatitude",
+                    "GlobalShadows",
+                    "OutdoorAmbient",
+                    "ShadowSoftness"
+                  ]
+                },
+                "Atmosphere": {
+                  "type": "object",
+                  "properties": {
+                    "Color": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "Decay": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    },
+                    "Density": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Glare": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Haze": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Offset": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  },
+                  "unevaluatedProperties": false,
+                  "required": [
+                    "Color",
+                    "Decay",
+                    "Density",
+                    "Glare",
+                    "Haze",
+                    "Offset"
+                  ]
+                },
+                "ColorCorrectionEffect": {
+                  "type": "object",
+                  "properties": {
+                    "Brightness": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Contrast": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Saturation": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "TintColor": {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      "minItems": 3,
+                      "maxItems": 3
+                    }
+                  },
+                  "unevaluatedProperties": false,
+                  "required": [
+                    "Brightness",
+                    "Contrast",
+                    "Saturation",
+                    "TintColor"
+                  ]
+                },
+                "BloomEffect": {
+                  "type": "object",
+                  "properties": {
+                    "Enabled": {
+                      "type": "boolean"
+                    },
+                    "Intensity": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Size": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "Threshold": {
+                      "type": "number",
+                      "minimum": 0
+                    }
+                  },
+                  "unevaluatedProperties": false,
+                  "required": [
+                    "Enabled",
+                    "Intensity",
+                    "Size",
+                    "Threshold"
+                  ]
+                }
+              },
+              "required": [
+                "Lighting",
+                "Atmosphere",
+                "ColorCorrectionEffect",
+                "BloomEffect"
+              ],
+              "unevaluatedProperties": false
+            },
+            "readbackTolerance": {
+              "type": "object",
+              "properties": {
+                "booleanExact": {
+                  "type": "boolean"
+                },
+                "colorChannel": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "numberAbsolute": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              },
+              "unevaluatedProperties": false,
+              "required": [
+                "booleanExact",
+                "colorChannel",
+                "numberAbsolute"
+              ]
+            }
+          },
+          "required": [
+            "studioManualPreconditions",
+            "scriptMutable",
+            "readbackTolerance"
+          ],
+          "unevaluatedProperties": false
+        }
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

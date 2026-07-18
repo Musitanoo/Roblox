@@ -1,0 +1,134 @@
+GPT IMAGE 2 — ONE OBJECT, ONE GAMEPLAY STATE, ONE IMAGE
+
+Use the `gpt-image-2` image model. If that exact model is not selected or
+visible in the interface, stop and do not substitute another model.
+
+Generate exactly one image: a clean 2x2 state-definition board. Every quadrant
+must depict the exact same object construction in the exact same target state.
+
+CROSS-VIEW IDENTITY LOCK — THIS IS NOT A FOUR-CONCEPT SHEET
+- Freeze one exact foundation, pedestal, rotation deck, twin-barrel spacing, yokes, rear service mass and safe-side socket.
+- The intact state always has two barrels; later states derive from the same declared failed side and axes.
+- The firing face and safe interaction rear remain unmistakably different in every view.
+
+TARGET
+- Object: Fast Defense Turret (`turret_fast_v1`)
+- State: `intact` only
+- Art direction: Salvaged Frontier owns world identity; Industrial Toy Defense
+  contributes disciplined one-second readability only.
+- Canon: vc_turret_fast_v1__salvaged-frontier__v1
+- Gameplay function: fast-firing player defense turret with unmistakable forward aim, interaction socket, and escalating damage readability
+- One-second promise: This planted twin-barrel machine aims forward, fires rapidly, exposes a safe-side interaction socket and clearly loses capability as damage escalates.
+- Dimensions: 4.8 x 5.4 x
+  5.2 Roblox studs; pivot bottom_center.
+
+BOARD LAYOUT
+- Top left: hero three-quarter front, complete object visible.
+- Top right: three-quarter rear, same construction and state.
+- Bottom left: solid black silhouette, no internal shading.
+- Bottom right: elevated Roblox third-person mobile gameplay camera.
+- Keep identical scale and recognizable proportions across the two perspective
+  views; this is a turnaround proof, not a concept-variation sheet.
+- Neutral mid-gray background, neutral studio light, no environment or props.
+- No captions, labels, letters, numbers, logos or generated text in the image.
+- Do not show intact/damaged/critical comparisons or any second gameplay state.
+
+IDENTITY AND CONSTRUCTION
+- World role: A rapid-response player defense that converts aim, coverage and sustained fire into a readable fortress hypothesis.
+- Emotional intent: Alert, energetic and reassuring when active; damage should feel mechanically specific and urgently repairable.
+- Territory thesis: A fast twin-barrel turret built on a calm planted chassis, with one adapted firing housing and one repaired rear service pack making speed, ownership and history immediately legible.
+- Front/orientation: Twin barrels and forward wedge declare the firing face; a closed service mass declares the rear.
+- Interaction read: A complete protected socket sits below the weapon body on the player-safe side and opens when disabled.
+- Danger read: Player-safe weapon readiness is distinguished from enemy threat; barrel posture and service state carry damage readability.
+- Recognition landmarks: two parallel fast barrels, compact rotating upper body, broad planted foundation, rear service mass and protected socket
+- Negative spaces: gap between twin barrels, rotational clearance above pedestal, open service socket only in critical state
+
+REQUIRED COMPONENTS
+- Foundation: broad planted base at lower footprint; Ground the weapon and define the stable gameplay footprint. Relationship: Supports pedestal and rotation deck. Reading role: Signals stability and separates the turret from a handheld weapon.
+- WeaponBody: compact armored mass at middle and upper body; Carry rotation, yokes, barrels and state posture. Relationship: Mounted on the pedestal with visible rotational clearance. Reading role: Primary identity and damage posture carrier.
+- TwinBarrels: two separated parallel barrels at front upper body; Communicate fast sustained fire and forward aim. Relationship: Supported by yokes and counterbalanced by the service mass. Reading role: Makes function and state immediately readable.
+- ServiceMass: closed counterweight mass at rear upper body; Define rear orientation and house plausible feed, cooling and repair systems. Relationship: Mechanically linked to body and barrel support. Reading role: Explains balance and prevents front-back ambiguity.
+- InteractionSocket: complete socket when usable at lower player-facing body; Expose safe-side repair and upgrade interaction. Relationship: Mounted to pedestal or protected body, never on the muzzle. Reading role: Separates player interaction from weapon danger.
+
+FORM HIERARCHY
+- Primary 72%: broad foundation and pedestal, compact rotating body, two forward barrel masses
+- Secondary 23%: support yokes, rear service mass, interaction socket and muzzle guards
+- Tertiary 5% maximum: few large fasteners, controlled vent or repair band, one forward readiness aperture
+- Construction translation: The pedestal, body, barrel spacing, protected yokes and safe-side socket use thick modular discipline; one compatible housing, one large reinforcement and one copper repair band create the authored asymmetry.
+
+MATERIAL SYSTEM
+- foundation_zone: fortress_structure; primary; dark to middle-dark; Broad planted surfaces and controlled bevel highlights. Wear: Feet, rotation deck and service contacts only.
+- firing_zone: functional_weapon_metal; bareMetal; middle-light; Clean barrel surfaces with no ornamental perforation noise or capability claim. Wear: Muzzle and support contacts only.
+- interaction_zone: protected_emissive; interaction; small bright accent; Contained lens or socket interior. Wear: Minimal until the socket opens in critical state.
+
+TARGET STATE CONTRACT — `intact`
+- Summary: Two aligned barrels, complete socket and closed service mass communicate a fast ready defense with full tracking capability.
+- Required changes:
+- Both barrels align and both muzzle guards remain complete.
+- The service mass is closed and the interaction socket is complete.
+- Shape and silhouette cues:
+- two parallel barrels
+- balanced upper body
+- complete planted foundation
+- Value cues:
+- clean barrel separation
+- stable dark body
+- Color cues:
+- friendly interaction accent
+- no warning dominance
+- Light cues:
+- contained ready pulse
+- muzzle light only while firing
+- Motion posture implied in the still:
+- smooth target tracking
+- fast bounded recoil
+- VFX cues, kept sparse and non-obscuring:
+- small alternating muzzle flashes
+- no smoke at idle
+- Component operations:
+- TwinBarrels / PRESERVE: Keep both barrels aligned, separate and operational.
+- InteractionSocket / EMIT: Emit the calm usable-state service signal.
+- Territory translation: Both barrels share a clear forward aim and the adapted housing remains visibly integrated; the turret reads as visually ready without claiming an implemented targeting or firing contract.
+
+GAMEPLAY TRUTH BOUNDARY — DO NOT VISUALIZE UNPROVEN BEHAVIOR
+- Contract status: CANDIDATE_REQUIRES_GAMEPLAY_CONTRACT
+- Contract reference: PD-07
+- Trigger: Candidate full-integrity structural band.
+- Capability effect: Visually promises a ready fast twin-barrel role without asserting exact targeting, cadence or damage.
+- Collision effect: The stable foundation wrapper remains unchanged.
+- Permitted visual claim: Two aligned barrels, complete guards and closed rear service mass communicate full structural readiness.
+- Hard claim boundary: The image may imply intended readiness but cannot prove power, firing, tracking or ammunition implementation.
+
+RUNTIME STATE SCOPE — ONE PRIMARY STATE ONLY
+- Primary generation states for this object:
+  intact, damaged, critical.
+- This image depicts only `intact`. Do not compose operational overlays,
+  transients or the terminal state into this primary reference.
+- Operational overlays excluded from this image:
+  powered_or_disabled, firing, empty_or_overloaded, targeted_or_selected, repairing.
+- Transient states excluded from this image:
+  impact_reaction.
+- Terminal runtime-only state excluded from primary generation: destroyed.
+- Composition rule: Compose one structural integrity reference with powered, firing, targeted, empty, overloaded, disabled or repairing overlays; overlays never redesign barrels, yokes, foundation, socket or repair history.
+- Coverage boundary: The three primary images define structural integrity; power, targeting, firing, empty, overloaded, repair, hit and destroyed presentations remain orthogonal runtime layers.
+
+INVARIANTS — NEVER CHANGE
+- Four-point-eight by five-point-four by five-point-two dimensions and bottom-center pivot remain fixed.
+- Twin-barrel intact identity, forward aim and rear service mass remain recognizable.
+- The interaction socket stays on the player-safe side and never becomes a muzzle.
+- Damage follows the same component chain: barrel, guard, structure, upper-body posture and socket.
+- Foundation footprint and rotation axis remain stable across states and territories.
+
+NO IMAGE REFERENCE
+- Construct only from this closed canon contract.
+
+STYLE DISCIPLINE
+- Use a compact fast-defense silhouette with broad planted mass, short readable barrels and one mechanically justified adapted housing.
+- Salvaged Frontier appears through compatible repair and service logic, not heavy military realism or random scrap.
+- Keep muzzle, support and service hierarchies legible at mobile far distance.
+- The image is precanonical visual evidence only. It does not authorize hidden geometry, canon lock or production.
+
+FINAL OUTPUT SELF-CHECK — FAIL RATHER THAN IMPROVISE
+- All quadrants preserve foundation, axes, barrel spacing, failed side, rear service mass, socket and target state.
+- Forward aim and safe rear interaction remain readable in grayscale.
+- Every capability cue stays inside the explicit gameplay-truth boundary.

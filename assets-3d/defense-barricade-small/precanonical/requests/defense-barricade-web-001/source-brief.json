@@ -1,0 +1,137 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/precanonical-brief.schema.json",
+  "schemaVersion": "1.0.0",
+  "briefId": "defense_barricade_small_v1",
+  "assetKey": "defense_barricade_small",
+  "displayName": "Defense Barricade Small",
+  "artDirection": "salvaged-frontier",
+  "gameplayFunction": "A temporary player-built barrier that delays ground enemies, exposes understandable damage and creates time for the group to adapt its defense.",
+  "oneSecondRead": "The player must immediately read a broad grounded friendly barrier, its threat-facing side, its repair access and whether it remains intact, damaged or critical.",
+  "worldRole": "A dependable standardized fortress module carrying one visible field reinforcement that records how its builders adapted a previously weak defensive line.",
+  "emotionalIntent": "Competent, protective and hopeful under pressure: the barricade should feel maintained and worth repairing, never improvised trash or disposable scenery.",
+  "dimensionsStuds": {
+    "width": 8.0,
+    "height": 4.0,
+    "depth": 2.0
+  },
+  "orientation": {
+    "front": "The broad reinforced face points toward incoming enemies.",
+    "playerSide": "The calmer rear face exposes a protected mint repair status socket.",
+    "threatSide": "The threat-facing side presents continuous armor masses and no interaction-colored focal point."
+  },
+  "interactionZones": [
+    {
+      "id": "repair_socket",
+      "purpose": "Communicate the player-safe repair and inspection point.",
+      "location": "Upper-right area of the rear service face.",
+      "requiredCue": "A protected recessed socket with a small local mint light and a distinct complete shape."
+    }
+  ],
+  "components": [
+    {
+      "id": "ground_feet",
+      "function": "Provide an honest broad footprint and transfer impact into the ground.",
+      "mobility": "fixed"
+    },
+    {
+      "id": "standard_frame",
+      "function": "Carry the stable family silhouette, dimensions and collision promise.",
+      "mobility": "fixed"
+    },
+    {
+      "id": "armor_panels",
+      "function": "Form three large readable defensive masses inside the chassis.",
+      "mobility": "destructible"
+    },
+    {
+      "id": "repair_brace",
+      "function": "Record one purposeful reinforcement of a known weak span.",
+      "mobility": "replaceable"
+    },
+    {
+      "id": "repair_socket",
+      "function": "Expose the safe-side interaction and state signal without dominating the silhouette.",
+      "mobility": "fixed"
+    }
+  ],
+  "movements": [
+    "No idle mechanical motion; state changes use panel displacement and the repair socket light.",
+    "Repair reverses the same causal displacement sequence rather than replacing the object."
+  ],
+  "states": [
+    {
+      "id": "intact",
+      "visualChange": "All three armor masses remain seated; one older copper reinforcement may remain as maintained history.",
+      "invariants": [
+        "footprint",
+        "pivot",
+        "frame proportions",
+        "repair socket location",
+        "three-panel identity"
+      ]
+    },
+    {
+      "id": "damaged",
+      "visualChange": "One threat-facing panel shifts or opens along the declared weak span while the same frame and repair path remain obvious.",
+      "invariants": [
+        "footprint",
+        "pivot",
+        "frame proportions",
+        "repair socket location",
+        "component identities"
+      ]
+    },
+    {
+      "id": "critical",
+      "visualChange": "The same failure chain widens: a second major separation exposes the load path and the structure visibly sags without changing its footprint.",
+      "invariants": [
+        "footprint",
+        "pivot",
+        "repair socket location",
+        "standard frame identity",
+        "recognizable original silhouette"
+      ]
+    }
+  ],
+  "collisionPromise": "A simple rectangular gameplay hitbox matches the broad frame and never follows small repair details or displaced cosmetic fragments.",
+  "viewDistanceStuds": {
+    "near": 8,
+    "mid": 30,
+    "far": 60
+  },
+  "expectedSimultaneousInstances": 30,
+  "obligations": [
+    "Preserve a wide, low and grounded defensive silhouette with two visibly load-bearing feet.",
+    "Use three large panel masses within a standardized thick frame.",
+    "Show exactly one dominant reinforcement story classified as reinforcement.",
+    "Keep the rear repair socket protected, local and readable from the elevated gameplay camera.",
+    "Make damage progress through one causal failure chain while preserving the same object."
+  ],
+  "constraints": [
+    "Keep standardized chassis share between seventy-five and eighty-five percent.",
+    "Keep authored adaptation share between fifteen and twenty-five percent.",
+    "Use at most three visible material families and no more than two repair narratives.",
+    "Keep asymmetry near 0.24 and below the constitution maximum of 0.36.",
+    "Maintain function, front direction and state readability at sixty studs and in groups of thirty."
+  ],
+  "freedoms": [
+    "Explore the exact local angle and attachment language of the single copper reinforcement brace.",
+    "Vary controlled panel-edge wear and small fastener groupings without altering silhouette or function.",
+    "Explore subtle value differences among reclaimed composite panels inside the approved palette."
+  ],
+  "prohibitions": [
+    "invented text",
+    "invented logos",
+    "thin wires",
+    "floating fragments",
+    "uniform rust",
+    "cable spaghetti",
+    "random scrap silhouettes",
+    "broad mint paint",
+    "photoreal grunge",
+    "independent redesign of damage states",
+    "additional decorative weapons",
+    "baked cinematic lighting"
+  ],
+  "productionApproved": false
+}

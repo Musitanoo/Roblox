@@ -1,5 +1,18 @@
 # Build Loop 0.3 — Grid Build, Predict, Edit, Retest
 
+| Champ | Valeur |
+| --- | --- |
+| ID | `SLICE-BUILD-003` |
+| Classe | `CONTRACT` |
+| Cycle de vie | `ACCEPTED` |
+| Version | 0.3.0 |
+| Propriétaire / approbateur | Product/Engineering / Founder |
+| Scope | Construction autoritaire sur grille, édition et retest ; sans persistance ni publication |
+| Source | Spécification founder Build Loop 0.3 et baseline Defense Loop 0.2 |
+| Remplace | Construction par BuildPads de Defense Loop 0.2 |
+| Dernière revue | 2026-07-17 |
+| Revue suivante | Modification runtime, nouvelle exécution T01–T32, résultat G3 ou changement de scope |
+
 ## Decision and scope
 
 Build Loop 0.3 replaces all BuildPad-dependent construction with a mathematical
@@ -47,15 +60,19 @@ returns `STALE_REVISION` and triggers a full plan resynchronization.
 ## Required proof
 
 Tests T01–T32 from the founder specification each receive `PASS`, `FAIL`,
-`PARTIAL`, or `UNKNOWN`. No unobserved behavior receives `PASS`. A technical pass
-requires the critical tests identified in the founder specification, clean
-static checks, clean client/server Output, an empty runtime after reset, and no
-publication or persistence access.
+`PARTIAL`, `BLOCKED`, or `UNKNOWN`. `BLOCKED` means an external prerequisite
+prevented observation; it is never converted into `PASS`. No unobserved behavior
+receives `PASS`. A technical pass requires the critical tests identified in the
+founder specification, clean static checks, clean client/server Output, an empty
+runtime after reset, and no publication or persistence access.
 
 The human comfort gate remains `UNKNOWN` while an unbriefed panel is unavailable.
 Synthetic causal evidence may support a provisional continuation but cannot be
 reported as measured human comprehension.
 
 Le relevé d'exécution courant est conservé dans
-`docs/BUILD_LOOP_0_3_TEST_REPORT.md`. Son verdict global est `PARTIAL`; le gate
-humain reste `UNKNOWN` et aucun PASS final n'est revendiqué.
+`docs/BUILD_LOOP_0_3_TEST_REPORT.md`. La dernière exécution qui y est enregistrée
+porte T01–T32 à `PASS` et un verdict global `PASS TECHNIQUE`. Ce verdict reste
+lié au build et aux scénarios observés dans ce rapport : il ne certifie pas
+automatiquement un worktree modifié. Le gate humain reste `UNKNOWN` et aucun
+`PASS PRODUIT` n'est revendiqué.

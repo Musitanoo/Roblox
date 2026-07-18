@@ -57,10 +57,6 @@ function BuildHistory.Redo(self: History): BuildPlan?
 	return entry.after
 end
 
-function BuildHistory.Clear(self: History)
-	table.clear(self._undo)
-	table.clear(self._redo)
-end
 function BuildHistory.CanUndo(self: History): boolean
 	return #self._undo > 0
 end

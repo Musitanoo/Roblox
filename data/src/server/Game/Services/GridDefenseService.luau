@@ -16,11 +16,17 @@ type BuildPieceData = {
 	rotation: number,
 }
 type BuildPlan = { schemaVersion: number, revision: number, pieces: { [string]: BuildPieceData } }
+type Cell = { x: number, z: number }
+type RouteDefenseState = {
+	wallCount: number,
+	wallHealth: number,
+	slowTrapCount: number,
+}
 type StateService = { getPhase: (self: StateService) -> GameState }
 type EnemyService = {
 	findPriorityEnemy: (self: EnemyService, position: Vector3, range: number) -> Model?,
 	damageEnemy: (self: EnemyService, enemy: Model, damage: number) -> number,
-	applySlowInRadius: (self: EnemyService, Vector3, number, number, number, string) -> number,
+	applySlowInRadius: (self: EnemyService, Vector3, number, number, number) -> number,
 }
 type StatsService = {
 	recordWallDamage: (self: StatsService, number) -> (),
@@ -30,26 +36,53 @@ type StatsService = {
 	recordWallDestroyed: (self: StatsService, string, EnemyType) -> (),
 }
 type DefenseConfigType = {
-	wall: { maxHealth: number },
 	slowTrap: {
-		maxHealth: number,
 		slowMultiplier: number,
 		effectDurationSeconds: number,
 		effectRadius: number,
 	},
-	turret: { maxHealth: number, range: number, damage: number, cooldownSeconds: number },
+	turret: { range: number, damage: number, cooldownSeconds: number },
+}
+type PieceTuning = { maxHealth: number }
+type GridConfig = {
+	schemaVersion: number,
+	width: number,
+	cellSize: number,
+}
+type GridMathModule = {
+	CellKey: (number, number) -> string,
+	GetOccupiedCells: (BuildPieceData) -> { Cell },
+}
+type CombatRoutingPolicyModule = {
+	FirstBlockingWallId: ({ string }, number, { [string]: string }, number) -> string?,
 }
 type DefenseRecord = {
 	model: Model,
 	piece: BuildPieceData,
 	routeId: RouteId,
+	occupiedCells: { Cell },
 	health: number,
 	nextShotAt: number,
 }
 
-local config = ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Game"):WaitForChild("Config")
+local sharedGame = ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Game")
+local config = sharedGame:WaitForChild("Config")
+local BuildGridConfig =
+	require(config:WaitForChild("BuildGridConfig") :: ModuleScript) :: GridConfig
 local DefenseConfig =
 	require(config:WaitForChild("DefenseConfig") :: ModuleScript) :: DefenseConfigType
+local GridMath = require(sharedGame:WaitForChild("GridMath") :: ModuleScript) :: GridMathModule
+local PieceConfig =
+	require(config:WaitForChild("PieceConfig") :: ModuleScript) :: { [PieceType]: PieceTuning }
+local servicesFolder = script.Parent
+assert(
+	servicesFolder and servicesFolder:IsA("Folder"),
+	"GridDefenseService must be under Game.Services"
+)
+local gameFolder = servicesFolder.Parent
+assert(gameFolder and gameFolder:IsA("Folder"), "Game.Services must be under Game")
+local CombatRoutingPolicy =
+	require(gameFolder:WaitForChild("CombatRoutingPolicy") :: ModuleScript) :: CombatRoutingPolicyModule
 
 local GridDefenseService = {}
 GridDefenseService.__index = GridDefenseService
@@ -61,9 +94,12 @@ export type Service = typeof(setmetatable(
 		_runtimeDefenses: Folder,
 		_records: { [string]: DefenseRecord },
 		_byModel: { [Model]: DefenseRecord },
+		_wallIdByCell: { [string]: string },
+		_schemaVersion: number,
+		_revision: number,
 		_enemyService: EnemyService?,
 		_trapElapsed: number,
-		_heartbeatConnection: RBXScriptConnection,
+		_heartbeatConnection: RBXScriptConnection?,
 	},
 	GridDefenseService
 ))
@@ -101,24 +137,24 @@ end
 
 function GridDefenseService.new(
 	prototype: Folder,
-	_stateTemplates: Folder,
 	stateService: StateService,
 	statsService: StatsService
 ): Service
 	local runtime = findOrCreateFolder(prototype, "Runtime")
 	local runtimeDefenses = findOrCreateFolder(runtime, "Defenses")
-	local placeholder = RunService.Heartbeat:Connect(function() end)
 	local self: Service = setmetatable({
 		_stateService = stateService,
 		_statsService = statsService,
 		_runtimeDefenses = runtimeDefenses,
 		_records = {},
 		_byModel = {},
+		_wallIdByCell = {},
+		_schemaVersion = BuildGridConfig.schemaVersion,
+		_revision = 0,
 		_enemyService = nil,
 		_trapElapsed = 0,
-		_heartbeatConnection = placeholder,
+		_heartbeatConnection = nil,
 	}, GridDefenseService)
-	placeholder:Disconnect()
 	self._heartbeatConnection = RunService.Heartbeat:Connect(function(deltaTime: number)
 		self:_update(math.min(deltaTime, 0.1))
 	end)
@@ -132,6 +168,9 @@ end
 function GridDefenseService.syncPlan(self: Service, plan: BuildPlan)
 	table.clear(self._records)
 	table.clear(self._byModel)
+	table.clear(self._wallIdByCell)
+	self._schemaVersion = plan.schemaVersion
+	self._revision = plan.revision
 	for id, piece in plan.pieces do
 		local model: Model? = nil
 		for _, candidate in self._runtimeDefenses:GetChildren() do
@@ -141,50 +180,98 @@ function GridDefenseService.syncPlan(self: Service, plan: BuildPlan)
 			end
 		end
 		if model and model:IsA("Model") then
-			local maximum = if piece.pieceType == "Wall"
-				then DefenseConfig.wall.maxHealth
-				elseif piece.pieceType == "SlowTrap" then DefenseConfig.slowTrap.maxHealth
-				else DefenseConfig.turret.maxHealth
+			local maximum = PieceConfig[piece.pieceType].maxHealth
 			model:SetAttribute("Health", maximum)
 			model:SetAttribute("MaxHealth", maximum)
+			local occupiedCells = GridMath.GetOccupiedCells(piece)
 			local record: DefenseRecord = {
 				model = model,
 				piece = piece,
-				routeId = if piece.cellX <= 8 then "Left" else "Right",
+				routeId = if piece.cellX <= BuildGridConfig.width * 0.5 then "Left" else "Right",
+				occupiedCells = occupiedCells,
 				health = maximum,
 				nextShotAt = 0,
 			}
 			self._records[id] = record
 			self._byModel[model] = record
+			if piece.pieceType == "Wall" then
+				for _, cell in occupiedCells do
+					self._wallIdByCell[GridMath.CellKey(cell.x, cell.z)] = id
+				end
+			end
 		end
 	end
 end
 
-function GridDefenseService.findBlockingWall(
-	self: Service,
-	_routeId: RouteId,
-	position: Vector3,
-	range: number
-): Model?
-	local selected: Model? = nil
-	local selectedDistance = math.max(0, range)
+function GridDefenseService.getLivePlan(self: Service): BuildPlan
+	local pieces: { [string]: BuildPieceData } = {}
+	for id, record in self._records do
+		if record.model.Parent and record.health > 0 then
+			pieces[id] = table.clone(record.piece)
+		end
+	end
+	return {
+		schemaVersion = self._schemaVersion,
+		revision = self._revision,
+		pieces = pieces,
+	}
+end
+
+function GridDefenseService.getRouteDefenseState(self: Service, routeId: RouteId): RouteDefenseState
+	local result: RouteDefenseState = {
+		wallCount = 0,
+		wallHealth = 0,
+		slowTrapCount = 0,
+	}
 	for _, record in self._records do
-		if record.piece.pieceType == "Wall" and record.health > 0 and record.model.PrimaryPart then
-			local distance = (record.model.PrimaryPart.Position - position).Magnitude
-			if distance <= selectedDistance then
-				selected = record.model
-				selectedDistance = distance
+		if record.routeId == routeId and record.model.Parent and record.health > 0 then
+			if record.piece.pieceType == "Wall" then
+				result.wallCount += 1
+				result.wallHealth += record.health
+			elseif record.piece.pieceType == "SlowTrap" then
+				result.slowTrapCount += 1
 			end
 		end
 	end
-	return selected
+	return result
+end
+
+function GridDefenseService.findBlockingWall(
+	self: Service,
+	pathCellKeys: { string },
+	pointIndex: number,
+	position: Vector3,
+	range: number
+): Model?
+	local attackRange = math.max(0, range)
+	local maxLookaheadCells = math.ceil(attackRange / BuildGridConfig.cellSize) + 1
+	local wallId = CombatRoutingPolicy.FirstBlockingWallId(
+		pathCellKeys,
+		pointIndex,
+		self._wallIdByCell,
+		maxLookaheadCells
+	)
+	local record = if wallId then self._records[wallId] else nil
+	if
+		not record
+		or record.piece.pieceType ~= "Wall"
+		or record.health <= 0
+		or not record.model.Parent
+		or not record.model.PrimaryPart
+	then
+		return nil
+	end
+	return if (record.model.PrimaryPart.Position - position).Magnitude <= attackRange
+		then record.model
+		else nil
 end
 
 function GridDefenseService.damageWall(
 	self: Service,
 	wall: Model,
 	damage: number,
-	enemyType: EnemyType
+	enemyType: EnemyType,
+	attackerRouteId: RouteId
 ): boolean
 	local record = self._byModel[wall]
 	if not record or record.piece.pieceType ~= "Wall" or record.health <= 0 then
@@ -198,7 +285,13 @@ function GridDefenseService.damageWall(
 		return false
 	end
 	self._statsService:recordWallDestroyed(record.piece.id, enemyType)
-	self._statsService:recordFirstBreach(record.routeId, record.piece.id, enemyType)
+	self._statsService:recordFirstBreach(attackerRouteId, record.piece.id, enemyType)
+	for _, cell in record.occupiedCells do
+		local key = GridMath.CellKey(cell.x, cell.z)
+		if self._wallIdByCell[key] == record.piece.id then
+			self._wallIdByCell[key] = nil
+		end
+	end
 	self._records[record.piece.id] = nil
 	self._byModel[wall] = nil
 	wall:Destroy()
@@ -216,7 +309,7 @@ function GridDefenseService._update(self: Service, deltaTime: number)
 	if updateTraps then
 		self._trapElapsed = 0
 	end
-	for id, record in self._records do
+	for _, record in self._records do
 		local root = record.model.PrimaryPart
 		if not root then
 			continue
@@ -240,8 +333,7 @@ function GridDefenseService._update(self: Service, deltaTime: number)
 					root.Position,
 					DefenseConfig.slowTrap.effectRadius,
 					DefenseConfig.slowTrap.slowMultiplier,
-					DefenseConfig.slowTrap.effectDurationSeconds,
-					id
+					DefenseConfig.slowTrap.effectDurationSeconds
 				)
 			)
 		end

@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/visual-canon-catalog.schema.json",
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "generatedAt",
+    "status",
+    "sourcePath",
+    "sourceSha256",
+    "authorityHashes",
+    "coverage",
+    "entries",
+    "productionGate"
+  ],
+  "properties": {
+    "$schema": {"const": "https://roblox-top1.local/schemas/visual-canon-catalog.schema.json"},
+    "schemaVersion": {"const": "1.0.0"},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "status": {"enum": ["PASS", "FAIL"]},
+    "sourcePath": {"const": "art/canonical-visuals/source.json"},
+    "sourceSha256": {"$ref": "#/$defs/sha256"},
+    "authorityHashes": {
+      "type": "object",
+      "minProperties": 6,
+      "additionalProperties": {"$ref": "#/$defs/sha256"}
+    },
+    "coverage": {
+      "type": "object",
+      "required": ["territoryCount", "assetCount", "canonCount", "stateDefinitionCount", "territories", "assets"],
+      "properties": {
+        "territoryCount": {"const": 3},
+        "assetCount": {"const": 6},
+        "canonCount": {"const": 18},
+        "stateDefinitionCount": {"const": 48},
+        "territories": {
+          "const": ["industrial-toy-defense", "salvaged-frontier", "clean-tactical-diorama"]
+        },
+        "assets": {
+          "const": ["barricade", "objective_core", "enemy_standard", "floor_module", "damage_effect", "turret_fast_v1"]
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 18,
+      "maxItems": 18,
+      "items": {
+        "type": "object",
+        "required": ["canonId", "assetId", "territoryId", "version", "status", "path", "sha256", "stateIds", "visualPacketStatus", "productionEligible"],
+        "properties": {
+          "canonId": {"type": "string", "pattern": "^vc_"},
+          "assetId": {"enum": ["barricade", "objective_core", "enemy_standard", "floor_module", "damage_effect", "turret_fast_v1"]},
+          "territoryId": {"enum": ["industrial-toy-defense", "salvaged-frontier", "clean-tactical-diorama"]},
+          "version": {"type": "integer", "minimum": 1},
+          "status": {"enum": ["DRAFT", "CANDIDATE", "ACCEPTED", "LOCKED", "REVISED"]},
+          "path": {"type": "string", "pattern": "^art/canonical-visuals/[a-z0-9-]+/[a-z0-9_]+\\.json$"},
+          "sha256": {"$ref": "#/$defs/sha256"},
+          "stateIds": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 3,
+            "uniqueItems": true,
+            "items": {"enum": ["intact", "damaged", "critical"]}
+          },
+          "visualPacketStatus": {"enum": ["SPECIFIED", "PARTIAL", "COMPLETE"]},
+          "productionEligible": {"type": "boolean"}
+        },
+        "unevaluatedProperties": false
+      }
+    },
+    "productionGate": {
+      "type": "object",
+      "required": ["selectedTerritory", "requiredCanonStatus", "requiredVisualPacketStatus", "humanApprovalRequired", "requiredCanonCount", "eligibleCanonCount", "status", "reason"],
+      "properties": {
+        "selectedTerritory": {
+          "anyOf": [
+            {"enum": ["industrial-toy-defense", "salvaged-frontier", "clean-tactical-diorama"]},
+            {"type": "null"}
+          ]
+        },
+        "requiredCanonStatus": {"const": "LOCKED"},
+        "requiredVisualPacketStatus": {"const": "COMPLETE"},
+        "humanApprovalRequired": {"const": true},
+        "requiredCanonCount": {"enum": [0, 6]},
+        "eligibleCanonCount": {"type": "integer", "minimum": 0, "maximum": 18},
+        "status": {"enum": ["PASS", "BLOCKED"]},
+        "reason": {"type": "string", "minLength": 20}
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

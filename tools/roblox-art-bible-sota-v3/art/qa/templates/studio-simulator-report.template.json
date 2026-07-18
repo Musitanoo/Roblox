@@ -1,0 +1,100 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/studio-simulator-report.schema.json",
+  "schemaVersion": "1.0.0",
+  "status": "BLOCKED",
+  "territoryId": "industrial-toy-defense",
+  "generatedAt": "2026-07-15T00:00:00Z",
+  "benchmarkProtocolVersion": "1.0.0",
+  "stagingOnlyConfirmed": false,
+  "deviceSimulator": {
+    "service": "StudioDeviceSimulatorService",
+    "presetId": "UNEXECUTED",
+    "resetToDefault": false,
+    "viewports": [
+      {
+        "presetId": "UNEXECUTED",
+        "orientation": "landscape",
+        "requested": { "width": 640, "height": 360 },
+        "observed": { "width": 640, "height": 360 },
+        "pixelDensity": 1,
+        "status": "BLOCKED"
+      },
+      {
+        "presetId": "UNEXECUTED",
+        "orientation": "portrait",
+        "requested": { "width": 360, "height": 640 },
+        "observed": { "width": 360, "height": 640 },
+        "pixelDensity": 1,
+        "status": "BLOCKED"
+      }
+    ]
+  },
+  "conditions": [
+    {
+      "conditionId": "graybox",
+      "copyCount": 30,
+      "assetInstances": 60,
+      "baseParts": 60,
+      "meshParts": 0,
+      "parts": 60,
+      "models": 0,
+      "uniqueMeshCombos": 0,
+      "singletonMeshCombos": 0,
+      "transparentParts": 0,
+      "decals": 0
+    },
+    {
+      "conditionId": "candidate",
+      "copyCount": 30,
+      "assetInstances": 60,
+      "baseParts": 1,
+      "meshParts": 1,
+      "parts": 0,
+      "models": 1,
+      "uniqueMeshCombos": 1,
+      "singletonMeshCombos": 0,
+      "transparentParts": 0,
+      "decals": 0
+    },
+    {
+      "conditionId": "graybox",
+      "copyCount": 100,
+      "assetInstances": 200,
+      "baseParts": 200,
+      "meshParts": 0,
+      "parts": 200,
+      "models": 0,
+      "uniqueMeshCombos": 0,
+      "singletonMeshCombos": 0,
+      "transparentParts": 0,
+      "decals": 0
+    },
+    {
+      "conditionId": "candidate",
+      "copyCount": 100,
+      "assetInstances": 200,
+      "baseParts": 1,
+      "meshParts": 1,
+      "parts": 0,
+      "models": 1,
+      "uniqueMeshCombos": 1,
+      "singletonMeshCombos": 0,
+      "transparentParts": 0,
+      "decals": 0
+    }
+  ],
+  "capabilities": {
+    "libmp": { "status": "BLOCKED", "diagnostic": "UNEXECUTED", "attemptCount": 1 },
+    "sceneAnalysis": { "status": "BLOCKED", "diagnostic": "UNEXECUTED", "attemptCount": 1 },
+    "screenCapture": { "status": "BLOCKED", "diagnostic": "UNEXECUTED", "attemptCount": 1 }
+  },
+  "visualChecks": {
+    "landscapeExactPixels": false,
+    "portraitExactPixels": false,
+    "stateCueReadable": false,
+    "interactionCueReadable": false,
+    "source": "blender_render_matrix_exact_pixel_proxy"
+  },
+  "artifacts": [],
+  "issues": ["UNEXECUTED: run the Studio simulator protocol in the staging place"]
+}

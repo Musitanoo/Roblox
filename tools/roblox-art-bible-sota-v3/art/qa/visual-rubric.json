@@ -1,0 +1,114 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/visual-rubric.schema.json",
+  "schemaVersion": "2.0.0",
+  "scale": {
+    "min": 1,
+    "max": 5
+  },
+  "reviewPolicy": {
+    "minimumExpertReviewers": 2,
+    "minimumTaskParticipants": 8,
+    "blindTerritoryLabels": true,
+    "blindMapStoredSeparately": true,
+    "maximumPostReconciliationDisagreement": 1.0,
+    "minimumMedianConfidence": 0.7,
+    "humanSelectionRequired": true,
+    "automaticSelectionForbidden": true,
+    "smallSampleInterpretation": "directional_gate_not_population_estimate"
+  },
+  "dimensions": {
+    "functionalReadability": {
+      "weight": 20.0,
+      "floor": 4.0,
+      "question": "Can players identify function and interaction under pressure?"
+    },
+    "silhouetteHierarchy": {
+      "weight": 15.0,
+      "floor": 4.0,
+      "question": "Do primary, secondary and tertiary forms read at intended distances?"
+    },
+    "roleStateDifferentiation": {
+      "weight": 15.0,
+      "floor": 4.0,
+      "question": "Are factions, roles and states distinct without color-only dependence?"
+    },
+    "identityDistinctiveness": {
+      "weight": 15.0,
+      "floor": 3.0,
+      "question": "Is the territory memorable and commercially distinct without copying a reference?"
+    },
+    "mobileClutterControl": {
+      "weight": 10.0,
+      "floor": 4.0,
+      "question": "Does the scene remain legible at hard mobile resolution and in a group of 30?"
+    },
+    "materialLightingRobustness": {
+      "weight": 10.0,
+      "floor": 3.0,
+      "question": "Do materials retain identity and hierarchy under all four lights?"
+    },
+    "productionScalability": {
+      "weight": 5.0,
+      "floor": 3.0,
+      "question": "Can a small team produce many assets without escalating complexity?"
+    },
+    "modularityReuse": {
+      "weight": 5.0,
+      "floor": 3.0,
+      "question": "Can meshes, materials and modules be reused while preserving variety?"
+    },
+    "technicalFitness": {
+      "weight": 5.0,
+      "floor": 4.0,
+      "question": "Does the territory meet deterministic and calibrated technical gates?"
+    }
+  },
+  "hardGates": {
+    "silhouette_recognition_60": {
+      "kind": "task_rate",
+      "taskGroupId": "silhouette_60",
+      "minimumParticipants": 8,
+      "minimumCorrectRate": 0.75
+    },
+    "function_recognition_mobile": {
+      "kind": "task_rate",
+      "taskGroupId": "function_30_mobile",
+      "minimumParticipants": 8,
+      "minimumCorrectRate": 0.875
+    },
+    "state_recognition": {
+      "kind": "task_rate",
+      "taskGroupId": "state_15_30",
+      "minimumParticipants": 8,
+      "minimumCorrectRate": 0.875
+    },
+    "not_color_only": {
+      "kind": "technical_boolean"
+    },
+    "grayscale_and_cvd": {
+      "kind": "technical_boolean"
+    },
+    "materials_four_lights": {
+      "kind": "technical_boolean"
+    },
+    "group_30_visual": {
+      "kind": "technical_boolean"
+    },
+    "provenance_complete": {
+      "kind": "technical_boolean"
+    },
+    "deterministic_rules": {
+      "kind": "technical_boolean"
+    },
+    "roblox_technical_budgets": {
+      "kind": "technical_boolean"
+    },
+    "studio_golden_scene": {
+      "kind": "technical_boolean"
+    },
+    "real_device_mobile": {
+      "kind": "technical_boolean"
+    }
+  },
+  "weightedScoreMinimum": 90.0
+}

@@ -6,6 +6,8 @@ $repositoryRoot = Split-Path -Parent $PSScriptRoot
 
 Push-Location $repositoryRoot
 try {
+    & (Join-Path $PSScriptRoot "check-docs.ps1")
+
     Get-Content -Raw -LiteralPath ".luaurc" | ConvertFrom-Json | Out-Null
     Get-Content -Raw -LiteralPath ".vscode\extensions.json" | ConvertFrom-Json | Out-Null
     Get-Content -Raw -LiteralPath ".vscode\settings.json" | ConvertFrom-Json | Out-Null

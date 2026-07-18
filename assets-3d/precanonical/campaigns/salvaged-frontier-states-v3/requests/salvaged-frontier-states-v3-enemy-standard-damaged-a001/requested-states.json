@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0.0",
+  "states": [
+    {
+      "id": "damaged",
+      "visualChange": "A visible asymmetric stagger and one weakened attack side show reduced health while facing, role and route pressure remain clear. One shoulder or heavy hand drops within approved articulation limits. The sensor flickers and the gait becomes asymmetrically labored.",
+      "invariants": [
+        "Two-and-a-half by five-and-a-half by two-and-a-half bounds and feet-center pivot remain fixed.",
+        "Forward sensor, compressed torso, heavy hands and short legs remain recognizable.",
+        "The enemy never becomes player-proportioned or gains friendly interaction language.",
+        "Damage changes posture and exposure without changing hitbox anchors arbitrarily.",
+        "Threat direction remains readable before attack VFX or audio."
+      ]
+    }
+  ],
+  "independentStateDesignForbidden": true
+}

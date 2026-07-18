@@ -1,0 +1,957 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/visual-canon.schema.json",
+  "schemaVersion": "2.0.0",
+  "canonId": "vc_turret_fast_v1__industrial-toy-defense__v1",
+  "assetId": "turret_fast_v1",
+  "territoryId": "industrial-toy-defense",
+  "version": 1,
+  "status": "CANDIDATE",
+  "authority": {
+    "productArtContract": {
+      "path": "art/authority/product-art-authority-v1.json",
+      "sha256": "217c95da6202e43ad542094bcc2389493748c9d4bc9045e95647de9b6d98e2ca"
+    },
+    "retention": {
+      "path": "docs/PRODUCT_INNOVATION_AND_RETENTION_DOCTRINE.md",
+      "sha256": "b1b045849e5540cea71c7a9965f5e16351168b25e50550e5bafea40d832bc5ad"
+    },
+    "objectProductContracts": {
+      "path": "art/canonical-visuals/object-product-contracts.json",
+      "sha256": "4bc2a2657e9b5086f820ece02bf502b8c781c9bdddd5dda711a27acc499c2184"
+    },
+    "artDirection": {
+      "path": "art/art-direction.json",
+      "sha256": "ab1e3b2607fc916fa660fb20b90c2b62ee6985a866c3a65090bef4996a7eef22"
+    },
+    "calibration": {
+      "path": "art/calibration/calibration-kit.json",
+      "sha256": "8a33c6c8a9b5a02ef460f5e698907a4d6d623e2f5c475047cd3dbdccc102ace9"
+    },
+    "shapeLanguage": {
+      "path": "art/shape-language/rules.json",
+      "sha256": "76fcd0eaaace7f34d7fb88fdc6470315518efd8e586649393ceb32356a7addc7"
+    },
+    "materials": {
+      "path": "art/materials/material-rules.json",
+      "sha256": "41fadb667eb50a2252e6721649afee1b38b98a667ea7c2051f5f465ad9896b83"
+    },
+    "selectedConstitution": {
+      "path": "art/selected/salvaged-frontier-constitution.json",
+      "sha256": "1a7ea88c2d06be01530b6e02b70b6f9dc176f5b74d0cb98f4d565b8a322a9491"
+    }
+  },
+  "productIntent": {
+    "retentionBinding": {
+      "primaryHypothesis": {
+        "id": "H-FAILURE-001",
+        "status": "TESTING",
+        "priority": "P0a",
+        "designContribution": "Specific barrel and support failure should let players relate coverage loss to placement, protection or repair decisions.",
+        "intendedPlayerBehavior": "The player identifies the failed firing side, understands the intended coverage risk and changes protection or positioning before a rematch.",
+        "recognitionTest": "At mobile far distance, players identify forward aim, safe interaction side and integrity state without relying on muzzle color.",
+        "decisionMetric": "A non-briefed player points to the failed module and proposes a coherent preparation change without assuming a heavy cannon or missile role.",
+        "failureCondition": "The turret reads as a heavy weapon, hides its safe side, changes construction between states or promises unimplemented tracking and fire-rate behavior.",
+        "guardrails": [
+          "Automatic defense must not visually imply that player action is unnecessary.",
+          "Damage cues may not assert firing, targeting or ammunition behavior before PD-07 binds them.",
+          "The safe interaction socket never moves onto the firing face."
+        ],
+        "gate": "G3",
+        "claimBoundary": "The turret supports failure-learning and coverage readability but does not prove combinatorial defense depth or retention."
+      },
+      "secondaryHypotheses": [
+        {
+          "id": "H-FORTRESS-001",
+          "status": "DEFERRED",
+          "scope": "One adapted housing and rear service repair may suggest player-authored maintenance.",
+          "implementationAllowed": false,
+          "claimBoundary": "The repair treatment is visual narrative only and cannot claim persistent machine history."
+        }
+      ],
+      "evidenceStatus": "UNPROVEN"
+    },
+    "evidenceBoundary": "These bindings express falsifiable design intent only; retention, readability, implementation and runtime behavior remain unproven until their named human and technical gates pass."
+  },
+  "runtimeStateModel": {
+    "primaryGenerationStates": [
+      "intact",
+      "damaged",
+      "critical"
+    ],
+    "compositionRule": "Compose one structural integrity reference with powered, firing, targeted, empty, overloaded, disabled or repairing overlays; overlays never redesign barrels, yokes, foundation, socket or repair history.",
+    "operationalOverlays": [
+      {
+        "id": "powered_or_disabled",
+        "applicability": "The accepted defense contract reports power availability.",
+        "visualCues": [
+          "tracking posture or rest posture",
+          "ready signal distinguished without color-only dependence"
+        ],
+        "geometryPolicy": "Pose existing rotation components only; structural damage remains separate.",
+        "gameplayTruth": "Power and tracking behavior remain unresolved under PD-07."
+      },
+      {
+        "id": "firing",
+        "applicability": "The authoritative weapon state is firing.",
+        "visualCues": [
+          "bounded alternating muzzle events",
+          "short mechanical recoil"
+        ],
+        "geometryPolicy": "Use existing barrels and declared recoil axes.",
+        "gameplayTruth": "Cadence, targeting and damage come only from the server contract."
+      },
+      {
+        "id": "empty_or_overloaded",
+        "applicability": "A future accepted ammunition or energy model reports this condition.",
+        "visualCues": [
+          "safe-side service posture",
+          "distinct non-color rhythm from structural damage"
+        ],
+        "geometryPolicy": "Overlay or pose only; never remove a barrel.",
+        "gameplayTruth": "These overlays are reserved and cannot be shown as implemented before PD-07."
+      },
+      {
+        "id": "targeted_or_selected",
+        "applicability": "The turret is current enemy focus or player selection.",
+        "visualCues": [
+          "external bounded marker",
+          "no structural state change"
+        ],
+        "geometryPolicy": "Overlay only with footprint and construction fixed.",
+        "gameplayTruth": "Focus must reflect actual runtime state and carries no capability change."
+      },
+      {
+        "id": "repairing",
+        "applicability": "An accepted repair action is progressing.",
+        "visualCues": [
+          "safe socket guidance",
+          "failed support closes before barrel alignment"
+        ],
+        "geometryPolicy": "Reverse declared damage operations through stable axes.",
+        "gameplayTruth": "Repair cost, duration and availability remain owned by PD-07."
+      }
+    ],
+    "transientStates": [
+      {
+        "id": "impact_reaction",
+        "applicability": "A validated hit reaches a named turret component.",
+        "visualCues": [
+          "directional local recoil",
+          "brief contained spark at the struck support"
+        ],
+        "geometryPolicy": "Return to the authoritative structural state.",
+        "gameplayTruth": "The reaction cannot invent a failed module or tracking interruption."
+      }
+    ],
+    "terminalState": {
+      "id": "destroyed",
+      "derivedFrom": "critical",
+      "description": "A runtime shutdown and bounded collapse complete the same mechanism only after an accepted defense lifecycle authorizes destruction.",
+      "generationPolicy": "RUNTIME_ONLY_NOT_PRIMARY_GPT_IMAGE_TASK",
+      "visualCues": [
+        "all readiness ceases",
+        "foundation and authored identity remain attributable during removal"
+      ],
+      "gameplayTruth": "Destroyed behavior, collision and replacement remain unresolved under PD-07."
+    },
+    "coverageBoundary": "The three primary images define structural integrity; power, targeting, firing, empty, overloaded, repair, hit and destroyed presentations remain orthogonal runtime layers."
+  },
+  "identity": {
+    "canonicalName": "Fast Defense Turret",
+    "category": "player_buildable_weapon",
+    "gameplayFunction": "fast-firing player defense turret with unmistakable forward aim, interaction socket, and escalating damage readability",
+    "worldRole": "A rapid-response player defense that converts aim, coverage and sustained fire into a readable fortress hypothesis.",
+    "affiliation": "player_fortress",
+    "manufactureContext": "Built from the same fortress grammar as the calibration kit, with replaceable twin firing modules, a service mass and a protected player interaction socket.",
+    "emotionalIntent": "Alert, energetic and reassuring when active; damage should feel mechanically specific and urgently repairable.",
+    "technologyLevel": "modular expedition-defense machinery",
+    "character": [
+      "watchful",
+      "quick",
+      "compact",
+      "serviceable"
+    ],
+    "territoryVisualThesis": "A compact premium twin-barrel defense toy whose orange yokes, cyan service socket and planted base make speed and ownership obvious."
+  },
+  "instantRead": {
+    "oneSecondPromise": "This planted twin-barrel machine aims forward, fires rapidly, exposes a safe-side interaction socket and clearly loses capability as damage escalates.",
+    "orientationCue": "Twin barrels and forward wedge declare the firing face; a closed service mass declares the rear.",
+    "interactionCue": "A complete protected socket sits below the weapon body on the player-safe side and opens when disabled.",
+    "dangerCue": "Player-safe weapon readiness is distinguished from enemy threat; barrel posture and service state carry damage readability.",
+    "relationToPlayer": "Friendly authored defense whose coverage and failure teach placement, protection and repair decisions.",
+    "responsibleElements": [
+      "two parallel fast barrels",
+      "compact rotating upper body",
+      "broad planted foundation",
+      "rear service mass and protected socket",
+      "Twin barrels and forward wedge declare the firing face; a closed service mass declares the rear.",
+      "A complete protected socket sits below the weapon body on the player-safe side and opens when disabled.",
+      "Player-safe weapon readiness is distinguished from enemy threat; barrel posture and service state carry damage readability."
+    ]
+  },
+  "dimensions": {
+    "unit": "stud",
+    "width": 4.8,
+    "height": 5.4,
+    "depth": 5.2,
+    "toleranceStuds": 0.005,
+    "pivot": "bottom_center",
+    "proportionRules": [
+      "The foundation remains broad enough to ground the five-and-a-half-stud height.",
+      "The rotating weapon body occupies the middle third of height.",
+      "Twin barrels remain parallel, separated and readable at sixty studs.",
+      "The service mass counterbalances the barrel projection without exceeding the footprint."
+    ]
+  },
+  "silhouette": {
+    "targetReadDistanceStuds": 60,
+    "views": {
+      "front": "Two aligned fast barrels, protected apertures and a clear forward wedge sit above a compact planted pedestal.",
+      "back": "A closed service mass and safe-side interaction socket distinguish the non-firing face.",
+      "left": "The barrel projection, yoke, rotating body and counterbalancing service mass form a plausible weapon profile.",
+      "right": "The second barrel remains distinct while territory asymmetry may alter repair or armor treatment only.",
+      "top": "Twin parallel barrels lead from a rotating body with a rear service counterweight and clear rotational clearance.",
+      "bottom": "Four planted contacts or one broad foundation define a simple honest collision footprint.",
+      "threeQuarterFront": "The canonical hero read shows twin fast barrels, compact body, planted foundation and forward aim in one glance.",
+      "threeQuarterBack": "The service mass, interaction socket and support yokes explain repair and rear orientation.",
+      "gameCamera": "From elevated mobile view the turret reads as one quick forward-aiming defense token with state visible through barrel and upper-body posture."
+    },
+    "recognitionLandmarks": [
+      "two parallel fast barrels",
+      "compact rotating upper body",
+      "broad planted foundation",
+      "rear service mass and protected socket"
+    ],
+    "negativeSpaces": [
+      "gap between twin barrels",
+      "rotational clearance above pedestal",
+      "open service socket only in critical state"
+    ],
+    "intentionalAsymmetry": "Near-symmetric construction with only eight-percent purposeful service or repair offset.",
+    "distanceRule": "The primary function, orientation and state must remain readable at 60 studs in the canonical mobile landscape and portrait views."
+  },
+  "formHierarchy": {
+    "targetRatios": {
+      "primary": 0.72,
+      "secondary": 0.23,
+      "tertiary": 0.05
+    },
+    "primary": [
+      "broad foundation and pedestal",
+      "compact rotating body",
+      "two forward barrel masses"
+    ],
+    "secondary": [
+      "support yokes",
+      "rear service mass",
+      "interaction socket and muzzle guards"
+    ],
+    "tertiary": [
+      "few large fasteners",
+      "controlled vent or repair band",
+      "one forward readiness aperture"
+    ],
+    "territoryConstructionTranslation": "Barrels, guards, body and pedestal join through oversized modular pivots and a closed rear cartridge-like service mass."
+  },
+  "construction": {
+    "components": [
+      {
+        "id": "Foundation",
+        "function": "Ground the weapon and define the stable gameplay footprint.",
+        "position": "lower footprint",
+        "form": "broad planted base",
+        "materialRole": "rubber",
+        "relationship": "Supports pedestal and rotation deck.",
+        "mobility": "fixed",
+        "visibility": "Visible from every gameplay angle.",
+        "readingRole": "Signals stability and separates the turret from a handheld weapon."
+      },
+      {
+        "id": "WeaponBody",
+        "function": "Carry rotation, yokes, barrels and state posture.",
+        "position": "middle and upper body",
+        "form": "compact armored mass",
+        "materialRole": "primary",
+        "relationship": "Mounted on the pedestal with visible rotational clearance.",
+        "mobility": "mobile",
+        "visibility": "Dominant from front, sides and game camera.",
+        "readingRole": "Primary identity and damage posture carrier."
+      },
+      {
+        "id": "TwinBarrels",
+        "function": "Communicate fast sustained fire and forward aim.",
+        "position": "front upper body",
+        "form": "two separated parallel barrels",
+        "materialRole": "bareMetal",
+        "relationship": "Supported by yokes and counterbalanced by the service mass.",
+        "mobility": "destructible",
+        "visibility": "Dominant from front, sides and top.",
+        "readingRole": "Makes function and state immediately readable."
+      },
+      {
+        "id": "ServiceMass",
+        "function": "Define rear orientation and house plausible feed, cooling and repair systems.",
+        "position": "rear upper body",
+        "form": "closed counterweight mass",
+        "materialRole": "secondary",
+        "relationship": "Mechanically linked to body and barrel support.",
+        "mobility": "destructible",
+        "visibility": "Dominant from rear and three-quarter rear.",
+        "readingRole": "Explains balance and prevents front-back ambiguity."
+      },
+      {
+        "id": "InteractionSocket",
+        "function": "Expose safe-side repair and upgrade interaction.",
+        "position": "lower player-facing body",
+        "form": "complete socket when usable",
+        "materialRole": "interaction",
+        "relationship": "Mounted to pedestal or protected body, never on the muzzle.",
+        "mobility": "replaceable",
+        "visibility": "Clear from rear and side approach.",
+        "readingRole": "Separates player interaction from weapon danger."
+      }
+    ],
+    "plausibilityRules": [
+      "Every visible part belongs to a named component and has a functional relationship to at least one neighboring component.",
+      "No part floats, interpenetrates without an approved joint, or relies on unexplained support.",
+      "Moving, replaceable and destructible components preserve declared axes, anchors and clearance.",
+      "The compiler may simplify tertiary finish but may not remove a primary or secondary semantic component."
+    ],
+    "stableNamingRule": "Component IDs and gameplay anchors never change without an approved canon revision."
+  },
+  "artDirection": {
+    "territoryThesis": "A cheerful but serious fortress construction set: oversized interlocking parts, obvious load paths and safety-coded function make every object feel player-built, repairable and immediately understood.",
+    "shapeGrammar": [
+      "chunky rectangles and trapezoids",
+      "large interlocking brackets",
+      "broad protected apertures",
+      "visible feet, braces and service modules"
+    ],
+    "exaggeration": "Functional masses are enlarged like premium construction toys; proportions are confident and never delicate.",
+    "edgeLanguage": "Large consistent soft bevels create friendly highlights while preserving flat readable planes.",
+    "detailDensity": "Very low tertiary density; every small feature must explain assembly, safety or interaction.",
+    "asymmetry": "Near-symmetric construction with only eight-percent purposeful service or repair offset.",
+    "materialLanguage": "Clean coated structure, durable impact panels, rubber contacts and protected emissive inserts.",
+    "paletteLogic": "Cool structural body, warm industrial safety accents and contained cyan interaction light with warning and critical roles kept local.",
+    "surfaceTreatment": "Calm clean planes, molded seams and large contact wear; no photoreal grime or texture chatter.",
+    "wearLogic": "Wear appears where toy-like modules collide, pivot, touch ground or receive direct enemy impact.",
+    "signatureDetails": [
+      "paired rectangular barrels",
+      "orange side yokes",
+      "cyan protected lower socket"
+    ],
+    "forbidden": [
+      "realistic military grit",
+      "tiny kitbash greebles",
+      "sharp needle details",
+      "unexplained asymmetry",
+      "fragile exposed cables"
+    ]
+  },
+  "materials": [
+    {
+      "zoneId": "foundation_zone",
+      "family": "fortress_structure",
+      "semanticRole": "primary",
+      "valueRange": "dark to middle-dark",
+      "surfaceFinish": "Broad planted surfaces and controlled bevel highlights.",
+      "wear": "Feet, rotation deck and service contacts only.",
+      "boundaryRule": "Foundation coating remains distinct from moving metal and interaction socket.",
+      "lightingBehavior": "Preserves grounded mass under muzzle light and adverse night.",
+      "territoryTranslation": "Clean coated structure, durable impact panels, rubber contacts and protected emissive inserts. Calm clean planes, molded seams and large contact wear; no photoreal grime or texture chatter. Palette rule: Cool structural body, warm industrial safety accents and contained cyan interaction light with warning and critical roles kept local."
+    },
+    {
+      "zoneId": "firing_zone",
+      "family": "functional_weapon_metal",
+      "semanticRole": "bareMetal",
+      "valueRange": "middle-light",
+      "surfaceFinish": "Clean barrel surfaces with no ornamental perforation noise or capability claim.",
+      "wear": "Muzzle and support contacts only.",
+      "boundaryRule": "Weapon metal never consumes the full body or interaction zone.",
+      "lightingBehavior": "Keeps two barrels visually separate at distance.",
+      "territoryTranslation": "Clean coated structure, durable impact panels, rubber contacts and protected emissive inserts. Calm clean planes, molded seams and large contact wear; no photoreal grime or texture chatter. Palette rule: Cool structural body, warm industrial safety accents and contained cyan interaction light with warning and critical roles kept local."
+    },
+    {
+      "zoneId": "interaction_zone",
+      "family": "protected_emissive",
+      "semanticRole": "interaction",
+      "valueRange": "small bright accent",
+      "surfaceFinish": "Contained lens or socket interior.",
+      "wear": "Minimal until the socket opens in critical state.",
+      "boundaryRule": "Emission remains inside the safe-side socket.",
+      "lightingBehavior": "Readable without resembling muzzle flash.",
+      "territoryTranslation": "Clean coated structure, durable impact panels, rubber contacts and protected emissive inserts. Calm clean planes, molded seams and large contact wear; no photoreal grime or texture chatter. Palette rule: Cool structural body, warm industrial safety accents and contained cyan interaction light with warning and critical roles kept local."
+    }
+  ],
+  "semanticZones": [
+    {
+      "id": "foundation_zone",
+      "purpose": "Show planted stable defense.",
+      "shapeRule": "Broad base and short pedestal.",
+      "valueRule": "Dark grounded mass.",
+      "colorRole": "primary",
+      "motionRule": "still",
+      "vfxAnchor": "foundation",
+      "audioRole": "mechanical_base"
+    },
+    {
+      "id": "firing_zone",
+      "purpose": "Show aim, readiness and weapon function.",
+      "shapeRule": "Two parallel barrels and forward apertures.",
+      "valueRule": "Readable metal separation.",
+      "colorRole": "bareMetal",
+      "motionRule": "aim and recoil",
+      "vfxAnchor": "muzzles",
+      "audioRole": "fast_fire"
+    },
+    {
+      "id": "interaction_zone",
+      "purpose": "Guide repair and upgrade access.",
+      "shapeRule": "Complete protected socket when usable.",
+      "valueRule": "Small high-contrast focal point.",
+      "colorRole": "interaction",
+      "motionRule": "ready pulse",
+      "vfxAnchor": "interaction_socket",
+      "audioRole": "friendly_service"
+    },
+    {
+      "id": "failure_zone",
+      "purpose": "Show exactly which firing or support capability failed.",
+      "shapeRule": "Dropped barrel, opened guard, tilted upper mass and exposed core.",
+      "valueRule": "Warning then critical contrast at causal failure.",
+      "colorRole": "warning",
+      "motionRule": "disabled tracking",
+      "vfxAnchor": "failed_component",
+      "audioRole": "weapon_failure"
+    }
+  ],
+  "states": [
+    {
+      "id": "intact",
+      "summary": "Two aligned barrels, complete socket and closed service mass communicate a fast ready defense with full tracking capability.",
+      "gameplayTruth": {
+        "status": "CANDIDATE_REQUIRES_GAMEPLAY_CONTRACT",
+        "contractRef": "PD-07",
+        "trigger": "Candidate full-integrity structural band.",
+        "capabilityEffect": "Visually promises a ready fast twin-barrel role without asserting exact targeting, cadence or damage.",
+        "collisionEffect": "The stable foundation wrapper remains unchanged.",
+        "visualClaim": "Two aligned barrels, complete guards and closed rear service mass communicate full structural readiness.",
+        "claimBoundary": "The image may imply intended readiness but cannot prove power, firing, tracking or ammunition implementation."
+      },
+      "invariants": [
+        "Four-point-eight by five-point-four by five-point-two dimensions and bottom-center pivot remain fixed.",
+        "Twin-barrel intact identity, forward aim and rear service mass remain recognizable.",
+        "The interaction socket stays on the player-safe side and never becomes a muzzle.",
+        "Damage follows the same component chain: barrel, guard, structure, upper-body posture and socket.",
+        "Foundation footprint and rotation axis remain stable across states and territories."
+      ],
+      "changes": [
+        "Both barrels align and both muzzle guards remain complete.",
+        "The service mass is closed and the interaction socket is complete."
+      ],
+      "cues": {
+        "shape": [
+          "two parallel barrels",
+          "balanced upper body",
+          "complete planted foundation"
+        ],
+        "silhouette": [
+          "two parallel barrels",
+          "balanced upper body",
+          "complete planted foundation"
+        ],
+        "value": [
+          "clean barrel separation",
+          "stable dark body"
+        ],
+        "color": [
+          "friendly interaction accent",
+          "no warning dominance"
+        ],
+        "light": [
+          "contained ready pulse",
+          "muzzle light only while firing"
+        ],
+        "motion": [
+          "smooth target tracking",
+          "fast bounded recoil"
+        ],
+        "vfx": [
+          "small alternating muzzle flashes",
+          "no smoke at idle"
+        ],
+        "audio": [
+          "quiet tracking servo",
+          "distinct fast firing rhythm"
+        ]
+      },
+      "componentOperations": [
+        {
+          "componentId": "TwinBarrels",
+          "operation": "PRESERVE",
+          "description": "Keep both barrels aligned, separate and operational."
+        },
+        {
+          "componentId": "InteractionSocket",
+          "operation": "EMIT",
+          "description": "Emit the calm usable-state service signal."
+        }
+      ],
+      "transitions": [
+        {
+          "to": "damaged",
+          "durationSeconds": 0.35,
+          "sequence": [
+            "one side takes impact",
+            "one barrel drops",
+            "one guard opens",
+            "tracking becomes uneven",
+            "warning signal starts"
+          ],
+          "reversible": true
+        }
+      ],
+      "territoryTranslation": "One barrel visibly drops from a large pivot, then disappears as the upper toy module tilts and the service socket opens."
+    },
+    {
+      "id": "damaged",
+      "summary": "One barrel drops and one guard opens, visibly reducing firing confidence while the turret remains the same repairable defense.",
+      "gameplayTruth": {
+        "status": "CANDIDATE_REQUIRES_GAMEPLAY_CONTRACT",
+        "contractRef": "PD-07",
+        "trigger": "Candidate intermediate integrity band after one named support failure.",
+        "capabilityEffect": "Shows reduced firing confidence without asserting exact fire-rate, targeting or damage penalties.",
+        "collisionEffect": "Foundation collision and rotation anchor remain unchanged.",
+        "visualClaim": "One barrel drops at its support and its muzzle stays dark while the opposite barrel remains visually ready.",
+        "claimBoundary": "The prompt must say visually ready, not functional; actual capability requires the accepted defense contract."
+      },
+      "invariants": [
+        "Four-point-eight by five-point-four by five-point-two dimensions and bottom-center pivot remain fixed.",
+        "Twin-barrel intact identity, forward aim and rear service mass remain recognizable.",
+        "The interaction socket stays on the player-safe side and never becomes a muzzle.",
+        "Damage follows the same component chain: barrel, guard, structure, upper-body posture and socket.",
+        "Foundation footprint and rotation axis remain stable across states and territories."
+      ],
+      "changes": [
+        "One barrel and muzzle assembly rotates downward within its support.",
+        "One guard opens and bare support structure becomes visible."
+      ],
+      "cues": {
+        "shape": [
+          "one lowered barrel",
+          "one opened guard",
+          "foundation and service mass unchanged"
+        ],
+        "silhouette": [
+          "one lowered barrel",
+          "one opened guard",
+          "foundation and service mass unchanged"
+        ],
+        "value": [
+          "bright exposed support on damaged side",
+          "warning socket contrast"
+        ],
+        "color": [
+          "warning role local to failed side",
+          "friendly base palette remains dominant"
+        ],
+        "light": [
+          "warning pulse at service socket",
+          "failed barrel muzzle remains dark"
+        ],
+        "motion": [
+          "uneven tracking",
+          "the surviving barrel holds a visually plausible ready posture without claiming firing capability"
+        ],
+        "vfx": [
+          "brief spark at exposed support",
+          "thin heat wisp after firing"
+        ],
+        "audio": [
+          "irregular firing rhythm",
+          "audible damaged servo"
+        ]
+      },
+      "componentOperations": [
+        {
+          "componentId": "TwinBarrels",
+          "operation": "ROTATE",
+          "description": "Drop one barrel around its real yoke pivot."
+        },
+        {
+          "componentId": "WeaponBody",
+          "operation": "EXPOSE",
+          "description": "Expose the failed-side support structure."
+        },
+        {
+          "componentId": "InteractionSocket",
+          "operation": "RECOLOR",
+          "description": "Switch the contained service signal to warning."
+        }
+      ],
+      "transitions": [
+        {
+          "to": "critical",
+          "durationSeconds": 0.45,
+          "sequence": [
+            "failed barrel detaches or becomes absent",
+            "upper mass tilts",
+            "critical core exposes",
+            "socket opens",
+            "tracking stops"
+          ],
+          "reversible": true
+        },
+        {
+          "to": "intact",
+          "durationSeconds": 1.3,
+          "sequence": [
+            "support closes",
+            "barrel rises",
+            "guard locks",
+            "tracking recenters",
+            "ready signal resumes"
+          ],
+          "reversible": true
+        }
+      ],
+      "territoryTranslation": "One barrel visibly drops from a large pivot, then disappears as the upper toy module tilts and the service socket opens."
+    },
+    {
+      "id": "critical",
+      "summary": "One barrel is absent, the upper mass tilts and the socket opens, communicating disabled imminent failure without changing the foundation.",
+      "gameplayTruth": {
+        "status": "CANDIDATE_REQUIRES_GAMEPLAY_CONTRACT",
+        "contractRef": "PD-07",
+        "trigger": "Candidate final pre-destruction structural band.",
+        "capabilityEffect": "Communicates intended disabled urgency without claiming that tracking or firing has actually stopped.",
+        "collisionEffect": "Foundation collision remains unchanged.",
+        "visualClaim": "One barrel is absent from the active silhouette, upper mass rests in a disabled tilt and safe socket opens.",
+        "claimBoundary": "Disabled posture is a visual candidate; actual tracking, firing, power and destruction remain unproven until PD-07 binds them."
+      },
+      "invariants": [
+        "Four-point-eight by five-point-four by five-point-two dimensions and bottom-center pivot remain fixed.",
+        "Twin-barrel intact identity, forward aim and rear service mass remain recognizable.",
+        "The interaction socket stays on the player-safe side and never becomes a muzzle.",
+        "Damage follows the same component chain: barrel, guard, structure, upper-body posture and socket.",
+        "Foundation footprint and rotation axis remain stable across states and territories."
+      ],
+      "changes": [
+        "One barrel and muzzle are absent from the active silhouette.",
+        "The upper mass tilts, critical core exposes and interaction socket opens."
+      ],
+      "cues": {
+        "shape": [
+          "single surviving barrel",
+          "tilted upper mass",
+          "open service socket"
+        ],
+        "silhouette": [
+          "single surviving barrel",
+          "tilted upper mass",
+          "open service socket"
+        ],
+        "value": [
+          "dark disabled body",
+          "small bright exposed critical core"
+        ],
+        "color": [
+          "critical accent at exposed core",
+          "warning remnants on failed side"
+        ],
+        "light": [
+          "irregular critical core pulse",
+          "all muzzle readiness light off"
+        ],
+        "motion": [
+          "no readiness or tracking motion is visually implied",
+          "upper mass settles into disabled tilt"
+        ],
+        "vfx": [
+          "thin smoke from failed support",
+          "rare contained sparks"
+        ],
+        "audio": [
+          "stopped servo",
+          "intermittent critical service alarm"
+        ]
+      },
+      "componentOperations": [
+        {
+          "componentId": "TwinBarrels",
+          "operation": "REMOVE",
+          "description": "Remove one approved barrel and muzzle pair from the active silhouette."
+        },
+        {
+          "componentId": "WeaponBody",
+          "operation": "ROTATE",
+          "description": "Tilt the upper mass around the stable pedestal axis."
+        },
+        {
+          "componentId": "InteractionSocket",
+          "operation": "OPEN",
+          "description": "Open the disabled socket and expose the critical interior."
+        }
+      ],
+      "transitions": [
+        {
+          "to": "intact",
+          "durationSeconds": 2.0,
+          "sequence": [
+            "critical core powers down",
+            "upper body recenters",
+            "replacement barrel returns",
+            "socket closes",
+            "tracking and ready signal resume"
+          ],
+          "reversible": true
+        }
+      ],
+      "territoryTranslation": "One barrel visibly drops from a large pivot, then disappears as the upper toy module tilts and the service socket opens."
+    }
+  ],
+  "invariants": [
+    "Four-point-eight by five-point-four by five-point-two dimensions and bottom-center pivot remain fixed.",
+    "Twin-barrel intact identity, forward aim and rear service mass remain recognizable.",
+    "The interaction socket stays on the player-safe side and never becomes a muzzle.",
+    "Damage follows the same component chain: barrel, guard, structure, upper-body posture and socket.",
+    "Foundation footprint and rotation axis remain stable across states and territories."
+  ],
+  "allowedVariations": [
+    {
+      "id": "service_detail",
+      "range": "one approved cooling, feed or repair motif per territory",
+      "justification": "Adds construction identity without changing function."
+    },
+    {
+      "id": "muzzle_guard_profile",
+      "range": "territory-approved rectangle or trapezoid family",
+      "justification": "Expresses DA while preserving twin-barrel recognition."
+    },
+    {
+      "id": "idle_tracking_phase",
+      "range": "bounded phase and speed only",
+      "justification": "Prevents synchronized defenses while preserving readiness."
+    }
+  ],
+  "forbidden": [
+    "single-barrel intact variant",
+    "missile, laser or heavy-cannon reinterpretation",
+    "friendly socket on the firing face",
+    "needle barrels or thin loose wires",
+    "floating armor plates",
+    "damage shown only by emissive color",
+    "new palette, material, angle, bevel or damage language",
+    "realistic military grit",
+    "tiny kitbash greebles",
+    "sharp needle details",
+    "unexplained asymmetry",
+    "fragile exposed cables",
+    "thin_loose_wires",
+    "microtext",
+    "free_floating_fragments",
+    "detail_without_silhouette_function_identity"
+  ],
+  "visualPacket": {
+    "status": "SPECIFIED",
+    "coverageRule": "If a component or state is absent from every bound board, the canon is incomplete and cannot be LOCKED.",
+    "boards": [
+      {
+        "id": "orthographic",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "perspective",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "black_silhouette",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "component_breakdown",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "proportions",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "materials",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "semantic_zones",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "all_states",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "state_comparison",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "mobile_near",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "mobile_mid",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "mobile_far",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "lighting_matrix",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "repetition_1",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "repetition_30",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "repetition_100",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "required_and_forbidden_annotations",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      }
+    ]
+  },
+  "generationContract": {
+    "mode": "RECONSTRUCT_CANON_DO_NOT_AUTHOR_OBJECT",
+    "obligations": [
+      "Reconstruct every primary and secondary component defined by this canon.",
+      "Produce every required state from the same component structure and stable anchors.",
+      "Preserve the one-second function, front, interaction, danger and state readings.",
+      "Record this canon ID and exact SHA-256 in the compliance envelope."
+    ],
+    "constraints": [
+      "Dimensions are 4.8 x 5.4 x 5.2 studs with tolerance 0.005.",
+      "Triangle budget maximum is 3500.",
+      "Texture class is medium.",
+      "Pivot is bottom_center and component anchors remain stable.",
+      "One UV set and one material slot maximum per production mesh component."
+    ],
+    "tolerances": [
+      "Dimension error may not exceed 0.005 stud.",
+      "Only the explicitly listed allowedVariations may vary.",
+      "Tertiary details may be simplified when they fall below the minimum mobile screen-space band."
+    ],
+    "forbidden": [
+      "single-barrel intact variant",
+      "missile, laser or heavy-cannon reinterpretation",
+      "friendly socket on the firing face",
+      "needle barrels or thin loose wires",
+      "floating armor plates",
+      "damage shown only by emissive color",
+      "new palette, material, angle, bevel or damage language",
+      "realistic military grit",
+      "tiny kitbash greebles",
+      "sharp needle details",
+      "unexplained asymmetry",
+      "fragile exposed cables",
+      "thin_loose_wires",
+      "microtext",
+      "free_floating_fragments",
+      "detail_without_silhouette_function_identity"
+    ],
+    "promptDiscipline": {
+      "subjectClass": "mechanical_weapon",
+      "identityLockRules": [
+        "Freeze one exact foundation, pedestal, rotation deck, twin-barrel spacing, yokes, rear service mass and safe-side socket.",
+        "The intact state always has two barrels; later states derive from the same declared failed side and axes.",
+        "The firing face and safe interaction rear remain unmistakably different in every view."
+      ],
+      "styleRules": [
+        "Use a compact fast-defense silhouette with broad planted mass, short readable barrels and one mechanically justified adapted housing.",
+        "Salvaged Frontier appears through compatible repair and service logic, not heavy military realism or random scrap.",
+        "Keep muzzle, support and service hierarchies legible at mobile far distance."
+      ],
+      "negativeRules": [
+        "No missile, laser, heavy cannon, single-barrel intact design, handheld weapon, giant ammunition belt or heroic military realism.",
+        "No front-facing friendly socket, floating armor, loose wires, decorative brace or state redesign.",
+        "No assertion that a visually ready barrel is functionally firing or that disabled posture proves runtime tracking behavior."
+      ],
+      "outputSelfChecks": [
+        "All quadrants preserve foundation, axes, barrel spacing, failed side, rear service mass, socket and target state.",
+        "Forward aim and safe rear interaction remain readable in grayscale.",
+        "Every capability cue stays inside the explicit gameplay-truth boundary."
+      ]
+    },
+    "complianceReportRequired": true,
+    "minimumStatusForExploration": "CANDIDATE",
+    "minimumStatusForProduction": "LOCKED",
+    "silentCanonMutationForbidden": true
+  },
+  "approval": {
+    "required": true,
+    "status": "PENDING",
+    "approvedBy": null,
+    "approvedAt": null,
+    "decisionRecord": null,
+    "approvedEvidencePackageSha256": null,
+    "revisionReason": null
+  },
+  "provenance": {
+    "sourceKind": "AUTHORED_CANON_COMPILED_FROM_GDD_RETENTION_AND_ART_GRAMMAR",
+    "authoredAt": "2026-07-18T09:05:09Z",
+    "authoredBy": "Codex under founder authority; human lock still required",
+    "generator": "tools.art.build_visual_canons",
+    "inputHashes": {
+      "source": "b26432ba320eab7d4c4dbff5929625a2dcc040b9f785ea3e239678d64c5535a5",
+      "productArtContract": "217c95da6202e43ad542094bcc2389493748c9d4bc9045e95647de9b6d98e2ca",
+      "retention": "b1b045849e5540cea71c7a9965f5e16351168b25e50550e5bafea40d832bc5ad",
+      "objectProductContracts": "4bc2a2657e9b5086f820ece02bf502b8c781c9bdddd5dda711a27acc499c2184",
+      "artDirection": "ab1e3b2607fc916fa660fb20b90c2b62ee6985a866c3a65090bef4996a7eef22",
+      "calibration": "8a33c6c8a9b5a02ef460f5e698907a4d6d623e2f5c475047cd3dbdccc102ace9",
+      "shapeLanguage": "76fcd0eaaace7f34d7fb88fdc6470315518efd8e586649393ceb32356a7addc7",
+      "materials": "41fadb667eb50a2252e6721649afee1b38b98a667ea7c2051f5f465ad9896b83",
+      "selectedConstitution": "1a7ea88c2d06be01530b6e02b70b6f9dc176f5b74d0cb98f4d565b8a322a9491",
+      "territory": "2e93bda4c5069f1f800cd14994bf1afa0aa5e89d514ef2675fe06deb25cd3f66",
+      "generator": "5c51fd21f87b3f91ab69e760af8ba2820f06ba2204da0376e0148d9c9d2cd3bb"
+    }
+  }
+}

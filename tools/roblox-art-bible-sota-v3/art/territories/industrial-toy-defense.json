@@ -1,0 +1,179 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/territory.schema.json",
+  "schemaVersion": "2.0.0",
+  "territoryId": "industrial-toy-defense",
+  "status": "CANDIDATE",
+  "vision": "A survival factory-toy where every machine feels solid, graspable, modular and immediately understandable.",
+  "pillars": [
+    "thick_interlocking_volumes",
+    "visible_industrial_function",
+    "frank_safety_accents",
+    "large_rounded_bevels",
+    "repeatable_modularity"
+  ],
+  "antiPillars": [
+    "photoreal_grime",
+    "thin_cables",
+    "military_seriousness",
+    "decorative_micro_labels",
+    "fragile_silhouettes"
+  ],
+  "paletteBias": {
+    "neutralTemperature": "cool",
+    "accentSaturation": 0.78,
+    "warningCoverageMax": 0.08
+  },
+  "shapeLanguage": {
+    "angleFamiliesDegrees": [
+      0,
+      45,
+      90
+    ],
+    "asymmetry": {
+      "target": 0.08,
+      "max": 0.18
+    },
+    "primarySecondarySizeRatio": {
+      "min": 2.5,
+      "max": 5.0
+    },
+    "roundness": "chunky"
+  },
+  "materialBias": [
+    "painted_metal",
+    "polymer",
+    "rubber"
+  ],
+  "surfaceAssignments": {
+    "primary": "painted_metal",
+    "secondary": "polymer",
+    "accent": "painted_metal",
+    "interaction": "polymer",
+    "threat": "painted_metal",
+    "warning": "polymer",
+    "critical": "polymer",
+    "rubber": "rubber",
+    "bareMetal": "bare_metal"
+  },
+  "assetRecipes": {
+    "barricade": {
+      "assetId": "barricade",
+      "primaryPrimitives": [
+        "three_heavy_panels"
+      ],
+      "secondaryPrimitives": [
+        "oversized_feet",
+        "two_braces"
+      ],
+      "asymmetryTarget": 0.05,
+      "moduleCountTarget": 5,
+      "bevelRatioTarget": 0.06,
+      "stateBreakStrategy": "one_panel_displaces_then_center_splits",
+      "detailBandTargets": {
+        "primary": 0.72,
+        "secondary": 0.23,
+        "tertiary": 0.05
+      }
+    },
+    "objective_core": {
+      "assetId": "objective_core",
+      "primaryPrimitives": [
+        "drum",
+        "protected_sphere"
+      ],
+      "secondaryPrimitives": [
+        "three_concentric_rings",
+        "four_buttresses"
+      ],
+      "asymmetryTarget": 0.02,
+      "moduleCountTarget": 8,
+      "bevelRatioTarget": 0.055,
+      "stateBreakStrategy": "outer_ring_opens_then_core_exposes",
+      "detailBandTargets": {
+        "primary": 0.72,
+        "secondary": 0.23,
+        "tertiary": 0.05
+      }
+    },
+    "enemy_standard": {
+      "assetId": "enemy_standard",
+      "primaryPrimitives": [
+        "hunched_pear_torso",
+        "bowed_zombie_head",
+        "two_bent_leg_masses"
+      ],
+      "secondaryPrimitives": [
+        "unequal_open_arm_arcs",
+        "integrated_crown_to_shoulder_bloom"
+      ],
+      "asymmetryTarget": 0.08,
+      "moduleCountTarget": 5,
+      "bevelRatioTarget": 0.05,
+      "stateBreakStrategy": "bloom_side_shoulder_drops_then_same_knee_buckles",
+      "detailBandTargets": {
+        "primary": 0.72,
+        "secondary": 0.23,
+        "tertiary": 0.05
+      }
+    },
+    "floor_module": {
+      "assetId": "floor_module",
+      "primaryPrimitives": [
+        "square_tile"
+      ],
+      "secondaryPrimitives": [
+        "octagonal_inset",
+        "four_edge_keys"
+      ],
+      "asymmetryTarget": 0.0,
+      "moduleCountTarget": 6,
+      "bevelRatioTarget": 0.045,
+      "stateBreakStrategy": "one_edge_key_breaks_then_inset_cracks",
+      "detailBandTargets": {
+        "primary": 0.72,
+        "secondary": 0.23,
+        "tertiary": 0.05
+      }
+    },
+    "damage_effect": {
+      "assetId": "damage_effect",
+      "primaryPrimitives": [
+        "directional_wedge"
+      ],
+      "secondaryPrimitives": [
+        "two_large_fragments",
+        "impact_ring"
+      ],
+      "asymmetryTarget": 0.1,
+      "moduleCountTarget": 4,
+      "bevelRatioTarget": 0.03,
+      "stateBreakStrategy": "wedge_widens_and_ring_breaks",
+      "detailBandTargets": {
+        "primary": 0.72,
+        "secondary": 0.23,
+        "tertiary": 0.05
+      }
+    }
+  },
+  "referenceBoardId": "industrial-toy-defense-board-v1",
+  "comparisonBudget": {
+    "revisionRounds": 2,
+    "artistHoursCap": 24.0,
+    "triangleBudgetsRef": "art/calibration/calibration-kit.json#/assets"
+  },
+  "automation": {
+    "deterministicSeed": 1103,
+    "generatorVersion": "5.0.0"
+  },
+  "blockoutPalette": {
+    "primary": "#354052",
+    "secondary": "#AEB8C6",
+    "accent": "#E05A16",
+    "interaction": "#17D8EA",
+    "threat": "#A84865",
+    "warning": "#F2C94C",
+    "critical": "#E64A4A",
+    "rubber": "#171B22",
+    "bareMetal": "#687380"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0.0",
+  "capturedAt": "2026-07-15T19:50:44.9873946+02:00",
+  "status": "PASS",
+  "mutationPerformed": false,
+  "stagingConfirmed": false,
+  "packageIntegrationStatus": "BLOCKED",
+  "benchmarkStatus": "BLOCKED",
+  "studio": {
+    "displayName": "Expérience sans titre",
+    "mode": "Edit",
+    "availableDataModels": ["Edit"]
+  },
+  "place": {
+    "name": "Place de pasdideepfffff : 07142026_1",
+    "placeId": 81801089784379,
+    "gameId": 10504377703,
+    "creatorId": 1513493273,
+    "creatorType": "User"
+  },
+  "observed": {
+    "packageLinks": 0,
+    "meshParts": 9,
+    "runtimeExists": false,
+    "stagedPackageExists": false
+  },
+  "reason": "Read-only probe succeeded, but this published place was not proven to be an isolated staging target. No mutation was authorized."
+}

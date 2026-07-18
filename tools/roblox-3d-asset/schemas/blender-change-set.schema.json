@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/blender-change-set.schema.json",
+  "title": "Blender Bounded Change Set",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "schemaVersion", "changeSetId", "sessionId", "assetKey", "baseBuildSha256", "assetContractSha256", "visualCanonId", "visualCanonSha256", "intent", "observation", "probableCause", "targets", "operations", "preservedInvariants", "requiredViews", "expectedEffects", "maximumTriangleDelta", "rollbackMethod", "productionAuthorized"],
+  "properties": {
+    "$schema": {"const": "https://roblox-top1.local/schemas/blender-change-set.schema.json"},
+    "schemaVersion": {"const": "1.0.0"},
+    "changeSetId": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]{7,79}$"},
+    "sessionId": {"type": "string"}, "assetKey": {"type": "string"},
+    "baseBuildSha256": {"$ref": "#/$defs/hash"}, "assetContractSha256": {"$ref": "#/$defs/hash"},
+    "visualCanonId": {"type": "string"}, "visualCanonSha256": {"$ref": "#/$defs/hash"},
+    "intent": {"type": "string", "minLength": 1}, "observation": {"type": "string", "minLength": 1},
+    "probableCause": {"type": "string", "minLength": 1},
+    "targets": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "operations": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/operation"}},
+    "preservedInvariants": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "requiredViews": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "expectedEffects": {"type": "array", "items": {"type": "string"}},
+    "maximumTriangleDelta": {"type": "integer", "minimum": 0, "maximum": 500},
+    "rollbackMethod": {"type": "string", "minLength": 1},
+    "productionAuthorized": {"const": false}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "operation": {
+      "type": "object",
+      "required": ["type", "target", "before", "after"],
+      "properties": {
+        "type": {"enum": ["SET_COMPONENT_DIMENSION", "SET_BEVEL_WIDTH", "MOVE_COMPONENT", "ROTATE_COMPONENT", "SET_COMPONENT_VISIBILITY", "SET_MATERIAL_ROLE", "SET_MATERIAL_VALUE"]},
+        "target": {"type": "string"}, "axis": {"enum": ["designX", "designY", "designZ"]},
+        "property": {"enum": ["roughness", "metallic"]}, "before": {}, "after": {}
+      },
+      "additionalProperties": false
+    }
+  }
+}

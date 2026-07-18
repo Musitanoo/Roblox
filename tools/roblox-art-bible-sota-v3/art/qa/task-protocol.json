@@ -1,0 +1,109 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/task-protocol.schema.json",
+  "schemaVersion": "2.0.0",
+  "studyId": "art-direction-vertical-slice-v1",
+  "minimumParticipants": 8,
+  "presentation": {
+    "randomizeBlindLabelOrder": true,
+    "exposureSeconds": 5.0,
+    "noTerritoryNames": true,
+    "sameDeviceClassPerParticipant": true
+  },
+  "taskGroups": {
+    "silhouette_60": {
+      "distanceStuds": [
+        60.0
+      ],
+      "resolutionId": "mobile_landscape_hard",
+      "tasks": [
+        {
+          "taskId": "silhouette_barricade_60",
+          "assetId": "barricade",
+          "prompt": "Select the barricade silhouette.",
+          "answerType": "single_choice"
+        },
+        {
+          "taskId": "silhouette_objective_60",
+          "assetId": "objective_core",
+          "prompt": "Select the Objective Core silhouette.",
+          "answerType": "single_choice"
+        },
+        {
+          "taskId": "silhouette_enemy_60",
+          "assetId": "enemy_standard",
+          "prompt": "Select the standard enemy silhouette.",
+          "answerType": "single_choice"
+        }
+      ]
+    },
+    "function_30_mobile": {
+      "distanceStuds": [
+        30.0
+      ],
+      "resolutionId": "mobile_landscape_hard",
+      "tasks": [
+        {
+          "taskId": "function_buildable_30",
+          "assetId": "barricade",
+          "prompt": "Which object can the player build?",
+          "answerType": "single_choice"
+        },
+        {
+          "taskId": "function_objective_30",
+          "assetId": "objective_core",
+          "prompt": "Which object must be defended?",
+          "answerType": "single_choice"
+        },
+        {
+          "taskId": "function_threat_30",
+          "assetId": "enemy_standard",
+          "prompt": "Which object is the standard threat?",
+          "answerType": "single_choice"
+        }
+      ]
+    },
+    "state_15_30": {
+      "distanceStuds": [
+        15.0,
+        30.0
+      ],
+      "resolutionId": "mobile_landscape_hard",
+      "tasks": [
+        {
+          "taskId": "state_intact",
+          "assetId": "objective_core",
+          "prompt": "Identify the intact state.",
+          "answerType": "single_choice"
+        },
+        {
+          "taskId": "state_damaged",
+          "assetId": "objective_core",
+          "prompt": "Identify the damaged state.",
+          "answerType": "single_choice"
+        },
+        {
+          "taskId": "state_critical",
+          "assetId": "objective_core",
+          "prompt": "Identify the critical state.",
+          "answerType": "single_choice"
+        },
+        {
+          "taskId": "impact_direction",
+          "assetId": "damage_effect",
+          "prompt": "From which direction did the impact arrive?",
+          "answerType": "direction_choice"
+        }
+      ]
+    }
+  },
+  "exitQuestions": [
+    "Which candidate is most memorable?",
+    "Which candidate feels easiest to understand?",
+    "What visual cue caused your answer?"
+  ],
+  "privacy": {
+    "collectNames": false,
+    "participantIdsPseudonymous": true,
+    "blindMapExcludedFromReviewerPackage": true
+  }
+}

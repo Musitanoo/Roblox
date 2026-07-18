@@ -1,0 +1,124 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/shape-rules.schema.json",
+  "schemaVersion": "2.0.0",
+  "global": {
+    "volumeHierarchyTarget": {
+      "primary": 0.72,
+      "secondary": 0.23,
+      "tertiary": 0.05
+    },
+    "volumeHierarchyMeasurement": "detail_band_render_non_overlapping_pixel_masks",
+    "asymmetryScale": {
+      "min": 0.0,
+      "max": 1.0
+    },
+    "bevelRadiusAsSmallestDimensionRatio": {
+      "structural": {
+        "min": 0.035,
+        "max": 0.08
+      },
+      "functional": {
+        "min": 0.018,
+        "max": 0.045
+      },
+      "tertiary": {
+        "min": 0.008,
+        "max": 0.02
+      }
+    },
+    "minimumVisibleThicknessRef": "art/art-direction.json#/screenSpaceRules/bands",
+    "frontBack": {
+      "front": "forward_wedge_or_active_aperture",
+      "back": "service_mass_or_closed_plane"
+    },
+    "interaction": {
+      "ready": "complete_ring_or_socket",
+      "disabled": "open_ring_or_crossbar"
+    },
+    "danger": {
+      "warning": "single_chevron",
+      "critical": "broken_double_chevron"
+    },
+    "destruction": {
+      "impactDirection": "largest break and debris vector align with incoming force",
+      "stateProgression": "one major break then two or more major breaks"
+    }
+  },
+  "functionFamilies": {
+    "defense": {
+      "primary": [
+        "rectangle",
+        "trapezoid"
+      ],
+      "secondary": [
+        "brace",
+        "foot"
+      ],
+      "forbidden": [
+        "needle",
+        "floating_plate"
+      ]
+    },
+    "objective": {
+      "primary": [
+        "circle",
+        "cylinder",
+        "protected_sphere"
+      ],
+      "secondary": [
+        "ring",
+        "buttress"
+      ],
+      "forbidden": [
+        "flat_unmarked_box"
+      ]
+    },
+    "enemy": {
+      "primary": [
+        "forward_wedge",
+        "compressed_capsule"
+      ],
+      "secondary": [
+        "heavy_hand",
+        "shoulder_mass"
+      ],
+      "forbidden": [
+        "thin_limb_silhouette",
+        "player_like_proportions"
+      ]
+    },
+    "floor": {
+      "primary": [
+        "square",
+        "octagonal_inset"
+      ],
+      "secondary": [
+        "edge_key",
+        "socket"
+      ],
+      "forbidden": [
+        "random_crack_network"
+      ]
+    },
+    "damage_vfx": {
+      "primary": [
+        "cone",
+        "arc",
+        "wedge"
+      ],
+      "secondary": [
+        "two_or_three_large_fragments"
+      ],
+      "forbidden": [
+        "uniform_sphere",
+        "particle_fog_occlusion"
+      ]
+    }
+  },
+  "forbidden": [
+    "thin_loose_wires",
+    "microtext",
+    "free_floating_fragments",
+    "detail_without_silhouette_function_identity"
+  ]
+}

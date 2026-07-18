@@ -13,10 +13,11 @@ type BuildPieceData = {
 	rotation: number,
 }
 type BuildPlan = { schemaVersion: number, revision: number, pieces: { [string]: BuildPieceData } }
+type BuildOperation = "PLACE" | "MOVE" | "ROTATE" | "DELETE" | "UNDO" | "REDO" | "CLEAR_ALL"
 type BuildRequest = {
 	requestId: string,
 	baseRevision: number,
-	operation: string,
+	operation: BuildOperation,
 	payload: { [string]: unknown },
 }
 type BuildResult = {
@@ -24,7 +25,7 @@ type BuildResult = {
 	success: boolean,
 	reason: string?,
 	revision: number,
-	delta: unknown,
+	delta: unknown?,
 	structureUsed: number,
 	powerUsed: number,
 }
@@ -33,6 +34,7 @@ type Store = {
 	GetPlan: (self: Store) -> BuildPlan,
 	NewPieceId: (self: Store) -> string,
 	CommitPieces: (self: Store, pieces: { [string]: BuildPieceData }) -> BuildPlan,
+	Replace: (self: Store, plan: BuildPlan, preserveRevision: boolean) -> BuildPlan,
 }
 type History = {
 	Record: (self: History, before: BuildPlan, after: BuildPlan) -> (),
@@ -49,7 +51,11 @@ type RulesModule = { CalculateBudgets: (BuildPlan) -> (number, number) }
 type TypesModule = {
 	isPieceType: (unknown) -> boolean,
 	isRotation: (unknown) -> boolean,
-	isOperation: (unknown) -> boolean,
+}
+type RequestPolicyModule = {
+	Parse: (unknown) -> BuildRequest?,
+	ReadRequestId: (unknown) -> string,
+	ConsumeRateLimit: (RateWindow?, number, number) -> (RateWindow, boolean, boolean),
 }
 type GridConfig = {
 	requestCacheLimit: number,
@@ -58,7 +64,11 @@ type GridConfig = {
 	powerLimit: number,
 }
 type PlanChangedCallback = (plan: BuildPlan) -> ()
-type RateWindow = { startedAt: number, count: number }
+type RateWindow = {
+	startedAt: number,
+	count: number,
+	notificationSent: boolean,
+}
 type CachedResult = { result: BuildResult }
 
 local sharedGame = ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Game")
@@ -67,6 +77,16 @@ local BuildGridConfig =
 	require(config:WaitForChild("BuildGridConfig") :: ModuleScript) :: GridConfig
 local BuildRules = require(sharedGame:WaitForChild("BuildRules") :: ModuleScript) :: RulesModule
 local BuildTypes = require(sharedGame:WaitForChild("BuildTypes") :: ModuleScript) :: TypesModule
+local servicesFolder = script.Parent
+assert(
+	servicesFolder and servicesFolder:IsA("Folder"),
+	"GridBuildService must be under Game.Services"
+)
+local gameFolder = servicesFolder.Parent
+assert(gameFolder and gameFolder:IsA("Folder"), "Game.Services must be under Game")
+local buildFolder = gameFolder:WaitForChild("Build")
+local BuildRequestPolicy =
+	require(buildFolder:WaitForChild("BuildRequestPolicy") :: ModuleScript) :: RequestPolicyModule
 
 local GridBuildService = {}
 GridBuildService.__index = GridBuildService
@@ -100,7 +120,12 @@ local function clonePieces(pieces: { [string]: BuildPieceData }): { [string]: Bu
 end
 
 local function readInteger(value: unknown): number?
-	return if typeof(value) == "number" and value == math.floor(value) then value else nil
+	return if typeof(value) == "number"
+			and value > -math.huge
+			and value < math.huge
+			and value == math.floor(value)
+		then value
+		else nil
 end
 
 local function readShortString(value: unknown, limit: number): string?
@@ -108,7 +133,6 @@ local function readShortString(value: unknown, limit: number): string?
 end
 
 function GridBuildService.new(
-	_buildRequestParent: Folder,
 	buildRequest: RemoteEvent,
 	buildResult: RemoteEvent,
 	stateService: StateService,
@@ -189,15 +213,25 @@ function GridBuildService.getPlan(self: Service): BuildPlan
 	return self._store:GetPlan()
 end
 
+function GridBuildService.isOwner(self: Service, player: Player): boolean
+	return player.Parent == Players and self._ownerUserId == player.UserId
+end
+
 function GridBuildService.snapshot(self: Service): BuildPlan
 	return self._store:GetPlan()
 end
 
 function GridBuildService.restore(self: Service, plan: BuildPlan)
-	self._renderer:Render(plan)
+	local restored = self._store:Replace(plan, true)
+	self._renderer:Render(restored)
 	if self._planChangedCallback then
-		self._planChangedCallback(plan)
+		self._planChangedCallback(restored)
 	end
+	local structure, power = BuildRules.CalculateBudgets(restored)
+	self._replicaRoot:SetAttribute("StructureUsed", structure)
+	self._replicaRoot:SetAttribute("PowerUsed", power)
+	self._replicaRoot:SetAttribute("BuildRevision", restored.revision)
+	self._buildResult:FireAllClients(self:_makeResult("SYNC", true, "PLAN_RESTORED", restored))
 end
 
 function GridBuildService.setBuildEnabled(self: Service, enabled: boolean)
@@ -205,41 +239,18 @@ function GridBuildService.setBuildEnabled(self: Service, enabled: boolean)
 	self._replicaRoot:SetAttribute("BuildEnabled", enabled)
 end
 
-function GridBuildService._isRateLimited(self: Service, player: Player): boolean
-	local now = os.clock()
-	local window = self._rateWindows[player]
-	if not window or now - window.startedAt >= 1 then
-		self._rateWindows[player] = { startedAt = now, count = 1 }
-		return false
-	end
-	window.count += 1
-	return window.count > BuildGridConfig.requestRatePerSecond
+function GridBuildService._isRateLimited(self: Service, player: Player): (boolean, boolean)
+	local window, limited, shouldNotify = BuildRequestPolicy.ConsumeRateLimit(
+		self._rateWindows[player],
+		os.clock(),
+		BuildGridConfig.requestRatePerSecond
+	)
+	self._rateWindows[player] = window
+	return limited, shouldNotify
 end
 
 function GridBuildService._parseRequest(_self: Service, requestValue: unknown): BuildRequest?
-	if typeof(requestValue) ~= "table" then
-		return nil
-	end
-	local requestTable = requestValue :: { [string]: unknown }
-	local requestId = readShortString(requestTable.requestId, 64)
-	local baseRevision = readInteger(requestTable.baseRevision)
-	local operation = readShortString(requestTable.operation, 16)
-	if
-		not requestId
-		or not baseRevision
-		or baseRevision < 0
-		or not operation
-		or not BuildTypes.isOperation(operation)
-		or typeof(requestTable.payload) ~= "table"
-	then
-		return nil
-	end
-	return {
-		requestId = requestId,
-		baseRevision = baseRevision,
-		operation = operation,
-		payload = requestTable.payload :: { [string]: unknown },
-	}
+	return BuildRequestPolicy.Parse(requestValue)
 end
 
 function GridBuildService._makeResult(
@@ -303,6 +314,25 @@ function GridBuildService._reject(self: Service, player: Player, requestId: stri
 	local result = self:_makeResult(requestId, false, reason, self._store:GetPlan())
 	self:_cacheResult(player, requestId, result)
 	self._buildResult:FireClient(player, result)
+end
+
+function GridBuildService._rejectWithoutPlan(
+	self: Service,
+	player: Player,
+	requestId: string,
+	reason: string
+)
+	local plan = self._store:GetPlan()
+	local structure, power = BuildRules.CalculateBudgets(plan)
+	self._buildResult:FireClient(player, {
+		requestId = requestId,
+		success = false,
+		reason = reason,
+		revision = plan.revision,
+		delta = nil,
+		structureUsed = structure,
+		powerUsed = power,
+	})
 end
 
 function GridBuildService._commit(
@@ -407,22 +437,36 @@ function GridBuildService._mutate(
 end
 
 function GridBuildService._handleRequest(self: Service, player: Player, requestValue: unknown)
-	if player.Parent ~= Players or self._processing[player] then
+	if player.Parent ~= Players then
+		return
+	end
+	local limited, shouldNotify = self:_isRateLimited(player)
+	if limited then
+		if shouldNotify then
+			self:_rejectWithoutPlan(
+				player,
+				BuildRequestPolicy.ReadRequestId(requestValue),
+				"RATE_LIMITED"
+			)
+		end
+		return
+	end
+	if self._processing[player] then
 		return
 	end
 	local request = self:_parseRequest(requestValue)
 	if not request then
-		self:_reject(player, "INVALID", "REQUEST_CONFLICT")
+		self:_rejectWithoutPlan(
+			player,
+			BuildRequestPolicy.ReadRequestId(requestValue),
+			"REQUEST_CONFLICT"
+		)
 		return
 	end
 	local playerCache = self._cache[player]
 	local cached = if playerCache then playerCache[request.requestId] else nil
 	if cached then
 		self._buildResult:FireClient(player, cached.result)
-		return
-	end
-	if self:_isRateLimited(player) then
-		self:_reject(player, request.requestId, "RATE_LIMITED")
 		return
 	end
 	if self._ownerUserId ~= player.UserId then

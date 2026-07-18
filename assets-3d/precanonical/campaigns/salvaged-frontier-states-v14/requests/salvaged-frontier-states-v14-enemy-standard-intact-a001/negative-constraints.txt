@@ -1,0 +1,38 @@
+- No text, captions, labels, letters, numbers, logos or invented alphabet.
+- No four alternative concepts, silhouette variants or design options inside the four quadrants.
+- No second gameplay state and no state comparison in the same image.
+- No interpretation other than the single target state intact.
+- No independent redesign between quadrants or between gameplay states.
+- No photorealism, military realism, bleak monochrome or literal construction-toy identity.
+- No color-only gameplay state; shape, silhouette, posture and value must agree.
+- No invented rear, underside, mechanism, component, weapon or decoration.
+- No geometric emblem, badge, pseudo-logo, triangular mark or unexplained assembly symbol.
+- No cinematic depth of field, environmental scene or unrelated prop.
+- No operational overlay, transient event or terminal runtime state mixed into the primary target state.
+- No visual claim that exceeds the explicit gameplay-truth boundary.
+- No robot, mech, armor chassis, visor, chest core, service panel, repair band or buildable-object grammar.
+- No giant fists, brute shoulders, heroic stance, wall-breaking promise, weapon, horn, wing or random crystal growth.
+- No gore, blood, exposed tissue, detached anatomy, photoreal decay, cute mascot face or color-only zombie identity.
+- robot, mech, armored golem, powered suit or faceless machine interpretation
+- visor, sensor slit, chest core, service box, mechanical joint or panelized chassis
+- giant fists, wall-breaking hands, brute shoulder width or heroic combat stance
+- player-like Roblox avatar proportions or readable human clothing costume
+- copper repair bands, mint interaction lights, bone-sand armor panels or friendly buildable grammar
+- neon purple emission across the body or color-only zombie identity
+- thin noodle limbs, tiny hands or noisy finger silhouettes
+- gore, blood, exposed organs, realistic wounds or realistic rows of teeth
+- decorative horns, spikes, wings, weapons or random crystals
+- detached limbs, floating fragments or cross-state anatomy redesign
+- cute mascot face, comic smile or friendly eye treatment
+- hidden front direction or face visible only through lighting
+- uniform particle fog, swarming flies or effects that obscure the body
+- robot, mech, golem, armored brute or mascot reading
+- player construction grammar, copper repair authorship or service socket
+- adaptive-learning or evolving-horde visual claim
+- giant fists, wall-breaking shoulders or heroic combat stance
+- gore, exposed tissue, detached anatomy or realistic decay
+- random crystals, horns, backpack growth or second head
+- thin_loose_wires
+- microtext
+- free_floating_fragments
+- detail_without_silhouette_function_identity

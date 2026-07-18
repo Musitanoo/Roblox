@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/semantic-palette.schema.json",
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "colorSpace",
+    "roles",
+    "stateEncoding",
+    "accessibility"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/semantic-palette.schema.json"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "colorSpace": {
+      "const": "sRGB"
+    },
+    "roles": {
+      "type": "object",
+      "minProperties": 8,
+      "additionalProperties": false,
+      "patternProperties": {
+        "^[a-z][a-z0-9_]*$": {
+          "type": "object",
+          "properties": {
+            "hex": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "maxVisibleAreaRatio": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "maximum": 1
+            },
+            "minimumLocalContrastRatio": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 21
+            },
+            "redundantCue": {
+              "type": "object",
+              "properties": {
+                "shape": {
+                  "type": "string",
+                  "minLength": 3
+                },
+                "motion": {
+                  "type": "string",
+                  "minLength": 3
+                },
+                "audio": {
+                  "type": "string",
+                  "minLength": 3
+                }
+              },
+              "required": [
+                "shape",
+                "motion",
+                "audio"
+              ],
+              "unevaluatedProperties": false
+            }
+          },
+          "required": [
+            "hex",
+            "maxVisibleAreaRatio",
+            "minimumLocalContrastRatio",
+            "redundantCue"
+          ],
+          "unevaluatedProperties": false
+        }
+      }
+    },
+    "stateEncoding": {
+      "type": "object",
+      "minProperties": 4,
+      "additionalProperties": false,
+      "patternProperties": {
+        "^[a-z_]+$": {
+          "type": "object",
+          "properties": {
+            "primaryRole": {
+              "type": "string"
+            },
+            "shapeCue": {
+              "type": "string"
+            },
+            "motionCue": {
+              "type": "string"
+            },
+            "audioCue": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "primaryRole",
+            "shapeCue",
+            "motionCue",
+            "audioCue"
+          ],
+          "unevaluatedProperties": false
+        }
+      }
+    },
+    "accessibility": {
+      "type": "object",
+      "properties": {
+        "colorNeverSoleCarrier": {
+          "type": "boolean"
+        },
+        "cvdModel": {
+          "type": "string",
+          "minLength": 1
+        },
+        "minimumBoundaryContrastProxy": {
+          "type": "number",
+          "minimum": 0
+        },
+        "neutralQaBehaviorRequired": {
+          "type": "boolean"
+        },
+        "requiredTransforms": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "textContrastWhenUsed": {
+          "type": "number",
+          "minimum": 0
+        },
+        "threeLightingBehaviorRequired": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 3,
+          "maxItems": 3
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": [
+        "colorNeverSoleCarrier",
+        "cvdModel",
+        "minimumBoundaryContrastProxy",
+        "neutralQaBehaviorRequired",
+        "requiredTransforms",
+        "textContrastWhenUsed",
+        "threeLightingBehaviorRequired"
+      ]
+    }
+  },
+  "unevaluatedProperties": false
+}

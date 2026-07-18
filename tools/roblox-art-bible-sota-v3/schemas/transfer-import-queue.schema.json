@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/transfer-import-queue.schema.json",
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "status",
+    "generatedAt",
+    "assetId",
+    "assetCount",
+    "evidencePackageSha256",
+    "transferReportSha256",
+    "entries"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/transfer-import-queue.schema.json"
+    },
+    "schemaVersion": {"const": "1.0.0"},
+    "status": {"const": "PASS"},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "assetId": {"const": "turret_fast_v1"},
+    "assetCount": {"const": 9},
+    "evidencePackageSha256": {"$ref": "#/$defs/sha256"},
+    "transferReportSha256": {"$ref": "#/$defs/sha256"},
+    "entries": {
+      "type": "array",
+      "minItems": 9,
+      "maxItems": 9,
+      "items": {
+        "type": "object",
+        "required": [
+          "territoryId",
+          "stateId",
+          "uploadName",
+          "path",
+          "sourcePath",
+          "sha256",
+          "bytes"
+        ],
+        "properties": {
+          "territoryId": {
+            "enum": [
+              "industrial-toy-defense",
+              "salvaged-frontier",
+              "clean-tactical-diorama"
+            ]
+          },
+          "stateId": {"enum": ["intact", "damaged", "critical"]},
+          "uploadName": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+__turret_fast_v1__(intact|damaged|critical)$"
+          },
+          "path": {
+            "type": "string",
+            "pattern": "^build/studio-import-transfer/"
+          },
+          "sourcePath": {
+            "type": "string",
+            "pattern": "^evidence/transfer/turret-fast-v1/"
+          },
+          "sha256": {"$ref": "#/$defs/sha256"},
+          "bytes": {"type": "integer", "exclusiveMinimum": 0}
+        },
+        "unevaluatedProperties": false
+      }
+    }
+  },
+  "unevaluatedProperties": false
+}

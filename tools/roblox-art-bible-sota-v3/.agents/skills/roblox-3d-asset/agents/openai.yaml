@@ -1,0 +1,4 @@
+interface:
+  display_name: "Roblox 3D Asset Production"
+  short_description: "Creer et valider des assets Roblox 3D"
+  default_prompt: "Utilise $roblox-3d-asset pour creer et valider cet asset Roblox 3D jusqu'aux gates applicables."

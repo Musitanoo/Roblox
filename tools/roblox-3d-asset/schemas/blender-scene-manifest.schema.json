@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/blender-scene-manifest.schema.json",
+  "title": "Blender Scene Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "schemaVersion", "blenderVersion", "axisContract", "assetKey", "componentCount", "objects", "materials", "triangleCount", "overallBoundsDesign", "pivotAndGrounding", "semanticSha256", "status"],
+  "properties": {
+    "$schema": {"const": "https://roblox-top1.local/schemas/blender-scene-manifest.schema.json"},
+    "schemaVersion": {"const": "1.0.0"},
+    "blenderVersion": {"type": "string"},
+    "axisContract": {"const": "DESIGN_XYZ_TO_BLENDER_XZY"},
+    "assetKey": {"type": "string"},
+    "componentCount": {"type": "integer", "minimum": 1},
+    "objects": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "type", "designLocation", "designDimensions", "boundsDesign", "mesh", "materials", "visible"],
+        "properties": {
+          "mesh": {
+            "type": "object",
+            "required": ["vertices", "edges", "polygons", "triangles", "geometrySha256"],
+            "properties": {
+              "geometrySha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+            }
+          }
+        }
+      }
+    },
+    "materials": {"type": "array", "items": {"type": "object"}},
+    "triangleCount": {"type": "integer", "minimum": 0},
+    "overallBoundsDesign": {"type": "object"},
+    "pivotAndGrounding": {"type": "object"},
+    "semanticSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "status": {"const": "PASS"}
+  }
+}

@@ -1,0 +1,504 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/precanonical-campaign.schema.json",
+  "schemaVersion": "1.0.0",
+  "campaignVersion": "2.1.0",
+  "campaignId": "salvaged-frontier-states-v7",
+  "createdAt": "2026-07-17T21:24:08.456766Z",
+  "updatedAt": "2026-07-17T21:46:00.650766Z",
+  "status": "BLOCKED",
+  "artDirection": "salvaged-frontier",
+  "requiredModel": "gpt-image-2",
+  "generationSurface": "chatgpt_web_images",
+  "oneGenerationPerObjectState": true,
+  "independentStateDesignForbidden": true,
+  "maxAttemptsPerTask": 3,
+  "currentTaskId": null,
+  "objectOrder": [
+    "barricade",
+    "damage_effect",
+    "enemy_standard",
+    "floor_module",
+    "objective_core",
+    "turret_fast_v1"
+  ],
+  "revision": {
+    "sourceCampaign": {
+      "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v6\\campaign.json",
+      "sha256": "cd59952b9dcc3210ded20ef14ec0db3b0d56d2b1c174f8afea53f9d90eec939d"
+    },
+    "reason": "La v7 supprime les contraintes mécaniques résiduelles du prompt ennemi et lie la génération à un verrou anatomique propre au rôdeur zombie violet, sans consommer d'image supplémentaire.",
+    "restartTaskId": "06-enemy-standard-intact",
+    "carriedTaskIds": [
+      "01-barricade-intact",
+      "02-barricade-damaged",
+      "03-barricade-critical",
+      "04-damage-effect-damaged",
+      "05-damage-effect-critical"
+    ],
+    "supersededTaskIds": [
+      "06-enemy-standard-intact"
+    ]
+  },
+  "tasks": [
+    {
+      "taskId": "01-barricade-intact",
+      "ordinal": 1,
+      "objectOrdinal": 1,
+      "assetId": "barricade",
+      "displayName": "Defense Barricade Small",
+      "stateId": "intact",
+      "stateOrdinal": 1,
+      "stateCount": 3,
+      "canon": {
+        "path": "canons/barricade.json",
+        "sha256": "5e196aa1ab2bdaaa9c024d250ea76f82b134848b4dcd32b2741f7970c5c77e58"
+      },
+      "predecessorTaskId": null,
+      "status": "ACCEPTED",
+      "attempts": [
+        {
+          "attemptIndex": 1,
+          "request": {
+            "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\requests\\salvaged-frontier-states-v3-barricade-intact-a001\\request.json",
+            "sha256": "dea493255b7f475ae33012e576cd290eee100a1944cef36d7f08da554e0f05ab"
+          },
+          "result": {
+            "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-barricade-intact-a001-result-001\\result.json",
+            "sha256": "f8761bfe64c361a14d52b1f17f248a09d4b2a8c321b307f52f9bf22b7d0e3b63"
+          },
+          "review": {
+            "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-barricade-intact-a001-result-001\\review.json",
+            "sha256": "122f679e27e6699366c5def21cbb10b028eeca1cdbb17c6dcfc8deec688bbaa3"
+          },
+          "decision": "PRECANONICAL_CANDIDATE",
+          "continuitySource": null,
+          "revisionSource": null
+        }
+      ],
+      "acceptedResult": {
+        "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-barricade-intact-a001-result-001\\result.json",
+        "sha256": "f8761bfe64c361a14d52b1f17f248a09d4b2a8c321b307f52f9bf22b7d0e3b63"
+      },
+      "acceptedReview": {
+        "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-barricade-intact-a001-result-001\\review.json",
+        "sha256": "122f679e27e6699366c5def21cbb10b028eeca1cdbb17c6dcfc8deec688bbaa3"
+      }
+    },
+    {
+      "taskId": "02-barricade-damaged",
+      "ordinal": 2,
+      "objectOrdinal": 1,
+      "assetId": "barricade",
+      "displayName": "Defense Barricade Small",
+      "stateId": "damaged",
+      "stateOrdinal": 2,
+      "stateCount": 3,
+      "canon": {
+        "path": "canons/barricade.json",
+        "sha256": "5e196aa1ab2bdaaa9c024d250ea76f82b134848b4dcd32b2741f7970c5c77e58"
+      },
+      "predecessorTaskId": "01-barricade-intact",
+      "status": "ACCEPTED",
+      "attempts": [
+        {
+          "attemptIndex": 1,
+          "request": {
+            "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\requests\\salvaged-frontier-states-v3-barricade-damaged-a001\\request.json",
+            "sha256": "5d4ce263dcac2902ee61347bce793d7447e0f4b786be9363f07fd85fc3e93c11"
+          },
+          "result": {
+            "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-barricade-damaged-a001-result-001\\result.json",
+            "sha256": "dd48d23ae37048127cd374e22a816d464a36c2cf7a877b8c72fc06b5085a16a0"
+          },
+          "review": {
+            "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-barricade-damaged-a001-result-001\\review.json",
+            "sha256": "f1d15df52f72d037ccf746af7024b9ba6e8da8ed53772af93c78f5ece95b153c"
+          },
+          "decision": "PRECANONICAL_CANDIDATE",
+          "continuitySource": {
+            "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-barricade-intact-a001-result-001\\result.json",
+            "sha256": "f8761bfe64c361a14d52b1f17f248a09d4b2a8c321b307f52f9bf22b7d0e3b63"
+          },
+          "revisionSource": null
+        }
+      ],
+      "acceptedResult": {
+        "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-barricade-damaged-a001-result-001\\result.json",
+        "sha256": "dd48d23ae37048127cd374e22a816d464a36c2cf7a877b8c72fc06b5085a16a0"
+      },
+      "acceptedReview": {
+        "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-barricade-damaged-a001-result-001\\review.json",
+        "sha256": "f1d15df52f72d037ccf746af7024b9ba6e8da8ed53772af93c78f5ece95b153c"
+      }
+    },
+    {
+      "taskId": "03-barricade-critical",
+      "ordinal": 3,
+      "objectOrdinal": 1,
+      "assetId": "barricade",
+      "displayName": "Defense Barricade Small",
+      "stateId": "critical",
+      "stateOrdinal": 3,
+      "stateCount": 3,
+      "canon": {
+        "path": "canons/barricade.json",
+        "sha256": "5e196aa1ab2bdaaa9c024d250ea76f82b134848b4dcd32b2741f7970c5c77e58"
+      },
+      "predecessorTaskId": "02-barricade-damaged",
+      "status": "ACCEPTED",
+      "attempts": [
+        {
+          "attemptIndex": 1,
+          "request": {
+            "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\requests\\salvaged-frontier-states-v3-barricade-critical-a001\\request.json",
+            "sha256": "43a5d211018e65f98695d0e3959ae2348e9e07326fd8a733085b3feea75e0b81"
+          },
+          "result": {
+            "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-barricade-critical-a001-result-001\\result.json",
+            "sha256": "e18b27f8abfe682b18e957bea2de79cb9cc11d654ffeaa1fd0c69247911b69d5"
+          },
+          "review": {
+            "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-barricade-critical-a001-result-001\\review.json",
+            "sha256": "26185112b60ad2524c08050e871e00248ac914ae3c9a17016b12a7222a72042c"
+          },
+          "decision": "PRECANONICAL_CANDIDATE",
+          "continuitySource": {
+            "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-barricade-damaged-a001-result-001\\result.json",
+            "sha256": "dd48d23ae37048127cd374e22a816d464a36c2cf7a877b8c72fc06b5085a16a0"
+          },
+          "revisionSource": null
+        }
+      ],
+      "acceptedResult": {
+        "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-barricade-critical-a001-result-001\\result.json",
+        "sha256": "e18b27f8abfe682b18e957bea2de79cb9cc11d654ffeaa1fd0c69247911b69d5"
+      },
+      "acceptedReview": {
+        "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-barricade-critical-a001-result-001\\review.json",
+        "sha256": "26185112b60ad2524c08050e871e00248ac914ae3c9a17016b12a7222a72042c"
+      }
+    },
+    {
+      "taskId": "04-damage-effect-damaged",
+      "ordinal": 4,
+      "objectOrdinal": 2,
+      "assetId": "damage_effect",
+      "displayName": "Directional Damage Effect",
+      "stateId": "damaged",
+      "stateOrdinal": 1,
+      "stateCount": 2,
+      "canon": {
+        "path": "canons/damage_effect.json",
+        "sha256": "4f081be1d68459b9b1cafa5149d53f2daeb945a9b8d7011079fcf4c2cd4089cd"
+      },
+      "predecessorTaskId": null,
+      "status": "ACCEPTED",
+      "attempts": [
+        {
+          "attemptIndex": 1,
+          "request": {
+            "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\requests\\salvaged-frontier-states-v3-damage-effect-damaged-a001\\request.json",
+            "sha256": "4ddd7080fb5b5ae61578d1f0f8d00053fbaca692d27df60c9febcf8362992228"
+          },
+          "result": {
+            "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-damage-effect-damaged-a001-result-001\\result.json",
+            "sha256": "b22a3bc8b3f4899fcf2bc7237ccb934478e662b8d4c91207a4ab4c2f82573575"
+          },
+          "review": {
+            "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-damage-effect-damaged-a001-result-001\\review.json",
+            "sha256": "8090a2b00c329fa093542f01ce5580b9b1466532323419d074da98f33dbd8645"
+          },
+          "decision": "PRECANONICAL_CANDIDATE",
+          "continuitySource": null,
+          "revisionSource": null
+        }
+      ],
+      "acceptedResult": {
+        "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-damage-effect-damaged-a001-result-001\\result.json",
+        "sha256": "b22a3bc8b3f4899fcf2bc7237ccb934478e662b8d4c91207a4ab4c2f82573575"
+      },
+      "acceptedReview": {
+        "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-damage-effect-damaged-a001-result-001\\review.json",
+        "sha256": "8090a2b00c329fa093542f01ce5580b9b1466532323419d074da98f33dbd8645"
+      }
+    },
+    {
+      "taskId": "05-damage-effect-critical",
+      "ordinal": 5,
+      "objectOrdinal": 2,
+      "assetId": "damage_effect",
+      "displayName": "Directional Damage Effect",
+      "stateId": "critical",
+      "stateOrdinal": 2,
+      "stateCount": 2,
+      "canon": {
+        "path": "canons/damage_effect.json",
+        "sha256": "4f081be1d68459b9b1cafa5149d53f2daeb945a9b8d7011079fcf4c2cd4089cd"
+      },
+      "predecessorTaskId": "04-damage-effect-damaged",
+      "status": "ACCEPTED",
+      "attempts": [
+        {
+          "attemptIndex": 1,
+          "request": {
+            "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\requests\\salvaged-frontier-states-v3-damage-effect-critical-a001\\request.json",
+            "sha256": "32484aec36d8a5f87eb57d1b546da4d8b605bb312b03e8964ef1bbcfec643b86"
+          },
+          "result": {
+            "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-damage-effect-critical-a001-result-001\\result.json",
+            "sha256": "28640b4ff030c11a180031aa519e8eb3a9b309aaf49fa7331ef2a2ae14ff1400"
+          },
+          "review": {
+            "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-damage-effect-critical-a001-result-001\\review.json",
+            "sha256": "2069b8917387d5000623ecdaa3b4eff9a1999a5ed82448f2ce2fb8f4204abfed"
+          },
+          "decision": "PRECANONICAL_CANDIDATE",
+          "continuitySource": {
+            "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-damage-effect-damaged-a001-result-001\\result.json",
+            "sha256": "b22a3bc8b3f4899fcf2bc7237ccb934478e662b8d4c91207a4ab4c2f82573575"
+          },
+          "revisionSource": null
+        }
+      ],
+      "acceptedResult": {
+        "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-damage-effect-critical-a001-result-001\\result.json",
+        "sha256": "28640b4ff030c11a180031aa519e8eb3a9b309aaf49fa7331ef2a2ae14ff1400"
+      },
+      "acceptedReview": {
+        "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-damage-effect-critical-a001-result-001\\review.json",
+        "sha256": "2069b8917387d5000623ecdaa3b4eff9a1999a5ed82448f2ce2fb8f4204abfed"
+      }
+    },
+    {
+      "taskId": "06-enemy-standard-intact",
+      "ordinal": 6,
+      "objectOrdinal": 3,
+      "assetId": "enemy_standard",
+      "displayName": "Violet Frontier Rôdeur",
+      "stateId": "intact",
+      "stateOrdinal": 1,
+      "stateCount": 3,
+      "canon": {
+        "path": "canons/enemy_standard.json",
+        "sha256": "f35b11edd6b6d665323c73f18ec335f2b4c4c484eb9303805cccba437cf69bdd"
+      },
+      "predecessorTaskId": null,
+      "status": "READY",
+      "attempts": [
+        {
+          "attemptIndex": 1,
+          "request": {
+            "path": "requests/salvaged-frontier-states-v7-enemy-standard-intact-a001/request.json",
+            "sha256": "f18381a3c9e1aed4aa5067f76437db57ef22b370f7cd8cdd76e9bd2c4ead211b"
+          },
+          "result": null,
+          "review": null,
+          "decision": null,
+          "continuitySource": null,
+          "revisionSource": null
+        }
+      ],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "07-enemy-standard-damaged",
+      "ordinal": 7,
+      "objectOrdinal": 3,
+      "assetId": "enemy_standard",
+      "displayName": "Violet Frontier Rôdeur",
+      "stateId": "damaged",
+      "stateOrdinal": 2,
+      "stateCount": 3,
+      "canon": {
+        "path": "canons/enemy_standard.json",
+        "sha256": "f35b11edd6b6d665323c73f18ec335f2b4c4c484eb9303805cccba437cf69bdd"
+      },
+      "predecessorTaskId": "06-enemy-standard-intact",
+      "status": "PENDING",
+      "attempts": [],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "08-enemy-standard-critical",
+      "ordinal": 8,
+      "objectOrdinal": 3,
+      "assetId": "enemy_standard",
+      "displayName": "Violet Frontier Rôdeur",
+      "stateId": "critical",
+      "stateOrdinal": 3,
+      "stateCount": 3,
+      "canon": {
+        "path": "canons/enemy_standard.json",
+        "sha256": "f35b11edd6b6d665323c73f18ec335f2b4c4c484eb9303805cccba437cf69bdd"
+      },
+      "predecessorTaskId": "07-enemy-standard-damaged",
+      "status": "PENDING",
+      "attempts": [],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "09-floor-module-intact",
+      "ordinal": 9,
+      "objectOrdinal": 4,
+      "assetId": "floor_module",
+      "displayName": "Fortress Floor Module",
+      "stateId": "intact",
+      "stateOrdinal": 1,
+      "stateCount": 2,
+      "canon": {
+        "path": "canons/floor_module.json",
+        "sha256": "21aac466b50f7ee01baed54f16096e139ff796eff37ffc8b0008a34d9742e058"
+      },
+      "predecessorTaskId": null,
+      "status": "PENDING",
+      "attempts": [],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "10-floor-module-damaged",
+      "ordinal": 10,
+      "objectOrdinal": 4,
+      "assetId": "floor_module",
+      "displayName": "Fortress Floor Module",
+      "stateId": "damaged",
+      "stateOrdinal": 2,
+      "stateCount": 2,
+      "canon": {
+        "path": "canons/floor_module.json",
+        "sha256": "21aac466b50f7ee01baed54f16096e139ff796eff37ffc8b0008a34d9742e058"
+      },
+      "predecessorTaskId": "09-floor-module-intact",
+      "status": "PENDING",
+      "attempts": [],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "11-objective-core-intact",
+      "ordinal": 11,
+      "objectOrdinal": 5,
+      "assetId": "objective_core",
+      "displayName": "Objective Core",
+      "stateId": "intact",
+      "stateOrdinal": 1,
+      "stateCount": 3,
+      "canon": {
+        "path": "canons/objective_core.json",
+        "sha256": "538771a6d405298acd30eda9262b1fbb758c3d168215742622f60b198ab9a68c"
+      },
+      "predecessorTaskId": null,
+      "status": "PENDING",
+      "attempts": [],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "12-objective-core-damaged",
+      "ordinal": 12,
+      "objectOrdinal": 5,
+      "assetId": "objective_core",
+      "displayName": "Objective Core",
+      "stateId": "damaged",
+      "stateOrdinal": 2,
+      "stateCount": 3,
+      "canon": {
+        "path": "canons/objective_core.json",
+        "sha256": "538771a6d405298acd30eda9262b1fbb758c3d168215742622f60b198ab9a68c"
+      },
+      "predecessorTaskId": "11-objective-core-intact",
+      "status": "PENDING",
+      "attempts": [],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "13-objective-core-critical",
+      "ordinal": 13,
+      "objectOrdinal": 5,
+      "assetId": "objective_core",
+      "displayName": "Objective Core",
+      "stateId": "critical",
+      "stateOrdinal": 3,
+      "stateCount": 3,
+      "canon": {
+        "path": "canons/objective_core.json",
+        "sha256": "538771a6d405298acd30eda9262b1fbb758c3d168215742622f60b198ab9a68c"
+      },
+      "predecessorTaskId": "12-objective-core-damaged",
+      "status": "PENDING",
+      "attempts": [],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "14-turret-fast-v1-intact",
+      "ordinal": 14,
+      "objectOrdinal": 6,
+      "assetId": "turret_fast_v1",
+      "displayName": "Fast Defense Turret",
+      "stateId": "intact",
+      "stateOrdinal": 1,
+      "stateCount": 3,
+      "canon": {
+        "path": "canons/turret_fast_v1.json",
+        "sha256": "9e634248e0301f5ac5e12f74c65862533be72d36276a1b7f8892fb638260634a"
+      },
+      "predecessorTaskId": null,
+      "status": "PENDING",
+      "attempts": [],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "15-turret-fast-v1-damaged",
+      "ordinal": 15,
+      "objectOrdinal": 6,
+      "assetId": "turret_fast_v1",
+      "displayName": "Fast Defense Turret",
+      "stateId": "damaged",
+      "stateOrdinal": 2,
+      "stateCount": 3,
+      "canon": {
+        "path": "canons/turret_fast_v1.json",
+        "sha256": "9e634248e0301f5ac5e12f74c65862533be72d36276a1b7f8892fb638260634a"
+      },
+      "predecessorTaskId": "14-turret-fast-v1-intact",
+      "status": "PENDING",
+      "attempts": [],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "16-turret-fast-v1-critical",
+      "ordinal": 16,
+      "objectOrdinal": 6,
+      "assetId": "turret_fast_v1",
+      "displayName": "Fast Defense Turret",
+      "stateId": "critical",
+      "stateOrdinal": 3,
+      "stateCount": 3,
+      "canon": {
+        "path": "canons/turret_fast_v1.json",
+        "sha256": "9e634248e0301f5ac5e12f74c65862533be72d36276a1b7f8892fb638260634a"
+      },
+      "predecessorTaskId": "15-turret-fast-v1-damaged",
+      "status": "PENDING",
+      "attempts": [],
+      "acceptedResult": null,
+      "acceptedReview": null
+    }
+  ],
+  "progress": {
+    "totalObjects": 6,
+    "completedObjects": 2,
+    "totalTasks": 16,
+    "completedTasks": 5,
+    "remainingTasks": 11
+  },
+  "canonical": false,
+  "productionApproved": false
+}

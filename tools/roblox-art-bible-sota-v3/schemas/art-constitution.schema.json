@@ -1,0 +1,608 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/art-constitution.schema.json",
+  "$defs": {
+    "stringList": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 8
+      }
+    },
+    "axis": {
+      "type": "object",
+      "required": [
+        "purpose",
+        "deepReason",
+        "rules",
+        "failureModes",
+        "acceptance"
+      ],
+      "properties": {
+        "purpose": {
+          "type": "string",
+          "minLength": 20
+        },
+        "deepReason": {
+          "type": "string",
+          "minLength": 40
+        },
+        "rules": {
+          "$ref": "#/$defs/stringList"
+        },
+        "failureModes": {
+          "$ref": "#/$defs/stringList"
+        },
+        "acceptance": {
+          "$ref": "#/$defs/stringList"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "ratio": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "color": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$"
+    },
+    "authority": {
+      "type": "object",
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 3
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "constitutionId",
+    "version",
+    "status",
+    "productionApproved",
+    "selectedTerritory",
+    "identityAuthority",
+    "readabilityDiscipline",
+    "lockedBy",
+    "lockedAt",
+    "authorityMigration",
+    "thesis",
+    "playerPromise",
+    "precedenceContract",
+    "inheritanceContract",
+    "quantitativeGrammar",
+    "palette",
+    "materials",
+    "scopes",
+    "productionRules",
+    "validation",
+    "sourceAuthorities"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/art-constitution.schema.json"
+    },
+    "schemaVersion": {
+      "const": "1.1.0"
+    },
+    "constitutionId": {
+      "const": "salvaged-frontier-industrial-readability-v1"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "status": {
+      "const": "CREATIVE_DIRECTION_LOCKED"
+    },
+    "productionApproved": {
+      "const": false
+    },
+    "selectedTerritory": {
+      "const": "salvaged-frontier"
+    },
+    "identityAuthority": {
+      "const": "salvaged-frontier"
+    },
+    "readabilityDiscipline": {
+      "const": "industrial-toy-defense"
+    },
+    "lockedBy": {
+      "type": "string",
+      "minLength": 3
+    },
+    "lockedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "authorityMigration": {
+      "type": "object",
+      "required": [
+        "recordedAt",
+        "recordedBy",
+        "reason",
+        "semanticArtDirectionChange",
+        "previousBinding",
+        "currentBinding"
+      ],
+      "properties": {
+        "recordedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "recordedBy": {
+          "type": "string",
+          "minLength": 10
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 40
+        },
+        "semanticArtDirectionChange": {
+          "const": false
+        },
+        "previousBinding": {
+          "const": "whole GDD SHA-256"
+        },
+        "currentBinding": {
+          "const": "art/authority/product-art-authority-v1.json"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "thesis": {
+      "type": "string",
+      "minLength": 80
+    },
+    "playerPromise": {
+      "type": "string",
+      "minLength": 80
+    },
+    "precedenceContract": {
+      "type": "object",
+      "required": [
+        "identityWins",
+        "disciplineRole",
+        "conflictRule",
+        "hybridizationForbidden"
+      ],
+      "properties": {
+        "identityWins": {
+          "const": "Salvaged Frontier decides what the world means, remembers and feels."
+        },
+        "disciplineRole": {
+          "const": "Industrial Toy Defense constrains clarity, thickness, hierarchy, modularity and state readability."
+        },
+        "conflictRule": {
+          "type": "string",
+          "minLength": 40
+        },
+        "hybridizationForbidden": {
+          "const": true
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "inheritanceContract": {
+      "type": "object",
+      "required": [
+        "fromSalvagedFrontier",
+        "fromIndustrialToyDefense",
+        "explicitlyRejected"
+      ],
+      "properties": {
+        "fromSalvagedFrontier": {
+          "$ref": "#/$defs/stringList"
+        },
+        "fromIndustrialToyDefense": {
+          "$ref": "#/$defs/stringList"
+        },
+        "explicitlyRejected": {
+          "$ref": "#/$defs/stringList"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "quantitativeGrammar": {
+      "type": "object",
+      "required": [
+        "standardizedChassisShare",
+        "authoredAdaptationShare",
+        "detailHierarchy",
+        "globalAsymmetry",
+        "assetAsymmetryTargets",
+        "primarySecondarySizeRatio",
+        "repairNarrativesMax",
+        "patchFamiliesMax",
+        "visibleMaterialFamiliesMax",
+        "semanticAccentCoverageMax",
+        "warningCoverageMax",
+        "criticalCoverageMax",
+        "minimumMobileReadDistanceStuds"
+      ],
+      "properties": {
+        "standardizedChassisShare": {
+          "type": "object",
+          "required": [
+            "min",
+            "max"
+          ],
+          "properties": {
+            "min": {
+              "const": 0.75
+            },
+            "max": {
+              "const": 0.85
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        "authoredAdaptationShare": {
+          "type": "object",
+          "required": [
+            "min",
+            "max"
+          ],
+          "properties": {
+            "min": {
+              "const": 0.15
+            },
+            "max": {
+              "const": 0.25
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        "detailHierarchy": {
+          "type": "object",
+          "required": [
+            "primary",
+            "secondary",
+            "tertiary"
+          ],
+          "properties": {
+            "primary": {
+              "const": 0.72
+            },
+            "secondary": {
+              "const": 0.23
+            },
+            "tertiary": {
+              "const": 0.05
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        "globalAsymmetry": {
+          "type": "object",
+          "required": [
+            "target",
+            "max"
+          ],
+          "properties": {
+            "target": {
+              "const": 0.24
+            },
+            "max": {
+              "const": 0.36
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        "assetAsymmetryTargets": {
+          "type": "object",
+          "required": [
+            "barricade",
+            "objective_core",
+            "enemy_standard",
+            "floor_module",
+            "damage_effect",
+            "turret_fast_v1"
+          ],
+          "properties": {
+            "barricade": {
+              "const": 0.24
+            },
+            "objective_core": {
+              "const": 0.22
+            },
+            "enemy_standard": {
+              "const": 0.3
+            },
+            "floor_module": {
+              "const": 0.16
+            },
+            "damage_effect": {
+              "const": 0.34
+            },
+            "turret_fast_v1": {
+              "const": 0.24
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        "primarySecondarySizeRatio": {
+          "type": "object",
+          "required": [
+            "min",
+            "max"
+          ],
+          "properties": {
+            "min": {
+              "const": 2.5
+            },
+            "max": {
+              "const": 4.8
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        "repairNarrativesMax": {
+          "const": 2
+        },
+        "patchFamiliesMax": {
+          "const": 2
+        },
+        "visibleMaterialFamiliesMax": {
+          "const": 3
+        },
+        "semanticAccentCoverageMax": {
+          "const": 0.12
+        },
+        "warningCoverageMax": {
+          "const": 0.08
+        },
+        "criticalCoverageMax": {
+          "const": 0.08
+        },
+        "minimumMobileReadDistanceStuds": {
+          "const": 60
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "palette": {
+      "type": "object",
+      "required": [
+        "primary",
+        "secondary",
+        "accent",
+        "interaction",
+        "threat",
+        "warning",
+        "critical",
+        "rubber",
+        "bareMetal",
+        "allocationRules"
+      ],
+      "properties": {
+        "primary": {
+          "const": "#343A3C"
+        },
+        "secondary": {
+          "const": "#B8AD96"
+        },
+        "accent": {
+          "const": "#C7763E"
+        },
+        "interaction": {
+          "const": "#5FE0C1"
+        },
+        "threat": {
+          "const": "#9D455B"
+        },
+        "warning": {
+          "const": "#E5B94A"
+        },
+        "critical": {
+          "const": "#E4524E"
+        },
+        "rubber": {
+          "const": "#202322"
+        },
+        "bareMetal": {
+          "const": "#7F8783"
+        },
+        "allocationRules": {
+          "$ref": "#/$defs/stringList"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "materials": {
+      "type": "object",
+      "required": [
+        "priority",
+        "surfaceLogic",
+        "wearLogic",
+        "forbidden"
+      ],
+      "properties": {
+        "priority": {
+          "const": [
+            "painted_metal",
+            "reclaimed_composite",
+            "bare_metal",
+            "rubber",
+            "reclaimed_wood_contextual_only"
+          ]
+        },
+        "surfaceLogic": {
+          "$ref": "#/$defs/stringList"
+        },
+        "wearLogic": {
+          "$ref": "#/$defs/stringList"
+        },
+        "forbidden": {
+          "$ref": "#/$defs/stringList"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "scopes": {
+      "type": "object",
+      "required": [
+        "worldNarrative",
+        "silhouetteAndMassing",
+        "constructionAndModularity",
+        "asymmetryAndRepair",
+        "materialsAndSurface",
+        "paletteValueAndSemantics",
+        "architectureAndFortress",
+        "environmentAndBiomes",
+        "playerBuildables",
+        "objectivesAndInteractables",
+        "enemiesAndThreats",
+        "avatarsAndCharacters",
+        "damageStatesAndRepair",
+        "vfxAndLighting",
+        "animationAndMotion",
+        "uiSignageAndWorldCues",
+        "cameraCompositionAndMobile",
+        "socialPersistenceAndCosmetics",
+        "proceduralGenerationAndVariation",
+        "marketingAndKeyArt",
+        "performanceAndRepetition"
+      ],
+      "properties": {
+        "worldNarrative": {
+          "$ref": "#/$defs/axis"
+        },
+        "silhouetteAndMassing": {
+          "$ref": "#/$defs/axis"
+        },
+        "constructionAndModularity": {
+          "$ref": "#/$defs/axis"
+        },
+        "asymmetryAndRepair": {
+          "$ref": "#/$defs/axis"
+        },
+        "materialsAndSurface": {
+          "$ref": "#/$defs/axis"
+        },
+        "paletteValueAndSemantics": {
+          "$ref": "#/$defs/axis"
+        },
+        "architectureAndFortress": {
+          "$ref": "#/$defs/axis"
+        },
+        "environmentAndBiomes": {
+          "$ref": "#/$defs/axis"
+        },
+        "playerBuildables": {
+          "$ref": "#/$defs/axis"
+        },
+        "objectivesAndInteractables": {
+          "$ref": "#/$defs/axis"
+        },
+        "enemiesAndThreats": {
+          "$ref": "#/$defs/axis"
+        },
+        "avatarsAndCharacters": {
+          "$ref": "#/$defs/axis"
+        },
+        "damageStatesAndRepair": {
+          "$ref": "#/$defs/axis"
+        },
+        "vfxAndLighting": {
+          "$ref": "#/$defs/axis"
+        },
+        "animationAndMotion": {
+          "$ref": "#/$defs/axis"
+        },
+        "uiSignageAndWorldCues": {
+          "$ref": "#/$defs/axis"
+        },
+        "cameraCompositionAndMobile": {
+          "$ref": "#/$defs/axis"
+        },
+        "socialPersistenceAndCosmetics": {
+          "$ref": "#/$defs/axis"
+        },
+        "proceduralGenerationAndVariation": {
+          "$ref": "#/$defs/axis"
+        },
+        "marketingAndKeyArt": {
+          "$ref": "#/$defs/axis"
+        },
+        "performanceAndRepetition": {
+          "$ref": "#/$defs/axis"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "productionRules": {
+      "$ref": "#/$defs/stringList"
+    },
+    "validation": {
+      "type": "object",
+      "required": [
+        "requiredViews",
+        "requiredContexts",
+        "perceptualQuestions",
+        "reopenConditions"
+      ],
+      "properties": {
+        "requiredViews": {
+          "$ref": "#/$defs/stringList"
+        },
+        "requiredContexts": {
+          "$ref": "#/$defs/stringList"
+        },
+        "perceptualQuestions": {
+          "$ref": "#/$defs/stringList"
+        },
+        "reopenConditions": {
+          "$ref": "#/$defs/stringList"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "sourceAuthorities": {
+      "type": "object",
+      "required": [
+        "productArtContract",
+        "retention",
+        "artDirection",
+        "salvagedTerritory",
+        "industrialDiscipline"
+      ],
+      "properties": {
+        "productArtContract": {
+          "$ref": "#/$defs/authority"
+        },
+        "retention": {
+          "$ref": "#/$defs/authority"
+        },
+        "artDirection": {
+          "$ref": "#/$defs/authority"
+        },
+        "salvagedTerritory": {
+          "$ref": "#/$defs/authority"
+        },
+        "industrialDiscipline": {
+          "$ref": "#/$defs/authority"
+        }
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

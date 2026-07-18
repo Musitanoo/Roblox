@@ -1,0 +1,186 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/transfer-asset.schema.json",
+  "schemaVersion": "1.0.0",
+  "status": "TRANSFER_CHALLENGE_FROZEN",
+  "assetId": "turret_fast_v1",
+  "novelty": "UNSEEN_DURING_FIVE_ASSET_TERRITORY_CALIBRATION",
+  "functionFamily": "defense",
+  "function": "fast-firing player defense turret with unmistakable forward aim, interaction socket, and escalating damage readability",
+  "dimensions": {
+    "width": 4.8,
+    "height": 5.4,
+    "depth": 5.2
+  },
+  "pivot": "bottom_center",
+  "triangleBudgetMax": 3500,
+  "textureBudgetClass": "medium",
+  "targetReadDistanceStuds": 60,
+  "requiredStateVariants": [
+    "intact",
+    "damaged",
+    "critical"
+  ],
+  "grammarBindings": {
+    "shapeLanguage": "art/shape-language/rules.json#/functionFamilies/defense",
+    "semanticPalette": "art/palettes/semantic-palette.json",
+    "materials": "art/materials/material-rules.json",
+    "camera": "art/calibration/camera-rig.json",
+    "lighting": "art/lighting/lighting-profiles.json",
+    "states": "art/shape-language/rules.json#/global/destruction"
+  },
+  "grammarClosure": {
+    "paletteRoles": [
+      "primary",
+      "secondary",
+      "accent",
+      "interaction",
+      "warning",
+      "critical",
+      "rubber",
+      "bareMetal"
+    ],
+    "primaryShapes": [
+      "rectangle",
+      "trapezoid"
+    ],
+    "secondaryShapes": [
+      "brace",
+      "foot",
+      "socket"
+    ],
+    "frontCue": "forward_wedge_or_active_aperture",
+    "backCue": "service_mass_or_closed_plane",
+    "interactionCue": "complete_ring_or_socket",
+    "forbidden": [
+      "needle",
+      "floating_plate",
+      "thin_loose_wires",
+      "microtext",
+      "free_floating_fragments",
+      "detail_without_silhouette_function_identity"
+    ],
+    "noNewPaletteRole": true,
+    "noNewMaterialClass": true,
+    "noNewAngleFamily": true,
+    "noNewBevelFamily": true,
+    "noNewDamageLanguage": true
+  },
+  "stateContract": {
+    "intact": {
+      "majorBreakMinimum": 0,
+      "requiredCues": [
+        "two_aligned_fast_barrels",
+        "complete_interaction_socket",
+        "closed_service_mass"
+      ]
+    },
+    "damaged": {
+      "majorBreakMinimum": 1,
+      "requiredCues": [
+        "one_barrel_drops",
+        "one_guard_opens",
+        "bare_structure_exposes"
+      ]
+    },
+    "critical": {
+      "majorBreakMinimum": 2,
+      "requiredCues": [
+        "one_barrel_missing",
+        "upper_mass_tilts",
+        "critical_core_exposes",
+        "interaction_socket_opens"
+      ]
+    }
+  },
+  "componentContract": {
+    "requiredAllStates": [
+      "Foundation",
+      "Pedestal",
+      "Body",
+      "BarrelL",
+      "MuzzleL",
+      "InteractionCore",
+      "ServiceMass"
+    ],
+    "requiredIntactAndDamaged": [
+      "BarrelR",
+      "MuzzleR"
+    ],
+    "criticalOmissions": [
+      "BarrelR",
+      "MuzzleR"
+    ]
+  },
+  "territoryBindings": {
+    "industrial-toy-defense": {
+      "territoryRef": "art/territories/industrial-toy-defense.json",
+      "bevelSourceAsset": "objective_core",
+      "bevelRatio": 0.055,
+      "allowedAnglesDegrees": [
+        0,
+        45,
+        90
+      ],
+      "asymmetryTarget": 0.08,
+      "compositionIntent": "Stacked toy-industrial armor, oversized feet, blunt twin rectangular barrels, frank orange guards, and one cyan service socket."
+    },
+    "salvaged-frontier": {
+      "territoryRef": "art/territories/salvaged-frontier.json",
+      "bevelSourceAsset": "objective_core",
+      "bevelRatio": 0.048,
+      "allowedAnglesDegrees": [
+        0,
+        15,
+        30,
+        45,
+        90
+      ],
+      "asymmetryTarget": 0.24,
+      "compositionIntent": "A calm standardized defense chassis with one visibly adapted firing side, one large causal repair brace, thick readable housings, bounded copper authorship and a protected safe-side service socket."
+    },
+    "clean-tactical-diorama": {
+      "territoryRef": "art/territories/clean-tactical-diorama.json",
+      "bevelSourceAsset": "objective_core",
+      "bevelRatio": 0.04,
+      "allowedAnglesDegrees": [
+        0,
+        30,
+        60,
+        90
+      ],
+      "asymmetryTarget": 0.02,
+      "compositionIntent": "Precisely mirrored modular turret with tapered armor planes, paired apertures, disciplined neutral masses, and a centered cyan interaction socket."
+    }
+  },
+  "robloxContract": {
+    "visualCollision": false,
+    "hitbox": "simple_invisible_box",
+    "collisionFidelity": "Box",
+    "renderFidelity": "Automatic",
+    "castShadow": true,
+    "expectedSimultaneousCount": 30
+  },
+  "proofContract": {
+    "blenderRunsPerTerritory": 3,
+    "fullRenderCountPerTerritory": 36,
+    "portableArtifactCountPerTerritory": 17,
+    "requiredLightingProfiles": [
+      "Lighting_Gameplay_Default",
+      "Lighting_HighContrast",
+      "Lighting_Adverse_Night",
+      "Lighting_Neutral_QA"
+    ],
+    "requiredOrientations": [
+      "front",
+      "back",
+      "three_quarter",
+      "far"
+    ],
+    "requiredResolutions": [
+      "mobile_landscape_hard",
+      "mobile_narrow_portrait",
+      "reference_review"
+    ],
+    "humanApprovalRequired": true
+  }
+}

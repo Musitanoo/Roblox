@@ -1,0 +1,277 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T09:38:45.756370Z",
+  "validator": "tools.art.validate_library",
+  "pythonVersion": "3.12.13",
+  "status": "PASS",
+  "schemaChecks": [
+    {
+      "path": "schemas/art-constitution.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/art-direction.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/art-lock.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/blender-verification-report.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/blind-map.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/blind-study-manifest.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/build-report.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/calibration-kit.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/camera-rig.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/canon-compliance-report.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/component-evidence-map.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/component-evidence-report.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/creative-direction-decision.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/evidence-index.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/expert-session.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/faction-palettes.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/full-evidence.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/generation-authority.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/lighting-profiles.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/material-rules.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/object-product-contracts.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/participant-session.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/performance-report.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/precanonical-brief.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/precanonical-browser-doctor.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/precanonical-campaign.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/precanonical-handoff.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/precanonical-operator-session.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/precanonical-policy.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/precanonical-preflight.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/precanonical-request.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/precanonical-result.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/precanonical-review.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/precanonical-visual-audit.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/product-art-authority.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/provenance.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/reimport-probe.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/render-matrix.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/reviewer-submissions.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/selection-decision.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/semantic-palette.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/shape-rules.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/smoke-evidence.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/static-verification-report.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/status.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/studio-reimport-report.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/studio-report.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/studio-simulator-report.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/task-protocol.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/territory.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/transfer-asset.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/transfer-build-report.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/transfer-import-queue.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/transfer-publication-report.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/transfer-report.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/transfer-review.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/transfer-studio-report.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/visual-canon-catalog.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/visual-canon-evidence.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/visual-canon-human-review.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/visual-canon-lock.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/visual-canon-source.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/visual-canon.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/visual-quality-report.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/visual-rubric.schema.json",
+      "status": "PASS"
+    },
+    {
+      "path": "schemas/workflow-simulation-report.schema.json",
+      "status": "PASS"
+    }
+  ],
+  "manifestInstanceCount": 60,
+  "semanticIssues": [],
+  "generatedCodeIssues": [],
+  "issues": []
+}

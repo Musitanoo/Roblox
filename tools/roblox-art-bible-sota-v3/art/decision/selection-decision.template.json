@@ -1,0 +1,14 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/selection-decision.schema.json",
+  "schemaVersion": "2.0.0",
+  "studyId": "art-direction-vertical-slice-v1",
+  "status": "DRAFT",
+  "selectedBlindLabel": null,
+  "selectedTerritory": null,
+  "approvedBy": null,
+  "approvedAt": null,
+  "rationale": null,
+  "scoringReportSha256": null,
+  "blindMapSha256": null,
+  "rejectedAlternatives": []
+}

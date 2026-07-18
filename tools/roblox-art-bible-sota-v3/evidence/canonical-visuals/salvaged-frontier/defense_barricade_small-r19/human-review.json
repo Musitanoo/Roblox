@@ -1,0 +1,102 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/visual-canon-human-review.schema.json",
+  "allowedDecisions": [
+    "LOCK",
+    "REVISION_REQUIRED",
+    "REJECT"
+  ],
+  "assetId": "barricade",
+  "assetKey": "defense_barricade_small",
+  "boards": {
+    "all_states": {
+      "comment": null,
+      "status": "PENDING"
+    },
+    "black_silhouette": {
+      "comment": null,
+      "status": "PENDING"
+    },
+    "component_breakdown": {
+      "comment": null,
+      "status": "PENDING"
+    },
+    "lighting_matrix": {
+      "comment": null,
+      "status": "PENDING"
+    },
+    "materials": {
+      "comment": null,
+      "status": "PENDING"
+    },
+    "mobile_far": {
+      "comment": null,
+      "status": "PENDING"
+    },
+    "mobile_mid": {
+      "comment": null,
+      "status": "PENDING"
+    },
+    "mobile_near": {
+      "comment": null,
+      "status": "PENDING"
+    },
+    "orthographic": {
+      "comment": null,
+      "status": "PENDING"
+    },
+    "perspective": {
+      "comment": null,
+      "status": "PENDING"
+    },
+    "proportions": {
+      "comment": null,
+      "status": "PENDING"
+    },
+    "repetition_1": {
+      "comment": null,
+      "status": "PENDING"
+    },
+    "repetition_100": {
+      "comment": null,
+      "status": "PENDING"
+    },
+    "repetition_30": {
+      "comment": null,
+      "status": "PENDING"
+    },
+    "required_and_forbidden_annotations": {
+      "comment": null,
+      "status": "PENDING"
+    },
+    "semantic_zones": {
+      "comment": null,
+      "status": "PENDING"
+    },
+    "state_comparison": {
+      "comment": null,
+      "status": "PENDING"
+    }
+  },
+  "canonId": "vc_barricade__salvaged-frontier__v1",
+  "decision": null,
+  "decisionRecord": null,
+  "evidenceManifest": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/evidence-manifest.json",
+  "evidenceManifestSha256": "572c20e26a43b9805cb62ed7345a74a2bc8aea4851aef5ece2a66b70202b2455",
+  "evidencePackageSha256": "e1eda2b464569aa020ff44d30a11741e5c756b67758274e6cbe1420f90ece47f",
+  "mandatoryChecks": {
+    "artDirectionQuality": "PENDING",
+    "lightingRobustness": "PENDING",
+    "mobileNearMidFar": "PENDING",
+    "oneSecondFunctionRead": "PENDING",
+    "repetitionOneThirtyHundred": "PENDING",
+    "requiredAndForbiddenCompliance": "PENDING",
+    "stateReadWithoutColorOnly": "PENDING"
+  },
+  "productionApproved": false,
+  "reviewedAt": null,
+  "reviewer": null,
+  "revision": 19,
+  "schemaVersion": "1.0.0",
+  "status": "PENDING",
+  "territoryId": "salvaged-frontier"
+}

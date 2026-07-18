@@ -1,0 +1,806 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/build-report.schema.json",
+  "schemaVersion": "3.0.0",
+  "status": "PASS",
+  "generatedAt": "2026-07-16T06:03:54.234940Z",
+  "territoryId": "industrial-toy-defense",
+  "rendererTruth": "BLENDER_PREFLIGHT_ONLY_STUDIO_IS_CANONICAL",
+  "renderMode": "build-only",
+  "reviewRequested": true,
+  "evidenceCompleteness": "BUILD_ONLY",
+  "toolchain": {
+    "blenderVersion": "5.2.0 LTS",
+    "pythonVersion": "3.13.13 (main, May  8 2026, 12:37:03) [MSC v.1944 64 bit (AMD64)]",
+    "renderEngine": "BLENDER_EEVEE",
+    "deterministicSeed": 1103,
+    "generatorVersion": "5.0.0"
+  },
+  "inputHashes": {
+    "territory": "376db838f206a46e114993ab5c666a155341215931069b879527666ebd144450",
+    "calibration": "8a33c6c8a9b5a02ef460f5e698907a4d6d623e2f5c475047cd3dbdccc102ace9",
+    "camera": "f2daf7d92ff4db38a588cb29588c5856c8894ec0c11d30d3d01c527bf7cd8d44",
+    "renderMatrix": "c91b9292cbd4fb4ca50cafae53ee74c8493dddbf0ffafc4bcc87af93a4559514",
+    "lighting": "8e3db2df064ac33f79703e21aa702709a7162fa43b56d07f706e3af03647e085",
+    "materials": "6e2ad4bd95cb2dd4776b65e6dfeb088af35349a7ec74469bd6c0f40edd553f5e",
+    "generator": "4f5ae236a95fba6df85d94bf6c0858ac3d0ef53c0114547442c4b1753c9d7326"
+  },
+  "cameraValidation": {
+    "expectedVerticalFovDegrees": 70.0,
+    "actualVerticalFovDegrees": 69.99999967119774,
+    "toleranceDegrees": 0.01,
+    "pass": true
+  },
+  "assets": [
+    {
+      "assetId": "barricade",
+      "stateId": "intact",
+      "status": "PASS",
+      "boundsBlenderXYZ": {
+        "width": 8.0,
+        "depth": 2.0,
+        "height": 4.0
+      },
+      "boundsMin": [
+        -4.0,
+        -1.0,
+        0.0
+      ],
+      "boundsMax": [
+        4.0,
+        1.0,
+        4.0
+      ],
+      "pivot": "bottom_center",
+      "triangles": 1476,
+      "triangleBudget": 2000,
+      "meshObjectCount": 39,
+      "materialSlotsMaxPerMesh": 1,
+      "uvLayersMaxPerMesh": 1,
+      "nonManifoldEdges": 0,
+      "nonzeroVolume": true,
+      "uvOutOfRange": 0,
+      "issues": []
+    },
+    {
+      "assetId": "barricade",
+      "stateId": "damaged",
+      "status": "PASS",
+      "boundsBlenderXYZ": {
+        "width": 8.0,
+        "depth": 2.0,
+        "height": 4.0
+      },
+      "boundsMin": [
+        -4.0,
+        -1.0,
+        0.0
+      ],
+      "boundsMax": [
+        4.0,
+        1.0,
+        4.0
+      ],
+      "pivot": "bottom_center",
+      "triangles": 1520,
+      "triangleBudget": 2000,
+      "meshObjectCount": 40,
+      "materialSlotsMaxPerMesh": 1,
+      "uvLayersMaxPerMesh": 1,
+      "nonManifoldEdges": 0,
+      "nonzeroVolume": true,
+      "uvOutOfRange": 0,
+      "issues": []
+    },
+    {
+      "assetId": "barricade",
+      "stateId": "critical",
+      "status": "PASS",
+      "boundsBlenderXYZ": {
+        "width": 8.0,
+        "depth": 2.0,
+        "height": 4.0
+      },
+      "boundsMin": [
+        -4.0,
+        -1.0,
+        0.0
+      ],
+      "boundsMax": [
+        4.0,
+        1.0,
+        4.0
+      ],
+      "pivot": "bottom_center",
+      "triangles": 1564,
+      "triangleBudget": 2000,
+      "meshObjectCount": 41,
+      "materialSlotsMaxPerMesh": 1,
+      "uvLayersMaxPerMesh": 1,
+      "nonManifoldEdges": 0,
+      "nonzeroVolume": true,
+      "uvOutOfRange": 0,
+      "issues": []
+    },
+    {
+      "assetId": "objective_core",
+      "stateId": "intact",
+      "status": "PASS",
+      "boundsBlenderXYZ": {
+        "width": 6.0,
+        "depth": 6.0,
+        "height": 7.0
+      },
+      "boundsMin": [
+        -3.0,
+        -3.0,
+        0.0
+      ],
+      "boundsMax": [
+        3.0,
+        3.0,
+        7.0
+      ],
+      "pivot": "bottom_center",
+      "triangles": 3140,
+      "triangleBudget": 4500,
+      "meshObjectCount": 44,
+      "materialSlotsMaxPerMesh": 1,
+      "uvLayersMaxPerMesh": 1,
+      "nonManifoldEdges": 0,
+      "nonzeroVolume": true,
+      "uvOutOfRange": 0,
+      "issues": []
+    },
+    {
+      "assetId": "objective_core",
+      "stateId": "damaged",
+      "status": "PASS",
+      "boundsBlenderXYZ": {
+        "width": 6.0,
+        "depth": 6.0,
+        "height": 7.0
+      },
+      "boundsMin": [
+        -3.0,
+        -3.0,
+        0.0
+      ],
+      "boundsMax": [
+        3.0,
+        3.0,
+        7.0
+      ],
+      "pivot": "bottom_center",
+      "triangles": 3184,
+      "triangleBudget": 4500,
+      "meshObjectCount": 45,
+      "materialSlotsMaxPerMesh": 1,
+      "uvLayersMaxPerMesh": 1,
+      "nonManifoldEdges": 0,
+      "nonzeroVolume": true,
+      "uvOutOfRange": 0,
+      "issues": []
+    },
+    {
+      "assetId": "objective_core",
+      "stateId": "critical",
+      "status": "PASS",
+      "boundsBlenderXYZ": {
+        "width": 6.0,
+        "depth": 6.0,
+        "height": 7.0
+      },
+      "boundsMin": [
+        -3.0,
+        -3.0,
+        0.0
+      ],
+      "boundsMax": [
+        3.0,
+        3.0,
+        7.0
+      ],
+      "pivot": "bottom_center",
+      "triangles": 3228,
+      "triangleBudget": 4500,
+      "meshObjectCount": 46,
+      "materialSlotsMaxPerMesh": 1,
+      "uvLayersMaxPerMesh": 1,
+      "nonManifoldEdges": 0,
+      "nonzeroVolume": true,
+      "uvOutOfRange": 0,
+      "issues": []
+    },
+    {
+      "assetId": "enemy_standard",
+      "stateId": "intact",
+      "status": "PASS",
+      "boundsBlenderXYZ": {
+        "width": 2.5,
+        "depth": 2.5,
+        "height": 5.5
+      },
+      "boundsMin": [
+        -1.25,
+        -1.25,
+        0.0
+      ],
+      "boundsMax": [
+        1.25,
+        1.25,
+        5.5
+      ],
+      "pivot": "feet_center",
+      "triangles": 1824,
+      "triangleBudget": 5000,
+      "meshObjectCount": 29,
+      "materialSlotsMaxPerMesh": 1,
+      "uvLayersMaxPerMesh": 1,
+      "nonManifoldEdges": 0,
+      "nonzeroVolume": true,
+      "uvOutOfRange": 0,
+      "issues": []
+    },
+    {
+      "assetId": "enemy_standard",
+      "stateId": "damaged",
+      "status": "PASS",
+      "boundsBlenderXYZ": {
+        "width": 2.5,
+        "depth": 2.44911789894104,
+        "height": 5.388060092926025
+      },
+      "boundsMin": [
+        -1.25,
+        -1.22455894947052,
+        0.0
+      ],
+      "boundsMax": [
+        1.25,
+        1.22455894947052,
+        5.388060092926025
+      ],
+      "pivot": "feet_center",
+      "triangles": 1868,
+      "triangleBudget": 5000,
+      "meshObjectCount": 30,
+      "materialSlotsMaxPerMesh": 1,
+      "uvLayersMaxPerMesh": 1,
+      "nonManifoldEdges": 0,
+      "nonzeroVolume": true,
+      "uvOutOfRange": 0,
+      "issues": []
+    },
+    {
+      "assetId": "enemy_standard",
+      "stateId": "critical",
+      "status": "PASS",
+      "boundsBlenderXYZ": {
+        "width": 2.128406047821045,
+        "depth": 2.5,
+        "height": 4.351726055145264
+      },
+      "boundsMin": [
+        -1.0642030239105225,
+        -1.25,
+        0.0
+      ],
+      "boundsMax": [
+        1.0642030239105225,
+        1.25,
+        4.351726055145264
+      ],
+      "pivot": "feet_center",
+      "triangles": 1912,
+      "triangleBudget": 5000,
+      "meshObjectCount": 31,
+      "materialSlotsMaxPerMesh": 1,
+      "uvLayersMaxPerMesh": 1,
+      "nonManifoldEdges": 0,
+      "nonzeroVolume": true,
+      "uvOutOfRange": 0,
+      "issues": []
+    },
+    {
+      "assetId": "floor_module",
+      "stateId": "intact",
+      "status": "PASS",
+      "boundsBlenderXYZ": {
+        "width": 4.0,
+        "depth": 4.0,
+        "height": 0.5
+      },
+      "boundsMin": [
+        -2.0,
+        -2.0,
+        0.0
+      ],
+      "boundsMax": [
+        2.0,
+        2.0,
+        0.5
+      ],
+      "pivot": "bottom_center",
+      "triangles": 688,
+      "triangleBudget": 800,
+      "meshObjectCount": 12,
+      "materialSlotsMaxPerMesh": 1,
+      "uvLayersMaxPerMesh": 1,
+      "nonManifoldEdges": 0,
+      "nonzeroVolume": true,
+      "uvOutOfRange": 0,
+      "issues": []
+    },
+    {
+      "assetId": "floor_module",
+      "stateId": "damaged",
+      "status": "PASS",
+      "boundsBlenderXYZ": {
+        "width": 3.9696199893951416,
+        "depth": 3.9696199893951416,
+        "height": 0.5
+      },
+      "boundsMin": [
+        -1.9848099946975708,
+        -1.9848099946975708,
+        0.0
+      ],
+      "boundsMax": [
+        1.9848099946975708,
+        1.9848099946975708,
+        0.5
+      ],
+      "pivot": "bottom_center",
+      "triangles": 724,
+      "triangleBudget": 800,
+      "meshObjectCount": 15,
+      "materialSlotsMaxPerMesh": 1,
+      "uvLayersMaxPerMesh": 1,
+      "nonManifoldEdges": 0,
+      "nonzeroVolume": true,
+      "uvOutOfRange": 0,
+      "issues": []
+    },
+    {
+      "assetId": "damage_effect",
+      "stateId": "damaged",
+      "status": "PASS",
+      "boundsBlenderXYZ": {
+        "width": 4.0,
+        "depth": 4.0,
+        "height": 4.0
+      },
+      "boundsMin": [
+        -2.0,
+        -2.0,
+        -2.0
+      ],
+      "boundsMax": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "pivot": "impact_center",
+      "triangles": 120,
+      "triangleBudget": 300,
+      "meshObjectCount": 9,
+      "materialSlotsMaxPerMesh": 1,
+      "uvLayersMaxPerMesh": 1,
+      "nonManifoldEdges": 0,
+      "nonzeroVolume": true,
+      "uvOutOfRange": 0,
+      "issues": []
+    },
+    {
+      "assetId": "damage_effect",
+      "stateId": "critical",
+      "status": "PASS",
+      "boundsBlenderXYZ": {
+        "width": 3.4689159393310547,
+        "depth": 4.0,
+        "height": 3.528331995010376
+      },
+      "boundsMin": [
+        -1.7344579696655273,
+        -2.0,
+        -1.764165997505188
+      ],
+      "boundsMax": [
+        1.7344579696655273,
+        2.0,
+        1.764165997505188
+      ],
+      "pivot": "impact_center",
+      "triangles": 128,
+      "triangleBudget": 300,
+      "meshObjectCount": 10,
+      "materialSlotsMaxPerMesh": 1,
+      "uvLayersMaxPerMesh": 1,
+      "nonManifoldEdges": 0,
+      "nonzeroVolume": true,
+      "uvOutOfRange": 0,
+      "issues": []
+    }
+  ],
+  "exports": [
+    {
+      "assetId": "barricade",
+      "stateId": "intact",
+      "path": "exports/barricade/barricade__intact.glb",
+      "bytes": 107388,
+      "sha256": "e0104f20616620456cd493e89c80de9fcea27f2a84df6ea6eadc5ab3c51aa8fe",
+      "meshCount": 6,
+      "materialRoles": [
+        "accent",
+        "bareMetal",
+        "interaction",
+        "primary",
+        "rubber",
+        "secondary"
+      ]
+    },
+    {
+      "assetId": "barricade",
+      "stateId": "damaged",
+      "path": "exports/barricade/barricade__damaged.glb",
+      "bytes": 111864,
+      "sha256": "a6faeb9d8bb1f963d9ae7294c8e5e0294f7e1f5e60e0663700ab7e3ddfc72962",
+      "meshCount": 7,
+      "materialRoles": [
+        "accent",
+        "bareMetal",
+        "interaction",
+        "primary",
+        "rubber",
+        "secondary",
+        "warning"
+      ]
+    },
+    {
+      "assetId": "barricade",
+      "stateId": "critical",
+      "path": "exports/barricade/barricade__critical.glb",
+      "bytes": 114000,
+      "sha256": "947fccff244036e8b4f579a02efeb46f5b864457ec39514b36e8a7c427ce8e80",
+      "meshCount": 6,
+      "materialRoles": [
+        "accent",
+        "bareMetal",
+        "critical",
+        "primary",
+        "rubber",
+        "secondary"
+      ]
+    },
+    {
+      "assetId": "objective_core",
+      "stateId": "intact",
+      "path": "exports/objective_core/objective_core__intact.glb",
+      "bytes": 227744,
+      "sha256": "b1f65b26d7c22faad8d5f922c064f7c77e70ee47cff6afc8dd71b2031fc746fa",
+      "meshCount": 6,
+      "materialRoles": [
+        "accent",
+        "bareMetal",
+        "interaction",
+        "primary",
+        "rubber",
+        "secondary"
+      ]
+    },
+    {
+      "assetId": "objective_core",
+      "stateId": "damaged",
+      "path": "exports/objective_core/objective_core__damaged.glb",
+      "bytes": 232204,
+      "sha256": "5d4940b08fda6db8004a4dc3984f39045c8191a97885821951a23e3f41d65a08",
+      "meshCount": 7,
+      "materialRoles": [
+        "accent",
+        "bareMetal",
+        "interaction",
+        "primary",
+        "rubber",
+        "secondary",
+        "warning"
+      ]
+    },
+    {
+      "assetId": "objective_core",
+      "stateId": "critical",
+      "path": "exports/objective_core/objective_core__critical.glb",
+      "bytes": 236644,
+      "sha256": "13e521543fe630282afa4fb6f8d934664189e51f5c9d55bd63873b4b227d0fdb",
+      "meshCount": 8,
+      "materialRoles": [
+        "accent",
+        "bareMetal",
+        "critical",
+        "interaction",
+        "primary",
+        "rubber",
+        "secondary",
+        "warning"
+      ]
+    },
+    {
+      "assetId": "enemy_standard",
+      "stateId": "intact",
+      "path": "exports/enemy_standard/enemy_standard__intact.glb",
+      "bytes": 136544,
+      "sha256": "d83a515fc8d0916719f435d599888da57dff01e83ee4bb6fccfa094d115f7b55",
+      "meshCount": 6,
+      "materialRoles": [
+        "accent",
+        "bareMetal",
+        "interaction",
+        "primary",
+        "rubber",
+        "threat"
+      ]
+    },
+    {
+      "assetId": "enemy_standard",
+      "stateId": "damaged",
+      "path": "exports/enemy_standard/enemy_standard__damaged.glb",
+      "bytes": 140516,
+      "sha256": "8b28dee11db698910743b6dc822c711d99fa03de6543cff5c1dd6feae8b743ff",
+      "meshCount": 7,
+      "materialRoles": [
+        "accent",
+        "bareMetal",
+        "interaction",
+        "primary",
+        "rubber",
+        "threat",
+        "warning"
+      ]
+    },
+    {
+      "assetId": "enemy_standard",
+      "stateId": "critical",
+      "path": "exports/enemy_standard/enemy_standard__critical.glb",
+      "bytes": 143852,
+      "sha256": "8dee21efc795c4d61ce9c6d44f80a9cae019c6b7985b90fe6c1711fb0b2aaa63",
+      "meshCount": 7,
+      "materialRoles": [
+        "accent",
+        "bareMetal",
+        "critical",
+        "interaction",
+        "primary",
+        "rubber",
+        "threat"
+      ]
+    },
+    {
+      "assetId": "floor_module",
+      "stateId": "intact",
+      "path": "exports/floor_module/floor_module__intact.glb",
+      "bytes": 52460,
+      "sha256": "5015f30fbdbbe2f9274ab2a57c316a17111977f7e1060b75164f74dd197d69f5",
+      "meshCount": 5,
+      "materialRoles": [
+        "accent",
+        "bareMetal",
+        "primary",
+        "rubber",
+        "secondary"
+      ]
+    },
+    {
+      "assetId": "floor_module",
+      "stateId": "damaged",
+      "path": "exports/floor_module/floor_module__damaged.glb",
+      "bytes": 56564,
+      "sha256": "9bcfcf4c49b01f9da32bd3c1713b8b26434efa35e4bb78651d2e3d9fdb0b1f95",
+      "meshCount": 6,
+      "materialRoles": [
+        "accent",
+        "bareMetal",
+        "primary",
+        "rubber",
+        "secondary",
+        "warning"
+      ]
+    },
+    {
+      "assetId": "damage_effect",
+      "stateId": "damaged",
+      "path": "exports/damage_effect/damage_effect__damaged.glb",
+      "bytes": 12140,
+      "sha256": "a63b6f3cdc6c0eeff4abd0797314d390378fd8483194d54450e25ef991d6443b",
+      "meshCount": 3,
+      "materialRoles": [
+        "critical",
+        "interaction",
+        "warning"
+      ]
+    },
+    {
+      "assetId": "damage_effect",
+      "stateId": "critical",
+      "path": "exports/damage_effect/damage_effect__critical.glb",
+      "bytes": 12256,
+      "sha256": "c8758dc1ee8ca8f50522f01fa170e035192298a565b32d49900e36c62cbc78f8",
+      "meshCount": 3,
+      "materialRoles": [
+        "critical",
+        "interaction",
+        "warning"
+      ]
+    }
+  ],
+  "renderEvidence": [],
+  "stressEvidence": [],
+  "reviewEvidence": [
+    {
+      "assetId": "barricade",
+      "stateId": "intact",
+      "cameraId": "dynamic_hero_three_quarter",
+      "resolution": {
+        "width": 1024,
+        "height": 768
+      },
+      "targetOccupancy": 0.68,
+      "path": "renders/review/industrial-toy-defense__barricade__intact__hero.png",
+      "sha256": "4b2b11fc0933d24825dbfc2e33d3b6774f356769d09cd217984ff59c3f5eaa6f"
+    },
+    {
+      "assetId": "barricade",
+      "stateId": "damaged",
+      "cameraId": "dynamic_hero_three_quarter",
+      "resolution": {
+        "width": 1024,
+        "height": 768
+      },
+      "targetOccupancy": 0.68,
+      "path": "renders/review/industrial-toy-defense__barricade__damaged__hero.png",
+      "sha256": "e3f66daa19a52ed0c6454b6464c4fa649916df0bd40a4df183e7bf7922cc5c8a"
+    },
+    {
+      "assetId": "barricade",
+      "stateId": "critical",
+      "cameraId": "dynamic_hero_three_quarter",
+      "resolution": {
+        "width": 1024,
+        "height": 768
+      },
+      "targetOccupancy": 0.68,
+      "path": "renders/review/industrial-toy-defense__barricade__critical__hero.png",
+      "sha256": "4f678b8b1adec6a19185a0b610b8d5bad14b3541a072e689bb543bb01ce08490"
+    },
+    {
+      "assetId": "objective_core",
+      "stateId": "intact",
+      "cameraId": "dynamic_hero_three_quarter",
+      "resolution": {
+        "width": 1024,
+        "height": 768
+      },
+      "targetOccupancy": 0.68,
+      "path": "renders/review/industrial-toy-defense__objective_core__intact__hero.png",
+      "sha256": "8df9d59a374007adb1d1982605d3c5caaaa918a3f5ce8c035aae3eabc3b21dc8"
+    },
+    {
+      "assetId": "objective_core",
+      "stateId": "damaged",
+      "cameraId": "dynamic_hero_three_quarter",
+      "resolution": {
+        "width": 1024,
+        "height": 768
+      },
+      "targetOccupancy": 0.68,
+      "path": "renders/review/industrial-toy-defense__objective_core__damaged__hero.png",
+      "sha256": "5657e54974afa11f4a89535ef1f737a74d414af0d1872dca793a8c64912c6091"
+    },
+    {
+      "assetId": "objective_core",
+      "stateId": "critical",
+      "cameraId": "dynamic_hero_three_quarter",
+      "resolution": {
+        "width": 1024,
+        "height": 768
+      },
+      "targetOccupancy": 0.68,
+      "path": "renders/review/industrial-toy-defense__objective_core__critical__hero.png",
+      "sha256": "e32d0cdd60ed9825a83f27d5a41d1c8deb12288612f6f11ca56c17a501643f88"
+    },
+    {
+      "assetId": "enemy_standard",
+      "stateId": "intact",
+      "cameraId": "dynamic_hero_three_quarter",
+      "resolution": {
+        "width": 1024,
+        "height": 768
+      },
+      "targetOccupancy": 0.68,
+      "path": "renders/review/industrial-toy-defense__enemy_standard__intact__hero.png",
+      "sha256": "d050b85fa017baccdb8bf8f502ef1bf63322f51c6c358d45d4a0d1932c211877"
+    },
+    {
+      "assetId": "enemy_standard",
+      "stateId": "damaged",
+      "cameraId": "dynamic_hero_three_quarter",
+      "resolution": {
+        "width": 1024,
+        "height": 768
+      },
+      "targetOccupancy": 0.68,
+      "path": "renders/review/industrial-toy-defense__enemy_standard__damaged__hero.png",
+      "sha256": "28b90e765eaea64e19252c838fd2e750ac227cd22ca403eb7141993fb5d9b6e0"
+    },
+    {
+      "assetId": "enemy_standard",
+      "stateId": "critical",
+      "cameraId": "dynamic_hero_three_quarter",
+      "resolution": {
+        "width": 1024,
+        "height": 768
+      },
+      "targetOccupancy": 0.68,
+      "path": "renders/review/industrial-toy-defense__enemy_standard__critical__hero.png",
+      "sha256": "b050f4be26270bea75e3def67e1067b269557f220eb69e1246db6f7c57a5232c"
+    },
+    {
+      "assetId": "floor_module",
+      "stateId": "intact",
+      "cameraId": "dynamic_hero_three_quarter",
+      "resolution": {
+        "width": 1024,
+        "height": 768
+      },
+      "targetOccupancy": 0.68,
+      "path": "renders/review/industrial-toy-defense__floor_module__intact__hero.png",
+      "sha256": "a0c49d7366ca5d863cd7d3740627292fc95fa61fe5e9dc1d2e7eda0027756137"
+    },
+    {
+      "assetId": "floor_module",
+      "stateId": "damaged",
+      "cameraId": "dynamic_hero_three_quarter",
+      "resolution": {
+        "width": 1024,
+        "height": 768
+      },
+      "targetOccupancy": 0.68,
+      "path": "renders/review/industrial-toy-defense__floor_module__damaged__hero.png",
+      "sha256": "faa181cbea3577c3842553ba9dcecdaa2163416ca9736a9d7b6bcf7d5a2a1afd"
+    },
+    {
+      "assetId": "damage_effect",
+      "stateId": "damaged",
+      "cameraId": "dynamic_hero_three_quarter",
+      "resolution": {
+        "width": 1024,
+        "height": 768
+      },
+      "targetOccupancy": 0.68,
+      "path": "renders/review/industrial-toy-defense__damage_effect__damaged__hero.png",
+      "sha256": "b211971eeef65f960a42f621f77bd044ffbce5dcb2b79f4f2a8b79db84ad8374"
+    },
+    {
+      "assetId": "damage_effect",
+      "stateId": "critical",
+      "cameraId": "dynamic_hero_three_quarter",
+      "resolution": {
+        "width": 1024,
+        "height": 768
+      },
+      "targetOccupancy": 0.68,
+      "path": "renders/review/industrial-toy-defense__damage_effect__critical__hero.png",
+      "sha256": "c6f42f62d5af70e6900cea671c9180916220fdca67fd842f72aea1ee502048d6"
+    }
+  ],
+  "renderEvidenceComplete": false,
+  "renderEvidenceCapped": false,
+  "expectedRenderCount": 0,
+  "actualRenderCount": 0,
+  "issues": [],
+  "notes": [
+    "Geometry/export gates passed; no Blender render evidence was requested."
+  ],
+  "blendFile": {
+    "path": "industrial-toy-defense__calibration.blend",
+    "sha256": "8453c38c81cdf9a3d768c524950f2c58dea706474992bc2892d3efddeca196e6"
+  }
+}

@@ -1,0 +1,472 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/transfer-build-report.schema.json",
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "state": {
+      "enum": ["intact", "damaged", "critical"]
+    },
+    "xyz": {
+      "type": "object",
+      "required": ["width", "depth", "height"],
+      "properties": {
+        "width": {"type": "number", "exclusiveMinimum": 0},
+        "depth": {"type": "number", "exclusiveMinimum": 0},
+        "height": {"type": "number", "exclusiveMinimum": 0}
+      },
+      "unevaluatedProperties": false
+    },
+    "artifact": {
+      "type": "object",
+      "required": ["path", "bytes", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 3},
+        "bytes": {"type": "integer", "exclusiveMinimum": 0},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      },
+      "unevaluatedProperties": false
+    },
+    "variant": {
+      "type": "object",
+      "required": [
+        "assetId",
+        "stateId",
+        "status",
+        "boundsBlenderXYZ",
+        "boundsMin",
+        "boundsMax",
+        "pivot",
+        "triangles",
+        "triangleBudget",
+        "meshObjectCount",
+        "materialSlotsMaxPerMesh",
+        "uvLayersMaxPerMesh",
+        "nonManifoldEdges",
+        "nonzeroVolume",
+        "uvOutOfRange",
+        "issues"
+      ],
+      "properties": {
+        "assetId": {"const": "turret_fast_v1"},
+        "stateId": {"$ref": "#/$defs/state"},
+        "status": {"enum": ["PASS", "FAIL"]},
+        "boundsBlenderXYZ": {"$ref": "#/$defs/xyz"},
+        "boundsMin": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {"type": "number"}
+        },
+        "boundsMax": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {"type": "number"}
+        },
+        "pivot": {"const": "bottom_center"},
+        "triangles": {"type": "integer", "minimum": 1, "maximum": 3500},
+        "triangleBudget": {"const": 3500},
+        "meshObjectCount": {"type": "integer", "minimum": 12, "maximum": 80},
+        "materialSlotsMaxPerMesh": {"type": "integer", "minimum": 1, "maximum": 1},
+        "uvLayersMaxPerMesh": {"type": "integer", "minimum": 1, "maximum": 1},
+        "nonManifoldEdges": {"const": 0},
+        "nonzeroVolume": {"const": true},
+        "uvOutOfRange": {"const": 0},
+        "issues": {"type": "array", "items": {"type": "string"}}
+      },
+      "unevaluatedProperties": false
+    },
+    "export": {
+      "type": "object",
+      "required": [
+        "assetId",
+        "stateId",
+        "path",
+        "bytes",
+        "sha256",
+        "meshCount",
+        "materialRoles"
+      ],
+      "properties": {
+        "assetId": {"const": "turret_fast_v1"},
+        "stateId": {"$ref": "#/$defs/state"},
+        "path": {
+          "type": "string",
+          "pattern": "^exports/turret_fast_v1/"
+        },
+        "bytes": {"type": "integer", "exclusiveMinimum": 0},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "meshCount": {"type": "integer", "minimum": 1, "maximum": 8},
+        "materialRoles": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "primary",
+              "secondary",
+              "accent",
+              "interaction",
+              "warning",
+              "critical",
+              "rubber",
+              "bareMetal"
+            ]
+          }
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "render": {
+      "type": "object",
+      "required": [
+        "caseId",
+        "assetId",
+        "stateId",
+        "cameraId",
+        "lightingProfileId",
+        "backgroundId",
+        "resolutionId",
+        "passId",
+        "path",
+        "sha256"
+      ],
+      "properties": {
+        "caseId": {
+          "enum": [
+            "hero",
+            "state_silhouette",
+            "front_silhouette",
+            "back_silhouette",
+            "far_mobile",
+            "portrait_mobile"
+          ]
+        },
+        "assetId": {"const": "turret_fast_v1"},
+        "stateId": {"$ref": "#/$defs/state"},
+        "cameraId": {
+          "enum": [
+            "dynamic_hero_three_quarter",
+            "near",
+            "front",
+            "back",
+            "far"
+          ]
+        },
+        "lightingProfileId": {
+          "enum": [
+            "Lighting_Gameplay_Default",
+            "Lighting_HighContrast",
+            "Lighting_Adverse_Night",
+            "Lighting_Neutral_QA",
+            "Review_ThreePoint"
+          ]
+        },
+        "backgroundId": {
+          "enum": [
+            "world_neutral_light",
+            "world_neutral_dark",
+            "review_ground"
+          ]
+        },
+        "resolutionId": {
+          "enum": [
+            "mobile_landscape_hard",
+            "mobile_narrow_portrait",
+            "reference_review"
+          ]
+        },
+        "passId": {"enum": ["beauty", "silhouette"]},
+        "path": {"type": "string", "pattern": "^renders/"},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "status",
+    "generatedAt",
+    "assetId",
+    "territoryId",
+    "rendererTruth",
+    "renderMode",
+    "toolchain",
+    "inputHashes",
+    "cameraValidation",
+    "grammarAudit",
+    "variants",
+    "exports",
+    "renderEvidence",
+    "expectedRenderCount",
+    "actualRenderCount",
+    "issues",
+    "notes"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/transfer-build-report.schema.json"
+    },
+    "schemaVersion": {"const": "1.0.0"},
+    "status": {"enum": ["PASS", "FAIL"]},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "assetId": {"const": "turret_fast_v1"},
+    "territoryId": {
+      "enum": [
+        "industrial-toy-defense",
+        "salvaged-frontier",
+        "clean-tactical-diorama"
+      ]
+    },
+    "rendererTruth": {
+      "const": "BLENDER_TRANSFER_PREFLIGHT_ONLY_STUDIO_REMAINS_CANONICAL"
+    },
+    "renderMode": {"enum": ["build-only", "full"]},
+    "toolchain": {
+      "type": "object",
+      "required": [
+        "blenderVersion",
+        "pythonVersion",
+        "renderEngine",
+        "deterministicSeed",
+        "generatorVersion"
+      ],
+      "properties": {
+        "blenderVersion": {"type": "string", "minLength": 3},
+        "pythonVersion": {"type": "string", "minLength": 3},
+        "renderEngine": {
+          "enum": [
+            "BLENDER_EEVEE",
+            "BLENDER_EEVEE_NEXT",
+            "BLENDER_WORKBENCH"
+          ]
+        },
+        "deterministicSeed": {"type": "integer", "minimum": 1},
+        "generatorVersion": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "inputHashes": {
+      "type": "object",
+      "required": [
+        "contract",
+        "territory",
+        "calibration",
+        "shapeLanguage",
+        "camera",
+        "lighting",
+        "materials",
+        "baseCompiler",
+        "generator"
+      ],
+      "properties": {
+        "contract": {"$ref": "#/$defs/sha256"},
+        "territory": {"$ref": "#/$defs/sha256"},
+        "calibration": {"$ref": "#/$defs/sha256"},
+        "shapeLanguage": {"$ref": "#/$defs/sha256"},
+        "camera": {"$ref": "#/$defs/sha256"},
+        "lighting": {"$ref": "#/$defs/sha256"},
+        "materials": {"$ref": "#/$defs/sha256"},
+        "baseCompiler": {"$ref": "#/$defs/sha256"},
+        "generator": {"$ref": "#/$defs/sha256"}
+      },
+      "unevaluatedProperties": false
+    },
+    "cameraValidation": {
+      "type": "object",
+      "required": [
+        "expectedVerticalFovDegrees",
+        "actualVerticalFovDegrees",
+        "toleranceDegrees",
+        "pass"
+      ],
+      "properties": {
+        "expectedVerticalFovDegrees": {"const": 70},
+        "actualVerticalFovDegrees": {
+          "type": "number",
+          "minimum": 69.99,
+          "maximum": 70.01
+        },
+        "toleranceDegrees": {"const": 0.01},
+        "pass": {"const": true}
+      },
+      "unevaluatedProperties": false
+    },
+    "grammarAudit": {
+      "type": "object",
+      "required": [
+        "status",
+        "bevelSourceAsset",
+        "bevelRatio",
+        "authoredAnglesDegrees",
+        "allowedAnglesDegrees",
+        "semanticRolesUsed",
+        "unknownPaletteRoles",
+        "unknownMaterialClasses",
+        "componentPresenceByState",
+        "stateCuesByState",
+        "issues"
+      ],
+      "properties": {
+        "status": {"enum": ["PASS", "FAIL"]},
+        "bevelSourceAsset": {"const": "objective_core"},
+        "bevelRatio": {
+          "type": "number",
+          "minimum": 0.018,
+          "maximum": 0.08
+        },
+        "authoredAnglesDegrees": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 5,
+          "uniqueItems": true,
+          "items": {"type": "integer", "minimum": 0, "maximum": 90}
+        },
+        "allowedAnglesDegrees": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 5,
+          "uniqueItems": true,
+          "items": {"type": "integer", "minimum": 0, "maximum": 90}
+        },
+        "semanticRolesUsed": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 8,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "primary",
+              "secondary",
+              "accent",
+              "interaction",
+              "warning",
+              "critical",
+              "rubber",
+              "bareMetal"
+            ]
+          }
+        },
+        "unknownPaletteRoles": {"type": "array", "maxItems": 0},
+        "unknownMaterialClasses": {"type": "array", "maxItems": 0},
+        "componentPresenceByState": {
+          "type": "object",
+          "required": ["intact", "damaged", "critical"],
+          "properties": {
+            "intact": {
+              "type": "array",
+              "minItems": 9,
+              "uniqueItems": true,
+              "items": {"type": "string"}
+            },
+            "damaged": {
+              "type": "array",
+              "minItems": 9,
+              "uniqueItems": true,
+              "items": {"type": "string"}
+            },
+            "critical": {
+              "type": "array",
+              "minItems": 8,
+              "uniqueItems": true,
+              "items": {"type": "string"}
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        "stateCuesByState": {
+          "type": "object",
+          "required": ["intact", "damaged", "critical"],
+          "properties": {
+            "intact": {"type": "array", "minItems": 3, "uniqueItems": true},
+            "damaged": {"type": "array", "minItems": 3, "uniqueItems": true},
+            "critical": {"type": "array", "minItems": 4, "uniqueItems": true}
+          },
+          "unevaluatedProperties": false
+        },
+        "issues": {"type": "array", "items": {"type": "string"}}
+      },
+      "unevaluatedProperties": false
+    },
+    "variants": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {"$ref": "#/$defs/variant"}
+    },
+    "exports": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {"$ref": "#/$defs/export"}
+    },
+    "blendFile": {"$ref": "#/$defs/artifact"},
+    "renderEvidence": {
+      "type": "array",
+      "maxItems": 36,
+      "items": {"$ref": "#/$defs/render"}
+    },
+    "expectedRenderCount": {"enum": [0, 36]},
+    "actualRenderCount": {"type": "integer", "minimum": 0, "maximum": 36},
+    "issues": {"type": "array", "items": {"type": "string"}},
+    "notes": {"type": "array", "items": {"type": "string"}}
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {"status": {"const": "PASS"}},
+        "required": ["status"]
+      },
+      "then": {
+        "required": ["blendFile"],
+        "properties": {
+          "grammarAudit": {
+            "properties": {
+              "status": {"const": "PASS"},
+              "issues": {"maxItems": 0}
+            }
+          },
+          "variants": {
+            "contains": {
+              "properties": {"stateId": {"const": "intact"}},
+              "required": ["stateId"]
+            },
+            "minContains": 1,
+            "maxContains": 1
+          },
+          "issues": {"maxItems": 0}
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {"renderMode": {"const": "full"}},
+        "required": ["renderMode"]
+      },
+      "then": {
+        "properties": {
+          "expectedRenderCount": {"const": 36},
+          "actualRenderCount": {"const": 36},
+          "renderEvidence": {"minItems": 36, "maxItems": 36}
+        }
+      },
+      "else": {
+        "properties": {
+          "expectedRenderCount": {"const": 0},
+          "actualRenderCount": {"const": 0},
+          "renderEvidence": {"maxItems": 0}
+        }
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}

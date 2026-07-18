@@ -1,0 +1,294 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/precanonical-brief.schema.json",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/precanonical-brief.schema.json"
+    },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "briefId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_-]+$"
+    },
+    "assetKey": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_]+$"
+    },
+    "displayName": {
+      "type": "string",
+      "minLength": 3
+    },
+    "artDirection": {
+      "const": "salvaged-frontier"
+    },
+    "gameplayFunction": {
+      "type": "string",
+      "minLength": 20
+    },
+    "oneSecondRead": {
+      "type": "string",
+      "minLength": 20
+    },
+    "worldRole": {
+      "type": "string",
+      "minLength": 20
+    },
+    "emotionalIntent": {
+      "type": "string",
+      "minLength": 20
+    },
+    "dimensionsStuds": {
+      "type": "object",
+      "properties": {
+        "width": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "height": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "depth": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      },
+      "required": [
+        "width",
+        "height",
+        "depth"
+      ],
+      "unevaluatedProperties": false
+    },
+    "orientation": {
+      "type": "object",
+      "properties": {
+        "front": {
+          "type": "string",
+          "minLength": 5
+        },
+        "playerSide": {
+          "type": "string",
+          "minLength": 5
+        },
+        "threatSide": {
+          "type": "string",
+          "minLength": 5
+        }
+      },
+      "required": [
+        "front",
+        "playerSide",
+        "threatSide"
+      ],
+      "unevaluatedProperties": false
+    },
+    "interactionZones": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]+$"
+          },
+          "purpose": {
+            "type": "string",
+            "minLength": 10
+          },
+          "location": {
+            "type": "string",
+            "minLength": 5
+          },
+          "requiredCue": {
+            "type": "string",
+            "minLength": 10
+          }
+        },
+        "required": [
+          "id",
+          "purpose",
+          "location",
+          "requiredCue"
+        ],
+        "unevaluatedProperties": false
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "components": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]+$"
+          },
+          "function": {
+            "type": "string",
+            "minLength": 10
+          },
+          "mobility": {
+            "enum": [
+              "fixed",
+              "mobile",
+              "destructible",
+              "replaceable"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "function",
+          "mobility"
+        ],
+        "unevaluatedProperties": false
+      },
+      "minItems": 2,
+      "uniqueItems": true
+    },
+    "movements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 5
+      },
+      "uniqueItems": true
+    },
+    "states": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]+$"
+          },
+          "visualChange": {
+            "type": "string",
+            "minLength": 15
+          },
+          "invariants": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 5
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "id",
+          "visualChange",
+          "invariants"
+        ],
+        "unevaluatedProperties": false
+      },
+      "minItems": 2,
+      "uniqueItems": true
+    },
+    "collisionPromise": {
+      "type": "string",
+      "minLength": 15
+    },
+    "viewDistanceStuds": {
+      "type": "object",
+      "properties": {
+        "near": {
+          "type": "number",
+          "minimum": 0
+        },
+        "mid": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "far": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      },
+      "required": [
+        "near",
+        "mid",
+        "far"
+      ],
+      "unevaluatedProperties": false
+    },
+    "expectedSimultaneousInstances": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 500
+    },
+    "obligations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 10
+      },
+      "minItems": 3,
+      "uniqueItems": true
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 10
+      },
+      "minItems": 3,
+      "uniqueItems": true
+    },
+    "freedoms": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 10
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "prohibitions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 5
+      },
+      "minItems": 5,
+      "uniqueItems": true
+    },
+    "productionApproved": {
+      "const": false
+    }
+  },
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "briefId",
+    "assetKey",
+    "displayName",
+    "artDirection",
+    "gameplayFunction",
+    "oneSecondRead",
+    "worldRole",
+    "emotionalIntent",
+    "dimensionsStuds",
+    "orientation",
+    "interactionZones",
+    "components",
+    "movements",
+    "states",
+    "collisionPromise",
+    "viewDistanceStuds",
+    "expectedSimultaneousInstances",
+    "obligations",
+    "constraints",
+    "freedoms",
+    "prohibitions",
+    "productionApproved"
+  ],
+  "unevaluatedProperties": false
+}

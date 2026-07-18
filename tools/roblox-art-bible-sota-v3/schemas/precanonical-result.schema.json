@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/precanonical-result.schema.json",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/precanonical-result.schema.json"
+    },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "resultId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]+$"
+    },
+    "requestId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]+$"
+    },
+    "status": {
+      "const": "WEB_RESULT_IMPORTED"
+    },
+    "importedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "request": {
+      "$ref": "#/$defs/binding"
+    },
+    "promptHash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "generationIndex": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 8
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "surface": {
+          "const": "ChatGPT Web / ChatGPT Images"
+        },
+        "modelName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "modelNameEvidence": {
+          "enum": [
+            "UI_CONFIRMED",
+            "NOT_CONFIRMED"
+          ]
+        },
+        "downloadMethod": {
+          "enum": [
+            "browser_download",
+            "manual_download"
+          ]
+        }
+      },
+      "required": [
+        "surface",
+        "modelName",
+        "modelNameEvidence",
+        "downloadMethod"
+      ],
+      "unevaluatedProperties": false
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "width": {
+            "type": "integer",
+            "minimum": 64
+          },
+          "height": {
+            "type": "integer",
+            "minimum": 64
+          },
+          "format": {
+            "enum": [
+              "PNG",
+              "JPEG",
+              "WEBP"
+            ]
+          }
+        },
+        "required": [
+          "path",
+          "sha256",
+          "bytes",
+          "width",
+          "height",
+          "format"
+        ],
+        "unevaluatedProperties": false
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "resultDigest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "canonical": {
+      "const": false
+    },
+    "geometryAuthority": {
+      "const": false
+    },
+    "humanReviewStatus": {
+      "const": "PENDING"
+    },
+    "productionApproved": {
+      "const": false
+    }
+  },
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "resultId",
+    "requestId",
+    "status",
+    "importedAt",
+    "request",
+    "promptHash",
+    "generationIndex",
+    "provenance",
+    "images",
+    "resultDigest",
+    "canonical",
+    "geometryAuthority",
+    "humanReviewStatus",
+    "productionApproved"
+  ],
+  "$defs": {
+    "binding": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "unevaluatedProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

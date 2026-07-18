@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/transfer-review.schema.json",
+  "$defs": {
+    "scores": {
+      "type": "object",
+      "required": [
+        "functionReadability",
+        "territoryFidelity",
+        "stateReadability",
+        "mobileReadability",
+        "productionAppeal"
+      ],
+      "properties": {
+        "functionReadability": {"type": "integer", "minimum": 0, "maximum": 20},
+        "territoryFidelity": {"type": "integer", "minimum": 0, "maximum": 20},
+        "stateReadability": {"type": "integer", "minimum": 0, "maximum": 20},
+        "mobileReadability": {"type": "integer", "minimum": 0, "maximum": 20},
+        "productionAppeal": {"type": "integer", "minimum": 0, "maximum": 20}
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "assetId",
+    "status",
+    "selectedTerritory",
+    "reviewer",
+    "reviewedAt",
+    "evidencePackageSha256",
+    "decision",
+    "scores",
+    "scoreTotal",
+    "rationale"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/transfer-review.schema.json"
+    },
+    "schemaVersion": {"const": "1.0.0"},
+    "assetId": {"const": "turret_fast_v1"},
+    "status": {"enum": ["PENDING", "APPROVED", "REJECTED"]},
+    "selectedTerritory": {
+      "type": ["string", "null"],
+      "enum": [
+        null,
+        "industrial-toy-defense",
+        "salvaged-frontier",
+        "clean-tactical-diorama"
+      ]
+    },
+    "reviewer": {"type": ["string", "null"], "minLength": 2},
+    "reviewedAt": {"type": ["string", "null"], "format": "date-time"},
+    "evidencePackageSha256": {
+      "type": ["string", "null"],
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "decision": {
+      "type": ["string", "null"],
+      "enum": [null, "APPROVE_TRANSFER", "REOPEN_BIBLE"]
+    },
+    "scores": {
+      "oneOf": [
+        {"type": "null"},
+        {"$ref": "#/$defs/scores"}
+      ]
+    },
+    "scoreTotal": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "maximum": 100
+    },
+    "rationale": {"type": ["string", "null"], "minLength": 20}
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {"status": {"const": "PENDING"}},
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "reviewer": {"const": null},
+          "reviewedAt": {"const": null},
+          "evidencePackageSha256": {"const": null},
+          "decision": {"const": null},
+          "scores": {"const": null},
+          "scoreTotal": {"const": null},
+          "rationale": {"const": null}
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {"status": {"enum": ["APPROVED", "REJECTED"]}},
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "selectedTerritory": {"type": "string"},
+          "reviewer": {"type": "string"},
+          "reviewedAt": {"type": "string"},
+          "evidencePackageSha256": {"type": "string"},
+          "decision": {"type": "string"},
+          "scores": {"$ref": "#/$defs/scores"},
+          "scoreTotal": {"type": "integer"},
+          "rationale": {"type": "string"}
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {"status": {"const": "APPROVED"}},
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "decision": {"const": "APPROVE_TRANSFER"},
+          "scoreTotal": {"minimum": 90},
+          "scores": {
+            "properties": {
+              "functionReadability": {"minimum": 16},
+              "territoryFidelity": {"minimum": 16},
+              "stateReadability": {"minimum": 16},
+              "mobileReadability": {"minimum": 16},
+              "productionAppeal": {"minimum": 16}
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {"status": {"const": "REJECTED"}},
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {"decision": {"const": "REOPEN_BIBLE"}}
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}

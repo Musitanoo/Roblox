@@ -1,0 +1,76 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/product-art-authority.schema.json",
+  "schemaVersion": "1.0.0",
+  "authorityId": "product-art-authority-v1",
+  "version": "1.0.0",
+  "status": "ACCEPTED_TECHNICAL_PROJECTION",
+  "productionApproved": false,
+  "recordedAt": "2026-07-18T09:05:09Z",
+  "recordedBy": "Codex under the founder-authorized complete repository correction",
+  "sourceProjection": {
+    "gddPath": "Roblox_Top_1_Game_Design_Document_v1.0.md",
+    "gddDocumentVersion": "1.0.4",
+    "sectionHeadings": [
+      "## 1.1 Définition en une phrase",
+      "## 1.2 Fantasme principal",
+      "## 1.3 Promesse publique compatible avec l'état prouvé",
+      "## 4.3 Failure teaches",
+      "## 4.5 Destruction spectaculaire, perte limitée",
+      "## 4.7 Mobile first",
+      "## 8.1 Rôle",
+      "## 22.4 Échec lisible",
+      "# 23. Feedback et sensations",
+      "# 24. Direction artistique",
+      "## 25.4 Accessibilité",
+      "# 38. Commandements de design",
+      "# 40. Formule directrice v1.0"
+    ],
+    "contentSha256": "b886926b9a74c8ca95d174fd43b8fc5d14f51241d461d10fe5ed5467923b8ef0"
+  },
+  "globalRules": {
+    "productPromise": "Every object must help the player understand why the fortress worked or failed, make a meaningful preparation decision, and want to test the revised hypothesis again.",
+    "retentionRole": "Visual identity, readable causality, persistent fortress authorship and recoverable failure must reinforce autonomy, competence, relation and an obvious next attempt.",
+    "readability": [
+      "Function, front, interaction, danger and current state remain understandable in one second on the weakest supported mobile view.",
+      "Silhouette and value hierarchy carry meaning before color, texture, particles or text.",
+      "Spectacle may amplify an event but may never obscure direction, target, cause or priority.",
+      "The fortress remains the protagonist: player-built objects read as authored tools, not anonymous scenery."
+    ],
+    "failureLanguage": [
+      "Damage exposes a plausible structural cause instead of adding arbitrary noise.",
+      "Every worsening state preserves the object's identity while revealing a more legible weakness.",
+      "Failure is spectacular but recoverable; permanent visual loss never erases the player's ownership story.",
+      "Every break points toward an actionable lesson for the next preparation phase."
+    ],
+    "stateRedundancy": [
+      "shape",
+      "silhouette",
+      "value",
+      "color",
+      "light",
+      "motion",
+      "vfx",
+      "audio"
+    ],
+    "productionRule": "Exploration decides the object; production reconstructs the accepted canon and is forbidden from filling unspecified gaps by probability or decorative invention.",
+    "silentMutationForbidden": true,
+    "detailHierarchy": {
+      "primary": 0.72,
+      "secondary": 0.23,
+      "tertiary": 0.05
+    }
+  },
+  "hypothesisBoundaries": {
+    "hordeLearning": {
+      "status": "UNPROVEN",
+      "visualMarketingClaimAllowed": false,
+      "rule": "Art may support readable enemy behavior, but it may not claim or market an adaptive learning horde until H-HORDE-001 passes its gate."
+    }
+  },
+  "changePolicy": {
+    "unrelatedGddEditsInvalidateCanons": false,
+    "selectedSectionEditsInvalidateCanons": true,
+    "migrationRequired": true,
+    "historicalEvidenceImmutable": true
+  }
+}

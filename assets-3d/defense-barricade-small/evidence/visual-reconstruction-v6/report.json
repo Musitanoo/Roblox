@@ -1,0 +1,171 @@
+{
+  "schemaVersion": "1.1.0",
+  "evidenceId": "defense-barricade-small-visual-reconstruction-v6",
+  "assetKey": "defense_barricade_small",
+  "contractRevision": 6,
+  "generatedAt": "2026-07-17T12:56:05.2708676+02:00",
+  "status": "PARTIAL",
+  "automationStatus": "PASS",
+  "internalVisualStatus": "PASS",
+  "humanReviewStatus": "PENDING",
+  "productionApproved": false,
+  "authority": {
+    "contractSha256": "1a03c5151f91c205d8a5014e3fb2602ffe4c1995aa5b8949e0297752a0516415",
+    "visualCanonId": "vc_barricade__salvaged-frontier__v1",
+    "visualCanonSha256": "5e196aa1ab2bdaaa9c024d250ea76f82b134848b4dcd32b2741f7970c5c77e58",
+    "visualCanonStatus": "CANDIDATE",
+    "visualCanonProductionEligible": false,
+    "generatorSha256": "e5d7b014533e47d7e3f4a0f0b6f30e1ed1019f3ca99b09c75ada1c696c6eff42"
+  },
+  "reconstruction": {
+    "componentCount": 29,
+    "triangleCount": 1468,
+    "targetTriangleCount": 1500,
+    "absoluteMaximumTriangles": 2000,
+    "dimensionsStuds": [
+      8.0,
+      4.0,
+      2.0
+    ],
+    "pivot": "BASE_CENTER",
+    "materialCount": 6,
+    "mainManifest": "../../build/manifest.json",
+    "mainManifestSha256": "2a767329fe9384ba1f06179490f10d4cbd4ed93414ff5d41d0ae89414a047b4d",
+    "semanticSha256": "17d2e6da958267d22f119397db86eefd7faa91f69c161a9ad8906c0e48e77edf",
+    "geometryStatus": "PASS",
+    "renderVerificationStatus": "PASS"
+  },
+  "stateFamily": {
+    "coverage": [
+      "intact",
+      "damaged",
+      "critical"
+    ],
+    "topologyPreserved": true,
+    "componentNamesPreserved": true,
+    "dimensionsPreserved": true,
+    "pivotPreserved": true,
+    "triangleCountPreserved": true,
+    "semanticHashesUnique": true,
+    "glbHashesUnique": true,
+    "publishedComparisonStatus": "PASS",
+    "determinismReport": "../../build/state-determinism/determinism-report.json",
+    "determinismReportSha256": "785aacedbc731eb01185fdb4abd02a56045f14a8f47487cd30d481c0fcb0db04",
+    "statesManifest": "../../build/states/states-manifest.json",
+    "statesManifestSha256": "5c31dc6c355b02832df8dc8a9abb29dcf03ead65ebae76c1bdf5b7de4670369a",
+    "reviewBoard": "../../build/states/state-review.html",
+    "reviewBoardSha256": "b4c07cc9eb8f7fc08d3e9ec72a05f6f11586baeefbc85ba940ab6e6145d85ad9"
+  },
+  "renderDeterminism": {
+    "comparisonSchemaVersion": "1.1.0",
+    "decodedFormat": "non-interlaced RGBA8",
+    "runABViewCount": 24,
+    "runABExactViewCount": 24,
+    "runABBoundedToleranceViewCount": 0,
+    "publishedViewCount": 24,
+    "publishedExactViewCount": 24,
+    "publishedBoundedToleranceViewCount": 0,
+    "boundedTolerance": {
+      "maximumDifferentPixelRatio": 0.00001,
+      "maximumChannelDelta": 1,
+      "maximumNormalizedMeanAbsoluteError": 0.000001
+    },
+    "policy": "Exact decoded pixels pass directly. A non-exact render passes only when all three reported micro-raster bounds pass; any larger delta fails."
+  },
+  "stateArtifacts": [
+    {
+      "stateId": "intact",
+      "triangleCount": 1468,
+      "semanticSha256": "17d2e6da958267d22f119397db86eefd7faa91f69c161a9ad8906c0e48e77edf",
+      "glbSha256": "7fe01df0b5c9170af4c0e585e99f1228b2f9c2c5ad975d6d3dcc0379c6e6d83b",
+      "fbxSha256": "d354895936b9447e6625402f8b8f97c28ab8901ab5dd985150fa1afc09856cc5",
+      "manifestSha256": "fa9fb369367ee657c088a5a122c115aabbf52e3f5deaf7e2c983f6f2433488f5",
+      "sourceBlendSha256": "595b1a2292ed3c07928bf0641e4dbe1c0cd288244db452c735d8c4b133e6bd99"
+    },
+    {
+      "stateId": "damaged",
+      "triangleCount": 1468,
+      "semanticSha256": "9516bd53ff2de1aa35f2ea8aed515ef953f0793ef733644c9b950a2ae85421df",
+      "glbSha256": "7cf1ba73db20155e865b89d7d38bb9ee99f3182c60252785d61934ad745d1266",
+      "fbxSha256": "f0753ecae7d80aff055c3871f3cd096bd6e0c10ac71149916d71fc0d7f9c03f3",
+      "manifestSha256": "57e84251016e4e512eb7a5cc8aeaa02071b7cb7ae8ac4def7ef85585129d875c",
+      "sourceBlendSha256": "4a4673e70e7de2873745898298fca04560e051b149b4a3ed519e4cc1304734b1"
+    },
+    {
+      "stateId": "critical",
+      "triangleCount": 1468,
+      "semanticSha256": "017938004c00d2beb9cb667f45d8ae4840c77e9004e8eaad13af68b728943d69",
+      "glbSha256": "9dac4e08cf7dd663c843e203ae174516d0e66f3429233d1ce517b7855942c267",
+      "fbxSha256": "b5b2c785417fd068cf65af3b18550a1a2f53ab3f09b7c64bee876e64ec1a6dd3",
+      "manifestSha256": "34752deabc67e6aba1e846e643625541093092984ba27e8001c2233ade2f2a7e",
+      "sourceBlendSha256": "4dbf47b487f52912e0479118ab570e6956194d786837c9362b4b66e27baa06af"
+    }
+  ],
+  "workbench": {
+    "sessionId": "defense-barricade-small-c27ba459b5f1",
+    "mode": "OBSERVE",
+    "status": "PASS",
+    "referenceImmutability": "PASS",
+    "session": "../../workbench/defense-barricade-small-c27ba459b5f1/session.json",
+    "sessionSha256": "dab5e281e4367ee60c25c96140f55174f978e43abaa21091c40d3af004b3366a",
+    "sceneManifest": "../../workbench/defense-barricade-small-c27ba459b5f1/base-scene-manifest.json",
+    "sceneManifestSha256": "b2296d859eb7c4a490640448f6a251f2d45f2cee205c2758baa877bc69a6a010"
+  },
+  "visualReview": {
+    "review": "../../review.json",
+    "score": 92,
+    "status": "PARTIAL",
+    "automationReviewStatus": "PASS",
+    "humanReviewStatus": "PENDING",
+    "strengths": [
+      "grounded 8 x 4 x 2 silhouette and readable three-bay construction",
+      "controlled replacement-panel and sun-copper repair history",
+      "causal continuity from intact to damaged to critical",
+      "redundant shape, posture, value and rear-light state cues",
+      "mobile-distance readability with 1468 triangles"
+    ]
+  },
+  "inspectionSurfaceIncident": {
+    "classification": "INSPECTION_CACHE_OR_DISPLAY_ANOMALY",
+    "corruptPngProven": false,
+    "independentDecode": "PASS",
+    "uniquePathJpegInspection": "PASS",
+    "hardeningApplied": [
+      "two consecutive accepted render frames inside each compilation",
+      "decoded RGBA8 comparison across independent A/B builds",
+      "published-state comparison against deterministic reference",
+      "explicit dither and EEVEE sampling configuration",
+      "versioned Blender backup disabled and stale source.blend1 sidecar removed from every current build"
+    ]
+  },
+  "verification": {
+    "r3dTests": {
+      "status": "PASS",
+      "testCount": 47
+    },
+    "artDirectionTests": {
+      "status": "PASS",
+      "pytestCount": 138,
+      "perAssetTestCount": 47,
+      "expectedSkippedCount": 1
+    },
+    "stateCompilation": "PASS",
+    "stateDeterminism": "PASS",
+    "publishedStateSynchronization": "PASS",
+    "workbenchInspection": "PASS",
+    "workbenchReferenceImmutability": "PASS"
+  },
+  "unresolvedProductionGates": [
+    "visualCanonCompleteMultimodalPacket",
+    "visualCanonHumanLock",
+    "humanArtReview",
+    "cloudPackageV1",
+    "cloudSamePackageV2",
+    "studioStagingConfirmed",
+    "studioPackageIntegration",
+    "studioGoldenLighting",
+    "physicalMobile",
+    "benchmark1_30_100",
+    "cleanFrozenProvenance"
+  ]
+}

@@ -1,0 +1,625 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/art-constitution.schema.json",
+  "schemaVersion": "1.1.0",
+  "constitutionId": "salvaged-frontier-industrial-readability-v1",
+  "version": "1.0.1",
+  "status": "CREATIVE_DIRECTION_LOCKED",
+  "productionApproved": false,
+  "selectedTerritory": "salvaged-frontier",
+  "identityAuthority": "salvaged-frontier",
+  "readabilityDiscipline": "industrial-toy-defense",
+  "lockedBy": "Founder",
+  "lockedAt": "2026-07-16T15:36:48Z",
+  "authorityMigration": {
+    "recordedAt": "2026-07-17T21:52:35Z",
+    "recordedBy": "Codex under the founder-authorized complete repository correction",
+    "reason": "Replace the brittle whole-GDD hash with a versioned product-to-art projection that invalidates canons only when selected art-relevant GDD sections change.",
+    "semanticArtDirectionChange": false,
+    "previousBinding": "whole GDD SHA-256",
+    "currentBinding": "art/authority/product-art-authority-v1.json"
+  },
+  "thesis": "A warm, intelligent frontier civilization survives by standardizing what must remain dependable and visibly adapting what history has damaged. Every object is a clear tool first, a record of player ingenuity second, and decorative scenery never.",
+  "playerPromise": "The player can recognize function, ownership, orientation, danger and state in one second on mobile, then discover a deeper construction history that makes the fortress feel personally authored, repairable, persistent and worth improving with friends.",
+  "precedenceContract": {
+    "identityWins": "Salvaged Frontier decides what the world means, remembers and feels.",
+    "disciplineRole": "Industrial Toy Defense constrains clarity, thickness, hierarchy, modularity and state readability.",
+    "conflictRule": "When narrative texture and immediate comprehension conflict, preserve the Salvaged Frontier meaning through a simpler, thicker and more causal expression instead of importing Industrial Toy Defense motifs.",
+    "hybridizationForbidden": true
+  },
+  "inheritanceContract": {
+    "fromSalvagedFrontier": [
+      "Purposeful repair history, recovered technology and warm evidence of human intervention.",
+      "Controlled asymmetry that explains replacement, reinforcement, sealing or rerouting.",
+      "A fortress culture whose objects accumulate memory without losing standardized gameplay anchors.",
+      "Material aging caused by impact, heat, contact, ground abrasion or an explicit repair operation.",
+      "A hopeful survival tone in which scarcity produces ingenuity rather than misery or visual decay."
+    ],
+    "fromIndustrialToyDefense": [
+      "Primary function must be readable from silhouette before surface detail.",
+      "Structural volumes remain thick, graspable, modular and visually load-bearing.",
+      "Large bevels, protected apertures and explicit joints make construction understandable.",
+      "Semantic accents remain bounded, local and redundant with shape, motion and audio.",
+      "Repeated assets preserve a calm mass hierarchy and never collapse into visual chatter."
+    ],
+    "explicitlyRejected": [
+      "A fifty-fifty visual hybrid or any requirement to make the world literally resemble a construction toy.",
+      "Random scrap silhouettes, universal rust, cable spaghetti, micro-greebles and uniform distress.",
+      "Pristine molded-plastic surfaces, near-perfect symmetry and cheerful toy color blocking as world identity.",
+      "Military realism, photoreal apocalypse, bleak monochrome and anonymous industrial kitbash.",
+      "Any salvage detail that weakens function recognition, collision honesty or mobile state readability."
+    ]
+  },
+  "quantitativeGrammar": {
+    "standardizedChassisShare": {
+      "min": 0.75,
+      "max": 0.85
+    },
+    "authoredAdaptationShare": {
+      "min": 0.15,
+      "max": 0.25
+    },
+    "detailHierarchy": {
+      "primary": 0.72,
+      "secondary": 0.23,
+      "tertiary": 0.05
+    },
+    "globalAsymmetry": {
+      "target": 0.24,
+      "max": 0.36
+    },
+    "assetAsymmetryTargets": {
+      "barricade": 0.24,
+      "objective_core": 0.22,
+      "enemy_standard": 0.3,
+      "floor_module": 0.16,
+      "damage_effect": 0.34,
+      "turret_fast_v1": 0.24
+    },
+    "primarySecondarySizeRatio": {
+      "min": 2.5,
+      "max": 4.8
+    },
+    "repairNarrativesMax": 2,
+    "patchFamiliesMax": 2,
+    "visibleMaterialFamiliesMax": 3,
+    "semanticAccentCoverageMax": 0.12,
+    "warningCoverageMax": 0.08,
+    "criticalCoverageMax": 0.08,
+    "minimumMobileReadDistanceStuds": 60
+  },
+  "palette": {
+    "primary": "#343A3C",
+    "secondary": "#B8AD96",
+    "accent": "#C7763E",
+    "interaction": "#5FE0C1",
+    "threat": "#9D455B",
+    "warning": "#E5B94A",
+    "critical": "#E4524E",
+    "rubber": "#202322",
+    "bareMetal": "#7F8783",
+    "allocationRules": [
+      "Quiet structural neutrals occupy most visible area so silhouette and state breaks remain dominant.",
+      "Sun-baked copper marks player authorship, approved replacement and intervention rather than generic decoration.",
+      "Mint interaction light is protected, local and never used as broad surface paint.",
+      "Threat raspberry belongs to hostile forward-facing anatomy and never contaminates player-owned structure.",
+      "Warning gold and critical red remain below their coverage caps and require non-color shape cues."
+    ]
+  },
+  "materials": {
+    "priority": [
+      "painted_metal",
+      "reclaimed_composite",
+      "bare_metal",
+      "rubber",
+      "reclaimed_wood_contextual_only"
+    ],
+    "surfaceLogic": [
+      "Player technology uses broad coated structural planes over a dependable standardized chassis.",
+      "Replacement modules differ through value, joint language and edge history, not arbitrary material roulette.",
+      "Bare metal appears at load paths, hinges, exposed breaks and repair interfaces rather than as global shine.",
+      "Rubber and soft protection remain confined to feet, grips, seals, bumpers and vibration contacts.",
+      "Wood is reserved for believable low-energy architecture, temporary field structures or biome-specific recovery, never every machine."
+    ],
+    "wearLogic": [
+      "Every scar must answer what caused it, when it happened and why it remains visible.",
+      "Intact means maintained, not factory-new: one or two old repaired histories may remain without implying current failure.",
+      "Damaged states expose one causal weakness; critical states widen the same failure chain.",
+      "Wear density decreases with camera distance and may not compete with interaction, threat or state cues.",
+      "Repair surfaces are cleaner at the new joint and older away from it, producing readable temporal layering."
+    ],
+    "forbidden": [
+      "Uniform rust, full-surface grunge, noisy normal maps and identical scratches on every asset.",
+      "More than three visible material families on a normal gameplay prop.",
+      "Wooden armor on high-energy machinery without a thermal or structural justification.",
+      "Specular-only material identity that disappears under adverse lighting.",
+      "Material changes that imitate interaction, danger or team ownership without semantic intent."
+    ]
+  },
+  "scopes": {
+    "worldNarrative": {
+      "purpose": "Make the entire world express intelligent survival, persistence and human authorship.",
+      "deepReason": "The GDD makes the fortress a home, workshop, strategy space, social space and museum. A world that visibly remembers repair and adaptation turns progression into identity instead of inventory accumulation.",
+      "rules": [
+        "Civilization appears pressured but capable, organized and future-facing.",
+        "Standardized infrastructure proves shared knowledge; local adaptations prove personal history.",
+        "Every location contains one legible story of need, response and improved survival.",
+        "Hope is expressed through maintenance, warm intervention and active reuse rather than pristine abundance."
+      ],
+      "failureModes": [
+        "Bleak post-apocalyptic misery with no evidence of competence or future.",
+        "Random salvage decoration that cannot explain a need or a repair decision.",
+        "Generic sci-fi frontier visuals disconnected from fortress experimentation."
+      ],
+      "acceptance": [
+        "A viewer can describe what the inhabitants protected, repaired or repurposed.",
+        "The scene feels inhabited by capable builders rather than abandoned.",
+        "The fortress remains the dominant authored protagonist."
+      ]
+    },
+    "silhouetteAndMassing": {
+      "purpose": "Guarantee instant function and distinctive identity at mobile distance.",
+      "deepReason": "Players must act before they can inspect texture. Thick primary masses lower recognition time, while one controlled adaptation landmark gives the object memorable authorship without weakening its gameplay icon.",
+      "rules": [
+        "Primary silhouette carries function, orientation and footprint before any salvage treatment.",
+        "Each object owns one dominant silhouette sentence and at most two supporting landmarks.",
+        "Negative spaces are few, large and functional.",
+        "The authored adaptation modifies a secondary mass or edge rhythm, not the core collision promise."
+      ],
+      "failureModes": [
+        "Many equal-sized parts producing a scrap cloud.",
+        "Thin antennas, rails or cables becoming essential recognition landmarks.",
+        "Asymmetry that changes perceived hitbox, forward direction or ground stability."
+      ],
+      "acceptance": [
+        "Black silhouette identifies function and front at the target distance.",
+        "Removing tertiary details does not change recognition.",
+        "The object remains recognizable in groups of thirty."
+      ]
+    },
+    "constructionAndModularity": {
+      "purpose": "Make every assembly plausible, repairable and reusable as a production system.",
+      "deepReason": "The game promises experimentation. Visible modules, load paths and service access let players intuit how objects work, while standardized anchors allow many variants without breaking Studio integration or performance.",
+      "rules": [
+        "Seventy-five to eighty-five percent of the visible structure belongs to a stable modular chassis.",
+        "Every part connects through a bracket, socket, hinge, clamp, weld, strap or explicit energy interface.",
+        "Service access faces the player-safe side and active function faces the threat side.",
+        "Shared modules retain scale, bevel family, anchors and naming across variants."
+      ],
+      "failureModes": [
+        "Floating plates, unexplained intersections or impossible load paths.",
+        "One-off geometry that cannot transfer to another asset family.",
+        "Decorative seams and fasteners that imply nonexistent mechanisms."
+      ],
+      "acceptance": [
+        "A reviewer can trace load from active mass to foundation.",
+        "The object can be decomposed into named stable modules.",
+        "A sixth asset reuses the grammar without inventing a new joint family."
+      ]
+    },
+    "asymmetryAndRepair": {
+      "purpose": "Turn asymmetry into a readable record of adaptation rather than visual noise.",
+      "deepReason": "Purposeful asymmetry supplies the emotional identity of Salvaged Frontier, but bounded asymmetry preserves the competence, clarity and repeatability inherited from Industrial Toy Defense.",
+      "rules": [
+        "Every asymmetry is classified as replacement, reinforcement, sealing or rerouting.",
+        "Intact player assets target 0.24 asymmetry and never exceed 0.36 globally.",
+        "One side may carry the dominant repair story; the opposite side stays visually calmer.",
+        "A repair changes local rhythm, value or joint language while preserving pivot, footprint and gameplay anchors."
+      ],
+      "failureModes": [
+        "Asymmetry added because an empty area looked boring.",
+        "Multiple unrelated patches competing for attention.",
+        "Repair details distributed uniformly across the whole object."
+      ],
+      "acceptance": [
+        "Each asymmetric feature has a written cause and structural consequence.",
+        "Mirror comparison reveals one controlled narrative cluster rather than total disorder.",
+        "The object still reads as one standardized family."
+      ]
+    },
+    "materialsAndSurface": {
+      "purpose": "Create tactile richness and history without sacrificing calm shapes or mobile performance.",
+      "deepReason": "Surface history supports attachment only when it reinforces construction and causality. Material excess would turn persistent identity into noise and create needless texture cost.",
+      "rules": [
+        "Use no more than three visible material families on a normal gameplay prop.",
+        "Prefer value-blocked material zones larger than the minimum screen-space band.",
+        "Use directional wear at impact, heat, ground, hand and repair interfaces.",
+        "Keep broad planes calm enough for bevel light and state breaks to remain legible."
+      ],
+      "failureModes": [
+        "Photoreal texture density on stylized proportions.",
+        "Full-surface dirt or procedural noise with no causal hierarchy.",
+        "Material boundaries smaller than mobile-readable geometry."
+      ],
+      "acceptance": [
+        "Material family remains identifiable in all required lighting profiles.",
+        "Flat-albedo view preserves the intended hierarchy.",
+        "Texture removal does not erase function or state."
+      ]
+    },
+    "paletteValueAndSemantics": {
+      "purpose": "Separate world identity, player authorship, interaction, threat and damage with redundant signals.",
+      "deepReason": "A warm frontier palette creates emotional ownership, but gameplay colors must remain a strict language. Bounded semantic accents protect accessibility and prevent the world from becoming a carnival.",
+      "rules": [
+        "Deep slate structure and bone-sand replacement planes form the quiet value base.",
+        "Copper-orange marks player intervention, reinforcement and approved construction history.",
+        "Mint, gold, red and threat raspberry are semantic roles, not decoration.",
+        "Color never carries an important state without shape, posture, motion or audio support."
+      ],
+      "failureModes": [
+        "Muddy brown monochrome that hides hierarchy.",
+        "Orange applied everywhere until authorship loses meaning.",
+        "Enemy and player semantic colors sharing the same focal geometry."
+      ],
+      "acceptance": [
+        "Grayscale preserves function, orientation and state.",
+        "CVD transforms preserve critical distinctions.",
+        "Semantic coverage remains within declared caps."
+      ]
+    },
+    "architectureAndFortress": {
+      "purpose": "Make the fortress feel like a persistent collective machine and a personal home.",
+      "deepReason": "The fortress is the visual protagonist and the player's durable identity. Architecture must therefore combine shared structural logic with visible layers of personal decisions, victories and repairs.",
+      "rules": [
+        "Major architecture uses standardized bays, buttresses, service spines and readable circulation.",
+        "Personal history occupies replaceable skins, trophies, repair bands, attachments and spatial composition.",
+        "Defensive direction, safe circulation and critical infrastructure remain obvious from the game camera.",
+        "Old damage history may be commemorated without making a restored fortress look currently broken."
+      ],
+      "failureModes": [
+        "A complete map exported as one decorative mesh.",
+        "Architecture so irregular that navigation and build sockets become ambiguous.",
+        "Cosmetic clutter hiding threats, routes or interaction zones."
+      ],
+      "acceptance": [
+        "A player can identify home, workshop, defense line and objective hierarchy quickly.",
+        "Multiple fortresses share a civilization while retaining owner identity.",
+        "Thirty repeated modules form rhythm rather than cloning noise."
+      ]
+    },
+    "environmentAndBiomes": {
+      "purpose": "Let expeditions reveal distinct resource histories without breaking the common civilization grammar.",
+      "deepReason": "Exploration should expand strategic possibility. Biomes become meaningful when their materials, hazards and recovered technologies visibly explain what the player can bring back to the fortress.",
+      "rules": [
+        "Each biome has one dominant environmental force, one material response and one recoverable technology family.",
+        "Natural forms remain broad and stylized; human salvage follows the same joint and semantic grammar as the fortress.",
+        "Local color shifts affect neutrals and atmosphere, never the universal interaction, warning, critical or threat roles.",
+        "Navigation silhouettes remain calmer than combat silhouettes."
+      ],
+      "failureModes": [
+        "Biome identity reduced to a color filter.",
+        "Unrelated art styles presented as separate expeditions.",
+        "Dense foliage, fog or debris obscuring causal combat information."
+      ],
+      "acceptance": [
+        "A screenshot communicates biome force and available salvage opportunity.",
+        "Recovered modules visibly belong to both their origin biome and the shared fortress technology.",
+        "Combat readability survives the adverse biome lighting profile."
+      ]
+    },
+    "playerBuildables": {
+      "purpose": "Make every placed defense feel owned, understandable and worth iterating.",
+      "deepReason": "The core verb is preparing and testing a defense. Buildables must act as legible hypotheses: the player should predict what they do, observe why they fail and know what to change next.",
+      "rules": [
+        "Friendly chassis, rear service access and copper authorship cues identify player ownership.",
+        "Active direction and effect origin remain obvious from the primary silhouette.",
+        "Upgrades preserve the base object's identity and add one larger functional module rather than many small decorations.",
+        "Damage follows named load paths and exposes actionable weaknesses."
+      ],
+      "failureModes": [
+        "Cosmetic uniqueness that makes function ambiguous.",
+        "Upgrade tiers becoming larger noise piles.",
+        "Friendly devices using hostile forward wedges or threat color."
+      ],
+      "acceptance": [
+        "Function and orientation are recognized in one second.",
+        "The player can identify the failed component after an assault.",
+        "Variants remain a coherent kit at 1, 30 and 100 copies."
+      ]
+    },
+    "objectivesAndInteractables": {
+      "purpose": "Create protected focal points with unmistakable service access and state.",
+      "deepReason": "Objectives organize attention and cooperation. Their construction must communicate value, vulnerability and repair opportunity without requiring text or color-only instructions.",
+      "rules": [
+        "Objectives use protected radial or nested forms within a grounded service chassis.",
+        "The interaction socket is complete when usable, open or crossed when disabled.",
+        "Valuable cores breathe slowly and remain visually contained until a causal failure exposes them.",
+        "Service-side access and threat-side protection are distinct."
+      ],
+      "failureModes": [
+        "Flat boxes with emissive color as the only objective cue.",
+        "Cores so bright that surrounding damage becomes unreadable.",
+        "Symmetric access points that confuse safe interaction orientation."
+      ],
+      "acceptance": [
+        "Players identify value, access side and current state without text.",
+        "Critical exposure is visible but does not occlude attackers.",
+        "Cooperative repair positions remain spatially legible."
+      ]
+    },
+    "enemiesAndThreats": {
+      "purpose": "Oppose the fortress grammar while remaining readable, stylized and non-gory.",
+      "deepReason": "Enemies must create pressure without visual ambiguity. The standard rôdeur is a zombie, not a hostile machine: violet biological identity, face-led posture and stateful locomotion make the horde memorable while role-specific massing keeps every counter readable and fair.",
+      "rules": [
+        "Every enemy leads with a role-specific hostile primary mass; the standard rôdeur leads with a bowed visible zombie head, hunched torso and reaching open hand rather than a visor or giant fist.",
+        "Standard horde biology uses deep eggplant and desaturated plum as a persistent faction family; raspberry remains a bounded forward facial or offensive cue, never the whole body.",
+        "Biology remains primary on zombies. Hardened growth may express frontier adaptation, but armor chassis, service panels, copper repairs and mechanical joints are forbidden.",
+        "The standard rôdeur must remain visibly weaker and narrower than the wall-attacking brute: medium open hands, no heroic stance and no wall-breaking mass.",
+        "Enemy asymmetry may reach 0.30 because it communicates behavior, but locomotion and hit volume remain honest.",
+        "Threat raspberry is confined to forward sensory or offensive zones.",
+        "Damage exposes non-gory dry fiber or mineral-biological structure through one major causal break and must also change posture, limb function and gait."
+      ],
+      "failureModes": [
+        "Enemies resembling friendly buildables or Roblox avatars.",
+        "The standard zombie reading as a robot, mech, armored golem, brute or mascot.",
+        "Thin limbs and noisy shells disappearing in hordes.",
+        "Player-style copper repair bands implying friendly ownership.",
+        "Purple used as neon decoration or as the sole carrier of hostile identity or health state."
+      ],
+      "acceptance": [
+        "The standard rôdeur reads as a violet zombie in one second with emission and color removed.",
+        "Threat direction, attack family and integrity state read in silhouette and posture.",
+        "Enemy types remain separable in a dense horde.",
+        "Damage state never depends on gore, texture noise or color alone."
+      ]
+    },
+    "avatarsAndCharacters": {
+      "purpose": "Preserve Roblox identity while integrating characters into the frontier culture.",
+      "deepReason": "The GDD values social expression and platform identity. The DA should frame the avatar as the capable author of the fortress, not replace it with an overdesigned proprietary silhouette.",
+      "rules": [
+        "Preserve recognizable Roblox body proportions, face readability and equipped identity.",
+        "Wearable technology uses broad harnesses, protected tools and modular repair attachments.",
+        "Role readability comes from one large tool silhouette and one bounded color cue.",
+        "Faces remain expressive, stylized and readable without photoreal skin treatment."
+      ],
+      "failureModes": [
+        "Armor swallowing avatar identity.",
+        "Tiny costume greebles competing with held tools.",
+        "Faction colors replacing personal expression."
+      ],
+      "acceptance": [
+        "A player recognizes their avatar and role simultaneously.",
+        "Social screenshots preserve distinct player identities.",
+        "Equipment remains readable on mobile and in cooperative clusters."
+      ]
+    },
+    "damageStatesAndRepair": {
+      "purpose": "Make every failure understandable, recoverable and visually linked to the next action.",
+      "deepReason": "Every Failure Teaches is the current priority hypothesis. Visual damage must therefore behave as causal information, not spectacle or generic deterioration.",
+      "rules": [
+        "Damaged introduces one major break, displacement or open joint along the weakest declared path.",
+        "Critical widens the same chain with a second major break, exposed core or stopped posture.",
+        "Repair reverses the visible sequence and may leave one clean historical intervention marker.",
+        "The invariant chassis, pivot, footprint and interaction anchor survive every state."
+      ],
+      "failureModes": [
+        "Independent state models with changed proportions or component identity.",
+        "Random crack networks, universal sparks or color-only health.",
+        "Repair magic that closes damage without a visible mechanical sequence."
+      ],
+      "acceptance": [
+        "Players order intact, damaged and critical states without labels.",
+        "A reviewer can name the initial failure cause.",
+        "The repair animation shows an intelligible inverse transformation."
+      ]
+    },
+    "vfxAndLighting": {
+      "purpose": "Amplify cause, direction and severity while preserving the object and battlefield.",
+      "deepReason": "Spectacle supports emotion only if it does not hide the information players need to learn and coordinate. The warm frontier needs atmospheric beauty, but gameplay light remains an evidence system.",
+      "rules": [
+        "Impact effects use wedges, arcs and two or three large fragments aligned with incoming force.",
+        "Smoke stays thin, short and offset from the interaction or target center.",
+        "Emissive areas remain protected and local; world lighting carries mood, not state truth alone.",
+        "Warm practical pools support home and repair; cool environmental light preserves frontier scale."
+      ],
+      "failureModes": [
+        "Particle fog, full-screen bloom or sparks covering the target.",
+        "Lighting tuned to one hero shot.",
+        "Every object emitting cyan until interaction hierarchy disappears."
+      ],
+      "acceptance": [
+        "Cause and direction remain readable on the effect's peak frame.",
+        "Assets pass all four lighting profiles.",
+        "Disabling particles does not remove state comprehension."
+      ]
+    },
+    "animationAndMotion": {
+      "purpose": "Make machinery feel heavy, repairable and intentional while keeping motion as a semantic cue.",
+      "deepReason": "Motion can communicate readiness, targeting and failure faster than texture. Industrial discipline provides clear pivots and staging; Salvaged identity adds slight mechanical character without instability.",
+      "rules": [
+        "Primary mechanical motion uses anticipation, one readable axis and a firm settle.",
+        "Ready motion is slow and stable; warning motion becomes irregular; critical motion stops or collapses.",
+        "Repaired modules may have a slightly different damping profile but share the same functional timing.",
+        "No idle motion may resemble threat targeting or interaction readiness accidentally."
+      ],
+      "failureModes": [
+        "Constant fidgeting that destroys calm massing.",
+        "Wobbly salvage motion implying poor construction everywhere.",
+        "Multiple small moving parts obscuring the important axis."
+      ],
+      "acceptance": [
+        "State can be identified from motion alone in a short clip.",
+        "Pivots and clearances match the canonical component structure.",
+        "Motion remains readable at the target mobile distance."
+      ]
+    },
+    "uiSignageAndWorldCues": {
+      "purpose": "Use spatial and shape language before text to guide building, repair and combat.",
+      "deepReason": "Mobile-first interaction and international accessibility favor visual grammar. World cues should feel manufactured by the frontier culture while remaining cleaner than decorative signage.",
+      "rules": [
+        "Use complete sockets, chevrons, brackets, rings and footprints as primary world cues.",
+        "Text is optional, large and supplemental; invented microtext is forbidden.",
+        "Placement previews inherit the real footprint, front direction and semantic role.",
+        "Copper indicates authored construction; mint indicates available interaction; gold and red indicate severity."
+      ],
+      "failureModes": [
+        "Decorative labels or fictional alphabets carrying required meaning.",
+        "UI color fields detached from the object's physical interaction zone.",
+        "Placement ghosts that lie about collision or orientation."
+      ],
+      "acceptance": [
+        "A first-time player can locate the actionable zone without reading.",
+        "World cues remain coherent in grayscale.",
+        "UI and object state never contradict each other."
+      ]
+    },
+    "cameraCompositionAndMobile": {
+      "purpose": "Preserve causality, scale and visual beauty under the real gameplay camera.",
+      "deepReason": "A direction that only works in close hero renders is not the game's art direction. Mobile screen space, elevated camera angles and dense defense scenes define the actual aesthetic constraints.",
+      "rules": [
+        "Primary forms survive at sixty studs and tertiary details are expendable below their screen-space band.",
+        "Top surfaces carry simplified orientation and ownership cues for elevated cameras.",
+        "Hero compositions preserve the same front, footprint and state reads used in gameplay.",
+        "Foreground effects and architecture must not hide cause, target, direction or priority."
+      ],
+      "failureModes": [
+        "Beauty dependent on eye-level closeups.",
+        "Important cues placed only on hidden side faces.",
+        "Dense silhouettes merging into one dark band in repeated defense lines."
+      ],
+      "acceptance": [
+        "Near, mid, far, landscape and portrait views pass.",
+        "One-second function and state tests pass on the weakest supported viewport.",
+        "Hero art remains honest to gameplay geometry."
+      ]
+    },
+    "socialPersistenceAndCosmetics": {
+      "purpose": "Turn visual progression into personal and shared memory without selling ambiguity or power.",
+      "deepReason": "The GDD positions the fortress as identity and museum. Cosmetics should celebrate authorship, mastery and cooperation while leaving gameplay function and state universally readable.",
+      "rules": [
+        "Cosmetics modify approved skins, repair signatures, trophy mounts and bounded secondary modules.",
+        "Core silhouette, interaction, threat, warning, critical and collision cues remain invariant.",
+        "Historical repairs, expedition materials and social trophies can accumulate in designated calm zones.",
+        "Prestige reflects creation or contribution and never imitates combat power."
+      ],
+      "failureModes": [
+        "Paid skins hiding function or damage.",
+        "Cosmetic rarity encoded with critical or interaction colors.",
+        "Unlimited trophy clutter destroying fortress readability."
+      ],
+      "acceptance": [
+        "Another player recognizes function before cosmetic theme.",
+        "Owner history is visible without requiring inventory inspection.",
+        "Social screenshots show both shared civilization and personal authorship."
+      ]
+    },
+    "proceduralGenerationAndVariation": {
+      "purpose": "Produce scalable variety without identity drift or probabilistic invention.",
+      "deepReason": "The workflow depends on automation. Variation must operate inside locked ranges so many assets feel authored while remaining reproducible, reviewable and compatible with Roblox integration.",
+      "rules": [
+        "Generators choose only from approved chassis modules, joint families, material roles and repair reasons.",
+        "Variation seed, canon hash, constitution hash and selected repair narrative are recorded.",
+        "Primary silhouette and gameplay anchors never vary without a canon revision.",
+        "Wear, fastener grouping and tertiary repair shape may vary only within declared bounds."
+      ],
+      "failureModes": [
+        "The generator filling unspecified space with decoration.",
+        "Random asymmetry or material assignment.",
+        "Variants requiring unique meshes or textures when instancing should be preserved."
+      ],
+      "acceptance": [
+        "Repeated seed produces semantically identical output.",
+        "Different seeds remain visibly in the same family.",
+        "Every generated choice can be traced to an allowed rule."
+      ]
+    },
+    "marketingAndKeyArt": {
+      "purpose": "Communicate the real game promise through a memorable fortress identity.",
+      "deepReason": "Marketing must show the same causal fantasy players receive: a personal fortress, an intelligent threat and visible adaptation. A generic shooter image would erase the product's strongest differentiation.",
+      "rules": [
+        "The fortress or a player-authored defense occupies the compositional authority.",
+        "Show one visible problem, one adapted solution and one readable incoming threat.",
+        "Use warm intervention against cool frontier scale to create emotional focus.",
+        "Preserve actual asset proportions, colors and state language."
+      ],
+      "failureModes": [
+        "Generic armed avatar hero shot with the fortress as background.",
+        "Excessive destruction that implies irreversible loss or gore.",
+        "Concept art detail density impossible in gameplay."
+      ],
+      "acceptance": [
+        "The image communicates build, test, learn and improve without explanatory copy.",
+        "Assets shown are production-faithful.",
+        "The emotional tone is pressured, inventive, social and hopeful."
+      ]
+    },
+    "performanceAndRepetition": {
+      "purpose": "Keep the direction beautiful and readable when the game contains real quantities of assets.",
+      "deepReason": "The fortress fantasy depends on repeated modules and horde pressure. A style that works for one prop but collapses at thirty or one hundred copies is aesthetically and technically invalid.",
+      "rules": [
+        "Reuse MeshIds, trim logic, material families and standardized modules.",
+        "Variation occurs at kit composition, repair cluster and placement levels before unique geometry.",
+        "Small repeated details lose shadows and tertiary geometry first.",
+        "Group value rhythm alternates calm chassis masses and bounded semantic focal points."
+      ],
+      "failureModes": [
+        "Every copy carrying a unique texture or mesh.",
+        "Repeated copper accents forming an uninterrupted noisy stripe.",
+        "Shadows and transparency multiplying without measured benefit."
+      ],
+      "acceptance": [
+        "Scenes at 1, 30 and 100 copies preserve function and state hierarchy.",
+        "Instance reuse and texture memory remain within budget.",
+        "The group reads as an authored defense system rather than cloned clutter."
+      ]
+    }
+  },
+  "productionRules": [
+    "Salvaged Frontier is the sole identity authority; Industrial Toy Defense is never a second visual theme.",
+    "Every production asset must bind this exact constitution ID and SHA-256 in addition to its exact visual canon.",
+    "The standardized chassis is designed first; repair history is applied only after function, silhouette and construction pass.",
+    "Every visible adaptation requires one allowed reason: replacement, reinforcement, sealing or rerouting.",
+    "Anything not explicitly variable remains stable across regeneration, state, variant and reimport.",
+    "No asset enters production from prose alone: all required multimodal boards and human approval remain mandatory.",
+    "A beautiful result that violates function, causality, mobile readability or performance is rejected.",
+    "Changing this constitution requires a versioned founder decision and invalidates affected evidence hashes."
+  ],
+  "validation": {
+    "requiredViews": [
+      "Front, back, left, right, top, bottom and both three-quarter views.",
+      "Canonical elevated gameplay camera in landscape and portrait.",
+      "Black silhouette, flat albedo, detail-band and material-isolation passes.",
+      "All states side by side with invariant component annotations."
+    ],
+    "requiredContexts": [
+      "Four canonical lighting profiles and both light and dark semantic backgrounds.",
+      "Mobile near, mid and far distances with exact camera calibration.",
+      "Repetition scenes containing 1, 30 and 100 instances.",
+      "Golden Scene Studio readback and a named low-tier physical mobile session."
+    ],
+    "perceptualQuestions": [
+      "What is it, which way does it act and who owns it?",
+      "What changed, what caused the change and what should the player do next?",
+      "Which visible feature expresses Salvaged Frontier identity without weakening the gameplay icon?",
+      "Would the object remain beautiful and understandable if color, particles and tertiary texture were removed?"
+    ],
+    "reopenConditions": [
+      "A sixth asset requires a new shape, joint, material, semantic color or repair reason.",
+      "Human testing cannot recognize function, orientation or state at the declared distance.",
+      "The 1, 30 or 100 repetition scene becomes noisy, muddy or technically over budget.",
+      "The selected aesthetic cannot support a required biome, character, social expression or gameplay state.",
+      "A production constraint forces silent mutation of a canonical invariant."
+    ]
+  },
+  "sourceAuthorities": {
+    "productArtContract": {
+      "path": "art/authority/product-art-authority-v1.json",
+      "sha256": "217c95da6202e43ad542094bcc2389493748c9d4bc9045e95647de9b6d98e2ca"
+    },
+    "retention": {
+      "path": "plans/product-innovation-retention-doctrine.md",
+      "sha256": "98c1e9b2be8601c4ecc94b4e5da997fcfd73bf75b9b99c18831b61b71dc24562"
+    },
+    "artDirection": {
+      "path": "art/art-direction.json",
+      "sha256": "ab1e3b2607fc916fa660fb20b90c2b62ee6985a866c3a65090bef4996a7eef22"
+    },
+    "salvagedTerritory": {
+      "path": "art/territories/salvaged-frontier.json",
+      "sha256": "3b59d12273d24e5aea3b7a06611aafffad495f482a1696dc4a1c1fc41749f3d6"
+    },
+    "industrialDiscipline": {
+      "path": "art/territories/industrial-toy-defense.json",
+      "sha256": "2e93bda4c5069f1f800cd14994bf1afa0aa5e89d514ef2675fe06deb25cd3f66"
+    }
+  }
+}

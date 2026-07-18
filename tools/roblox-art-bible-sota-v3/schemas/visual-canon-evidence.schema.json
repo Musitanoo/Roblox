@@ -1,0 +1,210 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/visual-canon-evidence.schema.json",
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "binding": {
+      "type": "object",
+      "required": ["role", "root", "path", "bytes", "sha256"],
+      "properties": {
+        "role": {
+          "enum": [
+            "contract",
+            "canon",
+            "asset_generator",
+            "canon_packet_generator",
+            "main_build_manifest",
+            "states_manifest",
+            "determinism_report",
+            "visual_review",
+            "raw_render_manifest"
+          ]
+        },
+        "root": {
+          "enum": ["PACKAGE_ROOT", "PROJECT_ROOT"]
+        },
+        "path": {
+          "type": "string",
+          "minLength": 3,
+          "pattern": "^[^:].*$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "boardArtifact": {
+      "type": "object",
+      "required": [
+        "path",
+        "bytes",
+        "sha256",
+        "mediaType",
+        "width",
+        "height"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 3,
+          "pattern": "^[^:].*$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "mediaType": {
+          "const": "image/png"
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 320
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 180
+        }
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "assetKey",
+    "revision",
+    "assetId",
+    "territoryId",
+    "canonId",
+    "baseCandidateSha256",
+    "evidenceClass",
+    "generatedAt",
+    "generation",
+    "authority",
+    "boards",
+    "evidencePackageSha256",
+    "humanReviewStatus",
+    "productionApproved"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/visual-canon-evidence.schema.json"
+    },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "assetKey": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "assetId": {
+      "enum": [
+        "barricade",
+        "objective_core",
+        "enemy_standard",
+        "floor_module",
+        "damage_effect",
+        "turret_fast_v1"
+      ]
+    },
+    "territoryId": {
+      "enum": [
+        "industrial-toy-defense",
+        "salvaged-frontier",
+        "clean-tactical-diorama"
+      ]
+    },
+    "canonId": {
+      "type": "string",
+      "pattern": "^vc_[a-z0-9_]+__[a-z0-9-]+__v[1-9][0-9]*$"
+    },
+    "baseCandidateSha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "evidenceClass": {
+      "enum": ["REAL_RENDERED", "SYNTHETIC_DOUBLE"]
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "generation": {
+      "type": "object",
+      "required": [
+        "tool",
+        "toolVersion",
+        "deterministicComposition",
+        "rawRenderStatus"
+      ],
+      "properties": {
+        "tool": {
+          "const": "r3d canon-packet"
+        },
+        "toolVersion": {
+          "const": "1.0.0"
+        },
+        "deterministicComposition": {
+          "const": true
+        },
+        "rawRenderStatus": {
+          "enum": ["PASS", "SIMULATED"]
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "authority": {
+      "type": "object",
+      "required": ["bindings"],
+      "properties": {
+        "bindings": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 9,
+          "items": {
+            "$ref": "#/$defs/binding"
+          }
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "boards": {
+      "type": "object",
+      "minProperties": 17,
+      "maxProperties": 17,
+      "additionalProperties": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 4,
+        "items": {
+          "$ref": "#/$defs/boardArtifact"
+        }
+      }
+    },
+    "evidencePackageSha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "humanReviewStatus": {
+      "enum": ["PENDING", "PASS", "FAIL"]
+    },
+    "productionApproved": {
+      "const": false
+    }
+  },
+  "unevaluatedProperties": false
+}

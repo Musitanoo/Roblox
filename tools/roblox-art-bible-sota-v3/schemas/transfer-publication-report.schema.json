@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/transfer-publication-report.schema.json",
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "status",
+    "generatedAt",
+    "environment",
+    "assetId",
+    "assetCount",
+    "mutationPerformed",
+    "manifestSha256",
+    "evidencePackageSha256",
+    "inputHashes",
+    "privacy",
+    "guardChecks",
+    "entries",
+    "issues"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/transfer-publication-report.schema.json"
+    },
+    "schemaVersion": {"const": "1.0.0"},
+    "status": {"enum": ["PASS", "PARTIAL", "BLOCKED", "FAIL"]},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "environment": {"const": "staging"},
+    "assetId": {"const": "turret_fast_v1"},
+    "assetCount": {"const": 9},
+    "mutationPerformed": {"type": "boolean"},
+    "manifestSha256": {"$ref": "#/$defs/sha256"},
+    "evidencePackageSha256": {"$ref": "#/$defs/sha256"},
+    "inputHashes": {
+      "type": "object",
+      "required": [
+        "transferReport",
+        "publisher",
+        "httpClient",
+        "importQueueBuilder"
+      ],
+      "properties": {
+        "transferReport": {"$ref": "#/$defs/sha256"},
+        "publisher": {"$ref": "#/$defs/sha256"},
+        "httpClient": {"$ref": "#/$defs/sha256"},
+        "importQueueBuilder": {"$ref": "#/$defs/sha256"}
+      },
+      "unevaluatedProperties": false
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "rawAssetIdsIncluded",
+        "rawCreatorIdIncluded",
+        "rawApiKeyIncluded",
+        "operationPathsIncluded"
+      ],
+      "properties": {
+        "rawAssetIdsIncluded": {"const": false},
+        "rawCreatorIdIncluded": {"const": false},
+        "rawApiKeyIncluded": {"const": false},
+        "operationPathsIncluded": {"const": false}
+      },
+      "unevaluatedProperties": false
+    },
+    "guardChecks": {
+      "type": "object",
+      "required": [
+        "credentialsPresent",
+        "creatorNumeric",
+        "creatorAllowlisted",
+        "manifestCurrent",
+        "artifactHashesVerified",
+        "remoteIdentityVerified"
+      ],
+      "properties": {
+        "credentialsPresent": {"type": "boolean"},
+        "creatorNumeric": {"type": "boolean"},
+        "creatorAllowlisted": {"type": "boolean"},
+        "manifestCurrent": {"type": "boolean"},
+        "artifactHashesVerified": {"type": "boolean"},
+        "remoteIdentityVerified": {"type": "boolean"}
+      },
+      "unevaluatedProperties": false
+    },
+    "entries": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 9,
+      "items": {
+        "type": "object",
+        "required": [
+          "territoryId",
+          "stateId",
+          "uploadName",
+          "sourceSha256",
+          "bytes",
+          "action",
+          "remoteIdentityVerified"
+        ],
+        "properties": {
+          "territoryId": {
+            "enum": [
+              "industrial-toy-defense",
+              "salvaged-frontier",
+              "clean-tactical-diorama"
+            ]
+          },
+          "stateId": {"enum": ["intact", "damaged", "critical"]},
+          "uploadName": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+__turret_fast_v1__(intact|damaged|critical)$"
+          },
+          "sourceSha256": {"$ref": "#/$defs/sha256"},
+          "bytes": {"type": "integer", "exclusiveMinimum": 0},
+          "action": {"enum": ["CREATE", "REUSE", "FAILED"]},
+          "remoteIdentityVerified": {"type": "boolean"}
+        },
+        "unevaluatedProperties": false
+      }
+    },
+    "issues": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {"status": {"const": "PASS"}},
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "entries": {"minItems": 9, "maxItems": 9},
+          "issues": {"maxItems": 0},
+          "guardChecks": {
+            "properties": {
+              "credentialsPresent": {"const": true},
+              "creatorNumeric": {"const": true},
+              "creatorAllowlisted": {"const": true},
+              "manifestCurrent": {"const": true},
+              "artifactHashesVerified": {"const": true},
+              "remoteIdentityVerified": {"const": true}
+            }
+          }
+        }
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}

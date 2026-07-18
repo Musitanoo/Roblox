@@ -50,15 +50,6 @@ export type BuildResult = {
 }
 
 local PIECE_TYPES: { [string]: boolean } = { Wall = true, SlowTrap = true, Turret = true }
-local OPERATIONS: { [string]: boolean } = {
-	PLACE = true,
-	MOVE = true,
-	ROTATE = true,
-	DELETE = true,
-	UNDO = true,
-	REDO = true,
-	CLEAR_ALL = true,
-}
 
 local BuildTypes = {}
 
@@ -68,10 +59,6 @@ end
 
 function BuildTypes.isRotation(value: unknown): boolean
 	return typeof(value) == "number" and value == math.floor(value) and value >= 0 and value <= 3
-end
-
-function BuildTypes.isOperation(value: unknown): boolean
-	return typeof(value) == "string" and OPERATIONS[value] == true
 end
 
 return table.freeze(BuildTypes)

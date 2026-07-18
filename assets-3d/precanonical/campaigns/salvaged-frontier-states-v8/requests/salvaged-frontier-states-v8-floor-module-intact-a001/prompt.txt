@@ -1,0 +1,127 @@
+GPT IMAGE 2 — ONE OBJECT, ONE GAMEPLAY STATE, ONE IMAGE
+
+Use the `gpt-image-2` image model. If that exact model is not selected or
+visible in the interface, stop and do not substitute another model.
+
+Generate exactly one image: a clean 2x2 state-definition board. Every quadrant
+must depict the exact same object construction in the exact same target state.
+
+CROSS-VIEW IDENTITY LOCK — THIS IS NOT A FOUR-CONCEPT SHEET
+- Freeze one design before rendering. The four quadrants are four camera or
+  diagnostic views of that one frozen asset, never alternatives or variants.
+- Camera and rendering mode may change; geometry, proportions, component count,
+  component placement, joint placement, asymmetry, repair history, material
+  assignment, wear pattern and state damage topology may not change.
+- The solid black silhouette must match the outer contour of the hero view.
+- The rear view must be mechanically compatible with the front view and expose
+  only the explicitly defined safe-side interaction components.
+- Fail the image rather than improvising a different brace, foot, panel, cap,
+  socket, emblem or decorative solution in another quadrant.
+
+TARGET
+- Object: Fortress Floor Module (`floor_module`)
+- State: `intact` only
+- Art direction: Salvaged Frontier owns world identity; Industrial Toy Defense
+  contributes disciplined one-second readability only.
+- Canon: vc_floor_module__salvaged-frontier__v1
+- Gameplay function: repeatable fortress floor cell
+- One-second promise: This square cell is safe buildable ground, shows how neighboring modules connect, and clearly reveals when one local section is damaged.
+- Dimensions: 4.0 x 0.5 x
+  4.0 Roblox studs; pivot bottom_center.
+
+BOARD LAYOUT
+- Top left: hero three-quarter front, complete object visible.
+- Top right: three-quarter rear, same construction and state.
+- Bottom left: solid black silhouette, no internal shading.
+- Bottom right: elevated Roblox third-person mobile gameplay camera.
+- Keep identical scale and recognizable proportions across the two perspective
+  views; this is a turnaround proof, not a concept-variation sheet.
+- Neutral mid-gray background, neutral studio light, no environment or props.
+- No captions, labels, letters, numbers, logos or generated text in the image.
+- Do not show intact/damaged/critical comparisons or any second gameplay state.
+
+IDENTITY AND CONSTRUCTION
+- World role: The smallest visible unit of fortress authorship, alignment and future expansion, repeated enough to define the player's home without visual noise.
+- Emotional intent: Orderly, dependable and satisfying to assemble; damage should reveal a local maintenance problem rather than make the whole base look dirty.
+- Territory thesis: A precise fortress grid cell whose single approved replacement quadrant records maintenance while every edge key, footprint and construction rhythm stays exact.
+- Front/orientation: Edge keys and one subtle service orientation distinguish the canonical front without disrupting seamless tiling.
+- Interaction read: Approved sockets or edge keys show valid construction relationships; no false button-like decoration is allowed.
+- Danger read: A damaged state creates one causal displaced inset or broken edge key, never a random crack web.
+- Recognition landmarks: four-stud square footprint, central octagonal or square inset, structural perimeter band, aligned edge keys or sockets
+- Negative spaces: thin controlled seam between adjacent cells, recess around the central inset, approved socket openings at real connection points
+
+REQUIRED COMPONENTS
+- StructuralSlab: shallow square slab at full footprint; Carry the player and every attached fortress system. Relationship: Supports the inset and all four connection edges. Reading role: Primary buildable-ground identity.
+- CentralInset: large square or octagonal recess at top center; Break the top plane into a readable modular cell without becoming decoration. Relationship: Contained inside the structural perimeter with consistent depth. Reading role: Keeps individual cells legible in a larger floor.
+- EdgeKeys: broad keys or sockets at four perimeter edges; Explain snapping, adjacency and structural continuity. Relationship: Aligned exactly to neighboring modules. Reading role: Makes modular construction plausible and readable.
+
+FORM HIERARCHY
+- Primary 72%: square structural slab, large central inset
+- Secondary 23%: edge keys, connection sockets, shallow service orientation cue
+- Tertiary 5% maximum: few corner fasteners, minimal edge wear, one approved repair patch
+- Construction translation: A calm square chassis, large inset and thick edge keys provide tile readability; only one quadrant or connector receives a copper-bounded replacement treatment.
+
+MATERIAL SYSTEM
+- walkable_zone: fortress_floor; primary; middle value; Calm non-slippery broad plane with no baked lighting. Wear: Only on travel lanes and connection edges, bounded below state cues.
+- connection_zone: structural_connector; bareMetal; middle-light edge accent; Clean functional contact surfaces. Wear: Contact polish only.
+
+TARGET STATE CONTRACT — `intact`
+- Summary: A clean aligned cell whose inset, perimeter and four connection edges form a quiet dependable foundation.
+- Required changes:
+- All edge keys and inset corners remain aligned.
+- The walkable surface remains calm and uninterrupted.
+- Shape and silhouette cues:
+- flat continuous top plane
+- complete perimeter
+- aligned connection edges
+- Value cues:
+- stable mid-value surface
+- subtle connector highlights
+- Color cues:
+- fortress base palette
+- no warning dominance
+- Light cues:
+- no emission
+- consistent bevel response
+- Motion posture implied in the still:
+- fully still
+- placement snap only
+- VFX cues, kept sparse and non-obscuring:
+- brief placement dust only
+- no persistent particles
+- Component operations:
+- StructuralSlab / PRESERVE: Keep the walkable slab continuous and level.
+- EdgeKeys / PRESERVE: Keep all connection edges aligned to the grid.
+- Territory translation: Damage lifts the known replacement seam and one edge key; critical state widens that same split without a random fracture web or misleading collision.
+
+INVARIANTS — NEVER CHANGE
+- Four-by-half-by-four dimensions, bottom-center pivot and collision plane remain fixed.
+- Edge keys align across every territory and state.
+- The central inset and perimeter remain the primary top-view identity.
+- Damage never creates an unfair collision step or changes placement anchors.
+- Repeated modules reuse identical mesh and material combinations.
+
+NO IMAGE REFERENCE
+- Construct only from this closed canon contract.
+
+STYLE DISCIPLINE
+- Thick standardized rectangles/trapezoids, large protected
+  apertures, explicit load paths and one or two causal repairs.
+- Deep slate chassis, bone-sand reclaimed panels and bounded sun-copper repair
+  history. Mint is a small protected interaction cue only. Warning and critical
+  colors remain localized semantic signals.
+- Broad calm planes, consistent structural bevels, low secondary density and
+  extremely low tertiary density.
+- Damage or activation must read through shape, silhouette, posture and value;
+  never through color alone.
+- Salvaged Frontier must be carried by one causal, load-bearing repair and one
+  bounded replacement history. Wear alone is not sufficient art-direction
+  evidence, and a decorative diagonal stripe is not a repair story.
+- Bone-sand reclaimed composite must read as manufactured composite, never
+  medieval stone, raw concrete, parchment or ceramic slab.
+- A protected interaction emission appears only where the canon places the
+  interaction zone. Never move a friendly light onto the threat-facing armor.
+- Every brace terminates at plausible structural joints and load paths, never
+  as decoration on a disposable panel.
+- The image is precanonical visual evidence only. It does not authorize hidden
+  geometry, canon lock or production.

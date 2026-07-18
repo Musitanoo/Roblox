@@ -1,0 +1,159 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/precanonical-brief.schema.json",
+  "schemaVersion": "1.0.0",
+  "briefId": "objective_core-salvaged-frontier-state-campaign",
+  "assetKey": "objective_core",
+  "displayName": "Objective Core",
+  "artDirection": "salvaged-frontier",
+  "gameplayFunction": "primary defendable objective and visual anchor",
+  "oneSecondRead": "This tall protected glowing heart is the thing the fortress exists to defend, and its current health can be read from across the battlefield.",
+  "worldRole": "The fortress heart, battle objective and persistent visual anchor that converts abstract survival into protection of a player-authored home.",
+  "emotionalIntent": "Precious, resilient and worth rallying around; damage should feel alarming but legible, never arbitrary or hopeless.",
+  "dimensionsStuds": {
+    "width": 6.0,
+    "height": 7.0,
+    "depth": 6.0
+  },
+  "orientation": {
+    "front": "A tall protected luminous heart framed by buttresses and a readable opening that invites defense and interaction.",
+    "playerSide": "A complete protected ring and accessible lower service band identify friendly interaction without resembling a weapon.",
+    "threatSide": "Protective rings open, buttresses fail and the core becomes more exposed as health worsens."
+  },
+  "interactionZones": [
+    {
+      "id": "anchor_zone",
+      "purpose": "Make the objective a stable fortress landmark.",
+      "location": "pedestal_ring",
+      "requiredCue": "Broad pedestal and vertical central hierarchy. Dark stable base around a brighter center. Color role: primary."
+    },
+    {
+      "id": "vitality_zone",
+      "purpose": "Communicate objective life and health without UI dependence.",
+      "location": "core_center",
+      "requiredCue": "Protected central core with changing exposure. Brightest controlled region. Color role: interaction."
+    },
+    {
+      "id": "protection_zone",
+      "purpose": "Show how well the objective remains defended.",
+      "location": "cage_joints",
+      "requiredCue": "Rings and buttresses close when intact and open or break with damage. Mid-value protective shell. Color role: secondary."
+    },
+    {
+      "id": "access_zone",
+      "purpose": "Show the player-facing repair and interaction approach.",
+      "location": "front_access",
+      "requiredCue": "One deliberate opening and complete interaction ring. High contrast against pedestal. Color role: accent."
+    }
+  ],
+  "components": [
+    {
+      "id": "pedestal",
+      "function": "Ground the objective and distribute the visual and physical load.",
+      "mobility": "fixed"
+    },
+    {
+      "id": "protected_core",
+      "function": "Represent objective vitality and the protected source of fortress energy and memory.",
+      "mobility": "destructible"
+    },
+    {
+      "id": "protective_cage",
+      "function": "Explain defense, state progression and increasing exposure.",
+      "mobility": "destructible"
+    },
+    {
+      "id": "service_spine",
+      "function": "Define rear orientation and carry repair or energy service logic.",
+      "mobility": "fixed"
+    }
+  ],
+  "movements": [
+    "subtle internal pulse",
+    "no cage instability",
+    "one protection sector settles open",
+    "subtle core instability",
+    "subtle unstable core drift inside fixed anchor",
+    "broken protection sector trembles but does not orbit freely"
+  ],
+  "states": [
+    {
+      "id": "intact",
+      "visualChange": "A closed protective crown, stable pedestal and calm luminous heartbeat communicate a secure but valuable fortress heart. All buttresses and rings form a complete protective envelope. The core pulse is slow, regular and spatially contained.",
+      "invariants": [
+        "Six-by-seven-by-six dimensions, footprint and bottom-center pivot remain fixed.",
+        "The luminous protected center, pedestal and crown hierarchy remain recognizable.",
+        "The player-facing access opening and rear service spine never swap.",
+        "State progression increases core exposure without changing the core anchor.",
+        "The objective remains visually friendly and never acquires weapon silhouettes."
+      ]
+    },
+    {
+      "id": "damaged",
+      "visualChange": "One protection sector fails and the heartbeat becomes uneven, revealing a defendable weakness without making the objective visually lost. One buttress or ring sector opens along a plausible joint. The core pulse briefly stutters and a warning region appears.",
+      "invariants": [
+        "Six-by-seven-by-six dimensions, footprint and bottom-center pivot remain fixed.",
+        "The luminous protected center, pedestal and crown hierarchy remain recognizable.",
+        "The player-facing access opening and rear service spine never swap.",
+        "State progression increases core exposure without changing the core anchor.",
+        "The objective remains visually friendly and never acquires weapon silhouettes."
+      ]
+    },
+    {
+      "id": "critical",
+      "visualChange": "Multiple protection failures expose the unstable core and create a powerful rally point while preserving the objective's pedestal and identity. At least two protective sectors fail and the crown becomes visibly incomplete. The core is more exposed, brighter in pulses and less stable in motion.",
+      "invariants": [
+        "Six-by-seven-by-six dimensions, footprint and bottom-center pivot remain fixed.",
+        "The luminous protected center, pedestal and crown hierarchy remain recognizable.",
+        "The player-facing access opening and rear service spine never swap.",
+        "State progression increases core exposure without changing the core anchor.",
+        "The objective remains visually friendly and never acquires weapon silhouettes."
+      ]
+    }
+  ],
+  "collisionPromise": "Keep the bottom_center pivot, footprint and gameplay anchors identical in every generated state.",
+  "viewDistanceStuds": {
+    "near": 3,
+    "mid": 30,
+    "far": 60
+  },
+  "expectedSimultaneousInstances": 1,
+  "obligations": [
+    "Reconstruct every primary and secondary component defined by this canon.",
+    "Produce every required state from the same component structure and stable anchors.",
+    "Preserve the one-second function, front, interaction, danger and state readings.",
+    "Record this canon ID and exact SHA-256 in the compliance envelope."
+  ],
+  "constraints": [
+    "Dimensions are 6.0 x 7.0 x 6.0 studs with tolerance 0.005.",
+    "Triangle budget maximum is 4500.",
+    "Texture class is medium.",
+    "Pivot is bottom_center and component anchors remain stable.",
+    "One UV set and one material slot maximum per production mesh component."
+  ],
+  "freedoms": [
+    "historical_repairs: zero to three large approved repair marks. Supports persistent fortress history without introducing noisy damage.",
+    "buttress_profile: territory-approved radial profile only. Allows DA expression while preserving the protected-center logic.",
+    "core_pulse_phase: bounded asynchronous phase across repeated cores. Avoids robotic synchronization without changing state meaning."
+  ],
+  "prohibitions": [
+    "flat unmarked box objective",
+    "weapon barrel or hostile aiming cue",
+    "unprotected glowing sphere with no construction logic",
+    "color-only health communication",
+    "full radial symmetry that erases front and rear",
+    "uniform cracks or grime over the entire monument",
+    "text, logos or unexplained sacred symbols",
+    "random junk pile silhouette",
+    "uniform rust",
+    "decorative repair with no causal reason",
+    "more than three visible material families",
+    "loose cable spaghetti",
+    "asymmetry that changes gameplay anchors",
+    "literal construction-toy motifs or pristine molded-plastic identity",
+    "thin_loose_wires",
+    "microtext",
+    "free_floating_fragments",
+    "detail_without_silhouette_function_identity"
+  ],
+  "productionApproved": false
+}

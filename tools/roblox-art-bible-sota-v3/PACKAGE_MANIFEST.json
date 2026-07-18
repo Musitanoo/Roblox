@@ -1,0 +1,4421 @@
+{
+  "schemaVersion": "1.0.0",
+  "artifact": "roblox-art-bible-sota-v3",
+  "artifactVersion": "3.14.0",
+  "generatedAt": "2026-07-16T21:42:05Z",
+  "fileCount": 882,
+  "treeSha256": "8983e3689fe1b30d6d02be3d3610822271bc07b1a8655fca35ad13c3eceeac93",
+  "files": [
+    {
+      "path": ".agents/skills/roblox-3d-asset/SKILL.md",
+      "bytes": 11145,
+      "sha256": "9e3564f5ed3fd76d3fca4df4c2ed02f16e6cf949705bef469a259606e0ddc0e1"
+    },
+    {
+      "path": ".agents/skills/roblox-3d-asset/agents/openai.yaml",
+      "bytes": 233,
+      "sha256": "ae0fbeebb2ba6e47f83a66ee5605df0de9e73b742e7e229405c21e3fd2555c21"
+    },
+    {
+      "path": ".agents/skills/roblox-3d-asset/references/evidence-and-gates.md",
+      "bytes": 4221,
+      "sha256": "d4b928bf946f38da46bb140f691e96064e0ee2683947277939bb9ce5245a5bba"
+    },
+    {
+      "path": ".agents/skills/roblox-3d-asset/references/execution-routing.md",
+      "bytes": 8607,
+      "sha256": "cddf7d20fdb4254d1c4cbbd9dd89cae7d8d4a4153dd99f40de56917d1b3ea7a7"
+    },
+    {
+      "path": ".agents/skills/roblox-3d-asset/references/platform-facts.md",
+      "bytes": 1031,
+      "sha256": "3dac9c5bfdba15fe68b03e75ad490161b96ee41048c903e81f6da09473f4cd38"
+    },
+    {
+      "path": ".agents/skills/roblox-3d-asset/references/precanonical-web.md",
+      "bytes": 6811,
+      "sha256": "9b8f3176969aa25f4b2872a84742ab8bc0e7174bed08e9f65591c1e45bdb8ac5"
+    },
+    {
+      "path": ".agents/skills/roblox-3d-asset/references/studio-mobile-human.md",
+      "bytes": 3621,
+      "sha256": "7635b13de286fdfd16a3e186d23953339f2223a0ec6548a10350e3c4572a8cf2"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 495,
+      "sha256": "ab0e67fcfeec464b533fa9e124328707fdc833fbc8b25c955d939404314ba528"
+    },
+    {
+      "path": ".luaurc",
+      "bytes": 106,
+      "sha256": "f4c99b618cce54e28983d6d367eb89c36763e7a1056a8f996f5592233330e2a3"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 27438,
+      "sha256": "c1cec707df67954d0f2983d43027a3b42a5498fe45b5709876e304541135df3e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 13925,
+      "sha256": "3889f2c847457a82a3162c0b2107ae4a63cfca9e96e5e688d9d0cd17dd7fba93"
+    },
+    {
+      "path": "STATUS.json",
+      "bytes": 2296,
+      "sha256": "33e513f78c43343300d7255228c8d431e2270b6d8a519da3685fec7da3e3175a"
+    },
+    {
+      "path": "art/ART_DIRECTION.md",
+      "bytes": 2053,
+      "sha256": "aef32fdcaae70ffc69f85df9073981112d4a3cbf75da4e013a18e469069e11b6"
+    },
+    {
+      "path": "art/art-direction.json",
+      "bytes": 4668,
+      "sha256": "ab1e3b2607fc916fa660fb20b90c2b62ee6985a866c3a65090bef4996a7eef22"
+    },
+    {
+      "path": "art/authority/product-art-authority-v1.json",
+      "bytes": 3393,
+      "sha256": "217c95da6202e43ad542094bcc2389493748c9d4bc9045e95647de9b6d98e2ca"
+    },
+    {
+      "path": "art/calibration/asset-kit/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "art/calibration/calibration-kit.json",
+      "bytes": 4019,
+      "sha256": "8a33c6c8a9b5a02ef460f5e698907a4d6d623e2f5c475047cd3dbdccc102ace9"
+    },
+    {
+      "path": "art/calibration/camera-rig.json",
+      "bytes": 2881,
+      "sha256": "f2daf7d92ff4db38a588cb29588c5856c8894ec0c11d30d3d01c527bf7cd8d44"
+    },
+    {
+      "path": "art/calibration/component-evidence-map.json",
+      "bytes": 2792,
+      "sha256": "a77210a604665b0512abeab12395b1be2257740cfc63e5dd83071c8dbce80509"
+    },
+    {
+      "path": "art/calibration/render-matrix.json",
+      "bytes": 7755,
+      "sha256": "1912f4b47aeb6064f8022bc3275b3b881cfeed39e1c3421800112c30d1b211f2"
+    },
+    {
+      "path": "art/calibration/renders/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "art/canonical-visuals/catalog.json",
+      "bytes": 11265,
+      "sha256": "29cd88b94422f2ace7f36fc872c8a833c722de9a6f5ebf44bd351d83dbedf631"
+    },
+    {
+      "path": "art/canonical-visuals/clean-tactical-diorama/barricade.json",
+      "bytes": 42430,
+      "sha256": "b3dc1534b10ac4a0ab8a7b60070e53e8371a686ae5ca0e6137d84bcd336753fd"
+    },
+    {
+      "path": "art/canonical-visuals/clean-tactical-diorama/damage_effect.json",
+      "bytes": 31803,
+      "sha256": "b88ebb06669a165e190e5c2ec213fdbbac36c007cb882ad2cab743598ca71089"
+    },
+    {
+      "path": "art/canonical-visuals/clean-tactical-diorama/enemy_standard.json",
+      "bytes": 52351,
+      "sha256": "a0bfe23d6bd2a66603f87dce5972a475d0c651187aa7b281bddaa158355e36ab"
+    },
+    {
+      "path": "art/canonical-visuals/clean-tactical-diorama/floor_module.json",
+      "bytes": 33145,
+      "sha256": "286cfcc5c17f930d21e1207d0cd3ec90df6b83ff033405031a9f62dd7f15aa10"
+    },
+    {
+      "path": "art/canonical-visuals/clean-tactical-diorama/objective_core.json",
+      "bytes": 40746,
+      "sha256": "912fb2b5c2c77fc944f93f53e6c16cbfdb58e7b90fd5c497c90737d021549833"
+    },
+    {
+      "path": "art/canonical-visuals/clean-tactical-diorama/turret_fast_v1.json",
+      "bytes": 42123,
+      "sha256": "1d730d1e4b845ac7390faf8bce9d4abe6dddd4510b85123e283b8228e29bdaad"
+    },
+    {
+      "path": "art/canonical-visuals/industrial-toy-defense/barricade.json",
+      "bytes": 42386,
+      "sha256": "e9984b05c218c824832518ba966a9c7d53c86646d228cdebcf1f3d9d73ab6238"
+    },
+    {
+      "path": "art/canonical-visuals/industrial-toy-defense/damage_effect.json",
+      "bytes": 31642,
+      "sha256": "486518d3f10ebb6cfd65fe497357e6a2af5221f716a7c9b1e2764d87d8360a46"
+    },
+    {
+      "path": "art/canonical-visuals/industrial-toy-defense/enemy_standard.json",
+      "bytes": 52546,
+      "sha256": "23391b63b01bd61fa015c3af3da4ba21ffbab54a999b2f8442e54ff76900166a"
+    },
+    {
+      "path": "art/canonical-visuals/industrial-toy-defense/floor_module.json",
+      "bytes": 33038,
+      "sha256": "aed6bbba2e8e8090e604dea9563fe0dca50c2250d4a7c29adf8a7aefb5bb452d"
+    },
+    {
+      "path": "art/canonical-visuals/industrial-toy-defense/objective_core.json",
+      "bytes": 40741,
+      "sha256": "ec248835df27bb02c2c4de324fc575d7fdffb045d9c3bf0814a92628525805f8"
+    },
+    {
+      "path": "art/canonical-visuals/industrial-toy-defense/turret_fast_v1.json",
+      "bytes": 42058,
+      "sha256": "44f9233043272bfcdef12fbad8c7ffef5fc7fc700d14732aa757a6ebbb06019f"
+    },
+    {
+      "path": "art/canonical-visuals/object-product-contracts.json",
+      "bytes": 49459,
+      "sha256": "4bc2a2657e9b5086f820ece02bf502b8c781c9bdddd5dda711a27acc499c2184"
+    },
+    {
+      "path": "art/canonical-visuals/salvaged-frontier/barricade.json",
+      "bytes": 44897,
+      "sha256": "2cf485afb6bd7297a1ffccbb72c60f1e186706fe2eb47b0bcb24af407ba9cc52"
+    },
+    {
+      "path": "art/canonical-visuals/salvaged-frontier/damage_effect.json",
+      "bytes": 33641,
+      "sha256": "171a1ec8690cc03b8c2429608ee5eb67680725a838e122d3f72cb8b9c3401ceb"
+    },
+    {
+      "path": "art/canonical-visuals/salvaged-frontier/enemy_standard.json",
+      "bytes": 54567,
+      "sha256": "8482f9d1c4f09d78e86b3c81e48b71ef5128321e92937a79a6913607424c7056"
+    },
+    {
+      "path": "art/canonical-visuals/salvaged-frontier/floor_module.json",
+      "bytes": 35215,
+      "sha256": "0d7c6cfa61381b9fc75f146c48f23e00070321054796e5bda22f1659cc4df46d"
+    },
+    {
+      "path": "art/canonical-visuals/salvaged-frontier/objective_core.json",
+      "bytes": 43251,
+      "sha256": "b55699df5fe1eb6e73ce5e61992593a261b064edd8be1b59ef6b6ecbdc9bec9c"
+    },
+    {
+      "path": "art/canonical-visuals/salvaged-frontier/turret_fast_v1.json",
+      "bytes": 44608,
+      "sha256": "cb716f4cfb75a72048cd7935632e103757aa069a6b35388ec3df1a0b7d601b74"
+    },
+    {
+      "path": "art/canonical-visuals/source.json",
+      "bytes": 142954,
+      "sha256": "b26432ba320eab7d4c4dbff5929625a2dcc040b9f785ea3e239678d64c5535a5"
+    },
+    {
+      "path": "art/decision/founder-direction-decision.json",
+      "bytes": 3011,
+      "sha256": "5da3db22f2c51a52780a171b80d5fe599bc5e7c387fc00b6be9d7ae59c3fa959"
+    },
+    {
+      "path": "art/decision/selection-decision.template.json",
+      "bytes": 392,
+      "sha256": "213f635d44bd94e25ce64887eb4866969e760b04131a1e03a1a0556f800dda49"
+    },
+    {
+      "path": "art/decision/territory-selection.md",
+      "bytes": 1657,
+      "sha256": "f35a3be29a612e853b939834c61669a350689d291f9eae76ece8c551d451c62b"
+    },
+    {
+      "path": "art/lighting/lighting-profiles.json",
+      "bytes": 7063,
+      "sha256": "8e3db2df064ac33f79703e21aa702709a7162fa43b56d07f706e3af03647e085"
+    },
+    {
+      "path": "art/materials/material-rules.json",
+      "bytes": 6630,
+      "sha256": "41fadb667eb50a2252e6721649afee1b38b98a667ea7c2051f5f465ad9896b83"
+    },
+    {
+      "path": "art/palettes/faction-palettes.json",
+      "bytes": 986,
+      "sha256": "c2890d3b407adde66df8e0418eba54d452e334e3d5e7df6ba36c78b290fb3b25"
+    },
+    {
+      "path": "art/palettes/semantic-palette.json",
+      "bytes": 3694,
+      "sha256": "10898d004894a0bdd45f69c2dbdf72f079ab41c455f0016f5f7867ded7e0225c"
+    },
+    {
+      "path": "art/precanonical/examples/defense-barricade-small-brief.json",
+      "bytes": 5714,
+      "sha256": "998a0df1988193182dacf2ac877882b87d69596535f67ce64c10c5028ffb7d74"
+    },
+    {
+      "path": "art/precanonical/policy.json",
+      "bytes": 2902,
+      "sha256": "befd65dbd9ca4192c96d705582e92e4311d20723730d05c2fd29d1be6a2e80f9"
+    },
+    {
+      "path": "art/qa/task-protocol.json",
+      "bytes": 3108,
+      "sha256": "01b3b44442d69594429fbd4f914392a90eb4686e3c66dc72b6b7a3b525d9779f"
+    },
+    {
+      "path": "art/qa/templates/blind-map.template.json",
+      "bytes": 291,
+      "sha256": "b6977146514f9eb49a8b4028e5d708da7a74a453e38e4622df860b3a20bbd83b"
+    },
+    {
+      "path": "art/qa/templates/performance-report.template.json",
+      "bytes": 2826,
+      "sha256": "ff490c52109f46cdb026c7919dc3b6e71a63c665ad8ae5c654ae561be7dd5442"
+    },
+    {
+      "path": "art/qa/templates/reviewer-submissions.template.json",
+      "bytes": 287,
+      "sha256": "9c236a51db2a06e99a60fc61a05f56e0ed99952c4a46ea030b2692f5e5763575"
+    },
+    {
+      "path": "art/qa/templates/studio-report.template.json",
+      "bytes": 5711,
+      "sha256": "9600a210e6f653ca1caa751199ef6a0e9a546a183a9e9158ce87131f58c55e84"
+    },
+    {
+      "path": "art/qa/templates/studio-simulator-report.template.json",
+      "bytes": 2743,
+      "sha256": "a90d5ea7fb44b270a748a577556edfdf6766d124c941b08f1d2504800b3077bf"
+    },
+    {
+      "path": "art/qa/visual-rubric.json",
+      "bytes": 3299,
+      "sha256": "af81576670590f280f1ca4fae0e0c0caa59247b4bc880b7ac4cb0f67af218df7"
+    },
+    {
+      "path": "art/references/approved/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "art/references/approved/industrial-toy-defense-concept-v1.md",
+      "bytes": 1584,
+      "sha256": "b5b63ff2874b707c081faf240764c0202200421569f490a678d096897b9e7784"
+    },
+    {
+      "path": "art/references/approved/industrial-toy-defense-concept-v1.png",
+      "bytes": 2044542,
+      "sha256": "8b544a0ce2cf2e76d75cdb0ca902291ef37369dd5eaaa74e93da2a4c13bc65d4"
+    },
+    {
+      "path": "art/references/boards/clean-tactical-diorama.md",
+      "bytes": 2775,
+      "sha256": "fe4e6f0f63822adde535842e3ed77346178386db28367c5aa3c365d8337f7625"
+    },
+    {
+      "path": "art/references/boards/industrial-toy-defense.md",
+      "bytes": 2953,
+      "sha256": "1038f8b339509eb0659f77bd986182c352a38ffc3b74e9fc023d1deba6233e37"
+    },
+    {
+      "path": "art/references/boards/salvaged-frontier.md",
+      "bytes": 3210,
+      "sha256": "ac6b8b96b8275b29c0ef3b999832a0a8e4da19234393c1dd52e739701c168aad"
+    },
+    {
+      "path": "art/references/provenance.json",
+      "bytes": 26477,
+      "sha256": "9b62bf4dbdbea9e7369b01161338193401fe7a10750f37b3077da5b0058f479c"
+    },
+    {
+      "path": "art/selected/salvaged-frontier-constitution.json",
+      "bytes": 38331,
+      "sha256": "1a7ea88c2d06be01530b6e02b70b6f9dc176f5b74d0cb98f4d565b8a322a9491"
+    },
+    {
+      "path": "art/shape-language/anti-examples/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "art/shape-language/positive-examples/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "art/shape-language/rules.json",
+      "bytes": 2652,
+      "sha256": "76fcd0eaaace7f34d7fb88fdc6470315518efd8e586649393ceb32356a7addc7"
+    },
+    {
+      "path": "art/territories/clean-tactical-diorama.json",
+      "bytes": 4660,
+      "sha256": "7630f436fbcff05e5761adcbf2f0c70faec1eb41b12340e7c42c5cc75f61adec"
+    },
+    {
+      "path": "art/territories/industrial-toy-defense.json",
+      "bytes": 4534,
+      "sha256": "2e93bda4c5069f1f800cd14994bf1afa0aa5e89d514ef2675fe06deb25cd3f66"
+    },
+    {
+      "path": "art/territories/salvaged-frontier.json",
+      "bytes": 5083,
+      "sha256": "3b59d12273d24e5aea3b7a06611aafffad495f482a1696dc4a1c1fc41749f3d6"
+    },
+    {
+      "path": "art/transfer/turret-fast-v1-review.json",
+      "bytes": 363,
+      "sha256": "6a5953aba6d1a988d53a84f7669ba51cfb57ac78d7c975bd2320b2faede17297"
+    },
+    {
+      "path": "art/transfer/turret-fast-v1.json",
+      "bytes": 5119,
+      "sha256": "39e5f42a92e827db15e65e2b15f9896cfe49ec16acb3361ab68d2b11849c23ab"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/asset.json",
+      "bytes": 21784,
+      "sha256": "f0c7e306bd4c20a1ba6a7fb44181ee30997ad6fa42dfb7834edd6d21369bbf06"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/build/asset-update.fbx",
+      "bytes": 159052,
+      "sha256": "cd1e431ef61b3247999e1fecfb4cd7a8c9ce93f8d26aec867772d12d40f756f5"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/build/asset.glb",
+      "bytes": 143680,
+      "sha256": "b2975cab97358686d0b1aa86c1b960f595a8f9c0a60759929c3fa9ae45143cd7"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/build/blender.log",
+      "bytes": 8752,
+      "sha256": "9498c2bafdeb51cfe6f84ef16a5a520e603551516d3c5a6cd7458b82c19088c0"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/build/compile-result-final.stdout.json",
+      "bytes": 1834,
+      "sha256": "1649aa5d15a6d82a84c8071eebb2c35356c509aa6e26d2ee96661de0675146e7"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/build/compile-result.json",
+      "bytes": 1685,
+      "sha256": "534cb7f65015c70c1fcc48b0abe0ba74e41381141fc5c71fe05675b6d0908ee0"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/build/geometry.json",
+      "bytes": 11153,
+      "sha256": "85404393edaa275979381c345f600fadf0c2f4fd876fbedcb1650e6f3b512f8b"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/build/manifest.json",
+      "bytes": 25290,
+      "sha256": "ffffe544262be211ba2a50d2e41fdb25f3e0f649c069e095dc4015bb636264e5"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/build/provenance.json",
+      "bytes": 925,
+      "sha256": "865774d5fb3402947f0cfe87df39a22cf0b7557b2bc2935615085818013e9ad2"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/build/renders/front.png",
+      "bytes": 92674,
+      "sha256": "8c4496bb8b74c396710c89f19bb16423e4cdb3cb27a387130902e7b5075426e1"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/build/renders/left.png",
+      "bytes": 60947,
+      "sha256": "2b22b4ed15eb0aba5ebf0688a949464f8c4645a7b6cf063dd41c1365947b2045"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/build/renders/mobile_distance.png",
+      "bytes": 157026,
+      "sha256": "94efde35b8595a16714f6c020d40de431018e20394fc06d25c7ba7c1dbd85bca"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/build/renders/perspective.png",
+      "bytes": 191613,
+      "sha256": "616dca6b34bb3496dc1dc13e20b503849bf42b54a0f5dc7d48100dbfa683ee08"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/build/renders/rear.png",
+      "bytes": 85109,
+      "sha256": "fe14b11572f7283164dea899b910dfaa0d2d4d508360779186c063c059f1ee30"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/build/renders/right.png",
+      "bytes": 52656,
+      "sha256": "f4fc6ea9fe23824a9b1447a3be9402daf3ec989c5cc754ceecd2929fe57c66b2"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/build/renders/silhouette.png",
+      "bytes": 37008,
+      "sha256": "777ec0b03c3ab6c698fafaa27ffac16f4bafb903c26e23e2ed26c76111815be7"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/build/renders/top.png",
+      "bytes": 178506,
+      "sha256": "5644eaf30201f85b0f70c696a107b75d1ac819a19e26e3a2b76d98937410e6f7"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/build/source.blend",
+      "bytes": 135639,
+      "sha256": "72d35121cda394a0c386024bcbefaf09705387a85d595b61e2df26d79b21e627"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/evidence/revision-19-authority-migration.json",
+      "bytes": 848,
+      "sha256": "ba8201547ea7406fa3a55a57e941f4af81dc0d0055c9122fd909bb2511e3b067"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/evidence/visual-reconstruction-v15/report.json",
+      "bytes": 5946,
+      "sha256": "5d9bf853267903029336bc1906681f0a86662bd58f4fc37c428e7065f34ac4ff"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/evidence/visual-reconstruction-v15/report.md",
+      "bytes": 5818,
+      "sha256": "cb1f296c49e7aab6bf1a0a5ac0581acff1db4df52b77c9465e53ffb0190b321a"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/precanonical/requests/defense-barricade-web-001/brief.md",
+      "bytes": 905,
+      "sha256": "3faddb297fc6d54942d5c0ed97941649dca756991b768233c3aa54adabf298c4"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/precanonical/requests/defense-barricade-web-001/negative-constraints.txt",
+      "bytes": 1266,
+      "sha256": "ccbe5e44bb7fd15e730681d305ec8bbb7171e0af08e81257cf0578750ae5cf65"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/precanonical/requests/defense-barricade-web-001/prompt.txt",
+      "bytes": 5795,
+      "sha256": "da5b9c4523824f9a18b7eec7d8e707a3da8ecf4d5a2c4cc6fb77b2f5e12f4567"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/precanonical/requests/defense-barricade-web-001/request.json",
+      "bytes": 2655,
+      "sha256": "c330478ad9f027216ec3d697d4aae617cefbeaf9e798c2170bbe1705859cdecc"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/precanonical/requests/defense-barricade-web-001/requested-states.json",
+      "bytes": 1146,
+      "sha256": "3f55def6cebf3cf96477e2d61c1fca8fb8f0b26bf55a3126afcfe728dfdf1b5b"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/precanonical/requests/defense-barricade-web-001/requested-views.json",
+      "bytes": 132,
+      "sha256": "c8e9e892ac587eb165916785b5c40401ed35b91ce55068027d00f72754054f33"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/precanonical/requests/defense-barricade-web-001/source-brief.json",
+      "bytes": 5714,
+      "sha256": "998a0df1988193182dacf2ac877882b87d69596535f67ce64c10c5028ffb7d74"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/review.json",
+      "bytes": 1407,
+      "sha256": "08eb8b9f18fe034bcbbb16cf82e4d38214d120537ff1115636b01a5068b3f4f2"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/reviews/revision-15.json",
+      "bytes": 4867,
+      "sha256": "845bff36565f5a5d98f6ce2773928dae36848396df4c0212c929d2815976dd3f"
+    },
+    {
+      "path": "assets-3d/registry/staging.json",
+      "bytes": 75,
+      "sha256": "30f95c2335af1dae38e73bda75191ac410dacea28617f1150b615724237631ab"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/build-report.json",
+      "bytes": 21528,
+      "sha256": "987da7e4c206dc72e6106f9dae28c3c3f8cbcd4a196455882c24def9f32fa46c"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/clean-tactical-diorama__calibration.blend",
+      "bytes": 273324,
+      "sha256": "ee6adbb0c9bd8a936181ef48d0d16e2f3c30ea402589349135c9671912f6aa04"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/exports/barricade/barricade__critical.glb",
+      "bytes": 72300,
+      "sha256": "2a8cec41b16865cc77d7dd4a3f36ff73564714aeb331e2e8921b879bf32a5172"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/exports/barricade/barricade__damaged.glb",
+      "bytes": 71404,
+      "sha256": "516051d9d4abcad91ea94357b58dd6c2d62310dd79498250f300bd36c05c5ff8"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/exports/barricade/barricade__intact.glb",
+      "bytes": 70632,
+      "sha256": "ff2c7397d656f954ec9c59db33c562496206c6d7286dcd63480285285ad88707"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/exports/damage_effect/damage_effect__critical.glb",
+      "bytes": 8372,
+      "sha256": "7e75987a6f05253986e6f8abd6570b6f4f9f69545b6af59be8eadf518d7fc480"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/exports/damage_effect/damage_effect__damaged.glb",
+      "bytes": 7820,
+      "sha256": "9a22876b1cc02b9f6202208cf85031ee9e0782a11932600ce2dcd025335dad48"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/exports/enemy_standard/enemy_standard__critical.glb",
+      "bytes": 86728,
+      "sha256": "afe1e748a71e8526ca6046bf49291cc17222de109768fb5d0e4a59bb6c2128c8"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/exports/enemy_standard/enemy_standard__damaged.glb",
+      "bytes": 87928,
+      "sha256": "5afb1d1c0904693081714f6e73d2ffc3b0d7353be485dad2b08a9c7936ebd445"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/exports/enemy_standard/enemy_standard__intact.glb",
+      "bytes": 86764,
+      "sha256": "83fd1516e3e42864e421d65906856ef11db30cde08a0e4fdabed504bc0a20625"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/exports/floor_module/floor_module__damaged.glb",
+      "bytes": 36860,
+      "sha256": "a453d1aa8e4ee285b1f74bf97a6768d260d90711a4d346b1585cc021a4a653b5"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/exports/floor_module/floor_module__intact.glb",
+      "bytes": 36864,
+      "sha256": "d0f8da477cf5e71ea85a417fd6eb4b814b8c475f93ec77c598d13b20e05d8f5e"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/exports/objective_core/objective_core__critical.glb",
+      "bytes": 126752,
+      "sha256": "9540eff8ead8552613f0ad13cb5111218c1a7ab02d217547deacd7a4d134fe1c"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/exports/objective_core/objective_core__damaged.glb",
+      "bytes": 130520,
+      "sha256": "7b61dd40611747431fb466aa8c245c4afaef85e5b6241d555be1ae8910abb707"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/exports/objective_core/objective_core__intact.glb",
+      "bytes": 131972,
+      "sha256": "1853a61fd7e8525fd227ad0c3ccce563e374bbf87379dd4c750e60dd2972b584"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/renders/review/clean-tactical-diorama__barricade__critical__hero.png",
+      "bytes": 835576,
+      "sha256": "3693a8eada0fbf5424cbdc440cc27d5d83685fc7a1e2e48e386e8bb6608115c7"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/renders/review/clean-tactical-diorama__barricade__damaged__hero.png",
+      "bytes": 828225,
+      "sha256": "0890e279ab603ba4bce3076611aed4bf9eb29c2eaf95ecfa9140e45e18831a4a"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/renders/review/clean-tactical-diorama__barricade__intact__hero.png",
+      "bytes": 826178,
+      "sha256": "11ed6ff7a452adac4975c646e80cc63895da8a83312fee4ec0762a405b4d2be9"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/renders/review/clean-tactical-diorama__damage_effect__critical__hero.png",
+      "bytes": 778157,
+      "sha256": "7ef32bb64f1ef5fa5abcc96693bf8fba2687b16b6f35f4072fb5581644bd03c0"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/renders/review/clean-tactical-diorama__damage_effect__damaged__hero.png",
+      "bytes": 774802,
+      "sha256": "e11517f099f1e8d8cfe6ded2db5133dcd159cbcbdd182f2f227d386a1b9a9744"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/renders/review/clean-tactical-diorama__enemy_standard__critical__hero.png",
+      "bytes": 787970,
+      "sha256": "0a1031f32995ae8bb0c6ce6cce9ae81cb6d57383b584359452d1906390278ddc"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/renders/review/clean-tactical-diorama__enemy_standard__damaged__hero.png",
+      "bytes": 800979,
+      "sha256": "5e96f18d60b2beb8f00815f302ed50768ee7f1e1a9538aecfaabe91760419843"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/renders/review/clean-tactical-diorama__enemy_standard__intact__hero.png",
+      "bytes": 801676,
+      "sha256": "5ead6ddfd60c5499aaefe6f863735cb71e89aa60e75a8933d37c6bef4c9f87dc"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/renders/review/clean-tactical-diorama__floor_module__damaged__hero.png",
+      "bytes": 852517,
+      "sha256": "14e1f7e719f82cfc90cec51663216e78ffe9a44bcf1d99b5c386ce4a51b54cec"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/renders/review/clean-tactical-diorama__floor_module__intact__hero.png",
+      "bytes": 851296,
+      "sha256": "550aab83761a7bb309cef23daa0e0de793fac4a243f32b48643ce049127fbb9f"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/renders/review/clean-tactical-diorama__objective_core__critical__hero.png",
+      "bytes": 827008,
+      "sha256": "07840890d6f16c8fd767dd0a321acfa8903a43b20917de86fa034aacde710951"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/renders/review/clean-tactical-diorama__objective_core__damaged__hero.png",
+      "bytes": 814554,
+      "sha256": "e85ef470e98b5a0d4486cafa6f227f5eb49afcc5246a27c543971236f84f2140"
+    },
+    {
+      "path": "build-iteration-v5/clean-tactical-diorama/renders/review/clean-tactical-diorama__objective_core__intact__hero.png",
+      "bytes": 811259,
+      "sha256": "71c1c9fd8a53c135555327f91091c47642f48ec98eae27cc19deade9cc59b6b4"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/build-report.json",
+      "bytes": 21780,
+      "sha256": "e08547f9dafcc02c99f222a6f1b472c783cc75a09034db8c2b34aa7f5520eb52"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/exports/barricade/barricade__critical.glb",
+      "bytes": 114000,
+      "sha256": "947fccff244036e8b4f579a02efeb46f5b864457ec39514b36e8a7c427ce8e80"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/exports/barricade/barricade__damaged.glb",
+      "bytes": 111864,
+      "sha256": "a6faeb9d8bb1f963d9ae7294c8e5e0294f7e1f5e60e0663700ab7e3ddfc72962"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/exports/barricade/barricade__intact.glb",
+      "bytes": 107388,
+      "sha256": "e0104f20616620456cd493e89c80de9fcea27f2a84df6ea6eadc5ab3c51aa8fe"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/exports/damage_effect/damage_effect__critical.glb",
+      "bytes": 12256,
+      "sha256": "c8758dc1ee8ca8f50522f01fa170e035192298a565b32d49900e36c62cbc78f8"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/exports/damage_effect/damage_effect__damaged.glb",
+      "bytes": 12140,
+      "sha256": "a63b6f3cdc6c0eeff4abd0797314d390378fd8483194d54450e25ef991d6443b"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/exports/enemy_standard/enemy_standard__critical.glb",
+      "bytes": 143852,
+      "sha256": "8dee21efc795c4d61ce9c6d44f80a9cae019c6b7985b90fe6c1711fb0b2aaa63"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/exports/enemy_standard/enemy_standard__damaged.glb",
+      "bytes": 140516,
+      "sha256": "8b28dee11db698910743b6dc822c711d99fa03de6543cff5c1dd6feae8b743ff"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/exports/enemy_standard/enemy_standard__intact.glb",
+      "bytes": 136544,
+      "sha256": "d83a515fc8d0916719f435d599888da57dff01e83ee4bb6fccfa094d115f7b55"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/exports/floor_module/floor_module__damaged.glb",
+      "bytes": 56564,
+      "sha256": "9bcfcf4c49b01f9da32bd3c1713b8b26434efa35e4bb78651d2e3d9fdb0b1f95"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/exports/floor_module/floor_module__intact.glb",
+      "bytes": 52460,
+      "sha256": "5015f30fbdbbe2f9274ab2a57c316a17111977f7e1060b75164f74dd197d69f5"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/exports/objective_core/objective_core__critical.glb",
+      "bytes": 236644,
+      "sha256": "13e521543fe630282afa4fb6f8d934664189e51f5c9d55bd63873b4b227d0fdb"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/exports/objective_core/objective_core__damaged.glb",
+      "bytes": 232204,
+      "sha256": "5d4940b08fda6db8004a4dc3984f39045c8191a97885821951a23e3f41d65a08"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/exports/objective_core/objective_core__intact.glb",
+      "bytes": 227744,
+      "sha256": "b1f65b26d7c22faad8d5f922c064f7c77e70ee47cff6afc8dd71b2031fc746fa"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/industrial-toy-defense__calibration.blend",
+      "bytes": 383310,
+      "sha256": "8453c38c81cdf9a3d768c524950f2c58dea706474992bc2892d3efddeca196e6"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/renders/review/industrial-toy-defense__barricade__critical__hero.png",
+      "bytes": 846079,
+      "sha256": "4f678b8b1adec6a19185a0b610b8d5bad14b3541a072e689bb543bb01ce08490"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/renders/review/industrial-toy-defense__barricade__damaged__hero.png",
+      "bytes": 847193,
+      "sha256": "e3f66daa19a52ed0c6454b6464c4fa649916df0bd40a4df183e7bf7922cc5c8a"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/renders/review/industrial-toy-defense__barricade__intact__hero.png",
+      "bytes": 848168,
+      "sha256": "4b2b11fc0933d24825dbfc2e33d3b6774f356769d09cd217984ff59c3f5eaa6f"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/renders/review/industrial-toy-defense__damage_effect__critical__hero.png",
+      "bytes": 781535,
+      "sha256": "c6f42f62d5af70e6900cea671c9180916220fdca67fd842f72aea1ee502048d6"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/renders/review/industrial-toy-defense__damage_effect__damaged__hero.png",
+      "bytes": 779675,
+      "sha256": "b211971eeef65f960a42f621f77bd044ffbce5dcb2b79f4f2a8b79db84ad8374"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/renders/review/industrial-toy-defense__enemy_standard__critical__hero.png",
+      "bytes": 793579,
+      "sha256": "b050f4be26270bea75e3def67e1067b269557f220eb69e1246db6f7c57a5232c"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/renders/review/industrial-toy-defense__enemy_standard__damaged__hero.png",
+      "bytes": 808241,
+      "sha256": "28b90e765eaea64e19252c838fd2e750ac227cd22ca403eb7141993fb5d9b6e0"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/renders/review/industrial-toy-defense__enemy_standard__intact__hero.png",
+      "bytes": 809795,
+      "sha256": "d050b85fa017baccdb8bf8f502ef1bf63322f51c6c358d45d4a0d1932c211877"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/renders/review/industrial-toy-defense__floor_module__damaged__hero.png",
+      "bytes": 821781,
+      "sha256": "faa181cbea3577c3842553ba9dcecdaa2163416ca9736a9d7b6bcf7d5a2a1afd"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/renders/review/industrial-toy-defense__floor_module__intact__hero.png",
+      "bytes": 826288,
+      "sha256": "a0c49d7366ca5d863cd7d3740627292fc95fa61fe5e9dc1d2e7eda0027756137"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/renders/review/industrial-toy-defense__objective_core__critical__hero.png",
+      "bytes": 844277,
+      "sha256": "e32d0cdd60ed9825a83f27d5a41d1c8deb12288612f6f11ca56c17a501643f88"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/renders/review/industrial-toy-defense__objective_core__damaged__hero.png",
+      "bytes": 834344,
+      "sha256": "5657e54974afa11f4a89535ef1f737a74d414af0d1872dca793a8c64912c6091"
+    },
+    {
+      "path": "build-iteration-v5/industrial-toy-defense/renders/review/industrial-toy-defense__objective_core__intact__hero.png",
+      "bytes": 824067,
+      "sha256": "8df9d59a374007adb1d1982605d3c5caaaa918a3f5ce8c035aae3eabc3b21dc8"
+    },
+    {
+      "path": "build-iteration-v5/review/contact-sheets/clean-tactical-diorama.png",
+      "bytes": 485473,
+      "sha256": "a51c447b0bca0b45575772de374c3776b70e1cabf925e32e4d800e3bbcc2acb4"
+    },
+    {
+      "path": "build-iteration-v5/review/contact-sheets/industrial-toy-defense.png",
+      "bytes": 500996,
+      "sha256": "79e8a65375fd476260a1c599edc0b7bb959a831691b9aed844d61be84a767a40"
+    },
+    {
+      "path": "build-iteration-v5/review/contact-sheets/salvaged-frontier.png",
+      "bytes": 508084,
+      "sha256": "a04e118585bba927bc9cd16499a6f7fbfab36ef64224f7b8dd7baf851427ed1f"
+    },
+    {
+      "path": "build-iteration-v5/review/index.html",
+      "bytes": 37940,
+      "sha256": "0f094e456b2223df4133b7868bdf3d3aad47b2272baa041a8b6bb473353f7e2d"
+    },
+    {
+      "path": "build-iteration-v5/review/review-manifest.json",
+      "bytes": 15324,
+      "sha256": "5ead0c9a2352cd66750d2aa48bb4b5231d32659635f640a2772f2d7d67a589c8"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/build-report.json",
+      "bytes": 21849,
+      "sha256": "fca15bcf0f457994aa791f0e0cabeb33846a3eed690dcf8c6183d54a05700b4c"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/exports/barricade/barricade__critical.glb",
+      "bytes": 63684,
+      "sha256": "79405ee52c398482824cb64d46c332b2dcffc4b7a938e3c73fb54cbeb40cf2f8"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/exports/barricade/barricade__damaged.glb",
+      "bytes": 63644,
+      "sha256": "ae54b288eca1ecca8288778a4aeb8d7e315e3ab4aac4cf4e47e6d3c5c0883568"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/exports/barricade/barricade__intact.glb",
+      "bytes": 63604,
+      "sha256": "55f6f4e9f629ed882e8a59dad4f7e784c3179e35b84208c93d047ed797c2fa06"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/exports/damage_effect/damage_effect__critical.glb",
+      "bytes": 10400,
+      "sha256": "a81f568fd97e4b7de613beb50210097d0e92bb3320aa22cd0d51c8d59af02db1"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/exports/damage_effect/damage_effect__damaged.glb",
+      "bytes": 9848,
+      "sha256": "4cab0be25b5cdf5aa1e858297dc081cdab955d1c4703feda32c45ebe25562fe1"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/exports/enemy_standard/enemy_standard__critical.glb",
+      "bytes": 68688,
+      "sha256": "20b41359125fb962bdf9bd99f18169bc4564c5467647b38afaad76846f7cb496"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/exports/enemy_standard/enemy_standard__damaged.glb",
+      "bytes": 69352,
+      "sha256": "271945d3d0936796e4fdb267166392388bb3de4a78207dd2f35156245b738296"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/exports/enemy_standard/enemy_standard__intact.glb",
+      "bytes": 68724,
+      "sha256": "d53658ec8560225aab548ce4d726cbba15d9f384e9981fb5b286cb8b41689865"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/exports/floor_module/floor_module__damaged.glb",
+      "bytes": 43164,
+      "sha256": "3b2b7cf4ca251893d93c92e4fbd93e527dfcd4f787ada8346b70b305da700bb8"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/exports/floor_module/floor_module__intact.glb",
+      "bytes": 43096,
+      "sha256": "2ad8b55e695de70d0e2dc17e41625edd31ee58d783999c2602f9ed9dd51caae1"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/exports/objective_core/objective_core__critical.glb",
+      "bytes": 116912,
+      "sha256": "c1ff6885bed1a8971de92c267243d0404b7ac55e1675d464160b1ea6a2b11a58"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/exports/objective_core/objective_core__damaged.glb",
+      "bytes": 117000,
+      "sha256": "6860c42eb6d1a21c124642ec748f1b3fa0ceccc0e348f53527a3d227fac45d60"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/exports/objective_core/objective_core__intact.glb",
+      "bytes": 116368,
+      "sha256": "aae19fd6474f77212479e9bf17452f969dab3d72003a45cc08d40886915a9044"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/renders/review/salvaged-frontier__barricade__critical__hero.png",
+      "bytes": 828588,
+      "sha256": "f80b29d40d5b4a3396f2596e90aa8bfa6220e22cf3ecd4ae91f001b879587731"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/renders/review/salvaged-frontier__barricade__damaged__hero.png",
+      "bytes": 828898,
+      "sha256": "d0cfd8991c698ecd24e281fd2159fef9ba4ec601c3504ebdb28fb6757b801152"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/renders/review/salvaged-frontier__barricade__intact__hero.png",
+      "bytes": 829160,
+      "sha256": "38e69aff59d39d1889896dec6fd268e4da8ef75f631ba0bc3a346db8efe32e58"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/renders/review/salvaged-frontier__damage_effect__critical__hero.png",
+      "bytes": 775258,
+      "sha256": "4e398588dabbf53f63f7cf32c877eb117c9ad45c705a5cdd046a9427c79aaa39"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/renders/review/salvaged-frontier__damage_effect__damaged__hero.png",
+      "bytes": 775082,
+      "sha256": "2ee994b1f11ae714e30c0bfa3d4a8e1174c4730847cc99600cb3a063055a43bb"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/renders/review/salvaged-frontier__enemy_standard__critical__hero.png",
+      "bytes": 791612,
+      "sha256": "f2059f1d0a9627c272d2fb4aaae987d88d1f2bc5d18fa5b2dc8b65f03aeac9e5"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/renders/review/salvaged-frontier__enemy_standard__damaged__hero.png",
+      "bytes": 797988,
+      "sha256": "a8eb197db0a2327b054f3cb495704404924878c195cf47d135f21ae0339f804f"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/renders/review/salvaged-frontier__enemy_standard__intact__hero.png",
+      "bytes": 799450,
+      "sha256": "57206e2ded46bc5528ab4ba6b344e70cf5357d106776f6684856107242bf62cf"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/renders/review/salvaged-frontier__floor_module__damaged__hero.png",
+      "bytes": 815779,
+      "sha256": "f7b66e58c789ba2ba81817ffc2aea2760d85de4e17692ba90de83b0b4c60ad01"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/renders/review/salvaged-frontier__floor_module__intact__hero.png",
+      "bytes": 840472,
+      "sha256": "d21af9ed9f07c51af97f74346600ad0a8ebe9df1873ce8e3686cc2ef656b2f7f"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/renders/review/salvaged-frontier__objective_core__critical__hero.png",
+      "bytes": 810099,
+      "sha256": "5be4e78c464c3a6360481da541c7d0f902a2d1720f52cc6515cfa0e673811d52"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/renders/review/salvaged-frontier__objective_core__damaged__hero.png",
+      "bytes": 816754,
+      "sha256": "fc138d75627b997fccf6c49281028e13837a48988aadb0a465f8c1474ea8b513"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/renders/review/salvaged-frontier__objective_core__intact__hero.png",
+      "bytes": 815874,
+      "sha256": "09edd41935f2829d80faf0aa8e3e8ed800711035e15a74ccb05e90801e112ba4"
+    },
+    {
+      "path": "build-iteration-v5/salvaged-frontier/salvaged-frontier__calibration.blend",
+      "bytes": 281051,
+      "sha256": "0eb11bbc25ad92d3cece6b2f531b8eacfc99877f47e3a6536ff4a34a5d1fdcd4"
+    },
+    {
+      "path": "docs/ART_LOCK.md",
+      "bytes": 1884,
+      "sha256": "c6438cecabda09a3576c38fa20a03da4dbbfa98c8f9b89c049d50de001e3c267"
+    },
+    {
+      "path": "docs/ASSURANCE_MODEL.md",
+      "bytes": 5401,
+      "sha256": "7a0b5fd4310852e5c57fbfdcfbb8a28407fcc293553a9eae99f95e63f300d2fa"
+    },
+    {
+      "path": "docs/AUDIT_REMEDIATION.md",
+      "bytes": 2918,
+      "sha256": "e92c2c39191c8c43d95df36b664556d8c496bb11a8dbc3ffc1007746c5d45875"
+    },
+    {
+      "path": "docs/AXIS_AND_UNITS.md",
+      "bytes": 3155,
+      "sha256": "0000d020ee5c1ae79c56f5e33323e60e4a5c5006b7805d0d548553163ca95125"
+    },
+    {
+      "path": "docs/BLENDER_CONTRACT.md",
+      "bytes": 4539,
+      "sha256": "7a57c9c43abf686f5113cd6ce997fedc58a77b5f13fedc826a6f254653e2f2dd"
+    },
+    {
+      "path": "docs/BLENDER_MCP_WORKBENCH.md",
+      "bytes": 10616,
+      "sha256": "8534e9ac9d8b6f268ba40ab83244b8b3c3fd999e84600d54207fb441532b4b5d"
+    },
+    {
+      "path": "docs/BLIND_STUDY_PROTOCOL.md",
+      "bytes": 4881,
+      "sha256": "966362bef809eaef110126fe8491617fa11ca3ea0094b66f82ea9cb20a37f4e2"
+    },
+    {
+      "path": "docs/CANONICAL_VISUAL_DEFINITIONS.md",
+      "bytes": 10460,
+      "sha256": "5153c78c880fe8112e404dbe69bd01f92404ae59c454d3e29a7ba95a70f718ca"
+    },
+    {
+      "path": "docs/GOVERNANCE_AND_RISK.md",
+      "bytes": 4564,
+      "sha256": "add2ff2fa3f62c1ec0767adc4105d174f8c674f388762d153500b7fea4ea2c93"
+    },
+    {
+      "path": "docs/INTEGRATE_WITH_R3D.md",
+      "bytes": 558,
+      "sha256": "cf42019d290c84fbabb1a51fa171d90b68bead8f3f2f74ec16599e6de3ef72c3"
+    },
+    {
+      "path": "docs/MOBILE_EVIDENCE.md",
+      "bytes": 3155,
+      "sha256": "91d6cd655bcb22a01b0516a596cd0e18b2710707ce4de00d12ce251bea86985e"
+    },
+    {
+      "path": "docs/OBJECT_REGISTRY.md",
+      "bytes": 2570,
+      "sha256": "1286fbd8571be7d399d7f5318ddb1d2bc4e97a2856c8ccafea4675ee2abbdf1c"
+    },
+    {
+      "path": "docs/PRECANONICAL_WEB_WORKFLOW.md",
+      "bytes": 19215,
+      "sha256": "228f31dff7238cf59268da9109949d8cd5981b7ebf42451f15bdc626955e6a86"
+    },
+    {
+      "path": "docs/README.md",
+      "bytes": 3313,
+      "sha256": "ac0b5c236ac6b2b40955ff45b348866ecf1ec55b8bef302a5bf3bdf4e827e4b7"
+    },
+    {
+      "path": "docs/RECIPE_EXECUTION_CONTRACT.md",
+      "bytes": 1388,
+      "sha256": "a63852e227a60ced450dfe27116d6ae226fc453fa2dd1cf131801dd68027f487"
+    },
+    {
+      "path": "docs/REFERENCE_POLICY.md",
+      "bytes": 572,
+      "sha256": "8fcc5ce8f1ac95eb422c9fc29fce0898080edc0c528a2a047c590620a683aea0"
+    },
+    {
+      "path": "docs/RESEARCH_SOURCES.md",
+      "bytes": 4759,
+      "sha256": "a1e18151e76a6a613f24cd5af68c5ad0338a30f621d0405072e268080d168b00"
+    },
+    {
+      "path": "docs/ROBLOX_TECHNICAL_ART_CONTRACT.md",
+      "bytes": 6163,
+      "sha256": "41079797172e0a9e3fe989bb87a011c93b2b2d19fe314b9e640a9a86c5a76b76"
+    },
+    {
+      "path": "docs/SALVAGED_FRONTIER_ART_BIBLE.md",
+      "bytes": 24780,
+      "sha256": "c4cd1b4a3f7d4f76be91e852d117d4b59882217181525531855f01ea593c14b2"
+    },
+    {
+      "path": "docs/STATE_ONTOLOGY.md",
+      "bytes": 5366,
+      "sha256": "36c0842e3bd79075e6b6a8049f8740e613fea21e0a07ce3d8e27d48c86308596"
+    },
+    {
+      "path": "docs/STATUS_CONTRACT.md",
+      "bytes": 3642,
+      "sha256": "751afe9fc889e225a4763caf2f97dcbf61aa962a21eed8b5326ddf1748feb9a0"
+    },
+    {
+      "path": "docs/STUDIO_GOLDEN_SCENE.md",
+      "bytes": 3496,
+      "sha256": "98dd6bf3eb0bfef583eeb1603243e60a261fd4060c13b8f3b3537aa1256be4c4"
+    },
+    {
+      "path": "docs/TRANSFER_PROOF.md",
+      "bytes": 2557,
+      "sha256": "9ecce83df684703eca4190d00e1b8db02b08a4aa9e7a0d99378b410e43dc79ea"
+    },
+    {
+      "path": "docs/V3_VERIFICATION_REPORT.md",
+      "bytes": 5867,
+      "sha256": "128a8b9d72c109bd4e3c880418bb059970a3598fba29cedeeff7a54b23f41299"
+    },
+    {
+      "path": "docs/VISUAL_METRICS_CONTRACT.md",
+      "bytes": 3756,
+      "sha256": "e292bda29819361ce53aff18e5fe5924d38d4accf78be4c768d2a95ce45f1fbb"
+    },
+    {
+      "path": "docs/VISUAL_QUALITY_AUDIT.md",
+      "bytes": 4536,
+      "sha256": "85267c9154acc6b8f7081d3edf490f77452e97b6236533d64ff7a4689bbab319"
+    },
+    {
+      "path": "docs/evidence/BLENDER_WORKBENCH_VERTICAL_SLICE_2026-07-17.md",
+      "bytes": 3695,
+      "sha256": "c21b70f57e7cce95fa316e26701697c88436d25940830d4d54976caded0d9370"
+    },
+    {
+      "path": "docs/objects/BARRICADE.md",
+      "bytes": 4152,
+      "sha256": "70b0ec8c11ea9cb5f1ca68026fe7adea476ed2a10e0469d8e35828dcde14f01d"
+    },
+    {
+      "path": "docs/objects/DAMAGE_EFFECT.md",
+      "bytes": 2974,
+      "sha256": "ffc780be9c405a4e6ecfed66f93f47fae545737574507bd299cef6fb9bf576ca"
+    },
+    {
+      "path": "docs/objects/ENEMY_STANDARD.md",
+      "bytes": 7251,
+      "sha256": "f00a42558e934e2a72082ae197703872c6f23e8a3aafbd52624689deac619726"
+    },
+    {
+      "path": "docs/objects/FLOOR_MODULE.md",
+      "bytes": 3071,
+      "sha256": "11ff64808928bc43d741d48a2095c940f4e730da36ce91f864bc3378f3f685c9"
+    },
+    {
+      "path": "docs/objects/OBJECTIVE_CORE.md",
+      "bytes": 3724,
+      "sha256": "aa6d8aba0e5f2f83b441532c4740de6475c6faf9bd55ef31d4b3486a1c3b6be6"
+    },
+    {
+      "path": "docs/objects/TURRET_FAST_V1.md",
+      "bytes": 3858,
+      "sha256": "49a36cf6d86b148dd5e1777d1e550fb048c8cfad466826f88f4bd7a622d04173"
+    },
+    {
+      "path": "evidence/blender/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/blender/archive/blender-verification-report__generator-0e1d1497a592.json",
+      "bytes": 5285,
+      "sha256": "0add24f39992bb37ad62976878f5aed6edc8a4753100982d208aee6fdd10da0c"
+    },
+    {
+      "path": "evidence/blender/archive/blender-verification-report__generator-6acfa4457680.json",
+      "bytes": 5285,
+      "sha256": "4f88e8342bf311fc2c9fdab3a56480410a66865b793525ae86bb95518ab5e4a1"
+    },
+    {
+      "path": "evidence/blender/archive/blender-verification-report__generator-9664a4007905.json",
+      "bytes": 5285,
+      "sha256": "995bb61a056ef90eb27a621aa5fcbae0a8e03a1bc2ad44aab1089f02963a3eaf"
+    },
+    {
+      "path": "evidence/blender/archive/blender-verification-report__generator-unbound.json",
+      "bytes": 5092,
+      "sha256": "4dcf8f253020edaa3a0612080c560b004f4d0e8b0e658268e9c517f699c6e5f1"
+    },
+    {
+      "path": "evidence/blender/archive/full-evidence__generator-0e1d1497a592.json",
+      "bytes": 443146,
+      "sha256": "31628c47d8090839a39aa92750fe34bb8f25ac7bba30db09d3ca3b110a54675f"
+    },
+    {
+      "path": "evidence/blender/archive/full-evidence__generator-6acfa4457680.json",
+      "bytes": 429455,
+      "sha256": "d2879e05717e7d08ba0ed6d52fd1f1656d36496fa312047f4cfd815769d73667"
+    },
+    {
+      "path": "evidence/blender/archive/full-evidence__generator-b0c892dae019.json",
+      "bytes": 443146,
+      "sha256": "475c48a1baa7ed3e1eebf99f10a2a769bd8a47aa9311dd577a277e5d94294ff1"
+    },
+    {
+      "path": "evidence/blender/archive/smoke-evidence__generator-6962af49a857.json",
+      "bytes": 116892,
+      "sha256": "fcae96fc4da48926519ebb10f1085dd4f0d1a70efcf594c877167d4de5f072a9"
+    },
+    {
+      "path": "evidence/blender/archive/visual-quality-report__generator-0e1d1497a592.json",
+      "bytes": 32528,
+      "sha256": "6a97e573fb2d7cf849295d6654b8a9a22ca2516f055d6a3683e8b4c13e749f8a"
+    },
+    {
+      "path": "evidence/blender/archive/visual-quality-report__generator-b0c892dae019.json",
+      "bytes": 33468,
+      "sha256": "ecab3588215411a10c60b074da20444a27de85d306572eb0aae85ae3b6835e85"
+    },
+    {
+      "path": "evidence/blender/baseline-v3/blender-verification-report.json",
+      "bytes": 5092,
+      "sha256": "01cf9bf275508e673e84d6a3be783eb0ab6efda5f7051114368b1e85acac580a"
+    },
+    {
+      "path": "evidence/blender/baseline-v3/smoke-evidence.json",
+      "bytes": 116625,
+      "sha256": "5eef581eefe744c89294bd85fb177cb8eeea29a111d8a1fb210c4d726ddb6825"
+    },
+    {
+      "path": "evidence/blender/blender-verification-report.json",
+      "bytes": 5285,
+      "sha256": "9ef31418a1ea8df6d6e05a9898ca2720e3eacafbc96b9444c6a3649b760e2505"
+    },
+    {
+      "path": "evidence/blender/full-evidence.json",
+      "bytes": 443146,
+      "sha256": "2fc371c660cea122ae0557ff57bff2e55129662eb666782a14764ca75e71bfc7"
+    },
+    {
+      "path": "evidence/blender/smoke-evidence.json",
+      "bytes": 117159,
+      "sha256": "bb41b409d0249a998994998bf5198fa9eedd2b760b48074c630b11c1718cedcf"
+    },
+    {
+      "path": "evidence/blender/smoke-visual-review.md",
+      "bytes": 815,
+      "sha256": "e29f73e8b8789472a01afe234675bed412e6d907efa3eac7d22c8492871e05b6"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/clean-tactical-diorama/barricade__critical.png",
+      "bytes": 208511,
+      "sha256": "e7029f9d0cdcb4d5625930c78ca68e6135d3c1a886e13863ef2706bc8c7f26a5"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/clean-tactical-diorama/barricade__damaged.png",
+      "bytes": 206976,
+      "sha256": "d34a2dd0210fde35ee7cd6e3c202084a9c836e27fcf02cd9a31c5e6df3cc9bdb"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/clean-tactical-diorama/barricade__intact.png",
+      "bytes": 207208,
+      "sha256": "200154954f432c505df387bf1b7b029a9d8e249c520ab6bcd982f6d47177da9f"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/clean-tactical-diorama/damage_effect__critical.png",
+      "bytes": 209046,
+      "sha256": "46eb4658397a89a2b2c33ba1e851758f6fa20f093f35fb039fd31b7357a75047"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/clean-tactical-diorama/damage_effect__damaged.png",
+      "bytes": 209096,
+      "sha256": "3dc9a10ae2330ee6f93b9dd506c27cf8168d35d69b43d95f222c0f2a5dbd00e2"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/clean-tactical-diorama/enemy_standard__critical.png",
+      "bytes": 208814,
+      "sha256": "b879741f8721044e9f53c06381a46769dd1251dbfc0692f3d4f82adaaaf54331"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/clean-tactical-diorama/enemy_standard__damaged.png",
+      "bytes": 208875,
+      "sha256": "4b00257a8cdfca8fd749f9b3265b6cdfffee7fa13a8e4b6d814c7d3516f0aaf8"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/clean-tactical-diorama/enemy_standard__intact.png",
+      "bytes": 208577,
+      "sha256": "205dcf84f5b5662def9e1d8e9d60d972047fcec6e4463880ce0b37acbd31518f"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/clean-tactical-diorama/floor_module__damaged.png",
+      "bytes": 207276,
+      "sha256": "833db0a55b72fd22da553b1ff401252d8a4b01a198d13c79b108955dfa2c3f36"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/clean-tactical-diorama/floor_module__intact.png",
+      "bytes": 206581,
+      "sha256": "02902695921860cdfbb03c8ca4860aadfa5e28ebe03b7194bce93bcb373569d5"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/clean-tactical-diorama/objective_core__critical.png",
+      "bytes": 207076,
+      "sha256": "45cbd6d7445960aed23014dfff5e40217b8dd5295d247cef8c218900ffc13140"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/clean-tactical-diorama/objective_core__damaged.png",
+      "bytes": 206909,
+      "sha256": "5cd665211632489120df3dbcfa13b6c05d20f3d82446f0e198322e8d7ed170eb"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/clean-tactical-diorama/objective_core__intact.png",
+      "bytes": 205747,
+      "sha256": "27a87fd94b9accbf7543f52ce91fc8bba5ad0a6ab799ad8f6075756297408afd"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/industrial-toy-defense/barricade__critical.png",
+      "bytes": 203262,
+      "sha256": "04125c18ccc5ee8cfd6df1072d547fe8491326067dda19dc628dfaf46466beae"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/industrial-toy-defense/barricade__damaged.png",
+      "bytes": 202016,
+      "sha256": "09585efb5929a7b809f78a3366a658ef6cf48d9bbb914dfb091a84eb73fca910"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/industrial-toy-defense/barricade__intact.png",
+      "bytes": 201445,
+      "sha256": "4cf310a84b650de1e18c0d91dc74245f696d78ffce40e3050d9c2ce7f1338f37"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/industrial-toy-defense/damage_effect__critical.png",
+      "bytes": 204307,
+      "sha256": "e4b0a5f58d535a1ed7f33a04c156e37f31ac426fede82dc2ed699ada55ed32d3"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/industrial-toy-defense/damage_effect__damaged.png",
+      "bytes": 205087,
+      "sha256": "14722d91e82db20f16fc8d78406755e5b45389a79b0dfb760e3cf16a128f647e"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/industrial-toy-defense/enemy_standard__critical.png",
+      "bytes": 203457,
+      "sha256": "74f2bdee67e57aa23f105e419bb634b3a63afd169c9f2a71af38d3cff5f8c66f"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/industrial-toy-defense/enemy_standard__damaged.png",
+      "bytes": 203577,
+      "sha256": "d54914da75d48037c0b4ff604dc596c328a808397f2d13d918809cd3a06fe8e9"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/industrial-toy-defense/enemy_standard__intact.png",
+      "bytes": 203458,
+      "sha256": "1b69449266e6ea21a27ecdc0d65f7d0fd1fa0651e6ca775ae4bba8c110a6c2a9"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/industrial-toy-defense/floor_module__damaged.png",
+      "bytes": 201212,
+      "sha256": "68010e89928f11f757245cfd251f1a8cfeea8f86d33878981632fe957efb9db8"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/industrial-toy-defense/floor_module__intact.png",
+      "bytes": 201255,
+      "sha256": "8255609b610ea3ad1615b7957bd510cc51db14287eca26a9cb4d7d96e7956259"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/industrial-toy-defense/objective_core__critical.png",
+      "bytes": 200837,
+      "sha256": "8c10c97c39050c8dbc4c6541ae03342c1043bea7e8a9fba3961565750c9c4943"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/industrial-toy-defense/objective_core__damaged.png",
+      "bytes": 200371,
+      "sha256": "f4c0de5067619dcd07de9449151519c4a6e4205f705badaa85215c39ecdd9396"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/industrial-toy-defense/objective_core__intact.png",
+      "bytes": 200135,
+      "sha256": "253705722922883065c76c9e89934bdd92275a2d7f2a5b1d2fb3bed888119bed"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/salvaged-frontier/barricade__critical.png",
+      "bytes": 221933,
+      "sha256": "0f20a96fea581fff6f7907bf41dcce91d7f93c1ac659aca689084bea2f63146a"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/salvaged-frontier/barricade__damaged.png",
+      "bytes": 220915,
+      "sha256": "9b46cf394faa9d680a22a0e3c0528d9ac947c3765b23218f21831b3e220243c5"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/salvaged-frontier/barricade__intact.png",
+      "bytes": 220765,
+      "sha256": "af363627e4826ba56cc696bbfcdb2746ee8e9801b23990e70942ffa58e02bce1"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/salvaged-frontier/damage_effect__critical.png",
+      "bytes": 221982,
+      "sha256": "e29a8a194e090c8f532648c2818e2a154ab854fe0f63af8e35963f7f2ab845c7"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/salvaged-frontier/damage_effect__damaged.png",
+      "bytes": 221858,
+      "sha256": "a7fa251f7719c91f9b43d6f4443a08897e68670540d03eb1d985c153beebfcaa"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/salvaged-frontier/enemy_standard__critical.png",
+      "bytes": 221107,
+      "sha256": "28850533ee28d9d517bdb746b3236718795b88e07928b908cb91c46fed1ea997"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/salvaged-frontier/enemy_standard__damaged.png",
+      "bytes": 221386,
+      "sha256": "c1325c1babd5b2f132cef483cc07225aec8ecc8832782ad3bfd4000d9e565125"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/salvaged-frontier/enemy_standard__intact.png",
+      "bytes": 221385,
+      "sha256": "33209e6c00b26f02f7b654d7c110988a51ccbc8850ca63c676f9145cc06693d3"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/salvaged-frontier/floor_module__damaged.png",
+      "bytes": 220924,
+      "sha256": "8070d2e4504400493158c3f67e4421251dd2bef329f35d694aa9b04e676e7f2c"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/salvaged-frontier/floor_module__intact.png",
+      "bytes": 220277,
+      "sha256": "58775d87d912882494292c3c90deb0fe0b5d664e267e0737946e4b0d4ab0d6f0"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/salvaged-frontier/objective_core__critical.png",
+      "bytes": 218903,
+      "sha256": "9ad81a646bcee84d0af97008acaca2585562e2ab73851b047546df1240819e6a"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/salvaged-frontier/objective_core__damaged.png",
+      "bytes": 218458,
+      "sha256": "49a4f61f4eeee6916ba60f077549628d299ce8d44adc53fa4685fab27fa57243"
+    },
+    {
+      "path": "evidence/blender/visual-quality-artifacts/salvaged-frontier/objective_core__intact.png",
+      "bytes": 217963,
+      "sha256": "b8a65389adcd3eb5f0910eb8217e4d5bb3b3c06d8b346f74415c3f602810916c"
+    },
+    {
+      "path": "evidence/blender/visual-quality-report.json",
+      "bytes": 32535,
+      "sha256": "ba2d1f4171ea3f64877b0fda908630cb2a5bc3bcfd944a8a4b476c24a1850d62"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/01-orthographic.png",
+      "bytes": 258552,
+      "sha256": "daeaee3b6dedc353b13ca0f8202b0319f3e4a0ba1b7a7df83eeb02372b53abb7"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/02-perspective.png",
+      "bytes": 314696,
+      "sha256": "051cb2253c69e0f30ccf9953ff18754590c373d9dea528ce3f75208430703bdc"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/03-black_silhouette.png",
+      "bytes": 104699,
+      "sha256": "46f7747f614425dea65a5e76b2117d38dbe10e7edcedbeebd6315ec2b82e7e9b"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/04-component_breakdown.png",
+      "bytes": 309295,
+      "sha256": "ce56027c256a8ae88ee072d641a505e9dc9e48d2ca47ac44b1efd469507deae1"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/05-proportions.png",
+      "bytes": 203405,
+      "sha256": "268ffe86ae278d27223e11656f8f95859b502e6533f5d6321aa1fc2bd0877dea"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/06-materials.png",
+      "bytes": 319109,
+      "sha256": "9fef299f886e0b0843850a05679ca3dba47cf5ae0e2a0569b92c6704f1934284"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/07-semantic_zones.png",
+      "bytes": 165326,
+      "sha256": "0e95315153ea2e016a59b48e056dc10bc260c24be9ffc55d90d7d99aea9500d7"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/08-all_states.png",
+      "bytes": 320608,
+      "sha256": "6c2eb1e1eb0413543f50030e38a58dead7d5dd8b7126ce6b0482708afc6c2b71"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/09-state_comparison.png",
+      "bytes": 182369,
+      "sha256": "32a489fd9ec91adc7f81683dce28bffbf70fe855b88c04a22a76a727de8f7cdb"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/10-mobile_near.png",
+      "bytes": 495737,
+      "sha256": "5852b4f4e23fdd02d546505b1215c23fdd0bfca36f2898ca9e2ef9da1b752293"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/11-mobile_mid.png",
+      "bytes": 427584,
+      "sha256": "bd23608445124db138013eb339bdaadc706533deb68bbd04255c87369d808ae1"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/12-mobile_far.png",
+      "bytes": 324666,
+      "sha256": "147ed3eae43f8864b4e6feb77a2383326a01f21a25ae3399fd4ad24b68079a42"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/13-lighting_matrix.png",
+      "bytes": 669777,
+      "sha256": "6ef0e7cccb83c06613caa08398ebf4d0ab9b4fe2df334cd6087904dde63ac886"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/14-repetition_1.png",
+      "bytes": 443678,
+      "sha256": "56c5ea05bab8466ef758afa8034af7121301532a0dbbb6fecbb895cf7ca70098"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/15-repetition_30.png",
+      "bytes": 518340,
+      "sha256": "12a25d4bdc4ed125a60f99dc0302e8709eecb0f0e387a700fc7c4970c4eb7136"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/16-repetition_100.png",
+      "bytes": 593500,
+      "sha256": "ed89f72c2957fcdc30914c111d311e312752cb67fe42075898fb3f62f231cfa6"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/17-required_and_forbidden_annotations.png",
+      "bytes": 347372,
+      "sha256": "b7e42adf04cda543eed5ae55da429209224bb39f99070cf14f5d954849746783"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-a/01-orthographic.png",
+      "bytes": 258552,
+      "sha256": "daeaee3b6dedc353b13ca0f8202b0319f3e4a0ba1b7a7df83eeb02372b53abb7"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-a/02-perspective.png",
+      "bytes": 314696,
+      "sha256": "051cb2253c69e0f30ccf9953ff18754590c373d9dea528ce3f75208430703bdc"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-a/03-black_silhouette.png",
+      "bytes": 104699,
+      "sha256": "46f7747f614425dea65a5e76b2117d38dbe10e7edcedbeebd6315ec2b82e7e9b"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-a/04-component_breakdown.png",
+      "bytes": 309295,
+      "sha256": "ce56027c256a8ae88ee072d641a505e9dc9e48d2ca47ac44b1efd469507deae1"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-a/05-proportions.png",
+      "bytes": 203405,
+      "sha256": "268ffe86ae278d27223e11656f8f95859b502e6533f5d6321aa1fc2bd0877dea"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-a/06-materials.png",
+      "bytes": 319109,
+      "sha256": "9fef299f886e0b0843850a05679ca3dba47cf5ae0e2a0569b92c6704f1934284"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-a/07-semantic_zones.png",
+      "bytes": 165326,
+      "sha256": "0e95315153ea2e016a59b48e056dc10bc260c24be9ffc55d90d7d99aea9500d7"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-a/08-all_states.png",
+      "bytes": 320608,
+      "sha256": "6c2eb1e1eb0413543f50030e38a58dead7d5dd8b7126ce6b0482708afc6c2b71"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-a/09-state_comparison.png",
+      "bytes": 182369,
+      "sha256": "32a489fd9ec91adc7f81683dce28bffbf70fe855b88c04a22a76a727de8f7cdb"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-a/10-mobile_near.png",
+      "bytes": 495737,
+      "sha256": "5852b4f4e23fdd02d546505b1215c23fdd0bfca36f2898ca9e2ef9da1b752293"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-a/11-mobile_mid.png",
+      "bytes": 427584,
+      "sha256": "bd23608445124db138013eb339bdaadc706533deb68bbd04255c87369d808ae1"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-a/12-mobile_far.png",
+      "bytes": 324666,
+      "sha256": "147ed3eae43f8864b4e6feb77a2383326a01f21a25ae3399fd4ad24b68079a42"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-a/13-lighting_matrix.png",
+      "bytes": 669777,
+      "sha256": "6ef0e7cccb83c06613caa08398ebf4d0ab9b4fe2df334cd6087904dde63ac886"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-a/14-repetition_1.png",
+      "bytes": 443678,
+      "sha256": "56c5ea05bab8466ef758afa8034af7121301532a0dbbb6fecbb895cf7ca70098"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-a/15-repetition_30.png",
+      "bytes": 518340,
+      "sha256": "12a25d4bdc4ed125a60f99dc0302e8709eecb0f0e387a700fc7c4970c4eb7136"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-a/16-repetition_100.png",
+      "bytes": 593500,
+      "sha256": "ed89f72c2957fcdc30914c111d311e312752cb67fe42075898fb3f62f231cfa6"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-a/17-required_and_forbidden_annotations.png",
+      "bytes": 347372,
+      "sha256": "b7e42adf04cda543eed5ae55da429209224bb39f99070cf14f5d954849746783"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-b/01-orthographic.png",
+      "bytes": 258552,
+      "sha256": "daeaee3b6dedc353b13ca0f8202b0319f3e4a0ba1b7a7df83eeb02372b53abb7"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-b/02-perspective.png",
+      "bytes": 314696,
+      "sha256": "051cb2253c69e0f30ccf9953ff18754590c373d9dea528ce3f75208430703bdc"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-b/03-black_silhouette.png",
+      "bytes": 104699,
+      "sha256": "46f7747f614425dea65a5e76b2117d38dbe10e7edcedbeebd6315ec2b82e7e9b"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-b/04-component_breakdown.png",
+      "bytes": 309295,
+      "sha256": "ce56027c256a8ae88ee072d641a505e9dc9e48d2ca47ac44b1efd469507deae1"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-b/05-proportions.png",
+      "bytes": 203405,
+      "sha256": "268ffe86ae278d27223e11656f8f95859b502e6533f5d6321aa1fc2bd0877dea"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-b/06-materials.png",
+      "bytes": 319109,
+      "sha256": "9fef299f886e0b0843850a05679ca3dba47cf5ae0e2a0569b92c6704f1934284"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-b/07-semantic_zones.png",
+      "bytes": 165326,
+      "sha256": "0e95315153ea2e016a59b48e056dc10bc260c24be9ffc55d90d7d99aea9500d7"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-b/08-all_states.png",
+      "bytes": 320608,
+      "sha256": "6c2eb1e1eb0413543f50030e38a58dead7d5dd8b7126ce6b0482708afc6c2b71"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-b/09-state_comparison.png",
+      "bytes": 182369,
+      "sha256": "32a489fd9ec91adc7f81683dce28bffbf70fe855b88c04a22a76a727de8f7cdb"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-b/10-mobile_near.png",
+      "bytes": 495737,
+      "sha256": "5852b4f4e23fdd02d546505b1215c23fdd0bfca36f2898ca9e2ef9da1b752293"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-b/11-mobile_mid.png",
+      "bytes": 427584,
+      "sha256": "bd23608445124db138013eb339bdaadc706533deb68bbd04255c87369d808ae1"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-b/12-mobile_far.png",
+      "bytes": 324666,
+      "sha256": "147ed3eae43f8864b4e6feb77a2383326a01f21a25ae3399fd4ad24b68079a42"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-b/13-lighting_matrix.png",
+      "bytes": 669777,
+      "sha256": "6ef0e7cccb83c06613caa08398ebf4d0ab9b4fe2df334cd6087904dde63ac886"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-b/14-repetition_1.png",
+      "bytes": 443678,
+      "sha256": "56c5ea05bab8466ef758afa8034af7121301532a0dbbb6fecbb895cf7ca70098"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-b/15-repetition_30.png",
+      "bytes": 518340,
+      "sha256": "12a25d4bdc4ed125a60f99dc0302e8709eecb0f0e387a700fc7c4970c4eb7136"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-b/16-repetition_100.png",
+      "bytes": 593500,
+      "sha256": "ed89f72c2957fcdc30914c111d311e312752cb67fe42075898fb3f62f231cfa6"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-b/17-required_and_forbidden_annotations.png",
+      "bytes": 347372,
+      "sha256": "b7e42adf04cda543eed5ae55da429209224bb39f99070cf14f5d954849746783"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/composition-determinism-report.json",
+      "bytes": 4272,
+      "sha256": "afaf64bb70b63ddf6fced2bbd5477868fafe1cb3aa58a1ee84a03908a3c6dc1d"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/evidence-manifest.json",
+      "bytes": 9387,
+      "sha256": "d9804c162d861c2463dd2e0589dd6d3f75d09d8e26ff701e0880c6717b8833dc"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/human-review.json",
+      "bytes": 2519,
+      "sha256": "a4702d3b351cde075530e6c1fdb6fb322d3b48988c1a23533690ce449f811217"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/index.html",
+      "bytes": 26888,
+      "sha256": "cd858a7207d498e9d258ec5eeb30c58638dca9b9b0560914559eb586009305bc"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-a/blender.log",
+      "bytes": 38361,
+      "sha256": "b2ad5cfdded479f320a496b24d8782e53d615104d4b5813f9c1fd644f040ed1f"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-a/lighting_adverse_night.png",
+      "bytes": 535001,
+      "sha256": "b4a0bb89b23117be0fc6e7ef965bffd877e4bdfc729a5f08d8935c69602dbd2e"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-a/lighting_gameplay_default.png",
+      "bytes": 714545,
+      "sha256": "c07d60ebd602c01512f53e00e7f2a0b959afdffc538c97e790e4e24d7a4de570"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-a/lighting_high_contrast.png",
+      "bytes": 616283,
+      "sha256": "7783c566866110e8f1a372a586cea5a0d8c903e13232a4374fae0fc283dc276c"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-a/lighting_neutral_qa.png",
+      "bytes": 687693,
+      "sha256": "95effd951c748a974344be6ca416c58157074ce22a4f6399ab1b4012a624818d"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-a/mobile_far.png",
+      "bytes": 435507,
+      "sha256": "910b532414645af3d7438eecbcce5dbdbbfd4d01721bde50f490665e914eebd3"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-a/mobile_mid.png",
+      "bytes": 570001,
+      "sha256": "f0b0cad1d5a40d18b0adb4b8699175e6e688efc6861c21989a83d8bc71bca8cd"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-a/mobile_near.png",
+      "bytes": 626229,
+      "sha256": "7caef97e7bbe4d40df2457679d9a4651c59b597b27996595597f4d3c7a944c69"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-a/raw-manifest.json",
+      "bytes": 34206,
+      "sha256": "643d9a4f3aa807ee1329fed116321affd22f8788f3dbef2425e0a6c2ed87a369"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-a/repetition_1.png",
+      "bytes": 549942,
+      "sha256": "85e3f3acb6a893c6080aa4e96c6835dedca9d445e364e8e152bbec37ad4d5d7f"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-a/repetition_100.png",
+      "bytes": 522538,
+      "sha256": "bd4201a9b32acf1e18321d8490c1fb96963b5d87cac7441a6c66a66fc74c531b"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-a/repetition_30.png",
+      "bytes": 501918,
+      "sha256": "081e23519c6c1aee25571f9e1c83c9c2d3f734f391838197c177b683df6a64ac"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-b/blender.log",
+      "bytes": 38103,
+      "sha256": "2e1eef07ada8dd9fcfef1d26bf2e7b574f8c4e2582325a5946db2bf31df71e04"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-b/lighting_adverse_night.png",
+      "bytes": 535001,
+      "sha256": "ff44a27d4f47f0742f66f7ac2a2cf57738121326daba7335297507bbdd4b96f2"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-b/lighting_gameplay_default.png",
+      "bytes": 714545,
+      "sha256": "1583ad8f2b93fdec434d6bf97e3a87123d27d9bc658fac5ddc4890785052ac91"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-b/lighting_high_contrast.png",
+      "bytes": 616283,
+      "sha256": "970a01c312f0d9df7bb5cdc9ca045142e79e26016ecbf16b5be9a8e001add39a"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-b/lighting_neutral_qa.png",
+      "bytes": 687693,
+      "sha256": "b92a5a545e94e1a87533c7f836fcc55263fd9cb3e4f6fd2ed6d3c2643b2014ce"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-b/mobile_far.png",
+      "bytes": 435507,
+      "sha256": "f98a3451b58033fadcb1a75a9508abf2c477d425fca30b7cfb00769ced00efd0"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-b/mobile_mid.png",
+      "bytes": 570002,
+      "sha256": "92875db5875d920f6e2a3edf5ffcd9ebfb2865653e6a6a7694eb30c88cfc1e8b"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-b/mobile_near.png",
+      "bytes": 626229,
+      "sha256": "08b90a09266d2c810f8e9c297e5c4e825ec09038d3812f23919b19dd4a6d875f"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-b/raw-manifest.json",
+      "bytes": 33948,
+      "sha256": "bfa6f43191691f625bab93a12ddf27b3bf6eccd9702f97e369f91154edb33e62"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-b/repetition_1.png",
+      "bytes": 549942,
+      "sha256": "b9b61482f0d9d4d17ef49c077ffc5ba71b1a189dacb152575b396067075292a8"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-b/repetition_100.png",
+      "bytes": 522538,
+      "sha256": "61f78746a2d218fd9bfcf989d1cf0d3bb8ceaba56cfecd72b7cc2ebfa2ca9ea4"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-b/repetition_30.png",
+      "bytes": 501918,
+      "sha256": "49ef87c6a88cf0e1ac5c9a4eb175eec05b340971e4ca057e33bde3908f29d5c7"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-render-report.json",
+      "bytes": 10617,
+      "sha256": "27597f91919e7f5837de38db76752e099ae77c7d4a898383125e5b928b56aaf7"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/boards/01-orthographic.png",
+      "bytes": 257767,
+      "sha256": "ea571805229fe30c08c63fb19586a669fb1fc6b531f792a344463c67e2471806"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/boards/02-perspective.png",
+      "bytes": 316309,
+      "sha256": "2f0b657ebd5c4ad67818654220284f7671f40251f60d395c3708ae97b355261d"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/boards/03-black_silhouette.png",
+      "bytes": 105654,
+      "sha256": "7792359be7d011a01b951607d8f85fda7cca492be9a737522c1e21977160217d"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/boards/04-component_breakdown.png",
+      "bytes": 310669,
+      "sha256": "af37bf62bc14032422eda137530c98888fabe1b2e127aa5e9834f2209c0510ec"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/boards/05-proportions.png",
+      "bytes": 202985,
+      "sha256": "4f05a9058bce696d609066da0d9cea5be5579a8b08868c511037b86483fba349"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/boards/06-materials.png",
+      "bytes": 320986,
+      "sha256": "1a721d7f3a37828e8571c85a3863780568b77933a3179ecb1cdcc76fe5e70703"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/boards/07-semantic_zones.png",
+      "bytes": 164878,
+      "sha256": "1e31f059af0b639e3e8e2c97e593d85d50ebb091ba82fc8c44c4e4fd3f1b1a1d"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/boards/08-all_states.png",
+      "bytes": 322908,
+      "sha256": "840a799348b12b564b5dbc2252a4485b3a58674430691e88e8bb8bebffdc98ab"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/boards/09-state_comparison.png",
+      "bytes": 184410,
+      "sha256": "5429b51ed873dae1942db5cee9603781b497f355220835a5ec7557d91897ed89"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/boards/10-mobile_near.png",
+      "bytes": 493703,
+      "sha256": "7060a5819311dec6cc77098ec1446b739ee01fadff718097ef2e39d726c08971"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/boards/11-mobile_mid.png",
+      "bytes": 429315,
+      "sha256": "97b51a3cbcd44470346d6c4d4e460f8e4e8448c8f093272e049ef2f42f0bfd20"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/boards/12-mobile_far.png",
+      "bytes": 325513,
+      "sha256": "498984c5ceebb90d1d9b67129aca273b83ba49692c123cb6f8239538144a7623"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/boards/13-lighting_matrix.png",
+      "bytes": 674281,
+      "sha256": "26df511838bc8f61debd133eb3c4fc47627f2fc5eb46e19d5822768b02540e2e"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/boards/14-repetition_1.png",
+      "bytes": 447009,
+      "sha256": "0c753591c9798e9542c8466bc6c1fcfec72879b713136e261ba941fbb81d59e9"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/boards/15-repetition_30.png",
+      "bytes": 524263,
+      "sha256": "a434ee02a7e304e4125a0568fe70e4d40a465a42153091f5d8ab8234cf81eb78"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/boards/16-repetition_100.png",
+      "bytes": 599872,
+      "sha256": "6de621da8c5867251e7766b1a7391f9c9dfdb5fa0e2a36466634d5a0772a5e61"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/boards/17-required_and_forbidden_annotations.png",
+      "bytes": 348813,
+      "sha256": "0c205236cae453f7af32a892e55c192d62fce3dde861bb9eee91107d7d660113"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-a/01-orthographic.png",
+      "bytes": 257767,
+      "sha256": "ea571805229fe30c08c63fb19586a669fb1fc6b531f792a344463c67e2471806"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-a/02-perspective.png",
+      "bytes": 316309,
+      "sha256": "2f0b657ebd5c4ad67818654220284f7671f40251f60d395c3708ae97b355261d"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-a/03-black_silhouette.png",
+      "bytes": 105654,
+      "sha256": "7792359be7d011a01b951607d8f85fda7cca492be9a737522c1e21977160217d"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-a/04-component_breakdown.png",
+      "bytes": 310669,
+      "sha256": "af37bf62bc14032422eda137530c98888fabe1b2e127aa5e9834f2209c0510ec"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-a/05-proportions.png",
+      "bytes": 202985,
+      "sha256": "4f05a9058bce696d609066da0d9cea5be5579a8b08868c511037b86483fba349"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-a/06-materials.png",
+      "bytes": 320986,
+      "sha256": "1a721d7f3a37828e8571c85a3863780568b77933a3179ecb1cdcc76fe5e70703"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-a/07-semantic_zones.png",
+      "bytes": 164878,
+      "sha256": "1e31f059af0b639e3e8e2c97e593d85d50ebb091ba82fc8c44c4e4fd3f1b1a1d"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-a/08-all_states.png",
+      "bytes": 322908,
+      "sha256": "840a799348b12b564b5dbc2252a4485b3a58674430691e88e8bb8bebffdc98ab"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-a/09-state_comparison.png",
+      "bytes": 184410,
+      "sha256": "5429b51ed873dae1942db5cee9603781b497f355220835a5ec7557d91897ed89"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-a/10-mobile_near.png",
+      "bytes": 493703,
+      "sha256": "7060a5819311dec6cc77098ec1446b739ee01fadff718097ef2e39d726c08971"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-a/11-mobile_mid.png",
+      "bytes": 429315,
+      "sha256": "97b51a3cbcd44470346d6c4d4e460f8e4e8448c8f093272e049ef2f42f0bfd20"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-a/12-mobile_far.png",
+      "bytes": 325513,
+      "sha256": "498984c5ceebb90d1d9b67129aca273b83ba49692c123cb6f8239538144a7623"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-a/13-lighting_matrix.png",
+      "bytes": 674281,
+      "sha256": "26df511838bc8f61debd133eb3c4fc47627f2fc5eb46e19d5822768b02540e2e"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-a/14-repetition_1.png",
+      "bytes": 447009,
+      "sha256": "0c753591c9798e9542c8466bc6c1fcfec72879b713136e261ba941fbb81d59e9"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-a/15-repetition_30.png",
+      "bytes": 524263,
+      "sha256": "a434ee02a7e304e4125a0568fe70e4d40a465a42153091f5d8ab8234cf81eb78"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-a/16-repetition_100.png",
+      "bytes": 599872,
+      "sha256": "6de621da8c5867251e7766b1a7391f9c9dfdb5fa0e2a36466634d5a0772a5e61"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-a/17-required_and_forbidden_annotations.png",
+      "bytes": 348813,
+      "sha256": "0c205236cae453f7af32a892e55c192d62fce3dde861bb9eee91107d7d660113"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-b/01-orthographic.png",
+      "bytes": 257767,
+      "sha256": "ea571805229fe30c08c63fb19586a669fb1fc6b531f792a344463c67e2471806"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-b/02-perspective.png",
+      "bytes": 316309,
+      "sha256": "2f0b657ebd5c4ad67818654220284f7671f40251f60d395c3708ae97b355261d"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-b/03-black_silhouette.png",
+      "bytes": 105654,
+      "sha256": "7792359be7d011a01b951607d8f85fda7cca492be9a737522c1e21977160217d"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-b/04-component_breakdown.png",
+      "bytes": 310669,
+      "sha256": "af37bf62bc14032422eda137530c98888fabe1b2e127aa5e9834f2209c0510ec"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-b/05-proportions.png",
+      "bytes": 202985,
+      "sha256": "4f05a9058bce696d609066da0d9cea5be5579a8b08868c511037b86483fba349"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-b/06-materials.png",
+      "bytes": 320986,
+      "sha256": "1a721d7f3a37828e8571c85a3863780568b77933a3179ecb1cdcc76fe5e70703"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-b/07-semantic_zones.png",
+      "bytes": 164878,
+      "sha256": "1e31f059af0b639e3e8e2c97e593d85d50ebb091ba82fc8c44c4e4fd3f1b1a1d"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-b/08-all_states.png",
+      "bytes": 322908,
+      "sha256": "840a799348b12b564b5dbc2252a4485b3a58674430691e88e8bb8bebffdc98ab"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-b/09-state_comparison.png",
+      "bytes": 184410,
+      "sha256": "5429b51ed873dae1942db5cee9603781b497f355220835a5ec7557d91897ed89"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-b/10-mobile_near.png",
+      "bytes": 493703,
+      "sha256": "7060a5819311dec6cc77098ec1446b739ee01fadff718097ef2e39d726c08971"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-b/11-mobile_mid.png",
+      "bytes": 429315,
+      "sha256": "97b51a3cbcd44470346d6c4d4e460f8e4e8448c8f093272e049ef2f42f0bfd20"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-b/12-mobile_far.png",
+      "bytes": 325513,
+      "sha256": "498984c5ceebb90d1d9b67129aca273b83ba49692c123cb6f8239538144a7623"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-b/13-lighting_matrix.png",
+      "bytes": 674281,
+      "sha256": "26df511838bc8f61debd133eb3c4fc47627f2fc5eb46e19d5822768b02540e2e"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-b/14-repetition_1.png",
+      "bytes": 447009,
+      "sha256": "0c753591c9798e9542c8466bc6c1fcfec72879b713136e261ba941fbb81d59e9"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-b/15-repetition_30.png",
+      "bytes": 524263,
+      "sha256": "a434ee02a7e304e4125a0568fe70e4d40a465a42153091f5d8ab8234cf81eb78"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-b/16-repetition_100.png",
+      "bytes": 599872,
+      "sha256": "6de621da8c5867251e7766b1a7391f9c9dfdb5fa0e2a36466634d5a0772a5e61"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-b/17-required_and_forbidden_annotations.png",
+      "bytes": 348813,
+      "sha256": "0c205236cae453f7af32a892e55c192d62fce3dde861bb9eee91107d7d660113"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/composition-determinism-report.json",
+      "bytes": 4272,
+      "sha256": "50917e4173f55b77c14ee36aeb4ef7aad05192ccf3ca8446deb69d6d85eb0b3d"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/evidence-manifest.json",
+      "bytes": 9387,
+      "sha256": "572c20e26a43b9805cb62ed7345a74a2bc8aea4851aef5ece2a66b70202b2455"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/human-review.json",
+      "bytes": 2519,
+      "sha256": "291c80c45f5e5b49523461d31bf3a0ce913cf9a4282f4568e50f16046215bf0f"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/index.html",
+      "bytes": 26888,
+      "sha256": "d4d9b7a2818a084c10fff0765b1dc5e136f233374a0b5d6d8e256d55f070ab84"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-a/blender.log",
+      "bytes": 38103,
+      "sha256": "b3b79b0cd65cd426abfae6004de55425ac4808916bdec0d3a95d1903c8c2e166"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-a/lighting_adverse_night.png",
+      "bytes": 533044,
+      "sha256": "cd5f11ad4d1afff2f27e446af7f808cd9ae067600a438c1600db102ae9ff3537"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-a/lighting_gameplay_default.png",
+      "bytes": 712091,
+      "sha256": "10fc1a4d99bc090686d5d034a47bc15c9532306e2545bc01179e897c6adfc1e1"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-a/lighting_high_contrast.png",
+      "bytes": 614881,
+      "sha256": "9c4f8b05027fe00bd7835abcfad1f39a6d280d5b2959da1fc24b6cf8de8ca9f1"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-a/lighting_neutral_qa.png",
+      "bytes": 685812,
+      "sha256": "5fee6b01e23ed8eab120a7507d584356a649751d4985be626448479dcd03a6c1"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-a/mobile_far.png",
+      "bytes": 437398,
+      "sha256": "f8f87f7d3dabd9f2198a2a6ce8136fd7f46b4430e20692de5a5f0f1150beda53"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-a/mobile_mid.png",
+      "bytes": 571736,
+      "sha256": "fe9ef2b9b92b0c46450a44d516688886036ebbd2a62ac75a9a2ce6ded6af704e"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-a/mobile_near.png",
+      "bytes": 622510,
+      "sha256": "ed2c8244415558c75d57caaf7c058d185f18c8640bf022ac3598dea40e7f4ade"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-a/raw-manifest.json",
+      "bytes": 33948,
+      "sha256": "030ac4be8359f91edba923499ba2cdcdff945640a604eed4d1fcc196ffde6f99"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-a/repetition_1.png",
+      "bytes": 553855,
+      "sha256": "4aefd84f0dd11b993c5128dabcf86fcc2726d224a94dd4bc6d0d09836188d124"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-a/repetition_100.png",
+      "bytes": 527162,
+      "sha256": "ad00830492e7c1445ce5e2adee886fa048f99e5255eb5bd4b9363242971b57e0"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-a/repetition_30.png",
+      "bytes": 506706,
+      "sha256": "69ba899e4adb31482db226769c12e3d0e8270de6f100e176b28b4f0ca29f3829"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-b/blender.log",
+      "bytes": 38103,
+      "sha256": "dc12ab0507137db016be82b6ff531a7b687518aade54477edbc55f4b5f6234ed"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-b/lighting_adverse_night.png",
+      "bytes": 533044,
+      "sha256": "8e0b518de3b74aa8c0fbe65de2ed263e570f4f8d594b3da16b36fde97584bf73"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-b/lighting_gameplay_default.png",
+      "bytes": 712091,
+      "sha256": "05ef24a04e55e1010cc1531201b1734d30b4ee558e222639b12e8e28a7017347"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-b/lighting_high_contrast.png",
+      "bytes": 614881,
+      "sha256": "aa9cdffeba33017dd322be35cb3f0c64de469ea80bb8dd494732e3828447e086"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-b/lighting_neutral_qa.png",
+      "bytes": 685812,
+      "sha256": "38dc74215a3448270b398680d94285327c4ca762685a8e027c60fbbe24d9afd8"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-b/mobile_far.png",
+      "bytes": 437398,
+      "sha256": "84691f5d584e0cab038ae40d5df93d3215bc291ee442454aa1c910dc58926723"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-b/mobile_mid.png",
+      "bytes": 571736,
+      "sha256": "17ea3e0bb07542f741612ace6f5e6ac3229ca97468d4525c4db84050753709b5"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-b/mobile_near.png",
+      "bytes": 622510,
+      "sha256": "f98181618c28e62dee02b7fc0c04a86c18a397d18889d78915c109ad1b96b5b5"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-b/raw-manifest.json",
+      "bytes": 33948,
+      "sha256": "df4461c64499483598bcd54d102d634092dbfcbebb16605fe8997bf6f03f1a9e"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-b/repetition_1.png",
+      "bytes": 553855,
+      "sha256": "022b8442e84a43dc0418bebc914ab37134ef4a30dcdb12f513059fa6f5dc7573"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-b/repetition_100.png",
+      "bytes": 527162,
+      "sha256": "f9ad07a82e9ade6bb9ca1d771b8f8b773f6e3477922cf999f9cf8f9a6b794f90"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-b/repetition_30.png",
+      "bytes": 506706,
+      "sha256": "b8e14cd1034966d535c6e79d11c09f604998b57de34ae0aa8ef193c54f6095fb"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r19/raw-render-report.json",
+      "bytes": 10562,
+      "sha256": "4dc559030a191b4ce284c919a516edc14957a860b19cc412191fff486f2273f9"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/boards/01-orthographic.png",
+      "bytes": 245958,
+      "sha256": "ebd523b8a9394c9d3557b74cf00ef284f997abdee1b90b51e32142536ecd3b17"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/boards/02-perspective.png",
+      "bytes": 308638,
+      "sha256": "a8bc458ae30fd973eecf106bcb19e6eef6a97b2a0f015dea2a5751596627ba33"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/boards/03-black_silhouette.png",
+      "bytes": 102139,
+      "sha256": "6bc9ada17059f0ef56cfc22b73c31cdfe87d7a31b9e3d3b4b555939bbe3b5a7a"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/boards/04-component_breakdown.png",
+      "bytes": 303364,
+      "sha256": "4fdaa78830c52dfa09b40b65f386e97d6300f229e55698c5fb4818a5d5c35371"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/boards/05-proportions.png",
+      "bytes": 189553,
+      "sha256": "55b23b9bd0a176e996d74d54e30bdedf3fb3b66215092cf057bccde110a220b7"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/boards/06-materials.png",
+      "bytes": 308475,
+      "sha256": "8ef447dd2e88330153bd988e165daf661fbd0e36367f1c31acd02d0d441133c7"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/boards/07-semantic_zones.png",
+      "bytes": 158881,
+      "sha256": "21ff806af017630528c4ee70be338d311e1ed623d2530ba89ff2d3079f10868f"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/boards/08-all_states.png",
+      "bytes": 325210,
+      "sha256": "1c2416b56024382032a2b3f891ff5f5266e28c1bc1f0c97b66f7883af93b6e5e"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/boards/09-state_comparison.png",
+      "bytes": 173393,
+      "sha256": "a40842618da97b20ef0a1a869eac0120ed1037c7c906904d71eb660d80230169"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/boards/10-mobile_near.png",
+      "bytes": 467750,
+      "sha256": "360fcb1364f459a3b0e5c5c8498e83ffec603f9fff26b6208287079036a4eb4e"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/boards/11-mobile_mid.png",
+      "bytes": 414222,
+      "sha256": "0da1973ec05d002339677d9905fc072cdf639d15c01969dd782d348dc204bd76"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/boards/12-mobile_far.png",
+      "bytes": 318913,
+      "sha256": "8650dacc5a58a4a6c3744cf531521ff67f7e747fc3dc836b89c48d489e70c188"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/boards/13-lighting_matrix.png",
+      "bytes": 655708,
+      "sha256": "9de4453a6e7070ca5c0af1b57493cdf14f5f1526e182a450a50de33e0ebc9b0f"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/boards/14-repetition_1.png",
+      "bytes": 440549,
+      "sha256": "6f84e4197c9379ff6a66e5ed533f6f2edfa63dced5223c5d685e2ce49c34389e"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/boards/15-repetition_30.png",
+      "bytes": 556004,
+      "sha256": "9461e409b0b384cc68748685fa73fe93b28641715bef0edc7a8c9fcb5b310e27"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/boards/16-repetition_100.png",
+      "bytes": 620342,
+      "sha256": "f6c46b367d003294e6c645f1aaac909237ea6b57f6ed8dd2efce139a78a77470"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/boards/17-required_and_forbidden_annotations.png",
+      "bytes": 340543,
+      "sha256": "e5e465da8b1a2e8759de95aea3b8af57f9f89918ca6ef3d1989a73a7bd0a8bc0"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-a/01-orthographic.png",
+      "bytes": 245958,
+      "sha256": "ebd523b8a9394c9d3557b74cf00ef284f997abdee1b90b51e32142536ecd3b17"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-a/02-perspective.png",
+      "bytes": 308638,
+      "sha256": "a8bc458ae30fd973eecf106bcb19e6eef6a97b2a0f015dea2a5751596627ba33"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-a/03-black_silhouette.png",
+      "bytes": 102139,
+      "sha256": "6bc9ada17059f0ef56cfc22b73c31cdfe87d7a31b9e3d3b4b555939bbe3b5a7a"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-a/04-component_breakdown.png",
+      "bytes": 303364,
+      "sha256": "4fdaa78830c52dfa09b40b65f386e97d6300f229e55698c5fb4818a5d5c35371"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-a/05-proportions.png",
+      "bytes": 189553,
+      "sha256": "55b23b9bd0a176e996d74d54e30bdedf3fb3b66215092cf057bccde110a220b7"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-a/06-materials.png",
+      "bytes": 308475,
+      "sha256": "8ef447dd2e88330153bd988e165daf661fbd0e36367f1c31acd02d0d441133c7"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-a/07-semantic_zones.png",
+      "bytes": 158881,
+      "sha256": "21ff806af017630528c4ee70be338d311e1ed623d2530ba89ff2d3079f10868f"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-a/08-all_states.png",
+      "bytes": 325210,
+      "sha256": "1c2416b56024382032a2b3f891ff5f5266e28c1bc1f0c97b66f7883af93b6e5e"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-a/09-state_comparison.png",
+      "bytes": 173393,
+      "sha256": "a40842618da97b20ef0a1a869eac0120ed1037c7c906904d71eb660d80230169"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-a/10-mobile_near.png",
+      "bytes": 467750,
+      "sha256": "360fcb1364f459a3b0e5c5c8498e83ffec603f9fff26b6208287079036a4eb4e"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-a/11-mobile_mid.png",
+      "bytes": 414222,
+      "sha256": "0da1973ec05d002339677d9905fc072cdf639d15c01969dd782d348dc204bd76"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-a/12-mobile_far.png",
+      "bytes": 318913,
+      "sha256": "8650dacc5a58a4a6c3744cf531521ff67f7e747fc3dc836b89c48d489e70c188"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-a/13-lighting_matrix.png",
+      "bytes": 655708,
+      "sha256": "9de4453a6e7070ca5c0af1b57493cdf14f5f1526e182a450a50de33e0ebc9b0f"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-a/14-repetition_1.png",
+      "bytes": 440549,
+      "sha256": "6f84e4197c9379ff6a66e5ed533f6f2edfa63dced5223c5d685e2ce49c34389e"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-a/15-repetition_30.png",
+      "bytes": 556004,
+      "sha256": "9461e409b0b384cc68748685fa73fe93b28641715bef0edc7a8c9fcb5b310e27"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-a/16-repetition_100.png",
+      "bytes": 620342,
+      "sha256": "f6c46b367d003294e6c645f1aaac909237ea6b57f6ed8dd2efce139a78a77470"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-a/17-required_and_forbidden_annotations.png",
+      "bytes": 340543,
+      "sha256": "e5e465da8b1a2e8759de95aea3b8af57f9f89918ca6ef3d1989a73a7bd0a8bc0"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-b/01-orthographic.png",
+      "bytes": 245958,
+      "sha256": "ebd523b8a9394c9d3557b74cf00ef284f997abdee1b90b51e32142536ecd3b17"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-b/02-perspective.png",
+      "bytes": 308638,
+      "sha256": "a8bc458ae30fd973eecf106bcb19e6eef6a97b2a0f015dea2a5751596627ba33"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-b/03-black_silhouette.png",
+      "bytes": 102139,
+      "sha256": "6bc9ada17059f0ef56cfc22b73c31cdfe87d7a31b9e3d3b4b555939bbe3b5a7a"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-b/04-component_breakdown.png",
+      "bytes": 303364,
+      "sha256": "4fdaa78830c52dfa09b40b65f386e97d6300f229e55698c5fb4818a5d5c35371"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-b/05-proportions.png",
+      "bytes": 189553,
+      "sha256": "55b23b9bd0a176e996d74d54e30bdedf3fb3b66215092cf057bccde110a220b7"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-b/06-materials.png",
+      "bytes": 308475,
+      "sha256": "8ef447dd2e88330153bd988e165daf661fbd0e36367f1c31acd02d0d441133c7"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-b/07-semantic_zones.png",
+      "bytes": 158881,
+      "sha256": "21ff806af017630528c4ee70be338d311e1ed623d2530ba89ff2d3079f10868f"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-b/08-all_states.png",
+      "bytes": 325210,
+      "sha256": "1c2416b56024382032a2b3f891ff5f5266e28c1bc1f0c97b66f7883af93b6e5e"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-b/09-state_comparison.png",
+      "bytes": 173393,
+      "sha256": "a40842618da97b20ef0a1a869eac0120ed1037c7c906904d71eb660d80230169"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-b/10-mobile_near.png",
+      "bytes": 467750,
+      "sha256": "360fcb1364f459a3b0e5c5c8498e83ffec603f9fff26b6208287079036a4eb4e"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-b/11-mobile_mid.png",
+      "bytes": 414222,
+      "sha256": "0da1973ec05d002339677d9905fc072cdf639d15c01969dd782d348dc204bd76"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-b/12-mobile_far.png",
+      "bytes": 318913,
+      "sha256": "8650dacc5a58a4a6c3744cf531521ff67f7e747fc3dc836b89c48d489e70c188"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-b/13-lighting_matrix.png",
+      "bytes": 655708,
+      "sha256": "9de4453a6e7070ca5c0af1b57493cdf14f5f1526e182a450a50de33e0ebc9b0f"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-b/14-repetition_1.png",
+      "bytes": 440549,
+      "sha256": "6f84e4197c9379ff6a66e5ed533f6f2edfa63dced5223c5d685e2ce49c34389e"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-b/15-repetition_30.png",
+      "bytes": 556004,
+      "sha256": "9461e409b0b384cc68748685fa73fe93b28641715bef0edc7a8c9fcb5b310e27"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-b/16-repetition_100.png",
+      "bytes": 620342,
+      "sha256": "f6c46b367d003294e6c645f1aaac909237ea6b57f6ed8dd2efce139a78a77470"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-b/17-required_and_forbidden_annotations.png",
+      "bytes": 340543,
+      "sha256": "e5e465da8b1a2e8759de95aea3b8af57f9f89918ca6ef3d1989a73a7bd0a8bc0"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/composition-determinism-report.json",
+      "bytes": 4272,
+      "sha256": "6c695a4f9b29f5feaa03f68d855b342245619c482c21ea9c34c423ea9bda8e49"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/evidence-manifest.json",
+      "bytes": 9367,
+      "sha256": "850596b48ad588b9ca6bb8da019cfec3bb262c2da25bae9714b8cbbd6644f834"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/human-review.json",
+      "bytes": 2517,
+      "sha256": "5732d92df2a270dcc3f5f9385bef989f7a0d69dba28be2b76238600926344141"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/index.html",
+      "bytes": 26885,
+      "sha256": "a3c9eaf2a36d06053fdd6b30b89500e5733a3f1e2cf62e2e2079091d9a7544e7"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-a/blender.log",
+      "bytes": 20895,
+      "sha256": "6b62d10c0cf5722ea1aa646eb83b1210989ef4a18d3681ff8dff592196736eab"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-a/lighting_adverse_night.png",
+      "bytes": 523042,
+      "sha256": "51e7c41b4f6d646ce2d5dc28bc0f767fac0d8e9187e11a19611a08f5bec18e05"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-a/lighting_gameplay_default.png",
+      "bytes": 701657,
+      "sha256": "716bb35ca8b770fbf93b637d91c6c165fd8738697ef503bd87d6fddc6f81683e"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-a/lighting_high_contrast.png",
+      "bytes": 595652,
+      "sha256": "ffd3a1af57604ab89132b309d0476a967fbb0e7e77d8752e4f814bfd43af2299"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-a/lighting_neutral_qa.png",
+      "bytes": 668585,
+      "sha256": "7f6c0ef69a812b32f331a7ae131a2a9477fc49c35e20e838a0d5cafb43ea4e6d"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-a/mobile_far.png",
+      "bytes": 428277,
+      "sha256": "f077dba9da4767715607ff2652da63d726353afe6368d2dc72f1657d94eef4f0"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-a/mobile_mid.png",
+      "bytes": 554889,
+      "sha256": "a20dace408f24bca89eb9ab337be958b0100f091a9efc16cc7b80023b887f7b5"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-a/mobile_near.png",
+      "bytes": 587061,
+      "sha256": "679b028a1a0b6c3b457c0e87af06fc34d57ce1b82128c4d0bb1c12bbba6ad9ef"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-a/raw-manifest.json",
+      "bytes": 16374,
+      "sha256": "007d0d325ea3b103d4998b45dfa03e44a204cb9bff45d566f14d4cbd90f0ff8f"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-a/repetition_1.png",
+      "bytes": 540227,
+      "sha256": "d01542f5a74f34d0a12e3a9c237670e79f8fe520c5e454dfa3d0b76da3e144f4"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-a/repetition_100.png",
+      "bytes": 520043,
+      "sha256": "74bf8c0304cc9e0657f257238e929c9519d95b91bf8cdf7d246637ea498876a4"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-a/repetition_30.png",
+      "bytes": 518364,
+      "sha256": "459b0d16d3ac14e0d55a2ca109f11b47f5ef5b9a3eff1f4457eccdd30cd85462"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-b/blender.log",
+      "bytes": 20454,
+      "sha256": "c342b28fb7e4dd9970f7049e7c237dd8cb53e9916087af7ddbaf531187bdcc69"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-b/lighting_adverse_night.png",
+      "bytes": 523042,
+      "sha256": "09c803bb7ba935300f4ff8f6577cf568c37e7bbddf8b1d515646e98fffb03641"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-b/lighting_gameplay_default.png",
+      "bytes": 701657,
+      "sha256": "2b96a360b7f58178f67a444ec4fbf43064dbe67d0c28fd756fee7f0793c03517"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-b/lighting_high_contrast.png",
+      "bytes": 595652,
+      "sha256": "ea455718661783b3325dadad41a74c7b6fc5ce510a233dc6ce21a55ae01d765b"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-b/lighting_neutral_qa.png",
+      "bytes": 668585,
+      "sha256": "8a4cb5d5585857b42d1158e71f02f8af8fd2826cc3d85e6e3df366ba68db2d14"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-b/mobile_far.png",
+      "bytes": 428277,
+      "sha256": "eba3d18fad0c5121c0c03c8d9953581581fbe610bc40898e571660e13ad434e0"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-b/mobile_mid.png",
+      "bytes": 554889,
+      "sha256": "63eefc4ed83345e39ef6d0ba3ef8cfa0d74f2444309c33964027a1aa23062cce"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-b/mobile_near.png",
+      "bytes": 587061,
+      "sha256": "3b25408b450dd632c50f2c153d96637aa4fa6f7e72f1f502e597e55683307d27"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-b/raw-manifest.json",
+      "bytes": 16124,
+      "sha256": "3df42c68edd4f81db9e24f1d9c8fc118fef206ff275d1275e80a26488ecae992"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-b/repetition_1.png",
+      "bytes": 540227,
+      "sha256": "9735bfa508c9d47a5b75da7752984e7a673cd9b5e3aee777901da14b9e47e719"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-b/repetition_100.png",
+      "bytes": 520043,
+      "sha256": "1c1b0b0f3ea2c562947a87491dcbd399371828d190cdeefd44042cb35a9d7364"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-b/repetition_30.png",
+      "bytes": 518364,
+      "sha256": "d5d7babefc5ad355d02ececfd818cd9287e30f6dfdd001f62a2ad30519e6434c"
+    },
+    {
+      "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r6/raw-render-report.json",
+      "bytes": 10131,
+      "sha256": "a43b21671c05731941db943ec875b599f0f6304b1126059f1c1084515b0bfbd7"
+    },
+    {
+      "path": "evidence/human/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/mobile/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/mobile/studio-simulator/captures/candidate_100.jpg",
+      "bytes": 76662,
+      "sha256": "19baa4c758062c8c0cbd94ae441c700c988d5dc3ff4304aed04e61fb15cd997a"
+    },
+    {
+      "path": "evidence/mobile/studio-simulator/captures/candidate_30.jpg",
+      "bytes": 66552,
+      "sha256": "7e776815631aee788c5d7bd3aef0a19cf3a5ea5f70088a4f91439bce5bc7cb3a"
+    },
+    {
+      "path": "evidence/mobile/studio-simulator/captures/graybox_100.jpg",
+      "bytes": 64643,
+      "sha256": "ed12cf7633c5cbe0e458989777feb40bb9f8e193258dff51298b838e371d90f5"
+    },
+    {
+      "path": "evidence/mobile/studio-simulator/captures/graybox_30.jpg",
+      "bytes": 53476,
+      "sha256": "c7003f17b334d5c2c591d936c6270db2b6c49a4f87f723449f43dc0ab7d9e9ec"
+    },
+    {
+      "path": "evidence/mobile/studio-simulator/report.json",
+      "bytes": 5237,
+      "sha256": "bf2cded9cfa92abde2f80180bb80156769f2b812dd1ef187f956d0ca042cd7ac"
+    },
+    {
+      "path": "evidence/mobile/studio-simulator/visual-checks/barricade-critical__360x640.png",
+      "bytes": 239651,
+      "sha256": "cd955374376eb59491e894222bb53517f8267bb35766ca8752d09fb8d1bf5c3f"
+    },
+    {
+      "path": "evidence/mobile/studio-simulator/visual-checks/barricade-critical__640x360.png",
+      "bytes": 235993,
+      "sha256": "2278f8377c60b3341756fa5c9b28337e3d47569ec0af2c2a1c6773131ab92af0"
+    },
+    {
+      "path": "evidence/studio/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/studio/captures/clean-tactical-diorama__Lighting_Adverse_Night.jpg",
+      "bytes": 90914,
+      "sha256": "9c2ce58b7c6c5099178e9d84f33618b5458189bbe273c298e9519751588991a9"
+    },
+    {
+      "path": "evidence/studio/captures/clean-tactical-diorama__Lighting_Gameplay_Default.jpg",
+      "bytes": 130960,
+      "sha256": "ec1f7e9bd7f4526f030b5562d07d86e5588bf074dde60a021148db92e7ee1931"
+    },
+    {
+      "path": "evidence/studio/captures/clean-tactical-diorama__Lighting_HighContrast.jpg",
+      "bytes": 137097,
+      "sha256": "5951eef459ba0def3691fa19662d1cae3151663edda61c32ef39280f1306892c"
+    },
+    {
+      "path": "evidence/studio/captures/clean-tactical-diorama__Lighting_Neutral_QA.jpg",
+      "bytes": 129001,
+      "sha256": "1b48c45a8867c761d8a930ea82c03ee8588da04fc43c91da5c627486f7214b27"
+    },
+    {
+      "path": "evidence/studio/captures/industrial-toy-defense__Lighting_Adverse_Night.jpg",
+      "bytes": 90515,
+      "sha256": "98363550116ba22dbed72edb89a0ae7e9fedfde623d654e90620ac48f9fb9924"
+    },
+    {
+      "path": "evidence/studio/captures/industrial-toy-defense__Lighting_Gameplay_Default.jpg",
+      "bytes": 134859,
+      "sha256": "8178a544fae6aed150e40f55e3c976f9bb7e57c101f68b78b723f41a3d6e2c8c"
+    },
+    {
+      "path": "evidence/studio/captures/industrial-toy-defense__Lighting_HighContrast.jpg",
+      "bytes": 139756,
+      "sha256": "a83613294808740acf2f04773d24b40a8b762378e3f84dcd34c612812b67af5f"
+    },
+    {
+      "path": "evidence/studio/captures/industrial-toy-defense__Lighting_Neutral_QA.jpg",
+      "bytes": 132824,
+      "sha256": "0a50ae170a91452c28260c1c9ddd7dfc5a5fc2fd6c097e8366528efedac1ee99"
+    },
+    {
+      "path": "evidence/studio/captures/salvaged-frontier__Lighting_Adverse_Night.jpg",
+      "bytes": 80046,
+      "sha256": "574fea659fabc05790057cffdd8075a73850fb29254528b75e96f411eeecee39"
+    },
+    {
+      "path": "evidence/studio/captures/salvaged-frontier__Lighting_Gameplay_Default.jpg",
+      "bytes": 126018,
+      "sha256": "d3690b97dcd8edc28c3c0cd29f4c5f6915eb4e22bcae1b97a598324a3b12c1bf"
+    },
+    {
+      "path": "evidence/studio/captures/salvaged-frontier__Lighting_HighContrast.jpg",
+      "bytes": 132651,
+      "sha256": "e32aa1e75d297bcfc5dcf88605a21fe83bd83332af7de2884e006801cb6bde9b"
+    },
+    {
+      "path": "evidence/studio/captures/salvaged-frontier__Lighting_Neutral_QA.jpg",
+      "bytes": 125225,
+      "sha256": "f39d25d0abc19e70aabeb087624bf064201676d5a2f4684f509b6b227c77efa3"
+    },
+    {
+      "path": "evidence/studio/clean-tactical-diorama/studio-report.json",
+      "bytes": 7974,
+      "sha256": "89432f2085e69714387f4d106f618b48652f32675ad23178ca7064993dd5ee7f"
+    },
+    {
+      "path": "evidence/studio/industrial-toy-defense/studio-report.json",
+      "bytes": 7965,
+      "sha256": "063d772e88ea45d580b000a8a2e3f05e02e87b77bf493c3174be895aed7aa0de"
+    },
+    {
+      "path": "evidence/studio/reimport-probe/manifest.json",
+      "bytes": 763,
+      "sha256": "aa3ad79471a7a372ad2f2657c5bdd19c270471ab8e91b4b91864a442a341078b"
+    },
+    {
+      "path": "evidence/studio/reimport-probe/source.glb",
+      "bytes": 108572,
+      "sha256": "1de0a18add47ff79e587a70b72e5bfe1ac048fc762cff7c86e76808e7b168717"
+    },
+    {
+      "path": "evidence/studio/reimport-probe/studio-reimport-report.json",
+      "bytes": 1117,
+      "sha256": "3c38f1dd9bfd758c0e7c0c2c46fc6fbc5ab39498bebe052c277311a9b1998146"
+    },
+    {
+      "path": "evidence/studio/reimport-probe/v1.glb",
+      "bytes": 108544,
+      "sha256": "35a39bd8d182343ca255650c6860146c0592a8e27bbb97396fd429d7532e9493"
+    },
+    {
+      "path": "evidence/studio/reimport-probe/v2.glb",
+      "bytes": 108572,
+      "sha256": "1de0a18add47ff79e587a70b72e5bfe1ac048fc762cff7c86e76808e7b168717"
+    },
+    {
+      "path": "evidence/studio/salvaged-frontier/studio-report.json",
+      "bytes": 8016,
+      "sha256": "2bee5a68f191c793fa9c4553b7be869131122d2dd457b3ab37e42629d6deb04c"
+    },
+    {
+      "path": "evidence/studio/studio-contact-sheet.jpg",
+      "bytes": 1066700,
+      "sha256": "d41ba9f839b37cfeda78dd11e83b8d66d7ed19ca2acd6431e38641afa8e739cc"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/clean-tactical-diorama/exports/critical.glb",
+      "bytes": 64052,
+      "sha256": "69e4a6b110f35b6e18353f01f4f447d6be17b34bb6c1440dda4f30415e5fcfb7"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/clean-tactical-diorama/exports/damaged.glb",
+      "bytes": 72568,
+      "sha256": "7f3f501a4c14afc42fbbef91ef15d374d6ffc95bbd06c0d28a1f3e3203f19e3d"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/clean-tactical-diorama/exports/intact.glb",
+      "bytes": 69736,
+      "sha256": "88a76d59214eb90dfa8e077eadba59a2f535e9471c75deb2a6afcf42f455291f"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/clean-tactical-diorama/far-mobile/critical.png",
+      "bytes": 211288,
+      "sha256": "66cc1dad3d423218ba21f9ece7ee712cf72fc435494b494b5a39921ef740f14f"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/clean-tactical-diorama/far-mobile/damaged.png",
+      "bytes": 211858,
+      "sha256": "3ea0fbde831df75319b465b65ebbb0cb4448b80ad0cbd1e7fc1b47d038881ef4"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/clean-tactical-diorama/far-mobile/intact.png",
+      "bytes": 211646,
+      "sha256": "ae15aa1677dc798598509ccf51d640471ed91444db4e3d8e01a8cb9c9465a6e8"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/clean-tactical-diorama/hero/critical.png",
+      "bytes": 797409,
+      "sha256": "e5e77722f3d59a6d3e35447907d5f2201d3c1c0128a7f8a9787619ffef7345d7"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/clean-tactical-diorama/hero/damaged.png",
+      "bytes": 828861,
+      "sha256": "a9ce50322f2453a154a718421df33fd4b7990a4e1cafbe962967226fa3f09c2e"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/clean-tactical-diorama/hero/intact.png",
+      "bytes": 823315,
+      "sha256": "58f220185457b305042c6cd22a08137a7ab367ac9dc4e01cd1270319c42f1e5b"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/clean-tactical-diorama/orientation/back_silhouette.png",
+      "bytes": 207580,
+      "sha256": "dd8f5864844ff71012da130001f7abbef5c9aa014508d5687c655080d0347a32"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/clean-tactical-diorama/orientation/front_silhouette.png",
+      "bytes": 207789,
+      "sha256": "edb568e901bf80162c89b6f20f06f16439789d2f87e36759710b571f0b66687d"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/clean-tactical-diorama/portrait-mobile/critical.png",
+      "bytes": 223347,
+      "sha256": "500b9ce6b9bebe7b18c1aded3d87f1e04927af4825a4f5b657a15d220ddd9e40"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/clean-tactical-diorama/portrait-mobile/damaged.png",
+      "bytes": 227843,
+      "sha256": "1fb5ba873b03703bc378d2dc37d6f5744758f4eeb2861561c16d6fe721dd435a"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/clean-tactical-diorama/portrait-mobile/intact.png",
+      "bytes": 226412,
+      "sha256": "ca7ba8537d71bb550e08c48b89d76ec3a92c48f648f90554fc8d28e04452d450"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/clean-tactical-diorama/state-silhouette/critical.png",
+      "bytes": 207360,
+      "sha256": "a9424c7453cd38c5977df2d11f0b442eb0dd19c542f30801bbd893b3ee88abbf"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/clean-tactical-diorama/state-silhouette/damaged.png",
+      "bytes": 207058,
+      "sha256": "a2c4ce916deec2b3d1aadade33ae183b8f1da9d8a55caa289685fd2460410550"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/clean-tactical-diorama/state-silhouette/intact.png",
+      "bytes": 206791,
+      "sha256": "3471c0454c3fd5ce1c1cb757cabe2b8364459ede0c8e6149ab4d0283f16a6517"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/industrial-toy-defense/exports/critical.glb",
+      "bytes": 78956,
+      "sha256": "0120d10c32390c5c5618c0398ee2da3bf83a0e070bda03fb0d553825cf949d88"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/industrial-toy-defense/exports/damaged.glb",
+      "bytes": 92796,
+      "sha256": "80ba6a8d1fce1b70fcb8ce135f8f34840e8625aa936631e1043af6f1794d58d3"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/industrial-toy-defense/exports/intact.glb",
+      "bytes": 89436,
+      "sha256": "a89d7b7277c72ae9c3cb0fb0bc76c85867f3c2da6ae316b4b5ff5abf4430c8c6"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/industrial-toy-defense/far-mobile/critical.png",
+      "bytes": 200957,
+      "sha256": "06aec94d3159634ea63fb3bd84ead422516574b78b8739cdcbcfbb1359e747bd"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/industrial-toy-defense/far-mobile/damaged.png",
+      "bytes": 201339,
+      "sha256": "b2c997b80bad74650a7379bd772d7795934383aa02ca7072c89cad1716d48aaa"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/industrial-toy-defense/far-mobile/intact.png",
+      "bytes": 201131,
+      "sha256": "4e30ad14a885b3f860648f5c69e799a6d5da67b966cb47c4f280644a636c29d0"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/industrial-toy-defense/hero/critical.png",
+      "bytes": 805455,
+      "sha256": "91c89b802c6c4d7345241b3fdb851fda15bd0cdba1b32ef7fa67220af531b6d7"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/industrial-toy-defense/hero/damaged.png",
+      "bytes": 843904,
+      "sha256": "1d3cc65106b49fc0a73d3fee526c3e0fbb551da0d5017e9dd398a5fa494179f0"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/industrial-toy-defense/hero/intact.png",
+      "bytes": 832563,
+      "sha256": "6488b83a21dd9a6556ba4af8f6ae3dcedd41c964c6482146777685e291100f67"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/industrial-toy-defense/orientation/back_silhouette.png",
+      "bytes": 202050,
+      "sha256": "33604bba21c2422dd1cf414bfa80ab8fefc03cde0d8c8e34522afc476cade698"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/industrial-toy-defense/orientation/front_silhouette.png",
+      "bytes": 202155,
+      "sha256": "0656572218c9f49ba74fdb8dfc795a8a66efcd3177f834ed223695dec842e1be"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/industrial-toy-defense/portrait-mobile/critical.png",
+      "bytes": 216111,
+      "sha256": "5f1dfb7ee86b24f0031d6485eb466622f0c2b821245039500bb2cf6d95fe8535"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/industrial-toy-defense/portrait-mobile/damaged.png",
+      "bytes": 218386,
+      "sha256": "4205d42923e0ff92bd1512c524b5fc20868c54e4da8d3894736bcbc76e5d3de3"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/industrial-toy-defense/portrait-mobile/intact.png",
+      "bytes": 218604,
+      "sha256": "7e4df31d276a5b4fc315d9c5fdb3c2290ef98d347014ed2a84b1fba012cc1e26"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/industrial-toy-defense/state-silhouette/critical.png",
+      "bytes": 201580,
+      "sha256": "861bd9bee7d5f19a228ba5359f07e9afed2ddfdb8cfe16ab87f2b8b41beb15bd"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/industrial-toy-defense/state-silhouette/damaged.png",
+      "bytes": 202075,
+      "sha256": "7303dc513ce5f46065787b36ee85d28760dcf032e9bfa4b24ae78f189bc06493"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/industrial-toy-defense/state-silhouette/intact.png",
+      "bytes": 201652,
+      "sha256": "4a80200894ec1de21ac25e5f7ccdfa4749191d0edd48832e2e801722b25e696e"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/report.json",
+      "bytes": 36044,
+      "sha256": "775979804d2236b5f6274d75f45c8a0e4c7b8e88dca982848046598ecb7a4e3c"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/review/hero-contact-sheet.png",
+      "bytes": 352789,
+      "sha256": "68e0e8ba037a7b6a091148edb6af07d9b35e51f7d34d56bd6b42283088a6c173"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/review/index.html",
+      "bytes": 7522,
+      "sha256": "87812625ada6e433558af45cb64153392c15dad55ba42104c4641b94dca2d0ed"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/review/silhouette-contact-sheet.png",
+      "bytes": 257740,
+      "sha256": "37b40e6615aa87947d01642d354a9f168226b9958f31a1945d818a730746ea47"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/salvaged-frontier/exports/critical.glb",
+      "bytes": 80664,
+      "sha256": "33a924f037d44bda121a8ef69d066cb500b9ddb7f38d590b4128e6cfd2a96032"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/salvaged-frontier/exports/damaged.glb",
+      "bytes": 94500,
+      "sha256": "1d8e63f81ae6e4d0f29dd037ee671c3f52cacf8e166a42d162e381c883643184"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/salvaged-frontier/exports/intact.glb",
+      "bytes": 89420,
+      "sha256": "f930ea0f5d74623ba7839c92f709539f500284488f0e96619bd88523498915f0"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/salvaged-frontier/far-mobile/critical.png",
+      "bytes": 230876,
+      "sha256": "e100d02b63be9772cb071c9a2cc8307c90b7b61d03704dbb1e8f2f33e8b0ba2d"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/salvaged-frontier/far-mobile/damaged.png",
+      "bytes": 230874,
+      "sha256": "4d7061857918263954edd6b22d12b99b4bf0f8e7babe510407fa31f041fd6905"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/salvaged-frontier/far-mobile/intact.png",
+      "bytes": 230965,
+      "sha256": "1d9f931dc12708cfacf375253f7ebf063ef8bc3ced46b48deaef296ee78df5f9"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/salvaged-frontier/hero/critical.png",
+      "bytes": 815173,
+      "sha256": "b0fa5a93f4f9705bfb939ce3f3f7f7769fd08701d0833087ea2ba49ce60559e9"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/salvaged-frontier/hero/damaged.png",
+      "bytes": 824796,
+      "sha256": "580a15035ad9caf97c6737c59eea83fd8cd6f5207639638fb44b7ebf126dca87"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/salvaged-frontier/hero/intact.png",
+      "bytes": 820129,
+      "sha256": "80b11f4207b20481408dc13e25641ea396a03d057a42aa3ebafde06dad1bda45"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/salvaged-frontier/orientation/back_silhouette.png",
+      "bytes": 223962,
+      "sha256": "0f0ad17294ccdffd1c870cf8d28fa2edb16148bc954be98172a8ff3949885ce3"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/salvaged-frontier/orientation/front_silhouette.png",
+      "bytes": 223749,
+      "sha256": "3886966065426639d7f9561e6b2624e9533f85cfbec87b4a4db0d0ee65f375e6"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/salvaged-frontier/portrait-mobile/critical.png",
+      "bytes": 241337,
+      "sha256": "6da84a7b8eac69879322399e77ceb1ee39d6ee5ae1bb61251ea8b86ae8375ac5"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/salvaged-frontier/portrait-mobile/damaged.png",
+      "bytes": 242805,
+      "sha256": "38d58f0a0505a2e0b738caf18e75a2b2d17ec0624f44d930841320ffadae6951"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/salvaged-frontier/portrait-mobile/intact.png",
+      "bytes": 242154,
+      "sha256": "3452038c5d2e307744159a6e26be9d73dbfc98b53af9a52e86065507b2f799fb"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/salvaged-frontier/state-silhouette/critical.png",
+      "bytes": 225171,
+      "sha256": "c5ed0b5f224562c1961a8a2c1b578bfc24a2ad3caf2c3459292e19a042445b0d"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/salvaged-frontier/state-silhouette/damaged.png",
+      "bytes": 224661,
+      "sha256": "e3be72ad02410a1ea2862a32c4b993a6ae4ab498b5cf2ec0ed78fd7641d48b7d"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/salvaged-frontier/state-silhouette/intact.png",
+      "bytes": 224740,
+      "sha256": "c8bc94c62b3ea99091ff54c773e009d8c591cae636b0acd524fa21e670423d1a"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/studio-captures/clean-tactical-diorama.jpg",
+      "bytes": 51170,
+      "sha256": "140c83098cd98c7fc184ed9340c640631a5f66458a47a1bbed9294b190512270"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/studio-captures/industrial-toy-defense.jpg",
+      "bytes": 52645,
+      "sha256": "7367a8a3cb6cf8cd6505c102c2d4f438021b3c8cbc888ae5320c38d8ece3c75c"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/studio-captures/salvaged-frontier.jpg",
+      "bytes": 55269,
+      "sha256": "3792e6c98311b5dfa7eb5f070b53b7e1db056ebd9b3a4dea95fd4df6fd728dcc"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/studio-import-manifest.json",
+      "bytes": 4530,
+      "sha256": "12accab8f494cf038e1272596aab039b591fdfcc74fe1431d4314d3991691e1a"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/studio-publication-report.json",
+      "bytes": 4233,
+      "sha256": "3194ef010009a33bc32a1e0740b60f41b34657b28594feb276461925a8188317"
+    },
+    {
+      "path": "evidence/transfer/archive/turret-fast-v1-v3.7-pre-salvaged-lock/studio-transfer-report.json",
+      "bytes": 11326,
+      "sha256": "d8a26e2151cdbf5e15787c3369a2211a8404f49b45e4a6cffa2e9bcd1058cea4"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/exports/critical.glb",
+      "bytes": 64052,
+      "sha256": "69e4a6b110f35b6e18353f01f4f447d6be17b34bb6c1440dda4f30415e5fcfb7"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/exports/damaged.glb",
+      "bytes": 72568,
+      "sha256": "7f3f501a4c14afc42fbbef91ef15d374d6ffc95bbd06c0d28a1f3e3203f19e3d"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/exports/intact.glb",
+      "bytes": 69736,
+      "sha256": "88a76d59214eb90dfa8e077eadba59a2f535e9471c75deb2a6afcf42f455291f"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/far-mobile/critical.png",
+      "bytes": 211290,
+      "sha256": "496200fbff935da8dc233fc9fb90caab393f2f5aa83adc0bb806d0ed472e3fa4"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/far-mobile/damaged.png",
+      "bytes": 211860,
+      "sha256": "f389d18cda214ac88c6db9fe59b4c37643ddd3cc5c32ebbf3e08d8cda7337c0b"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/far-mobile/intact.png",
+      "bytes": 211648,
+      "sha256": "9f61f02ba9d5021d98f62bdff3be89f7af91952f878db0d46b79ba7d56580500"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/hero/critical.png",
+      "bytes": 797259,
+      "sha256": "65c913de58bac2f97bca856681bdbbc4a6e67c6af1a4e4c25636ce66bd65937c"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/hero/damaged.png",
+      "bytes": 828750,
+      "sha256": "9cf859cf958e96a0b8beeb9d7083e83336ed2d5710c11b1fdc46a668304287ba"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/hero/intact.png",
+      "bytes": 823543,
+      "sha256": "6729a52369076a19a09dfad3dff7b6e9acd16db2028342ce852059db80607ec8"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/orientation/back_silhouette.png",
+      "bytes": 207582,
+      "sha256": "39e591ee3deb4d5e2113e01ea55c59de36f1a14542bab49c0d2e4871f4a5d391"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/orientation/front_silhouette.png",
+      "bytes": 207791,
+      "sha256": "1efaba088b736cef7e15ac6eefee47a0700feb34aaa76ed6f6401af7f46ba4e4"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/portrait-mobile/critical.png",
+      "bytes": 223416,
+      "sha256": "95c19bd22df55dfa1b1274738f99ff7015843d7f6638737909cc6bd62b45575e"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/portrait-mobile/damaged.png",
+      "bytes": 227854,
+      "sha256": "022e527f2424be6c6b2e2a0cde0cf1c40f4eafa5028e4a5fe539ea8b26ea58c4"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/portrait-mobile/intact.png",
+      "bytes": 226426,
+      "sha256": "32a7a09cef208880824001386f3fa6a7838eef10de591ade60282e4c1dfec8b2"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/state-silhouette/critical.png",
+      "bytes": 207362,
+      "sha256": "49e6c7fea70d1825fd5e04f2dcc32f544bd80611b1d48619aae2c970335d7288"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/state-silhouette/damaged.png",
+      "bytes": 207060,
+      "sha256": "4ba4a60333efcdfe88772650cfa37060b5a8a5d7d5b3edcc882e622aa1f62d61"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/state-silhouette/intact.png",
+      "bytes": 206793,
+      "sha256": "ec1953c671782c86f7235e6f239ce36c452702931c872273c14c0b542df86fbe"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/exports/critical.glb",
+      "bytes": 78956,
+      "sha256": "0120d10c32390c5c5618c0398ee2da3bf83a0e070bda03fb0d553825cf949d88"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/exports/damaged.glb",
+      "bytes": 92796,
+      "sha256": "80ba6a8d1fce1b70fcb8ce135f8f34840e8625aa936631e1043af6f1794d58d3"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/exports/intact.glb",
+      "bytes": 89436,
+      "sha256": "a89d7b7277c72ae9c3cb0fb0bc76c85867f3c2da6ae316b4b5ff5abf4430c8c6"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/far-mobile/critical.png",
+      "bytes": 200959,
+      "sha256": "0aa7b54f9e9ccc03acfee20ffe1f2627c0198789448ec2c0a01556822150d931"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/far-mobile/damaged.png",
+      "bytes": 201341,
+      "sha256": "7c95fb8a24fe589c7103c133877f4f78b8c88cdf61c18c8cf097ca487aea42c5"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/far-mobile/intact.png",
+      "bytes": 201133,
+      "sha256": "24c97339a61f6b0779511aaba77f14e56b01ae6504862b3aca5e5863c896e4cc"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/hero/critical.png",
+      "bytes": 805177,
+      "sha256": "c2dc9619bcf4f8c75549877416c4e41f6eaea3c2b622bfcb47feb88497b408e2"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/hero/damaged.png",
+      "bytes": 844031,
+      "sha256": "19f97a3428e2b20f8d482ac68f644bc2f5e96d816d9b6b1e9519514b07787843"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/hero/intact.png",
+      "bytes": 832283,
+      "sha256": "4e175b36734617089cc9e8153f501610558e64c164d53ddef99ae25f987c62a7"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/orientation/back_silhouette.png",
+      "bytes": 202052,
+      "sha256": "63dcbb25a767854a26709fbe59e2873bd8fdf160e3f29deddc6f2310a98db469"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/orientation/front_silhouette.png",
+      "bytes": 202157,
+      "sha256": "ff12df4d0f20dadf938d151829a5743a0c4a6048c8330a51b206f5b674bd135d"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/portrait-mobile/critical.png",
+      "bytes": 216065,
+      "sha256": "9d951b0beb67c72bfd023d167897e940816fd5ba1bb098651f4575dad98cb9a3"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/portrait-mobile/damaged.png",
+      "bytes": 218467,
+      "sha256": "5a91af812b900c129d6bd58e128e4d33d5cf6272eeaaeb005b88bdcca9dae3f1"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/portrait-mobile/intact.png",
+      "bytes": 218625,
+      "sha256": "11a4776988eb363272e7374b997a89d1a8ca55d9067959e0899559a961b45ffa"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/state-silhouette/critical.png",
+      "bytes": 201582,
+      "sha256": "846ea61b4a8f1a188ebb5db86b1dbdefcb12cbd1ec7f6b42ad8d1f740cffa8f8"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/state-silhouette/damaged.png",
+      "bytes": 202077,
+      "sha256": "c2d59533c2e6b9057ed2c0aaa4379643fed1c2d5dbc99e69269f52df53fb6764"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/state-silhouette/intact.png",
+      "bytes": 201654,
+      "sha256": "e20f60651c739c5892249bfeb0c80f7c0f8ec12c352df7f33f833ff659de9bba"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/report.json",
+      "bytes": 35921,
+      "sha256": "000d81b4985bf9d25abe17e9765847585f786fc1b3138d26fc857ebf331c4df4"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/review/hero-contact-sheet.png",
+      "bytes": 354225,
+      "sha256": "7cce0bb389c3a113d170fccc716875ef7257c9414e6776533ae3105a4e97308d"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/review/index.html",
+      "bytes": 7522,
+      "sha256": "87812625ada6e433558af45cb64153392c15dad55ba42104c4641b94dca2d0ed"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/review/silhouette-contact-sheet.png",
+      "bytes": 284873,
+      "sha256": "c17e7cff3c5286738b1cf38b6f5d61162d296362f14325eeb6084bd40b5beeb6"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/exports/critical.glb",
+      "bytes": 80688,
+      "sha256": "b874669379f200b036531fbdbfe72717075fae343f3bd28f4e3777439e2a6a4a"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/exports/damaged.glb",
+      "bytes": 94516,
+      "sha256": "f6a3fead64e13d96e8eda6e3e7b88dd50a16d36cb65c051b28a3cfb6fc8284c1"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/exports/intact.glb",
+      "bytes": 89436,
+      "sha256": "0ab44ddc65247c9a982b3238fc296ceda097e8c9dd3bced51be683f21ab1c2b0"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/far-mobile/critical.png",
+      "bytes": 221992,
+      "sha256": "a25fb22a925ee8731cf7c13e62c0f3a2615e08e7b8b4c02d911fe5500db84194"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/far-mobile/damaged.png",
+      "bytes": 222211,
+      "sha256": "d3a57da5e2b9e5b1cb46295b980a7e3777271335a18596cb7b7b28730c4043c7"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/far-mobile/intact.png",
+      "bytes": 222054,
+      "sha256": "84d60533788b5240657f7fd9ee510d33552da089e3643096ed2552f3b7403ae1"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/hero/critical.png",
+      "bytes": 816388,
+      "sha256": "11a98cd0b5c84a71c8e9ccecfa97658be568d171b0d8849c96f049ad4bdea048"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/hero/damaged.png",
+      "bytes": 826973,
+      "sha256": "cfc98c5433365e51a461c8faf620797d366acc874e4b4dd42be38f7811db19f3"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/hero/intact.png",
+      "bytes": 820838,
+      "sha256": "46b1916ff918ee2aa7bc907c5c299e7e1c8f4830298d61f4f341f1579bb0ab81"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/orientation/back_silhouette.png",
+      "bytes": 220814,
+      "sha256": "111c846a07188bbb788e37f0304c1c38b277a3e5088e5c10a460e69507ad26f2"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/orientation/front_silhouette.png",
+      "bytes": 220734,
+      "sha256": "99af6366928e195cc0cf0ec0c32de6d4cadfe49c7ec9e5bad607d19e340ec3ff"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/portrait-mobile/critical.png",
+      "bytes": 233999,
+      "sha256": "a2ec61fb3d050240e92a58a74c8d7725cda859abff68abc430a057a41211b15a"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/portrait-mobile/damaged.png",
+      "bytes": 235814,
+      "sha256": "0e3fb66cb54de01914882b8c0283f6c420075480b79612531cb0d1ee3eec428c"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/portrait-mobile/intact.png",
+      "bytes": 235299,
+      "sha256": "4508f82fa62f7eb7ee7f3c37d46c925fcab22917ba7e56836180978df7aa4aa9"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/state-silhouette/critical.png",
+      "bytes": 221869,
+      "sha256": "e69633ed12c742fc2767c7dc3857201b4c41fdb0e52b3d28e3f12b29717705eb"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/state-silhouette/damaged.png",
+      "bytes": 220995,
+      "sha256": "6190817ede6685d00e2bebec9a296106492d525f3bd346997474b00b7af8c206"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/state-silhouette/intact.png",
+      "bytes": 220710,
+      "sha256": "6a681ba75c813143242320e7b170552fda1348dc7a662bb6e1d0d3e7a9bc99d6"
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/studio-import-manifest.json",
+      "bytes": 4530,
+      "sha256": "0dcf202a4761a64ab0d58a8c0f04dc7962ce47db9028bdc058123bf5089c5514"
+    },
+    {
+      "path": "plans/art-direction-vertical-slice.md",
+      "bytes": 4071,
+      "sha256": "8f92afa8b32b6883dfc1466da348d428fc78c9579dcb53018cc1134ea4b48d62"
+    },
+    {
+      "path": "plans/defense-barricade-vertical-slice.md",
+      "bytes": 3513,
+      "sha256": "b0c7484877532524eedec92cfb980f8f62b1b1dc890781d419378538489d8e48"
+    },
+    {
+      "path": "plans/precanonical-web-integration.md",
+      "bytes": 15685,
+      "sha256": "4f0a9fcfba48250bafe8b63c8268320360ceb7be02a186eae84acca27fb22caa"
+    },
+    {
+      "path": "plans/v3-production-sota-execplan.md",
+      "bytes": 7198,
+      "sha256": "b9ca8cee15ae7a0f3b3a18625ceea65efd5580bfd245f68c96d6227f7f9cd5db"
+    },
+    {
+      "path": "plans/v3-remediation-execplan.md",
+      "bytes": 4811,
+      "sha256": "f71e16deed0a64cdd3b09be9ba9fde3c01e761162d05ff6de725a66c090a09cd"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 113,
+      "sha256": "171eab7871df3674b5d657719752bab4b0f303b62ac7c68838596c1a39c66283"
+    },
+    {
+      "path": "requirements-dev.txt",
+      "bytes": 347,
+      "sha256": "a50f9df378a3f7d398f08fa82c4e0b0fb4c0355dd15f3bdf7806b58d4a606f1a"
+    },
+    {
+      "path": "roblox.yml",
+      "bytes": 724664,
+      "sha256": "276db39692fd9e53462fadb3947f24410d58ce3d81784ba3e7a7400fd31d2ed9"
+    },
+    {
+      "path": "schemas/art-constitution.schema.json",
+      "bytes": 14337,
+      "sha256": "1d3c1def1b92e960e9b782de0cdd28729888a80c80ffbf487f19d5ffab55e449"
+    },
+    {
+      "path": "schemas/art-direction.schema.json",
+      "bytes": 15022,
+      "sha256": "91cc5c70026ff31f4ad5632687e3d7886565215dc0323d92203da7c61e315372"
+    },
+    {
+      "path": "schemas/art-lock.schema.json",
+      "bytes": 2654,
+      "sha256": "d176d2e2d7810696d214607a6e9cc20b6ad67ce8e53b10f49641ef029162dccd"
+    },
+    {
+      "path": "schemas/blender-verification-report.schema.json",
+      "bytes": 2216,
+      "sha256": "c97651b8507a880dbfcb974edb1e58f5da950032f78da693db2b2fd84b9cf134"
+    },
+    {
+      "path": "schemas/blind-map.schema.json",
+      "bytes": 1528,
+      "sha256": "2cb762afef8b74d454a8b45ac54fc92c78ee76782c7d63a26bf1c7a19d93a5c3"
+    },
+    {
+      "path": "schemas/blind-study-manifest.schema.json",
+      "bytes": 2740,
+      "sha256": "3a6a3e77c70ad550eebff1fbb80af97461ebfd843de935d3070ead0689460dd8"
+    },
+    {
+      "path": "schemas/build-report.schema.json",
+      "bytes": 10613,
+      "sha256": "ba954af40176bc596cbc349957af80175abca258d1845267ce44b1590d102a5b"
+    },
+    {
+      "path": "schemas/calibration-kit.schema.json",
+      "bytes": 19927,
+      "sha256": "6866c0e3986a4941ac17e3a6de15bced2f3a165164febc1ee427ca76978770d0"
+    },
+    {
+      "path": "schemas/camera-rig.schema.json",
+      "bytes": 5193,
+      "sha256": "d1cadf0703ac24141084971a8e46bcc91963125474d4cfd37e0e5fbc2462594f"
+    },
+    {
+      "path": "schemas/canon-compliance-report.schema.json",
+      "bytes": 3184,
+      "sha256": "1541a0f2c612811e5d0e49126848da0897defcf46955d4a93a80950ad97edd62"
+    },
+    {
+      "path": "schemas/component-evidence-map.schema.json",
+      "bytes": 1852,
+      "sha256": "3161dab176f905365bc802c46d6d3422cbf140f8acde34ec52e5da15a224b32e"
+    },
+    {
+      "path": "schemas/component-evidence-report.schema.json",
+      "bytes": 2675,
+      "sha256": "f0a2ef985a61d99c3a33b46ff79007e236175674a3d0dd8c21ff9d9457c2220a"
+    },
+    {
+      "path": "schemas/creative-direction-decision.schema.json",
+      "bytes": 2954,
+      "sha256": "da7aa33db1fa77311e924309a0fc9bd981cadf305fac07275e1327d4f6e6c1ca"
+    },
+    {
+      "path": "schemas/evidence-index.schema.json",
+      "bytes": 2051,
+      "sha256": "1cdd258605979dd22b3b3e9f1d786683b5634dc286c6abe38cbb36d96923b8de"
+    },
+    {
+      "path": "schemas/expert-session.schema.json",
+      "bytes": 2307,
+      "sha256": "375c8adc71a3c307b8f76591d89dce48f654d250fa4dfad30742d636adfe3ea4"
+    },
+    {
+      "path": "schemas/faction-palettes.schema.json",
+      "bytes": 3698,
+      "sha256": "bc4b1208bf6d478e505e5c1de7756dfd543a9612bed47f650ec97ae4dde9fe3a"
+    },
+    {
+      "path": "schemas/full-evidence.schema.json",
+      "bytes": 3244,
+      "sha256": "9c4d0d707807a63368df25d73f76c95ed7c71f950f2d1afc110a586d6195889b"
+    },
+    {
+      "path": "schemas/generation-authority.schema.json",
+      "bytes": 2891,
+      "sha256": "4d1b582290d092fe33a99209fb5d836ccedd2b69ef86de486e3ec1283ed2c1dd"
+    },
+    {
+      "path": "schemas/lighting-profiles.schema.json",
+      "bytes": 34829,
+      "sha256": "34b8ba9b5f646ea4a7281d1a7dc349acf4857689def46ef354f3bc9d2576e498"
+    },
+    {
+      "path": "schemas/manifest.json",
+      "bytes": 8229,
+      "sha256": "9a69cd6d5074b49e1ac46d02316b259b4d26bfb4a5ed48ebee35cc3171fa1965"
+    },
+    {
+      "path": "schemas/material-rules.schema.json",
+      "bytes": 8544,
+      "sha256": "15ebec037a18ab768ded1164f9b6e168eaff03467870f9524c9ec0fea5ceef9d"
+    },
+    {
+      "path": "schemas/object-product-contracts.schema.json",
+      "bytes": 9445,
+      "sha256": "efb6c74f79f1db50017f6987ac130121fff95fd5e246c3729dc27582345f57bb"
+    },
+    {
+      "path": "schemas/participant-session.schema.json",
+      "bytes": 2910,
+      "sha256": "a49257d9cae2f9d42e3a752ed9ec026ab3aa65a04cf88a105a1c632ba8d374c2"
+    },
+    {
+      "path": "schemas/performance-report.schema.json",
+      "bytes": 13089,
+      "sha256": "c5170dd5319ba8e891bb3b38c5626d0a2151b4c931d1767ace1b5d429ee0a98c"
+    },
+    {
+      "path": "schemas/precanonical-brief.schema.json",
+      "bytes": 6164,
+      "sha256": "4085a3163611913a837a3cf7bf3816c244df062cf512e7186cd061b5e4144ded"
+    },
+    {
+      "path": "schemas/precanonical-browser-doctor.schema.json",
+      "bytes": 3547,
+      "sha256": "4a98d8e61b3e8631280b7d66863fb87113c84121c959ee85650162f8c1058590"
+    },
+    {
+      "path": "schemas/precanonical-campaign.schema.json",
+      "bytes": 8783,
+      "sha256": "9b8c11507aa77156bdafc1568dc3023286ec00ac2b30f35eb017d9f5686ff2f1"
+    },
+    {
+      "path": "schemas/precanonical-handoff.schema.json",
+      "bytes": 4856,
+      "sha256": "d2067aeca7ca17eaacc6e953abd4d9a51690c1de389fe39c9e8b2baceb13783e"
+    },
+    {
+      "path": "schemas/precanonical-operator-session.schema.json",
+      "bytes": 7793,
+      "sha256": "1dff060c8e03a91132b28f908ab48d9688fa92cfd8441f6c45eab77237bdb4b3"
+    },
+    {
+      "path": "schemas/precanonical-policy.schema.json",
+      "bytes": 8503,
+      "sha256": "942ba2341c2b3fe65cfc045585b27bdb50ba0601e977a9137d876687b3f857a4"
+    },
+    {
+      "path": "schemas/precanonical-preflight.schema.json",
+      "bytes": 2640,
+      "sha256": "1bfa32c00c82718284f130a94c0e702c9ed5f764fa6cfad19295e49e3d997bee"
+    },
+    {
+      "path": "schemas/precanonical-request.schema.json",
+      "bytes": 6924,
+      "sha256": "e7b2b5a0dc37aaf9a8105d2ea4f0348ee1c928d7eba075ece486d8ad30872f13"
+    },
+    {
+      "path": "schemas/precanonical-result.schema.json",
+      "bytes": 3594,
+      "sha256": "cc30df63c2484658fcd021aa3a2ddda987147afc87b714af1e9385af0f5d0042"
+    },
+    {
+      "path": "schemas/precanonical-review.schema.json",
+      "bytes": 3919,
+      "sha256": "d1925f8202a7554ef7ed54e2de1e2e0163ea225f58601e72cbad6490c1ad59d3"
+    },
+    {
+      "path": "schemas/precanonical-visual-audit.schema.json",
+      "bytes": 3779,
+      "sha256": "d8925e2c1df0f71f72ca26ba4b59047a06a5c89386ed7a6c3d1e93c421dd114b"
+    },
+    {
+      "path": "schemas/product-art-authority.schema.json",
+      "bytes": 4820,
+      "sha256": "2cc95f49ab474469200f44d3a2eb0c8e354b804aa45ada3827f432c530a8a1e9"
+    },
+    {
+      "path": "schemas/provenance.schema.json",
+      "bytes": 4434,
+      "sha256": "b53f8b00f452abfd73f5cbafaabc15be965b9bb89c4d35499d364248c64a7df1"
+    },
+    {
+      "path": "schemas/reimport-probe.schema.json",
+      "bytes": 1341,
+      "sha256": "2d41dc824483764812bc088dab5e041ba100e4cfc920108b450c22c1a23df37c"
+    },
+    {
+      "path": "schemas/render-matrix.schema.json",
+      "bytes": 7515,
+      "sha256": "a841edd361e0c4416898f399597362b806cb254210bf734d35831e600499ce07"
+    },
+    {
+      "path": "schemas/reviewer-submissions.schema.json",
+      "bytes": 6937,
+      "sha256": "8079ceebbe3016e236b02eac6ced881fed3e28683ac53cd161a1e97e6e1c22b3"
+    },
+    {
+      "path": "schemas/selection-decision.schema.json",
+      "bytes": 2028,
+      "sha256": "8dce3fcf98500be7123f783d7e7998eaf278e6dbe65242a6b2149f748f5aec02"
+    },
+    {
+      "path": "schemas/semantic-palette.schema.json",
+      "bytes": 4064,
+      "sha256": "346ff5f76a4f12d93d59e7f2d6a944a3e99bad871ae60b79355924b893dc238e"
+    },
+    {
+      "path": "schemas/shape-rules.schema.json",
+      "bytes": 10751,
+      "sha256": "68fd2a4d54399392fb440275b52cce865ae294a04cd4188ac1418bcc8fd60126"
+    },
+    {
+      "path": "schemas/smoke-evidence.schema.json",
+      "bytes": 3248,
+      "sha256": "534bdf4ce0548f6da309599a524931a963db683a067850948aec944c15f748ee"
+    },
+    {
+      "path": "schemas/static-verification-report.schema.json",
+      "bytes": 2536,
+      "sha256": "cf354fbc45ac36b60649ac2c0e42d7939acc2035d20b16093ee6a4b267ccc1e8"
+    },
+    {
+      "path": "schemas/status.schema.json",
+      "bytes": 3982,
+      "sha256": "bd738c433423c848964d45fd88d2d5abc69ac9a09439db66d03b891e0c65a41f"
+    },
+    {
+      "path": "schemas/studio-reimport-report.schema.json",
+      "bytes": 2938,
+      "sha256": "3b0260a7bf9a727f58aa6132cc14cde2532ec34b658e6f2c605035201cabfcfd"
+    },
+    {
+      "path": "schemas/studio-report.schema.json",
+      "bytes": 23236,
+      "sha256": "b8c919789c6ae8703426af689caddfabbe58b643afa7080ec2353a4cd756b7c8"
+    },
+    {
+      "path": "schemas/studio-simulator-report.schema.json",
+      "bytes": 7262,
+      "sha256": "9c494936c09b55ecc1daee091764fec73e8cd44700b43a774bfc82042c846b79"
+    },
+    {
+      "path": "schemas/task-protocol.schema.json",
+      "bytes": 7385,
+      "sha256": "417097d860244791fd18bf52bab659a4c009836bc1416a7b4041c7ae9871e396"
+    },
+    {
+      "path": "schemas/territory.schema.json",
+      "bytes": 18198,
+      "sha256": "77b29a29c3dffcea785c4b9999ab86c370a799a9e956d8511bd1c3212753bc9f"
+    },
+    {
+      "path": "schemas/transfer-asset.schema.json",
+      "bytes": 11171,
+      "sha256": "acc180d5f846cd136e6adb2ff30192ff50a021f2e2a4393c70dd78b0c0d54604"
+    },
+    {
+      "path": "schemas/transfer-build-report.schema.json",
+      "bytes": 13190,
+      "sha256": "1da37b43ccfa7890256edccb40db68ff1d74bd1056a47b14bef5ba56d027c2ef"
+    },
+    {
+      "path": "schemas/transfer-import-queue.schema.json",
+      "bytes": 2107,
+      "sha256": "3633f37d6d713437342185dcb3f114c8f6f7b5f67f7f8b18dc6e68ed96b78779"
+    },
+    {
+      "path": "schemas/transfer-publication-report.schema.json",
+      "bytes": 4598,
+      "sha256": "996ce445fdfa89a42e75251cd1dd449b4772d2abb206b85f5a070dfdd78d24b8"
+    },
+    {
+      "path": "schemas/transfer-report.schema.json",
+      "bytes": 16278,
+      "sha256": "99d6f12f6319bee5ed4051ab5684c7db6bfeb4a7ff21cc9f0704245c1ad74e83"
+    },
+    {
+      "path": "schemas/transfer-review.schema.json",
+      "bytes": 4104,
+      "sha256": "c0b10307df5e405476646ad91cc2d71df81c9108f7ac755c443c6ff1f21549ca"
+    },
+    {
+      "path": "schemas/transfer-studio-report.schema.json",
+      "bytes": 12361,
+      "sha256": "7ce4a073296e94ebbc33cc6ab2bc6e016da195fc99e5978689eaad3e953bbaf3"
+    },
+    {
+      "path": "schemas/visual-canon-catalog.schema.json",
+      "bytes": 3887,
+      "sha256": "ffd2d6d2c65db7b73b3a7108cbdfee0c24dd14f8315043116b96215e033ff740"
+    },
+    {
+      "path": "schemas/visual-canon-evidence.schema.json",
+      "bytes": 4606,
+      "sha256": "bfb2f8681ac20d254c9ca87b6ed33dfff11dd2a256885d9ebd2168232905b03e"
+    },
+    {
+      "path": "schemas/visual-canon-human-review.schema.json",
+      "bytes": 3982,
+      "sha256": "931ec29ed61cd8e6c5ff57397c53a451d05cee2eed94801cfe9b4901e1dc5b16"
+    },
+    {
+      "path": "schemas/visual-canon-lock.schema.json",
+      "bytes": 2629,
+      "sha256": "62451ee20fae87c26bc47266ef77624602a1c9434d5d7490e24422ae1714eefc"
+    },
+    {
+      "path": "schemas/visual-canon-source.schema.json",
+      "bytes": 14190,
+      "sha256": "0ae24ec8b651cd3502b46af045a5bcb9f457da6c4e167f535197ba29e64fa24f"
+    },
+    {
+      "path": "schemas/visual-canon.schema.json",
+      "bytes": 25489,
+      "sha256": "d0fc92c693fa0c3b88a9336308789e0f410ef76dfb54ca1b4d777de4a7a6bf8e"
+    },
+    {
+      "path": "schemas/visual-quality-report.schema.json",
+      "bytes": 5949,
+      "sha256": "42da5df27555050b6abc70335aa24973dd1a625b61a4ac1ae0ebd992dda6cb6f"
+    },
+    {
+      "path": "schemas/visual-rubric.schema.json",
+      "bytes": 3753,
+      "sha256": "4ee6a33dfa9be8080fad913c9b1b2badb92a34b919df0286e95baea82d7c0dde"
+    },
+    {
+      "path": "schemas/workflow-simulation-report.schema.json",
+      "bytes": 6917,
+      "sha256": "e555e0bdae473b610208d7526b8a6892414be6a8544ee50fe06bed898fcee59c"
+    },
+    {
+      "path": "scripts/art-direction.ps1",
+      "bytes": 47803,
+      "sha256": "967f3c17f740a2656d039733d41781699de757fdc9579667292bd63e4be96b16"
+    },
+    {
+      "path": "scripts/art-direction.sh",
+      "bytes": 10509,
+      "sha256": "c475ec58fd9f5460bfdaafdf886bc61e2d5d78171dfd55e8a891f9cb9a20c280"
+    },
+    {
+      "path": "scripts/install-workflow.ps1",
+      "bytes": 14545,
+      "sha256": "28f3874e4dba60953439420b62b07ce14ea405d590dc771ee3ce5267d8870bbb"
+    },
+    {
+      "path": "scripts/r3d.ps1",
+      "bytes": 2199,
+      "sha256": "7474b5cec48336cda649169c182602e1ef71c8fa791cd1594886684191c2171d"
+    },
+    {
+      "path": "studio/generated/ArtDirectionConfig.luau",
+      "bytes": 24125,
+      "sha256": "be9e356d56d623edb0aacdc83f8efa1ac1a96e604ac2922a604e2388d4baeedc"
+    },
+    {
+      "path": "studio/generated/LightingProfiles.luau",
+      "bytes": 5739,
+      "sha256": "c68ba2fc8aca84081a1647f824877c35ea1e5e6355677388d87c538951a3da3b"
+    },
+    {
+      "path": "studio/generated/TerritoryStyles.luau",
+      "bytes": 4202,
+      "sha256": "187adac9935a768c7d0e672c3c6413c0c27d0163b80cf682d29e0a1415b76184"
+    },
+    {
+      "path": "studio/plugin/ArtDirectionGoldenScene.plugin.luau",
+      "bytes": 5219,
+      "sha256": "a9d9f6e11dd0e0fc3f718c0b49dce361e84b3781833507d6d81592e6a3c0d8ec"
+    },
+    {
+      "path": "studio/plugin/INSTALL.md",
+      "bytes": 1121,
+      "sha256": "538689725849c285b8d3d2750e7550880bbd5a44f8f482818756aa832d600bab"
+    },
+    {
+      "path": "studio/src/AssetKitStager.luau",
+      "bytes": 7363,
+      "sha256": "ea4842a6c5931d8eac4d0377fdbf6ad9cf4777da48c51e43920614ad156ffb32"
+    },
+    {
+      "path": "studio/src/CaptureController.client.luau",
+      "bytes": 3499,
+      "sha256": "0b9ab366fcd3fdca7e618c5becc5b266dc6b677427f3327cc5a95ef979524814"
+    },
+    {
+      "path": "studio/src/GoldenSceneBuilder.luau",
+      "bytes": 14207,
+      "sha256": "f30f9bb238b28b092c47fcde588bef6c004a07c774b937d1296cfa08c75247f8"
+    },
+    {
+      "path": "studio/src/GoldenSceneValidator.luau",
+      "bytes": 14033,
+      "sha256": "af95e1ff7f5650faf6c7a57f4f5347537dd9de6e947ca169446a9a1bfef00d4b"
+    },
+    {
+      "path": "studio/src/LightingProfileService.luau",
+      "bytes": 9585,
+      "sha256": "9be6ff62700fa0eacf94243fbc1c07ba009cfcb50656526ab2f083d32ba1a6e8"
+    },
+    {
+      "path": "studio/src/PerformanceBenchmarkBuilder.luau",
+      "bytes": 11059,
+      "sha256": "b108c85fbdd53304bf24b39ed6f0e6332bd1075df52641bc6fbcb833ec736c81"
+    },
+    {
+      "path": "studio/tooling/globalTypes.d.luau",
+      "bytes": 773938,
+      "sha256": "a0027362f872d231c1c4bbea6b2d5d561b0a4ea7e82458ea8a5f862cef8938aa"
+    },
+    {
+      "path": "studio/tooling/selene.toml",
+      "bytes": 324,
+      "sha256": "b01909dd49cc62a1a642870e5231de5cbf320673e81967de37bebd2d326b9e71"
+    },
+    {
+      "path": "studio/tooling/stylua.toml",
+      "bytes": 261,
+      "sha256": "2e94479c0d91444e7955f34459a399683f0c7a8e0031d47f4daa12f390ff5c2c"
+    },
+    {
+      "path": "tests/fixtures/mock-technical-evidence.json",
+      "bytes": 133,
+      "sha256": "f932ce4bcd2bfb46c1c0854af6aeee3529db2073eed296d002866949f8c34cb7"
+    },
+    {
+      "path": "tests/test_blind_study.py",
+      "bytes": 1340,
+      "sha256": "2f4066afef118705bc278648ac8248e35e83be8e42b65f991825a8cf9f89339a"
+    },
+    {
+      "path": "tests/test_complete_workflow_simulation.py",
+      "bytes": 5999,
+      "sha256": "7dc1c40fbb4b442770edca5a8c1c2a38a608e846baa56c6f6ce7e692e1edec8f"
+    },
+    {
+      "path": "tests/test_contracts_adversarial.py",
+      "bytes": 48590,
+      "sha256": "55867a7611039c818506674e29521a7ad63baa1bcf074e14f1fcf6cd76f010a3"
+    },
+    {
+      "path": "tests/test_precanonical.py",
+      "bytes": 23908,
+      "sha256": "ce5b82a10046eef320bb2143cd71bb4a4da48ec7956ad5b566c79ef23ecca9d2"
+    },
+    {
+      "path": "tests/test_precanonical_campaign.py",
+      "bytes": 26142,
+      "sha256": "3da622801f493d37fbc43f4b424095cad9c80902f37e9c7126dfea6055c33dc4"
+    },
+    {
+      "path": "tests/test_precanonical_operator.py",
+      "bytes": 9210,
+      "sha256": "6ea6fc0dc27c6a1f5c0c8b79fe84e4db2dbb13723da5c7ee2f9f87042aec11bb"
+    },
+    {
+      "path": "tests/test_process_environment.py",
+      "bytes": 3561,
+      "sha256": "33c695a325085e6eaf332cb27d0c2b98f9a779e195dbcf769b3349255eb23a76"
+    },
+    {
+      "path": "tests/test_transfer_publication.py",
+      "bytes": 7265,
+      "sha256": "3620d1a9444c823a8f38c07be4a0892d7215b1bd9c3a30e94f1bb1d7e281dc38"
+    },
+    {
+      "path": "tests/test_transfer_studio.py",
+      "bytes": 2552,
+      "sha256": "5ca915c468f4f2e651e23b74f59ae00d252e084461e1714a5ca020d000950eb9"
+    },
+    {
+      "path": "tests/test_visual_canons.py",
+      "bytes": 19270,
+      "sha256": "2f8bd6f3693fa43bf4161cdb574bdeafa38ef17ef621076e1015c428e842dc2b"
+    },
+    {
+      "path": "tools/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/art/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tools/art/archive_stale_evidence.py",
+      "bytes": 2361,
+      "sha256": "96579fd7807114cdf51bb821db729c0e4a5f400bb6c5526dfca9d2bc1cf28bca"
+    },
+    {
+      "path": "tools/art/bind_studio_captures.py",
+      "bytes": 1967,
+      "sha256": "e6b42f69287b0a888fb5c6bcbe13c2683a7732f816416c38b3ac6c296fa0aea5"
+    },
+    {
+      "path": "tools/art/blind_study.py",
+      "bytes": 50086,
+      "sha256": "e30bec68604198184889a9644ddf36fc067551f940bea5d26b9edb0ad1124e6d"
+    },
+    {
+      "path": "tools/art/build_canon_compliance.py",
+      "bytes": 14468,
+      "sha256": "daa01c96596459026fafc88ef3a4071ce054818dc36dd15ed1e999b0cde0dd55"
+    },
+    {
+      "path": "tools/art/build_evidence_index.py",
+      "bytes": 1259,
+      "sha256": "7ec47e0eb8410275e0519dbb7b8cee69a9d944fdbcdf976f414cecb3163a48ec"
+    },
+    {
+      "path": "tools/art/build_package_manifest.py",
+      "bytes": 3566,
+      "sha256": "85be7dc475142df09ad008739d6fde44773a68a5d64a79b903fcd1c6b6eba05e"
+    },
+    {
+      "path": "tools/art/build_review_gallery.py",
+      "bytes": 11364,
+      "sha256": "78bf39101e51b8ee5947009f907918e4885fa3eea14148d2b171d5cfb680e769"
+    },
+    {
+      "path": "tools/art/build_studio_contact_sheet.py",
+      "bytes": 1695,
+      "sha256": "192c26c1f58a9b098786f269c3be7df16af24bec87a2ca27d792e92bed8ada36"
+    },
+    {
+      "path": "tools/art/build_studio_import_queue.py",
+      "bytes": 5072,
+      "sha256": "c81628cd553d03a5a93b98401603a76c08e6f42510fd961dca90edcdf5eff1e9"
+    },
+    {
+      "path": "tools/art/build_transfer_import_queue.py",
+      "bytes": 4104,
+      "sha256": "86ffebd7a6c1ded257baa6dd414b9866655216cee3d29dab63926a6421113702"
+    },
+    {
+      "path": "tools/art/build_transfer_proof.py",
+      "bytes": 35192,
+      "sha256": "0b1fedbd93ca9f52b6b82d4e36466fc3f788e57d3816111f275ea748ea1161ac"
+    },
+    {
+      "path": "tools/art/build_visual_canons.py",
+      "bytes": 27093,
+      "sha256": "5c51fd21f87b3f91ab69e760af8ba2820f06ba2204da0376e0148d9c9d2cd3bb"
+    },
+    {
+      "path": "tools/art/capture_full_evidence.py",
+      "bytes": 5203,
+      "sha256": "c1bb22389e5f6435c262ee4414d8e386d4c2e5e2d70ec3642276faf5874829f9"
+    },
+    {
+      "path": "tools/art/capture_smoke_evidence.py",
+      "bytes": 5091,
+      "sha256": "a7f7fd820aa6b587b8ffd29bc8ff8f75d5c8584238f49ee26a1bd7f133ce63ea"
+    },
+    {
+      "path": "tools/art/check_dependencies.py",
+      "bytes": 1504,
+      "sha256": "aa25bf89422a49523e0a2bb5453e534e0ec00b62b660ca15affefa2662d36186"
+    },
+    {
+      "path": "tools/art/color_math.py",
+      "bytes": 788,
+      "sha256": "e3311facc67c3586716e17c1a93f8e328a8508a204d56ba5537d2d28458d3d87"
+    },
+    {
+      "path": "tools/art/common.py",
+      "bytes": 4754,
+      "sha256": "4f02bc617048a76bc9274c76b53c46395e772752b81dcc7e38022488f9c3201b"
+    },
+    {
+      "path": "tools/art/evidence_validation.py",
+      "bytes": 2335,
+      "sha256": "22585cff366c4db3a0380b5ce0fd406e63190c6711012ef134619803434b25bc"
+    },
+    {
+      "path": "tools/art/generate_luau.py",
+      "bytes": 4919,
+      "sha256": "7905c44a306c0998a8595bfcc889ed818daf1eec639541fb65376cffee5a53de"
+    },
+    {
+      "path": "tools/art/lock_direction.py",
+      "bytes": 13669,
+      "sha256": "249294cbcfb331b037aa47725aa5ae1669d0a2a01f433badfec03ebcec397c91"
+    },
+    {
+      "path": "tools/art/lock_visual_canon.py",
+      "bytes": 7120,
+      "sha256": "0f0b226c2ba33afc44a59d5a2142b486eea4fdf783a81d0ca98708f5a91e3075"
+    },
+    {
+      "path": "tools/art/make_reimport_probe.py",
+      "bytes": 4974,
+      "sha256": "8e2ccec5d7c4607dabd51c5d1297389702b68c55d9c843c6667a2e1370f230fa"
+    },
+    {
+      "path": "tools/art/measure_visual_quality.py",
+      "bytes": 10121,
+      "sha256": "705628d2ea387b52384f15d7e2a0456db38724a3bb994e01147d4461b9e11122"
+    },
+    {
+      "path": "tools/art/package_release.py",
+      "bytes": 2702,
+      "sha256": "5baa31bb831cc162bb297b696886bd808605543b6f31986c048b30b081263284"
+    },
+    {
+      "path": "tools/art/pixel_math.py",
+      "bytes": 2285,
+      "sha256": "9d435f999705f4d621ea281b442754a09b5c46a93a31dc48ce5bc2b6cea00e31"
+    },
+    {
+      "path": "tools/art/precanonical-operator.html",
+      "bytes": 70754,
+      "sha256": "eb17b045baa8b2b81377e49faaa3354e7f21895490f1edeccb48125574eafa45"
+    },
+    {
+      "path": "tools/art/precanonical.py",
+      "bytes": 61999,
+      "sha256": "99cd06e38cf8834754e381318331961d7dde81c191a15ad5b72d7d880ec9e95c"
+    },
+    {
+      "path": "tools/art/precanonical_campaign.py",
+      "bytes": 61412,
+      "sha256": "69bc8e27c96a7f2b386f40fbaf91543bb86f32f430703565a9d61c85857e06cc"
+    },
+    {
+      "path": "tools/art/precanonical_operator.py",
+      "bytes": 53566,
+      "sha256": "835921d6bc31ba36f97fc23904bcdde19bf387225072221a275f8748638ca953"
+    },
+    {
+      "path": "tools/art/prepare_canon_generation.py",
+      "bytes": 4062,
+      "sha256": "faded9fce3bc45bdbf18855363f0e0c2e584f02f058dfbeb51e8c612edb2e3f2"
+    },
+    {
+      "path": "tools/art/product_art_authority.py",
+      "bytes": 3204,
+      "sha256": "4503efa70360c85aa9736dfb0dcf4441eb3ef5c24ea5b5421512c63b132023a0"
+    },
+    {
+      "path": "tools/art/publish_transfer_candidates.py",
+      "bytes": 19774,
+      "sha256": "6e74ad4d793875f246388a29b9fee4c8753c2673be68306b2a03b0ac413d1819"
+    },
+    {
+      "path": "tools/art/recipe_contract.py",
+      "bytes": 2607,
+      "sha256": "a63742d99203ed11c341aecadc610fd7d118db94757a3065503ddb5dd826e8da"
+    },
+    {
+      "path": "tools/art/score_territories.py",
+      "bytes": 9929,
+      "sha256": "cbaaac230a7f129df6b3e7d01a38ec9e37c49b8a933d80e04a6a4b75eece844f"
+    },
+    {
+      "path": "tools/art/simulate_complete_workflow.py",
+      "bytes": 54371,
+      "sha256": "109e5657185095eef3842cf1b3a8e21042349ab78f7c7e0692a9ef6ef0469247"
+    },
+    {
+      "path": "tools/art/stage_transfer_studio.py",
+      "bytes": 43093,
+      "sha256": "61b2febf964b8e2e81301077de14675265124cacf1124b3fb0b7625b37df5b90"
+    },
+    {
+      "path": "tools/art/studio_mcp.py",
+      "bytes": 7939,
+      "sha256": "4d030ca6af4df471dd90fc63124a5833192ed757c397382885ae33145c895fa8"
+    },
+    {
+      "path": "tools/art/validate_build_report.py",
+      "bytes": 6243,
+      "sha256": "cb2a1eeac69bc6e98cc1527817adb63645633230bbd0c805f5e76316a8c56e9a"
+    },
+    {
+      "path": "tools/art/validate_library.py",
+      "bytes": 44361,
+      "sha256": "857f248ead57c5bedc0fdfbfc8fad2d0eab0a6370d3bbfbe28addb16c318bece"
+    },
+    {
+      "path": "tools/art/validate_performance_report.py",
+      "bytes": 4658,
+      "sha256": "dc891d81c859e21be08fe4fd71b08ac0eea6579bf6a4af9699296d7b8e1d152a"
+    },
+    {
+      "path": "tools/art/validate_studio_report.py",
+      "bytes": 3090,
+      "sha256": "563ab6efd9fc1ab918adcaeabb1042cbc9059d6f66a2b6957914b25d4844508d"
+    },
+    {
+      "path": "tools/art/validate_studio_simulator_report.py",
+      "bytes": 4528,
+      "sha256": "86490335e34fe07442e08f1bc48d1a523c39f99c880452728200d62b36627208"
+    },
+    {
+      "path": "tools/art/validate_transfer_build_report.py",
+      "bytes": 5686,
+      "sha256": "77e0b94ac37de1fb491e5e1c9eeeefb3be6a7ca211c27eee1f462f97649eec21"
+    },
+    {
+      "path": "tools/art/validate_transfer_report.py",
+      "bytes": 4718,
+      "sha256": "bf14578a0062d080baaa56ba53651acb23d813b89902fe008c6f049fcbc903f9"
+    },
+    {
+      "path": "tools/art/verify_blender.py",
+      "bytes": 7441,
+      "sha256": "0ca5effc4bd523626871b00768b372330779ad5e2084e0cf792f28dcf1a6654e"
+    },
+    {
+      "path": "tools/art/verify_static.py",
+      "bytes": 8024,
+      "sha256": "07285f5576f7e9b5b96ae655f249f9a90ec0eb880d3d92e321d64c2585b7b8f2"
+    },
+    {
+      "path": "tools/art/visual_canon_evidence.py",
+      "bytes": 16924,
+      "sha256": "7cba5de6fb2afae6a68c07871ae6102d276395e0842b5112a5843f992c6f7d20"
+    },
+    {
+      "path": "tools/art/visual_qa.py",
+      "bytes": 2853,
+      "sha256": "15ff855fee5b7134e08964215f893642e194e52de0edbd3c02d4a94b43ecafa7"
+    },
+    {
+      "path": "tools/blender/README.md",
+      "bytes": 1578,
+      "sha256": "974979ed7d254535a3ce000858051026f9e266935e53ef3b5a45bedaf24e7d52"
+    },
+    {
+      "path": "tools/blender/build_art_direction.py",
+      "bytes": 119997,
+      "sha256": "56595b8c3e615f19ff84d4f9e52969d9a63be0c6b48150d29173b0f4a3016880"
+    },
+    {
+      "path": "tools/blender/build_transfer_asset.py",
+      "bytes": 49103,
+      "sha256": "6c42e886db73922ead657dbb423b92e9a22f9541612cdf371731b1c093e43362"
+    },
+    {
+      "path": "tools/blender/inspect_component_evidence.py",
+      "bytes": 4064,
+      "sha256": "2afcf79f0d38305c4b4e161e8378291b2871c2794bcc48fac7ec4d2b6c0bb39f"
+    },
+    {
+      "path": "tools/roblox-3d-asset/blender/compile_asset.py",
+      "bytes": 35387,
+      "sha256": "34642e84af8b3d15bb12e3d365f5157aa911ab484b59bacf92eed426e64e2460"
+    },
+    {
+      "path": "tools/roblox-3d-asset/blender/render_canon_packet.py",
+      "bytes": 13333,
+      "sha256": "54b64cd42a04bcac2299fb396d55ea036c8b17dc0816a6f7f541b2aafdb76229"
+    },
+    {
+      "path": "tools/roblox-3d-asset/blender/workbench_bridge.py",
+      "bytes": 12489,
+      "sha256": "661d0f85001ad2104b4ad03869f08370e17a4631cb3f37dc572516eb33e2f74d"
+    },
+    {
+      "path": "tools/roblox-3d-asset/mcp/__init__.py",
+      "bytes": 141,
+      "sha256": "982b2c3a8e64af580468d3c7643d548f7b8bffc32155eb86e78984ac9e7368a5"
+    },
+    {
+      "path": "tools/roblox-3d-asset/mcp/bounded_operations.py",
+      "bytes": 8308,
+      "sha256": "8116fee13006a5f8730e523946f8f088f7339807cb5fb742cd6c25d68b9f300e"
+    },
+    {
+      "path": "tools/roblox-3d-asset/mcp/evidence_writer.py",
+      "bytes": 1021,
+      "sha256": "b41c9efa4025b77cc8e707f1cda7c1aaf14fc743b4e30ec8adc18ab1b99a157b"
+    },
+    {
+      "path": "tools/roblox-3d-asset/mcp/scene_inspector.py",
+      "bytes": 9336,
+      "sha256": "7ac01f005224e7b346005cf71441028ae8b8c5ce73c5549d6a1ec1f2e4ae37fa"
+    },
+    {
+      "path": "tools/roblox-3d-asset/mcp/security_policy.py",
+      "bytes": 6454,
+      "sha256": "321a667206d3cabd1b04dd383599037af8ed77c3ffef8f7f40f9cceb14ca9ff7"
+    },
+    {
+      "path": "tools/roblox-3d-asset/mcp/server_adapter.py",
+      "bytes": 10132,
+      "sha256": "da8492c0e2fe64a190811bf5411ab808fa521781a9943a59e6b4e294b081c9a0"
+    },
+    {
+      "path": "tools/roblox-3d-asset/mcp/session_manager.py",
+      "bytes": 49531,
+      "sha256": "7c4fbfb0b8ef2c49944827fc60e03f121bead6ad1e152fa870752f591362c9e2"
+    },
+    {
+      "path": "tools/roblox-3d-asset/pipeline/__init__.py",
+      "bytes": 48,
+      "sha256": "3686b81bdd8fc5c78993afe043f12f652f89840f618487ef69abf5541e3d09a4"
+    },
+    {
+      "path": "tools/roblox-3d-asset/pipeline/canon_packet.py",
+      "bytes": 59673,
+      "sha256": "78ec440173bc439191ac2909a799b170c1e14318ec3e1235e7728ad84bdbbbf7"
+    },
+    {
+      "path": "tools/roblox-3d-asset/pipeline/contract.py",
+      "bytes": 23315,
+      "sha256": "94fda81bb616350c33c730bafec9f3e5ef2b0fca5ce72c4e1442b530b40090a2"
+    },
+    {
+      "path": "tools/roblox-3d-asset/pipeline/determinism.py",
+      "bytes": 17560,
+      "sha256": "3fbb1eb8aabb6d5a3c697f0cce8fcd3886187d6497f3d89d4faf200aab81e79a"
+    },
+    {
+      "path": "tools/roblox-3d-asset/pipeline/doctor.py",
+      "bytes": 6765,
+      "sha256": "7fcb9c38f9f983525bd4b809528e075448bfd7ef81e6301366feec40f98532d3"
+    },
+    {
+      "path": "tools/roblox-3d-asset/pipeline/io_utils.py",
+      "bytes": 1233,
+      "sha256": "405771877e37a493ecf47b3761df9b072ddf66840d55c44a656fda6e58ef669f"
+    },
+    {
+      "path": "tools/roblox-3d-asset/pipeline/report.py",
+      "bytes": 12116,
+      "sha256": "0a33d710ee51b57165811f3bec56b4a56896a84311cf66910ef8c87585d2aeba"
+    },
+    {
+      "path": "tools/roblox-3d-asset/pipeline/review.py",
+      "bytes": 6025,
+      "sha256": "28c762f158641fb61a3175c02504defbfd8a415906bd894ecf2d957edc74af30"
+    },
+    {
+      "path": "tools/roblox-3d-asset/pipeline/state_variants.py",
+      "bytes": 1817,
+      "sha256": "84acffd83c48a305004dcd315b0a3f022ab975f662031ee1d7a447d736ed8d3f"
+    },
+    {
+      "path": "tools/roblox-3d-asset/pipeline/status.py",
+      "bytes": 805,
+      "sha256": "be2afaeddc6f2b3c1381428b26b32bfe61d9b366ba59eaf6aca1f3bd99ef5407"
+    },
+    {
+      "path": "tools/roblox-3d-asset/publisher/__init__.py",
+      "bytes": 43,
+      "sha256": "7bef39753ff880db69c857b06dfb9c5bfbc0f6a0503bbea90c36cf00b6e8e593"
+    },
+    {
+      "path": "tools/roblox-3d-asset/publisher/http_client.py",
+      "bytes": 4151,
+      "sha256": "8abf87bb7ed3ce5c9c2f4851f2c02194db27cd3fd49fe9c9e33347a94589eaec"
+    },
+    {
+      "path": "tools/roblox-3d-asset/publisher/publish.py",
+      "bytes": 11652,
+      "sha256": "7ee5c7e328501ac04db071b7ece68fd3d5dab41d2d8e73e271b4f91734ebe71f"
+    },
+    {
+      "path": "tools/roblox-3d-asset/r3d.py",
+      "bytes": 27266,
+      "sha256": "3767d13ffa73c4b9a884d30165f485be147caf2aee477858cb1cd8574c200537"
+    },
+    {
+      "path": "tools/roblox-3d-asset/schemas/asset-review.schema.json",
+      "bytes": 2502,
+      "sha256": "28e6c193a9e7789fd3f7a3fd2afc4c418f07c06a29e898a13c4eff3aa72ea827"
+    },
+    {
+      "path": "tools/roblox-3d-asset/schemas/asset.schema.json",
+      "bytes": 1867,
+      "sha256": "6c7dc5990feb262ad21dc723b2464ba04de1de8f1a3139f1fb28f330f554dfe9"
+    },
+    {
+      "path": "tools/roblox-3d-asset/schemas/blender-change-set.schema.json",
+      "bytes": 2491,
+      "sha256": "9fc6636074be824d2fab498aa57b77dc36a5d9e5832e4831493c851509baed56"
+    },
+    {
+      "path": "tools/roblox-3d-asset/schemas/blender-invariant-report.schema.json",
+      "bytes": 948,
+      "sha256": "ed77d8871c15054c2797d1448e5deb37d7ec2342f438056a82834d13483bc197"
+    },
+    {
+      "path": "tools/roblox-3d-asset/schemas/blender-promotion-report.schema.json",
+      "bytes": 1491,
+      "sha256": "e38850bdc723af8746cf9d64c1211e6c85a11cb93f701868fa3d4a5f6831f219"
+    },
+    {
+      "path": "tools/roblox-3d-asset/schemas/blender-scene-manifest.schema.json",
+      "bytes": 1207,
+      "sha256": "056b2a03e80e9f970076e1accf3a261ff6198795b1e998b9feb568506c0c0431"
+    },
+    {
+      "path": "tools/roblox-3d-asset/schemas/blender-workbench-session.schema.json",
+      "bytes": 4221,
+      "sha256": "ef9fc6e0718dd1f152a1d17191dadcf752b6f2161d52ea2d8f64b10f2ece910b"
+    },
+    {
+      "path": "tools/roblox-3d-asset/schemas/final-report.schema.json",
+      "bytes": 712,
+      "sha256": "d90e45dd9726dabe979f4087b221ed11043d4757425f318f259bf87704e1170b"
+    },
+    {
+      "path": "tools/roblox-3d-asset/studio/activate_benchmark_scene.luau",
+      "bytes": 1306,
+      "sha256": "84a3798a3d5be5953d86113e383293031b498c5ae4ab4ef7cf6c256d644c1ec0"
+    },
+    {
+      "path": "tools/roblox-3d-asset/studio/configure_wrapper.luau",
+      "bytes": 4243,
+      "sha256": "77ac6a0f39f6c34a3a27b9a0823524363e5813c91d5ec37cc74a911976c16379"
+    },
+    {
+      "path": "tools/roblox-3d-asset/studio/create_benchmark_scenes.luau",
+      "bytes": 1577,
+      "sha256": "cc2467a6725fc04c3f6e7a1e9bacd5814bd4163cd77045e9d058741b34eb66b4"
+    },
+    {
+      "path": "tools/roblox-3d-asset/studio/probe_environment.luau",
+      "bytes": 959,
+      "sha256": "ad7c2a6626acbe0df33d1ae3171d6d800bc3d53bd4afe824244a2700a8f101f0"
+    },
+    {
+      "path": "tools/roblox-3d-asset/studio/probe_inserted_package.luau",
+      "bytes": 1715,
+      "sha256": "b090e1414e179c028fae1dd451adf73b52093a61a1323662e6ddf1f065ab6249"
+    },
+    {
+      "path": "tools/roblox-3d-asset/studio/staged_swap_visual.luau",
+      "bytes": 2502,
+      "sha256": "e7ffe69930b9a8fe317c9a632483385c1e98ce74ab64f724f6168b74b34c1844"
+    },
+    {
+      "path": "tools/roblox-3d-asset/studio/verify_wrapper.luau",
+      "bytes": 2546,
+      "sha256": "a45b5e97522ae49acdc6f0e88eecac23f527d318302da83e796b7f44f6a84d41"
+    },
+    {
+      "path": "tools/roblox-3d-asset/tests/test_art_direction_wrapper.py",
+      "bytes": 2870,
+      "sha256": "127228c9fa2fc9a3775289f9bdd2d2825198e822ad8114384a0bbffd7c39572f"
+    },
+    {
+      "path": "tools/roblox-3d-asset/tests/test_canon_packet.py",
+      "bytes": 9338,
+      "sha256": "067ee55a48852b7c5f2e324d9bea6f48b843d2a1c67c779faea41152de06dfe6"
+    },
+    {
+      "path": "tools/roblox-3d-asset/tests/test_compile_states.py",
+      "bytes": 4550,
+      "sha256": "e44ecefa3611852fe4e3ef051c76e18cf4f37c40a256ed0541ae8e85f220dc68"
+    },
+    {
+      "path": "tools/roblox-3d-asset/tests/test_contract.py",
+      "bytes": 11519,
+      "sha256": "7270a47fe84e4f8468ca2b2c4568aac471e181e54cc146736a71e0516c2c1853"
+    },
+    {
+      "path": "tools/roblox-3d-asset/tests/test_determinism.py",
+      "bytes": 7067,
+      "sha256": "0cb0e8d63d43c2dfab719d5f84af7a6ebf03804e5fff015021021899ae560f1f"
+    },
+    {
+      "path": "tools/roblox-3d-asset/tests/test_doctor.py",
+      "bytes": 3085,
+      "sha256": "caf7f85ada39877b51ede03b62d1fd3573f5749f548823bdeadc4364373b4f86"
+    },
+    {
+      "path": "tools/roblox-3d-asset/tests/test_publisher.py",
+      "bytes": 2869,
+      "sha256": "5d3102372e755240f323329d8aa711679315265f97c7b54524f3c7f58dc93693"
+    },
+    {
+      "path": "tools/roblox-3d-asset/tests/test_report.py",
+      "bytes": 9406,
+      "sha256": "b5cf086418e81dd9ee7d33f0f1b91b4f9cd462b1479fca1ef7e2524d95566add"
+    },
+    {
+      "path": "tools/roblox-3d-asset/tests/test_state_variants.py",
+      "bytes": 2217,
+      "sha256": "ef9796a001d1a11247b93a04d2596e090a9f11c7511d767c139a30c65b804b92"
+    },
+    {
+      "path": "tools/roblox-3d-asset/tests/test_status.py",
+      "bytes": 858,
+      "sha256": "3cc3662db544b8184790c2a1c606c76a0629827073f1a8af737da217ec6fd625"
+    },
+    {
+      "path": "tools/roblox-3d-asset/tests/test_studio_scripts.py",
+      "bytes": 1043,
+      "sha256": "4174867fd491dfe86c14af8071feaaf5daf119ee1bc34de9c959b4107124f941"
+    },
+    {
+      "path": "tools/roblox-3d-asset/tests/test_workbench_contract.py",
+      "bytes": 7378,
+      "sha256": "b8e88fdeeb2179c3207ddc814149e010ec364622ebe6f3e207b53e6bea4c7041"
+    },
+    {
+      "path": "tools/roblox-3d-asset/tests/test_workbench_mcp.py",
+      "bytes": 2927,
+      "sha256": "bc593bd31bbba341d80c6042a9734b25175d731bec4d0ec8f45c0f5170a5625c"
+    }
+  ],
+  "selfExcluded": "PACKAGE_MANIFEST.json is intentionally excluded from its own digest."
+}

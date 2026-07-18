@@ -6,6 +6,11 @@ local RunService = game:GetService("RunService")
 type GameState = "PREPARATION" | "STARTING" | "DEFENDING" | "VICTORY" | "DEFEAT" | "REVIEW"
 type EnemyType = "Roamer" | "Brute"
 type RouteId = "Left" | "Right"
+type TargetScore = {
+	progress: number,
+	coreDamage: number,
+	spawnSerial: number,
+}
 type StateService = {
 	getPhase: (self: StateService) -> GameState,
 	damageCore: (self: StateService, number) -> number,
@@ -13,11 +18,11 @@ type StateService = {
 }
 type RouteService = {
 	getSpawn: (self: RouteService, RouteId) -> BasePart,
-	getPath: (self: RouteService, RouteId, EnemyType) -> { Vector3 },
+	getPath: (self: RouteService, RouteId, EnemyType) -> ({ Vector3 }, { string }),
 }
 type DefenseService = {
-	findBlockingWall: (self: DefenseService, RouteId, Vector3, number) -> Model?,
-	damageWall: (self: DefenseService, Model, number, EnemyType) -> boolean,
+	findBlockingWall: (self: DefenseService, { string }, number, Vector3, number) -> Model?,
+	damageWall: (self: DefenseService, Model, number, EnemyType, RouteId) -> boolean,
 }
 type StatsService = {
 	recordEnemySpawn: (self: StatsService, RouteId) -> (),
@@ -32,13 +37,20 @@ type EnemyConfigType = {
 	roamer: EnemyTuning,
 	brute: EnemyTuning,
 }
+type CombatRoutingPolicyModule = {
+	IsHigherPriorityTarget: (TargetScore, TargetScore?) -> boolean,
+}
 type EnemyRecord = {
 	model: Model,
 	root: BasePart,
 	enemyType: EnemyType,
 	routeId: RouteId,
 	points: { Vector3 },
+	pathCellKeys: { string },
 	pointIndex: number,
+	spawnSerial: number,
+	routeDistance: number,
+	distanceTravelled: number,
 	health: number,
 	moveSpeed: number,
 	coreDamage: number,
@@ -51,6 +63,15 @@ type CoreReachedCallback = (RouteId, number) -> ()
 
 local config = ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Game"):WaitForChild("Config")
 local EnemyConfig = require(config:WaitForChild("EnemyConfig") :: ModuleScript) :: EnemyConfigType
+local servicesFolder = script.Parent
+assert(
+	servicesFolder and servicesFolder:IsA("Folder"),
+	"GridEnemyService must be under Game.Services"
+)
+local gameFolder = servicesFolder.Parent
+assert(gameFolder and gameFolder:IsA("Folder"), "Game.Services must be under Game")
+local CombatRoutingPolicy =
+	require(gameFolder:WaitForChild("CombatRoutingPolicy") :: ModuleScript) :: CombatRoutingPolicyModule
 
 local GridEnemyService = {}
 GridEnemyService.__index = GridEnemyService
@@ -67,7 +88,7 @@ export type Service = typeof(setmetatable(
 		_spawnSerial: number,
 		_defenseService: DefenseService?,
 		_coreReachedCallback: CoreReachedCallback?,
-		_heartbeatConnection: RBXScriptConnection,
+		_heartbeatConnection: RBXScriptConnection?,
 	},
 	GridEnemyService
 ))
@@ -82,6 +103,26 @@ local function findOrCreateFolder(parent: Instance, name: string): Folder
 	folder.Name = name
 	folder.Parent = parent
 	return folder
+end
+
+local function planarDistance(left: Vector3, right: Vector3): number
+	local deltaX = right.X - left.X
+	local deltaZ = right.Z - left.Z
+	return math.sqrt(deltaX * deltaX + deltaZ * deltaZ)
+end
+
+local function calculateRouteDistance(
+	spawnPosition: Vector3,
+	points: { Vector3 },
+	corePosition: Vector3
+): number
+	local distance = 0
+	local previous = spawnPosition
+	for _, point in points do
+		distance += planarDistance(previous, point)
+		previous = point
+	end
+	return distance + planarDistance(previous, corePosition)
 end
 
 function GridEnemyService.new(
@@ -99,7 +140,9 @@ function GridEnemyService.new(
 	assert(brute and brute:IsA("Model") and brute.PrimaryPart, "Brute template is invalid")
 	local runtime = findOrCreateFolder(prototype, "Runtime")
 	local runtimeEnemies = findOrCreateFolder(runtime, "Enemies")
-	local placeholder = RunService.Heartbeat:Connect(function() end)
+	for _, child in runtimeEnemies:GetChildren() do
+		child:Destroy()
+	end
 	local self: Service = setmetatable({
 		_stateService = stateService,
 		_routeService = routeService,
@@ -111,9 +154,8 @@ function GridEnemyService.new(
 		_spawnSerial = 0,
 		_defenseService = nil,
 		_coreReachedCallback = nil,
-		_heartbeatConnection = placeholder,
+		_heartbeatConnection = nil,
 	}, GridEnemyService)
-	placeholder:Disconnect()
 	self._heartbeatConnection = RunService.Heartbeat:Connect(function(deltaTime: number)
 		self:_update(math.min(deltaTime, 0.1))
 	end)
@@ -138,7 +180,7 @@ function GridEnemyService.spawn(self: Service, enemyType: EnemyType, routeId: Ro
 	local tuning = if enemyType == "Brute" then EnemyConfig.brute else EnemyConfig.roamer
 	local template = self._templates[enemyType]
 	local spawnPart = self._routeService:getSpawn(routeId)
-	local points = self._routeService:getPath(routeId, enemyType)
+	local points, pathCellKeys = self._routeService:getPath(routeId, enemyType)
 	if #points == 0 then
 		return false
 	end
@@ -161,7 +203,11 @@ function GridEnemyService.spawn(self: Service, enemyType: EnemyType, routeId: Ro
 		enemyType = enemyType,
 		routeId = routeId,
 		points = points,
+		pathCellKeys = pathCellKeys,
 		pointIndex = 1,
+		spawnSerial = self._spawnSerial,
+		routeDistance = calculateRouteDistance(spawnPart.Position, points, self._core.Position),
+		distanceTravelled = 0,
 		health = tuning.maxHealth,
 		moveSpeed = tuning.moveSpeed,
 		coreDamage = tuning.coreDamage,
@@ -185,17 +231,23 @@ end
 
 function GridEnemyService.findPriorityEnemy(self: Service, position: Vector3, range: number): Model?
 	local selected: Model? = nil
-	local selectedCoreDistance = math.huge
+	local selectedScore: TargetScore? = nil
 	for model, record in self._active do
 		if
 			model.Parent
 			and record.health > 0
 			and (record.root.Position - position).Magnitude <= range
 		then
-			local coreDistance = (record.root.Position - self._core.Position).Magnitude
-			if coreDistance < selectedCoreDistance then
+			local score: TargetScore = {
+				progress = if record.routeDistance > 0
+					then math.clamp(record.distanceTravelled / record.routeDistance, 0, 1)
+					else 0,
+				coreDamage = record.coreDamage,
+				spawnSerial = record.spawnSerial,
+			}
+			if CombatRoutingPolicy.IsHigherPriorityTarget(score, selectedScore) then
 				selected = model
-				selectedCoreDistance = coreDistance
+				selectedScore = score
 			end
 		end
 	end
@@ -221,8 +273,7 @@ function GridEnemyService.applySlowInRadius(
 	position: Vector3,
 	radius: number,
 	multiplier: number,
-	durationSeconds: number,
-	_padId: string
+	durationSeconds: number
 ): number
 	local newlyAffected = 0
 	local now = os.clock()
@@ -241,8 +292,8 @@ function GridEnemyService.applySlowInRadius(
 end
 
 function GridEnemyService.clear(self: Service)
-	for _, record in self._active do
-		record.model:Destroy()
+	for _, child in self._runtimeEnemies:GetChildren() do
+		child:Destroy()
 	end
 	table.clear(self._active)
 	self._stateService:setEnemiesRemaining(0)
@@ -276,13 +327,19 @@ function GridEnemyService._update(self: Service, deltaTime: number)
 		local defenseService = self._defenseService
 		local wall = if defenseService
 			then defenseService:findBlockingWall(
-				record.routeId,
+				record.pathCellKeys,
+				record.pointIndex,
 				record.root.Position,
 				EnemyConfig.wallDetectionRange
 			)
 			else nil
 		if wall and defenseService then
-			defenseService:damageWall(wall, record.structureDPS * deltaTime, record.enemyType)
+			defenseService:damageWall(
+				wall,
+				record.structureDPS * deltaTime,
+				record.enemyType,
+				record.routeId
+			)
 			continue
 		end
 		if now >= record.slowUntil then
@@ -309,6 +366,8 @@ function GridEnemyService._update(self: Service, deltaTime: number)
 		end
 		local movement = math.min(distance, record.moveSpeed * record.slowMultiplier * deltaTime)
 		local nextPosition = record.root.Position + offset.Unit * movement
+		record.distanceTravelled =
+			math.min(record.routeDistance, record.distanceTravelled + movement)
 		record.model:PivotTo(
 			CFrame.lookAt(nextPosition, Vector3.new(target.X, nextPosition.Y, target.Z))
 		)

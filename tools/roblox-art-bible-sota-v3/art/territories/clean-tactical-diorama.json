@@ -1,0 +1,180 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/territory.schema.json",
+  "schemaVersion": "2.0.0",
+  "territoryId": "clean-tactical-diorama",
+  "status": "CANDIDATE",
+  "vision": "A living tactical board game where every piece is deliberate, clean, modular and readable at a glance.",
+  "pillars": [
+    "clean_silhouettes",
+    "organized_symmetry",
+    "large_semantic_color_fields",
+    "near_zero_surface_noise",
+    "construction_set_modularity"
+  ],
+  "antiPillars": [
+    "realistic_wear",
+    "miniature_mechanical_detail",
+    "soft_ambiguous_forms",
+    "decorative_tactical_text",
+    "gratuitous_irregularity"
+  ],
+  "paletteBias": {
+    "neutralTemperature": "neutral_cool",
+    "accentSaturation": 0.7,
+    "warningCoverageMax": 0.07
+  },
+  "shapeLanguage": {
+    "angleFamiliesDegrees": [
+      0,
+      30,
+      60,
+      90
+    ],
+    "asymmetry": {
+      "target": 0.02,
+      "max": 0.1
+    },
+    "primarySecondarySizeRatio": {
+      "min": 3.0,
+      "max": 6.0
+    },
+    "roundness": "precise_soft_edge"
+  },
+  "materialBias": [
+    "polymer",
+    "painted_metal",
+    "concrete"
+  ],
+  "surfaceAssignments": {
+    "primary": "polymer",
+    "secondary": "concrete",
+    "accent": "painted_metal",
+    "interaction": "polymer",
+    "threat": "polymer",
+    "warning": "polymer",
+    "critical": "polymer",
+    "rubber": "rubber",
+    "bareMetal": "bare_metal"
+  },
+  "assetRecipes": {
+    "barricade": {
+      "assetId": "barricade",
+      "primaryPrimitives": [
+        "single_center_plate"
+      ],
+      "secondaryPrimitives": [
+        "two_identical_supports",
+        "top_interaction_strip"
+      ],
+      "asymmetryTarget": 0.0,
+      "moduleCountTarget": 4,
+      "bevelRatioTarget": 0.04,
+      "stateBreakStrategy": "one_clean_notch_then_center_plane_divides",
+      "detailBandTargets": {
+        "primary": 0.72,
+        "secondary": 0.23,
+        "tertiary": 0.05
+      }
+    },
+    "objective_core": {
+      "assetId": "objective_core",
+      "primaryPrimitives": [
+        "stacked_cylinder",
+        "protected_sphere"
+      ],
+      "secondaryPrimitives": [
+        "two_concentric_rings",
+        "four_identical_buttresses"
+      ],
+      "asymmetryTarget": 0.0,
+      "moduleCountTarget": 7,
+      "bevelRatioTarget": 0.04,
+      "stateBreakStrategy": "outer_ring_segments_switch_off_then_core_aperture_opens",
+      "detailBandTargets": {
+        "primary": 0.72,
+        "secondary": 0.23,
+        "tertiary": 0.05
+      }
+    },
+    "enemy_standard": {
+      "assetId": "enemy_standard",
+      "primaryPrimitives": [
+        "hunched_pear_torso",
+        "bowed_graphic_zombie_head",
+        "paired_bent_leg_masses"
+      ],
+      "secondaryPrimitives": [
+        "unequal_open_hand_arcs",
+        "single_oblique_violet_bloom"
+      ],
+      "asymmetryTarget": 0.03,
+      "moduleCountTarget": 5,
+      "bevelRatioTarget": 0.035,
+      "stateBreakStrategy": "one_shoulder_drops_then_same_bloom_break_widens",
+      "detailBandTargets": {
+        "primary": 0.72,
+        "secondary": 0.23,
+        "tertiary": 0.05
+      }
+    },
+    "floor_module": {
+      "assetId": "floor_module",
+      "primaryPrimitives": [
+        "square_tile"
+      ],
+      "secondaryPrimitives": [
+        "center_hex",
+        "four_identical_edge_keys"
+      ],
+      "asymmetryTarget": 0.0,
+      "moduleCountTarget": 6,
+      "bevelRatioTarget": 0.03,
+      "stateBreakStrategy": "one_quadrant_dims_then_center_hex_splits",
+      "detailBandTargets": {
+        "primary": 0.72,
+        "secondary": 0.23,
+        "tertiary": 0.05
+      }
+    },
+    "damage_effect": {
+      "assetId": "damage_effect",
+      "primaryPrimitives": [
+        "single_cone_or_arc"
+      ],
+      "secondaryPrimitives": [
+        "two_identical_fragments",
+        "clean_impact_ring"
+      ],
+      "asymmetryTarget": 0.04,
+      "moduleCountTarget": 4,
+      "bevelRatioTarget": 0.02,
+      "stateBreakStrategy": "ring_segments_reduce_from_four_to_two",
+      "detailBandTargets": {
+        "primary": 0.72,
+        "secondary": 0.23,
+        "tertiary": 0.05
+      }
+    }
+  },
+  "referenceBoardId": "clean-tactical-diorama-board-v1",
+  "comparisonBudget": {
+    "revisionRounds": 2,
+    "artistHoursCap": 24.0,
+    "triangleBudgetsRef": "art/calibration/calibration-kit.json#/assets"
+  },
+  "automation": {
+    "deterministicSeed": 3301,
+    "generatorVersion": "5.0.0"
+  },
+  "blockoutPalette": {
+    "primary": "#3D485A",
+    "secondary": "#E3E8ED",
+    "accent": "#4C83C3",
+    "interaction": "#61E7C4",
+    "threat": "#9B4660",
+    "warning": "#F2C94C",
+    "critical": "#E64A4A",
+    "rubber": "#202733",
+    "bareMetal": "#94A1AE"
+  }
+}

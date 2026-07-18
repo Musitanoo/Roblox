@@ -1,0 +1,131 @@
+GPT IMAGE 2 — ONE OBJECT, ONE GAMEPLAY STATE, ONE IMAGE
+
+Use the `gpt-image-2` image model. If that exact model is not selected or
+visible in the interface, stop and do not substitute another model.
+
+Generate exactly one image: a clean 2x2 state-definition board. Every quadrant
+must depict the exact same object construction in the exact same target state.
+
+CROSS-VIEW IDENTITY LOCK — THIS IS NOT A FOUR-CONCEPT SHEET
+- Freeze one exact four-by-four grid cell, inset, edge-key family, half-stud thickness and flat top collision promise.
+- The damaged state exposes only one shallow connector region and preserves three complete corners.
+- All quadrants show the same module rotation and replacement quadrant.
+
+TARGET
+- Object: Fortress Floor Module (`floor_module`)
+- State: `intact` only
+- Art direction: Salvaged Frontier owns world identity; Industrial Toy Defense
+  contributes disciplined one-second readability only.
+- Canon: vc_floor_module__salvaged-frontier__v1
+- Gameplay function: repeatable fortress floor cell
+- One-second promise: This square cell is safe buildable ground, shows how neighboring modules connect, and clearly reveals when one local section is damaged.
+- Dimensions: 4.0 x 0.5 x
+  4.0 Roblox studs; pivot bottom_center.
+
+BOARD LAYOUT
+- Top left: hero three-quarter front, complete object visible.
+- Top right: three-quarter rear, same construction and state.
+- Bottom left: solid black silhouette, no internal shading.
+- Bottom right: elevated Roblox third-person mobile gameplay camera.
+- Keep identical scale and recognizable proportions across the two perspective
+  views; this is a turnaround proof, not a concept-variation sheet.
+- Neutral mid-gray background, neutral studio light, no environment or props.
+- No captions, labels, letters, numbers, logos or generated text in the image.
+- Do not show intact/damaged/critical comparisons or any second gameplay state.
+
+IDENTITY AND CONSTRUCTION
+- World role: The smallest visible unit of fortress authorship, alignment and future expansion, repeated enough to define the player's home without visual noise.
+- Emotional intent: Orderly, dependable and satisfying to assemble; damage should reveal a local maintenance problem rather than make the whole base look dirty.
+- Territory thesis: A precise fortress grid cell whose single approved replacement quadrant records maintenance while every edge key, footprint and construction rhythm stays exact.
+- Front/orientation: Edge keys and one subtle service orientation distinguish the canonical front without disrupting seamless tiling.
+- Interaction read: Approved sockets or edge keys show valid construction relationships; no false button-like decoration is allowed.
+- Danger read: A damaged state creates one causal displaced inset or broken edge key, never a random crack web.
+- Recognition landmarks: four-stud square footprint, central octagonal or square inset, structural perimeter band, aligned edge keys or sockets
+- Negative spaces: thin controlled seam between adjacent cells, recess around the central inset, approved socket openings at real connection points
+
+REQUIRED COMPONENTS
+- StructuralSlab: shallow square slab at full footprint; Carry the player and every attached fortress system. Relationship: Supports the inset and all four connection edges. Reading role: Primary buildable-ground identity.
+- CentralInset: large square or octagonal recess at top center; Break the top plane into a readable modular cell without becoming decoration. Relationship: Contained inside the structural perimeter with consistent depth. Reading role: Keeps individual cells legible in a larger floor.
+- EdgeKeys: broad keys or sockets at four perimeter edges; Explain snapping, adjacency and structural continuity. Relationship: Aligned exactly to neighboring modules. Reading role: Makes modular construction plausible and readable.
+
+FORM HIERARCHY
+- Primary 72%: square structural slab, large central inset
+- Secondary 23%: edge keys, connection sockets, shallow service orientation cue
+- Tertiary 5% maximum: few corner fasteners, minimal edge wear, one approved repair patch
+- Construction translation: A calm square chassis, large inset and thick edge keys provide tile readability; only one quadrant or connector receives a copper-bounded replacement treatment.
+
+MATERIAL SYSTEM
+- walkable_zone: fortress_floor; primary; middle value; Calm non-slippery broad plane with no baked lighting. Wear: Only on travel lanes and connection edges, bounded below state cues.
+- connection_zone: structural_connector; bareMetal; middle-light edge accent; Clean functional contact surfaces. Wear: Contact polish only.
+
+TARGET STATE CONTRACT — `intact`
+- Summary: A clean aligned cell whose inset, perimeter and four connection edges form a quiet dependable foundation.
+- Required changes:
+- All edge keys and inset corners remain aligned.
+- The walkable surface remains calm and uninterrupted.
+- Shape and silhouette cues:
+- flat continuous top plane
+- complete perimeter
+- aligned connection edges
+- Value cues:
+- stable mid-value surface
+- subtle connector highlights
+- Color cues:
+- fortress base palette
+- no warning dominance
+- Light cues:
+- no emission
+- consistent bevel response
+- Motion posture implied in the still:
+- fully still
+- placement snap only
+- VFX cues, kept sparse and non-obscuring:
+- brief placement dust only
+- no persistent particles
+- Component operations:
+- StructuralSlab / PRESERVE: Keep the walkable slab continuous and level.
+- EdgeKeys / PRESERVE: Keep all connection edges aligned to the grid.
+- Territory translation: The square grid cell is flat, locked and continuous; one copper-bounded replacement quadrant records approved maintenance without implying present failure.
+
+GAMEPLAY TRUTH BOUNDARY — DO NOT VISUALIZE UNPROVEN BEHAVIOR
+- Contract status: CANDIDATE_REQUIRES_GAMEPLAY_CONTRACT
+- Contract reference: PD-06
+- Trigger: Candidate undamaged visual state for a placed or previewed floor module.
+- Capability effect: Communicates safe buildable ground without asserting unsupported structural systems.
+- Collision effect: The flat authoritative collision plane remains unchanged.
+- Permitted visual claim: Complete inset, perimeter and four compatible connection edges form a quiet dependable cell.
+- Hard claim boundary: The image does not promise support simulation, vertical construction or persistence.
+
+RUNTIME STATE SCOPE — ONE PRIMARY STATE ONLY
+- Primary generation states for this object:
+  intact, damaged.
+- This image depicts only `intact`. Do not compose operational overlays,
+  transients or the terminal state into this primary reference.
+- Operational overlays excluded from this image:
+  placement_valid_or_invalid, selected, repairing.
+- Transient states excluded from this image:
+  impact_reaction.
+- Terminal runtime-only state excluded from primary generation: none.
+- Composition rule: Compose intact or damaged structure with placement, selection or repair overlays while preserving the exact grid, top collision plane, edge compatibility and instancing identity.
+- Coverage boundary: The two primary images define visual integrity only; no critical or destroyed floor state exists until PD-06 defines structural consequences and collision by state.
+
+INVARIANTS — NEVER CHANGE
+- Four-by-half-by-four dimensions, bottom-center pivot and collision plane remain fixed.
+- Edge keys align across every territory and state.
+- The central inset and perimeter remain the primary top-view identity.
+- Damage never creates an unfair collision step or changes placement anchors.
+- Repeated modules reuse identical mesh and material combinations.
+
+NO IMAGE REFERENCE
+- Construct only from this closed canon contract.
+
+STYLE DISCIPLINE
+- Use one quiet manufactured fortress cell with broad planes, exact tiling edges and one bounded replacement treatment.
+- Prioritize elevated build-camera readability and repetition calm over hero-prop detail.
+- Keep wear below state cues and preserve shared-mesh instancing identity.
+- The image is precanonical visual evidence only. It does not authorize hidden geometry, canon lock or production.
+
+FINAL OUTPUT SELF-CHECK — FAIL RATHER THAN IMPROVISE
+- All four quadrants preserve exact edge keys, thickness, top plane, rotation and target state.
+- The module still reads as safe usable ground in damaged state.
+- No cue implies a critical state or gameplay penalty not defined by the contract.

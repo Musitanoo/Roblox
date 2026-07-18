@@ -1,0 +1,238 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/studio-simulator-report.schema.json",
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "dimensions": {
+      "type": "object",
+      "required": ["width", "height"],
+      "properties": {
+        "width": { "type": "integer", "minimum": 240 },
+        "height": { "type": "integer", "minimum": 240 }
+      },
+      "unevaluatedProperties": false
+    },
+    "capability": {
+      "type": "object",
+      "required": ["status", "diagnostic"],
+      "properties": {
+        "status": { "enum": ["PASS", "BLOCKED"] },
+        "diagnostic": { "type": "string", "minLength": 3 },
+        "attemptCount": { "type": "integer", "minimum": 1 }
+      },
+      "unevaluatedProperties": false
+    },
+    "viewport": {
+      "type": "object",
+      "required": [
+        "presetId",
+        "orientation",
+        "requested",
+        "observed",
+        "pixelDensity",
+        "status"
+      ],
+      "properties": {
+        "presetId": { "type": "string", "minLength": 1 },
+        "orientation": { "enum": ["landscape", "portrait"] },
+        "requested": { "$ref": "#/$defs/dimensions" },
+        "observed": { "$ref": "#/$defs/dimensions" },
+        "pixelDensity": { "type": "number", "exclusiveMinimum": 0 },
+        "status": { "enum": ["PASS", "BLOCKED"] }
+      },
+      "unevaluatedProperties": false
+    },
+    "condition": {
+      "type": "object",
+      "required": [
+        "conditionId",
+        "copyCount",
+        "assetInstances",
+        "baseParts",
+        "meshParts",
+        "parts",
+        "models",
+        "uniqueMeshCombos",
+        "singletonMeshCombos",
+        "transparentParts",
+        "decals"
+      ],
+      "properties": {
+        "conditionId": { "enum": ["graybox", "candidate"] },
+        "copyCount": { "enum": [30, 100] },
+        "assetInstances": { "type": "integer", "minimum": 1 },
+        "baseParts": { "type": "integer", "minimum": 1 },
+        "meshParts": { "type": "integer", "minimum": 0 },
+        "parts": { "type": "integer", "minimum": 0 },
+        "models": { "type": "integer", "minimum": 0 },
+        "uniqueMeshCombos": { "type": "integer", "minimum": 0 },
+        "singletonMeshCombos": { "type": "integer", "minimum": 0 },
+        "transparentParts": { "type": "integer", "minimum": 0 },
+        "decals": { "type": "integer", "minimum": 0 }
+      },
+      "unevaluatedProperties": false
+    },
+    "artifact": {
+      "type": "object",
+      "required": ["kind", "path", "bytes", "sha256", "source"],
+      "properties": {
+        "kind": {
+          "enum": [
+            "landscape_visual_proxy",
+            "portrait_visual_proxy",
+            "studio_capture",
+            "microprofiler_dump",
+            "scene_analysis_dump"
+          ]
+        },
+        "path": { "type": "string", "pattern": "^evidence/mobile/" },
+        "bytes": { "type": "integer", "exclusiveMinimum": 0 },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "source": { "enum": ["blender_render_matrix", "roblox_studio"] }
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "status",
+    "territoryId",
+    "generatedAt",
+    "benchmarkProtocolVersion",
+    "stagingOnlyConfirmed",
+    "deviceSimulator",
+    "conditions",
+    "capabilities",
+    "visualChecks",
+    "artifacts",
+    "issues"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/studio-simulator-report.schema.json"
+    },
+    "schemaVersion": { "const": "1.0.0" },
+    "status": { "enum": ["PASS", "PARTIAL", "FAIL", "BLOCKED"] },
+    "territoryId": {
+      "enum": [
+        "industrial-toy-defense",
+        "salvaged-frontier",
+        "clean-tactical-diorama"
+      ]
+    },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "benchmarkProtocolVersion": { "const": "1.0.0" },
+    "stagingOnlyConfirmed": { "type": "boolean" },
+    "deviceSimulator": {
+      "type": "object",
+      "required": ["service", "presetId", "resetToDefault", "viewports"],
+      "properties": {
+        "service": { "const": "StudioDeviceSimulatorService" },
+        "presetId": { "type": "string", "minLength": 1 },
+        "resetToDefault": { "type": "boolean" },
+        "viewports": {
+          "type": "array",
+          "minItems": 2,
+          "items": { "$ref": "#/$defs/viewport" }
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "conditions": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 4,
+      "items": { "$ref": "#/$defs/condition" }
+    },
+    "capabilities": {
+      "type": "object",
+      "required": ["libmp", "sceneAnalysis", "screenCapture"],
+      "properties": {
+        "libmp": { "$ref": "#/$defs/capability" },
+        "sceneAnalysis": { "$ref": "#/$defs/capability" },
+        "screenCapture": { "$ref": "#/$defs/capability" }
+      },
+      "unevaluatedProperties": false
+    },
+    "visualChecks": {
+      "type": "object",
+      "required": [
+        "landscapeExactPixels",
+        "portraitExactPixels",
+        "stateCueReadable",
+        "interactionCueReadable",
+        "source"
+      ],
+      "properties": {
+        "landscapeExactPixels": { "type": "boolean" },
+        "portraitExactPixels": { "type": "boolean" },
+        "stateCueReadable": { "type": "boolean" },
+        "interactionCueReadable": { "type": "boolean" },
+        "source": {
+          "enum": [
+            "blender_render_matrix_exact_pixel_proxy",
+            "roblox_studio_capture"
+          ]
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "artifacts": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/artifact" },
+      "uniqueItems": true
+    },
+    "issues": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 3 }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "status": { "const": "PASS" } },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "stagingOnlyConfirmed": { "const": true },
+          "deviceSimulator": {
+            "properties": { "resetToDefault": { "const": true } }
+          },
+          "capabilities": {
+            "properties": {
+              "libmp": { "properties": { "status": { "const": "PASS" } } },
+              "sceneAnalysis": { "properties": { "status": { "const": "PASS" } } },
+              "screenCapture": { "properties": { "status": { "const": "PASS" } } }
+            }
+          },
+          "visualChecks": {
+            "properties": {
+              "landscapeExactPixels": { "const": true },
+              "portraitExactPixels": { "const": true },
+              "stateCueReadable": { "const": true },
+              "interactionCueReadable": { "const": true },
+              "source": { "const": "roblox_studio_capture" }
+            }
+          },
+          "issues": { "maxItems": 0 }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "status": { "enum": ["PARTIAL", "BLOCKED"] } },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": { "issues": { "minItems": 1 } }
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}

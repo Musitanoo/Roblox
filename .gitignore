@@ -8,6 +8,23 @@
 # Generated tooling output
 sourcemap.json
 *.log
+__pycache__/
+*.py[cod]
+assets-3d/**/build/
+assets-3d/**/evidence/local/
+assets-3d/**/workbench/
+assets-3d/registry/*.local.json
+.codex/*.lock
+.venv/
+
+# Non-authoritative audit, installation and timestamped backup workspaces
+/tmp/
+/.audit/
+/audit-output/
+*.backup-*
+/tools/.*.install-*/
+/tools/*.install.json
+/tools/roblox-art-bible-sota-v3-*.zip
 
 # Editors and operating systems
 .idea/

@@ -1,0 +1,383 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/transfer-studio-report.schema.json",
+  "schemaVersion": "1.0.0",
+  "status": "PASS",
+  "generatedAt": "2026-07-16T09:38:50.803055Z",
+  "environment": "staging",
+  "assetId": "turret_fast_v1",
+  "privacy": {
+    "rawPlaceIdIncluded": false,
+    "rawCreatorIdIncluded": false,
+    "rawAssetIdsIncluded": false,
+    "rawApiKeyIncluded": false,
+    "studioInstanceIdIncluded": false
+  },
+  "inputHashes": {
+    "transferManifest": "12accab8f494cf038e1272596aab039b591fdfcc74fe1431d4314d3991691e1a",
+    "transferPublicationReport": "3194ef010009a33bc32a1e0740b60f41b34657b28594feb276461925a8188317",
+    "transferEvidencePackage": "86cfb1650997310572d31e5c85d08534d0a73eabf9f7cb3cb54dae918bd5a0c1",
+    "stageTransferTool": "36709ff57b561dfa202975fce2c9cc0fc507949c232a8f32de3badcc4f431f08",
+    "studioMcpClient": "8132c71440e46665becc25168a17be7a17e57f3f95abd611f60ba0ac3db92085",
+    "materialRules": "6e2ad4bd95cb2dd4776b65e6dfeb088af35349a7ec74469bd6c0f40edd553f5e",
+    "industrialTerritory": "376db838f206a46e114993ab5c666a155341215931069b879527666ebd144450",
+    "salvagedTerritory": "21d9dd89f05f64e6504f940b0090e30b12a785a9b6efc1f45b6216b2086604cb",
+    "cleanTerritory": "dbd1c6cb8aa43922a884751abcb8d0895e312439eb17d0ed501a5d3e50282d3c"
+  },
+  "environmentChecks": {
+    "singleStudioInstance": true,
+    "editModeVerified": true,
+    "deploymentMarkedStaging": true,
+    "localConfigComplete": true,
+    "savedCloudPlaceVerified": true,
+    "expectedCreatorMatches": true,
+    "creatorAllowlistVerified": true
+  },
+  "hierarchyChecks": {
+    "transactionApplied": true,
+    "assetKitPresent": true,
+    "stagingRootRemoved": true,
+    "assetFolderCount": 3,
+    "territoryFolderCount": 3,
+    "stateCount": 9
+  },
+  "assetChecks": [
+    {
+      "maximumBoundsErrorPercent": 0.010786334031616392,
+      "maximumColorChannelError": 0,
+      "sourceIdentityMatches": true,
+      "styledMeshPartCount": 8,
+      "stateId": "critical",
+      "visualSettingsPass": true,
+      "territoryId": "clean-tactical-diorama",
+      "hitboxPass": true,
+      "observedBounds": [
+        4.29036808013916,
+        5.400000095367432,
+        4.857316017150879
+      ],
+      "pass": true,
+      "sourceSha256": "69e4a6b110f35b6e18353f01f4f447d6be17b34bb6c1440dda4f30415e5fcfb7",
+      "materialBindingsPass": true,
+      "partCount": 8,
+      "meshPartCount": 8,
+      "unboundStyleRoleCount": 0,
+      "meshIdsPresent": true,
+      "expectedBounds": [
+        4.290368,
+        5.4,
+        4.85784
+      ]
+    },
+    {
+      "maximumBoundsErrorPercent": 0.01201629638671505,
+      "maximumColorChannelError": 0,
+      "sourceIdentityMatches": true,
+      "styledMeshPartCount": 6,
+      "stateId": "damaged",
+      "visualSettingsPass": true,
+      "territoryId": "clean-tactical-diorama",
+      "hitboxPass": true,
+      "observedBounds": [
+        4.7994232177734375,
+        5.251275062561035,
+        5.056560039520264
+      ],
+      "pass": true,
+      "sourceSha256": "7f3f501a4c14afc42fbbef91ef15d374d6ffc95bbd06c0d28a1f3e3203f19e3d",
+      "materialBindingsPass": true,
+      "partCount": 6,
+      "meshPartCount": 6,
+      "unboundStyleRoleCount": 0,
+      "meshIdsPresent": true,
+      "expectedBounds": [
+        4.8,
+        5.251275,
+        5.056782
+      ]
+    },
+    {
+      "maximumBoundsErrorPercent": 0.011312044583830718,
+      "maximumColorChannelError": 0,
+      "sourceIdentityMatches": true,
+      "styledMeshPartCount": 5,
+      "stateId": "intact",
+      "visualSettingsPass": true,
+      "territoryId": "clean-tactical-diorama",
+      "hitboxPass": true,
+      "observedBounds": [
+        4.7998857498168945,
+        5.40000057220459,
+        5.200588226318359
+      ],
+      "pass": true,
+      "sourceSha256": "88a76d59214eb90dfa8e077eadba59a2f535e9471c75deb2a6afcf42f455291f",
+      "materialBindingsPass": true,
+      "partCount": 5,
+      "meshPartCount": 5,
+      "unboundStyleRoleCount": 0,
+      "meshIdsPresent": true,
+      "expectedBounds": [
+        4.8,
+        5.4,
+        5.2
+      ]
+    },
+    {
+      "maximumBoundsErrorPercent": 0.029779056761250092,
+      "maximumColorChannelError": 0,
+      "sourceIdentityMatches": true,
+      "styledMeshPartCount": 7,
+      "stateId": "critical",
+      "visualSettingsPass": true,
+      "territoryId": "industrial-toy-defense",
+      "hitboxPass": true,
+      "observedBounds": [
+        4.729133605957031,
+        5.399974822998047,
+        4.603306770324707
+      ],
+      "pass": true,
+      "sourceSha256": "0120d10c32390c5c5618c0398ee2da3bf83a0e070bda03fb0d553825cf949d88",
+      "materialBindingsPass": true,
+      "partCount": 7,
+      "meshPartCount": 7,
+      "unboundStyleRoleCount": 0,
+      "meshIdsPresent": true,
+      "expectedBounds": [
+        4.729792,
+        5.400001,
+        4.604678
+      ]
+    },
+    {
+      "maximumBoundsErrorPercent": 0.014188118467217391,
+      "maximumColorChannelError": 0,
+      "sourceIdentityMatches": true,
+      "styledMeshPartCount": 6,
+      "stateId": "damaged",
+      "visualSettingsPass": true,
+      "territoryId": "industrial-toy-defense",
+      "hitboxPass": true,
+      "observedBounds": [
+        4.7999138832092285,
+        5.144804954528809,
+        4.954958915710449
+      ],
+      "pass": true,
+      "sourceSha256": "80ba6a8d1fce1b70fcb8ce135f8f34840e8625aa936631e1043af6f1794d58d3",
+      "materialBindingsPass": true,
+      "partCount": 6,
+      "meshPartCount": 6,
+      "unboundStyleRoleCount": 0,
+      "meshIdsPresent": true,
+      "expectedBounds": [
+        4.8,
+        5.144805,
+        4.954256
+      ]
+    },
+    {
+      "maximumBoundsErrorPercent": 0.007744935842657341,
+      "maximumColorChannelError": 0,
+      "sourceIdentityMatches": true,
+      "styledMeshPartCount": 6,
+      "stateId": "intact",
+      "visualSettingsPass": true,
+      "territoryId": "industrial-toy-defense",
+      "hitboxPass": true,
+      "observedBounds": [
+        4.800000190734863,
+        5.400000095367432,
+        5.200402736663818
+      ],
+      "pass": true,
+      "sourceSha256": "a89d7b7277c72ae9c3cb0fb0bc76c85867f3c2da6ae316b4b5ff5abf4430c8c6",
+      "materialBindingsPass": true,
+      "partCount": 6,
+      "meshPartCount": 6,
+      "unboundStyleRoleCount": 0,
+      "meshIdsPresent": true,
+      "expectedBounds": [
+        4.8,
+        5.4,
+        5.2
+      ]
+    },
+    {
+      "maximumBoundsErrorPercent": 0.010773046074046461,
+      "maximumColorChannelError": 0,
+      "sourceIdentityMatches": true,
+      "styledMeshPartCount": 8,
+      "stateId": "critical",
+      "visualSettingsPass": true,
+      "territoryId": "salvaged-frontier",
+      "hitboxPass": true,
+      "observedBounds": [
+        4.800000190734863,
+        5.165679931640625,
+        4.216584205627441
+      ],
+      "pass": true,
+      "sourceSha256": "33a924f037d44bda121a8ef69d066cb500b9ddb7f38d590b4128e6cfd2a96032",
+      "materialBindingsPass": true,
+      "partCount": 8,
+      "meshPartCount": 8,
+      "unboundStyleRoleCount": 0,
+      "meshIdsPresent": true,
+      "expectedBounds": [
+        4.8,
+        5.16568,
+        4.21613
+      ]
+    },
+    {
+      "maximumBoundsErrorPercent": 0.008579095204667524,
+      "maximumColorChannelError": 0,
+      "sourceIdentityMatches": true,
+      "styledMeshPartCount": 7,
+      "stateId": "damaged",
+      "visualSettingsPass": true,
+      "territoryId": "salvaged-frontier",
+      "hitboxPass": true,
+      "observedBounds": [
+        4.799588203430176,
+        5.269859790802002,
+        5.074546813964844
+      ],
+      "pass": true,
+      "sourceSha256": "1d8e63f81ae6e4d0f29dd037ee671c3f52cacf8e166a42d162e381c883643184",
+      "materialBindingsPass": true,
+      "partCount": 7,
+      "meshPartCount": 7,
+      "unboundStyleRoleCount": 0,
+      "meshIdsPresent": true,
+      "expectedBounds": [
+        4.8,
+        5.26986,
+        5.07468
+      ]
+    },
+    {
+      "maximumBoundsErrorPercent": 0.0190404745248682,
+      "maximumColorChannelError": 0,
+      "sourceIdentityMatches": true,
+      "styledMeshPartCount": 6,
+      "stateId": "intact",
+      "visualSettingsPass": true,
+      "territoryId": "salvaged-frontier",
+      "hitboxPass": true,
+      "observedBounds": [
+        4.800000190734863,
+        5.40000057220459,
+        5.199009895324707
+      ],
+      "pass": true,
+      "sourceSha256": "f930ea0f5d74623ba7839c92f709539f500284488f0e96619bd88523498915f0",
+      "materialBindingsPass": true,
+      "partCount": 6,
+      "meshPartCount": 6,
+      "unboundStyleRoleCount": 0,
+      "meshIdsPresent": true,
+      "expectedBounds": [
+        4.8,
+        5.4,
+        5.2
+      ]
+    }
+  ],
+  "reuseChecks": [
+    {
+      "distinctSignatureCount": 1,
+      "territoryId": "industrial-toy-defense",
+      "distinctSourceSha256Count": 1,
+      "observedCount": 30,
+      "pass": true,
+      "copyCount": 30
+    },
+    {
+      "distinctSignatureCount": 1,
+      "territoryId": "industrial-toy-defense",
+      "distinctSourceSha256Count": 1,
+      "observedCount": 100,
+      "pass": true,
+      "copyCount": 100
+    },
+    {
+      "distinctSignatureCount": 1,
+      "territoryId": "salvaged-frontier",
+      "distinctSourceSha256Count": 1,
+      "observedCount": 30,
+      "pass": true,
+      "copyCount": 30
+    },
+    {
+      "distinctSignatureCount": 1,
+      "territoryId": "salvaged-frontier",
+      "distinctSourceSha256Count": 1,
+      "observedCount": 100,
+      "pass": true,
+      "copyCount": 100
+    },
+    {
+      "distinctSignatureCount": 1,
+      "territoryId": "clean-tactical-diorama",
+      "distinctSourceSha256Count": 1,
+      "observedCount": 30,
+      "pass": true,
+      "copyCount": 30
+    },
+    {
+      "distinctSignatureCount": 1,
+      "territoryId": "clean-tactical-diorama",
+      "distinctSourceSha256Count": 1,
+      "observedCount": 100,
+      "pass": true,
+      "copyCount": 100
+    }
+  ],
+  "sceneChecks": {
+    "scenePresent": true,
+    "placeholderCount": 0,
+    "referenceAvatarPresent": true,
+    "stressGroupCount": 6,
+    "candidateCount": 9,
+    "cameraCount": 3
+  },
+  "playtestChecks": {
+    "started": true,
+    "clientDataModelObserved": true,
+    "serverDataModelObserved": true,
+    "stopped": true,
+    "newRelevantErrorCount": 0,
+    "pass": true
+  },
+  "captureChecks": {
+    "status": "PASS",
+    "attempted": true,
+    "captureCount": 3,
+    "captures": [
+      {
+        "territoryId": "industrial-toy-defense",
+        "path": "evidence/transfer/turret-fast-v1/studio-captures/industrial-toy-defense.jpg",
+        "bytes": 52645,
+        "sha256": "7367a8a3cb6cf8cd6505c102c2d4f438021b3c8cbc888ae5320c38d8ece3c75c",
+        "source": "studio_mcp_screen_capture"
+      },
+      {
+        "territoryId": "salvaged-frontier",
+        "path": "evidence/transfer/turret-fast-v1/studio-captures/salvaged-frontier.jpg",
+        "bytes": 55269,
+        "sha256": "3792e6c98311b5dfa7eb5f070b53b7e1db056ebd9b3a4dea95fd4df6fd728dcc",
+        "source": "studio_mcp_screen_capture"
+      },
+      {
+        "territoryId": "clean-tactical-diorama",
+        "path": "evidence/transfer/turret-fast-v1/studio-captures/clean-tactical-diorama.jpg",
+        "bytes": 51170,
+        "sha256": "140c83098cd98c7fc184ed9340c640631a5f66458a47a1bbed9294b190512270",
+        "source": "studio_mcp_screen_capture"
+      }
+    ]
+  },
+  "issues": []
+}

@@ -1,0 +1,89 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/precanonical-request.schema.json",
+  "schemaVersion": "1.0.0",
+  "requestId": "salvaged-frontier-states-v3-enemy-standard-damaged-a001",
+  "assetKey": "enemy_standard",
+  "artDirection": "salvaged-frontier",
+  "generationSurface": "chatgpt_web_images",
+  "status": "PRECANONICAL_SPEC_COMPLETE",
+  "stage": "state_definition",
+  "policy": {
+    "path": "art/precanonical/policy.json",
+    "sha256": "9028bdc911558acc001ecfb7b4c0c487f3fc6799c59f55e87f66a638fd701164"
+  },
+  "constitution": {
+    "path": "art/selected/salvaged-frontier-constitution.json",
+    "sha256": "14d356e67f309ca891ede69d7964d8990716b782d59bcaae024e1bf94d9aa310"
+  },
+  "compiler": {
+    "path": "tools/art/precanonical_campaign.py",
+    "sha256": "e9f40e96bcdcede5c93e9f0ecf1eefb575ce5ce31b87185d94b088b8545f97cf"
+  },
+  "sourceBrief": {
+    "path": "source-brief.json",
+    "sha256": "c61d2e551f0a8f302d792ebbf0ab5d57506fc3c1f0af9458122f424438b54585"
+  },
+  "parentResult": {
+    "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-enemy-standard-intact-a001-result-001\\result.json",
+    "sha256": "bbf1709d65d0ee63c598e70c3dff5a91a79f9636e0cf9bd51cb84b9824b14aa1"
+  },
+  "revisionInstructions": [],
+  "files": {
+    "brief": {
+      "path": "brief.md",
+      "sha256": "7c4fb035626f0e37a1c3b1a7e0e5a0f82d35c31069706f77135ad19072c96855"
+    },
+    "prompt": {
+      "path": "prompt.txt",
+      "sha256": "27e2259959b971e7adddd6a73dbec2738760fbf5b7a0bdac2e53b1981909e0d3"
+    },
+    "negativeConstraints": {
+      "path": "negative-constraints.txt",
+      "sha256": "e87d52f0c2cac3e2fdc2d42048b53ae3cc3de3f91f9b152c5a4eb2d3b29d986e"
+    },
+    "requestedViews": {
+      "path": "requested-views.json",
+      "sha256": "f34a21632b71d06d7b2a026a02cea32a8942ada34aff34fffccd65060700977b"
+    },
+    "requestedStates": {
+      "path": "requested-states.json",
+      "sha256": "c949a9e893b485472d64408253c8a5cfe53521e8e981e65feea987a414cf2c82"
+    }
+  },
+  "promptHash": "27e2259959b971e7adddd6a73dbec2738760fbf5b7a0bdac2e53b1981909e0d3",
+  "requestedViewIds": [
+    "hero_three_quarter_front",
+    "three_quarter_rear",
+    "black_silhouette",
+    "mobile_landscape"
+  ],
+  "requestedStateIds": [
+    "damaged"
+  ],
+  "imageSpec": {
+    "aspectRatio": "1:1",
+    "background": "neutral_mid_gray",
+    "lighting": "neutral_studio",
+    "singleObjectOnly": true
+  },
+  "budget": {
+    "maximumWebGenerations": 1,
+    "consumedWebGenerations": 0,
+    "reserveForCorrections": 0,
+    "humanConfirmationRequired": true
+  },
+  "automation": {
+    "browserAdapter": "codex_chrome",
+    "automaticSubmissionAuthorized": false,
+    "automaticRetry": false,
+    "automaticCodexImageFallback": false,
+    "automaticApiFallback": false,
+    "browserReasoningForbidden": true
+  },
+  "authority": {
+    "canonical": false,
+    "geometryAuthority": false,
+    "humanSelectionRequired": true,
+    "productionApproved": false
+  }
+}

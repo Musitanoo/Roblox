@@ -1,0 +1,1177 @@
+{
+  "assetKey": "defense_barricade_small",
+  "buildManifestSha256": "928eb73f8b9a55ece347318d524bfcfdde1d0bde929d544e5c78383d26244386",
+  "canonId": "vc_barricade__salvaged-frontier__v1",
+  "canonSha256": "5e196aa1ab2bdaaa9c024d250ea76f82b134848b4dcd32b2741f7970c5c77e58",
+  "contractSha256": "4007359aad9898b758666d3dbdcd06f9c4f4c33362642edc71b2509858009fb9",
+  "evidenceClass": "REAL_RENDERED",
+  "productionApproved": false,
+  "renderer": {
+    "acceptedModes": [
+      "EXACT",
+      "BOUNDED_PIXEL_TOLERANCE"
+    ],
+    "blenderVersion": "5.2.0 LTS",
+    "colorMode": "RGBA8",
+    "ditherIntensity": 0.0,
+    "engine": "BLENDER_EEVEE",
+    "factoryStartup": true,
+    "pixelTolerance": {
+      "maximumChannelDelta": 1,
+      "maximumDifferentPixelCount": 24,
+      "maximumDifferentPixelRatio": 0.0001,
+      "maximumNormalizedMeanAbsoluteError": 1e-06
+    },
+    "requiredConsecutiveStableFrames": 2,
+    "resolution": [
+      1280,
+      720
+    ],
+    "sourceBlendReadOnly": true
+  },
+  "rendererScriptSha256": "54b64cd42a04bcac2299fb396d55ea036c8b17dc0816a6f7f541b2aafdb76229",
+  "renders": [
+    {
+      "attemptCount": 2,
+      "attempts": [
+        {
+          "accepted": true,
+          "attempt": 1,
+          "contentSha256": "aa22d03b4d5f2a57e3fc8a7c7a8b8f55b1770737629a050471aa58592cf0c14f",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0
+        },
+        {
+          "accepted": true,
+          "attempt": 2,
+          "contentSha256": "aa22d03b4d5f2a57e3fc8a7c7a8b8f55b1770737629a050471aa58592cf0c14f",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0,
+          "stabilityComparison": {
+            "differentPixelCount": 0,
+            "differentPixelRatio": 0.0,
+            "dimensions": {
+              "first": [
+                1280,
+                720
+              ],
+              "passed": true,
+              "second": [
+                1280,
+                720
+              ]
+            },
+            "first": "aa22d03b4d5f2a57e3fc8a7c7a8b8f55b1770737629a050471aa58592cf0c14f",
+            "maximumChannelDelta": 0,
+            "mode": "EXACT",
+            "normalizedMeanAbsoluteError": 0.0,
+            "passed": true,
+            "second": "aa22d03b4d5f2a57e3fc8a7c7a8b8f55b1770737629a050471aa58592cf0c14f",
+            "tolerance": {
+              "maximumChannelDelta": 1,
+              "maximumDifferentPixelCount": 24,
+              "maximumDifferentPixelRatio": 0.0001,
+              "maximumNormalizedMeanAbsoluteError": 1e-06
+            }
+          }
+        }
+      ],
+      "bytes": 626229,
+      "camera": {
+        "location": [
+          10.0,
+          -14.0,
+          7.0
+        ],
+        "orthoScale": 8.5,
+        "target": [
+          0.0,
+          0.0,
+          2.0
+        ],
+        "type": "ORTHO"
+      },
+      "contentSha256": "aa22d03b4d5f2a57e3fc8a7c7a8b8f55b1770737629a050471aa58592cf0c14f",
+      "height": 720,
+      "path": "mobile_near.png",
+      "sha256": "08b90a09266d2c810f8e9c297e5c4e825ec09038d3812f23919b19dd4a6d875f",
+      "stabilityComparison": {
+        "differentPixelCount": 0,
+        "differentPixelRatio": 0.0,
+        "dimensions": {
+          "first": [
+            1280,
+            720
+          ],
+          "passed": true,
+          "second": [
+            1280,
+            720
+          ]
+        },
+        "first": "aa22d03b4d5f2a57e3fc8a7c7a8b8f55b1770737629a050471aa58592cf0c14f",
+        "maximumChannelDelta": 0,
+        "mode": "EXACT",
+        "normalizedMeanAbsoluteError": 0.0,
+        "passed": true,
+        "second": "aa22d03b4d5f2a57e3fc8a7c7a8b8f55b1770737629a050471aa58592cf0c14f",
+        "tolerance": {
+          "maximumChannelDelta": 1,
+          "maximumDifferentPixelCount": 24,
+          "maximumDifferentPixelRatio": 0.0001,
+          "maximumNormalizedMeanAbsoluteError": 1e-06
+        }
+      },
+      "stabilityMode": "EXACT",
+      "status": "PASS",
+      "viewId": "mobile_near",
+      "width": 1280
+    },
+    {
+      "attemptCount": 2,
+      "attempts": [
+        {
+          "accepted": true,
+          "attempt": 1,
+          "contentSha256": "8ef4a3cf4c4101e0bd0671ee95dbb7bd7115f7be4e35ec3815f2c1ed3b61fce3",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0
+        },
+        {
+          "accepted": true,
+          "attempt": 2,
+          "contentSha256": "8ef4a3cf4c4101e0bd0671ee95dbb7bd7115f7be4e35ec3815f2c1ed3b61fce3",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0,
+          "stabilityComparison": {
+            "differentPixelCount": 0,
+            "differentPixelRatio": 0.0,
+            "dimensions": {
+              "first": [
+                1280,
+                720
+              ],
+              "passed": true,
+              "second": [
+                1280,
+                720
+              ]
+            },
+            "first": "8ef4a3cf4c4101e0bd0671ee95dbb7bd7115f7be4e35ec3815f2c1ed3b61fce3",
+            "maximumChannelDelta": 0,
+            "mode": "EXACT",
+            "normalizedMeanAbsoluteError": 0.0,
+            "passed": true,
+            "second": "8ef4a3cf4c4101e0bd0671ee95dbb7bd7115f7be4e35ec3815f2c1ed3b61fce3",
+            "tolerance": {
+              "maximumChannelDelta": 1,
+              "maximumDifferentPixelCount": 24,
+              "maximumDifferentPixelRatio": 0.0001,
+              "maximumNormalizedMeanAbsoluteError": 1e-06
+            }
+          }
+        }
+      ],
+      "bytes": 570002,
+      "camera": {
+        "location": [
+          12.0,
+          -17.0,
+          10.0
+        ],
+        "orthoScale": 14.0,
+        "target": [
+          0.0,
+          0.0,
+          2.0
+        ],
+        "type": "ORTHO"
+      },
+      "contentSha256": "8ef4a3cf4c4101e0bd0671ee95dbb7bd7115f7be4e35ec3815f2c1ed3b61fce3",
+      "height": 720,
+      "path": "mobile_mid.png",
+      "sha256": "92875db5875d920f6e2a3edf5ffcd9ebfb2865653e6a6a7694eb30c88cfc1e8b",
+      "stabilityComparison": {
+        "differentPixelCount": 0,
+        "differentPixelRatio": 0.0,
+        "dimensions": {
+          "first": [
+            1280,
+            720
+          ],
+          "passed": true,
+          "second": [
+            1280,
+            720
+          ]
+        },
+        "first": "8ef4a3cf4c4101e0bd0671ee95dbb7bd7115f7be4e35ec3815f2c1ed3b61fce3",
+        "maximumChannelDelta": 0,
+        "mode": "EXACT",
+        "normalizedMeanAbsoluteError": 0.0,
+        "passed": true,
+        "second": "8ef4a3cf4c4101e0bd0671ee95dbb7bd7115f7be4e35ec3815f2c1ed3b61fce3",
+        "tolerance": {
+          "maximumChannelDelta": 1,
+          "maximumDifferentPixelCount": 24,
+          "maximumDifferentPixelRatio": 0.0001,
+          "maximumNormalizedMeanAbsoluteError": 1e-06
+        }
+      },
+      "stabilityMode": "EXACT",
+      "status": "PASS",
+      "viewId": "mobile_mid",
+      "width": 1280
+    },
+    {
+      "attemptCount": 2,
+      "attempts": [
+        {
+          "accepted": true,
+          "attempt": 1,
+          "contentSha256": "ccfdbac5ca5f2b2393c6045c1c089571a422fc830c8619105499b3b902acb3c1",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0
+        },
+        {
+          "accepted": true,
+          "attempt": 2,
+          "contentSha256": "ccfdbac5ca5f2b2393c6045c1c089571a422fc830c8619105499b3b902acb3c1",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0,
+          "stabilityComparison": {
+            "differentPixelCount": 0,
+            "differentPixelRatio": 0.0,
+            "dimensions": {
+              "first": [
+                1280,
+                720
+              ],
+              "passed": true,
+              "second": [
+                1280,
+                720
+              ]
+            },
+            "first": "ccfdbac5ca5f2b2393c6045c1c089571a422fc830c8619105499b3b902acb3c1",
+            "maximumChannelDelta": 0,
+            "mode": "EXACT",
+            "normalizedMeanAbsoluteError": 0.0,
+            "passed": true,
+            "second": "ccfdbac5ca5f2b2393c6045c1c089571a422fc830c8619105499b3b902acb3c1",
+            "tolerance": {
+              "maximumChannelDelta": 1,
+              "maximumDifferentPixelCount": 24,
+              "maximumDifferentPixelRatio": 0.0001,
+              "maximumNormalizedMeanAbsoluteError": 1e-06
+            }
+          }
+        }
+      ],
+      "bytes": 435507,
+      "camera": {
+        "location": [
+          14.0,
+          -20.0,
+          12.0
+        ],
+        "orthoScale": 22.0,
+        "target": [
+          0.0,
+          0.0,
+          2.0
+        ],
+        "type": "ORTHO"
+      },
+      "contentSha256": "ccfdbac5ca5f2b2393c6045c1c089571a422fc830c8619105499b3b902acb3c1",
+      "height": 720,
+      "path": "mobile_far.png",
+      "sha256": "f98a3451b58033fadcb1a75a9508abf2c477d425fca30b7cfb00769ced00efd0",
+      "stabilityComparison": {
+        "differentPixelCount": 0,
+        "differentPixelRatio": 0.0,
+        "dimensions": {
+          "first": [
+            1280,
+            720
+          ],
+          "passed": true,
+          "second": [
+            1280,
+            720
+          ]
+        },
+        "first": "ccfdbac5ca5f2b2393c6045c1c089571a422fc830c8619105499b3b902acb3c1",
+        "maximumChannelDelta": 0,
+        "mode": "EXACT",
+        "normalizedMeanAbsoluteError": 0.0,
+        "passed": true,
+        "second": "ccfdbac5ca5f2b2393c6045c1c089571a422fc830c8619105499b3b902acb3c1",
+        "tolerance": {
+          "maximumChannelDelta": 1,
+          "maximumDifferentPixelCount": 24,
+          "maximumDifferentPixelRatio": 0.0001,
+          "maximumNormalizedMeanAbsoluteError": 1e-06
+        }
+      },
+      "stabilityMode": "EXACT",
+      "status": "PASS",
+      "viewId": "mobile_far",
+      "width": 1280
+    },
+    {
+      "attemptCount": 2,
+      "attempts": [
+        {
+          "accepted": true,
+          "attempt": 1,
+          "contentSha256": "77163c3555234e3adcb0e399c49be33c56f3308948f09c418611c35491ddde7e",
+          "maximumNearBlackPixelRatio": 0.3,
+          "nearBlackPixelRatio": 0.0
+        },
+        {
+          "accepted": true,
+          "attempt": 2,
+          "contentSha256": "77163c3555234e3adcb0e399c49be33c56f3308948f09c418611c35491ddde7e",
+          "maximumNearBlackPixelRatio": 0.3,
+          "nearBlackPixelRatio": 0.0,
+          "stabilityComparison": {
+            "differentPixelCount": 0,
+            "differentPixelRatio": 0.0,
+            "dimensions": {
+              "first": [
+                1280,
+                720
+              ],
+              "passed": true,
+              "second": [
+                1280,
+                720
+              ]
+            },
+            "first": "77163c3555234e3adcb0e399c49be33c56f3308948f09c418611c35491ddde7e",
+            "maximumChannelDelta": 0,
+            "mode": "EXACT",
+            "normalizedMeanAbsoluteError": 0.0,
+            "passed": true,
+            "second": "77163c3555234e3adcb0e399c49be33c56f3308948f09c418611c35491ddde7e",
+            "tolerance": {
+              "maximumChannelDelta": 1,
+              "maximumDifferentPixelCount": 24,
+              "maximumDifferentPixelRatio": 0.0001,
+              "maximumNormalizedMeanAbsoluteError": 1e-06
+            }
+          }
+        }
+      ],
+      "bytes": 687693,
+      "camera": {
+        "location": [
+          9.0,
+          -11.0,
+          8.0
+        ],
+        "orthoScale": 10.0,
+        "target": [
+          0.0,
+          0.0,
+          2.0
+        ],
+        "type": "ORTHO"
+      },
+      "contentSha256": "77163c3555234e3adcb0e399c49be33c56f3308948f09c418611c35491ddde7e",
+      "height": 720,
+      "lightingProfile": {
+        "id": "neutral_qa",
+        "lights": [
+          {
+            "color": [
+              1.0,
+              0.94,
+              0.84
+            ],
+            "energy": 1000.0,
+            "size": 5.0
+          },
+          {
+            "color": [
+              0.72,
+              0.86,
+              1.0
+            ],
+            "energy": 650.0,
+            "size": 4.0
+          },
+          {
+            "color": [
+              0.75,
+              1.0,
+              0.92
+            ],
+            "energy": 450.0,
+            "size": 3.0
+          }
+        ],
+        "world": [
+          0.025,
+          0.03,
+          0.045
+        ]
+      },
+      "path": "lighting_neutral_qa.png",
+      "sha256": "b92a5a545e94e1a87533c7f836fcc55263fd9cb3e4f6fd2ed6d3c2643b2014ce",
+      "stabilityComparison": {
+        "differentPixelCount": 0,
+        "differentPixelRatio": 0.0,
+        "dimensions": {
+          "first": [
+            1280,
+            720
+          ],
+          "passed": true,
+          "second": [
+            1280,
+            720
+          ]
+        },
+        "first": "77163c3555234e3adcb0e399c49be33c56f3308948f09c418611c35491ddde7e",
+        "maximumChannelDelta": 0,
+        "mode": "EXACT",
+        "normalizedMeanAbsoluteError": 0.0,
+        "passed": true,
+        "second": "77163c3555234e3adcb0e399c49be33c56f3308948f09c418611c35491ddde7e",
+        "tolerance": {
+          "maximumChannelDelta": 1,
+          "maximumDifferentPixelCount": 24,
+          "maximumDifferentPixelRatio": 0.0001,
+          "maximumNormalizedMeanAbsoluteError": 1e-06
+        }
+      },
+      "stabilityMode": "EXACT",
+      "status": "PASS",
+      "viewId": "lighting_neutral_qa",
+      "width": 1280
+    },
+    {
+      "attemptCount": 2,
+      "attempts": [
+        {
+          "accepted": true,
+          "attempt": 1,
+          "contentSha256": "162d315ce49894b35d6c4601f274deea75c0279e604cdfe3f0e2a4c4dafe8eba",
+          "maximumNearBlackPixelRatio": 0.3,
+          "nearBlackPixelRatio": 0.0
+        },
+        {
+          "accepted": true,
+          "attempt": 2,
+          "contentSha256": "162d315ce49894b35d6c4601f274deea75c0279e604cdfe3f0e2a4c4dafe8eba",
+          "maximumNearBlackPixelRatio": 0.3,
+          "nearBlackPixelRatio": 0.0,
+          "stabilityComparison": {
+            "differentPixelCount": 0,
+            "differentPixelRatio": 0.0,
+            "dimensions": {
+              "first": [
+                1280,
+                720
+              ],
+              "passed": true,
+              "second": [
+                1280,
+                720
+              ]
+            },
+            "first": "162d315ce49894b35d6c4601f274deea75c0279e604cdfe3f0e2a4c4dafe8eba",
+            "maximumChannelDelta": 0,
+            "mode": "EXACT",
+            "normalizedMeanAbsoluteError": 0.0,
+            "passed": true,
+            "second": "162d315ce49894b35d6c4601f274deea75c0279e604cdfe3f0e2a4c4dafe8eba",
+            "tolerance": {
+              "maximumChannelDelta": 1,
+              "maximumDifferentPixelCount": 24,
+              "maximumDifferentPixelRatio": 0.0001,
+              "maximumNormalizedMeanAbsoluteError": 1e-06
+            }
+          }
+        }
+      ],
+      "bytes": 714545,
+      "camera": {
+        "location": [
+          9.0,
+          -11.0,
+          8.0
+        ],
+        "orthoScale": 10.0,
+        "target": [
+          0.0,
+          0.0,
+          2.0
+        ],
+        "type": "ORTHO"
+      },
+      "contentSha256": "162d315ce49894b35d6c4601f274deea75c0279e604cdfe3f0e2a4c4dafe8eba",
+      "height": 720,
+      "lightingProfile": {
+        "id": "gameplay_default",
+        "lights": [
+          {
+            "color": [
+              1.0,
+              0.72,
+              0.46
+            ],
+            "energy": 1250.0,
+            "size": 6.0
+          },
+          {
+            "color": [
+              0.48,
+              0.72,
+              1.0
+            ],
+            "energy": 720.0,
+            "size": 5.0
+          },
+          {
+            "color": [
+              0.62,
+              1.0,
+              0.84
+            ],
+            "energy": 380.0,
+            "size": 3.0
+          }
+        ],
+        "world": [
+          0.035,
+          0.045,
+          0.055
+        ]
+      },
+      "path": "lighting_gameplay_default.png",
+      "sha256": "1583ad8f2b93fdec434d6bf97e3a87123d27d9bc658fac5ddc4890785052ac91",
+      "stabilityComparison": {
+        "differentPixelCount": 0,
+        "differentPixelRatio": 0.0,
+        "dimensions": {
+          "first": [
+            1280,
+            720
+          ],
+          "passed": true,
+          "second": [
+            1280,
+            720
+          ]
+        },
+        "first": "162d315ce49894b35d6c4601f274deea75c0279e604cdfe3f0e2a4c4dafe8eba",
+        "maximumChannelDelta": 0,
+        "mode": "EXACT",
+        "normalizedMeanAbsoluteError": 0.0,
+        "passed": true,
+        "second": "162d315ce49894b35d6c4601f274deea75c0279e604cdfe3f0e2a4c4dafe8eba",
+        "tolerance": {
+          "maximumChannelDelta": 1,
+          "maximumDifferentPixelCount": 24,
+          "maximumDifferentPixelRatio": 0.0001,
+          "maximumNormalizedMeanAbsoluteError": 1e-06
+        }
+      },
+      "stabilityMode": "EXACT",
+      "status": "PASS",
+      "viewId": "lighting_gameplay_default",
+      "width": 1280
+    },
+    {
+      "attemptCount": 2,
+      "attempts": [
+        {
+          "accepted": true,
+          "attempt": 1,
+          "contentSha256": "5b3cb8ab9882c1aeaa501b2caddffcf76e02a9428c80d82988bacca8322a54a7",
+          "maximumNearBlackPixelRatio": 0.3,
+          "nearBlackPixelRatio": 0.0
+        },
+        {
+          "accepted": true,
+          "attempt": 2,
+          "contentSha256": "5b3cb8ab9882c1aeaa501b2caddffcf76e02a9428c80d82988bacca8322a54a7",
+          "maximumNearBlackPixelRatio": 0.3,
+          "nearBlackPixelRatio": 0.0,
+          "stabilityComparison": {
+            "differentPixelCount": 0,
+            "differentPixelRatio": 0.0,
+            "dimensions": {
+              "first": [
+                1280,
+                720
+              ],
+              "passed": true,
+              "second": [
+                1280,
+                720
+              ]
+            },
+            "first": "5b3cb8ab9882c1aeaa501b2caddffcf76e02a9428c80d82988bacca8322a54a7",
+            "maximumChannelDelta": 0,
+            "mode": "EXACT",
+            "normalizedMeanAbsoluteError": 0.0,
+            "passed": true,
+            "second": "5b3cb8ab9882c1aeaa501b2caddffcf76e02a9428c80d82988bacca8322a54a7",
+            "tolerance": {
+              "maximumChannelDelta": 1,
+              "maximumDifferentPixelCount": 24,
+              "maximumDifferentPixelRatio": 0.0001,
+              "maximumNormalizedMeanAbsoluteError": 1e-06
+            }
+          }
+        }
+      ],
+      "bytes": 616283,
+      "camera": {
+        "location": [
+          9.0,
+          -11.0,
+          8.0
+        ],
+        "orthoScale": 10.0,
+        "target": [
+          0.0,
+          0.0,
+          2.0
+        ],
+        "type": "ORTHO"
+      },
+      "contentSha256": "5b3cb8ab9882c1aeaa501b2caddffcf76e02a9428c80d82988bacca8322a54a7",
+      "height": 720,
+      "lightingProfile": {
+        "id": "high_contrast",
+        "lights": [
+          {
+            "color": [
+              1.0,
+              0.9,
+              0.7
+            ],
+            "energy": 1550.0,
+            "size": 3.0
+          },
+          {
+            "color": [
+              0.35,
+              0.58,
+              1.0
+            ],
+            "energy": 240.0,
+            "size": 2.5
+          },
+          {
+            "color": [
+              0.45,
+              1.0,
+              0.78
+            ],
+            "energy": 160.0,
+            "size": 2.0
+          }
+        ],
+        "world": [
+          0.012,
+          0.014,
+          0.02
+        ]
+      },
+      "path": "lighting_high_contrast.png",
+      "sha256": "970a01c312f0d9df7bb5cdc9ca045142e79e26016ecbf16b5be9a8e001add39a",
+      "stabilityComparison": {
+        "differentPixelCount": 0,
+        "differentPixelRatio": 0.0,
+        "dimensions": {
+          "first": [
+            1280,
+            720
+          ],
+          "passed": true,
+          "second": [
+            1280,
+            720
+          ]
+        },
+        "first": "5b3cb8ab9882c1aeaa501b2caddffcf76e02a9428c80d82988bacca8322a54a7",
+        "maximumChannelDelta": 0,
+        "mode": "EXACT",
+        "normalizedMeanAbsoluteError": 0.0,
+        "passed": true,
+        "second": "5b3cb8ab9882c1aeaa501b2caddffcf76e02a9428c80d82988bacca8322a54a7",
+        "tolerance": {
+          "maximumChannelDelta": 1,
+          "maximumDifferentPixelCount": 24,
+          "maximumDifferentPixelRatio": 0.0001,
+          "maximumNormalizedMeanAbsoluteError": 1e-06
+        }
+      },
+      "stabilityMode": "EXACT",
+      "status": "PASS",
+      "viewId": "lighting_high_contrast",
+      "width": 1280
+    },
+    {
+      "attemptCount": 2,
+      "attempts": [
+        {
+          "accepted": true,
+          "attempt": 1,
+          "contentSha256": "bfdd9e55a7da14b1cd5e86e2770cc76f2c1a671cc9091bb9c5f75e64ee6f593e",
+          "maximumNearBlackPixelRatio": 0.3,
+          "nearBlackPixelRatio": 0.0
+        },
+        {
+          "accepted": true,
+          "attempt": 2,
+          "contentSha256": "bfdd9e55a7da14b1cd5e86e2770cc76f2c1a671cc9091bb9c5f75e64ee6f593e",
+          "maximumNearBlackPixelRatio": 0.3,
+          "nearBlackPixelRatio": 0.0,
+          "stabilityComparison": {
+            "differentPixelCount": 0,
+            "differentPixelRatio": 0.0,
+            "dimensions": {
+              "first": [
+                1280,
+                720
+              ],
+              "passed": true,
+              "second": [
+                1280,
+                720
+              ]
+            },
+            "first": "bfdd9e55a7da14b1cd5e86e2770cc76f2c1a671cc9091bb9c5f75e64ee6f593e",
+            "maximumChannelDelta": 0,
+            "mode": "EXACT",
+            "normalizedMeanAbsoluteError": 0.0,
+            "passed": true,
+            "second": "bfdd9e55a7da14b1cd5e86e2770cc76f2c1a671cc9091bb9c5f75e64ee6f593e",
+            "tolerance": {
+              "maximumChannelDelta": 1,
+              "maximumDifferentPixelCount": 24,
+              "maximumDifferentPixelRatio": 0.0001,
+              "maximumNormalizedMeanAbsoluteError": 1e-06
+            }
+          }
+        }
+      ],
+      "bytes": 535001,
+      "camera": {
+        "location": [
+          9.0,
+          -11.0,
+          8.0
+        ],
+        "orthoScale": 10.0,
+        "target": [
+          0.0,
+          0.0,
+          2.0
+        ],
+        "type": "ORTHO"
+      },
+      "contentSha256": "bfdd9e55a7da14b1cd5e86e2770cc76f2c1a671cc9091bb9c5f75e64ee6f593e",
+      "height": 720,
+      "lightingProfile": {
+        "id": "adverse_night",
+        "lights": [
+          {
+            "color": [
+              0.28,
+              0.48,
+              1.0
+            ],
+            "energy": 520.0,
+            "size": 5.0
+          },
+          {
+            "color": [
+              0.18,
+              0.72,
+              1.0
+            ],
+            "energy": 260.0,
+            "size": 4.0
+          },
+          {
+            "color": [
+              1.0,
+              0.38,
+              0.16
+            ],
+            "energy": 300.0,
+            "size": 2.5
+          }
+        ],
+        "world": [
+          0.006,
+          0.01,
+          0.025
+        ]
+      },
+      "path": "lighting_adverse_night.png",
+      "sha256": "ff44a27d4f47f0742f66f7ac2a2cf57738121326daba7335297507bbdd4b96f2",
+      "stabilityComparison": {
+        "differentPixelCount": 0,
+        "differentPixelRatio": 0.0,
+        "dimensions": {
+          "first": [
+            1280,
+            720
+          ],
+          "passed": true,
+          "second": [
+            1280,
+            720
+          ]
+        },
+        "first": "bfdd9e55a7da14b1cd5e86e2770cc76f2c1a671cc9091bb9c5f75e64ee6f593e",
+        "maximumChannelDelta": 0,
+        "mode": "EXACT",
+        "normalizedMeanAbsoluteError": 0.0,
+        "passed": true,
+        "second": "bfdd9e55a7da14b1cd5e86e2770cc76f2c1a671cc9091bb9c5f75e64ee6f593e",
+        "tolerance": {
+          "maximumChannelDelta": 1,
+          "maximumDifferentPixelCount": 24,
+          "maximumDifferentPixelRatio": 0.0001,
+          "maximumNormalizedMeanAbsoluteError": 1e-06
+        }
+      },
+      "stabilityMode": "EXACT",
+      "status": "PASS",
+      "viewId": "lighting_adverse_night",
+      "width": 1280
+    },
+    {
+      "attemptCount": 2,
+      "attempts": [
+        {
+          "accepted": true,
+          "attempt": 1,
+          "contentSha256": "625024f4c47a5b5ccec8c867ab5d9cba5a5d43fef7f01472991e086476a30561",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0
+        },
+        {
+          "accepted": true,
+          "attempt": 2,
+          "contentSha256": "625024f4c47a5b5ccec8c867ab5d9cba5a5d43fef7f01472991e086476a30561",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0,
+          "stabilityComparison": {
+            "differentPixelCount": 0,
+            "differentPixelRatio": 0.0,
+            "dimensions": {
+              "first": [
+                1280,
+                720
+              ],
+              "passed": true,
+              "second": [
+                1280,
+                720
+              ]
+            },
+            "first": "625024f4c47a5b5ccec8c867ab5d9cba5a5d43fef7f01472991e086476a30561",
+            "maximumChannelDelta": 0,
+            "mode": "EXACT",
+            "normalizedMeanAbsoluteError": 0.0,
+            "passed": true,
+            "second": "625024f4c47a5b5ccec8c867ab5d9cba5a5d43fef7f01472991e086476a30561",
+            "tolerance": {
+              "maximumChannelDelta": 1,
+              "maximumDifferentPixelCount": 24,
+              "maximumDifferentPixelRatio": 0.0001,
+              "maximumNormalizedMeanAbsoluteError": 1e-06
+            }
+          }
+        }
+      ],
+      "bytes": 549942,
+      "camera": {
+        "location": [
+          12.0,
+          -17.0,
+          10.0
+        ],
+        "orthoScale": 15.0,
+        "target": [
+          0.0,
+          0.0,
+          1.5
+        ],
+        "type": "ORTHO"
+      },
+      "contentSha256": "625024f4c47a5b5ccec8c867ab5d9cba5a5d43fef7f01472991e086476a30561",
+      "height": 720,
+      "path": "repetition_1.png",
+      "repetition": {
+        "layout": {
+          "columns": 1,
+          "rows": 1
+        },
+        "modelCount": 1,
+        "renderObjectCount": 42,
+        "reuseMode": "LINKED_MESH_DATA",
+        "uniqueMeshDataCount": 42
+      },
+      "sha256": "b9b61482f0d9d4d17ef49c077ffc5ba71b1a189dacb152575b396067075292a8",
+      "stabilityComparison": {
+        "differentPixelCount": 0,
+        "differentPixelRatio": 0.0,
+        "dimensions": {
+          "first": [
+            1280,
+            720
+          ],
+          "passed": true,
+          "second": [
+            1280,
+            720
+          ]
+        },
+        "first": "625024f4c47a5b5ccec8c867ab5d9cba5a5d43fef7f01472991e086476a30561",
+        "maximumChannelDelta": 0,
+        "mode": "EXACT",
+        "normalizedMeanAbsoluteError": 0.0,
+        "passed": true,
+        "second": "625024f4c47a5b5ccec8c867ab5d9cba5a5d43fef7f01472991e086476a30561",
+        "tolerance": {
+          "maximumChannelDelta": 1,
+          "maximumDifferentPixelCount": 24,
+          "maximumDifferentPixelRatio": 0.0001,
+          "maximumNormalizedMeanAbsoluteError": 1e-06
+        }
+      },
+      "stabilityMode": "EXACT",
+      "status": "PASS",
+      "viewId": "repetition_1",
+      "width": 1280
+    },
+    {
+      "attemptCount": 2,
+      "attempts": [
+        {
+          "accepted": true,
+          "attempt": 1,
+          "contentSha256": "d2c51d078059b15d8fc42a2d4f9860e0a6293733bac44c44fd9fe9c0c39c551d",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0
+        },
+        {
+          "accepted": true,
+          "attempt": 2,
+          "contentSha256": "d2c51d078059b15d8fc42a2d4f9860e0a6293733bac44c44fd9fe9c0c39c551d",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0,
+          "stabilityComparison": {
+            "differentPixelCount": 0,
+            "differentPixelRatio": 0.0,
+            "dimensions": {
+              "first": [
+                1280,
+                720
+              ],
+              "passed": true,
+              "second": [
+                1280,
+                720
+              ]
+            },
+            "first": "d2c51d078059b15d8fc42a2d4f9860e0a6293733bac44c44fd9fe9c0c39c551d",
+            "maximumChannelDelta": 0,
+            "mode": "EXACT",
+            "normalizedMeanAbsoluteError": 0.0,
+            "passed": true,
+            "second": "d2c51d078059b15d8fc42a2d4f9860e0a6293733bac44c44fd9fe9c0c39c551d",
+            "tolerance": {
+              "maximumChannelDelta": 1,
+              "maximumDifferentPixelCount": 24,
+              "maximumDifferentPixelRatio": 0.0001,
+              "maximumNormalizedMeanAbsoluteError": 1e-06
+            }
+          }
+        }
+      ],
+      "bytes": 501918,
+      "camera": {
+        "location": [
+          48.0,
+          -58.0,
+          52.0
+        ],
+        "orthoScale": 62.0,
+        "target": [
+          0.0,
+          0.0,
+          1.5
+        ],
+        "type": "ORTHO"
+      },
+      "contentSha256": "d2c51d078059b15d8fc42a2d4f9860e0a6293733bac44c44fd9fe9c0c39c551d",
+      "height": 720,
+      "path": "repetition_30.png",
+      "repetition": {
+        "layout": {
+          "columns": 6,
+          "rows": 5
+        },
+        "modelCount": 30,
+        "renderObjectCount": 1260,
+        "reuseMode": "LINKED_MESH_DATA",
+        "uniqueMeshDataCount": 42
+      },
+      "sha256": "49ef87c6a88cf0e1ac5c9a4eb175eec05b340971e4ca057e33bde3908f29d5c7",
+      "stabilityComparison": {
+        "differentPixelCount": 0,
+        "differentPixelRatio": 0.0,
+        "dimensions": {
+          "first": [
+            1280,
+            720
+          ],
+          "passed": true,
+          "second": [
+            1280,
+            720
+          ]
+        },
+        "first": "d2c51d078059b15d8fc42a2d4f9860e0a6293733bac44c44fd9fe9c0c39c551d",
+        "maximumChannelDelta": 0,
+        "mode": "EXACT",
+        "normalizedMeanAbsoluteError": 0.0,
+        "passed": true,
+        "second": "d2c51d078059b15d8fc42a2d4f9860e0a6293733bac44c44fd9fe9c0c39c551d",
+        "tolerance": {
+          "maximumChannelDelta": 1,
+          "maximumDifferentPixelCount": 24,
+          "maximumDifferentPixelRatio": 0.0001,
+          "maximumNormalizedMeanAbsoluteError": 1e-06
+        }
+      },
+      "stabilityMode": "EXACT",
+      "status": "PASS",
+      "viewId": "repetition_30",
+      "width": 1280
+    },
+    {
+      "attemptCount": 2,
+      "attempts": [
+        {
+          "accepted": true,
+          "attempt": 1,
+          "contentSha256": "e8e513d7e4b79bbef43ba45f1d1b7b50a54b7c17a84e3be57b7590316912bde0",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0
+        },
+        {
+          "accepted": true,
+          "attempt": 2,
+          "contentSha256": "e8e513d7e4b79bbef43ba45f1d1b7b50a54b7c17a84e3be57b7590316912bde0",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0,
+          "stabilityComparison": {
+            "differentPixelCount": 0,
+            "differentPixelRatio": 0.0,
+            "dimensions": {
+              "first": [
+                1280,
+                720
+              ],
+              "passed": true,
+              "second": [
+                1280,
+                720
+              ]
+            },
+            "first": "e8e513d7e4b79bbef43ba45f1d1b7b50a54b7c17a84e3be57b7590316912bde0",
+            "maximumChannelDelta": 0,
+            "mode": "EXACT",
+            "normalizedMeanAbsoluteError": 0.0,
+            "passed": true,
+            "second": "e8e513d7e4b79bbef43ba45f1d1b7b50a54b7c17a84e3be57b7590316912bde0",
+            "tolerance": {
+              "maximumChannelDelta": 1,
+              "maximumDifferentPixelCount": 24,
+              "maximumDifferentPixelRatio": 0.0001,
+              "maximumNormalizedMeanAbsoluteError": 1e-06
+            }
+          }
+        }
+      ],
+      "bytes": 522538,
+      "camera": {
+        "location": [
+          82.0,
+          -92.0,
+          86.0
+        ],
+        "orthoScale": 108.0,
+        "target": [
+          0.0,
+          0.0,
+          1.5
+        ],
+        "type": "ORTHO"
+      },
+      "contentSha256": "e8e513d7e4b79bbef43ba45f1d1b7b50a54b7c17a84e3be57b7590316912bde0",
+      "height": 720,
+      "path": "repetition_100.png",
+      "repetition": {
+        "layout": {
+          "columns": 10,
+          "rows": 10
+        },
+        "modelCount": 100,
+        "renderObjectCount": 4200,
+        "reuseMode": "LINKED_MESH_DATA",
+        "uniqueMeshDataCount": 42
+      },
+      "sha256": "61f78746a2d218fd9bfcf989d1cf0d3bb8ceaba56cfecd72b7cc2ebfa2ca9ea4",
+      "stabilityComparison": {
+        "differentPixelCount": 0,
+        "differentPixelRatio": 0.0,
+        "dimensions": {
+          "first": [
+            1280,
+            720
+          ],
+          "passed": true,
+          "second": [
+            1280,
+            720
+          ]
+        },
+        "first": "e8e513d7e4b79bbef43ba45f1d1b7b50a54b7c17a84e3be57b7590316912bde0",
+        "maximumChannelDelta": 0,
+        "mode": "EXACT",
+        "normalizedMeanAbsoluteError": 0.0,
+        "passed": true,
+        "second": "e8e513d7e4b79bbef43ba45f1d1b7b50a54b7c17a84e3be57b7590316912bde0",
+        "tolerance": {
+          "maximumChannelDelta": 1,
+          "maximumDifferentPixelCount": 24,
+          "maximumDifferentPixelRatio": 0.0001,
+          "maximumNormalizedMeanAbsoluteError": 1e-06
+        }
+      },
+      "stabilityMode": "EXACT",
+      "status": "PASS",
+      "viewId": "repetition_100",
+      "width": 1280
+    }
+  ],
+  "revision": 15,
+  "schemaVersion": "1.0.0",
+  "sourceBlendSha256": "af429d27f256bbc6175aaa890cdacb41a0a14d552fbb94ec28f3e430bfe0d2ef",
+  "status": "PASS"
+}

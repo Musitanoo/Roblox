@@ -42,7 +42,6 @@ export type Service = typeof(setmetatable(
 		_totalTurretDamage: number,
 		_totalEnemiesSlowed: number,
 		_bruteWallsDestroyed: number,
-		_report: ReviewReport?,
 	},
 	CombatStatsService
 ))
@@ -90,7 +89,6 @@ function CombatStatsService.new(replicaRoot: Folder): Service
 		_totalTurretDamage = 0,
 		_totalEnemiesSlowed = 0,
 		_bruteWallsDestroyed = 0,
-		_report = nil,
 	}, CombatStatsService)
 	self:clear()
 	return self
@@ -98,7 +96,6 @@ end
 
 function CombatStatsService.clear(self: Service)
 	self._running = false
-	self._report = nil
 	for name, value in REPORT_DEFAULTS do
 		self._replicaRoot:SetAttribute(name, value)
 	end
@@ -206,7 +203,6 @@ function CombatStatsService.finish(
 		TotalEnemiesSlowed = self._totalEnemiesSlowed,
 		EnemiesReachedCore = self._laneCoreHits.Left + self._laneCoreHits.Right,
 	}
-	self._report = report
 	self._replicaRoot:SetAttribute("Result", report.Result)
 	self._replicaRoot:SetAttribute("ChallengeId", report.ChallengeId)
 	self._replicaRoot:SetAttribute("ChallengeDuration", report.ChallengeDuration)
@@ -225,10 +221,6 @@ function CombatStatsService.finish(
 	self._replicaRoot:SetAttribute("EnemiesReachedCore", report.EnemiesReachedCore)
 	self._replicaRoot:SetAttribute("ReportReady", true)
 	return report
-end
-
-function CombatStatsService.getReport(self: Service): ReviewReport?
-	return self._report
 end
 
 return CombatStatsService

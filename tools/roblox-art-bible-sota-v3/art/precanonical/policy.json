@@ -1,0 +1,94 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/precanonical-policy.schema.json",
+  "schemaVersion": "1.0.0",
+  "policyId": "precanonical-web-images-v1",
+  "selectedArtDirection": "salvaged-frontier",
+  "constitution": {
+    "path": "art/selected/salvaged-frontier-constitution.json",
+      "sha256": "1a7ea88c2d06be01530b6e02b70b6f9dc176f5b74d0cb98f4d565b8a322a9491"
+  },
+  "providerContract": {
+    "allowedSurface": "chatgpt_web_images",
+    "allowedBrowserAdapters": [
+      "codex_chrome",
+      "codex_iab"
+    ],
+    "defaultBrowserAdapter": "codex_chrome",
+    "attachmentCapableBrowserAdapter": "codex_chrome",
+    "attachmentlessFallbackBrowserAdapter": "codex_iab",
+    "explicitAdapterSelectionRequired": true,
+    "replaceableSurface": true,
+    "preciseModelNameRequiresUiEvidence": true,
+    "browserIsTransportOnly": true,
+    "taskScopedCapability": true,
+    "repositoryLaunchable": false,
+    "requiredTaskTool": "mcp__node_repl__js",
+    "localInstallationProvesTaskExposure": false,
+    "humanOperatorBridgeAllowed": true,
+    "humanOperatorBridgeRequiresTaskTool": false,
+    "humanOperatorBridgeLoopbackOnly": true,
+    "humanOperatorBridgeRequiresBoundAttestation": true
+  },
+  "fallbackPolicy": {
+    "codexImagegenAutomatic": false,
+    "apiAutomatic": false,
+    "silentRetry": false,
+    "unboundedRegeneration": false,
+    "browserAdapterAutomatic": false
+  },
+  "defaultBudget": {
+    "exploration": 1,
+    "consolidation": 1,
+    "precanonicalBoard": 1,
+    "correctionReserve": 1,
+    "maximumTotal": 4
+  },
+  "stateCampaign": {
+    "requiredModel": "gpt-image-2",
+    "objectCount": 6,
+    "objectStateTaskCount": 16,
+    "oneGenerationPerObjectState": true,
+    "independentStateDesignForbidden": true,
+    "previousAcceptedStateReferenceRequired": true,
+    "maximumAttemptsPerTask": 3,
+    "automaticAdvanceAfterAcceptedReview": true,
+    "automaticRetry": false
+  },
+  "states": [
+    "DRAFT",
+    "BRIEF_COMPLETE",
+    "ART_DIRECTION_SELECTED",
+    "PRECANONICAL_SPEC_COMPLETE",
+    "WEB_PREFLIGHT_PASS",
+    "AWAITING_TASK_BROWSER_CAPABILITY",
+    "READY_FOR_HUMAN_WEB_SUBMISSION",
+    "READY_FOR_WEB_GENERATION",
+    "WEB_GENERATING",
+    "WEB_RESULT_IMPORTED",
+    "VISUAL_REVIEW_REQUIRED",
+    "REJECTED",
+    "REVISION_REQUIRED",
+    "PRECANONICAL_CANDIDATE",
+    "HUMAN_SELECTED",
+    "CANONICALIZATION_IN_PROGRESS",
+    "CANONICAL_DEFINITION_LOCKED",
+    "READY_FOR_3D_RECONSTRUCTION"
+  ],
+  "errorStates": [
+    "WEB_AUTH_REQUIRED",
+    "WEB_QUOTA_EXHAUSTED",
+    "WEB_UI_CHANGED",
+    "WEB_TASK_CAPABILITY_UNAVAILABLE",
+    "DOWNLOAD_FAILED",
+    "RESULT_AMBIGUOUS",
+    "BUDGET_EXHAUSTED",
+    "HUMAN_DECISION_REQUIRED"
+  ],
+  "authorityBoundary": {
+    "imageMayBecomeCanonicalDirectly": false,
+    "imageProvesHiddenGeometry": false,
+    "humanSelectionRequired": true,
+    "canonRationalizationRequired": true,
+    "productionApproved": false
+  }
+}

@@ -1,0 +1,430 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "REQUIRES_HUMAN_REVIEW",
+  "generatedAt": "2026-07-16T06:04:58.229539Z",
+  "rendererTruth": "BLENDER_PREFLIGHT_ONLY_STUDIO_IS_CANONICAL",
+  "variantCount": 39,
+  "reports": [
+    {
+      "territoryId": "industrial-toy-defense",
+      "reportSha256": "e08547f9dafcc02c99f222a6f1b472c783cc75a09034db8c2b34aa7f5520eb52",
+      "inputHashes": {
+        "territory": "376db838f206a46e114993ab5c666a155341215931069b879527666ebd144450",
+        "calibration": "8a33c6c8a9b5a02ef460f5e698907a4d6d623e2f5c475047cd3dbdccc102ace9",
+        "camera": "f2daf7d92ff4db38a588cb29588c5856c8894ec0c11d30d3d01c527bf7cd8d44",
+        "renderMatrix": "c91b9292cbd4fb4ca50cafae53ee74c8493dddbf0ffafc4bcc87af93a4559514",
+        "lighting": "8e3db2df064ac33f79703e21aa702709a7162fa43b56d07f706e3af03647e085",
+        "materials": "6e2ad4bd95cb2dd4776b65e6dfeb088af35349a7ec74469bd6c0f40edd553f5e",
+        "generator": "4f5ae236a95fba6df85d94bf6c0858ac3d0ef53c0114547442c4b1753c9d7326"
+      }
+    },
+    {
+      "territoryId": "salvaged-frontier",
+      "reportSha256": "fca15bcf0f457994aa791f0e0cabeb33846a3eed690dcf8c6183d54a05700b4c",
+      "inputHashes": {
+        "territory": "21d9dd89f05f64e6504f940b0090e30b12a785a9b6efc1f45b6216b2086604cb",
+        "calibration": "8a33c6c8a9b5a02ef460f5e698907a4d6d623e2f5c475047cd3dbdccc102ace9",
+        "camera": "f2daf7d92ff4db38a588cb29588c5856c8894ec0c11d30d3d01c527bf7cd8d44",
+        "renderMatrix": "c91b9292cbd4fb4ca50cafae53ee74c8493dddbf0ffafc4bcc87af93a4559514",
+        "lighting": "8e3db2df064ac33f79703e21aa702709a7162fa43b56d07f706e3af03647e085",
+        "materials": "6e2ad4bd95cb2dd4776b65e6dfeb088af35349a7ec74469bd6c0f40edd553f5e",
+        "generator": "4f5ae236a95fba6df85d94bf6c0858ac3d0ef53c0114547442c4b1753c9d7326"
+      }
+    },
+    {
+      "territoryId": "clean-tactical-diorama",
+      "reportSha256": "987da7e4c206dc72e6106f9dae28c3c3f8cbcd4a196455882c24def9f32fa46c",
+      "inputHashes": {
+        "territory": "dbd1c6cb8aa43922a884751abcb8d0895e312439eb17d0ed501a5d3e50282d3c",
+        "calibration": "8a33c6c8a9b5a02ef460f5e698907a4d6d623e2f5c475047cd3dbdccc102ace9",
+        "camera": "f2daf7d92ff4db38a588cb29588c5856c8894ec0c11d30d3d01c527bf7cd8d44",
+        "renderMatrix": "c91b9292cbd4fb4ca50cafae53ee74c8493dddbf0ffafc4bcc87af93a4559514",
+        "lighting": "8e3db2df064ac33f79703e21aa702709a7162fa43b56d07f706e3af03647e085",
+        "materials": "6e2ad4bd95cb2dd4776b65e6dfeb088af35349a7ec74469bd6c0f40edd553f5e",
+        "generator": "4f5ae236a95fba6df85d94bf6c0858ac3d0ef53c0114547442c4b1753c9d7326"
+      }
+    }
+  ],
+  "contactSheets": [
+    {
+      "territoryId": "industrial-toy-defense",
+      "path": "review/contact-sheets/industrial-toy-defense.png",
+      "sha256": "79e8a65375fd476260a1c599edc0b7bb959a831691b9aed844d61be84a767a40",
+      "resolution": {
+        "width": 1280,
+        "height": 1096
+      }
+    },
+    {
+      "territoryId": "salvaged-frontier",
+      "path": "review/contact-sheets/salvaged-frontier.png",
+      "sha256": "a04e118585bba927bc9cd16499a6f7fbfab36ef64224f7b8dd7baf851427ed1f",
+      "resolution": {
+        "width": 1280,
+        "height": 1096
+      }
+    },
+    {
+      "territoryId": "clean-tactical-diorama",
+      "path": "review/contact-sheets/clean-tactical-diorama.png",
+      "sha256": "a51c447b0bca0b45575772de374c3776b70e1cabf925e32e4d800e3bbcc2acb4",
+      "resolution": {
+        "width": 1280,
+        "height": 1096
+      }
+    }
+  ],
+  "cards": [
+    {
+      "territoryId": "industrial-toy-defense",
+      "assetId": "barricade",
+      "stateId": "critical",
+      "triangles": 1564,
+      "triangleBudget": 2000,
+      "meshObjectCount": 41,
+      "sourceSha256": "4f678b8b1adec6a19185a0b610b8d5bad14b3541a072e689bb543bb01ce08490"
+    },
+    {
+      "territoryId": "industrial-toy-defense",
+      "assetId": "barricade",
+      "stateId": "damaged",
+      "triangles": 1520,
+      "triangleBudget": 2000,
+      "meshObjectCount": 40,
+      "sourceSha256": "e3f66daa19a52ed0c6454b6464c4fa649916df0bd40a4df183e7bf7922cc5c8a"
+    },
+    {
+      "territoryId": "industrial-toy-defense",
+      "assetId": "barricade",
+      "stateId": "intact",
+      "triangles": 1476,
+      "triangleBudget": 2000,
+      "meshObjectCount": 39,
+      "sourceSha256": "4b2b11fc0933d24825dbfc2e33d3b6774f356769d09cd217984ff59c3f5eaa6f"
+    },
+    {
+      "territoryId": "industrial-toy-defense",
+      "assetId": "damage_effect",
+      "stateId": "critical",
+      "triangles": 128,
+      "triangleBudget": 300,
+      "meshObjectCount": 10,
+      "sourceSha256": "c6f42f62d5af70e6900cea671c9180916220fdca67fd842f72aea1ee502048d6"
+    },
+    {
+      "territoryId": "industrial-toy-defense",
+      "assetId": "damage_effect",
+      "stateId": "damaged",
+      "triangles": 120,
+      "triangleBudget": 300,
+      "meshObjectCount": 9,
+      "sourceSha256": "b211971eeef65f960a42f621f77bd044ffbce5dcb2b79f4f2a8b79db84ad8374"
+    },
+    {
+      "territoryId": "industrial-toy-defense",
+      "assetId": "enemy_standard",
+      "stateId": "critical",
+      "triangles": 1912,
+      "triangleBudget": 5000,
+      "meshObjectCount": 31,
+      "sourceSha256": "b050f4be26270bea75e3def67e1067b269557f220eb69e1246db6f7c57a5232c"
+    },
+    {
+      "territoryId": "industrial-toy-defense",
+      "assetId": "enemy_standard",
+      "stateId": "damaged",
+      "triangles": 1868,
+      "triangleBudget": 5000,
+      "meshObjectCount": 30,
+      "sourceSha256": "28b90e765eaea64e19252c838fd2e750ac227cd22ca403eb7141993fb5d9b6e0"
+    },
+    {
+      "territoryId": "industrial-toy-defense",
+      "assetId": "enemy_standard",
+      "stateId": "intact",
+      "triangles": 1824,
+      "triangleBudget": 5000,
+      "meshObjectCount": 29,
+      "sourceSha256": "d050b85fa017baccdb8bf8f502ef1bf63322f51c6c358d45d4a0d1932c211877"
+    },
+    {
+      "territoryId": "industrial-toy-defense",
+      "assetId": "floor_module",
+      "stateId": "damaged",
+      "triangles": 724,
+      "triangleBudget": 800,
+      "meshObjectCount": 15,
+      "sourceSha256": "faa181cbea3577c3842553ba9dcecdaa2163416ca9736a9d7b6bcf7d5a2a1afd"
+    },
+    {
+      "territoryId": "industrial-toy-defense",
+      "assetId": "floor_module",
+      "stateId": "intact",
+      "triangles": 688,
+      "triangleBudget": 800,
+      "meshObjectCount": 12,
+      "sourceSha256": "a0c49d7366ca5d863cd7d3740627292fc95fa61fe5e9dc1d2e7eda0027756137"
+    },
+    {
+      "territoryId": "industrial-toy-defense",
+      "assetId": "objective_core",
+      "stateId": "critical",
+      "triangles": 3228,
+      "triangleBudget": 4500,
+      "meshObjectCount": 46,
+      "sourceSha256": "e32d0cdd60ed9825a83f27d5a41d1c8deb12288612f6f11ca56c17a501643f88"
+    },
+    {
+      "territoryId": "industrial-toy-defense",
+      "assetId": "objective_core",
+      "stateId": "damaged",
+      "triangles": 3184,
+      "triangleBudget": 4500,
+      "meshObjectCount": 45,
+      "sourceSha256": "5657e54974afa11f4a89535ef1f737a74d414af0d1872dca793a8c64912c6091"
+    },
+    {
+      "territoryId": "industrial-toy-defense",
+      "assetId": "objective_core",
+      "stateId": "intact",
+      "triangles": 3140,
+      "triangleBudget": 4500,
+      "meshObjectCount": 44,
+      "sourceSha256": "8df9d59a374007adb1d1982605d3c5caaaa918a3f5ce8c035aae3eabc3b21dc8"
+    },
+    {
+      "territoryId": "salvaged-frontier",
+      "assetId": "barricade",
+      "stateId": "critical",
+      "triangles": 848,
+      "triangleBudget": 2000,
+      "meshObjectCount": 24,
+      "sourceSha256": "f80b29d40d5b4a3396f2596e90aa8bfa6220e22cf3ecd4ae91f001b879587731"
+    },
+    {
+      "territoryId": "salvaged-frontier",
+      "assetId": "barricade",
+      "stateId": "damaged",
+      "triangles": 848,
+      "triangleBudget": 2000,
+      "meshObjectCount": 24,
+      "sourceSha256": "d0cfd8991c698ecd24e281fd2159fef9ba4ec601c3504ebdb28fb6757b801152"
+    },
+    {
+      "territoryId": "salvaged-frontier",
+      "assetId": "barricade",
+      "stateId": "intact",
+      "triangles": 848,
+      "triangleBudget": 2000,
+      "meshObjectCount": 24,
+      "sourceSha256": "38e69aff59d39d1889896dec6fd268e4da8ef75f631ba0bc3a346db8efe32e58"
+    },
+    {
+      "territoryId": "salvaged-frontier",
+      "assetId": "damage_effect",
+      "stateId": "critical",
+      "triangles": 100,
+      "triangleBudget": 300,
+      "meshObjectCount": 6,
+      "sourceSha256": "4e398588dabbf53f63f7cf32c877eb117c9ad45c705a5cdd046a9427c79aaa39"
+    },
+    {
+      "territoryId": "salvaged-frontier",
+      "assetId": "damage_effect",
+      "stateId": "damaged",
+      "triangles": 92,
+      "triangleBudget": 300,
+      "meshObjectCount": 5,
+      "sourceSha256": "2ee994b1f11ae714e30c0bfa3d4a8e1174c4730847cc99600cb3a063055a43bb"
+    },
+    {
+      "territoryId": "salvaged-frontier",
+      "assetId": "enemy_standard",
+      "stateId": "critical",
+      "triangles": 840,
+      "triangleBudget": 5000,
+      "meshObjectCount": 19,
+      "sourceSha256": "f2059f1d0a9627c272d2fb4aaae987d88d1f2bc5d18fa5b2dc8b65f03aeac9e5"
+    },
+    {
+      "territoryId": "salvaged-frontier",
+      "assetId": "enemy_standard",
+      "stateId": "damaged",
+      "triangles": 840,
+      "triangleBudget": 5000,
+      "meshObjectCount": 19,
+      "sourceSha256": "a8eb197db0a2327b054f3cb495704404924878c195cf47d135f21ae0339f804f"
+    },
+    {
+      "territoryId": "salvaged-frontier",
+      "assetId": "enemy_standard",
+      "stateId": "intact",
+      "triangles": 840,
+      "triangleBudget": 5000,
+      "meshObjectCount": 19,
+      "sourceSha256": "57206e2ded46bc5528ab4ba6b344e70cf5357d106776f6684856107242bf62cf"
+    },
+    {
+      "territoryId": "salvaged-frontier",
+      "assetId": "floor_module",
+      "stateId": "damaged",
+      "triangles": 540,
+      "triangleBudget": 800,
+      "meshObjectCount": 17,
+      "sourceSha256": "f7b66e58c789ba2ba81817ffc2aea2760d85de4e17692ba90de83b0b4c60ad01"
+    },
+    {
+      "territoryId": "salvaged-frontier",
+      "assetId": "floor_module",
+      "stateId": "intact",
+      "triangles": 540,
+      "triangleBudget": 800,
+      "meshObjectCount": 17,
+      "sourceSha256": "d21af9ed9f07c51af97f74346600ad0a8ebe9df1873ce8e3686cc2ef656b2f7f"
+    },
+    {
+      "territoryId": "salvaged-frontier",
+      "assetId": "objective_core",
+      "stateId": "critical",
+      "triangles": 1560,
+      "triangleBudget": 4500,
+      "meshObjectCount": 20,
+      "sourceSha256": "5be4e78c464c3a6360481da541c7d0f902a2d1720f52cc6515cfa0e673811d52"
+    },
+    {
+      "territoryId": "salvaged-frontier",
+      "assetId": "objective_core",
+      "stateId": "damaged",
+      "triangles": 1560,
+      "triangleBudget": 4500,
+      "meshObjectCount": 20,
+      "sourceSha256": "fc138d75627b997fccf6c49281028e13837a48988aadb0a465f8c1474ea8b513"
+    },
+    {
+      "territoryId": "salvaged-frontier",
+      "assetId": "objective_core",
+      "stateId": "intact",
+      "triangles": 1560,
+      "triangleBudget": 4500,
+      "meshObjectCount": 20,
+      "sourceSha256": "09edd41935f2829d80faf0aa8e3e8ed800711035e15a74ccb05e90801e112ba4"
+    },
+    {
+      "territoryId": "clean-tactical-diorama",
+      "assetId": "barricade",
+      "stateId": "critical",
+      "triangles": 968,
+      "triangleBudget": 2000,
+      "meshObjectCount": 22,
+      "sourceSha256": "3693a8eada0fbf5424cbdc440cc27d5d83685fc7a1e2e48e386e8bb6608115c7"
+    },
+    {
+      "territoryId": "clean-tactical-diorama",
+      "assetId": "barricade",
+      "stateId": "damaged",
+      "triangles": 956,
+      "triangleBudget": 2000,
+      "meshObjectCount": 21,
+      "sourceSha256": "0890e279ab603ba4bce3076611aed4bf9eb29c2eaf95ecfa9140e45e18831a4a"
+    },
+    {
+      "territoryId": "clean-tactical-diorama",
+      "assetId": "barricade",
+      "stateId": "intact",
+      "triangles": 944,
+      "triangleBudget": 2000,
+      "meshObjectCount": 20,
+      "sourceSha256": "11ed6ff7a452adac4975c646e80cc63895da8a83312fee4ec0762a405b4d2be9"
+    },
+    {
+      "territoryId": "clean-tactical-diorama",
+      "assetId": "damage_effect",
+      "stateId": "critical",
+      "triangles": 88,
+      "triangleBudget": 300,
+      "meshObjectCount": 5,
+      "sourceSha256": "7ef32bb64f1ef5fa5abcc96693bf8fba2687b16b6f35f4072fb5581644bd03c0"
+    },
+    {
+      "territoryId": "clean-tactical-diorama",
+      "assetId": "damage_effect",
+      "stateId": "damaged",
+      "triangles": 80,
+      "triangleBudget": 300,
+      "meshObjectCount": 4,
+      "sourceSha256": "e11517f099f1e8d8cfe6ded2db5133dcd159cbcbdd182f2f227d386a1b9a9744"
+    },
+    {
+      "territoryId": "clean-tactical-diorama",
+      "assetId": "enemy_standard",
+      "stateId": "critical",
+      "triangles": 1148,
+      "triangleBudget": 5000,
+      "meshObjectCount": 21,
+      "sourceSha256": "0a1031f32995ae8bb0c6ce6cce9ae81cb6d57383b584359452d1906390278ddc"
+    },
+    {
+      "territoryId": "clean-tactical-diorama",
+      "assetId": "enemy_standard",
+      "stateId": "damaged",
+      "triangles": 1148,
+      "triangleBudget": 5000,
+      "meshObjectCount": 21,
+      "sourceSha256": "5e96f18d60b2beb8f00815f302ed50768ee7f1e1a9538aecfaabe91760419843"
+    },
+    {
+      "territoryId": "clean-tactical-diorama",
+      "assetId": "enemy_standard",
+      "stateId": "intact",
+      "triangles": 1148,
+      "triangleBudget": 5000,
+      "meshObjectCount": 21,
+      "sourceSha256": "5ead6ddfd60c5499aaefe6f863735cb71e89aa60e75a8933d37c6bef4c9f87dc"
+    },
+    {
+      "territoryId": "clean-tactical-diorama",
+      "assetId": "floor_module",
+      "stateId": "damaged",
+      "triangles": 460,
+      "triangleBudget": 800,
+      "meshObjectCount": 15,
+      "sourceSha256": "14e1f7e719f82cfc90cec51663216e78ffe9a44bcf1d99b5c386ce4a51b54cec"
+    },
+    {
+      "territoryId": "clean-tactical-diorama",
+      "assetId": "floor_module",
+      "stateId": "intact",
+      "triangles": 460,
+      "triangleBudget": 800,
+      "meshObjectCount": 15,
+      "sourceSha256": "550aab83761a7bb309cef23daa0e0de793fac4a243f32b48643ce049127fbb9f"
+    },
+    {
+      "territoryId": "clean-tactical-diorama",
+      "assetId": "objective_core",
+      "stateId": "critical",
+      "triangles": 1740,
+      "triangleBudget": 4500,
+      "meshObjectCount": 26,
+      "sourceSha256": "07840890d6f16c8fd767dd0a321acfa8903a43b20917de86fa034aacde710951"
+    },
+    {
+      "territoryId": "clean-tactical-diorama",
+      "assetId": "objective_core",
+      "stateId": "damaged",
+      "triangles": 1784,
+      "triangleBudget": 4500,
+      "meshObjectCount": 27,
+      "sourceSha256": "e85ef470e98b5a0d4486cafa6f227f5eb49afcc5246a27c543971236f84f2140"
+    },
+    {
+      "territoryId": "clean-tactical-diorama",
+      "assetId": "objective_core",
+      "stateId": "intact",
+      "triangles": 1828,
+      "triangleBudget": 4500,
+      "meshObjectCount": 28,
+      "sourceSha256": "71c1c9fd8a53c135555327f91091c47642f48ec98eae27cc19deade9cc59b6b4"
+    }
+  ]
+}

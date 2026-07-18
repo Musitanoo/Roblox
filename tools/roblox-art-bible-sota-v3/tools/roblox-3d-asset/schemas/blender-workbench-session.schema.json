@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/blender-workbench-session.schema.json",
+  "title": "Blender Visual Workbench Session",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema", "schemaVersion", "sessionId", "assetKey", "mode", "lifecycle",
+    "createdAt", "sessionTokenSha256", "contract", "visualCanon", "generator", "implementation",
+    "reference", "candidate", "baseline", "rollbackStack", "operationCount",
+    "decision", "productionApproved"
+  ],
+  "properties": {
+    "$schema": {"const": "https://roblox-top1.local/schemas/blender-workbench-session.schema.json"},
+    "schemaVersion": {"const": "1.0.0"},
+    "sessionId": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]{7,79}$"},
+    "assetKey": {"type": "string", "pattern": "^[a-z][a-z0-9_]{2,63}$"},
+    "mode": {"enum": ["OBSERVE", "EXPLORE"]},
+    "lifecycle": {"enum": ["OPEN", "CLOSED"]},
+    "createdAt": {"type": "string", "format": "date-time"},
+    "closedAt": {"type": "string", "format": "date-time"},
+    "sessionTokenSha256": {"$ref": "#/$defs/hash"},
+    "contract": {"$ref": "#/$defs/binding"},
+    "visualCanon": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "canonId", "sha256", "status"],
+      "properties": {
+        "path": {"type": "string"}, "canonId": {"type": "string"},
+        "sha256": {"$ref": "#/$defs/hash"},
+        "status": {"enum": ["DRAFT", "CANDIDATE", "ACCEPTED", "LOCKED", "REVISED"]}
+      }
+    },
+    "generator": {"$ref": "#/$defs/pathHash"},
+    "implementation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["bridge", "sessionManager", "serverAdapter"],
+      "properties": {
+        "bridge": {"$ref": "#/$defs/pathHash"},
+        "sessionManager": {"$ref": "#/$defs/pathHash"},
+        "serverAdapter": {"$ref": "#/$defs/pathHash"}
+      }
+    },
+    "reference": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "sha256", "semanticSha256", "readOnly"],
+      "properties": {
+        "path": {"type": "string"}, "sha256": {"$ref": "#/$defs/hash"},
+        "semanticSha256": {"$ref": "#/$defs/hash"}, "readOnly": {"const": true}
+      }
+    },
+    "candidate": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "semanticSha256"],
+      "properties": {
+        "path": {"type": ["string", "null"]},
+        "semanticSha256": {"anyOf": [{"$ref": "#/$defs/hash"}, {"type": "null"}]}
+      }
+    },
+    "baseline": {
+      "type": "object", "additionalProperties": false,
+      "required": ["manifest", "buildManifestSha256", "compilerSemanticSha256"],
+      "properties": {
+        "manifest": {"type": "string"},
+        "buildManifestSha256": {"$ref": "#/$defs/hash"},
+        "compilerSemanticSha256": {"$ref": "#/$defs/hash"}
+      }
+    },
+    "rollbackStack": {"type": "array", "items": {"type": "object"}},
+    "operationCount": {"type": "integer", "minimum": 0},
+    "decision": {"enum": ["REJECTED", "REVISION_REQUIRED", "EXPLORATION_ACCEPTED", "READY_FOR_SOURCE_PROMOTION", "SOURCE_PROMOTION_VERIFIED"]},
+    "promotionSandbox": {"type": "string"},
+    "verifiedPromotion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["report", "reportSha256", "authoritativeContractSha256"],
+      "properties": {
+        "report": {"type": "string"},
+        "reportSha256": {"$ref": "#/$defs/hash"},
+        "authoritativeContractSha256": {"$ref": "#/$defs/hash"}
+      }
+    },
+    "productionApproved": {"const": false}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "pathHash": {
+      "type": "object", "additionalProperties": false, "required": ["path", "sha256"],
+      "properties": {"path": {"type": "string"}, "sha256": {"$ref": "#/$defs/hash"}}
+    },
+    "binding": {
+      "type": "object", "additionalProperties": false, "required": ["path", "sha256", "revision"],
+      "properties": {
+        "path": {"type": "string"},
+        "snapshotPath": {"type": "string"},
+        "sha256": {"$ref": "#/$defs/hash"},
+        "revision": {"type": "integer", "minimum": 1}
+      }
+    }
+  }
+}

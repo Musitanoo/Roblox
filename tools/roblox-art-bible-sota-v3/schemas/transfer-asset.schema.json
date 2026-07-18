@@ -1,0 +1,411 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/transfer-asset.schema.json",
+  "$defs": {
+    "dimensions": {
+      "type": "object",
+      "required": ["width", "height", "depth"],
+      "properties": {
+        "width": {"const": 4.8},
+        "height": {"const": 5.4},
+        "depth": {"const": 5.2}
+      },
+      "unevaluatedProperties": false
+    },
+    "territoryBinding": {
+      "type": "object",
+      "required": [
+        "territoryRef",
+        "bevelSourceAsset",
+        "bevelRatio",
+        "allowedAnglesDegrees",
+        "asymmetryTarget",
+        "compositionIntent"
+      ],
+      "properties": {
+        "territoryRef": {
+          "type": "string",
+          "pattern": "^art/territories/[a-z0-9-]+\\.json$"
+        },
+        "bevelSourceAsset": {
+          "const": "objective_core"
+        },
+        "bevelRatio": {
+          "type": "number",
+          "minimum": 0.018,
+          "maximum": 0.08
+        },
+        "allowedAnglesDegrees": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 5,
+          "uniqueItems": true,
+          "items": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 90
+          }
+        },
+        "asymmetryTarget": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "compositionIntent": {
+          "type": "string",
+          "minLength": 20
+        }
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "status",
+    "assetId",
+    "novelty",
+    "functionFamily",
+    "function",
+    "dimensions",
+    "pivot",
+    "triangleBudgetMax",
+    "textureBudgetClass",
+    "targetReadDistanceStuds",
+    "requiredStateVariants",
+    "grammarBindings",
+    "grammarClosure",
+    "stateContract",
+    "componentContract",
+    "territoryBindings",
+    "robloxContract",
+    "proofContract"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/transfer-asset.schema.json"
+    },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "status": {
+      "const": "TRANSFER_CHALLENGE_FROZEN"
+    },
+    "assetId": {
+      "const": "turret_fast_v1"
+    },
+    "novelty": {
+      "const": "UNSEEN_DURING_FIVE_ASSET_TERRITORY_CALIBRATION"
+    },
+    "functionFamily": {
+      "const": "defense"
+    },
+    "function": {
+      "const": "fast-firing player defense turret with unmistakable forward aim, interaction socket, and escalating damage readability"
+    },
+    "dimensions": {
+      "$ref": "#/$defs/dimensions"
+    },
+    "pivot": {
+      "const": "bottom_center"
+    },
+    "triangleBudgetMax": {
+      "const": 3500
+    },
+    "textureBudgetClass": {
+      "const": "medium"
+    },
+    "targetReadDistanceStuds": {
+      "const": 60
+    },
+    "requiredStateVariants": {
+      "const": ["intact", "damaged", "critical"]
+    },
+    "grammarBindings": {
+      "type": "object",
+      "required": [
+        "shapeLanguage",
+        "semanticPalette",
+        "materials",
+        "camera",
+        "lighting",
+        "states"
+      ],
+      "properties": {
+        "shapeLanguage": {
+          "const": "art/shape-language/rules.json#/functionFamilies/defense"
+        },
+        "semanticPalette": {
+          "const": "art/palettes/semantic-palette.json"
+        },
+        "materials": {
+          "const": "art/materials/material-rules.json"
+        },
+        "camera": {
+          "const": "art/calibration/camera-rig.json"
+        },
+        "lighting": {
+          "const": "art/lighting/lighting-profiles.json"
+        },
+        "states": {
+          "const": "art/shape-language/rules.json#/global/destruction"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "grammarClosure": {
+      "type": "object",
+      "required": [
+        "paletteRoles",
+        "primaryShapes",
+        "secondaryShapes",
+        "frontCue",
+        "backCue",
+        "interactionCue",
+        "forbidden",
+        "noNewPaletteRole",
+        "noNewMaterialClass",
+        "noNewAngleFamily",
+        "noNewBevelFamily",
+        "noNewDamageLanguage"
+      ],
+      "properties": {
+        "paletteRoles": {
+          "const": [
+            "primary",
+            "secondary",
+            "accent",
+            "interaction",
+            "warning",
+            "critical",
+            "rubber",
+            "bareMetal"
+          ]
+        },
+        "primaryShapes": {
+          "const": ["rectangle", "trapezoid"]
+        },
+        "secondaryShapes": {
+          "const": ["brace", "foot", "socket"]
+        },
+        "frontCue": {
+          "const": "forward_wedge_or_active_aperture"
+        },
+        "backCue": {
+          "const": "service_mass_or_closed_plane"
+        },
+        "interactionCue": {
+          "const": "complete_ring_or_socket"
+        },
+        "forbidden": {
+          "const": [
+            "needle",
+            "floating_plate",
+            "thin_loose_wires",
+            "microtext",
+            "free_floating_fragments",
+            "detail_without_silhouette_function_identity"
+          ]
+        },
+        "noNewPaletteRole": {"const": true},
+        "noNewMaterialClass": {"const": true},
+        "noNewAngleFamily": {"const": true},
+        "noNewBevelFamily": {"const": true},
+        "noNewDamageLanguage": {"const": true}
+      },
+      "unevaluatedProperties": false
+    },
+    "stateContract": {
+      "type": "object",
+      "required": ["intact", "damaged", "critical"],
+      "properties": {
+        "intact": {
+          "type": "object",
+          "required": ["majorBreakMinimum", "requiredCues"],
+          "properties": {
+            "majorBreakMinimum": {"const": 0},
+            "requiredCues": {
+              "const": [
+                "two_aligned_fast_barrels",
+                "complete_interaction_socket",
+                "closed_service_mass"
+              ]
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        "damaged": {
+          "type": "object",
+          "required": ["majorBreakMinimum", "requiredCues"],
+          "properties": {
+            "majorBreakMinimum": {"const": 1},
+            "requiredCues": {
+              "const": [
+                "one_barrel_drops",
+                "one_guard_opens",
+                "bare_structure_exposes"
+              ]
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        "critical": {
+          "type": "object",
+          "required": ["majorBreakMinimum", "requiredCues"],
+          "properties": {
+            "majorBreakMinimum": {"const": 2},
+            "requiredCues": {
+              "const": [
+                "one_barrel_missing",
+                "upper_mass_tilts",
+                "critical_core_exposes",
+                "interaction_socket_opens"
+              ]
+            }
+          },
+          "unevaluatedProperties": false
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "componentContract": {
+      "type": "object",
+      "required": ["requiredAllStates", "requiredIntactAndDamaged", "criticalOmissions"],
+      "properties": {
+        "requiredAllStates": {
+          "const": [
+            "Foundation",
+            "Pedestal",
+            "Body",
+            "BarrelL",
+            "MuzzleL",
+            "InteractionCore",
+            "ServiceMass"
+          ]
+        },
+        "requiredIntactAndDamaged": {
+          "const": ["BarrelR", "MuzzleR"]
+        },
+        "criticalOmissions": {
+          "const": ["BarrelR", "MuzzleR"]
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "territoryBindings": {
+      "type": "object",
+      "required": [
+        "industrial-toy-defense",
+        "salvaged-frontier",
+        "clean-tactical-diorama"
+      ],
+      "properties": {
+        "industrial-toy-defense": {
+          "allOf": [
+            {"$ref": "#/$defs/territoryBinding"},
+            {
+              "properties": {
+                "territoryRef": {
+                  "const": "art/territories/industrial-toy-defense.json"
+                },
+                "bevelRatio": {"const": 0.055},
+                "allowedAnglesDegrees": {"const": [0, 45, 90]},
+                "asymmetryTarget": {"const": 0.08}
+              }
+            }
+          ]
+        },
+        "salvaged-frontier": {
+          "allOf": [
+            {"$ref": "#/$defs/territoryBinding"},
+            {
+              "properties": {
+                "territoryRef": {
+                  "const": "art/territories/salvaged-frontier.json"
+                },
+                "bevelRatio": {"const": 0.048},
+                "allowedAnglesDegrees": {"const": [0, 15, 30, 45, 90]},
+                "asymmetryTarget": {"const": 0.24}
+              }
+            }
+          ]
+        },
+        "clean-tactical-diorama": {
+          "allOf": [
+            {"$ref": "#/$defs/territoryBinding"},
+            {
+              "properties": {
+                "territoryRef": {
+                  "const": "art/territories/clean-tactical-diorama.json"
+                },
+                "bevelRatio": {"const": 0.04},
+                "allowedAnglesDegrees": {"const": [0, 30, 60, 90]},
+                "asymmetryTarget": {"const": 0.02}
+              }
+            }
+          ]
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "robloxContract": {
+      "type": "object",
+      "required": [
+        "visualCollision",
+        "hitbox",
+        "collisionFidelity",
+        "renderFidelity",
+        "castShadow",
+        "expectedSimultaneousCount"
+      ],
+      "properties": {
+        "visualCollision": {"const": false},
+        "hitbox": {"const": "simple_invisible_box"},
+        "collisionFidelity": {"const": "Box"},
+        "renderFidelity": {"const": "Automatic"},
+        "castShadow": {"const": true},
+        "expectedSimultaneousCount": {"const": 30}
+      },
+      "unevaluatedProperties": false
+    },
+    "proofContract": {
+      "type": "object",
+      "required": [
+        "blenderRunsPerTerritory",
+        "fullRenderCountPerTerritory",
+        "portableArtifactCountPerTerritory",
+        "requiredLightingProfiles",
+        "requiredOrientations",
+        "requiredResolutions",
+        "humanApprovalRequired"
+      ],
+      "properties": {
+        "blenderRunsPerTerritory": {"const": 3},
+        "fullRenderCountPerTerritory": {"const": 36},
+        "portableArtifactCountPerTerritory": {"const": 17},
+        "requiredLightingProfiles": {
+          "const": [
+            "Lighting_Gameplay_Default",
+            "Lighting_HighContrast",
+            "Lighting_Adverse_Night",
+            "Lighting_Neutral_QA"
+          ]
+        },
+        "requiredOrientations": {
+          "const": ["front", "back", "three_quarter", "far"]
+        },
+        "requiredResolutions": {
+          "const": [
+            "mobile_landscape_hard",
+            "mobile_narrow_portrait",
+            "reference_review"
+          ]
+        },
+        "humanApprovalRequired": {"const": true}
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

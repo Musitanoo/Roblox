@@ -1,0 +1,143 @@
+GPT IMAGE 2 — ONE OBJECT, ONE GAMEPLAY STATE, ONE IMAGE
+
+Use the `gpt-image-2` image model. If that exact model is not selected or
+visible in the interface, stop and do not substitute another model.
+
+Generate exactly one image: a clean 2x2 state-definition board. Every quadrant
+must depict the exact same object construction in the exact same target state.
+
+CROSS-VIEW IDENTITY LOCK — THIS IS NOT A FOUR-CONCEPT SHEET
+- Freeze one anatomy before rendering. The four quadrants are four camera or
+  diagnostic views of that same rôdeur, never alternatives or variants.
+- Camera and rendering mode may change; anatomy, proportions, limb attachment,
+  head construction, face cavity, bloom path, asymmetry, material assignment,
+  wear pattern and state damage topology may not change.
+- The solid black silhouette must match the outer contour of the hero view.
+- The rear view must be anatomically compatible with the front view and preserve
+  the exact shoulder, arm, leg and bloom relationships.
+- Fail the image rather than improvising a different head, hand, limb, bloom,
+  fracture, eye treatment or decorative solution in another quadrant.
+
+TARGET
+- Object: Violet Frontier Rôdeur (`enemy_standard`)
+- State: `intact` only
+- Art direction: Salvaged Frontier owns world identity; Industrial Toy Defense
+  contributes disciplined one-second readability only.
+- Canon: vc_enemy_standard__salvaged-frontier__v1
+- Gameplay function: standard walking horde enemy
+- One-second promise: A hunched violet zombie with a visible face, reaching unequal arms and a broken-crown shoulder bloom advances toward the fortress and shows weakening through posture before color.
+- Dimensions: 2.5 x 5.5 x
+  2.5 Roblox studs; pivot feet_center.
+
+BOARD LAYOUT
+- Top left: hero three-quarter front, complete object visible.
+- Top right: three-quarter rear, same construction and state.
+- Bottom left: solid black silhouette, no internal shading.
+- Bottom right: elevated Roblox third-person mobile gameplay camera.
+- Keep identical scale and recognizable proportions across the two perspective
+  views; this is a turnaround proof, not a concept-variation sheet.
+- Neutral mid-gray background, neutral studio light, no environment or props.
+- No captions, labels, letters, numbers, logos or generated text in the image.
+- Do not show intact/damaged/critical comparisons or any second gameplay state.
+
+IDENTITY AND CONSTRUCTION
+- World role: The readable standard zombie of the horde: a fair baseline pressure unit that lets players judge route, damage and defensive choices without borrowing the wall-breaking silhouette of a brute.
+- Emotional intent: Immediately recognizable as a zombie, lightly unsettling and tenacious with a touch of awkward physical absurdity, but never realistic, graphic, tragic or gore-dependent.
+- Territory thesis: A memorable violet frontier zombie whose visible face, head-led hunch, unequal open hands and broken-crown biological bloom oppose the fortress's calm construction grammar while remaining instantly readable in a horde.
+- Front/orientation: The bowed zombie head, dark face cavity, forward jaw and reaching arm lead the hunched body; the violet bloom sweeps from one side of the crown toward the opposite shoulder and never reads as a visor.
+- Interaction read: No friendly socket, complete ring, service panel or repair affordance exists; the face and hands are target cues, not interaction controls.
+- Danger read: A forward cranial profile, open reaching hands, bent pursuit posture and a short pre-swipe draw-back communicate attack intent without giant fists or weapon props.
+- Recognition landmarks: bowed zombie head with dark face cavity and graphic jaw, hunched pear-shaped violet torso, one reaching forearm and one lower dragging forearm, oblique broken-crown violet bloom crossing one shoulder, bent separated legs with broad simple feet
+- Negative spaces: clean gap between each open hand and the torso, triangular gap below the reaching forearm, clear separation between bent legs and feet, small neck shadow separating head from upper torso
+
+REQUIRED COMPONENTS
+- HunchedBody: hunched pear-shaped biological torso at central body; Carry the standard zombie identity, center of mass and readable health posture. Relationship: Supports the bowed head, unequal shoulders, hanging arms and bent legs as one continuous anatomy. Reading role: Primary silhouette carrier that separates the rôdeur from player avatars, robots and brutes.
+- ZombieHead: bowed cranial hood around a dark face cavity and broad graphic jaw at forward upper body; Declare zombie identity, facing, hostile awareness and emotional expression. Relationship: Emerges from a short neck shadow ahead of the hunched torso rather than being embedded as a sensor. Reading role: Provides the one-second zombie read and prevents visor, golem or faceless-mech interpretation.
+- ShamblingArms: two thick unequal arm arcs with medium open hands at lateral front body; Communicate pursuit, swipe timing and standard close-range danger without promising brute force. Relationship: One forearm reaches forward while the other hangs lower; both remain anatomically attached at visible shoulders. Reading role: Signals zombie pursuit and pre-swipe telegraph while staying clearly weaker than a wall-attacking brute.
+- StaggerLegs: two bent unequal legs with broad simplified feet at lower body; Provide honest locomotion, a recognizable shamble and state-dependent loss of balance. Relationship: Carry the hunched body with one knee leading and preserve the fixed feet-center gameplay footprint. Reading role: Makes standard walking pressure and worsening stability readable without color.
+- FrontierBloom: one oblique broken-crown hardened biological growth at one side of cranial crown across opposite upper shoulder; Provide a distinctive violet horde identity and a single causal non-gory damage path. Relationship: Follows the body surface as an integrated growth and never floats, straps on, forms armor or creates a second silhouette role. Reading role: Commercial recognition landmark and controlled state-break carrier for the violet horde.
+
+FORM HIERARCHY
+- Primary 72%: hunched pear-shaped biological torso, forward bowed zombie head, two thick unequal arm arcs, two bent leg masses
+- Secondary 23%: asymmetric hardened violet crown-to-shoulder bloom, dark face cavity with graphic jaw plane, open simplified hands, raised shoulder and collapsed shoulder rhythm
+- Tertiary 5% maximum: two unequal raspberry eye wells, one to three broad bloom facets, few large non-gory impact creases
+- Construction translation: A bowed zombie head, hunched pear torso, thick unequal arm arcs and bent legs establish the standard rôdeur first; one integrated violet crown-to-shoulder bloom carries hostile frontier adaptation without armor, repair authorship or brute mass.
+
+MATERIAL SYSTEM
+- body_zone: stylized_violet_undead_skin; primary; deep eggplant shadow to desaturated plum midtone; Broad matte faceted biological planes with soft dry highlights and no realistic pores. Wear: Large directional compressions and dry creases only where impacts or repeated motion justify them.
+- face_zone: graphic_hostile_face_cavity; threat; near-dark cavity with contained raspberry focal marks; Clean graphic recess, two unequal eye wells and one broad jaw plane rather than a visor or detailed mouth. Wear: State changes interrupt one eye well and jaw posture, never add blood or realistic teeth.
+- bloom_zone: hardened_frontier_violet_bloom; secondary; muted mid-violet with one pale dry fracture interior; One to three broad mineral-biological facets integrated into the skin, never metallic, crystalline-noisy or armored. Wear: One causal fracture widens across damaged and critical states.
+- reach_zone: stylized_undead_extremity; primary; slightly darker violet than the torso; Large simple finger blocks and calm palm planes suitable for mobile silhouette reading. Wear: Dry contact abrasion is limited to leading palm and fingertips.
+
+TARGET STATE CONTRACT — `intact`
+- Summary: A complete violet rôdeur advances in a stable hunch with its zombie face visible, one hand reaching, one forearm hanging lower and the oblique frontier bloom unbroken.
+- Required changes:
+- The head leads ahead of the hunched torso while both eyes, jaw plane, arms, legs and bloom remain complete.
+- One open hand reaches toward the route and the other hangs lower, establishing the canonical asymmetry without injury.
+- Shape and silhouette cues:
+- clear bowed zombie head and jaw
+- stable hunched pear torso
+- one reaching arm and one lower arm
+- two bent separated legs
+- unbroken oblique crown-to-shoulder bloom
+- Value cues:
+- dominant deep violet body mass
+- dark face cavity framed by a mid-violet head
+- secondary bloom lighter than body but darker than warning
+- Color cues:
+- deep eggplant and desaturated plum dominate the complete body
+- raspberry remains limited to the two unequal eye wells and inner jaw cue
+- no warning gold or critical red spread
+- Light cues:
+- two contained unequal hostile eye wells remain steady
+- violet body and bloom are non-emissive
+- Motion posture implied in the still:
+- steady uneven shamble with head leading
+- short visible arm draw-back before swipe
+- complete recovery after each step
+- VFX cues, kept sparse and non-obscuring:
+- minimal dry foot contact only
+- no ambient aura, fog or body glow
+- Component operations:
+- ZombieHead / EMIT: Keep both contained raspberry eye wells steady while the face cavity, not the light, carries identity.
+- ShamblingArms / PRESERVE: Preserve one reaching open hand and one lower open hand without giant fists.
+- FrontierBloom / PRESERVE: Keep the single oblique crown-to-shoulder bloom complete and integrated into the body.
+- Territory translation: Damage drops the bloom-side shoulder, drags the same attached arm and opens one dry fracture; critical state widens that exact break, buckles one knee and lowers the same body without gore, detached limbs or new anatomy.
+
+INVARIANTS — NEVER CHANGE
+- Two-and-a-half by five-and-a-half by two-and-a-half bounds and feet-center pivot remain fixed.
+- The bowed zombie head, visible face cavity, hunched pear torso, unequal open-handed arms, bent legs and oblique violet bloom remain recognizable.
+- The unit remains the standard rôdeur and never gains the giant fists, shoulder width, armor mass or wall-breaking promise of a brute.
+- Deep violet biology remains the dominant faction read; raspberry stays local to hostile facial anatomy and red stays local to critical state.
+- No player copper, mint interaction language, bone-sand panel grid, mechanical visor, service chassis or proud repair history appears.
+- Damage derives from the same body and bloom through posture, one causal fracture and loss of balance without changing gameplay anchors.
+- Threat direction and zombie identity remain readable before VFX, sound or color.
+
+NO IMAGE REFERENCE
+- Construct only from this closed canon contract.
+
+STYLE DISCIPLINE
+- The result must read first as a stylized violet zombie rôdeur:
+  bowed visible head, graphic face cavity, hunched biological torso, unequal
+  open hands and bent shambling legs.
+- Salvaged Frontier appears through the hostile frontier bloom, causal damage
+  path and disciplined material economy. It does not appear through player
+  construction, repair bands, armor panels or mechanical service history.
+- Deep eggplant and desaturated plum biology dominate. The integrated hardened
+  bloom is a calmer mid-violet. Raspberry is confined to the hostile face;
+  warning and critical accents remain local state signals.
+- Industrial Toy Defense contributes only large readable masses, clean negative
+  spaces, broad facets and one-second mobile clarity. It must never turn the
+  zombie into a toy robot, armored golem, mascot or buildable kit.
+- The hands remain medium, open and smaller than the head. Giant fists, broad
+  brute shoulders, wall-breaking mass and heroic combat stance are forbidden.
+- The face must remain recognizably undead even in grayscale and with facial
+  emission disabled. No visor, sensor slit, chest core or machine aperture.
+- Damage reads through shoulder drop, arm drag, knee buckle, posture, value and
+  one widening dry bloom fracture. Never use gore, detached anatomy or color
+  alone.
+- The four quadrants depict one frozen anatomy and one frozen damage topology.
+  Do not alter head, bloom path, limb proportions, hand pose family or fracture
+  placement between views.
+- The image is precanonical visual evidence only. It does not authorize hidden
+  geometry, canon lock or production.

@@ -1,0 +1,769 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/visual-canon.schema.json",
+  "schemaVersion": "1.0.0",
+  "canonId": "vc_objective_core__salvaged-frontier__v1",
+  "assetId": "objective_core",
+  "territoryId": "salvaged-frontier",
+  "version": 1,
+  "status": "CANDIDATE",
+  "authority": {
+    "gdd": {
+      "path": "Roblox_Top_1_Game_Design_Document_v1.0.md",
+      "sha256": "fd3ba04f92d3b1578d8c7ebfd5d1d8b3a571bd0a5da910f9b45b3720983dc6a6"
+    },
+    "retention": {
+      "path": "plans/product-innovation-retention-doctrine.md",
+      "sha256": "98c1e9b2be8601c4ecc94b4e5da997fcfd73bf75b9b99c18831b61b71dc24562"
+    },
+    "artDirection": {
+      "path": "art/art-direction.json",
+      "sha256": "ab1e3b2607fc916fa660fb20b90c2b62ee6985a866c3a65090bef4996a7eef22"
+    },
+    "calibration": {
+      "path": "art/calibration/calibration-kit.json",
+      "sha256": "8a33c6c8a9b5a02ef460f5e698907a4d6d623e2f5c475047cd3dbdccc102ace9"
+    },
+    "shapeLanguage": {
+      "path": "art/shape-language/rules.json",
+      "sha256": "76fcd0eaaace7f34d7fb88fdc6470315518efd8e586649393ceb32356a7addc7"
+    },
+    "materials": {
+      "path": "art/materials/material-rules.json",
+      "sha256": "41fadb667eb50a2252e6721649afee1b38b98a667ea7c2051f5f465ad9896b83"
+    },
+    "selectedConstitution": {
+      "path": "art/selected/salvaged-frontier-constitution.json",
+      "sha256": "03b7c0ea39bb273ab5d2f6fd4e81f0c7c9ff7183f7f6262bcfb23d69d2654594"
+    }
+  },
+  "identity": {
+    "canonicalName": "Objective Core",
+    "category": "primary_defendable_objective",
+    "gameplayFunction": "primary defendable objective and visual anchor",
+    "worldRole": "The fortress heart, battle objective and persistent visual anchor that converts abstract survival into protection of a player-authored home.",
+    "affiliation": "player_fortress",
+    "manufactureContext": "A deliberately overbuilt energy-and-memory core assembled as the center of the fortress, meant to accumulate visual history without becoming visually noisy.",
+    "emotionalIntent": "Precious, resilient and worth rallying around; damage should feel alarming but legible, never arbitrary or hopeless.",
+    "technologyLevel": "protected expedition-grade energy architecture",
+    "character": [
+      "steadfast",
+      "luminous",
+      "communal",
+      "ceremonial"
+    ],
+    "territoryVisualThesis": "A precious expedition heart protected by a calm standardized service pedestal, three large guardians and one visibly renewed sector that makes collective maintenance feel heroic."
+  },
+  "instantRead": {
+    "oneSecondPromise": "This tall protected glowing heart is the thing the fortress exists to defend, and its current health can be read from across the battlefield.",
+    "orientationCue": "The brighter interaction aperture and protective opening face the player approach; the denser service mass closes the rear.",
+    "interactionCue": "A complete protected ring and accessible lower service band identify friendly interaction without resembling a weapon.",
+    "dangerCue": "Protective rings open, buttresses fail and the core becomes more exposed as health worsens.",
+    "relationToPlayer": "Friendly shared home anchor whose survival expresses group competence and persistent identity.",
+    "responsibleElements": [
+      "tall luminous protected center",
+      "concentric or buttressed crown",
+      "broad fortress pedestal",
+      "player-facing access opening",
+      "The brighter interaction aperture and protective opening face the player approach; the denser service mass closes the rear.",
+      "A complete protected ring and accessible lower service band identify friendly interaction without resembling a weapon.",
+      "Protective rings open, buttresses fail and the core becomes more exposed as health worsens."
+    ]
+  },
+  "dimensions": {
+    "unit": "stud",
+    "width": 6.0,
+    "height": 7.0,
+    "depth": 6.0,
+    "toleranceStuds": 0.005,
+    "pivot": "bottom_center",
+    "proportionRules": [
+      "The protected luminous core occupies the central third of total height.",
+      "The pedestal and lower protection occupy roughly forty percent of height.",
+      "The upper ring or cage establishes a readable crown without exceeding the six-stud footprint.",
+      "Open space around the core remains visible from game camera."
+    ]
+  },
+  "silhouette": {
+    "targetReadDistanceStuds": 60,
+    "views": {
+      "front": "A tall protected luminous heart framed by buttresses and a readable opening that invites defense and interaction.",
+      "back": "A denser service spine and closed protection mass distinguish the rear while leaving the core identity visible.",
+      "left": "Layered pedestal, protected core and crown reveal a credible vertical load path and air gap around the energy chamber.",
+      "right": "The same three-stage vertical hierarchy remains stable with only approved territorial asymmetry.",
+      "top": "Concentric protection, central energy aperture and clear buttress rhythm form a fortress landmark rather than a generic cylinder.",
+      "bottom": "A broad load-distributing base and service conduits remain simple, grounded and free of decorative clutter.",
+      "threeQuarterFront": "The canonical hero view shows pedestal stability, protective cage depth, luminous core and friendly access opening.",
+      "threeQuarterBack": "The service spine and denser rear protection explain construction without hiding the core state.",
+      "gameCamera": "From elevated mobile view, the core reads as one luminous protected landmark with state expressed by cage closure and posture."
+    },
+    "recognitionLandmarks": [
+      "tall luminous protected center",
+      "concentric or buttressed crown",
+      "broad fortress pedestal",
+      "player-facing access opening"
+    ],
+    "negativeSpaces": [
+      "air gap around the luminous core",
+      "repeated openings between buttresses",
+      "clear access notch on the player-facing side"
+    ],
+    "intentionalAsymmetry": "Twenty-four-percent controlled asymmetry expresses adaptation inside a seventy-five-to-eighty-five-percent standardized chassis; footprint, facing, collision promise, pivots and gameplay anchors remain fixed.",
+    "distanceRule": "The primary function, orientation and state must remain readable at 60 studs in the canonical mobile landscape and portrait views."
+  },
+  "formHierarchy": {
+    "targetRatios": {
+      "primary": 0.72,
+      "secondary": 0.23,
+      "tertiary": 0.05
+    },
+    "primary": [
+      "broad grounded pedestal",
+      "central protected sphere or cylinder",
+      "upper ring or cage crown"
+    ],
+    "secondary": [
+      "radial buttresses",
+      "service spine",
+      "interaction ring and lower access band"
+    ],
+    "tertiary": [
+      "few protected status windows",
+      "large assembly seams following radial logic",
+      "controlled historical repair marks"
+    ],
+    "territoryConstructionTranslation": "A grounded pedestal, broad protected chamber and repeated buttress family provide immediate objective clarity; one reinforced replacement buttress and one copper service spine reveal history without turning the core into a relic pile."
+  },
+  "construction": {
+    "components": [
+      {
+        "id": "Pedestal",
+        "function": "Ground the objective and distribute the visual and physical load.",
+        "position": "lower forty percent",
+        "form": "broad layered base",
+        "materialRole": "primary",
+        "relationship": "Carries buttresses, service spine and protected chamber.",
+        "mobility": "fixed",
+        "visibility": "Visible from every gameplay view.",
+        "readingRole": "Signals permanence and makes the objective feel worth defending."
+      },
+      {
+        "id": "ProtectedCore",
+        "function": "Represent objective vitality and the protected source of fortress energy and memory.",
+        "position": "central chamber",
+        "form": "sphere or compact cylinder",
+        "materialRole": "interaction",
+        "relationship": "Suspended or seated inside a visibly supported protective cage.",
+        "mobility": "destructible",
+        "visibility": "Visible through deliberate openings from all main views.",
+        "readingRole": "Primary state and objective identity carrier."
+      },
+      {
+        "id": "ProtectiveCage",
+        "function": "Explain defense, state progression and increasing exposure.",
+        "position": "around and above core",
+        "form": "rings, buttresses and protected crown",
+        "materialRole": "secondary",
+        "relationship": "Mechanically rooted into pedestal around the core chamber.",
+        "mobility": "destructible",
+        "visibility": "Strong silhouette from front, sides and game camera.",
+        "readingRole": "Shows whether the objective is protected, weakened or exposed."
+      },
+      {
+        "id": "ServiceSpine",
+        "function": "Define rear orientation and carry repair or energy service logic.",
+        "position": "rear vertical axis",
+        "form": "closed structural mass",
+        "materialRole": "bareMetal",
+        "relationship": "Connects pedestal systems to crown without crossing the player access opening.",
+        "mobility": "fixed",
+        "visibility": "Dominant at rear and three-quarter rear.",
+        "readingRole": "Prevents radial symmetry from erasing front-back orientation."
+      }
+    ],
+    "plausibilityRules": [
+      "Every visible part belongs to a named component and has a functional relationship to at least one neighboring component.",
+      "No part floats, interpenetrates without an approved joint, or relies on unexplained support.",
+      "Moving, replaceable and destructible components preserve declared axes, anchors and clearance.",
+      "The compiler may simplify tertiary finish but may not remove a primary or secondary semantic component."
+    ],
+    "stableNamingRule": "Component IDs and gameplay anchors never change without an approved canon revision."
+  },
+  "artDirection": {
+    "territoryThesis": "A hopeful fortress culture of intelligent survival: calm standardized chassis make every tool dependable, while one or two visible adaptations turn scarcity, repair and shared history into proud authorship without post-apocalyptic noise.",
+    "shapeGrammar": [
+      "thick standardized rectangles and trapezoids",
+      "large protected apertures and explicit load-bearing joints",
+      "one localized offset brace or replacement module",
+      "mismatched but compatible secondary masses",
+      "visible replacement, reinforcement, sealing or rerouting logic"
+    ],
+    "exaggeration": "Function, load paths, service access and the single authored adaptation are enlarged enough to read on mobile; distress, dirt and tiny mechanics never carry identity.",
+    "edgeLanguage": "Large consistent structural bevels create calm readable highlights; only the boundary of an approved repair may use a sharper cut or visibly renewed edge, and nothing becomes razor-thin.",
+    "detailDensity": "Low secondary construction density and extremely low tertiary density; seventy-two percent primary mass, twenty-three percent functional secondary structure and five percent causal finish.",
+    "asymmetry": "Twenty-four-percent controlled asymmetry expresses adaptation inside a seventy-five-to-eighty-five-percent standardized chassis; footprint, facing, collision promise, pivots and gameplay anchors remain fixed.",
+    "materialLanguage": "Deep coated structure, reclaimed composite panels, exposed durable metal, matte contacts and rare contextual wood surround carefully protected interaction technology.",
+    "paletteLogic": "Deep slate and bone-sand create a quiet frontier base; sun-baked copper identifies player intervention, while mint interaction, raspberry threat, gold warning and red critical remain bounded semantic roles.",
+    "surfaceTreatment": "Broad calm planes, one or two patch boundaries and directional abrasion tell a construction history without uniform grime, material roulette or photoreal texture chatter.",
+    "wearLogic": "Every scar must name a cause: prior impact, heat, hand contact, ground abrasion or an approved repair operation; damage widens one causal chain and repair reverses it.",
+    "signatureDetails": [
+      "one offset but protected crown sector",
+      "one copper-bounded replacement buttress",
+      "one visible repaired service spine leading to the mint chamber"
+    ],
+    "forbidden": [
+      "random junk pile silhouette",
+      "uniform rust",
+      "decorative repair with no causal reason",
+      "more than three visible material families",
+      "loose cable spaghetti",
+      "asymmetry that changes gameplay anchors",
+      "literal construction-toy motifs or pristine molded-plastic identity"
+    ]
+  },
+  "materials": [
+    {
+      "zoneId": "anchor_zone",
+      "family": "fortress_structure",
+      "semanticRole": "primary",
+      "valueRange": "dark to middle-dark",
+      "surfaceFinish": "Calm large planes and readable bevels that survive repetition.",
+      "wear": "Ground, service and buttress contacts only.",
+      "boundaryRule": "Structural material never invades the luminous chamber.",
+      "lightingBehavior": "Maintains a stable dark frame around the core.",
+      "territoryTranslation": "Deep coated structure, reclaimed composite panels, exposed durable metal, matte contacts and rare contextual wood surround carefully protected interaction technology. Broad calm planes, one or two patch boundaries and directional abrasion tell a construction history without uniform grime, material roulette or photoreal texture chatter. Palette rule: Deep slate and bone-sand create a quiet frontier base; sun-baked copper identifies player intervention, while mint interaction, raspberry threat, gold warning and red critical remain bounded semantic roles."
+    },
+    {
+      "zoneId": "vitality_zone",
+      "family": "contained_energy",
+      "semanticRole": "interaction",
+      "valueRange": "bright but bounded",
+      "surfaceFinish": "Layered protected glow with opaque framing, never a texture-only orb.",
+      "wear": "No dirt; damage is shown by exposure, instability and interrupted light.",
+      "boundaryRule": "Emission cannot bloom beyond the protective aperture.",
+      "lightingBehavior": "Readable in daylight and night without clipping to white.",
+      "territoryTranslation": "Deep coated structure, reclaimed composite panels, exposed durable metal, matte contacts and rare contextual wood surround carefully protected interaction technology. Broad calm planes, one or two patch boundaries and directional abrasion tell a construction history without uniform grime, material roulette or photoreal texture chatter. Palette rule: Deep slate and bone-sand create a quiet frontier base; sun-baked copper identifies player intervention, while mint interaction, raspberry threat, gold warning and red critical remain bounded semantic roles."
+    },
+    {
+      "zoneId": "protection_zone",
+      "family": "impact_armor",
+      "semanticRole": "secondary",
+      "valueRange": "middle value",
+      "surfaceFinish": "Thick protective bands with disciplined seams.",
+      "wear": "Localized at enemy-facing impacts and repaired cage joints.",
+      "boundaryRule": "Protection remains visually distinct from pedestal and energy core.",
+      "lightingBehavior": "Produces a clean silhouette edge around the bright center.",
+      "territoryTranslation": "Deep coated structure, reclaimed composite panels, exposed durable metal, matte contacts and rare contextual wood surround carefully protected interaction technology. Broad calm planes, one or two patch boundaries and directional abrasion tell a construction history without uniform grime, material roulette or photoreal texture chatter. Palette rule: Deep slate and bone-sand create a quiet frontier base; sun-baked copper identifies player intervention, while mint interaction, raspberry threat, gold warning and red critical remain bounded semantic roles."
+    }
+  ],
+  "semanticZones": [
+    {
+      "id": "anchor_zone",
+      "purpose": "Make the objective a stable fortress landmark.",
+      "shapeRule": "Broad pedestal and vertical central hierarchy.",
+      "valueRule": "Dark stable base around a brighter center.",
+      "colorRole": "primary",
+      "motionRule": "still foundation",
+      "vfxAnchor": "pedestal_ring",
+      "audioRole": "fortress_heartbeat"
+    },
+    {
+      "id": "vitality_zone",
+      "purpose": "Communicate objective life and health without UI dependence.",
+      "shapeRule": "Protected central core with changing exposure.",
+      "valueRule": "Brightest controlled region.",
+      "colorRole": "interaction",
+      "motionRule": "slow heartbeat pulse",
+      "vfxAnchor": "core_center",
+      "audioRole": "vitality_pulse"
+    },
+    {
+      "id": "protection_zone",
+      "purpose": "Show how well the objective remains defended.",
+      "shapeRule": "Rings and buttresses close when intact and open or break with damage.",
+      "valueRule": "Mid-value protective shell.",
+      "colorRole": "secondary",
+      "motionRule": "state transition only",
+      "vfxAnchor": "cage_joints",
+      "audioRole": "armor_stress"
+    },
+    {
+      "id": "access_zone",
+      "purpose": "Show the player-facing repair and interaction approach.",
+      "shapeRule": "One deliberate opening and complete interaction ring.",
+      "valueRule": "High contrast against pedestal.",
+      "colorRole": "accent",
+      "motionRule": "subtle guidance pulse",
+      "vfxAnchor": "front_access",
+      "audioRole": "friendly_access"
+    }
+  ],
+  "states": [
+    {
+      "id": "intact",
+      "summary": "A closed protective crown, stable pedestal and calm luminous heartbeat communicate a secure but valuable fortress heart.",
+      "invariants": [
+        "Six-by-seven-by-six dimensions, footprint and bottom-center pivot remain fixed.",
+        "The luminous protected center, pedestal and crown hierarchy remain recognizable.",
+        "The player-facing access opening and rear service spine never swap.",
+        "State progression increases core exposure without changing the core anchor.",
+        "The objective remains visually friendly and never acquires weapon silhouettes."
+      ],
+      "changes": [
+        "All buttresses and rings form a complete protective envelope.",
+        "The core pulse is slow, regular and spatially contained."
+      ],
+      "cues": {
+        "shape": [
+          "complete crown",
+          "balanced buttress rhythm",
+          "core centered inside protection"
+        ],
+        "silhouette": [
+          "complete crown",
+          "balanced buttress rhythm",
+          "core centered inside protection"
+        ],
+        "value": [
+          "bright center surrounded by stable dark shell",
+          "clean access contrast"
+        ],
+        "color": [
+          "friendly vitality role",
+          "no warning or critical dominance"
+        ],
+        "light": [
+          "regular heartbeat pulse",
+          "continuous but bounded core illumination"
+        ],
+        "motion": [
+          "subtle internal pulse",
+          "no cage instability"
+        ],
+        "vfx": [
+          "gentle contained energy motes",
+          "no smoke or electrical discharge"
+        ],
+        "audio": [
+          "steady low heartbeat",
+          "quiet communal resonance"
+        ]
+      },
+      "componentOperations": [
+        {
+          "componentId": "ProtectiveCage",
+          "operation": "PRESERVE",
+          "description": "Keep the protective envelope complete and aligned."
+        },
+        {
+          "componentId": "ProtectedCore",
+          "operation": "EMIT",
+          "description": "Emit a calm regular vitality pulse."
+        }
+      ],
+      "transitions": [
+        {
+          "to": "damaged",
+          "durationSeconds": 0.5,
+          "sequence": [
+            "impact reaches cage",
+            "one buttress opens",
+            "pulse stutters once",
+            "warning rhythm begins"
+          ],
+          "reversible": true
+        }
+      ],
+      "territoryTranslation": "The declared renewed sector opens first and reveals its joint; critical damage expands that same opening toward the core so vulnerability, repair target and next action remain obvious."
+    },
+    {
+      "id": "damaged",
+      "summary": "One protection sector fails and the heartbeat becomes uneven, revealing a defendable weakness without making the objective visually lost.",
+      "invariants": [
+        "Six-by-seven-by-six dimensions, footprint and bottom-center pivot remain fixed.",
+        "The luminous protected center, pedestal and crown hierarchy remain recognizable.",
+        "The player-facing access opening and rear service spine never swap.",
+        "State progression increases core exposure without changing the core anchor.",
+        "The objective remains visually friendly and never acquires weapon silhouettes."
+      ],
+      "changes": [
+        "One buttress or ring sector opens along a plausible joint.",
+        "The core pulse briefly stutters and a warning region appears."
+      ],
+      "cues": {
+        "shape": [
+          "one open crown sector",
+          "single missing buttress rhythm",
+          "core remains centered"
+        ],
+        "silhouette": [
+          "one open crown sector",
+          "single missing buttress rhythm",
+          "core remains centered"
+        ],
+        "value": [
+          "brighter exposed sector",
+          "warning contrast on failed joint"
+        ],
+        "color": [
+          "warning accent local to breach",
+          "friendly core color remains majority"
+        ],
+        "light": [
+          "occasional skipped heartbeat",
+          "warning pulse at exposed joint"
+        ],
+        "motion": [
+          "one protection sector settles open",
+          "subtle core instability"
+        ],
+        "vfx": [
+          "brief directional energy leak",
+          "rare repairable arc at failed joint"
+        ],
+        "audio": [
+          "uneven heartbeat",
+          "single protection-stress chime"
+        ]
+      },
+      "componentOperations": [
+        {
+          "componentId": "ProtectiveCage",
+          "operation": "OPEN",
+          "description": "Open one approved sector without changing the core anchor."
+        },
+        {
+          "componentId": "ProtectedCore",
+          "operation": "EMIT",
+          "description": "Replace the regular pulse with an uneven warning rhythm."
+        }
+      ],
+      "transitions": [
+        {
+          "to": "critical",
+          "durationSeconds": 0.6,
+          "sequence": [
+            "second protection failure",
+            "crown tilts or opens wider",
+            "core exposure increases",
+            "critical heartbeat begins"
+          ],
+          "reversible": true
+        },
+        {
+          "to": "intact",
+          "durationSeconds": 1.5,
+          "sequence": [
+            "energy leak closes",
+            "buttress returns",
+            "crown reseals",
+            "regular heartbeat resumes"
+          ],
+          "reversible": true
+        }
+      ],
+      "territoryTranslation": "The declared renewed sector opens first and reveals its joint; critical damage expands that same opening toward the core so vulnerability, repair target and next action remain obvious."
+    },
+    {
+      "id": "critical",
+      "summary": "Multiple protection failures expose the unstable core and create a powerful rally point while preserving the objective's pedestal and identity.",
+      "invariants": [
+        "Six-by-seven-by-six dimensions, footprint and bottom-center pivot remain fixed.",
+        "The luminous protected center, pedestal and crown hierarchy remain recognizable.",
+        "The player-facing access opening and rear service spine never swap.",
+        "State progression increases core exposure without changing the core anchor.",
+        "The objective remains visually friendly and never acquires weapon silhouettes."
+      ],
+      "changes": [
+        "At least two protective sectors fail and the crown becomes visibly incomplete.",
+        "The core is more exposed, brighter in pulses and less stable in motion."
+      ],
+      "cues": {
+        "shape": [
+          "large crown opening",
+          "two missing or tilted protection sectors",
+          "pedestal remains stable and recognizable"
+        ],
+        "silhouette": [
+          "large crown opening",
+          "two missing or tilted protection sectors",
+          "pedestal remains stable and recognizable"
+        ],
+        "value": [
+          "strong bright core against broken dark cage",
+          "critical focal point localized at exposure"
+        ],
+        "color": [
+          "critical accent at exposed energy seams",
+          "friendly base palette remains on pedestal"
+        ],
+        "light": [
+          "irregular urgent heartbeat",
+          "brief light dropout between pulses"
+        ],
+        "motion": [
+          "subtle unstable core drift inside fixed anchor",
+          "broken protection sector trembles but does not orbit freely"
+        ],
+        "vfx": [
+          "narrow upward energy vent",
+          "rare arcs contained inside the crown volume"
+        ],
+        "audio": [
+          "urgent broken heartbeat",
+          "low fortress-wide distress resonance"
+        ]
+      },
+      "componentOperations": [
+        {
+          "componentId": "ProtectiveCage",
+          "operation": "BREAK",
+          "description": "Break two connected protection sectors and preserve the pedestal."
+        },
+        {
+          "componentId": "ProtectedCore",
+          "operation": "EXPOSE",
+          "description": "Increase visible core area without moving its gameplay anchor."
+        }
+      ],
+      "transitions": [
+        {
+          "to": "intact",
+          "durationSeconds": 2.2,
+          "sequence": [
+            "critical vent closes",
+            "core stabilizes",
+            "protection rebuilds from pedestal upward",
+            "crown seals",
+            "communal heartbeat resumes"
+          ],
+          "reversible": true
+        }
+      ],
+      "territoryTranslation": "The declared renewed sector opens first and reveals its joint; critical damage expands that same opening toward the core so vulnerability, repair target and next action remain obvious."
+    }
+  ],
+  "invariants": [
+    "Six-by-seven-by-six dimensions, footprint and bottom-center pivot remain fixed.",
+    "The luminous protected center, pedestal and crown hierarchy remain recognizable.",
+    "The player-facing access opening and rear service spine never swap.",
+    "State progression increases core exposure without changing the core anchor.",
+    "The objective remains visually friendly and never acquires weapon silhouettes."
+  ],
+  "allowedVariations": [
+    {
+      "id": "historical_repairs",
+      "range": "zero to three large approved repair marks",
+      "justification": "Supports persistent fortress history without introducing noisy damage."
+    },
+    {
+      "id": "buttress_profile",
+      "range": "territory-approved radial profile only",
+      "justification": "Allows DA expression while preserving the protected-center logic."
+    },
+    {
+      "id": "core_pulse_phase",
+      "range": "bounded asynchronous phase across repeated cores",
+      "justification": "Avoids robotic synchronization without changing state meaning."
+    }
+  ],
+  "forbidden": [
+    "flat unmarked box objective",
+    "weapon barrel or hostile aiming cue",
+    "unprotected glowing sphere with no construction logic",
+    "color-only health communication",
+    "full radial symmetry that erases front and rear",
+    "uniform cracks or grime over the entire monument",
+    "text, logos or unexplained sacred symbols",
+    "random junk pile silhouette",
+    "uniform rust",
+    "decorative repair with no causal reason",
+    "more than three visible material families",
+    "loose cable spaghetti",
+    "asymmetry that changes gameplay anchors",
+    "literal construction-toy motifs or pristine molded-plastic identity",
+    "thin_loose_wires",
+    "microtext",
+    "free_floating_fragments",
+    "detail_without_silhouette_function_identity"
+  ],
+  "visualPacket": {
+    "status": "SPECIFIED",
+    "coverageRule": "If a component or state is absent from every bound board, the canon is incomplete and cannot be LOCKED.",
+    "boards": [
+      {
+        "id": "orthographic",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "perspective",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "black_silhouette",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "component_breakdown",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "proportions",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "materials",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "semantic_zones",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "all_states",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "state_comparison",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "mobile_near",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "mobile_mid",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "mobile_far",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "lighting_matrix",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "repetition_1",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "repetition_30",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "repetition_100",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "required_and_forbidden_annotations",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      }
+    ]
+  },
+  "generationContract": {
+    "mode": "RECONSTRUCT_CANON_DO_NOT_AUTHOR_OBJECT",
+    "obligations": [
+      "Reconstruct every primary and secondary component defined by this canon.",
+      "Produce every required state from the same component structure and stable anchors.",
+      "Preserve the one-second function, front, interaction, danger and state readings.",
+      "Record this canon ID and exact SHA-256 in the compliance envelope."
+    ],
+    "constraints": [
+      "Dimensions are 6.0 x 7.0 x 6.0 studs with tolerance 0.005.",
+      "Triangle budget maximum is 4500.",
+      "Texture class is medium.",
+      "Pivot is bottom_center and component anchors remain stable.",
+      "One UV set and one material slot maximum per production mesh component."
+    ],
+    "tolerances": [
+      "Dimension error may not exceed 0.005 stud.",
+      "Only the explicitly listed allowedVariations may vary.",
+      "Tertiary details may be simplified when they fall below the minimum mobile screen-space band."
+    ],
+    "forbidden": [
+      "flat unmarked box objective",
+      "weapon barrel or hostile aiming cue",
+      "unprotected glowing sphere with no construction logic",
+      "color-only health communication",
+      "full radial symmetry that erases front and rear",
+      "uniform cracks or grime over the entire monument",
+      "text, logos or unexplained sacred symbols",
+      "random junk pile silhouette",
+      "uniform rust",
+      "decorative repair with no causal reason",
+      "more than three visible material families",
+      "loose cable spaghetti",
+      "asymmetry that changes gameplay anchors",
+      "literal construction-toy motifs or pristine molded-plastic identity",
+      "thin_loose_wires",
+      "microtext",
+      "free_floating_fragments",
+      "detail_without_silhouette_function_identity"
+    ],
+    "complianceReportRequired": true,
+    "minimumStatusForExploration": "CANDIDATE",
+    "minimumStatusForProduction": "LOCKED",
+    "silentCanonMutationForbidden": true
+  },
+  "approval": {
+    "required": true,
+    "status": "PENDING",
+    "approvedBy": null,
+    "approvedAt": null,
+    "decisionRecord": null,
+    "approvedEvidencePackageSha256": null,
+    "revisionReason": null
+  },
+  "provenance": {
+    "sourceKind": "AUTHORED_CANON_COMPILED_FROM_GDD_RETENTION_AND_ART_GRAMMAR",
+    "authoredAt": "2026-07-16T15:36:48Z",
+    "authoredBy": "Codex under founder authority; human lock still required",
+    "generator": "tools.art.build_visual_canons",
+    "inputHashes": {
+      "source": "9c3800fbd37f04e31353a53231ad6c53d0a2a4919c22b9b68232c898f7054cce",
+      "gdd": "fd3ba04f92d3b1578d8c7ebfd5d1d8b3a571bd0a5da910f9b45b3720983dc6a6",
+      "retention": "98c1e9b2be8601c4ecc94b4e5da997fcfd73bf75b9b99c18831b61b71dc24562",
+      "artDirection": "ab1e3b2607fc916fa660fb20b90c2b62ee6985a866c3a65090bef4996a7eef22",
+      "calibration": "8a33c6c8a9b5a02ef460f5e698907a4d6d623e2f5c475047cd3dbdccc102ace9",
+      "shapeLanguage": "76fcd0eaaace7f34d7fb88fdc6470315518efd8e586649393ceb32356a7addc7",
+      "materials": "41fadb667eb50a2252e6721649afee1b38b98a667ea7c2051f5f465ad9896b83",
+      "selectedConstitution": "03b7c0ea39bb273ab5d2f6fd4e81f0c7c9ff7183f7f6262bcfb23d69d2654594",
+      "territory": "3b59d12273d24e5aea3b7a06611aafffad495f482a1696dc4a1c1fc41749f3d6",
+      "generator": "2a83313dfad161ba97b6e9d1f7c2ec9c5b6c07d0a407d5a6654ac605b09a91d8"
+    }
+  }
+}

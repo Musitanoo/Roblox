@@ -14,14 +14,22 @@ type BuildPieceData = {
 	rotation: number,
 }
 type BuildPlan = { schemaVersion: number, revision: number, pieces: { [string]: BuildPieceData } }
+type RouteDefenseState = {
+	wallCount: number,
+	wallHealth: number,
+	slowTrapCount: number,
+}
 type StateService = {}
 type StatsService = {}
 type BuildService = {
 	setPlanChangedCallback: (self: BuildService, callback: (BuildPlan) -> ()) -> (),
 	getPlan: (self: BuildService) -> BuildPlan,
+	isOwner: (self: BuildService, player: Player) -> boolean,
 }
 type RouteService = {
 	setPlanQuery: (self: RouteService, callback: () -> BuildPlan) -> (),
+	setLivePlanQuery: (self: RouteService, callback: () -> BuildPlan) -> (),
+	setDefenseQuery: (self: RouteService, callback: (RouteId) -> RouteDefenseState) -> (),
 }
 type EnemyService = {
 	setDefenseService: (self: EnemyService, defenseService: DefenseService) -> (),
@@ -29,6 +37,8 @@ type EnemyService = {
 type DefenseService = {
 	setEnemyService: (self: DefenseService, enemyService: EnemyService) -> (),
 	syncPlan: (self: DefenseService, plan: BuildPlan) -> (),
+	getLivePlan: (self: DefenseService) -> BuildPlan,
+	getRouteDefenseState: (self: DefenseService, routeId: RouteId) -> RouteDefenseState,
 }
 type ChallengeConfigType = { coreMaxHealth: number }
 type GameStateServiceModule = {
@@ -37,7 +47,6 @@ type GameStateServiceModule = {
 type CombatStatsServiceModule = { new: (Folder) -> StatsService }
 type BuildServiceModule = {
 	new: (
-		Folder,
 		RemoteEvent,
 		RemoteEvent,
 		StateService,
@@ -53,7 +62,7 @@ type EnemyServiceModule = {
 	new: (Folder, Folder, StateService, RouteService, StatsService) -> EnemyService,
 }
 type DefenseServiceModule = {
-	new: (Folder, Folder, StateService, StatsService) -> DefenseService,
+	new: (Folder, StateService, StatsService) -> DefenseService,
 }
 type BuildPlanStoreModule = { new: () -> {} }
 type BuildHistoryModule = { new: () -> {} }
@@ -145,8 +154,6 @@ assert(templates and templates:IsA("Folder"), "ServerStorage.GameTemplates is re
 
 local replicationRoot = findOrCreateFolder(ReplicatedStorage, "Game")
 replicationRoot:SetAttribute("Ready", false)
-replicationRoot:SetAttribute("FirstDestroyed", nil)
-replicationRoot:SetAttribute("ReachedCore", nil)
 local remotes = findOrCreateFolder(replicationRoot, "Remotes")
 local buildRequest = findOrCreateRemote(remotes, "BuildRequest")
 local buildResult = findOrCreateRemote(remotes, "BuildResult")
@@ -167,7 +174,6 @@ local buildHistory = BuildHistory.new()
 local buildRenderer = BuildRenderer.new(prototype, templates)
 local buildValidator = BuildValidator.new(prototype, buildRenderer)
 local buildService = BuildService.new(
-	remotes,
 	buildRequest,
 	buildResult,
 	stateService,
@@ -179,13 +185,19 @@ local buildService = BuildService.new(
 )
 local enemyService =
 	EnemyService.new(prototype, templates, stateService, routeService, statsService)
-local defenseService = DefenseService.new(prototype, templates, stateService, statsService)
+local defenseService = DefenseService.new(prototype, stateService, statsService)
 
 buildService:setPlanChangedCallback(function(plan: BuildPlan)
 	defenseService:syncPlan(plan)
 end)
 routeService:setPlanQuery(function(): BuildPlan
 	return buildService:getPlan()
+end)
+routeService:setLivePlanQuery(function(): BuildPlan
+	return defenseService:getLivePlan()
+end)
+routeService:setDefenseQuery(function(routeId: RouteId): RouteDefenseState
+	return defenseService:getRouteDefenseState(routeId)
 end)
 enemyService:setDefenseService(defenseService)
 defenseService:setEnemyService(enemyService)

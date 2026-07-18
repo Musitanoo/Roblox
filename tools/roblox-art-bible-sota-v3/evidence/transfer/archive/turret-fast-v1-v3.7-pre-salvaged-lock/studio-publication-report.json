@@ -1,0 +1,116 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/transfer-publication-report.schema.json",
+  "schemaVersion": "1.0.0",
+  "status": "PASS",
+  "generatedAt": "2026-07-16T09:12:45.523990Z",
+  "environment": "staging",
+  "assetId": "turret_fast_v1",
+  "assetCount": 9,
+  "mutationPerformed": false,
+  "manifestSha256": "12accab8f494cf038e1272596aab039b591fdfcc74fe1431d4314d3991691e1a",
+  "evidencePackageSha256": "86cfb1650997310572d31e5c85d08534d0a73eabf9f7cb3cb54dae918bd5a0c1",
+  "inputHashes": {
+    "transferReport": "775979804d2236b5f6274d75f45c8a0e4c7b8e88dca982848046598ecb7a4e3c",
+    "publisher": "6e74ad4d793875f246388a29b9fee4c8753c2673be68306b2a03b0ac413d1819",
+    "httpClient": "8abf87bb7ed3ce5c9c2f4851f2c02194db27cd3fd49fe9c9e33347a94589eaec",
+    "importQueueBuilder": "86ffebd7a6c1ded257baa6dd414b9866655216cee3d29dab63926a6421113702"
+  },
+  "privacy": {
+    "rawAssetIdsIncluded": false,
+    "rawCreatorIdIncluded": false,
+    "rawApiKeyIncluded": false,
+    "operationPathsIncluded": false
+  },
+  "guardChecks": {
+    "credentialsPresent": true,
+    "creatorNumeric": true,
+    "creatorAllowlisted": true,
+    "manifestCurrent": true,
+    "artifactHashesVerified": true,
+    "remoteIdentityVerified": true
+  },
+  "entries": [
+    {
+      "territoryId": "clean-tactical-diorama",
+      "stateId": "critical",
+      "uploadName": "clean-tactical-diorama__turret_fast_v1__critical",
+      "sourceSha256": "69e4a6b110f35b6e18353f01f4f447d6be17b34bb6c1440dda4f30415e5fcfb7",
+      "bytes": 64052,
+      "action": "REUSE",
+      "remoteIdentityVerified": true
+    },
+    {
+      "territoryId": "clean-tactical-diorama",
+      "stateId": "damaged",
+      "uploadName": "clean-tactical-diorama__turret_fast_v1__damaged",
+      "sourceSha256": "7f3f501a4c14afc42fbbef91ef15d374d6ffc95bbd06c0d28a1f3e3203f19e3d",
+      "bytes": 72568,
+      "action": "REUSE",
+      "remoteIdentityVerified": true
+    },
+    {
+      "territoryId": "clean-tactical-diorama",
+      "stateId": "intact",
+      "uploadName": "clean-tactical-diorama__turret_fast_v1__intact",
+      "sourceSha256": "88a76d59214eb90dfa8e077eadba59a2f535e9471c75deb2a6afcf42f455291f",
+      "bytes": 69736,
+      "action": "REUSE",
+      "remoteIdentityVerified": true
+    },
+    {
+      "territoryId": "industrial-toy-defense",
+      "stateId": "critical",
+      "uploadName": "industrial-toy-defense__turret_fast_v1__critical",
+      "sourceSha256": "0120d10c32390c5c5618c0398ee2da3bf83a0e070bda03fb0d553825cf949d88",
+      "bytes": 78956,
+      "action": "REUSE",
+      "remoteIdentityVerified": true
+    },
+    {
+      "territoryId": "industrial-toy-defense",
+      "stateId": "damaged",
+      "uploadName": "industrial-toy-defense__turret_fast_v1__damaged",
+      "sourceSha256": "80ba6a8d1fce1b70fcb8ce135f8f34840e8625aa936631e1043af6f1794d58d3",
+      "bytes": 92796,
+      "action": "REUSE",
+      "remoteIdentityVerified": true
+    },
+    {
+      "territoryId": "industrial-toy-defense",
+      "stateId": "intact",
+      "uploadName": "industrial-toy-defense__turret_fast_v1__intact",
+      "sourceSha256": "a89d7b7277c72ae9c3cb0fb0bc76c85867f3c2da6ae316b4b5ff5abf4430c8c6",
+      "bytes": 89436,
+      "action": "REUSE",
+      "remoteIdentityVerified": true
+    },
+    {
+      "territoryId": "salvaged-frontier",
+      "stateId": "critical",
+      "uploadName": "salvaged-frontier__turret_fast_v1__critical",
+      "sourceSha256": "33a924f037d44bda121a8ef69d066cb500b9ddb7f38d590b4128e6cfd2a96032",
+      "bytes": 80664,
+      "action": "REUSE",
+      "remoteIdentityVerified": true
+    },
+    {
+      "territoryId": "salvaged-frontier",
+      "stateId": "damaged",
+      "uploadName": "salvaged-frontier__turret_fast_v1__damaged",
+      "sourceSha256": "1d8e63f81ae6e4d0f29dd037ee671c3f52cacf8e166a42d162e381c883643184",
+      "bytes": 94500,
+      "action": "REUSE",
+      "remoteIdentityVerified": true
+    },
+    {
+      "territoryId": "salvaged-frontier",
+      "stateId": "intact",
+      "uploadName": "salvaged-frontier__turret_fast_v1__intact",
+      "sourceSha256": "f930ea0f5d74623ba7839c92f709539f500284488f0e96619bd88523498915f0",
+      "bytes": 89420,
+      "action": "REUSE",
+      "remoteIdentityVerified": true
+    }
+  ],
+  "issues": []
+}

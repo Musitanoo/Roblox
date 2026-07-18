@@ -98,6 +98,9 @@ state, and report `PARTIAL` rather than expanding scope.
   destruction runtime ne modifie plus le plan canonique.
 - 2026-07-15: tous les tests critiques spécifiés sont PASS. T25, T27 et T31 sont
   PARTIAL; T32 est UNKNOWN. Verdict global conservé à PARTIAL.
+- 2026-07-15: T25, T27, T31 et T32 fermés en playtest. Restauration complète,
+  requête hostile observateur, contrôleur virtuel officiel et dix cycles avec
+  ennemi runtime sont PASS. T01–T32 sont PASS; verdict technique global PASS.
 
 ## Decisions
 
@@ -108,3 +111,6 @@ state, and report `PARTIAL` rather than expanding scope.
   observable et accessible sur petit écran.
 - Le gate humain reste UNKNOWN; le résultat technique ne vaut que comme
   PASS PROVISOIRE / GO CONDITIONNEL.
+- `StartPrompt.GamepadKeyCode` passe de ButtonX à ButtonSelect afin de supprimer
+  le conflit entre lancement du challenge et rotation manette pendant la
+  préparation.

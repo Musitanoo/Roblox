@@ -1,0 +1,32 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/precanonical-review.schema.json",
+  "schemaVersion": "1.0.0",
+  "reviewId": "salvaged-frontier-states-v3-barricade-critical-a001-result-001-review-001",
+  "result": {
+    "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-barricade-critical-a001-result-001\\result.json",
+    "sha256": "e18b27f8abfe682b18e957bea2de79cb9cc11d654ffeaa1fd0c69247911b69d5"
+  },
+  "resultDigest": "32a357f9c091f88b9faf5ee876e045a0dc49c7ab29beaef02b9271752a817535",
+  "decision": "PRECANONICAL_CANDIDATE",
+  "reviewer": null,
+  "reviewedAt": null,
+  "assessment": {
+    "functionalConformity": "PASS",
+    "artDirectionConformity": "PASS",
+    "visualHierarchy": "PASS",
+    "internalCoherence": "PASS",
+    "stateCoherence": "PASS"
+  },
+  "preserve": [
+    "Dimensions, footprint, pivot and front orientation remain fixed across territories and states.",
+    "The structural frame, two-foot grounding logic and three-bay rhythm remain recognizable.",
+    "The player interaction point remains on the safe rear side at the same gameplay anchor.",
+    "Damage never moves the collision footprint or invents detached gameplay-blocking fragments.",
+    "Component IDs and effect anchors remain stable across regeneration."
+  ],
+  "correct": [],
+  "forbidNext": [],
+  "canonicalizationAuthorized": false,
+  "canonical": false,
+  "productionApproved": false
+}

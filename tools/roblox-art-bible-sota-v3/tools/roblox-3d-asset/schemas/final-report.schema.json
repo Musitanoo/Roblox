@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top-1.local/schemas/roblox-3d-final-report-1.0.0.json",
+  "title": "Roblox 3D Asset Final Report",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schemaVersion",
+    "assetKey",
+    "specificationStatus",
+    "implementationStatus",
+    "productionApproved",
+    "gates",
+    "evidence",
+    "unresolved"
+  ],
+  "properties": {
+    "schemaVersion": {"const": "1.0.0"},
+    "productionApproved": {"type": "boolean"},
+    "specificationStatus": {"enum": ["PASS", "FAIL", "PARTIAL", "BLOCKED", "UNKNOWN"]},
+    "implementationStatus": {"enum": ["PASS", "FAIL", "PARTIAL", "BLOCKED", "UNKNOWN"]}
+  }
+}

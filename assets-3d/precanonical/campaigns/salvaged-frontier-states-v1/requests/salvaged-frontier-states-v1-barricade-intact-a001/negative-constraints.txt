@@ -1,0 +1,29 @@
+- No text, captions, labels, letters, numbers, logos or invented alphabet.
+- No second gameplay state and no state comparison in the same image.
+- No interpretation other than the single target state intact.
+- No independent redesign between quadrants or between gameplay states.
+- No floating, intersecting or mechanically unsupported components.
+- No random scrap cloud, cable spaghetti, micro-greebles or uniform distress.
+- No photorealism, military realism, bleak monochrome or literal construction-toy identity.
+- No color-only gameplay state; shape, silhouette, posture and value must agree.
+- No thin wires, paper-thin essential parts or tiny silhouette-critical details.
+- No invented rear, underside, mechanism, component, weapon or decoration.
+- No cinematic depth of field, environmental scene or unrelated prop.
+- a fourth blocking bay or missing bay
+- thin spikes, wires or floating armor plates
+- front-facing interaction cues that confuse the safe side
+- random cracks unrelated to a load path
+- damage represented only by color
+- logos, text, tally marks or unexplained ornament
+- microscopic underside details invisible in play
+- random junk pile silhouette
+- uniform rust
+- decorative repair with no causal reason
+- more than three visible material families
+- loose cable spaghetti
+- asymmetry that changes gameplay anchors
+- literal construction-toy motifs or pristine molded-plastic identity
+- thin_loose_wires
+- microtext
+- free_floating_fragments
+- detail_without_silhouette_function_identity

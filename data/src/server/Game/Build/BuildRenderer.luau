@@ -16,10 +16,13 @@ type GridModule = {
 	GetPieceWorldCFrame: (CFrame, BuildPieceData) -> CFrame,
 	GetFootprint: (PieceType, number) -> (number, number),
 }
+type GridConfig = { cellSize: number, buildSurfaceName: string }
 type PieceTuning = { footprintWidth: number, footprintDepth: number, queryHeight: number }
 
 local sharedGame = ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Game")
 local config = sharedGame:WaitForChild("Config")
+local BuildGridConfig =
+	require(config:WaitForChild("BuildGridConfig") :: ModuleScript) :: GridConfig
 local GridMath = require(sharedGame:WaitForChild("GridMath") :: ModuleScript) :: GridModule
 local PieceConfig =
 	require(config:WaitForChild("PieceConfig") :: ModuleScript) :: { [string]: PieceTuning }
@@ -50,13 +53,24 @@ local function findOrCreateFolder(parent: Instance, name: string): Folder
 end
 
 function BuildRenderer.new(prototype: Folder, gameTemplates: Folder): Renderer
-	local surface = prototype:FindFirstChild("BuildSurface")
-	assert(surface ~= nil, "Prototype.BuildSurface is required")
-	assert(surface:IsA("BasePart"), "Prototype.BuildSurface must be a BasePart")
+	local surface = prototype:FindFirstChild(BuildGridConfig.buildSurfaceName)
+	assert(surface ~= nil, "Prototype." .. BuildGridConfig.buildSurfaceName .. " is required")
+	assert(
+		surface:IsA("BasePart"),
+		"Prototype." .. BuildGridConfig.buildSurfaceName .. " must be a BasePart"
+	)
 	local templates = gameTemplates:FindFirstChild("BuildPieces")
 	assert(templates ~= nil, "GameTemplates.BuildPieces is required")
 	assert(templates:IsA("Folder"), "GameTemplates.BuildPieces must be a Folder")
+	for pieceType in PieceConfig do
+		local template = templates:FindFirstChild(pieceType)
+		assert(template and template:IsA("Model"), "Missing build template " .. pieceType)
+		assert(template.PrimaryPart, "Build template " .. pieceType .. " requires PrimaryPart")
+	end
 	local runtime = findOrCreateFolder(findOrCreateFolder(prototype, "Runtime"), "Defenses")
+	for _, child in runtime:GetChildren() do
+		child:Destroy()
+	end
 	return setmetatable(
 		{ _surface = surface, _templates = templates, _runtime = runtime, _models = {} },
 		BuildRenderer
@@ -67,23 +81,22 @@ function BuildRenderer.GetSurface(self: Renderer): BasePart
 	return self._surface
 end
 
-function BuildRenderer.GetModel(self: Renderer, pieceId: string): Model?
-	return self._models[pieceId]
-end
-
 function BuildRenderer.GetQueryBox(self: Renderer, piece: BuildPieceData): (CFrame, Vector3)
 	local tuning = PieceConfig[piece.pieceType]
 	local ground = GridMath.GetPieceWorldCFrame(self._surface.CFrame, piece)
 	local height = tuning.queryHeight
 	local boxCFrame = ground * CFrame.new(0, height * 0.5, 0)
-	local boxSize =
-		Vector3.new(tuning.footprintWidth * 4 - 0.3, height, tuning.footprintDepth * 4 - 0.3)
+	local boxSize = Vector3.new(
+		tuning.footprintWidth * BuildGridConfig.cellSize - 0.3,
+		height,
+		tuning.footprintDepth * BuildGridConfig.cellSize - 0.3
+	)
 	return boxCFrame, boxSize
 end
 
 function BuildRenderer.Render(self: Renderer, plan: BuildPlan)
-	for _, model in self._models do
-		model:Destroy()
+	for _, child in self._runtime:GetChildren() do
+		child:Destroy()
 	end
 	table.clear(self._models)
 	for pieceId, piece in plan.pieces do
@@ -95,11 +108,9 @@ function BuildRenderer.Render(self: Renderer, plan: BuildPlan)
 		model.Name = pieceId .. "_" .. piece.pieceType
 		model:SetAttribute("PieceId", pieceId)
 		model:SetAttribute("PieceType", piece.pieceType)
-		model:SetAttribute("DefenseType", piece.pieceType)
 		model:SetAttribute("CellX", piece.cellX)
 		model:SetAttribute("CellZ", piece.cellZ)
 		model:SetAttribute("Rotation", piece.rotation)
-		model:SetAttribute("OwnerUserId", 0)
 		model:SetAttribute("PlanRevision", plan.revision)
 		model:PivotTo(GridMath.GetPieceWorldCFrame(self._surface.CFrame, piece))
 		model.Parent = self._runtime

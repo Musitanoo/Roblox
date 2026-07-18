@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "salvaged-frontier",
+  "status": "CANDIDATE",
+  "vision": "A hopeful frontier fortress assembled from repaired modules whose controlled asymmetry records adaptation without becoming visual noise.",
+  "pillars": ["large repaired masses", "controlled asymmetry", "visible structural braces", "selective material mismatch", "human ingenuity"],
+  "antiPillars": ["scrap heap noise", "random crookedness", "post-apocalyptic grime", "thin splinters", "unbounded material count"],
+  "shapeGrammar": {
+    "primary": ["offset rectangle", "wide brace", "reused vessel"],
+    "secondary": ["single patch", "one oversized fastener family", "directional repair seam"],
+    "signature": "one visibly replaced module carried by a readable diagonal brace",
+    "asymmetryPolicy": "one dominant offset per asset, balanced at silhouette scale"
+  },
+  "palette": {"neutralDark": "#38434A", "neutralMid": "#74756D", "neutralLight": "#C0BDAF", "buildable": "#C9823B", "interactive": "#62D8C2", "critical": "#D94B45", "enemy": "#6D8C59"},
+  "materialBias": ["painted_metal", "bare_metal", "reclaimed_wood", "rubber"],
+  "bevelFamiliesStuds": {"primary": [0.08, 0.14], "secondary": [0.04, 0.08], "tertiary": [0.02, 0.03]},
+  "damageLanguage": "failure extends an existing repair direction and removes one large piece; no generalized grunge increase"
+}

@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "LOCKED_FOR_COMPARISON",
+  "unit": "stud",
+  "axisContract": {
+    "design": {"x": "width", "y": "height", "z": "depth"},
+    "blender": {"x": "width", "y": "depth", "z": "height"},
+    "mapping": "DESIGN_XYZ_TO_BLENDER_XZY"
+  },
+  "dimensionTolerancePercent": 1.0,
+  "sharedRules": {
+    "revisionRoundsAfterBlockout": 2,
+    "noFinalTexturesBeforeSelection": true,
+    "dimensionsAndPivotsMustMatch": true
+  },
+  "assets": {
+    "barricade": {
+      "function": "temporary path-blocking defensive structure",
+      "dimensionsStuds": {"width": 8.0, "height": 4.0, "depth": 2.0},
+      "pivot": "BASE_CENTER",
+      "states": ["intact", "damaged", "critical", "disabled", "targeted"],
+      "triangleBudgetMaximum": 2500,
+      "textureBudgetClass": "medium",
+      "targetReadDistanceStuds": 60
+    },
+    "objective_core": {
+      "function": "primary defendable objective and visual anchor",
+      "dimensionsStuds": {"width": 6.0, "height": 7.0, "depth": 6.0},
+      "pivot": "BASE_CENTER",
+      "states": ["intact", "damaged", "critical", "disabled", "targeted"],
+      "triangleBudgetMaximum": 4500,
+      "textureBudgetClass": "medium",
+      "targetReadDistanceStuds": 60
+    },
+    "enemy_standard": {
+      "function": "standard walking horde enemy",
+      "dimensionsStuds": {"width": 2.5, "height": 5.5, "depth": 2.5},
+      "pivot": "FEET_CENTER",
+      "states": ["intact", "damaged", "critical", "targeted"],
+      "triangleBudgetMaximum": 5000,
+      "textureBudgetClass": "medium",
+      "targetReadDistanceStuds": 60
+    },
+    "floor_module": {
+      "function": "repeatable fortress floor cell",
+      "dimensionsStuds": {"width": 4.0, "height": 0.5, "depth": 4.0},
+      "pivot": "BASE_CENTER",
+      "states": ["intact", "damaged"],
+      "triangleBudgetMaximum": 800,
+      "textureBudgetClass": "small",
+      "targetReadDistanceStuds": 30
+    },
+    "damage_effect": {
+      "function": "communicate hit direction, damage severity and impact cause",
+      "dimensionsStuds": {"width": 4.0, "height": 4.0, "depth": 4.0},
+      "pivot": "IMPACT_CENTER",
+      "states": ["damaged", "critical"],
+      "triangleBudgetMaximum": 300,
+      "textureBudgetClass": "medium",
+      "targetReadDistanceStuds": 30,
+      "timingSeconds": {"hitFlashMaximum": 0.12, "primaryShape": 0.35, "residualMaximum": 1.2}
+    }
+  },
+  "goldenScene": {
+    "sizeStuds": {"width": 120, "depth": 120},
+    "isolatedCopies": 1,
+    "stressCopies": 30,
+    "requiredLightingProfiles": [
+      "Lighting_Gameplay_Default",
+      "Lighting_HighContrast",
+      "Lighting_Adverse_Night",
+      "Lighting_Neutral_QA"
+    ]
+  }
+}

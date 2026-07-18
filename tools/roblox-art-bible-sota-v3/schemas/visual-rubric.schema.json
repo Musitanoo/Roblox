@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/visual-rubric.schema.json",
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "scale",
+    "reviewPolicy",
+    "dimensions",
+    "hardGates",
+    "weightedScoreMinimum"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/visual-rubric.schema.json"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "scale": {
+      "type": "object",
+      "properties": {
+        "min": {
+          "const": 1
+        },
+        "max": {
+          "const": 5
+        }
+      },
+      "required": [
+        "min",
+        "max"
+      ],
+      "unevaluatedProperties": false
+    },
+    "reviewPolicy": {
+      "type": "object",
+      "properties": {
+        "automaticSelectionForbidden": {
+          "type": "boolean"
+        },
+        "blindMapStoredSeparately": {
+          "type": "boolean"
+        },
+        "blindTerritoryLabels": {
+          "type": "boolean"
+        },
+        "humanSelectionRequired": {
+          "type": "boolean"
+        },
+        "maximumPostReconciliationDisagreement": {
+          "type": "number",
+          "minimum": 0
+        },
+        "minimumExpertReviewers": {
+          "type": "number",
+          "minimum": 0
+        },
+        "minimumMedianConfidence": {
+          "type": "number",
+          "minimum": 0
+        },
+        "minimumTaskParticipants": {
+          "type": "number",
+          "minimum": 0
+        },
+        "smallSampleInterpretation": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": [
+        "automaticSelectionForbidden",
+        "blindMapStoredSeparately",
+        "blindTerritoryLabels",
+        "humanSelectionRequired",
+        "maximumPostReconciliationDisagreement",
+        "minimumExpertReviewers",
+        "minimumMedianConfidence",
+        "minimumTaskParticipants",
+        "smallSampleInterpretation"
+      ]
+    },
+    "dimensions": {
+      "type": "object",
+      "minProperties": 9,
+      "additionalProperties": false,
+      "patternProperties": {
+        "^[A-Za-z][A-Za-z0-9]+$": {
+          "type": "object",
+          "properties": {
+            "weight": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "floor": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 5
+            },
+            "question": {
+              "type": "string",
+              "minLength": 20
+            }
+          },
+          "required": [
+            "weight",
+            "floor",
+            "question"
+          ],
+          "unevaluatedProperties": false
+        }
+      }
+    },
+    "hardGates": {
+      "type": "object",
+      "minProperties": 10,
+      "additionalProperties": false,
+      "patternProperties": {
+        "^[a-z][a-z0-9_]+$": {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minimumCorrectRate": {
+              "type": "number",
+              "minimum": 0
+            },
+            "minimumParticipants": {
+              "type": "number",
+              "minimum": 0
+            },
+            "taskGroupId": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "kind"
+          ]
+        }
+      }
+    },
+    "weightedScoreMinimum": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    }
+  },
+  "unevaluatedProperties": false
+}

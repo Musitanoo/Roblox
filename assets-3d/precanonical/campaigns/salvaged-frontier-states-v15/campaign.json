@@ -1,0 +1,423 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/precanonical-campaign.schema.json",
+  "schemaVersion": "1.0.0",
+  "campaignVersion": "2.2.0",
+  "campaignId": "salvaged-frontier-states-v15",
+  "createdAt": "2026-07-18T09:31:18.968612Z",
+  "updatedAt": "2026-07-18T09:31:19.923447Z",
+  "status": "ACTIVE",
+  "artDirection": "salvaged-frontier",
+  "requiredModel": "gpt-image-2",
+  "generationSurface": "chatgpt_web_images",
+  "oneGenerationPerObjectState": true,
+  "independentStateDesignForbidden": true,
+  "maxAttemptsPerTask": 3,
+  "currentTaskId": "01-barricade-intact",
+  "selectionPolicy": {
+    "globalOrderRequired": false,
+    "promptAccess": "ALL_TASKS",
+    "generationEligibility": "OBJECT_LOCAL_CONTINUITY",
+    "activeTaskMutable": true
+  },
+  "objectOrder": [
+    "barricade",
+    "damage_effect",
+    "enemy_standard",
+    "floor_module",
+    "objective_core",
+    "turret_fast_v1"
+  ],
+  "tasks": [
+    {
+      "taskId": "01-barricade-intact",
+      "ordinal": 1,
+      "objectOrdinal": 1,
+      "assetId": "barricade",
+      "displayName": "Defense Barricade Small",
+      "stateId": "intact",
+      "stateOrdinal": 1,
+      "stateCount": 3,
+      "canon": {
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\art\\canonical-visuals\\salvaged-frontier\\barricade.json",
+        "sha256": "2cf485afb6bd7297a1ffccbb72c60f1e186706fe2eb47b0bcb24af407ba9cc52"
+      },
+      "predecessorTaskId": null,
+      "status": "READY",
+      "attempts": [
+        {
+          "attemptIndex": 1,
+          "request": {
+            "path": "requests/salvaged-frontier-states-v15-barricade-intact-a001/request.json",
+            "sha256": "5922735910842dea4c866928960f8964ac8e20bb649dbf81ee032e523821a8ba"
+          },
+          "result": null,
+          "review": null,
+          "decision": null,
+          "continuitySource": null,
+          "revisionSource": null
+        }
+      ],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "02-barricade-damaged",
+      "ordinal": 2,
+      "objectOrdinal": 1,
+      "assetId": "barricade",
+      "displayName": "Defense Barricade Small",
+      "stateId": "damaged",
+      "stateOrdinal": 2,
+      "stateCount": 3,
+      "canon": {
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\art\\canonical-visuals\\salvaged-frontier\\barricade.json",
+        "sha256": "2cf485afb6bd7297a1ffccbb72c60f1e186706fe2eb47b0bcb24af407ba9cc52"
+      },
+      "predecessorTaskId": "01-barricade-intact",
+      "status": "PENDING",
+      "attempts": [],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "03-barricade-critical",
+      "ordinal": 3,
+      "objectOrdinal": 1,
+      "assetId": "barricade",
+      "displayName": "Defense Barricade Small",
+      "stateId": "critical",
+      "stateOrdinal": 3,
+      "stateCount": 3,
+      "canon": {
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\art\\canonical-visuals\\salvaged-frontier\\barricade.json",
+        "sha256": "2cf485afb6bd7297a1ffccbb72c60f1e186706fe2eb47b0bcb24af407ba9cc52"
+      },
+      "predecessorTaskId": "02-barricade-damaged",
+      "status": "PENDING",
+      "attempts": [],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "04-damage-effect-damaged",
+      "ordinal": 4,
+      "objectOrdinal": 2,
+      "assetId": "damage_effect",
+      "displayName": "Directional Damage Effect",
+      "stateId": "damaged",
+      "stateOrdinal": 1,
+      "stateCount": 2,
+      "canon": {
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\art\\canonical-visuals\\salvaged-frontier\\damage_effect.json",
+        "sha256": "171a1ec8690cc03b8c2429608ee5eb67680725a838e122d3f72cb8b9c3401ceb"
+      },
+      "predecessorTaskId": null,
+      "status": "READY",
+      "attempts": [
+        {
+          "attemptIndex": 1,
+          "request": {
+            "path": "requests/salvaged-frontier-states-v15-damage-effect-damaged-a001/request.json",
+            "sha256": "65bec784645f4c73ee94ad24e6586792489930b3d7c85e417bc2af01ccc3b948"
+          },
+          "result": null,
+          "review": null,
+          "decision": null,
+          "continuitySource": null,
+          "revisionSource": null
+        }
+      ],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "05-damage-effect-critical",
+      "ordinal": 5,
+      "objectOrdinal": 2,
+      "assetId": "damage_effect",
+      "displayName": "Directional Damage Effect",
+      "stateId": "critical",
+      "stateOrdinal": 2,
+      "stateCount": 2,
+      "canon": {
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\art\\canonical-visuals\\salvaged-frontier\\damage_effect.json",
+        "sha256": "171a1ec8690cc03b8c2429608ee5eb67680725a838e122d3f72cb8b9c3401ceb"
+      },
+      "predecessorTaskId": "04-damage-effect-damaged",
+      "status": "PENDING",
+      "attempts": [],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "06-enemy-standard-intact",
+      "ordinal": 6,
+      "objectOrdinal": 3,
+      "assetId": "enemy_standard",
+      "displayName": "Violet Frontier Rôdeur",
+      "stateId": "intact",
+      "stateOrdinal": 1,
+      "stateCount": 3,
+      "canon": {
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\art\\canonical-visuals\\salvaged-frontier\\enemy_standard.json",
+        "sha256": "8482f9d1c4f09d78e86b3c81e48b71ef5128321e92937a79a6913607424c7056"
+      },
+      "predecessorTaskId": null,
+      "status": "READY",
+      "attempts": [
+        {
+          "attemptIndex": 1,
+          "request": {
+            "path": "requests/salvaged-frontier-states-v15-enemy-standard-intact-a001/request.json",
+            "sha256": "0e8b133f953ec873db2f0fca05bbae0b77dbb2c1c9b1d39fad3d0227536ae680"
+          },
+          "result": null,
+          "review": null,
+          "decision": null,
+          "continuitySource": null,
+          "revisionSource": null
+        }
+      ],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "07-enemy-standard-damaged",
+      "ordinal": 7,
+      "objectOrdinal": 3,
+      "assetId": "enemy_standard",
+      "displayName": "Violet Frontier Rôdeur",
+      "stateId": "damaged",
+      "stateOrdinal": 2,
+      "stateCount": 3,
+      "canon": {
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\art\\canonical-visuals\\salvaged-frontier\\enemy_standard.json",
+        "sha256": "8482f9d1c4f09d78e86b3c81e48b71ef5128321e92937a79a6913607424c7056"
+      },
+      "predecessorTaskId": "06-enemy-standard-intact",
+      "status": "PENDING",
+      "attempts": [],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "08-enemy-standard-critical",
+      "ordinal": 8,
+      "objectOrdinal": 3,
+      "assetId": "enemy_standard",
+      "displayName": "Violet Frontier Rôdeur",
+      "stateId": "critical",
+      "stateOrdinal": 3,
+      "stateCount": 3,
+      "canon": {
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\art\\canonical-visuals\\salvaged-frontier\\enemy_standard.json",
+        "sha256": "8482f9d1c4f09d78e86b3c81e48b71ef5128321e92937a79a6913607424c7056"
+      },
+      "predecessorTaskId": "07-enemy-standard-damaged",
+      "status": "PENDING",
+      "attempts": [],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "09-floor-module-intact",
+      "ordinal": 9,
+      "objectOrdinal": 4,
+      "assetId": "floor_module",
+      "displayName": "Fortress Floor Module",
+      "stateId": "intact",
+      "stateOrdinal": 1,
+      "stateCount": 2,
+      "canon": {
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\art\\canonical-visuals\\salvaged-frontier\\floor_module.json",
+        "sha256": "0d7c6cfa61381b9fc75f146c48f23e00070321054796e5bda22f1659cc4df46d"
+      },
+      "predecessorTaskId": null,
+      "status": "READY",
+      "attempts": [
+        {
+          "attemptIndex": 1,
+          "request": {
+            "path": "requests/salvaged-frontier-states-v15-floor-module-intact-a001/request.json",
+            "sha256": "c8d76bb7fb4c21b296524daa2405b0f04f6c3b0d25d30cab7f9e69e8fdce4b91"
+          },
+          "result": null,
+          "review": null,
+          "decision": null,
+          "continuitySource": null,
+          "revisionSource": null
+        }
+      ],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "10-floor-module-damaged",
+      "ordinal": 10,
+      "objectOrdinal": 4,
+      "assetId": "floor_module",
+      "displayName": "Fortress Floor Module",
+      "stateId": "damaged",
+      "stateOrdinal": 2,
+      "stateCount": 2,
+      "canon": {
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\art\\canonical-visuals\\salvaged-frontier\\floor_module.json",
+        "sha256": "0d7c6cfa61381b9fc75f146c48f23e00070321054796e5bda22f1659cc4df46d"
+      },
+      "predecessorTaskId": "09-floor-module-intact",
+      "status": "PENDING",
+      "attempts": [],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "11-objective-core-intact",
+      "ordinal": 11,
+      "objectOrdinal": 5,
+      "assetId": "objective_core",
+      "displayName": "Objective Core",
+      "stateId": "intact",
+      "stateOrdinal": 1,
+      "stateCount": 3,
+      "canon": {
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\art\\canonical-visuals\\salvaged-frontier\\objective_core.json",
+        "sha256": "b55699df5fe1eb6e73ce5e61992593a261b064edd8be1b59ef6b6ecbdc9bec9c"
+      },
+      "predecessorTaskId": null,
+      "status": "READY",
+      "attempts": [
+        {
+          "attemptIndex": 1,
+          "request": {
+            "path": "requests/salvaged-frontier-states-v15-objective-core-intact-a001/request.json",
+            "sha256": "92aeb96ede466667dabcaa4a67536a3f0a7e7243092afd3a4bef16783aea1421"
+          },
+          "result": null,
+          "review": null,
+          "decision": null,
+          "continuitySource": null,
+          "revisionSource": null
+        }
+      ],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "12-objective-core-damaged",
+      "ordinal": 12,
+      "objectOrdinal": 5,
+      "assetId": "objective_core",
+      "displayName": "Objective Core",
+      "stateId": "damaged",
+      "stateOrdinal": 2,
+      "stateCount": 3,
+      "canon": {
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\art\\canonical-visuals\\salvaged-frontier\\objective_core.json",
+        "sha256": "b55699df5fe1eb6e73ce5e61992593a261b064edd8be1b59ef6b6ecbdc9bec9c"
+      },
+      "predecessorTaskId": "11-objective-core-intact",
+      "status": "PENDING",
+      "attempts": [],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "13-objective-core-critical",
+      "ordinal": 13,
+      "objectOrdinal": 5,
+      "assetId": "objective_core",
+      "displayName": "Objective Core",
+      "stateId": "critical",
+      "stateOrdinal": 3,
+      "stateCount": 3,
+      "canon": {
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\art\\canonical-visuals\\salvaged-frontier\\objective_core.json",
+        "sha256": "b55699df5fe1eb6e73ce5e61992593a261b064edd8be1b59ef6b6ecbdc9bec9c"
+      },
+      "predecessorTaskId": "12-objective-core-damaged",
+      "status": "PENDING",
+      "attempts": [],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "14-turret-fast-v1-intact",
+      "ordinal": 14,
+      "objectOrdinal": 6,
+      "assetId": "turret_fast_v1",
+      "displayName": "Fast Defense Turret",
+      "stateId": "intact",
+      "stateOrdinal": 1,
+      "stateCount": 3,
+      "canon": {
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\art\\canonical-visuals\\salvaged-frontier\\turret_fast_v1.json",
+        "sha256": "cb716f4cfb75a72048cd7935632e103757aa069a6b35388ec3df1a0b7d601b74"
+      },
+      "predecessorTaskId": null,
+      "status": "READY",
+      "attempts": [
+        {
+          "attemptIndex": 1,
+          "request": {
+            "path": "requests/salvaged-frontier-states-v15-turret-fast-v1-intact-a001/request.json",
+            "sha256": "f5404c5d81c77237ee4571f498d154799e541c2ae9e4f712bf31b1b5596a46f5"
+          },
+          "result": null,
+          "review": null,
+          "decision": null,
+          "continuitySource": null,
+          "revisionSource": null
+        }
+      ],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "15-turret-fast-v1-damaged",
+      "ordinal": 15,
+      "objectOrdinal": 6,
+      "assetId": "turret_fast_v1",
+      "displayName": "Fast Defense Turret",
+      "stateId": "damaged",
+      "stateOrdinal": 2,
+      "stateCount": 3,
+      "canon": {
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\art\\canonical-visuals\\salvaged-frontier\\turret_fast_v1.json",
+        "sha256": "cb716f4cfb75a72048cd7935632e103757aa069a6b35388ec3df1a0b7d601b74"
+      },
+      "predecessorTaskId": "14-turret-fast-v1-intact",
+      "status": "PENDING",
+      "attempts": [],
+      "acceptedResult": null,
+      "acceptedReview": null
+    },
+    {
+      "taskId": "16-turret-fast-v1-critical",
+      "ordinal": 16,
+      "objectOrdinal": 6,
+      "assetId": "turret_fast_v1",
+      "displayName": "Fast Defense Turret",
+      "stateId": "critical",
+      "stateOrdinal": 3,
+      "stateCount": 3,
+      "canon": {
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\art\\canonical-visuals\\salvaged-frontier\\turret_fast_v1.json",
+        "sha256": "cb716f4cfb75a72048cd7935632e103757aa069a6b35388ec3df1a0b7d601b74"
+      },
+      "predecessorTaskId": "15-turret-fast-v1-damaged",
+      "status": "PENDING",
+      "attempts": [],
+      "acceptedResult": null,
+      "acceptedReview": null
+    }
+  ],
+  "progress": {
+    "totalObjects": 6,
+    "completedObjects": 0,
+    "totalTasks": 16,
+    "completedTasks": 0,
+    "remainingTasks": 16
+  },
+  "canonical": false,
+  "productionApproved": false
+}

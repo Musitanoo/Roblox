@@ -1,0 +1,260 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/visual-canon-evidence.schema.json",
+  "assetId": "barricade",
+  "assetKey": "defense_barricade_small",
+  "authority": {
+    "bindings": [
+      {
+        "bytes": 21741,
+        "path": "assets-3d/defense-barricade-small/asset.json",
+        "role": "contract",
+        "root": "PROJECT_ROOT",
+        "sha256": "4007359aad9898b758666d3dbdcd06f9c4f4c33362642edc71b2509858009fb9"
+      },
+      {
+        "bytes": 35419,
+        "path": "art/canonical-visuals/salvaged-frontier/barricade.json",
+        "role": "canon",
+        "root": "PACKAGE_ROOT",
+        "sha256": "5e196aa1ab2bdaaa9c024d250ea76f82b134848b4dcd32b2741f7970c5c77e58"
+      },
+      {
+        "bytes": 35387,
+        "path": "tools/roblox-3d-asset/blender/compile_asset.py",
+        "role": "asset_generator",
+        "root": "PROJECT_ROOT",
+        "sha256": "34642e84af8b3d15bb12e3d365f5157aa911ab484b59bacf92eed426e64e2460"
+      },
+      {
+        "bytes": 58731,
+        "path": "tools/roblox-3d-asset/pipeline/canon_packet.py",
+        "role": "canon_packet_generator",
+        "root": "PROJECT_ROOT",
+        "sha256": "a994900b875e7090e53fab10a9374ba9a06cdd96fde683e7ab2bfdff72a223d2"
+      },
+      {
+        "bytes": 25026,
+        "path": "assets-3d/defense-barricade-small/build/manifest.json",
+        "role": "main_build_manifest",
+        "root": "PROJECT_ROOT",
+        "sha256": "928eb73f8b9a55ece347318d524bfcfdde1d0bde929d544e5c78383d26244386"
+      },
+      {
+        "bytes": 6167,
+        "path": "assets-3d/defense-barricade-small/build/states/states-manifest.json",
+        "role": "states_manifest",
+        "root": "PROJECT_ROOT",
+        "sha256": "227d4eff8a7011484c7cfb489609b0abe1d0c5577f6a2e2bd3f8f565d680d7e2"
+      },
+      {
+        "bytes": 67409,
+        "path": "assets-3d/defense-barricade-small/build/state-determinism/determinism-report.json",
+        "role": "determinism_report",
+        "root": "PROJECT_ROOT",
+        "sha256": "96fa400e6a504c0ab6a05fd8fe91eeba53df1088798b79a7b4088a9bbb35cdc7"
+      },
+      {
+        "bytes": 4151,
+        "path": "assets-3d/defense-barricade-small/review.json",
+        "role": "visual_review",
+        "root": "PROJECT_ROOT",
+        "sha256": "0aa5c0d144a035321d5bf835303b8cabe0d2340ed3c765b093d4d78e69a5b866"
+      },
+      {
+        "bytes": 10617,
+        "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/raw-render-report.json",
+        "role": "raw_render_manifest",
+        "root": "PACKAGE_ROOT",
+        "sha256": "27597f91919e7f5837de38db76752e099ae77c7d4a898383125e5b928b56aaf7"
+      }
+    ]
+  },
+  "baseCandidateSha256": "5e196aa1ab2bdaaa9c024d250ea76f82b134848b4dcd32b2741f7970c5c77e58",
+  "boards": {
+    "all_states": [
+      {
+        "bytes": 320608,
+        "height": 1080,
+        "mediaType": "image/png",
+        "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/08-all_states.png",
+        "sha256": "6c2eb1e1eb0413543f50030e38a58dead7d5dd8b7126ce6b0482708afc6c2b71",
+        "width": 1920
+      }
+    ],
+    "black_silhouette": [
+      {
+        "bytes": 104699,
+        "height": 1080,
+        "mediaType": "image/png",
+        "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/03-black_silhouette.png",
+        "sha256": "46f7747f614425dea65a5e76b2117d38dbe10e7edcedbeebd6315ec2b82e7e9b",
+        "width": 1920
+      }
+    ],
+    "component_breakdown": [
+      {
+        "bytes": 309295,
+        "height": 1080,
+        "mediaType": "image/png",
+        "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/04-component_breakdown.png",
+        "sha256": "ce56027c256a8ae88ee072d641a505e9dc9e48d2ca47ac44b1efd469507deae1",
+        "width": 1920
+      }
+    ],
+    "lighting_matrix": [
+      {
+        "bytes": 669777,
+        "height": 1080,
+        "mediaType": "image/png",
+        "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/13-lighting_matrix.png",
+        "sha256": "6ef0e7cccb83c06613caa08398ebf4d0ab9b4fe2df334cd6087904dde63ac886",
+        "width": 1920
+      }
+    ],
+    "materials": [
+      {
+        "bytes": 319109,
+        "height": 1080,
+        "mediaType": "image/png",
+        "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/06-materials.png",
+        "sha256": "9fef299f886e0b0843850a05679ca3dba47cf5ae0e2a0569b92c6704f1934284",
+        "width": 1920
+      }
+    ],
+    "mobile_far": [
+      {
+        "bytes": 324666,
+        "height": 1080,
+        "mediaType": "image/png",
+        "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/12-mobile_far.png",
+        "sha256": "147ed3eae43f8864b4e6feb77a2383326a01f21a25ae3399fd4ad24b68079a42",
+        "width": 1920
+      }
+    ],
+    "mobile_mid": [
+      {
+        "bytes": 427584,
+        "height": 1080,
+        "mediaType": "image/png",
+        "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/11-mobile_mid.png",
+        "sha256": "bd23608445124db138013eb339bdaadc706533deb68bbd04255c87369d808ae1",
+        "width": 1920
+      }
+    ],
+    "mobile_near": [
+      {
+        "bytes": 495737,
+        "height": 1080,
+        "mediaType": "image/png",
+        "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/10-mobile_near.png",
+        "sha256": "5852b4f4e23fdd02d546505b1215c23fdd0bfca36f2898ca9e2ef9da1b752293",
+        "width": 1920
+      }
+    ],
+    "orthographic": [
+      {
+        "bytes": 258552,
+        "height": 1080,
+        "mediaType": "image/png",
+        "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/01-orthographic.png",
+        "sha256": "daeaee3b6dedc353b13ca0f8202b0319f3e4a0ba1b7a7df83eeb02372b53abb7",
+        "width": 1920
+      }
+    ],
+    "perspective": [
+      {
+        "bytes": 314696,
+        "height": 1080,
+        "mediaType": "image/png",
+        "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/02-perspective.png",
+        "sha256": "051cb2253c69e0f30ccf9953ff18754590c373d9dea528ce3f75208430703bdc",
+        "width": 1920
+      }
+    ],
+    "proportions": [
+      {
+        "bytes": 203405,
+        "height": 1080,
+        "mediaType": "image/png",
+        "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/05-proportions.png",
+        "sha256": "268ffe86ae278d27223e11656f8f95859b502e6533f5d6321aa1fc2bd0877dea",
+        "width": 1920
+      }
+    ],
+    "repetition_1": [
+      {
+        "bytes": 443678,
+        "height": 1080,
+        "mediaType": "image/png",
+        "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/14-repetition_1.png",
+        "sha256": "56c5ea05bab8466ef758afa8034af7121301532a0dbbb6fecbb895cf7ca70098",
+        "width": 1920
+      }
+    ],
+    "repetition_100": [
+      {
+        "bytes": 593500,
+        "height": 1080,
+        "mediaType": "image/png",
+        "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/16-repetition_100.png",
+        "sha256": "ed89f72c2957fcdc30914c111d311e312752cb67fe42075898fb3f62f231cfa6",
+        "width": 1920
+      }
+    ],
+    "repetition_30": [
+      {
+        "bytes": 518340,
+        "height": 1080,
+        "mediaType": "image/png",
+        "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/15-repetition_30.png",
+        "sha256": "12a25d4bdc4ed125a60f99dc0302e8709eecb0f0e387a700fc7c4970c4eb7136",
+        "width": 1920
+      }
+    ],
+    "required_and_forbidden_annotations": [
+      {
+        "bytes": 347372,
+        "height": 1080,
+        "mediaType": "image/png",
+        "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/17-required_and_forbidden_annotations.png",
+        "sha256": "b7e42adf04cda543eed5ae55da429209224bb39f99070cf14f5d954849746783",
+        "width": 1920
+      }
+    ],
+    "semantic_zones": [
+      {
+        "bytes": 165326,
+        "height": 1080,
+        "mediaType": "image/png",
+        "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/07-semantic_zones.png",
+        "sha256": "0e95315153ea2e016a59b48e056dc10bc260c24be9ffc55d90d7d99aea9500d7",
+        "width": 1920
+      }
+    ],
+    "state_comparison": [
+      {
+        "bytes": 182369,
+        "height": 1080,
+        "mediaType": "image/png",
+        "path": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/boards/09-state_comparison.png",
+        "sha256": "32a489fd9ec91adc7f81683dce28bffbf70fe855b88c04a22a76a727de8f7cdb",
+        "width": 1920
+      }
+    ]
+  },
+  "canonId": "vc_barricade__salvaged-frontier__v1",
+  "evidenceClass": "REAL_RENDERED",
+  "evidencePackageSha256": "b94a6f2e92470c066b635f342f5a6aae92f9d0f3f3c5023b1ebea0e13c4424a4",
+  "generatedAt": "2026-07-17T16:00:10.390223Z",
+  "generation": {
+    "deterministicComposition": true,
+    "rawRenderStatus": "PASS",
+    "tool": "r3d canon-packet",
+    "toolVersion": "1.0.0"
+  },
+  "humanReviewStatus": "PENDING",
+  "productionApproved": false,
+  "revision": 15,
+  "schemaVersion": "1.0.0",
+  "territoryId": "salvaged-frontier"
+}

@@ -1,0 +1,634 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/art-direction.schema.json",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/art-direction.schema.json"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "status": {
+      "enum": [
+        "EXPLORATION",
+        "CANDIDATE_SELECTED",
+        "V1_LOCKED"
+      ]
+    },
+    "productionApproved": {
+      "type": "boolean"
+    },
+    "finalTerritory": {
+      "anyOf": [
+        {
+          "enum": [
+            "industrial-toy-defense",
+            "salvaged-frontier",
+            "clean-tactical-diorama"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "project": {
+      "type": "object",
+      "properties": {
+        "genre": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "northStar": {
+          "type": "string",
+          "minLength": 1
+        },
+        "platformPriority": {
+          "type": "string",
+          "minLength": 1
+        },
+        "playerCount": {
+          "type": "object",
+          "properties": {
+            "max": {
+              "type": "number",
+              "minimum": 0
+            },
+            "min": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "max",
+            "min"
+          ]
+        },
+        "visualProtagonist": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": [
+        "genre",
+        "name",
+        "northStar",
+        "platformPriority",
+        "playerCount",
+        "visualProtagonist"
+      ]
+    },
+    "axisContract": {
+      "type": "object",
+      "properties": {
+        "blender": {
+          "type": "object",
+          "properties": {
+            "upAxis": {
+              "type": "string",
+              "minLength": 1
+            },
+            "x": {
+              "type": "string",
+              "minLength": 1
+            },
+            "y": {
+              "type": "string",
+              "minLength": 1
+            },
+            "z": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "upAxis",
+            "x",
+            "y",
+            "z"
+          ]
+        },
+        "conversion": {
+          "type": "object",
+          "properties": {
+            "blenderToRoblox": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 3,
+              "maxItems": 3
+            },
+            "robloxToBlender": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 3,
+              "maxItems": 3
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "blenderToRoblox",
+            "robloxToBlender"
+          ]
+        },
+        "designAndRoblox": {
+          "type": "object",
+          "properties": {
+            "upAxis": {
+              "type": "string",
+              "minLength": 1
+            },
+            "x": {
+              "type": "string",
+              "minLength": 1
+            },
+            "y": {
+              "type": "string",
+              "minLength": 1
+            },
+            "z": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "upAxis",
+            "x",
+            "y",
+            "z"
+          ]
+        },
+        "oneBlenderUnitEqualsStud": {
+          "type": "boolean"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": [
+        "blender",
+        "conversion",
+        "designAndRoblox",
+        "oneBlenderUnitEqualsStud",
+        "unit"
+      ]
+    },
+    "creativeConstraints": {
+      "type": "object",
+      "properties": {
+        "mustCommunicate": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 5,
+          "maxItems": 5
+        },
+        "mustPreserveRobloxAvatarIdentity": {
+          "type": "boolean"
+        },
+        "spectacleMustNotOcclude": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "tone": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 6,
+          "maxItems": 6
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": [
+        "mustCommunicate",
+        "mustPreserveRobloxAvatarIdentity",
+        "spectacleMustNotOcclude",
+        "tone"
+      ]
+    },
+    "territories": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "const": "industrial-toy-defense"
+        },
+        {
+          "const": "salvaged-frontier"
+        },
+        {
+          "const": "clean-tactical-diorama"
+        }
+      ],
+      "items": false
+    },
+    "comparisonInvariants": {
+      "type": "array",
+      "minItems": 10,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "screenSpaceRules": {
+      "type": "object",
+      "properties": {
+        "bands": {
+          "type": "object",
+          "properties": {
+            "primary": {
+              "type": "object",
+              "properties": {
+                "distanceStuds": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "minimumPixels": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "nominalThicknessStuds": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "productionMinimumThicknessStuds": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "productionSafetyFactor": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              },
+              "unevaluatedProperties": false,
+              "required": [
+                "distanceStuds",
+                "minimumPixels",
+                "nominalThicknessStuds",
+                "productionMinimumThicknessStuds",
+                "productionSafetyFactor"
+              ]
+            },
+            "secondary": {
+              "type": "object",
+              "properties": {
+                "distanceStuds": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "minimumPixels": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "nominalThicknessStuds": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "productionMinimumThicknessStuds": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "productionSafetyFactor": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              },
+              "unevaluatedProperties": false,
+              "required": [
+                "distanceStuds",
+                "minimumPixels",
+                "nominalThicknessStuds",
+                "productionMinimumThicknessStuds",
+                "productionSafetyFactor"
+              ]
+            },
+            "tertiary": {
+              "type": "object",
+              "properties": {
+                "distanceStuds": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "minimumPixels": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "nominalThicknessStuds": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "productionMinimumThicknessStuds": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "productionSafetyFactor": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              },
+              "unevaluatedProperties": false,
+              "required": [
+                "distanceStuds",
+                "minimumPixels",
+                "nominalThicknessStuds",
+                "productionMinimumThicknessStuds",
+                "productionSafetyFactor"
+              ]
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "primary",
+            "secondary",
+            "tertiary"
+          ]
+        },
+        "calibrationViewport": {
+          "type": "object",
+          "properties": {
+            "height": {
+              "type": "number",
+              "minimum": 0
+            },
+            "width": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "height",
+            "width"
+          ]
+        },
+        "formulaForward": {
+          "type": "string",
+          "minLength": 1
+        },
+        "formulaInverse": {
+          "type": "string",
+          "minLength": 1
+        },
+        "projectionModel": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recalibrationRule": {
+          "type": "string",
+          "minLength": 1
+        },
+        "verticalFieldOfViewDegrees": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": [
+        "bands",
+        "calibrationViewport",
+        "formulaForward",
+        "formulaInverse",
+        "projectionModel",
+        "recalibrationRule",
+        "verticalFieldOfViewDegrees"
+      ]
+    },
+    "detailHierarchy": {
+      "type": "object",
+      "properties": {
+        "deletionRule": {
+          "type": "string",
+          "minLength": 1
+        },
+        "maskColors": {
+          "type": "object",
+          "properties": {
+            "primary": {
+              "type": "string",
+              "minLength": 1
+            },
+            "secondary": {
+              "type": "string",
+              "minLength": 1
+            },
+            "tertiary": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "primary",
+            "secondary",
+            "tertiary"
+          ]
+        },
+        "measurementMethod": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sumTolerance": {
+          "type": "number",
+          "minimum": 0
+        },
+        "targetProjectedAreaRatio": {
+          "type": "object",
+          "properties": {
+            "primary": {
+              "type": "number",
+              "minimum": 0
+            },
+            "secondary": {
+              "type": "number",
+              "minimum": 0
+            },
+            "tertiary": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "primary",
+            "secondary",
+            "tertiary"
+          ]
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": [
+        "deletionRule",
+        "maskColors",
+        "measurementMethod",
+        "sumTolerance",
+        "targetProjectedAreaRatio"
+      ]
+    },
+    "forbidden": {
+      "type": "array",
+      "minItems": 8,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "gates": {
+      "type": "object",
+      "properties": {
+        "automaticSelectionForbidden": {
+          "type": "boolean"
+        },
+        "humanSelectionRequired": {
+          "type": "boolean"
+        },
+        "requiredHardGateIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 15,
+          "maxItems": 15
+        },
+        "sixthAssetTransferProofRequired": {
+          "type": "boolean"
+        },
+        "weightedScoreMinimum": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": [
+        "automaticSelectionForbidden",
+        "humanSelectionRequired",
+        "requiredHardGateIds",
+        "sixthAssetTransferProofRequired",
+        "weightedScoreMinimum"
+      ]
+    }
+  },
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "version",
+    "status",
+    "productionApproved",
+    "finalTerritory",
+    "project",
+    "axisContract",
+    "creativeConstraints",
+    "territories",
+    "comparisonInvariants",
+    "screenSpaceRules",
+    "detailHierarchy",
+    "forbidden",
+    "gates"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "EXPLORATION"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "productionApproved": {
+            "const": false
+          },
+          "finalTerritory": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "CANDIDATE_SELECTED"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "productionApproved": {
+            "const": false
+          },
+          "finalTerritory": {
+            "enum": [
+              "industrial-toy-defense",
+              "salvaged-frontier",
+              "clean-tactical-diorama"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "V1_LOCKED"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "productionApproved": {
+            "const": true
+          },
+          "finalTerritory": {
+            "enum": [
+              "industrial-toy-defense",
+              "salvaged-frontier",
+              "clean-tactical-diorama"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}

@@ -1,0 +1,32 @@
+- No text, captions, labels, letters, numbers, logos or invented alphabet.
+- No four alternative concepts, silhouette variants or design options inside the four quadrants.
+- No second gameplay state and no state comparison in the same image.
+- No interpretation other than the single target state damaged.
+- No independent redesign between quadrants or between gameplay states.
+- No photorealism, military realism, bleak monochrome or literal construction-toy identity.
+- No color-only gameplay state; shape, silhouette, posture and value must agree.
+- No invented rear, underside, mechanism, component, weapon or decoration.
+- No geometric emblem, badge, pseudo-logo, triangular mark or unexplained assembly symbol.
+- No cinematic depth of field, environmental scene or unrelated prop.
+- No operational overlay, transient event or terminal runtime state mixed into the primary target state.
+- No visual claim that exceeds the explicit gameplay-truth boundary.
+- No chassis, panel, brace, service socket, repair band, wood construction or persistent object silhouette.
+- No symmetric sphere explosion, fog cloud, debris storm, full-screen white flash or more than the declared major fragments.
+- No direction unrelated to the real source vector and no color-only severity.
+- uniform sphere explosion
+- particle fog occlusion
+- full-screen white flash
+- more than three large fragments
+- effect direction unrelated to actual hit source
+- persistent floating debris
+- severity expressed only by color
+- physical chassis, pedestal, brace, panel, foot or service socket
+- persistent prop, debris pile or environmental object reading
+- screen-filling smoke, bloom or particle noise
+- more than three readable solid fragments
+- hidden target, hidden lane or ambiguous impact direction
+- invented text, icon, emblem or user-interface graphic
+- thin_loose_wires
+- microtext
+- free_floating_fragments
+- detail_without_silhouette_function_identity

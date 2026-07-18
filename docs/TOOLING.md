@@ -1,5 +1,18 @@
 # Tooling — Roblox Top 1
 
+| Champ | Valeur |
+| --- | --- |
+| ID | `ENG-TOOLING-001` |
+| Classe | `CONTRACT` |
+| Cycle de vie | `ACCEPTED` |
+| Version | 1.1.0 |
+| Propriétaire / approbateur | Engineering / Founder |
+| Scope | Toolchain locale, checks, Script Sync et intégrations Studio/MCP |
+| Source | `rokit.toml`, scripts du dépôt et workflow Studio actif |
+| Remplace | Version 1.0.0 de ce guide |
+| Dernière revue | 2026-07-17 |
+| Revue suivante | Version, commande, mapping Script Sync ou intégration modifiée |
+
 ## Supported workflow
 
 The prototype uses local Luau files, native Roblox Studio Script Sync, Git, and the official Roblox Studio MCP server. Rojo is intentionally not installed because Script Sync already owns the three code subtrees.
@@ -17,9 +30,20 @@ The repository manifest is `rokit.toml`. Update versions deliberately, review re
 
 ## First-time Windows setup
 
-1. Install the current Microsoft Visual C++ x64 Redistributable.
-2. Install Rokit 1.2.0 from its official GitHub release and run `rokit self-install`.
-3. From the repository root, run:
+1. Install the current Git for Windows release and open a new terminal. Confirm
+   that the executable is discoverable before continuing:
+
+   ```powershell
+   git --version
+   where.exe git
+   ```
+
+   If the installer completed but `git` is not found, close and reopen the
+   terminal so its `PATH` is refreshed. Do not document a successful Git setup
+   until `git --version` succeeds in the actual development shell.
+2. Install the current Microsoft Visual C++ x64 Redistributable.
+3. Install Rokit 1.2.0 from its official GitHub release and run `rokit self-install`.
+4. From the repository root, run:
 
    ```powershell
    powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\bootstrap.ps1
@@ -43,6 +67,9 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\format.ps1 -Check
 # Validate configuration, format, lint, and type analysis
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\check.ps1
 
+# Validate only the durable Markdown corpus and document register
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\check-docs.ps1
+
 # Validate the ignored local Studio 0.1 recovery snapshot against its tracked manifest
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\check-studio-baseline.ps1
 
@@ -50,7 +77,10 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\check-studio-basel
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\check-studio-graybox.ps1
 ```
 
-The default checks target `data/src` and `tests` when present and validate every tracked Studio manifest as JSON. The dedicated Studio snapshot checks are intentionally separate because a fresh clone does not contain the ignored local `.rbxl` recovery files.
+The default check first validates the durable Markdown corpus, then targets
+`data/src` and `tests` when present and validates every tracked Studio manifest
+as JSON. The dedicated Studio snapshot checks are intentionally separate because
+a fresh clone does not contain the ignored local `.rbxl` recovery files.
 
 ## Script Sync mappings
 
@@ -83,3 +113,31 @@ Roblox global types are pinned from the Luau LSP `1.68.1` tag at `tools/luau-lsp
 ## Roblox Studio MCP
 
 Enable Studio as an MCP server in **Assistant → … → Manage MCP Servers**. Codex should use MCP for inspection, execution, console review, screenshots, and playtests. Locally synchronized scripts must be edited on disk, not through MCP.
+
+## Blender Visual Workbench MCP
+
+The project-scoped `.codex/config.toml` declares a local STDIO server named
+`blender_visual_workbench`. It launches `scripts/r3d-mcp.ps1`, forwards no
+Roblox credentials, exposes a strict tool allow-list, and prompts for every
+tool that writes session evidence or a Candidate copy. Restart Codex after a
+configuration change, then use `/mcp` to confirm exposure in the new task.
+
+This workbench complements the deterministic compiler. It does not replace
+`asset.json`, a locked visual canon, `compile_asset.py`, Studio, or human art
+approval. Its normal path has no arbitrary Python, TCP listener, download,
+publication, or canonical-source editing tool.
+
+```powershell
+# Environment, transport and allow-list
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\r3d.ps1 blender-mcp-doctor --repo .
+
+# Immutable review
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\r3d.ps1 blender-inspect .\assets-3d\<asset>\asset.json
+
+# Transactional candidate
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\r3d.ps1 blender-workbench .\assets-3d\<asset>\asset.json --mode explore
+```
+
+The complete authority model, operation bounds, evidence layout and promotion
+sequence are defined in
+[BLENDER_MCP_WORKBENCH.md](BLENDER_MCP_WORKBENCH.md).

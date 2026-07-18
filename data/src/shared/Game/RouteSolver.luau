@@ -24,18 +24,21 @@ type GridConfig = {
 	startCells: { [string]: Cell },
 	goalCells: { [string]: Cell },
 }
-type PieceTuning = { roamerCost: number, bruteCost: number }
+type RouteConfigType = {
+	gridBaseStepCost: number,
+	wallCost: number,
+	slowTrapCost: number,
+}
 
 local sharedGame = ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Game")
 local config = sharedGame:WaitForChild("Config")
 local BuildGridConfig =
 	require(config:WaitForChild("BuildGridConfig") :: ModuleScript) :: GridConfig
-local PieceConfig = require(config:WaitForChild("PieceConfig") :: ModuleScript) :: {
-	[string]: PieceTuning,
-}
 local GridMath = require(sharedGame:WaitForChild("GridMath") :: ModuleScript) :: GridModule
+local RouteConfig = require(config:WaitForChild("RouteConfig") :: ModuleScript) :: RouteConfigType
 
 local RouteSolver = {}
+local baseStepCost = math.max(0, RouteConfig.gridBaseStepCost)
 
 local function heuristic(a: Cell, b: Cell): number
 	return math.abs(a.x - b.x) + math.abs(a.z - b.z)
@@ -51,23 +54,21 @@ local function occupancyFor(plan: BuildPlan): { [string]: PieceType }
 	return result
 end
 
-local function stepCost(
-	occupancy: { [string]: PieceType },
-	cell: Cell,
-	enemyType: EnemyType
-): number
+local function stepCost(occupancy: { [string]: PieceType }, cell: Cell): number
 	local pieceType = occupancy[GridMath.CellKey(cell.x, cell.z)]
-	if not pieceType then
-		return 10
+	local cost = baseStepCost
+	if pieceType == "Wall" then
+		cost += RouteConfig.wallCost
+	elseif pieceType == "SlowTrap" then
+		cost += RouteConfig.slowTrapCost
 	end
-	local tuning = PieceConfig[pieceType]
-	return if enemyType == "Brute" then tuning.bruteCost else tuning.roamerCost
+	return cost
 end
 
 function RouteSolver.Solve(
 	plan: BuildPlan,
 	routeId: RouteId,
-	enemyType: EnemyType
+	_enemyType: EnemyType
 ): ({ Cell }?, number)
 	local start = BuildGridConfig.startCells[routeId]
 	local goal = BuildGridConfig.goalCells[routeId]
@@ -81,7 +82,7 @@ function RouteSolver.Solve(
 	local cameFrom: { [string]: string } = {}
 	local cells: { [string]: Cell } = { [startKey] = { x = start.x, z = start.z } }
 	local gScore: { [string]: number } = { [startKey] = 0 }
-	local fScore: { [string]: number } = { [startKey] = heuristic(start, goal) * 10 }
+	local fScore: { [string]: number } = { [startKey] = heuristic(start, goal) * baseStepCost }
 
 	while #open > 0 do
 		local bestIndex = 1
@@ -123,13 +124,12 @@ function RouteSolver.Solve(
 				GridMath.IsInsideGrid(neighbor.x, neighbor.z)
 				and not BuildGridConfig.forbiddenCells[neighborKey]
 			then
-				local tentative = (gScore[currentKey] or math.huge)
-					+ stepCost(occupancy, neighbor, enemyType)
+				local tentative = (gScore[currentKey] or math.huge) + stepCost(occupancy, neighbor)
 				if tentative < (gScore[neighborKey] or math.huge) then
 					cameFrom[neighborKey] = currentKey
 					cells[neighborKey] = neighbor
 					gScore[neighborKey] = tentative
-					fScore[neighborKey] = tentative + heuristic(neighbor, goal) * 10
+					fScore[neighborKey] = tentative + heuristic(neighbor, goal) * baseStepCost
 					if not openSet[neighborKey] then
 						table.insert(open, neighbor)
 						openSet[neighborKey] = true

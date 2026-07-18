@@ -1,0 +1,388 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/precanonical-operator-session.schema.json",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/precanonical-operator-session.schema.json"
+    },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "operatorVersion": {
+      "const": "1.0.0"
+    },
+    "sessionId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]+$"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "enum": [
+        "READY_FOR_HUMAN_WEB_SUBMISSION",
+        "VISUAL_REVIEW_REQUIRED",
+        "REVIEW_RECORDED"
+      ]
+    },
+    "requestId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]+$"
+    },
+    "stage": {
+      "enum": [
+        "exploration",
+        "consolidation",
+        "precanonical_board",
+        "state_definition",
+        "correction"
+      ]
+    },
+    "request": {
+      "$ref": "#/$defs/binding"
+    },
+    "preflight": {
+      "$ref": "#/$defs/binding"
+    },
+    "promptHash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "submissionText": {
+      "type": "string",
+      "minLength": 100
+    },
+    "submissionTextSha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "negativeConstraints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 3
+      },
+      "minItems": 5,
+      "uniqueItems": true
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/binding"
+      },
+      "uniqueItems": true
+    },
+    "imageSpec": {
+      "type": "object",
+      "properties": {
+        "aspectRatio": {
+          "enum": [
+            "1:1",
+            "4:3",
+            "3:2",
+            "16:9"
+          ]
+        },
+        "background": {
+          "type": "string",
+          "minLength": 3
+        },
+        "lighting": {
+          "type": "string",
+          "minLength": 3
+        },
+        "singleObjectOnly": {
+          "const": true
+        }
+      },
+      "required": [
+        "aspectRatio",
+        "background",
+        "lighting",
+        "singleObjectOnly"
+      ],
+      "unevaluatedProperties": false
+    },
+    "chatgptUrl": {
+      "const": "https://chatgpt.com/"
+    },
+    "plannedGenerationIndex": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 8
+    },
+    "plannedResultId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]+$"
+    },
+    "plannedResultOutput": {
+      "type": "string",
+      "minLength": 1
+    },
+    "plannedReviewId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]+$"
+    },
+    "humanActions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 10
+      },
+      "minItems": 5,
+      "uniqueItems": true
+    },
+    "automatedActions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 10
+      },
+      "minItems": 5,
+      "uniqueItems": true
+    },
+    "humanAttestation": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/humanAttestation"
+        }
+      ]
+    },
+    "result": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/binding"
+        }
+      ]
+    },
+    "review": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/binding"
+        }
+      ]
+    },
+    "reviewDecision": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        null,
+        "REJECTED",
+        "REVISION_REQUIRED",
+        "PRECANONICAL_CANDIDATE",
+        "HUMAN_SELECTED"
+      ]
+    },
+    "browserAutomationUsed": {
+      "const": false
+    },
+    "apiUsed": {
+      "const": false
+    },
+    "automaticRetryUsed": {
+      "const": false
+    },
+    "canonical": {
+      "const": false
+    },
+    "productionApproved": {
+      "const": false
+    }
+  },
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "operatorVersion",
+    "sessionId",
+    "createdAt",
+    "updatedAt",
+    "status",
+    "requestId",
+    "stage",
+    "request",
+    "preflight",
+    "promptHash",
+    "submissionText",
+    "submissionTextSha256",
+    "negativeConstraints",
+    "attachments",
+    "imageSpec",
+    "chatgptUrl",
+    "plannedGenerationIndex",
+    "plannedResultId",
+    "plannedResultOutput",
+    "plannedReviewId",
+    "humanActions",
+    "automatedActions",
+    "humanAttestation",
+    "result",
+    "review",
+    "reviewDecision",
+    "browserAutomationUsed",
+    "apiUsed",
+    "automaticRetryUsed",
+    "canonical",
+    "productionApproved"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "READY_FOR_HUMAN_WEB_SUBMISSION"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "humanAttestation": {
+            "type": "null"
+          },
+          "result": {
+            "type": "null"
+          },
+          "review": {
+            "type": "null"
+          },
+          "reviewDecision": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "VISUAL_REVIEW_REQUIRED"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "humanAttestation": {
+            "$ref": "#/$defs/humanAttestation"
+          },
+          "result": {
+            "$ref": "#/$defs/binding"
+          },
+          "review": {
+            "type": "null"
+          },
+          "reviewDecision": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "REVIEW_RECORDED"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "humanAttestation": {
+            "$ref": "#/$defs/humanAttestation"
+          },
+          "result": {
+            "$ref": "#/$defs/binding"
+          },
+          "review": {
+            "$ref": "#/$defs/binding"
+          },
+          "reviewDecision": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "humanAttestation": {
+      "type": "object",
+      "properties": {
+        "exactSubmissionTextUsed": {
+          "const": true
+        },
+        "noPromptRewrite": {
+          "const": true
+        },
+        "exactlyOneGenerationRequested": {
+          "const": true
+        },
+        "oneResultDownloaded": {
+          "const": true
+        },
+        "noAutomaticRetry": {
+          "const": true
+        },
+        "surface": {
+          "const": "ChatGPT Web / ChatGPT Images"
+        },
+        "attestedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "exactSubmissionTextUsed",
+        "noPromptRewrite",
+        "exactlyOneGenerationRequested",
+        "oneResultDownloaded",
+        "noAutomaticRetry",
+        "surface",
+        "attestedAt"
+      ],
+      "unevaluatedProperties": false
+    },
+    "binding": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "unevaluatedProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

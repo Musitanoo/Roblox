@@ -1,0 +1,569 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/transfer-report.schema.json",
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "state": {
+      "enum": ["intact", "damaged", "critical"]
+    },
+    "portableArtifact": {
+      "type": "object",
+      "required": ["kind", "stateId", "path", "bytes", "sha256"],
+      "properties": {
+        "kind": {
+          "enum": [
+            "GLB",
+            "HERO",
+            "STATE_SILHOUETTE",
+            "FRONT_SILHOUETTE",
+            "BACK_SILHOUETTE",
+            "FAR_MOBILE",
+            "PORTRAIT_MOBILE"
+          ]
+        },
+        "stateId": {"$ref": "#/$defs/state"},
+        "path": {
+          "type": "string",
+          "pattern": "^evidence/transfer/turret-fast-v1/[a-z0-9-]+/"
+        },
+        "bytes": {"type": "integer", "exclusiveMinimum": 0},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      },
+      "unevaluatedProperties": false
+    },
+    "maskCase": {
+      "type": "object",
+      "required": [
+        "stateId",
+        "path",
+        "sha256",
+        "maskAreaRatio",
+        "bboxWidthRatio",
+        "bboxHeightRatio",
+        "frameContactPixels",
+        "pass"
+      ],
+      "properties": {
+        "stateId": {"$ref": "#/$defs/state"},
+        "path": {
+          "type": "string",
+          "pattern": "^evidence/transfer/turret-fast-v1/[a-z0-9-]+/state-silhouette/"
+        },
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "maskAreaRatio": {"type": "number", "minimum": 0, "maximum": 1},
+        "bboxWidthRatio": {"type": "number", "minimum": 0, "maximum": 1},
+        "bboxHeightRatio": {"type": "number", "minimum": 0, "maximum": 1},
+        "frameContactPixels": {"type": "integer", "minimum": 0},
+        "pass": {"type": "boolean"}
+      },
+      "unevaluatedProperties": false
+    },
+    "comparison": {
+      "type": "object",
+      "required": [
+        "fromState",
+        "toState",
+        "intersectionOverUnion",
+        "differenceRatio",
+        "minimumDifference",
+        "pass"
+      ],
+      "properties": {
+        "fromState": {"$ref": "#/$defs/state"},
+        "toState": {"$ref": "#/$defs/state"},
+        "intersectionOverUnion": {"type": "number", "minimum": 0, "maximum": 1},
+        "differenceRatio": {"type": "number", "minimum": 0, "maximum": 1},
+        "minimumDifference": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "pass": {"type": "boolean"},
+        "territoryA": {"type": "string"},
+        "territoryB": {"type": "string"}
+      },
+      "unevaluatedProperties": false
+    },
+    "territory": {
+      "type": "object",
+      "required": [
+        "territoryId",
+        "status",
+        "fullBuildReportSha256",
+        "geometry",
+        "grammarAuditStatus",
+        "determinism",
+        "portableArtifacts",
+        "silhouetteCases",
+        "stateComparisons",
+        "severityOrdering",
+        "orientationComparison",
+        "mobileFraming",
+        "issues"
+      ],
+      "properties": {
+        "territoryId": {
+          "enum": [
+            "industrial-toy-defense",
+            "salvaged-frontier",
+            "clean-tactical-diorama"
+          ]
+        },
+        "status": {"enum": ["PASS", "FAIL"]},
+        "fullBuildReportSha256": {"$ref": "#/$defs/sha256"},
+        "geometry": {
+          "type": "object",
+          "required": [
+            "variantCount",
+            "maximumTriangles",
+            "triangleBudget",
+            "exportCount",
+            "fullRenderCount"
+          ],
+          "properties": {
+            "variantCount": {"const": 3},
+            "maximumTriangles": {"type": "integer", "minimum": 1, "maximum": 3500},
+            "triangleBudget": {"const": 3500},
+            "exportCount": {"const": 3},
+            "fullRenderCount": {"const": 36}
+          },
+          "unevaluatedProperties": false
+        },
+        "grammarAuditStatus": {"const": "PASS"},
+        "determinism": {
+          "type": "object",
+          "required": [
+            "status",
+            "runExitCodes",
+            "canonicalReportSha256",
+            "exportSha256"
+          ],
+          "properties": {
+            "status": {"enum": ["PASS", "FAIL"]},
+            "runExitCodes": {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {"type": "integer"}
+            },
+            "canonicalReportSha256": {"$ref": "#/$defs/sha256"},
+            "exportSha256": {
+              "type": "object",
+              "required": ["intact", "damaged", "critical"],
+              "properties": {
+                "intact": {"$ref": "#/$defs/sha256"},
+                "damaged": {"$ref": "#/$defs/sha256"},
+                "critical": {"$ref": "#/$defs/sha256"}
+              },
+              "unevaluatedProperties": false
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        "portableArtifacts": {
+          "type": "array",
+          "minItems": 17,
+          "maxItems": 17,
+          "items": {"$ref": "#/$defs/portableArtifact"}
+        },
+        "silhouetteCases": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {"$ref": "#/$defs/maskCase"}
+        },
+        "stateComparisons": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {"$ref": "#/$defs/comparison"}
+        },
+        "severityOrdering": {
+          "type": "object",
+          "required": [
+            "damagedDifferenceRatio",
+            "criticalDifferenceRatio",
+            "minimumCriticalLead",
+            "pass"
+          ],
+          "properties": {
+            "damagedDifferenceRatio": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "criticalDifferenceRatio": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "minimumCriticalLead": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "maximum": 1
+            },
+            "pass": {"type": "boolean"}
+          },
+          "unevaluatedProperties": false
+        },
+        "orientationComparison": {
+          "allOf": [
+            {"$ref": "#/$defs/comparison"},
+            {
+              "properties": {
+                "fromState": {"const": "intact"},
+                "toState": {"const": "intact"}
+              }
+            }
+          ]
+        },
+        "mobileFraming": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "required": [
+              "kind",
+              "stateId",
+              "path",
+              "foregroundAreaRatio",
+              "foregroundBboxHeightRatio",
+              "frameContactPixels",
+              "pass"
+            ],
+            "properties": {
+              "kind": {"enum": ["FAR_MOBILE", "PORTRAIT_MOBILE"]},
+              "stateId": {"$ref": "#/$defs/state"},
+              "path": {"type": "string"},
+              "foregroundAreaRatio": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "foregroundBboxHeightRatio": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "frameContactPixels": {"type": "integer", "minimum": 0},
+              "pass": {"type": "boolean"}
+            },
+            "unevaluatedProperties": false
+          }
+        },
+        "issues": {"type": "array", "items": {"type": "string"}}
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "assetId",
+    "generatedAt",
+    "rendererTruth",
+    "automatedStatus",
+    "automatedScore",
+    "overallStatus",
+    "inputHashes",
+    "thresholds",
+    "territories",
+    "crossTerritoryComparisons",
+    "evidencePackageSha256",
+    "reviewArtifacts",
+    "humanReview",
+    "issues",
+    "blockingReasons"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/transfer-report.schema.json"
+    },
+    "schemaVersion": {"const": "1.0.0"},
+    "assetId": {"const": "turret_fast_v1"},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "rendererTruth": {
+      "const": "BLENDER_TRANSFER_PREFLIGHT_HUMAN_AND_STUDIO_AUTHORITIES_REMAIN_SEPARATE"
+    },
+    "automatedStatus": {"enum": ["PASS", "FAIL"]},
+    "automatedScore": {"type": "integer", "minimum": 0, "maximum": 100},
+    "overallStatus": {"enum": ["PASS", "PARTIAL", "FAIL"]},
+    "inputHashes": {
+      "type": "object",
+      "required": [
+        "contract",
+        "humanReview",
+        "generator",
+        "proofBuilder",
+        "transferBuildValidator",
+        "metricLibrary",
+        "baseCompiler",
+        "shapeLanguage",
+        "semanticPalette",
+        "materials",
+        "camera",
+        "lighting",
+        "industrial-toy-defense",
+        "salvaged-frontier",
+        "clean-tactical-diorama"
+      ],
+      "properties": {
+        "contract": {"$ref": "#/$defs/sha256"},
+        "humanReview": {"$ref": "#/$defs/sha256"},
+        "generator": {"$ref": "#/$defs/sha256"},
+        "proofBuilder": {"$ref": "#/$defs/sha256"},
+        "transferBuildValidator": {"$ref": "#/$defs/sha256"},
+        "metricLibrary": {"$ref": "#/$defs/sha256"},
+        "baseCompiler": {"$ref": "#/$defs/sha256"},
+        "shapeLanguage": {"$ref": "#/$defs/sha256"},
+        "semanticPalette": {"$ref": "#/$defs/sha256"},
+        "materials": {"$ref": "#/$defs/sha256"},
+        "camera": {"$ref": "#/$defs/sha256"},
+        "lighting": {"$ref": "#/$defs/sha256"},
+        "industrial-toy-defense": {"$ref": "#/$defs/sha256"},
+        "salvaged-frontier": {"$ref": "#/$defs/sha256"},
+        "clean-tactical-diorama": {"$ref": "#/$defs/sha256"}
+      },
+      "unevaluatedProperties": false
+    },
+    "thresholds": {
+      "type": "object",
+      "required": [
+        "minimumMaskAreaRatio",
+        "maximumFrameContactPixels",
+        "minimumDamagedDifference",
+        "minimumCriticalDifference",
+        "minimumCriticalLead",
+        "minimumCrossTerritoryDifference",
+        "minimumFrontBackDifference",
+        "minimumFarBboxHeightRatio",
+        "minimumPortraitBboxHeightRatio"
+      ],
+      "properties": {
+        "minimumMaskAreaRatio": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "maximumFrameContactPixels": {"type": "integer", "minimum": 0},
+        "minimumDamagedDifference": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "minimumCriticalDifference": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "minimumCriticalLead": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "minimumCrossTerritoryDifference": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "minimumFrontBackDifference": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "minimumFarBboxHeightRatio": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "minimumPortraitBboxHeightRatio": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "territories": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {"$ref": "#/$defs/territory"}
+    },
+    "crossTerritoryComparisons": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "allOf": [
+          {"$ref": "#/$defs/comparison"},
+          {
+            "required": ["territoryA", "territoryB"],
+            "properties": {
+              "fromState": {"const": "intact"},
+              "toState": {"const": "intact"}
+            }
+          }
+        ]
+      }
+    },
+    "evidencePackageSha256": {"$ref": "#/$defs/sha256"},
+    "reviewArtifacts": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["kind", "path", "bytes", "sha256"],
+        "properties": {
+          "kind": {
+            "enum": [
+              "HTML_GALLERY",
+              "HERO_CONTACT_SHEET",
+              "SILHOUETTE_CONTACT_SHEET"
+            ]
+          },
+          "path": {
+            "type": "string",
+            "pattern": "^evidence/transfer/turret-fast-v1/review/"
+          },
+          "bytes": {"type": "integer", "exclusiveMinimum": 0},
+          "sha256": {"$ref": "#/$defs/sha256"}
+        },
+        "unevaluatedProperties": false
+      }
+    },
+    "humanReview": {
+      "type": "object",
+      "required": [
+        "status",
+        "selectedTerritory",
+        "reviewer",
+        "reviewedAt",
+        "evidencePackageSha256",
+        "decision",
+        "scoreTotal"
+      ],
+      "properties": {
+        "status": {"enum": ["PENDING", "APPROVED", "REJECTED"]},
+        "selectedTerritory": {
+          "type": ["string", "null"],
+          "enum": [
+            null,
+            "industrial-toy-defense",
+            "salvaged-frontier",
+            "clean-tactical-diorama"
+          ]
+        },
+        "reviewer": {"type": ["string", "null"]},
+        "reviewedAt": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "evidencePackageSha256": {
+          "type": ["string", "null"],
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "decision": {
+          "type": ["string", "null"],
+          "enum": [null, "APPROVE_TRANSFER", "REOPEN_BIBLE"]
+        },
+        "scoreTotal": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {"status": {"const": "PENDING"}},
+            "required": ["status"]
+          },
+          "then": {
+            "properties": {"scoreTotal": {"const": null}}
+          }
+        },
+        {
+          "if": {
+            "properties": {"status": {"const": "APPROVED"}},
+            "required": ["status"]
+          },
+          "then": {
+            "properties": {
+              "scoreTotal": {
+                "type": "integer",
+                "minimum": 90
+              }
+            }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "issues": {"type": "array", "items": {"type": "string"}},
+    "blockingReasons": {"type": "array", "items": {"type": "string"}}
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {"automatedStatus": {"const": "PASS"}},
+        "required": ["automatedStatus"]
+      },
+      "then": {
+        "properties": {
+          "automatedScore": {"minimum": 90},
+          "issues": {"maxItems": 0}
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {"overallStatus": {"const": "PASS"}},
+        "required": ["overallStatus"]
+      },
+      "then": {
+        "properties": {
+          "automatedStatus": {"const": "PASS"},
+          "humanReview": {
+            "properties": {
+              "status": {"const": "APPROVED"},
+              "decision": {"const": "APPROVE_TRANSFER"}
+            }
+          },
+          "blockingReasons": {"maxItems": 0}
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {"overallStatus": {"const": "PARTIAL"}},
+        "required": ["overallStatus"]
+      },
+      "then": {
+        "properties": {
+          "automatedStatus": {"const": "PASS"},
+          "blockingReasons": {"minItems": 1}
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {"overallStatus": {"const": "FAIL"}},
+        "required": ["overallStatus"]
+      },
+      "then": {
+        "properties": {
+          "automatedStatus": {"const": "FAIL"},
+          "issues": {"minItems": 1}
+        }
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}

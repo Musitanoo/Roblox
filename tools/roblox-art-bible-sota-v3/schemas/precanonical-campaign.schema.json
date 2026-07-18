@@ -1,0 +1,415 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/precanonical-campaign.schema.json",
+  "$defs": {
+    "binding": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "unevaluatedProperties": false
+    },
+    "nullableBinding": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/binding"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "revision": {
+      "type": "object",
+      "properties": {
+        "sourceCampaign": {
+          "$ref": "#/$defs/binding"
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 30
+        },
+        "restartTaskId": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]+$"
+        },
+        "carriedTaskIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]+$"
+          }
+        },
+        "supersededTaskIds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]+$"
+          }
+        }
+      },
+      "required": [
+        "sourceCampaign",
+        "reason",
+        "restartTaskId",
+        "carriedTaskIds",
+        "supersededTaskIds"
+      ],
+      "unevaluatedProperties": false
+    },
+    "attempt": {
+      "type": "object",
+      "properties": {
+        "attemptIndex": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "request": {
+          "$ref": "#/$defs/binding"
+        },
+        "result": {
+          "$ref": "#/$defs/nullableBinding"
+        },
+        "review": {
+          "$ref": "#/$defs/nullableBinding"
+        },
+        "decision": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            null,
+            "REJECTED",
+            "REVISION_REQUIRED",
+            "PRECANONICAL_CANDIDATE",
+            "HUMAN_SELECTED"
+          ]
+        },
+        "continuitySource": {
+          "$ref": "#/$defs/nullableBinding"
+        },
+        "revisionSource": {
+          "$ref": "#/$defs/nullableBinding"
+        }
+      },
+      "required": [
+        "attemptIndex",
+        "request",
+        "result",
+        "review",
+        "decision",
+        "continuitySource",
+        "revisionSource"
+      ],
+      "unevaluatedProperties": false
+    },
+    "task": {
+      "type": "object",
+      "properties": {
+        "taskId": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]+$"
+        },
+        "ordinal": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 64
+        },
+        "objectOrdinal": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 16
+        },
+        "assetId": {
+          "enum": [
+            "barricade",
+            "damage_effect",
+            "enemy_standard",
+            "floor_module",
+            "objective_core",
+            "turret_fast_v1"
+          ]
+        },
+        "displayName": {
+          "type": "string",
+          "minLength": 3
+        },
+        "stateId": {
+          "enum": [
+            "intact",
+            "damaged",
+            "critical"
+          ]
+        },
+        "stateOrdinal": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        },
+        "stateCount": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 3
+        },
+        "canon": {
+          "$ref": "#/$defs/binding"
+        },
+        "predecessorTaskId": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[a-z0-9][a-z0-9-]+$"
+        },
+        "status": {
+          "enum": [
+            "PENDING",
+            "READY",
+            "VISUAL_REVIEW_REQUIRED",
+            "ACCEPTED",
+            "BLOCKED"
+          ]
+        },
+        "attempts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/attempt"
+          },
+          "maxItems": 5
+        },
+        "acceptedResult": {
+          "$ref": "#/$defs/nullableBinding"
+        },
+        "acceptedReview": {
+          "$ref": "#/$defs/nullableBinding"
+        }
+      },
+      "required": [
+        "taskId",
+        "ordinal",
+        "objectOrdinal",
+        "assetId",
+        "displayName",
+        "stateId",
+        "stateOrdinal",
+        "stateCount",
+        "canon",
+        "predecessorTaskId",
+        "status",
+        "attempts",
+        "acceptedResult",
+        "acceptedReview"
+      ],
+      "unevaluatedProperties": false
+    }
+  },
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/precanonical-campaign.schema.json"
+    },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "campaignVersion": {
+      "enum": [
+        "1.0.0",
+        "2.0.0",
+        "2.1.0",
+        "2.2.0"
+      ]
+    },
+    "campaignId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]+$"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "enum": [
+        "ACTIVE",
+        "COMPLETE",
+        "BLOCKED"
+      ]
+    },
+    "artDirection": {
+      "const": "salvaged-frontier"
+    },
+    "requiredModel": {
+      "const": "gpt-image-2"
+    },
+    "generationSurface": {
+      "const": "chatgpt_web_images"
+    },
+    "oneGenerationPerObjectState": {
+      "const": true
+    },
+    "independentStateDesignForbidden": {
+      "const": true
+    },
+    "maxAttemptsPerTask": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "currentTaskId": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-z0-9][a-z0-9-]+$"
+    },
+    "selectionPolicy": {
+      "type": "object",
+      "properties": {
+        "globalOrderRequired": {
+          "const": false
+        },
+        "promptAccess": {
+          "const": "ALL_TASKS"
+        },
+        "generationEligibility": {
+          "const": "OBJECT_LOCAL_CONTINUITY"
+        },
+        "activeTaskMutable": {
+          "const": true
+        }
+      },
+      "required": [
+        "globalOrderRequired",
+        "promptAccess",
+        "generationEligibility",
+        "activeTaskMutable"
+      ],
+      "unevaluatedProperties": false
+    },
+    "objectOrder": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "const": "barricade"
+        },
+        {
+          "const": "damage_effect"
+        },
+        {
+          "const": "enemy_standard"
+        },
+        {
+          "const": "floor_module"
+        },
+        {
+          "const": "objective_core"
+        },
+        {
+          "const": "turret_fast_v1"
+        }
+      ],
+      "items": false,
+      "minItems": 6,
+      "maxItems": 6
+    },
+    "revision": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/revision"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/task"
+      },
+      "minItems": 16,
+      "maxItems": 16
+    },
+    "progress": {
+      "type": "object",
+      "properties": {
+        "totalObjects": {
+          "const": 6
+        },
+        "completedObjects": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 6
+        },
+        "totalTasks": {
+          "const": 16
+        },
+        "completedTasks": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 16
+        },
+        "remainingTasks": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 16
+        }
+      },
+      "required": [
+        "totalObjects",
+        "completedObjects",
+        "totalTasks",
+        "completedTasks",
+        "remainingTasks"
+      ],
+      "unevaluatedProperties": false
+    },
+    "canonical": {
+      "const": false
+    },
+    "productionApproved": {
+      "const": false
+    }
+  },
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "campaignVersion",
+    "campaignId",
+    "createdAt",
+    "updatedAt",
+    "status",
+    "artDirection",
+    "requiredModel",
+    "generationSurface",
+    "oneGenerationPerObjectState",
+    "independentStateDesignForbidden",
+    "maxAttemptsPerTask",
+    "currentTaskId",
+    "objectOrder",
+    "tasks",
+    "progress",
+    "canonical",
+    "productionApproved"
+  ],
+  "unevaluatedProperties": false
+}

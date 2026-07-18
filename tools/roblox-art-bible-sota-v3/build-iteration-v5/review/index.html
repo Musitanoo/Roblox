@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Roblox Art Bible v3 · Review Gallery</title>
+  <style>
+    :root { color-scheme: dark; --bg:#0b1118; --panel:#121b25; --line:#263646; --text:#e8f1f7; --muted:#91a4b5; --cyan:#42d7e5; }
+    * { box-sizing:border-box } body { margin:0; font:15px/1.45 Inter,Segoe UI,sans-serif; background:linear-gradient(145deg,#081018,#101925); color:var(--text) }
+    header { position:sticky; top:0; z-index:3; padding:18px clamp(18px,4vw,52px); background:#0b1118e8; border-bottom:1px solid var(--line); backdrop-filter:blur(12px) }
+    h1 { margin:0 0 4px; font-size:clamp(20px,3vw,32px); letter-spacing:-.03em } .sub { color:var(--muted) }
+    .toolbar { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px } select,button { border:1px solid var(--line); border-radius:9px; background:#162230; color:var(--text); padding:9px 12px }
+    main { padding:24px clamp(18px,4vw,52px) 60px } .count { margin-bottom:14px; color:var(--muted) }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(285px,1fr)); gap:16px }
+    .card { overflow:hidden; border:1px solid var(--line); border-radius:14px; background:var(--panel); box-shadow:0 12px 34px #0005; transition:.18s transform,.18s border-color }
+    .card:hover,.card:focus-within { transform:translateY(-3px); border-color:#3f5d75 } .card[hidden] { display:none }
+    .image-button { display:block; width:100%; padding:0; border:0; border-radius:0; cursor:zoom-in; background:#080d13 }
+    img { display:block; width:100%; aspect-ratio:4/3; object-fit:cover } .meta { display:grid; gap:3px; padding:13px 14px 15px }
+    .meta div { display:flex; justify-content:space-between; gap:8px } small { color:var(--muted) }
+    .state { padding:2px 8px; border-radius:999px; font-size:11px; text-transform:uppercase; letter-spacing:.08em; background:#263646 }
+    .state.damaged { background:#5b4a18 } .state.critical { background:#632a33 }
+    dialog { width:min(94vw,1200px); border:1px solid var(--line); border-radius:14px; padding:0; background:#070c11; color:var(--text) }
+    dialog::backdrop { background:#000c } dialog img { width:100%; height:auto; max-height:84vh; object-fit:contain } dialog button { position:absolute; right:10px; top:10px; cursor:pointer }
+  </style>
+</head>
+<body>
+  <header><h1>Review Gallery · Art Bible v3</h1><div class="sub">39 variantes applicables · rendu Blender de prévalidation · Studio reste canonique · 2026-07-16T06:04:58.229539Z</div>
+    <div class="toolbar">
+      <select id="territory" aria-label="Territoire"><option value="">Tous les territoires</option><option value="clean-tactical-diorama">clean-tactical-diorama</option><option value="industrial-toy-defense">industrial-toy-defense</option><option value="salvaged-frontier">salvaged-frontier</option></select>
+      <select id="asset" aria-label="Asset"><option value="">Tous les assets</option><option value="barricade">barricade</option><option value="damage_effect">damage_effect</option><option value="enemy_standard">enemy_standard</option><option value="floor_module">floor_module</option><option value="objective_core">objective_core</option></select>
+      <select id="state" aria-label="État"><option value="">Tous les états</option><option value="intact">intact</option><option value="damaged">damaged</option><option value="critical">critical</option></select>
+      <button id="reset" type="button">Réinitialiser</button>
+    </div>
+  </header>
+  <main><div class="count" id="count"></div><section class="grid">
+            <article class="card" tabindex="0"
+                data-territory="industrial-toy-defense"
+                data-asset="barricade"
+                data-state="critical">
+              <button class="image-button" type="button" aria-label="Agrandir industrial-toy-defense · barricade · critical">
+                <img loading="lazy" src="../industrial-toy-defense/renders/review/industrial-toy-defense__barricade__critical__hero.png" alt="industrial-toy-defense · barricade · critical">
+              </button>
+              <div class="meta">
+                <div><strong>barricade</strong><span class="state critical">critical</span></div>
+                <small>industrial-toy-defense</small>
+                <small>1,564 / 2,000 triangles · 41 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="industrial-toy-defense"
+                data-asset="barricade"
+                data-state="damaged">
+              <button class="image-button" type="button" aria-label="Agrandir industrial-toy-defense · barricade · damaged">
+                <img loading="lazy" src="../industrial-toy-defense/renders/review/industrial-toy-defense__barricade__damaged__hero.png" alt="industrial-toy-defense · barricade · damaged">
+              </button>
+              <div class="meta">
+                <div><strong>barricade</strong><span class="state damaged">damaged</span></div>
+                <small>industrial-toy-defense</small>
+                <small>1,520 / 2,000 triangles · 40 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="industrial-toy-defense"
+                data-asset="barricade"
+                data-state="intact">
+              <button class="image-button" type="button" aria-label="Agrandir industrial-toy-defense · barricade · intact">
+                <img loading="lazy" src="../industrial-toy-defense/renders/review/industrial-toy-defense__barricade__intact__hero.png" alt="industrial-toy-defense · barricade · intact">
+              </button>
+              <div class="meta">
+                <div><strong>barricade</strong><span class="state intact">intact</span></div>
+                <small>industrial-toy-defense</small>
+                <small>1,476 / 2,000 triangles · 39 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="industrial-toy-defense"
+                data-asset="damage_effect"
+                data-state="critical">
+              <button class="image-button" type="button" aria-label="Agrandir industrial-toy-defense · damage_effect · critical">
+                <img loading="lazy" src="../industrial-toy-defense/renders/review/industrial-toy-defense__damage_effect__critical__hero.png" alt="industrial-toy-defense · damage_effect · critical">
+              </button>
+              <div class="meta">
+                <div><strong>damage_effect</strong><span class="state critical">critical</span></div>
+                <small>industrial-toy-defense</small>
+                <small>128 / 300 triangles · 10 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="industrial-toy-defense"
+                data-asset="damage_effect"
+                data-state="damaged">
+              <button class="image-button" type="button" aria-label="Agrandir industrial-toy-defense · damage_effect · damaged">
+                <img loading="lazy" src="../industrial-toy-defense/renders/review/industrial-toy-defense__damage_effect__damaged__hero.png" alt="industrial-toy-defense · damage_effect · damaged">
+              </button>
+              <div class="meta">
+                <div><strong>damage_effect</strong><span class="state damaged">damaged</span></div>
+                <small>industrial-toy-defense</small>
+                <small>120 / 300 triangles · 9 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="industrial-toy-defense"
+                data-asset="enemy_standard"
+                data-state="critical">
+              <button class="image-button" type="button" aria-label="Agrandir industrial-toy-defense · enemy_standard · critical">
+                <img loading="lazy" src="../industrial-toy-defense/renders/review/industrial-toy-defense__enemy_standard__critical__hero.png" alt="industrial-toy-defense · enemy_standard · critical">
+              </button>
+              <div class="meta">
+                <div><strong>enemy_standard</strong><span class="state critical">critical</span></div>
+                <small>industrial-toy-defense</small>
+                <small>1,912 / 5,000 triangles · 31 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="industrial-toy-defense"
+                data-asset="enemy_standard"
+                data-state="damaged">
+              <button class="image-button" type="button" aria-label="Agrandir industrial-toy-defense · enemy_standard · damaged">
+                <img loading="lazy" src="../industrial-toy-defense/renders/review/industrial-toy-defense__enemy_standard__damaged__hero.png" alt="industrial-toy-defense · enemy_standard · damaged">
+              </button>
+              <div class="meta">
+                <div><strong>enemy_standard</strong><span class="state damaged">damaged</span></div>
+                <small>industrial-toy-defense</small>
+                <small>1,868 / 5,000 triangles · 30 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="industrial-toy-defense"
+                data-asset="enemy_standard"
+                data-state="intact">
+              <button class="image-button" type="button" aria-label="Agrandir industrial-toy-defense · enemy_standard · intact">
+                <img loading="lazy" src="../industrial-toy-defense/renders/review/industrial-toy-defense__enemy_standard__intact__hero.png" alt="industrial-toy-defense · enemy_standard · intact">
+              </button>
+              <div class="meta">
+                <div><strong>enemy_standard</strong><span class="state intact">intact</span></div>
+                <small>industrial-toy-defense</small>
+                <small>1,824 / 5,000 triangles · 29 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="industrial-toy-defense"
+                data-asset="floor_module"
+                data-state="damaged">
+              <button class="image-button" type="button" aria-label="Agrandir industrial-toy-defense · floor_module · damaged">
+                <img loading="lazy" src="../industrial-toy-defense/renders/review/industrial-toy-defense__floor_module__damaged__hero.png" alt="industrial-toy-defense · floor_module · damaged">
+              </button>
+              <div class="meta">
+                <div><strong>floor_module</strong><span class="state damaged">damaged</span></div>
+                <small>industrial-toy-defense</small>
+                <small>724 / 800 triangles · 15 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="industrial-toy-defense"
+                data-asset="floor_module"
+                data-state="intact">
+              <button class="image-button" type="button" aria-label="Agrandir industrial-toy-defense · floor_module · intact">
+                <img loading="lazy" src="../industrial-toy-defense/renders/review/industrial-toy-defense__floor_module__intact__hero.png" alt="industrial-toy-defense · floor_module · intact">
+              </button>
+              <div class="meta">
+                <div><strong>floor_module</strong><span class="state intact">intact</span></div>
+                <small>industrial-toy-defense</small>
+                <small>688 / 800 triangles · 12 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="industrial-toy-defense"
+                data-asset="objective_core"
+                data-state="critical">
+              <button class="image-button" type="button" aria-label="Agrandir industrial-toy-defense · objective_core · critical">
+                <img loading="lazy" src="../industrial-toy-defense/renders/review/industrial-toy-defense__objective_core__critical__hero.png" alt="industrial-toy-defense · objective_core · critical">
+              </button>
+              <div class="meta">
+                <div><strong>objective_core</strong><span class="state critical">critical</span></div>
+                <small>industrial-toy-defense</small>
+                <small>3,228 / 4,500 triangles · 46 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="industrial-toy-defense"
+                data-asset="objective_core"
+                data-state="damaged">
+              <button class="image-button" type="button" aria-label="Agrandir industrial-toy-defense · objective_core · damaged">
+                <img loading="lazy" src="../industrial-toy-defense/renders/review/industrial-toy-defense__objective_core__damaged__hero.png" alt="industrial-toy-defense · objective_core · damaged">
+              </button>
+              <div class="meta">
+                <div><strong>objective_core</strong><span class="state damaged">damaged</span></div>
+                <small>industrial-toy-defense</small>
+                <small>3,184 / 4,500 triangles · 45 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="industrial-toy-defense"
+                data-asset="objective_core"
+                data-state="intact">
+              <button class="image-button" type="button" aria-label="Agrandir industrial-toy-defense · objective_core · intact">
+                <img loading="lazy" src="../industrial-toy-defense/renders/review/industrial-toy-defense__objective_core__intact__hero.png" alt="industrial-toy-defense · objective_core · intact">
+              </button>
+              <div class="meta">
+                <div><strong>objective_core</strong><span class="state intact">intact</span></div>
+                <small>industrial-toy-defense</small>
+                <small>3,140 / 4,500 triangles · 44 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="salvaged-frontier"
+                data-asset="barricade"
+                data-state="critical">
+              <button class="image-button" type="button" aria-label="Agrandir salvaged-frontier · barricade · critical">
+                <img loading="lazy" src="../salvaged-frontier/renders/review/salvaged-frontier__barricade__critical__hero.png" alt="salvaged-frontier · barricade · critical">
+              </button>
+              <div class="meta">
+                <div><strong>barricade</strong><span class="state critical">critical</span></div>
+                <small>salvaged-frontier</small>
+                <small>848 / 2,000 triangles · 24 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="salvaged-frontier"
+                data-asset="barricade"
+                data-state="damaged">
+              <button class="image-button" type="button" aria-label="Agrandir salvaged-frontier · barricade · damaged">
+                <img loading="lazy" src="../salvaged-frontier/renders/review/salvaged-frontier__barricade__damaged__hero.png" alt="salvaged-frontier · barricade · damaged">
+              </button>
+              <div class="meta">
+                <div><strong>barricade</strong><span class="state damaged">damaged</span></div>
+                <small>salvaged-frontier</small>
+                <small>848 / 2,000 triangles · 24 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="salvaged-frontier"
+                data-asset="barricade"
+                data-state="intact">
+              <button class="image-button" type="button" aria-label="Agrandir salvaged-frontier · barricade · intact">
+                <img loading="lazy" src="../salvaged-frontier/renders/review/salvaged-frontier__barricade__intact__hero.png" alt="salvaged-frontier · barricade · intact">
+              </button>
+              <div class="meta">
+                <div><strong>barricade</strong><span class="state intact">intact</span></div>
+                <small>salvaged-frontier</small>
+                <small>848 / 2,000 triangles · 24 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="salvaged-frontier"
+                data-asset="damage_effect"
+                data-state="critical">
+              <button class="image-button" type="button" aria-label="Agrandir salvaged-frontier · damage_effect · critical">
+                <img loading="lazy" src="../salvaged-frontier/renders/review/salvaged-frontier__damage_effect__critical__hero.png" alt="salvaged-frontier · damage_effect · critical">
+              </button>
+              <div class="meta">
+                <div><strong>damage_effect</strong><span class="state critical">critical</span></div>
+                <small>salvaged-frontier</small>
+                <small>100 / 300 triangles · 6 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="salvaged-frontier"
+                data-asset="damage_effect"
+                data-state="damaged">
+              <button class="image-button" type="button" aria-label="Agrandir salvaged-frontier · damage_effect · damaged">
+                <img loading="lazy" src="../salvaged-frontier/renders/review/salvaged-frontier__damage_effect__damaged__hero.png" alt="salvaged-frontier · damage_effect · damaged">
+              </button>
+              <div class="meta">
+                <div><strong>damage_effect</strong><span class="state damaged">damaged</span></div>
+                <small>salvaged-frontier</small>
+                <small>92 / 300 triangles · 5 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="salvaged-frontier"
+                data-asset="enemy_standard"
+                data-state="critical">
+              <button class="image-button" type="button" aria-label="Agrandir salvaged-frontier · enemy_standard · critical">
+                <img loading="lazy" src="../salvaged-frontier/renders/review/salvaged-frontier__enemy_standard__critical__hero.png" alt="salvaged-frontier · enemy_standard · critical">
+              </button>
+              <div class="meta">
+                <div><strong>enemy_standard</strong><span class="state critical">critical</span></div>
+                <small>salvaged-frontier</small>
+                <small>840 / 5,000 triangles · 19 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="salvaged-frontier"
+                data-asset="enemy_standard"
+                data-state="damaged">
+              <button class="image-button" type="button" aria-label="Agrandir salvaged-frontier · enemy_standard · damaged">
+                <img loading="lazy" src="../salvaged-frontier/renders/review/salvaged-frontier__enemy_standard__damaged__hero.png" alt="salvaged-frontier · enemy_standard · damaged">
+              </button>
+              <div class="meta">
+                <div><strong>enemy_standard</strong><span class="state damaged">damaged</span></div>
+                <small>salvaged-frontier</small>
+                <small>840 / 5,000 triangles · 19 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="salvaged-frontier"
+                data-asset="enemy_standard"
+                data-state="intact">
+              <button class="image-button" type="button" aria-label="Agrandir salvaged-frontier · enemy_standard · intact">
+                <img loading="lazy" src="../salvaged-frontier/renders/review/salvaged-frontier__enemy_standard__intact__hero.png" alt="salvaged-frontier · enemy_standard · intact">
+              </button>
+              <div class="meta">
+                <div><strong>enemy_standard</strong><span class="state intact">intact</span></div>
+                <small>salvaged-frontier</small>
+                <small>840 / 5,000 triangles · 19 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="salvaged-frontier"
+                data-asset="floor_module"
+                data-state="damaged">
+              <button class="image-button" type="button" aria-label="Agrandir salvaged-frontier · floor_module · damaged">
+                <img loading="lazy" src="../salvaged-frontier/renders/review/salvaged-frontier__floor_module__damaged__hero.png" alt="salvaged-frontier · floor_module · damaged">
+              </button>
+              <div class="meta">
+                <div><strong>floor_module</strong><span class="state damaged">damaged</span></div>
+                <small>salvaged-frontier</small>
+                <small>540 / 800 triangles · 17 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="salvaged-frontier"
+                data-asset="floor_module"
+                data-state="intact">
+              <button class="image-button" type="button" aria-label="Agrandir salvaged-frontier · floor_module · intact">
+                <img loading="lazy" src="../salvaged-frontier/renders/review/salvaged-frontier__floor_module__intact__hero.png" alt="salvaged-frontier · floor_module · intact">
+              </button>
+              <div class="meta">
+                <div><strong>floor_module</strong><span class="state intact">intact</span></div>
+                <small>salvaged-frontier</small>
+                <small>540 / 800 triangles · 17 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="salvaged-frontier"
+                data-asset="objective_core"
+                data-state="critical">
+              <button class="image-button" type="button" aria-label="Agrandir salvaged-frontier · objective_core · critical">
+                <img loading="lazy" src="../salvaged-frontier/renders/review/salvaged-frontier__objective_core__critical__hero.png" alt="salvaged-frontier · objective_core · critical">
+              </button>
+              <div class="meta">
+                <div><strong>objective_core</strong><span class="state critical">critical</span></div>
+                <small>salvaged-frontier</small>
+                <small>1,560 / 4,500 triangles · 20 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="salvaged-frontier"
+                data-asset="objective_core"
+                data-state="damaged">
+              <button class="image-button" type="button" aria-label="Agrandir salvaged-frontier · objective_core · damaged">
+                <img loading="lazy" src="../salvaged-frontier/renders/review/salvaged-frontier__objective_core__damaged__hero.png" alt="salvaged-frontier · objective_core · damaged">
+              </button>
+              <div class="meta">
+                <div><strong>objective_core</strong><span class="state damaged">damaged</span></div>
+                <small>salvaged-frontier</small>
+                <small>1,560 / 4,500 triangles · 20 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="salvaged-frontier"
+                data-asset="objective_core"
+                data-state="intact">
+              <button class="image-button" type="button" aria-label="Agrandir salvaged-frontier · objective_core · intact">
+                <img loading="lazy" src="../salvaged-frontier/renders/review/salvaged-frontier__objective_core__intact__hero.png" alt="salvaged-frontier · objective_core · intact">
+              </button>
+              <div class="meta">
+                <div><strong>objective_core</strong><span class="state intact">intact</span></div>
+                <small>salvaged-frontier</small>
+                <small>1,560 / 4,500 triangles · 20 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="clean-tactical-diorama"
+                data-asset="barricade"
+                data-state="critical">
+              <button class="image-button" type="button" aria-label="Agrandir clean-tactical-diorama · barricade · critical">
+                <img loading="lazy" src="../clean-tactical-diorama/renders/review/clean-tactical-diorama__barricade__critical__hero.png" alt="clean-tactical-diorama · barricade · critical">
+              </button>
+              <div class="meta">
+                <div><strong>barricade</strong><span class="state critical">critical</span></div>
+                <small>clean-tactical-diorama</small>
+                <small>968 / 2,000 triangles · 22 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="clean-tactical-diorama"
+                data-asset="barricade"
+                data-state="damaged">
+              <button class="image-button" type="button" aria-label="Agrandir clean-tactical-diorama · barricade · damaged">
+                <img loading="lazy" src="../clean-tactical-diorama/renders/review/clean-tactical-diorama__barricade__damaged__hero.png" alt="clean-tactical-diorama · barricade · damaged">
+              </button>
+              <div class="meta">
+                <div><strong>barricade</strong><span class="state damaged">damaged</span></div>
+                <small>clean-tactical-diorama</small>
+                <small>956 / 2,000 triangles · 21 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="clean-tactical-diorama"
+                data-asset="barricade"
+                data-state="intact">
+              <button class="image-button" type="button" aria-label="Agrandir clean-tactical-diorama · barricade · intact">
+                <img loading="lazy" src="../clean-tactical-diorama/renders/review/clean-tactical-diorama__barricade__intact__hero.png" alt="clean-tactical-diorama · barricade · intact">
+              </button>
+              <div class="meta">
+                <div><strong>barricade</strong><span class="state intact">intact</span></div>
+                <small>clean-tactical-diorama</small>
+                <small>944 / 2,000 triangles · 20 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="clean-tactical-diorama"
+                data-asset="damage_effect"
+                data-state="critical">
+              <button class="image-button" type="button" aria-label="Agrandir clean-tactical-diorama · damage_effect · critical">
+                <img loading="lazy" src="../clean-tactical-diorama/renders/review/clean-tactical-diorama__damage_effect__critical__hero.png" alt="clean-tactical-diorama · damage_effect · critical">
+              </button>
+              <div class="meta">
+                <div><strong>damage_effect</strong><span class="state critical">critical</span></div>
+                <small>clean-tactical-diorama</small>
+                <small>88 / 300 triangles · 5 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="clean-tactical-diorama"
+                data-asset="damage_effect"
+                data-state="damaged">
+              <button class="image-button" type="button" aria-label="Agrandir clean-tactical-diorama · damage_effect · damaged">
+                <img loading="lazy" src="../clean-tactical-diorama/renders/review/clean-tactical-diorama__damage_effect__damaged__hero.png" alt="clean-tactical-diorama · damage_effect · damaged">
+              </button>
+              <div class="meta">
+                <div><strong>damage_effect</strong><span class="state damaged">damaged</span></div>
+                <small>clean-tactical-diorama</small>
+                <small>80 / 300 triangles · 4 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="clean-tactical-diorama"
+                data-asset="enemy_standard"
+                data-state="critical">
+              <button class="image-button" type="button" aria-label="Agrandir clean-tactical-diorama · enemy_standard · critical">
+                <img loading="lazy" src="../clean-tactical-diorama/renders/review/clean-tactical-diorama__enemy_standard__critical__hero.png" alt="clean-tactical-diorama · enemy_standard · critical">
+              </button>
+              <div class="meta">
+                <div><strong>enemy_standard</strong><span class="state critical">critical</span></div>
+                <small>clean-tactical-diorama</small>
+                <small>1,148 / 5,000 triangles · 21 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="clean-tactical-diorama"
+                data-asset="enemy_standard"
+                data-state="damaged">
+              <button class="image-button" type="button" aria-label="Agrandir clean-tactical-diorama · enemy_standard · damaged">
+                <img loading="lazy" src="../clean-tactical-diorama/renders/review/clean-tactical-diorama__enemy_standard__damaged__hero.png" alt="clean-tactical-diorama · enemy_standard · damaged">
+              </button>
+              <div class="meta">
+                <div><strong>enemy_standard</strong><span class="state damaged">damaged</span></div>
+                <small>clean-tactical-diorama</small>
+                <small>1,148 / 5,000 triangles · 21 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="clean-tactical-diorama"
+                data-asset="enemy_standard"
+                data-state="intact">
+              <button class="image-button" type="button" aria-label="Agrandir clean-tactical-diorama · enemy_standard · intact">
+                <img loading="lazy" src="../clean-tactical-diorama/renders/review/clean-tactical-diorama__enemy_standard__intact__hero.png" alt="clean-tactical-diorama · enemy_standard · intact">
+              </button>
+              <div class="meta">
+                <div><strong>enemy_standard</strong><span class="state intact">intact</span></div>
+                <small>clean-tactical-diorama</small>
+                <small>1,148 / 5,000 triangles · 21 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="clean-tactical-diorama"
+                data-asset="floor_module"
+                data-state="damaged">
+              <button class="image-button" type="button" aria-label="Agrandir clean-tactical-diorama · floor_module · damaged">
+                <img loading="lazy" src="../clean-tactical-diorama/renders/review/clean-tactical-diorama__floor_module__damaged__hero.png" alt="clean-tactical-diorama · floor_module · damaged">
+              </button>
+              <div class="meta">
+                <div><strong>floor_module</strong><span class="state damaged">damaged</span></div>
+                <small>clean-tactical-diorama</small>
+                <small>460 / 800 triangles · 15 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="clean-tactical-diorama"
+                data-asset="floor_module"
+                data-state="intact">
+              <button class="image-button" type="button" aria-label="Agrandir clean-tactical-diorama · floor_module · intact">
+                <img loading="lazy" src="../clean-tactical-diorama/renders/review/clean-tactical-diorama__floor_module__intact__hero.png" alt="clean-tactical-diorama · floor_module · intact">
+              </button>
+              <div class="meta">
+                <div><strong>floor_module</strong><span class="state intact">intact</span></div>
+                <small>clean-tactical-diorama</small>
+                <small>460 / 800 triangles · 15 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="clean-tactical-diorama"
+                data-asset="objective_core"
+                data-state="critical">
+              <button class="image-button" type="button" aria-label="Agrandir clean-tactical-diorama · objective_core · critical">
+                <img loading="lazy" src="../clean-tactical-diorama/renders/review/clean-tactical-diorama__objective_core__critical__hero.png" alt="clean-tactical-diorama · objective_core · critical">
+              </button>
+              <div class="meta">
+                <div><strong>objective_core</strong><span class="state critical">critical</span></div>
+                <small>clean-tactical-diorama</small>
+                <small>1,740 / 4,500 triangles · 26 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="clean-tactical-diorama"
+                data-asset="objective_core"
+                data-state="damaged">
+              <button class="image-button" type="button" aria-label="Agrandir clean-tactical-diorama · objective_core · damaged">
+                <img loading="lazy" src="../clean-tactical-diorama/renders/review/clean-tactical-diorama__objective_core__damaged__hero.png" alt="clean-tactical-diorama · objective_core · damaged">
+              </button>
+              <div class="meta">
+                <div><strong>objective_core</strong><span class="state damaged">damaged</span></div>
+                <small>clean-tactical-diorama</small>
+                <small>1,784 / 4,500 triangles · 27 meshes</small>
+              </div>
+            </article>
+            
+            <article class="card" tabindex="0"
+                data-territory="clean-tactical-diorama"
+                data-asset="objective_core"
+                data-state="intact">
+              <button class="image-button" type="button" aria-label="Agrandir clean-tactical-diorama · objective_core · intact">
+                <img loading="lazy" src="../clean-tactical-diorama/renders/review/clean-tactical-diorama__objective_core__intact__hero.png" alt="clean-tactical-diorama · objective_core · intact">
+              </button>
+              <div class="meta">
+                <div><strong>objective_core</strong><span class="state intact">intact</span></div>
+                <small>clean-tactical-diorama</small>
+                <small>1,828 / 4,500 triangles · 28 meshes</small>
+              </div>
+            </article>
+            </section></main>
+  <dialog id="viewer"><button type="button" aria-label="Fermer">Fermer</button><img alt="Vue agrandie"></dialog>
+  <script>
+    const cards=[...document.querySelectorAll('.card')], filters=['territory','asset','state'];
+    const apply=()=>{let shown=0; for(const card of cards){const visible=filters.every(k=>!document.getElementById(k).value||card.dataset[k]===document.getElementById(k).value); card.hidden=!visible; shown+=visible?1:0} document.getElementById('count').textContent=`${shown} variante${shown>1?'s':''} affichée${shown>1?'s':''}`;};
+    filters.forEach(k=>document.getElementById(k).addEventListener('change',apply)); document.getElementById('reset').onclick=()=>{filters.forEach(k=>document.getElementById(k).value='');apply()};
+    const dialog=document.getElementById('viewer'), large=dialog.querySelector('img'); document.querySelectorAll('.image-button').forEach(button=>button.onclick=()=>{large.src=button.querySelector('img').src;large.alt=button.querySelector('img').alt;dialog.showModal()}); dialog.querySelector('button').onclick=()=>dialog.close(); dialog.onclick=e=>{if(e.target===dialog)dialog.close()}; apply();
+  </script>
+</body>
+</html>

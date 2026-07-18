@@ -1,0 +1,352 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/precanonical-policy.schema.json",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/precanonical-policy.schema.json"
+    },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "policyId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]+$"
+    },
+    "selectedArtDirection": {
+      "const": "salvaged-frontier"
+    },
+    "constitution": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "const": "art/selected/salvaged-frontier-constitution.json"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "unevaluatedProperties": false
+    },
+    "providerContract": {
+      "type": "object",
+      "properties": {
+        "allowedSurface": {
+          "const": "chatgpt_web_images"
+        },
+        "allowedBrowserAdapters": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "const": "codex_chrome"
+            },
+            {
+              "const": "codex_iab"
+            }
+          ],
+          "items": false,
+          "minItems": 2,
+          "maxItems": 2,
+          "uniqueItems": true
+        },
+        "defaultBrowserAdapter": {
+          "const": "codex_chrome"
+        },
+        "attachmentCapableBrowserAdapter": {
+          "const": "codex_chrome"
+        },
+        "attachmentlessFallbackBrowserAdapter": {
+          "const": "codex_iab"
+        },
+        "explicitAdapterSelectionRequired": {
+          "const": true
+        },
+        "replaceableSurface": {
+          "const": true
+        },
+        "preciseModelNameRequiresUiEvidence": {
+          "const": true
+        },
+        "browserIsTransportOnly": {
+          "const": true
+        },
+        "taskScopedCapability": {
+          "const": true
+        },
+        "repositoryLaunchable": {
+          "const": false
+        },
+        "requiredTaskTool": {
+          "const": "mcp__node_repl__js"
+        },
+        "localInstallationProvesTaskExposure": {
+          "const": false
+        },
+        "humanOperatorBridgeAllowed": {
+          "const": true
+        },
+        "humanOperatorBridgeRequiresTaskTool": {
+          "const": false
+        },
+        "humanOperatorBridgeLoopbackOnly": {
+          "const": true
+        },
+        "humanOperatorBridgeRequiresBoundAttestation": {
+          "const": true
+        }
+      },
+      "required": [
+        "allowedSurface",
+        "allowedBrowserAdapters",
+        "defaultBrowserAdapter",
+        "attachmentCapableBrowserAdapter",
+        "attachmentlessFallbackBrowserAdapter",
+        "explicitAdapterSelectionRequired",
+        "replaceableSurface",
+        "preciseModelNameRequiresUiEvidence",
+        "browserIsTransportOnly",
+        "taskScopedCapability",
+        "repositoryLaunchable",
+        "requiredTaskTool",
+        "localInstallationProvesTaskExposure",
+        "humanOperatorBridgeAllowed",
+        "humanOperatorBridgeRequiresTaskTool",
+        "humanOperatorBridgeLoopbackOnly",
+        "humanOperatorBridgeRequiresBoundAttestation"
+      ],
+      "unevaluatedProperties": false
+    },
+    "fallbackPolicy": {
+      "type": "object",
+      "properties": {
+        "codexImagegenAutomatic": {
+          "const": false
+        },
+        "apiAutomatic": {
+          "const": false
+        },
+        "silentRetry": {
+          "const": false
+        },
+        "unboundedRegeneration": {
+          "const": false
+        },
+        "browserAdapterAutomatic": {
+          "const": false
+        }
+      },
+      "required": [
+        "codexImagegenAutomatic",
+        "apiAutomatic",
+        "silentRetry",
+        "unboundedRegeneration",
+        "browserAdapterAutomatic"
+      ],
+      "unevaluatedProperties": false
+    },
+    "defaultBudget": {
+      "type": "object",
+      "properties": {
+        "exploration": {
+          "const": 1
+        },
+        "consolidation": {
+          "const": 1
+        },
+        "precanonicalBoard": {
+          "const": 1
+        },
+        "correctionReserve": {
+          "const": 1
+        },
+        "maximumTotal": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8
+        }
+      },
+      "required": [
+        "exploration",
+        "consolidation",
+        "precanonicalBoard",
+        "correctionReserve",
+        "maximumTotal"
+      ],
+      "unevaluatedProperties": false
+    },
+    "stateCampaign": {
+      "type": "object",
+      "properties": {
+        "requiredModel": {
+          "const": "gpt-image-2"
+        },
+        "objectCount": {
+          "const": 6
+        },
+        "objectStateTaskCount": {
+          "const": 16
+        },
+        "oneGenerationPerObjectState": {
+          "const": true
+        },
+        "independentStateDesignForbidden": {
+          "const": true
+        },
+        "previousAcceptedStateReferenceRequired": {
+          "const": true
+        },
+        "maximumAttemptsPerTask": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "automaticAdvanceAfterAcceptedReview": {
+          "const": true
+        },
+        "automaticRetry": {
+          "const": false
+        }
+      },
+      "required": [
+        "requiredModel",
+        "objectCount",
+        "objectStateTaskCount",
+        "oneGenerationPerObjectState",
+        "independentStateDesignForbidden",
+        "previousAcceptedStateReferenceRequired",
+        "maximumAttemptsPerTask",
+        "automaticAdvanceAfterAcceptedReview",
+        "automaticRetry"
+      ],
+      "unevaluatedProperties": false
+    },
+    "states": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "const": "DRAFT"
+        },
+        {
+          "const": "BRIEF_COMPLETE"
+        },
+        {
+          "const": "ART_DIRECTION_SELECTED"
+        },
+        {
+          "const": "PRECANONICAL_SPEC_COMPLETE"
+        },
+        {
+          "const": "WEB_PREFLIGHT_PASS"
+        },
+        {
+          "const": "AWAITING_TASK_BROWSER_CAPABILITY"
+        },
+        {
+          "const": "READY_FOR_HUMAN_WEB_SUBMISSION"
+        },
+        {
+          "const": "READY_FOR_WEB_GENERATION"
+        },
+        {
+          "const": "WEB_GENERATING"
+        },
+        {
+          "const": "WEB_RESULT_IMPORTED"
+        },
+        {
+          "const": "VISUAL_REVIEW_REQUIRED"
+        },
+        {
+          "const": "REJECTED"
+        },
+        {
+          "const": "REVISION_REQUIRED"
+        },
+        {
+          "const": "PRECANONICAL_CANDIDATE"
+        },
+        {
+          "const": "HUMAN_SELECTED"
+        },
+        {
+          "const": "CANONICALIZATION_IN_PROGRESS"
+        },
+        {
+          "const": "CANONICAL_DEFINITION_LOCKED"
+        },
+        {
+          "const": "READY_FOR_3D_RECONSTRUCTION"
+        }
+      ],
+      "items": false,
+      "minItems": 18,
+      "maxItems": 18
+    },
+    "errorStates": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "WEB_AUTH_REQUIRED",
+          "WEB_QUOTA_EXHAUSTED",
+          "WEB_UI_CHANGED",
+          "WEB_TASK_CAPABILITY_UNAVAILABLE",
+          "DOWNLOAD_FAILED",
+          "RESULT_AMBIGUOUS",
+          "BUDGET_EXHAUSTED",
+          "HUMAN_DECISION_REQUIRED"
+        ]
+      },
+      "minItems": 8,
+      "maxItems": 8,
+      "uniqueItems": true
+    },
+    "authorityBoundary": {
+      "type": "object",
+      "properties": {
+        "imageMayBecomeCanonicalDirectly": {
+          "const": false
+        },
+        "imageProvesHiddenGeometry": {
+          "const": false
+        },
+        "humanSelectionRequired": {
+          "const": true
+        },
+        "canonRationalizationRequired": {
+          "const": true
+        },
+        "productionApproved": {
+          "const": false
+        }
+      },
+      "required": [
+        "imageMayBecomeCanonicalDirectly",
+        "imageProvesHiddenGeometry",
+        "humanSelectionRequired",
+        "canonRationalizationRequired",
+        "productionApproved"
+      ],
+      "unevaluatedProperties": false
+    }
+  },
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "policyId",
+    "selectedArtDirection",
+    "constitution",
+    "providerContract",
+    "fallbackPolicy",
+    "defaultBudget",
+    "stateCampaign",
+    "states",
+    "errorStates",
+    "authorityBoundary"
+  ],
+  "unevaluatedProperties": false
+}

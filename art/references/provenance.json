@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "INCOMPLETE",
+  "policy": {
+    "minimumReferencesPerTerritory": 12,
+    "maximumReferencesPerTerritory": 20,
+    "unknownRightsAllowedForProduction": false,
+    "directCopyProhibited": true,
+    "redistributeInspirationOnly": false
+  },
+  "references": []
+}

@@ -1,0 +1,21 @@
+{
+  "assetKey": "defense_barricade_small",
+  "fbxUpdate": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\assets-3d\\defense-barricade-small\\build\\asset-update.fbx",
+  "geometry": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\assets-3d\\defense-barricade-small\\build\\geometry.json",
+  "glb": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\assets-3d\\defense-barricade-small\\build\\asset.glb",
+  "manifest": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\assets-3d\\defense-barricade-small\\build\\manifest.json",
+  "renderVerification": "PASS",
+  "renders": [
+    "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\assets-3d\\defense-barricade-small\\build\\renders\\front.png",
+    "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\assets-3d\\defense-barricade-small\\build\\renders\\rear.png",
+    "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\assets-3d\\defense-barricade-small\\build\\renders\\left.png",
+    "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\assets-3d\\defense-barricade-small\\build\\renders\\right.png",
+    "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\assets-3d\\defense-barricade-small\\build\\renders\\top.png",
+    "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\assets-3d\\defense-barricade-small\\build\\renders\\perspective.png",
+    "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\assets-3d\\defense-barricade-small\\build\\renders\\mobile_distance.png",
+    "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\assets-3d\\defense-barricade-small\\build\\renders\\silhouette.png"
+  ],
+  "revision": 19,
+  "stateId": "intact",
+  "status": "PASS"
+}

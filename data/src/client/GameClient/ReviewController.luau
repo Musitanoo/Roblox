@@ -1,5 +1,7 @@
 --!strict
 
+local Players = game:GetService("Players")
+
 type Colors = {
 	panel: Color3,
 	panelSecondary: Color3,
@@ -22,6 +24,7 @@ export type Controller = typeof(setmetatable(
 		_trafficCard: TextLabel,
 		_breachCard: TextLabel,
 		_defenseCard: TextLabel,
+		_retryButton: TextButton,
 	},
 	ReviewController
 ))
@@ -125,9 +128,15 @@ function ReviewController.new(
 		_trafficCard = trafficCard,
 		_breachCard = breachCard,
 		_defenseCard = defenseCard,
+		_retryButton = retry,
 	}, ReviewController)
 	retry.Activated:Connect(function()
-		requestReturn:FireServer()
+		if
+			replicationRoot:GetAttribute("Phase") == "REVIEW"
+			and replicationRoot:GetAttribute("BuildOwnerUserId") == Players.LocalPlayer.UserId
+		then
+			requestReturn:FireServer()
+		end
 	end)
 	requestReturn.OnClientEvent:Connect(function(accepted: unknown, message: unknown)
 		if typeof(accepted) == "boolean" and typeof(message) == "string" then
@@ -139,7 +148,13 @@ end
 
 function ReviewController.update(self: Controller)
 	local phase = readString(self._replicationRoot, "Phase")
+	local isOwner = self._replicationRoot:GetAttribute("BuildOwnerUserId")
+		== Players.LocalPlayer.UserId
 	self._panel.Visible = phase == "REVIEW"
+	self._retryButton.Active = phase == "REVIEW" and isOwner
+	self._retryButton.Selectable = self._retryButton.Active
+	self._retryButton.AutoButtonColor = self._retryButton.Active
+	self._retryButton.Text = if isOwner then "MODIFIER LA BASE" else "MODE OBSERVATION"
 	if phase ~= "REVIEW" then
 		return
 	end
@@ -159,11 +174,12 @@ function ReviewController.update(self: Controller)
 	local right = readNumber(self._replicationRoot, "RightLaneEnemyCount")
 	local total = left + right
 	local leftPercent = if total > 0 then math.floor(left / total * 100 + 0.5) else 0
+	local rightPercent = if total > 0 then 100 - leftPercent else 0
 	self._trafficCard.Text = string.format(
 		"TRAFIC\nGauche : %d%% (%d)\nDroite : %d%% (%d)\nImpacts noyau : %d / %d",
 		leftPercent,
 		left,
-		100 - leftPercent,
+		rightPercent,
 		right,
 		readNumber(self._replicationRoot, "LeftLaneCoreHits"),
 		readNumber(self._replicationRoot, "RightLaneCoreHits")

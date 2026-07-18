@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/selection-decision.schema.json",
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "studyId",
+    "status",
+    "selectedBlindLabel",
+    "selectedTerritory",
+    "approvedBy",
+    "approvedAt",
+    "rationale",
+    "scoringReportSha256",
+    "blindMapSha256",
+    "rejectedAlternatives"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/selection-decision.schema.json"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "studyId": {
+      "type": "string"
+    },
+    "status": {
+      "const": "APPROVED"
+    },
+    "selectedBlindLabel": {
+      "enum": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "selectedTerritory": {
+      "enum": [
+        "industrial-toy-defense",
+        "salvaged-frontier",
+        "clean-tactical-diorama"
+      ]
+    },
+    "approvedBy": {
+      "type": "string",
+      "minLength": 3
+    },
+    "approvedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "rationale": {
+      "type": "string",
+      "minLength": 80
+    },
+    "scoringReportSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "blindMapSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "rejectedAlternatives": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "properties": {
+          "territoryId": {
+            "enum": [
+              "industrial-toy-defense",
+              "salvaged-frontier",
+              "clean-tactical-diorama"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 30
+          }
+        },
+        "required": [
+          "territoryId",
+          "reason"
+        ],
+        "unevaluatedProperties": false
+      }
+    }
+  },
+  "unevaluatedProperties": false
+}

@@ -1,6 +1,7 @@
 --!strict
 
 local ContextActionService = game:GetService("ContextActionService")
+local HttpService = game:GetService("HttpService")
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local RunService = game:GetService("RunService")
@@ -20,6 +21,7 @@ type BuildRulesModule = {
 }
 type GridMathModule = {
 	WorldToCell: (CFrame, Vector3) -> (number, number),
+	CellToWorld: (CFrame, number, number) -> Vector3,
 	GetPieceWorldCFrame: (CFrame, BuildPieceData) -> CFrame,
 	GetFootprint: (PieceType, number) -> (number, number),
 }
@@ -30,6 +32,14 @@ type RouteSolverModule = {
 		"Roamer" | "Brute"
 	) -> ({ { x: number, z: number } }?, number),
 }
+type GridConfig = {
+	schemaVersion: number,
+	width: number,
+	depth: number,
+	cellSize: number,
+	buildSurfaceName: string,
+}
+type PieceTuning = { structureCost: number, powerCost: number, queryHeight: number }
 type Colors = {
 	panel: Color3,
 	panelSecondary: Color3,
@@ -44,9 +54,14 @@ type Colors = {
 type MessageCallback = (string, boolean) -> ()
 
 local sharedGame = ReplicatedStorage:WaitForChild("Shared"):WaitForChild("Game")
+local config = sharedGame:WaitForChild("Config")
+local BuildGridConfig =
+	require(config:WaitForChild("BuildGridConfig") :: ModuleScript) :: GridConfig
 local BuildRules =
 	require(sharedGame:WaitForChild("BuildRules") :: ModuleScript) :: BuildRulesModule
 local GridMath = require(sharedGame:WaitForChild("GridMath") :: ModuleScript) :: GridMathModule
+local PieceConfig =
+	require(config:WaitForChild("PieceConfig") :: ModuleScript) :: { [PieceType]: PieceTuning }
 local RouteSolver =
 	require(sharedGame:WaitForChild("RouteSolver") :: ModuleScript) :: RouteSolverModule
 
@@ -77,6 +92,7 @@ export type Controller = typeof(setmetatable(
 		_cellZ: number,
 		_ghost: Model,
 		_pathPreview: Folder,
+		_requestSession: string,
 		_requestSerial: number,
 		_pendingCount: number,
 		_valid: boolean,
@@ -92,6 +108,7 @@ export type Controller = typeof(setmetatable(
 		_touchDragged: boolean,
 		_pinching: boolean,
 		_pinchLastScale: number,
+		_placementActive: boolean,
 	},
 	GridBuildController
 ))
@@ -172,10 +189,13 @@ function GridBuildController.new(
 	colors: Colors,
 	messageCallback: MessageCallback
 ): Controller
-	local surface = prototype:WaitForChild("BuildSurface")
+	local surface = prototype:WaitForChild(BuildGridConfig.buildSurfaceName)
 	local runtime = prototype:WaitForChild("Runtime")
 	local defenses = runtime:WaitForChild("Defenses")
-	assert(surface:IsA("BasePart"), "Prototype.BuildSurface must be a BasePart")
+	assert(
+		surface:IsA("BasePart"),
+		"Prototype." .. BuildGridConfig.buildSurfaceName .. " must be a BasePart"
+	)
 	assert(defenses:IsA("Folder"), "Prototype.Runtime.Defenses must be a Folder")
 
 	local panel = Instance.new("Frame")
@@ -232,9 +252,14 @@ function GridBuildController.new(
 
 	local pieceRow = makeRow("PieceRow")
 	pieceRow.LayoutOrder = 2
-	local wall = makeButton(pieceRow, "WallButton", "MUR\nS2 E0", colors.green)
-	local trap = makeButton(pieceRow, "TrapButton", "PIÈGE\nS1 E1", colors.yellow)
-	local turret = makeButton(pieceRow, "TurretButton", "TOURELLE\nS3 E2", colors.blue)
+	local function pieceLabel(label: string, pieceType: PieceType): string
+		local tuning = PieceConfig[pieceType]
+		return string.format("%s\nS%d E%d", label, tuning.structureCost, tuning.powerCost)
+	end
+	local wall = makeButton(pieceRow, "WallButton", pieceLabel("MUR", "Wall"), colors.green)
+	local trap = makeButton(pieceRow, "TrapButton", pieceLabel("PIÈGE", "SlowTrap"), colors.yellow)
+	local turret =
+		makeButton(pieceRow, "TurretButton", pieceLabel("TOURELLE", "Turret"), colors.blue)
 	for _, button in ipairs({ wall, trap, turret }) do
 		button.Size = UDim2.new(1 / 3, -3, 1, 0)
 	end
@@ -276,7 +301,6 @@ function GridBuildController.new(
 
 	local ghost = Instance.new("Model")
 	ghost.Name = "BuildGhost"
-	ghost.Parent = workspace
 	local ghostPart = Instance.new("Part")
 	ghostPart.Name = "GhostVolume"
 	ghostPart.Anchored = true
@@ -295,7 +319,6 @@ function GridBuildController.new(
 
 	local pathPreview = Instance.new("Folder")
 	pathPreview.Name = "RoutePreview"
-	pathPreview.Parent = workspace
 
 	local self: Controller = setmetatable({
 		_replicationRoot = replicationRoot,
@@ -311,7 +334,7 @@ function GridBuildController.new(
 		_deleteButton = delete,
 		_zoomOutButton = zoomOut,
 		_zoomInButton = zoomIn,
-		_plan = { schemaVersion = 1, revision = 0, pieces = {} },
+		_plan = { schemaVersion = BuildGridConfig.schemaVersion, revision = 0, pieces = {} },
 		_selectedType = "Wall" :: PieceType,
 		_rotation = 0,
 		_selectedPieceId = nil :: string?,
@@ -320,6 +343,7 @@ function GridBuildController.new(
 		_cellZ = 1,
 		_ghost = ghost,
 		_pathPreview = pathPreview,
+		_requestSession = HttpService:GenerateGUID(false),
 		_requestSerial = 0,
 		_pendingCount = 0,
 		_valid = false,
@@ -335,6 +359,7 @@ function GridBuildController.new(
 		_touchDragged = false,
 		_pinching = false,
 		_pinchLastScale = 1,
+		_placementActive = true,
 	}, GridBuildController)
 
 	wall.Activated:Connect(function()
@@ -359,10 +384,10 @@ function GridBuildController.new(
 		self:deleteSelection()
 	end)
 	zoomOut.Activated:Connect(function()
-		self._zoom = math.clamp(self._zoom + 8, 48, 100)
+		self:adjustZoom(8)
 	end)
 	zoomIn.Activated:Connect(function()
-		self._zoom = math.clamp(self._zoom - 8, 48, 100)
+		self:adjustZoom(-8)
 	end)
 	undo.Activated:Connect(function()
 		self:_send("UNDO", {})
@@ -379,6 +404,10 @@ function GridBuildController.new(
 	end)
 	UserInputService.InputBegan:Connect(function(input: InputObject, gameProcessed: boolean)
 		if gameProcessed then
+			return
+		end
+		if input.UserInputType == Enum.UserInputType.MouseButton2 then
+			self:cancel()
 			return
 		end
 		self._keys[input.KeyCode] = true
@@ -453,6 +482,9 @@ function GridBuildController.new(
 			state: Enum.UserInputState,
 			processed: boolean
 		)
+			if not self:_canBuild() then
+				return
+			end
 			if not processed and state == Enum.UserInputState.Change then
 				local scaleDelta = scale / math.max(self._pinchLastScale, 0.01)
 				self._zoom = math.clamp(self._zoom / math.clamp(scaleDelta, 0.8, 1.2), 48, 100)
@@ -470,23 +502,113 @@ function GridBuildController.new(
 	)
 
 	ContextActionService:BindAction("BuildConfirm", function(_, state)
+		if not self:_canBuild() then
+			return Enum.ContextActionResult.Pass
+		end
 		if state == Enum.UserInputState.Begin then
 			self:confirm()
 		end
 		return Enum.ContextActionResult.Sink
 	end, false, Enum.KeyCode.ButtonA, Enum.KeyCode.Return)
 	ContextActionService:BindAction("BuildRotate", function(_, state)
+		if not self:_canBuild() then
+			return Enum.ContextActionResult.Pass
+		end
 		if state == Enum.UserInputState.Begin then
 			self:rotate()
 		end
 		return Enum.ContextActionResult.Sink
 	end, false, Enum.KeyCode.ButtonX, Enum.KeyCode.R)
 	ContextActionService:BindAction("BuildDelete", function(_, state)
+		if not self:_canBuild() then
+			return Enum.ContextActionResult.Pass
+		end
 		if state == Enum.UserInputState.Begin then
 			self:deleteSelection()
 		end
 		return Enum.ContextActionResult.Sink
 	end, false, Enum.KeyCode.ButtonY, Enum.KeyCode.Delete)
+	ContextActionService:BindAction("BuildCancel", function(_, state)
+		if not self:_canBuild() then
+			return Enum.ContextActionResult.Pass
+		end
+		if state == Enum.UserInputState.Begin then
+			self:cancel()
+		end
+		return Enum.ContextActionResult.Sink
+	end, false, Enum.KeyCode.ButtonB, Enum.KeyCode.Escape)
+	ContextActionService:BindAction("BuildCursorLeft", function(_, state)
+		if not self:_canBuild() then
+			return Enum.ContextActionResult.Pass
+		end
+		if state == Enum.UserInputState.Begin then
+			self:moveCursor(-1, 0)
+		end
+		return Enum.ContextActionResult.Sink
+	end, false, Enum.KeyCode.DPadLeft)
+	ContextActionService:BindAction("BuildCursorRight", function(_, state)
+		if not self:_canBuild() then
+			return Enum.ContextActionResult.Pass
+		end
+		if state == Enum.UserInputState.Begin then
+			self:moveCursor(1, 0)
+		end
+		return Enum.ContextActionResult.Sink
+	end, false, Enum.KeyCode.DPadRight)
+	ContextActionService:BindAction("BuildCursorUp", function(_, state)
+		if not self:_canBuild() then
+			return Enum.ContextActionResult.Pass
+		end
+		if state == Enum.UserInputState.Begin then
+			self:moveCursor(0, -1)
+		end
+		return Enum.ContextActionResult.Sink
+	end, false, Enum.KeyCode.DPadUp)
+	ContextActionService:BindAction("BuildCursorDown", function(_, state)
+		if not self:_canBuild() then
+			return Enum.ContextActionResult.Pass
+		end
+		if state == Enum.UserInputState.Begin then
+			self:moveCursor(0, 1)
+		end
+		return Enum.ContextActionResult.Sink
+	end, false, Enum.KeyCode.DPadDown)
+	ContextActionService:BindAction("BuildZoomIn", function(_, state)
+		if not self:_canBuild() then
+			return Enum.ContextActionResult.Pass
+		end
+		if state == Enum.UserInputState.Begin then
+			self:adjustZoom(-8)
+		end
+		return Enum.ContextActionResult.Sink
+	end, false, Enum.KeyCode.ButtonR2)
+	ContextActionService:BindAction("BuildZoomOut", function(_, state)
+		if not self:_canBuild() then
+			return Enum.ContextActionResult.Pass
+		end
+		if state == Enum.UserInputState.Begin then
+			self:adjustZoom(8)
+		end
+		return Enum.ContextActionResult.Sink
+	end, false, Enum.KeyCode.ButtonL2)
+	ContextActionService:BindAction("BuildUndo", function(_, state)
+		if not self:_canBuild() then
+			return Enum.ContextActionResult.Pass
+		end
+		if state == Enum.UserInputState.Begin then
+			self:_send("UNDO", {})
+		end
+		return Enum.ContextActionResult.Sink
+	end, false, Enum.KeyCode.ButtonL1, Enum.KeyCode.Z)
+	ContextActionService:BindAction("BuildRedo", function(_, state)
+		if not self:_canBuild() then
+			return Enum.ContextActionResult.Pass
+		end
+		if state == Enum.UserInputState.Begin then
+			self:_send("REDO", {})
+		end
+		return Enum.ContextActionResult.Sink
+	end, false, Enum.KeyCode.ButtonR1, Enum.KeyCode.Y)
 
 	RunService.RenderStepped:Connect(function(deltaTime: number)
 		self:_render(deltaTime)
@@ -498,6 +620,7 @@ end
 
 function GridBuildController._canBuild(self: Controller): boolean
 	return self._replicationRoot:GetAttribute("Phase") == "PREPARATION"
+		and self._replicationRoot:GetAttribute("BuildEnabled") == true
 		and self._replicationRoot:GetAttribute("BuildOwnerUserId") == Players.LocalPlayer.UserId
 end
 
@@ -528,7 +651,7 @@ function GridBuildController._reconstructPlan(self: Controller)
 		end
 	end
 	self._plan = {
-		schemaVersion = 1,
+		schemaVersion = BuildGridConfig.schemaVersion,
 		revision = self._replicationRoot:GetAttribute("BuildRevision") :: number? or 0,
 		pieces = pieces,
 	}
@@ -543,10 +666,13 @@ function GridBuildController._receive(self: Controller, value: unknown)
 	local deltaTable = if typeof(delta) == "table" then delta :: { [string]: unknown } else nil
 	local plan = if deltaTable then readPlan(deltaTable.plan) else nil
 	if valueTable.requestId ~= "SYNC" then
-		self._pendingCount = math.max(0, self._pendingCount - 1)
+		self._pendingCount = if valueTable.reason == "RATE_LIMITED"
+			then 0
+			else math.max(0, self._pendingCount - 1)
 	end
-	if plan then
+	if plan and plan.revision >= self._plan.revision then
 		self._plan = plan
+		self._lastPreviewKey = ""
 	end
 	if valueTable.success == false then
 		self._messageCallback(reasonMessage(valueTable.reason), true)
@@ -555,7 +681,6 @@ function GridBuildController._receive(self: Controller, value: unknown)
 	end
 	self._selectedPieceId = nil
 	self._movingPieceId = nil
-	self._lastPreviewKey = ""
 	self:update()
 end
 
@@ -571,7 +696,7 @@ function GridBuildController._send(
 	self._requestSerial += 1
 	self._pendingCount += 1
 	self._buildRequest:FireServer({
-		requestId = string.format("%d-%d", Players.LocalPlayer.UserId, self._requestSerial),
+		requestId = string.format("%s:%d", self._requestSession, self._requestSerial),
 		baseRevision = self._plan.revision,
 		operation = operation,
 		payload = payload,
@@ -579,11 +704,50 @@ function GridBuildController._send(
 end
 
 function GridBuildController._selectType(self: Controller, pieceType: PieceType)
+	if not self:_canBuild() then
+		return
+	end
 	self._selectedType = pieceType
 	self._rotation = 0
 	self._selectedPieceId = nil
 	self._movingPieceId = nil
-	self._lastPreviewKey = ""
+	self._placementActive = true
+	self:update()
+end
+
+function GridBuildController.cancel(self: Controller)
+	if not self:_canBuild() then
+		return
+	end
+	self._selectedPieceId = nil
+	self._movingPieceId = nil
+	self._placementActive = false
+	self._messageCallback("Opération annulée", false)
+	self:update()
+end
+
+function GridBuildController.moveCursor(self: Controller, deltaX: number, deltaZ: number)
+	if not self:_canBuild() then
+		return
+	end
+	if self._selectedPieceId and not self._movingPieceId then
+		return
+	end
+	local nextCellX = math.clamp(self._cellX + deltaX, 1, BuildGridConfig.width)
+	local nextCellZ = math.clamp(self._cellZ + deltaZ, 1, BuildGridConfig.depth)
+	if nextCellX == self._cellX and nextCellZ == self._cellZ then
+		return
+	end
+	self._cellX = nextCellX
+	self._cellZ = nextCellZ
+	self._placementActive = true
+	self._selectedPieceId = nil
+end
+
+function GridBuildController.adjustZoom(self: Controller, delta: number)
+	if self:_canBuild() then
+		self._zoom = math.clamp(self._zoom + delta, 48, 100)
+	end
 end
 
 function GridBuildController.rotate(self: Controller)
@@ -599,12 +763,11 @@ function GridBuildController.rotate(self: Controller)
 	end
 	if self._selectedType ~= "SlowTrap" then
 		self._rotation = (self._rotation + 1) % 4
-		self._lastPreviewKey = ""
 	end
 end
 
 function GridBuildController.confirm(self: Controller)
-	if not self:_canBuild() or not self._valid then
+	if not self:_canBuild() or not self._placementActive or not self._valid then
 		return
 	end
 	if self._movingPieceId then
@@ -623,15 +786,20 @@ function GridBuildController.confirm(self: Controller)
 end
 
 function GridBuildController.beginMove(self: Controller)
+	if not self:_canBuild() then
+		return
+	end
 	local id = self._selectedPieceId
 	local piece = if id then self._plan.pieces[id] else nil
 	if piece then
 		self._movingPieceId = piece.id
+		self._selectedPieceId = nil
 		self._selectedType = piece.pieceType
 		self._rotation = piece.rotation
 		self._cellX = piece.cellX
 		self._cellZ = piece.cellZ
-		self._lastPreviewKey = ""
+		self._placementActive = true
+		self:update()
 	end
 end
 
@@ -642,6 +810,9 @@ function GridBuildController.deleteSelection(self: Controller)
 end
 
 function GridBuildController._pointAt(self: Controller, x: number, y: number, selectModel: boolean)
+	if not selectModel and not self._placementActive then
+		return
+	end
 	local camera = workspace.CurrentCamera
 	if not camera then
 		return
@@ -660,19 +831,34 @@ function GridBuildController._pointAt(self: Controller, x: number, y: number, se
 	end
 	if selectModel then
 		local model = findBuildModel(hit.Instance)
-		if model then
+		if model and model:IsDescendantOf(self._runtimeDefenses) then
 			local pieceId = model:GetAttribute("PieceId")
 			if typeof(pieceId) == "string" and self._plan.pieces[pieceId] then
 				self._selectedPieceId = pieceId
 				self._movingPieceId = nil
-				self._lastPreviewKey = ""
+				self._placementActive = false
+				self:update()
 				return
 			end
 		end
 	end
-	self._cellX, self._cellZ = GridMath.WorldToCell(self._surface.CFrame, hit.Position)
+	local cellX, cellZ = GridMath.WorldToCell(self._surface.CFrame, hit.Position)
+	local selectionChanged = self._selectedPieceId ~= nil or not self._placementActive
+	if
+		cellX == self._cellX
+		and cellZ == self._cellZ
+		and not selectionChanged
+		and self._movingPieceId == nil
+	then
+		return
+	end
+	self._cellX = cellX
+	self._cellZ = cellZ
 	self._selectedPieceId = nil
-	self._lastPreviewKey = ""
+	self._placementActive = true
+	if selectionChanged then
+		self:update()
+	end
 end
 
 function GridBuildController._previewPlan(self: Controller, piece: BuildPieceData): BuildPlan
@@ -710,14 +896,8 @@ function GridBuildController._drawPaths(self: Controller, plan: BuildPlan)
 				marker.Color = route.color
 				marker.Transparency = 0.55
 				marker.Size = Vector3.new(1.25, 0.12, 1.25)
-				local world = GridMath.GetPieceWorldCFrame(self._surface.CFrame, {
-					id = "preview",
-					pieceType = "Turret",
-					cellX = cell.x,
-					cellZ = cell.z,
-					rotation = 0,
-				})
-				marker.CFrame = CFrame.new(world.Position + Vector3.new(0, 0.12, 0))
+				local world = GridMath.CellToWorld(self._surface.CFrame, cell.x, cell.z)
+				marker.CFrame = CFrame.new(world + Vector3.new(0, 0.12, 0))
 				marker.Parent = self._pathPreview
 			end
 		end
@@ -738,6 +918,20 @@ function GridBuildController._renderGhost(self: Controller)
 		cellZ = self._cellZ,
 		rotation = self._rotation,
 	}
+	local previewKey = string.format(
+		"%d:%s:%d:%s:%d:%d:%d",
+		self._plan.revision,
+		self._movingPieceId or "",
+		piece.cellX,
+		piece.pieceType,
+		piece.cellZ,
+		piece.rotation,
+		self._pendingCount
+	)
+	if previewKey == self._lastPreviewKey then
+		return
+	end
+	self._lastPreviewKey = previewKey
 	local valid, reason = BuildRules.ValidatePiece(self._plan, piece, self._movingPieceId)
 	self._valid = valid
 	local color = if valid then self._colors.green else self._colors.red
@@ -745,8 +939,12 @@ function GridBuildController._renderGhost(self: Controller)
 	highlight.FillColor = color
 	highlight.OutlineColor = color
 	local width, depth = GridMath.GetFootprint(piece.pieceType, 0)
-	local height = if piece.pieceType == "SlowTrap" then 0.55 else 4.5
-	ghostPart.Size = Vector3.new(width * 4 - 0.35, height, depth * 4 - 0.35)
+	local height = PieceConfig[piece.pieceType].queryHeight
+	ghostPart.Size = Vector3.new(
+		width * BuildGridConfig.cellSize - 0.35,
+		height,
+		depth * BuildGridConfig.cellSize - 0.35
+	)
 	ghostPart.CFrame = GridMath.GetPieceWorldCFrame(self._surface.CFrame, piece)
 		* CFrame.new(0, height * 0.5, 0)
 	local placementStatus = if self._pendingCount > 0
@@ -760,18 +958,7 @@ function GridBuildController._renderGhost(self: Controller)
 		piece.rotation * 90,
 		placementStatus
 	)
-	local previewKey = string.format(
-		"%d:%d:%s:%d:%d",
-		self._plan.revision,
-		piece.cellX,
-		piece.pieceType,
-		piece.cellZ,
-		piece.rotation
-	)
-	if previewKey ~= self._lastPreviewKey then
-		self._lastPreviewKey = previewKey
-		self:_drawPaths(self:_previewPlan(piece))
-	end
+	self:_drawPaths(self:_previewPlan(piece))
 end
 
 function GridBuildController._updateCamera(self: Controller, deltaTime: number)
@@ -812,8 +999,14 @@ function GridBuildController._updateCamera(self: Controller, deltaTime: number)
 		self._cameraCenter += pan.Unit * 24 * deltaTime
 	end
 	local localCenter = self._surface.CFrame:PointToObjectSpace(self._cameraCenter)
-	localCenter =
-		Vector3.new(math.clamp(localCenter.X, -24, 24), 0, math.clamp(localCenter.Z, -16, 16))
+	local margin = BuildGridConfig.cellSize * 2
+	local limitX = math.max(0, BuildGridConfig.width * BuildGridConfig.cellSize * 0.5 - margin)
+	local limitZ = math.max(0, BuildGridConfig.depth * BuildGridConfig.cellSize * 0.5 - margin)
+	localCenter = Vector3.new(
+		math.clamp(localCenter.X, -limitX, limitX),
+		0,
+		math.clamp(localCenter.Z, -limitZ, limitZ)
+	)
 	self._cameraCenter = self._surface.CFrame:PointToWorldSpace(localCenter)
 	local offset = Vector3.new(self._zoom * 0.58, self._zoom, self._zoom * 0.72)
 	camera.CFrame = CFrame.lookAt(self._cameraCenter + offset, self._cameraCenter)
@@ -823,9 +1016,9 @@ function GridBuildController._render(self: Controller, deltaTime: number)
 	self:_updateCamera(deltaTime)
 	local visible = self:_canBuild()
 	self._panel.Visible = self._replicationRoot:GetAttribute("Phase") == "PREPARATION"
-	self._ghost.Parent = if visible then workspace else nil
-	self._pathPreview.Parent = if visible then workspace else nil
-	if visible then
+	self._ghost.Parent = if visible and self._placementActive then workspace else nil
+	self._pathPreview.Parent = if visible and self._placementActive then workspace else nil
+	if visible and self._placementActive then
 		self:_renderGhost()
 	end
 end

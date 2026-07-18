@@ -1,0 +1,200 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/precanonical-review.schema.json",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/precanonical-review.schema.json"
+    },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "reviewId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]+$"
+    },
+    "result": {
+      "$ref": "#/$defs/binding"
+    },
+    "resultDigest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "decision": {
+      "enum": [
+        "REJECTED",
+        "REVISION_REQUIRED",
+        "PRECANONICAL_CANDIDATE",
+        "HUMAN_SELECTED"
+      ]
+    },
+    "reviewer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reviewedAt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "assessment": {
+      "type": "object",
+      "properties": {
+        "functionalConformity": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "UNKNOWN"
+          ]
+        },
+        "artDirectionConformity": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "UNKNOWN"
+          ]
+        },
+        "visualHierarchy": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "UNKNOWN"
+          ]
+        },
+        "internalCoherence": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "UNKNOWN"
+          ]
+        },
+        "stateCoherence": {
+          "enum": [
+            "PASS",
+            "FAIL",
+            "UNKNOWN"
+          ]
+        }
+      },
+      "required": [
+        "functionalConformity",
+        "artDirectionConformity",
+        "visualHierarchy",
+        "internalCoherence",
+        "stateCoherence"
+      ],
+      "unevaluatedProperties": false
+    },
+    "preserve": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 3
+      },
+      "uniqueItems": true
+    },
+    "correct": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 3
+      },
+      "uniqueItems": true
+    },
+    "forbidNext": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 3
+      },
+      "uniqueItems": true
+    },
+    "canonicalizationAuthorized": {
+      "type": "boolean"
+    },
+    "canonical": {
+      "const": false
+    },
+    "productionApproved": {
+      "const": false
+    }
+  },
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "reviewId",
+    "result",
+    "resultDigest",
+    "decision",
+    "reviewer",
+    "reviewedAt",
+    "assessment",
+    "preserve",
+    "correct",
+    "forbidNext",
+    "canonicalizationAuthorized",
+    "canonical",
+    "productionApproved"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "decision": {
+            "const": "HUMAN_SELECTED"
+          }
+        },
+        "required": [
+          "decision"
+        ]
+      },
+      "then": {
+        "properties": {
+          "reviewer": {
+            "type": "string",
+            "minLength": 2
+          },
+          "reviewedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "canonicalizationAuthorized": {
+            "const": true
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "canonicalizationAuthorized": {
+            "const": false
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "binding": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "unevaluatedProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

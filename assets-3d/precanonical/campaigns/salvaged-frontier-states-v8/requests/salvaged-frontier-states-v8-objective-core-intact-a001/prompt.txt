@@ -1,0 +1,129 @@
+GPT IMAGE 2 — ONE OBJECT, ONE GAMEPLAY STATE, ONE IMAGE
+
+Use the `gpt-image-2` image model. If that exact model is not selected or
+visible in the interface, stop and do not substitute another model.
+
+Generate exactly one image: a clean 2x2 state-definition board. Every quadrant
+must depict the exact same object construction in the exact same target state.
+
+CROSS-VIEW IDENTITY LOCK — THIS IS NOT A FOUR-CONCEPT SHEET
+- Freeze one design before rendering. The four quadrants are four camera or
+  diagnostic views of that one frozen asset, never alternatives or variants.
+- Camera and rendering mode may change; geometry, proportions, component count,
+  component placement, joint placement, asymmetry, repair history, material
+  assignment, wear pattern and state damage topology may not change.
+- The solid black silhouette must match the outer contour of the hero view.
+- The rear view must be mechanically compatible with the front view and expose
+  only the explicitly defined safe-side interaction components.
+- Fail the image rather than improvising a different brace, foot, panel, cap,
+  socket, emblem or decorative solution in another quadrant.
+
+TARGET
+- Object: Objective Core (`objective_core`)
+- State: `intact` only
+- Art direction: Salvaged Frontier owns world identity; Industrial Toy Defense
+  contributes disciplined one-second readability only.
+- Canon: vc_objective_core__salvaged-frontier__v1
+- Gameplay function: primary defendable objective and visual anchor
+- One-second promise: This tall protected glowing heart is the thing the fortress exists to defend, and its current health can be read from across the battlefield.
+- Dimensions: 6.0 x 7.0 x
+  6.0 Roblox studs; pivot bottom_center.
+
+BOARD LAYOUT
+- Top left: hero three-quarter front, complete object visible.
+- Top right: three-quarter rear, same construction and state.
+- Bottom left: solid black silhouette, no internal shading.
+- Bottom right: elevated Roblox third-person mobile gameplay camera.
+- Keep identical scale and recognizable proportions across the two perspective
+  views; this is a turnaround proof, not a concept-variation sheet.
+- Neutral mid-gray background, neutral studio light, no environment or props.
+- No captions, labels, letters, numbers, logos or generated text in the image.
+- Do not show intact/damaged/critical comparisons or any second gameplay state.
+
+IDENTITY AND CONSTRUCTION
+- World role: The fortress heart, battle objective and persistent visual anchor that converts abstract survival into protection of a player-authored home.
+- Emotional intent: Precious, resilient and worth rallying around; damage should feel alarming but legible, never arbitrary or hopeless.
+- Territory thesis: A precious expedition heart protected by a calm standardized service pedestal, three large guardians and one visibly renewed sector that makes collective maintenance feel heroic.
+- Front/orientation: The brighter interaction aperture and protective opening face the player approach; the denser service mass closes the rear.
+- Interaction read: A complete protected ring and accessible lower service band identify friendly interaction without resembling a weapon.
+- Danger read: Protective rings open, buttresses fail and the core becomes more exposed as health worsens.
+- Recognition landmarks: tall luminous protected center, concentric or buttressed crown, broad fortress pedestal, player-facing access opening
+- Negative spaces: air gap around the luminous core, repeated openings between buttresses, clear access notch on the player-facing side
+
+REQUIRED COMPONENTS
+- Pedestal: broad layered base at lower forty percent; Ground the objective and distribute the visual and physical load. Relationship: Carries buttresses, service spine and protected chamber. Reading role: Signals permanence and makes the objective feel worth defending.
+- ProtectedCore: sphere or compact cylinder at central chamber; Represent objective vitality and the protected source of fortress energy and memory. Relationship: Suspended or seated inside a visibly supported protective cage. Reading role: Primary state and objective identity carrier.
+- ProtectiveCage: rings, buttresses and protected crown at around and above core; Explain defense, state progression and increasing exposure. Relationship: Mechanically rooted into pedestal around the core chamber. Reading role: Shows whether the objective is protected, weakened or exposed.
+- ServiceSpine: closed structural mass at rear vertical axis; Define rear orientation and carry repair or energy service logic. Relationship: Connects pedestal systems to crown without crossing the player access opening. Reading role: Prevents radial symmetry from erasing front-back orientation.
+
+FORM HIERARCHY
+- Primary 72%: broad grounded pedestal, central protected sphere or cylinder, upper ring or cage crown
+- Secondary 23%: radial buttresses, service spine, interaction ring and lower access band
+- Tertiary 5% maximum: few protected status windows, large assembly seams following radial logic, controlled historical repair marks
+- Construction translation: A grounded pedestal, broad protected chamber and repeated buttress family provide immediate objective clarity; one reinforced replacement buttress and one copper service spine reveal history without turning the core into a relic pile.
+
+MATERIAL SYSTEM
+- anchor_zone: fortress_structure; primary; dark to middle-dark; Calm large planes and readable bevels that survive repetition. Wear: Ground, service and buttress contacts only.
+- vitality_zone: contained_energy; interaction; bright but bounded; Layered protected glow with opaque framing, never a texture-only orb. Wear: No dirt; damage is shown by exposure, instability and interrupted light.
+- protection_zone: impact_armor; secondary; middle value; Thick protective bands with disciplined seams. Wear: Localized at enemy-facing impacts and repaired cage joints.
+
+TARGET STATE CONTRACT — `intact`
+- Summary: A closed protective crown, stable pedestal and calm luminous heartbeat communicate a secure but valuable fortress heart.
+- Required changes:
+- All buttresses and rings form a complete protective envelope.
+- The core pulse is slow, regular and spatially contained.
+- Shape and silhouette cues:
+- complete crown
+- balanced buttress rhythm
+- core centered inside protection
+- Value cues:
+- bright center surrounded by stable dark shell
+- clean access contrast
+- Color cues:
+- friendly vitality role
+- no warning or critical dominance
+- Light cues:
+- regular heartbeat pulse
+- continuous but bounded core illumination
+- Motion posture implied in the still:
+- subtle internal pulse
+- no cage instability
+- VFX cues, kept sparse and non-obscuring:
+- gentle contained energy motes
+- no smoke or electrical discharge
+- Component operations:
+- ProtectiveCage / PRESERVE: Keep the protective envelope complete and aligned.
+- ProtectedCore / EMIT: Emit a calm regular vitality pulse.
+- Territory translation: The declared renewed sector opens first and reveals its joint; critical damage expands that same opening toward the core so vulnerability, repair target and next action remain obvious.
+
+INVARIANTS — NEVER CHANGE
+- Six-by-seven-by-six dimensions, footprint and bottom-center pivot remain fixed.
+- The luminous protected center, pedestal and crown hierarchy remain recognizable.
+- The player-facing access opening and rear service spine never swap.
+- State progression increases core exposure without changing the core anchor.
+- The objective remains visually friendly and never acquires weapon silhouettes.
+
+NO IMAGE REFERENCE
+- Construct only from this closed canon contract.
+
+STYLE DISCIPLINE
+- Thick standardized rectangles/trapezoids, large protected
+  apertures, explicit load paths and one or two causal repairs.
+- Deep slate chassis, bone-sand reclaimed panels and bounded sun-copper repair
+  history. Mint is a small protected interaction cue only. Warning and critical
+  colors remain localized semantic signals.
+- Broad calm planes, consistent structural bevels, low secondary density and
+  extremely low tertiary density.
+- Damage or activation must read through shape, silhouette, posture and value;
+  never through color alone.
+- Salvaged Frontier must be carried by one causal, load-bearing repair and one
+  bounded replacement history. Wear alone is not sufficient art-direction
+  evidence, and a decorative diagonal stripe is not a repair story.
+- Bone-sand reclaimed composite must read as manufactured composite, never
+  medieval stone, raw concrete, parchment or ceramic slab.
+- A protected interaction emission appears only where the canon places the
+  interaction zone. Never move a friendly light onto the threat-facing armor.
+- Every brace terminates at plausible structural joints and load paths, never
+  as decoration on a disposable panel.
+- The image is precanonical visual evidence only. It does not authorize hidden
+  geometry, canon lock or production.

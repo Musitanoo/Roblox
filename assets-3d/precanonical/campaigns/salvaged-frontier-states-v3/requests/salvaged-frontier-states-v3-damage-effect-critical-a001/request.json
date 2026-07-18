@@ -1,0 +1,89 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/precanonical-request.schema.json",
+  "schemaVersion": "1.0.0",
+  "requestId": "salvaged-frontier-states-v3-damage-effect-critical-a001",
+  "assetKey": "damage_effect",
+  "artDirection": "salvaged-frontier",
+  "generationSurface": "chatgpt_web_images",
+  "status": "PRECANONICAL_SPEC_COMPLETE",
+  "stage": "state_definition",
+  "policy": {
+    "path": "art/precanonical/policy.json",
+    "sha256": "9028bdc911558acc001ecfb7b4c0c487f3fc6799c59f55e87f66a638fd701164"
+  },
+  "constitution": {
+    "path": "art/selected/salvaged-frontier-constitution.json",
+    "sha256": "14d356e67f309ca891ede69d7964d8990716b782d59bcaae024e1bf94d9aa310"
+  },
+  "compiler": {
+    "path": "tools/art/precanonical_campaign.py",
+    "sha256": "e9f40e96bcdcede5c93e9f0ecf1eefb575ce5ce31b87185d94b088b8545f97cf"
+  },
+  "sourceBrief": {
+    "path": "source-brief.json",
+    "sha256": "63b7d1ff354140e3b445ff312436843b0f03187ba8ce7ed5f587a5abd5e2026b"
+  },
+  "parentResult": {
+    "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-damage-effect-damaged-a001-result-001\\result.json",
+    "sha256": "b22a3bc8b3f4899fcf2bc7237ccb934478e662b8d4c91207a4ab4c2f82573575"
+  },
+  "revisionInstructions": [],
+  "files": {
+    "brief": {
+      "path": "brief.md",
+      "sha256": "bcf35ad1bcb7343ae7e41761557173ea8ca18815bbe3f1f9f3946064e9af6525"
+    },
+    "prompt": {
+      "path": "prompt.txt",
+      "sha256": "d5355c9bfad56109f663bb42ef5b964bb502ca2d88cdb317b746c4062e3881a7"
+    },
+    "negativeConstraints": {
+      "path": "negative-constraints.txt",
+      "sha256": "24743f45ed8ee50d179bba35fa126c93b024684b89b1285178eb7237616571dd"
+    },
+    "requestedViews": {
+      "path": "requested-views.json",
+      "sha256": "f34a21632b71d06d7b2a026a02cea32a8942ada34aff34fffccd65060700977b"
+    },
+    "requestedStates": {
+      "path": "requested-states.json",
+      "sha256": "e013fc4b6aa437de6a8d79b4eec0fbde3f12fb314d2167f586515675ef36e34a"
+    }
+  },
+  "promptHash": "d5355c9bfad56109f663bb42ef5b964bb502ca2d88cdb317b746c4062e3881a7",
+  "requestedViewIds": [
+    "hero_three_quarter_front",
+    "three_quarter_rear",
+    "black_silhouette",
+    "mobile_landscape"
+  ],
+  "requestedStateIds": [
+    "critical"
+  ],
+  "imageSpec": {
+    "aspectRatio": "1:1",
+    "background": "neutral_mid_gray",
+    "lighting": "neutral_studio",
+    "singleObjectOnly": true
+  },
+  "budget": {
+    "maximumWebGenerations": 1,
+    "consumedWebGenerations": 0,
+    "reserveForCorrections": 0,
+    "humanConfirmationRequired": true
+  },
+  "automation": {
+    "browserAdapter": "codex_chrome",
+    "automaticSubmissionAuthorized": false,
+    "automaticRetry": false,
+    "automaticCodexImageFallback": false,
+    "automaticApiFallback": false,
+    "browserReasoningForbidden": true
+  },
+  "authority": {
+    "canonical": false,
+    "geometryAuthority": false,
+    "humanSelectionRequired": true,
+    "productionApproved": false
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/precanonical-brief.schema.json",
+  "schemaVersion": "1.0.0",
+  "briefId": "barricade-salvaged-frontier-state-campaign",
+  "assetKey": "barricade",
+  "displayName": "Defense Barricade Small",
+  "artDirection": "salvaged-frontier",
+  "gameplayFunction": "temporary path-blocking defensive structure",
+  "oneSecondRead": "This broad grounded object blocks a lane now, shows where it is weakening, and can be understood before the next enemy reaches it.",
+  "worldRole": "A temporary, deliberately understandable interruption in the enemy route that turns path control into a visible player-authored hypothesis.",
+  "emotionalIntent": "Dependable and brave without appearing invulnerable; its damage should create urgency and useful concern rather than helplessness.",
+  "dimensionsStuds": {
+    "width": 8.0,
+    "height": 4.0,
+    "depth": 2.0
+  },
+  "orientation": {
+    "front": "A wide low fortress gate fragment: two planted feet, two outer posts, strong top and bottom rails, and three readable blocking bays facing the enemy.",
+    "playerSide": "A complete, waist-height service socket or status module is readable from the safe rear side.",
+    "threatSide": "Breaks, tilted panels and exposed structure progress from one localized weakness to a wide critical breach."
+  },
+  "interactionZones": [
+    {
+      "id": "structural_zone",
+      "purpose": "Communicate the load-bearing chassis that persists through damage.",
+      "location": "frame_joints",
+      "requiredCue": "Continuous thick frame and planted feet. Dark stable value mass. Color role: primary."
+    },
+    {
+      "id": "blocking_zone",
+      "purpose": "Show where enemies are physically stopped and where breaches form.",
+      "location": "panel_impacts",
+      "requiredCue": "Three broad readable bays. Mid-value panels separated from frame. Color role: secondary."
+    },
+    {
+      "id": "interaction_zone",
+      "purpose": "Guide repair and status interaction from the safe side.",
+      "location": "service_module",
+      "requiredCue": "Complete socket when usable and open socket when disabled. Small high-contrast focal point. Color role: interaction."
+    },
+    {
+      "id": "vulnerability_zone",
+      "purpose": "Reveal the cause and progression of structural failure.",
+      "location": "largest_break",
+      "requiredCue": "One major break then a widened breach with exposed load path. Bright exposed edge against dark frame. Color role: warning."
+    }
+  ],
+  "components": [
+    {
+      "id": "foundation_feet",
+      "function": "Transfer impact load to the ground and define the collision footprint.",
+      "mobility": "fixed"
+    },
+    {
+      "id": "structural_frame",
+      "function": "Carry the barricade silhouette and preserve identity across all damage states.",
+      "mobility": "destructible"
+    },
+    {
+      "id": "blocking_panels",
+      "function": "Present the enemy-facing impact area and communicate localized structural damage.",
+      "mobility": "destructible"
+    },
+    {
+      "id": "service_module",
+      "function": "Expose the player-facing repair and status interaction point.",
+      "mobility": "replaceable"
+    }
+  ],
+  "movements": [
+    "no structural motion",
+    "subtle ready pulse only",
+    "damaged bay settles once",
+    "brief stress vibration after impact",
+    "one attached panel hangs or shudders",
+    "tracking or readiness motion is absent"
+  ],
+  "states": [
+    {
+      "id": "intact",
+      "visualChange": "A fully closed, planted and repair-ready barrier whose complete frame and panel rhythm promise temporary but credible protection. All three bays are closed and aligned. The service socket is complete and emits a calm ready signal.",
+      "invariants": [
+        "Dimensions, footprint, pivot and front orientation remain fixed across territories and states.",
+        "The structural frame, two-foot grounding logic and three-bay rhythm remain recognizable.",
+        "The player interaction point remains on the safe rear side at the same gameplay anchor.",
+        "Damage never moves the collision footprint or invents detached gameplay-blocking fragments.",
+        "Component IDs and effect anchors remain stable across regeneration."
+      ]
+    },
+    {
+      "id": "damaged",
+      "visualChange": "One localized failure makes the barrier visibly weaker while the chassis, footprint and repair affordance remain unmistakably usable. One panel drops, opens or shifts along a plausible joint. One frame or bracket break exposes bare structure without creating a full passage.",
+      "invariants": [
+        "Dimensions, footprint, pivot and front orientation remain fixed across territories and states.",
+        "The structural frame, two-foot grounding logic and three-bay rhythm remain recognizable.",
+        "The player interaction point remains on the safe rear side at the same gameplay anchor.",
+        "Damage never moves the collision footprint or invents detached gameplay-blocking fragments.",
+        "Component IDs and effect anchors remain stable across regeneration."
+      ]
+    },
+    {
+      "id": "critical",
+      "visualChange": "A wide causal breach and opened service system show imminent collapse while the same frame, feet and player ownership remain readable. Two or more major breaks create one dominant passage-like breach. The interaction socket opens and the critical core or bare structure becomes exposed.",
+      "invariants": [
+        "Dimensions, footprint, pivot and front orientation remain fixed across territories and states.",
+        "The structural frame, two-foot grounding logic and three-bay rhythm remain recognizable.",
+        "The player interaction point remains on the safe rear side at the same gameplay anchor.",
+        "Damage never moves the collision footprint or invents detached gameplay-blocking fragments.",
+        "Component IDs and effect anchors remain stable across regeneration."
+      ]
+    }
+  ],
+  "collisionPromise": "Keep the bottom_center pivot, footprint and gameplay anchors identical in every generated state.",
+  "viewDistanceStuds": {
+    "near": 3,
+    "mid": 30,
+    "far": 60
+  },
+  "expectedSimultaneousInstances": 30,
+  "obligations": [
+    "Reconstruct every primary and secondary component defined by this canon.",
+    "Produce every required state from the same component structure and stable anchors.",
+    "Preserve the one-second function, front, interaction, danger and state readings.",
+    "Record this canon ID and exact SHA-256 in the compliance envelope."
+  ],
+  "constraints": [
+    "Dimensions are 8.0 x 4.0 x 2.0 studs with tolerance 0.005.",
+    "Triangle budget maximum is 2000.",
+    "Texture class is medium.",
+    "Pivot is bottom_center and component anchors remain stable.",
+    "One UV set and one material slot maximum per production mesh component."
+  ],
+  "freedoms": [
+    "edge_wear: 0 to 8 percent of exposed edge length. Adds bounded history without competing with state readability.",
+    "tertiary_fastener_choice: one approved fastener family per territory. Allows construction flavor while keeping every joint semantically plausible.",
+    "approved_asymmetry: territory target only. Expresses the territory without changing footprint, panel count or front-back reading."
+  ],
+  "prohibitions": [
+    "a fourth blocking bay or missing bay",
+    "thin spikes, wires or floating armor plates",
+    "front-facing interaction cues that confuse the safe side",
+    "random cracks unrelated to a load path",
+    "damage represented only by color",
+    "logos, text, tally marks or unexplained ornament",
+    "microscopic underside details invisible in play",
+    "random junk pile silhouette",
+    "uniform rust",
+    "decorative repair with no causal reason",
+    "more than three visible material families",
+    "loose cable spaghetti",
+    "asymmetry that changes gameplay anchors",
+    "literal construction-toy motifs or pristine molded-plastic identity",
+    "thin_loose_wires",
+    "microtext",
+    "free_floating_fragments",
+    "detail_without_silhouette_function_identity"
+  ],
+  "productionApproved": false
+}

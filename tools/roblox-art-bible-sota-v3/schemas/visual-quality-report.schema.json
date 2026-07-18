@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/visual-quality-report.schema.json",
+  "type": "object",
+  "required": ["$schema", "schemaVersion", "status", "generatedAt", "inputHashes", "thresholds", "territories", "crossTerritoryComparisons", "issues"],
+  "properties": {
+    "$schema": {"const": "https://roblox-top1.local/schemas/visual-quality-report.schema.json"},
+    "schemaVersion": {"const": "1.0.0"},
+    "status": {"enum": ["PASS", "FAIL"]},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "inputHashes": {
+      "type": "object",
+      "required": ["generator", "renderMatrix"],
+      "properties": {
+        "generator": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "renderMatrix": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      },
+      "unevaluatedProperties": false
+    },
+    "thresholds": {
+      "type": "object",
+      "required": ["minimumMaskAreaRatio", "maximumFrameContactPixels", "minimumStateDifference", "minimumCriticalDifference", "minimumCriticalLead", "minimumCrossTerritoryDifference"],
+      "properties": {
+        "minimumMaskAreaRatio": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        "maximumFrameContactPixels": {"type": "integer", "minimum": 0},
+        "minimumStateDifference": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        "minimumCriticalDifference": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        "minimumCriticalLead": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        "minimumCrossTerritoryDifference": {"type": "number", "exclusiveMinimum": 0, "maximum": 1}
+      },
+      "unevaluatedProperties": false
+    },
+    "territories": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["territoryId", "reportPath", "reportSha256", "cases", "stateComparisons", "severityOrdering"],
+        "properties": {
+          "territoryId": {"enum": ["industrial-toy-defense", "salvaged-frontier", "clean-tactical-diorama"]},
+          "reportPath": {"type": "string", "pattern": "^build/[a-z0-9-]+/build-report\\.json$"},
+          "reportSha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "cases": {
+            "type": "array",
+            "minItems": 13,
+            "maxItems": 13,
+            "items": {
+              "type": "object",
+              "required": ["assetId", "stateId", "path", "sha256", "maskAreaRatio", "bboxWidthRatio", "bboxHeightRatio", "frameContactPixels", "pass"],
+              "properties": {
+                "assetId": {"enum": ["barricade", "objective_core", "enemy_standard", "floor_module", "damage_effect"]},
+                "stateId": {"enum": ["intact", "damaged", "critical"]},
+                "path": {"type": "string", "pattern": "^evidence/blender/visual-quality-artifacts/[a-z0-9-]+/.+\\.png$"},
+                "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+                "maskAreaRatio": {"type": "number", "minimum": 0, "maximum": 1},
+                "bboxWidthRatio": {"type": "number", "minimum": 0, "maximum": 1},
+                "bboxHeightRatio": {"type": "number", "minimum": 0, "maximum": 1},
+                "frameContactPixels": {"type": "integer", "minimum": 0},
+                "pass": {"type": "boolean"}
+              },
+              "unevaluatedProperties": false
+            }
+          },
+          "stateComparisons": {
+            "type": "array",
+            "minItems": 8,
+            "maxItems": 8,
+            "items": {"$ref": "#/$defs/comparison"}
+          },
+          "severityOrdering": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 3,
+            "items": {"$ref": "#/$defs/severityOrdering"}
+          }
+        },
+        "unevaluatedProperties": false
+      }
+    },
+    "crossTerritoryComparisons": {
+      "type": "array",
+      "minItems": 9,
+      "maxItems": 9,
+      "items": {
+        "allOf": [
+          {"$ref": "#/$defs/comparison"},
+          {
+            "type": "object",
+            "maxProperties": 9,
+            "required": ["territoryA", "territoryB"],
+            "properties": {
+              "territoryA": {"type": "string"},
+              "territoryB": {"type": "string"}
+            }
+          }
+        ]
+      }
+    },
+    "issues": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {
+    "severityOrdering": {
+      "type": "object",
+      "required": ["assetId", "damagedDifferenceRatio", "criticalDifferenceRatio", "minimumCriticalLead", "pass"],
+      "properties": {
+        "assetId": {"enum": ["barricade", "objective_core", "enemy_standard"]},
+        "damagedDifferenceRatio": {"type": "number", "minimum": 0, "maximum": 1},
+        "criticalDifferenceRatio": {"type": "number", "minimum": 0, "maximum": 1},
+        "minimumCriticalLead": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        "pass": {"type": "boolean"}
+      },
+      "unevaluatedProperties": false
+    },
+    "comparison": {
+      "type": "object",
+      "required": ["assetId", "fromState", "toState", "intersectionOverUnion", "differenceRatio", "minimumDifference", "pass"],
+      "properties": {
+        "assetId": {"enum": ["barricade", "objective_core", "enemy_standard", "floor_module", "damage_effect"]},
+        "fromState": {"enum": ["intact", "damaged", "critical"]},
+        "toState": {"enum": ["intact", "damaged", "critical"]},
+        "intersectionOverUnion": {"type": "number", "minimum": 0, "maximum": 1},
+        "differenceRatio": {"type": "number", "minimum": 0, "maximum": 1},
+        "minimumDifference": {"type": "number", "exclusiveMinimum": 0, "maximum": 1},
+        "pass": {"type": "boolean"},
+        "territoryA": {"type": "string"},
+        "territoryB": {"type": "string"}
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

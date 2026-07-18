@@ -1,0 +1,35 @@
+- No text, captions, labels, letters, numbers, logos or invented alphabet.
+- No four alternative concepts, silhouette variants or design options inside the four quadrants.
+- No cross-view changes to component count, brace direction, feet, panels, caps, joints, socket, wear or asymmetry.
+- No second gameplay state and no state comparison in the same image.
+- No interpretation other than the single target state damaged.
+- No independent redesign between quadrants or between gameplay states.
+- No floating, intersecting or mechanically unsupported components.
+- No random scrap cloud, cable spaghetti, micro-greebles or uniform distress.
+- No photorealism, military realism, bleak monochrome or literal construction-toy identity.
+- No color-only gameplay state; shape, silhouette, posture and value must agree.
+- No thin wires, paper-thin essential parts or tiny silhouette-critical details.
+- No invented rear, underside, mechanism, component, weapon or decoration.
+- No geometric emblem, badge, pseudo-logo, triangular mark or unexplained assembly symbol.
+- No stone, concrete, parchment or ceramic reading for reclaimed composite panels.
+- No friendly interaction light on the threat-facing armor or front presentation face.
+- No decorative brace that fails to connect two plausible load-bearing structural joints.
+- No cinematic depth of field, environmental scene or unrelated prop.
+- player-like heroic proportions
+- thin limb silhouette
+- gore, exposed organs or realistic wounds
+- friendly complete interaction ring
+- hidden front direction
+- uniform particle fog around the enemy
+- decorative horns, wings or weapons not defined by gameplay
+- random junk pile silhouette
+- uniform rust
+- decorative repair with no causal reason
+- more than three visible material families
+- loose cable spaghetti
+- asymmetry that changes gameplay anchors
+- literal construction-toy motifs or pristine molded-plastic identity
+- thin_loose_wires
+- microtext
+- free_floating_fragments
+- detail_without_silhouette_function_identity

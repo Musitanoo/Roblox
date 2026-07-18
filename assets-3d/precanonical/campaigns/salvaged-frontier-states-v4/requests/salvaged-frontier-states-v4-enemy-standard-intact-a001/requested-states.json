@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0.0",
+  "states": [
+    {
+      "id": "intact",
+      "visualChange": "A complete violet rôdeur advances in a stable hunch with its zombie face visible, one hand reaching, one forearm hanging lower and the oblique frontier bloom unbroken. The head leads ahead of the hunched torso while both eyes, jaw plane, arms, legs and bloom remain complete. One open hand reaches toward the route and the other hangs lower, establishing the canonical asymmetry without injury.",
+      "invariants": [
+        "Two-and-a-half by five-and-a-half by two-and-a-half bounds and feet-center pivot remain fixed.",
+        "The bowed zombie head, visible face cavity, hunched pear torso, unequal open-handed arms, bent legs and oblique violet bloom remain recognizable.",
+        "The unit remains the standard rôdeur and never gains the giant fists, shoulder width, armor mass or wall-breaking promise of a brute.",
+        "Deep violet biology remains the dominant faction read; raspberry stays local to hostile facial anatomy and red stays local to critical state.",
+        "No player copper, mint interaction language, bone-sand panel grid, mechanical visor, service chassis or proud repair history appears.",
+        "Damage derives from the same body and bloom through posture, one causal fracture and loss of balance without changing gameplay anchors.",
+        "Threat direction and zombie identity remain readable before VFX, sound or color."
+      ]
+    }
+  ],
+  "independentStateDesignForbidden": true
+}

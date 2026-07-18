@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "CALIBRATION",
+  "global": {
+    "materialSlotsPerMeshObject": 1,
+    "uvSetsPerComponent": 1,
+    "uvMinimum": 0.0,
+    "uvMaximum": 1.0,
+    "textureMaximum": 1024,
+    "normalFormat": "OpenGL tangent-space",
+    "builtInMaterialsPreferredForRepeatedWorldSurfaces": true,
+    "noBakedDirectionalLightingInAlbedo": true
+  },
+  "textureBudgetClasses": {
+    "tiny": {"maximumDimensionStuds": 2, "albedo": 128, "otherMaps": 128},
+    "small": {"maximumDimensionStuds": 5, "albedo": 256, "otherMaps": 256},
+    "medium": {"maximumDimensionStuds": 10, "albedo": 512, "otherMaps": 256},
+    "large": {"maximumDimensionStuds": 20, "albedo": 1024, "otherMaps": 512}
+  },
+  "classes": {
+    "painted_metal": {"roughness": [0.52, 0.78], "metalness": [0.0, 0.08], "wearMaximumAreaRatio": 0.12},
+    "bare_metal": {"roughness": [0.32, 0.62], "metalness": [0.82, 1.0], "wearMaximumAreaRatio": 0.08},
+    "polymer": {"roughness": [0.45, 0.75], "metalness": [0.0, 0.02], "wearMaximumAreaRatio": 0.08},
+    "rubber": {"roughness": [0.78, 0.96], "metalness": [0.0, 0.0], "wearMaximumAreaRatio": 0.10},
+    "reclaimed_wood": {"roughness": [0.68, 0.92], "metalness": [0.0, 0.0], "wearMaximumAreaRatio": 0.16}
+  }
+}

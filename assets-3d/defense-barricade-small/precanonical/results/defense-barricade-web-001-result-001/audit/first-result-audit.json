@@ -1,0 +1,412 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/precanonical-visual-audit.schema.json",
+  "schemaVersion": "1.0.0",
+  "auditId": "defense-barricade-web-001-result-001-audit-001",
+  "auditedAt": "2026-07-16T22:00:02Z",
+  "scope": {
+    "originalStage": "exploration",
+    "downstreamUse": "state_definition",
+    "observableEvidenceOnly": true,
+    "limitations": [
+      "The audit can assess only the supplied 1254 x 1254 rendered sheet and its bound metadata.",
+      "Rear construction, underside, dimensions, topology, UVs, collision and Roblox runtime performance are not observable.",
+      "A missing proof is reported as UNKNOWN or a limitation, never converted into a visual failure."
+    ]
+  },
+  "evidence": {
+    "request": {
+      "path": "assets-3d/defense-barricade-small/precanonical/requests/defense-barricade-web-001/request.json",
+      "sha256": "01ba411cce74e29e0150765ace17502dbc7ae39767ee6d1c502cf81e3da89862"
+    },
+    "result": {
+      "path": "assets-3d/defense-barricade-small/precanonical/results/defense-barricade-web-001-result-001/result.json",
+      "sha256": "b991a2de4423c615f27ed39c8e0d50084b73d0f64fa5fd4f4c1556db81a6a423"
+    },
+    "review": {
+      "path": "assets-3d/defense-barricade-small/precanonical/results/defense-barricade-web-001-result-001/review.json",
+      "sha256": "b9d889e3b7f4798c7adb7957640bc601bf1600428fb55b0592fbc6b10dd52b1a"
+    },
+    "image": {
+      "path": "assets-3d/defense-barricade-small/precanonical/results/defense-barricade-web-001-result-001/raw/generated-001.png",
+      "sha256": "219ebd23eff48a3c32413c4ca80660ba725b4689bf523b61b6eaa79ac17865bd"
+    },
+    "resultDigest": "f835b96536feeda3da3cf0983a7f24fdd9920903cd5db75f4c2e739e999fb41b",
+    "modelNameEvidence": "NOT_CONFIRMED"
+  },
+  "verdict": "REVISION_REQUIRED",
+  "strengthsToPreserve": [
+    "Wide, low and grounded barricade read with two outer load-bearing feet.",
+    "Three large panel rhythm inside a continuous dark standardized frame.",
+    "Restrained deep-slate, bone-sand, copper and mint palette with strong value separation.",
+    "Chunky bevel language, calm primary planes and clean neutral presentation.",
+    "Immediate friendly defensive-prop readability with no generated text."
+  ],
+  "findings": [
+    {
+      "id": "F-001",
+      "category": "composition",
+      "severity": "BLOCKING",
+      "originalStageAssessment": "NOT_APPLICABLE",
+      "downstreamImpact": "BLOCKING",
+      "problem": "The sheet contains four alternative objects, not four views of one frozen object.",
+      "evidence": "Brace direction, frame caps, post construction, panel proportions and foot details change between quadrants.",
+      "correction": "Use one object and one state per board; allow only camera or diagnostic rendering mode to change.",
+      "implementationStatus": "IMPLEMENTED"
+    },
+    {
+      "id": "F-002",
+      "category": "composition",
+      "severity": "HIGH",
+      "originalStageAssessment": "VIOLATION",
+      "downstreamImpact": "DEGRADING",
+      "problem": "The four exploration candidates are not genuinely different silhouettes.",
+      "evidence": "All candidates retain the same rectangular frame, three-panel rhythm and feet; most variation is limited to copper-brace placement and trim.",
+      "correction": "Require each exploration candidate to change at least two primary-mass or negative-space decisions; reject brace-only variation.",
+      "implementationStatus": "IMPLEMENTED"
+    },
+    {
+      "id": "F-003",
+      "category": "evidence",
+      "severity": "HIGH",
+      "originalStageAssessment": "LIMITATION",
+      "downstreamImpact": "BLOCKING",
+      "problem": "No candidate or bounded image region is selected as the continuing object identity.",
+      "evidence": "The review binds the entire sheet and contains no selected quadrant, crop or preserve rule.",
+      "correction": "Start the state campaign from one closed canon construction and require explicit preserve rules before acceptance.",
+      "implementationStatus": "IMPLEMENTED"
+    },
+    {
+      "id": "F-004",
+      "category": "composition",
+      "severity": "BLOCKING",
+      "originalStageAssessment": "LIMITATION",
+      "downstreamImpact": "BLOCKING",
+      "problem": "The sheet provides no mechanically useful rear view.",
+      "evidence": "Every quadrant is a front or near-front three-quarter presentation.",
+      "correction": "Require a three-quarter rear view of the exact hero construction, including the protected player-side repair socket.",
+      "implementationStatus": "IMPLEMENTED"
+    },
+    {
+      "id": "F-005",
+      "category": "perception",
+      "severity": "HIGH",
+      "originalStageAssessment": "LIMITATION",
+      "downstreamImpact": "BLOCKING",
+      "problem": "There is no black-silhouette proof.",
+      "evidence": "All quadrants use shaded materials and internal detail.",
+      "correction": "Require a solid black silhouette whose outer contour matches the hero view.",
+      "implementationStatus": "IMPLEMENTED"
+    },
+    {
+      "id": "F-006",
+      "category": "perception",
+      "severity": "HIGH",
+      "originalStageAssessment": "LIMITATION",
+      "downstreamImpact": "BLOCKING",
+      "problem": "There is no elevated Roblox mobile gameplay-camera proof.",
+      "evidence": "All candidates use a studio concept-art camera at a similar distance.",
+      "correction": "Require one elevated mobile gameplay view in every state-definition board.",
+      "implementationStatus": "IMPLEMENTED"
+    },
+    {
+      "id": "F-007",
+      "category": "continuity",
+      "severity": "BLOCKING",
+      "originalStageAssessment": "LIMITATION",
+      "downstreamImpact": "BLOCKING",
+      "problem": "Intact, damaged and critical states are not separately defined or verifiable.",
+      "evidence": "The request metadata names three states, but the output contract asks for four silhouettes and the image shows no state lineage.",
+      "correction": "Generate one independent board per object state and never mix states in one image.",
+      "implementationStatus": "IMPLEMENTED"
+    },
+    {
+      "id": "F-008",
+      "category": "continuity",
+      "severity": "BLOCKING",
+      "originalStageAssessment": "LIMITATION",
+      "downstreamImpact": "BLOCKING",
+      "problem": "Damage-state continuity cannot be proven from this result.",
+      "evidence": "No accepted intact construction is hash-bound as the parent of damaged, and no damaged construction is parent of critical.",
+      "correction": "Hash-bind damaged to accepted intact and critical to accepted damaged; transform named components only.",
+      "implementationStatus": "IMPLEMENTED"
+    },
+    {
+      "id": "F-009",
+      "category": "function",
+      "severity": "HIGH",
+      "originalStageAssessment": "VIOLATION",
+      "downstreamImpact": "BLOCKING",
+      "problem": "Threat-facing front and player-safe rear are visually ambiguous.",
+      "evidence": "The same armor presentation and mint cue appear on the presented face, while no safe service face is shown.",
+      "correction": "Make front a continuous threat armor face and rear a calmer service face with the protected interaction socket.",
+      "implementationStatus": "PENDING_NEW_GENERATION"
+    },
+    {
+      "id": "F-010",
+      "category": "function",
+      "severity": "HIGH",
+      "originalStageAssessment": "VIOLATION",
+      "downstreamImpact": "BLOCKING",
+      "problem": "The mint friendly interaction cue is exposed on the threat-facing presentation side.",
+      "evidence": "A bright cyan or mint lamp is visible on the right post in every candidate.",
+      "correction": "Keep mint emission local to the protected rear repair socket and absent from the threat-facing armor.",
+      "implementationStatus": "PENDING_NEW_GENERATION"
+    },
+    {
+      "id": "F-011",
+      "category": "mechanics",
+      "severity": "HIGH",
+      "originalStageAssessment": "VIOLATION",
+      "downstreamImpact": "BLOCKING",
+      "problem": "The copper brace often reads as a decorative diagonal stripe instead of a load-bearing repair.",
+      "evidence": "Several brace ends terminate on panel faces or ornamental plates without a visible structural load path.",
+      "correction": "Terminate the single repair brace at two plausible frame or load-bearing joints and expose its causal weak-span purpose.",
+      "implementationStatus": "PENDING_NEW_GENERATION"
+    },
+    {
+      "id": "F-012",
+      "category": "art_direction",
+      "severity": "HIGH",
+      "originalStageAssessment": "VIOLATION",
+      "downstreamImpact": "DEGRADING",
+      "problem": "Salvaged Frontier is not expressed through a specific survival history.",
+      "evidence": "The objects read mainly as clean standardized toy-defense barriers with generic scratches and an added copper bar.",
+      "correction": "Show one causal reinforcement and one bounded replacement history while keeping the standardized chassis dominant.",
+      "implementationStatus": "PENDING_NEW_GENERATION"
+    },
+    {
+      "id": "F-013",
+      "category": "art_direction",
+      "severity": "HIGH",
+      "originalStageAssessment": "VIOLATION",
+      "downstreamImpact": "DEGRADING",
+      "problem": "Industrial Toy Defense dominates instead of acting only as readability discipline.",
+      "evidence": "Uniform modular framing, polished beveled panels and decorative hardware carry more identity than frontier repair history.",
+      "correction": "Preserve toy-like readability but make authored adaptation, material replacement and repair causality own the world identity.",
+      "implementationStatus": "PENDING_NEW_GENERATION"
+    },
+    {
+      "id": "F-014",
+      "category": "materials",
+      "severity": "HIGH",
+      "originalStageAssessment": "VIOLATION",
+      "downstreamImpact": "DEGRADING",
+      "problem": "Bone-sand panels read as stone, concrete, parchment or ceramic slabs rather than reclaimed manufactured composite.",
+      "evidence": "The warm panels use mottled mineral-like texture, chipped slab edges and little manufactured layer or fastening evidence.",
+      "correction": "Use controlled composite grain, formed edges, layered construction and functional fasteners; forbid mineral or parchment reading.",
+      "implementationStatus": "PENDING_NEW_GENERATION"
+    },
+    {
+      "id": "F-015",
+      "category": "materials",
+      "severity": "MEDIUM",
+      "originalStageAssessment": "VIOLATION",
+      "downstreamImpact": "DEGRADING",
+      "problem": "The copper reinforcement looks too clean, homogeneous and ornamental for an older maintained field repair.",
+      "evidence": "Its saturation and finish are uniform, with little contact wear or attachment-specific history.",
+      "correction": "Keep copper bounded but add functional contact wear, fastening logic and restrained value variation at real joints.",
+      "implementationStatus": "PENDING_NEW_GENERATION"
+    },
+    {
+      "id": "F-016",
+      "category": "materials",
+      "severity": "MEDIUM",
+      "originalStageAssessment": "VIOLATION",
+      "downstreamImpact": "DEGRADING",
+      "problem": "Surface distress is generic and distributed too uniformly.",
+      "evidence": "Small scratches and chips appear across most dark-frame surfaces without strong directional or contact logic.",
+      "correction": "Concentrate wear at feet, exposed corners, fasteners and contact paths; preserve calm planes elsewhere.",
+      "implementationStatus": "PENDING_NEW_GENERATION"
+    },
+    {
+      "id": "F-017",
+      "category": "art_direction",
+      "severity": "MEDIUM",
+      "originalStageAssessment": "VIOLATION",
+      "downstreamImpact": "DEGRADING",
+      "problem": "Authored asymmetry is weak or ornamental rather than structural.",
+      "evidence": "The primary frame, panel rhythm and feet remain highly symmetrical; asymmetry is mostly a movable brace or small cap.",
+      "correction": "Keep the chassis standardized but place the approved asymmetry in one causal replacement or repair zone.",
+      "implementationStatus": "PENDING_NEW_GENERATION"
+    },
+    {
+      "id": "F-018",
+      "category": "art_direction",
+      "severity": "HIGH",
+      "originalStageAssessment": "VIOLATION",
+      "downstreamImpact": "DEGRADING",
+      "problem": "A triangular pseudo-logo or assembly emblem appears on the lower-left candidate.",
+      "evidence": "The upper copper plate contains a centered triangular symbol-like construction unrelated to a visible joint.",
+      "correction": "Remove standalone emblems and permit tertiary geometry only where it explains a real joint or fastener.",
+      "implementationStatus": "IMPLEMENTED"
+    },
+    {
+      "id": "F-019",
+      "category": "continuity",
+      "severity": "HIGH",
+      "originalStageAssessment": "NOT_APPLICABLE",
+      "downstreamImpact": "BLOCKING",
+      "problem": "Component topology and attachment language drift across quadrants.",
+      "evidence": "Brace count and shape, top caps, corner posts, feet and panel outlines are not identical between the four candidates.",
+      "correction": "Apply a cross-view identity lock to counts, positions, joints, wear, material assignments and state topology.",
+      "implementationStatus": "IMPLEMENTED"
+    },
+    {
+      "id": "F-020",
+      "category": "mechanics",
+      "severity": "MEDIUM",
+      "originalStageAssessment": "LIMITATION",
+      "downstreamImpact": "DEGRADING",
+      "problem": "Armor-panel mounting and destructibility are not visually explained.",
+      "evidence": "Panels appear seated in frames, but their clamps, hinges, sacrificial mounts or intended failure path are inconsistent or absent.",
+      "correction": "Define stable panel mounts and one declared weak span so damage operations remain mechanically legible.",
+      "implementationStatus": "PENDING_NEW_GENERATION"
+    },
+    {
+      "id": "F-021",
+      "category": "evidence",
+      "severity": "MEDIUM",
+      "originalStageAssessment": "LIMITATION",
+      "downstreamImpact": "DEGRADING",
+      "problem": "The required 8 x 4 x 2 stud dimensions and pivot are not proven.",
+      "evidence": "The sheet has no scale reference, orthographic dimension overlay or geometry measurement.",
+      "correction": "Treat dimensions as UNKNOWN until reconstructed geometry passes numeric validation; never infer them from this image.",
+      "implementationStatus": "UNKNOWN_BY_DESIGN"
+    },
+    {
+      "id": "F-022",
+      "category": "perception",
+      "severity": "HIGH",
+      "originalStageAssessment": "LIMITATION",
+      "downstreamImpact": "DEGRADING",
+      "problem": "Recognition and state readability at 60 studs are unproven.",
+      "evidence": "No distance-render or in-game camera sample is present.",
+      "correction": "Require mobile-distance and Roblox-context validation after state boards and during 3D QA.",
+      "implementationStatus": "PENDING_NEW_GENERATION"
+    },
+    {
+      "id": "F-023",
+      "category": "evidence",
+      "severity": "MEDIUM",
+      "originalStageAssessment": "LIMITATION",
+      "downstreamImpact": "DEGRADING",
+      "problem": "Visual repetition and performance at 30 simultaneous barricades are unproven.",
+      "evidence": "The image contains isolated candidates only, not one repeated asset in Roblox.",
+      "correction": "Defer PASS until the 3D asset is tested at 1, 30 and stress quantity with shared MeshIds and measured budgets.",
+      "implementationStatus": "UNKNOWN_BY_DESIGN"
+    },
+    {
+      "id": "F-024",
+      "category": "evidence",
+      "severity": "HIGH",
+      "originalStageAssessment": "LIMITATION",
+      "downstreamImpact": "BLOCKING",
+      "problem": "Rear, underside, collision, topology, UVs and hidden mechanisms cannot be validated.",
+      "evidence": "Only shaded front-biased pixels are supplied; the result explicitly has no geometry authority.",
+      "correction": "Keep these gates UNKNOWN until Blender and Roblox validators supply direct evidence.",
+      "implementationStatus": "UNKNOWN_BY_DESIGN"
+    },
+    {
+      "id": "F-025",
+      "category": "provenance",
+      "severity": "HIGH",
+      "originalStageAssessment": "LIMITATION",
+      "downstreamImpact": "BLOCKING",
+      "problem": "Use of the required gpt-image-2 model is not confirmed.",
+      "evidence": "result.json records modelName as null and modelNameEvidence as NOT_CONFIRMED.",
+      "correction": "Require the operator attestation that gpt-image-2 was visibly selected before import.",
+      "implementationStatus": "IMPLEMENTED"
+    },
+    {
+      "id": "F-026",
+      "category": "review_gate",
+      "severity": "BLOCKING",
+      "originalStageAssessment": "VIOLATION",
+      "downstreamImpact": "BLOCKING",
+      "problem": "The review accepted a PRECANONICAL_CANDIDATE while three of five assessment dimensions were UNKNOWN.",
+      "evidence": "visualHierarchy, internalCoherence and stateCoherence are UNKNOWN in review.json.",
+      "correction": "Require all five assessment dimensions to be PASS for candidate or human-selected acceptance.",
+      "implementationStatus": "IMPLEMENTED"
+    },
+    {
+      "id": "F-027",
+      "category": "review_gate",
+      "severity": "HIGH",
+      "originalStageAssessment": "VIOLATION",
+      "downstreamImpact": "BLOCKING",
+      "problem": "The accepted review records no preserve rule.",
+      "evidence": "review.json contains an empty preserve array.",
+      "correction": "Require at least one explicit preserve rule before candidate or human-selected acceptance.",
+      "implementationStatus": "IMPLEMENTED"
+    },
+    {
+      "id": "F-028",
+      "category": "review_gate",
+      "severity": "HIGH",
+      "originalStageAssessment": "VIOLATION",
+      "downstreamImpact": "DEGRADING",
+      "problem": "The review records no correction despite unresolved visual and evidence gaps.",
+      "evidence": "review.json contains an empty correct array while three assessments remain UNKNOWN.",
+      "correction": "Require at least one correction for REVISION_REQUIRED or REJECTED decisions and expose the requirement in the UI.",
+      "implementationStatus": "IMPLEMENTED"
+    },
+    {
+      "id": "F-029",
+      "category": "review_gate",
+      "severity": "MEDIUM",
+      "originalStageAssessment": "VIOLATION",
+      "downstreamImpact": "DEGRADING",
+      "problem": "A rejected result could previously omit explicit prohibitions for the retry.",
+      "evidence": "The historical review format permits an empty forbidNext array and the operator did not enforce decision-specific readiness.",
+      "correction": "Require at least one forbid-next rule for REJECTED and provide live UI guidance.",
+      "implementationStatus": "IMPLEMENTED"
+    },
+    {
+      "id": "F-030",
+      "category": "review_gate",
+      "severity": "MEDIUM",
+      "originalStageAssessment": "LIMITATION",
+      "downstreamImpact": "DEGRADING",
+      "problem": "The historical candidate review has no reviewer identity or timestamp.",
+      "evidence": "reviewer and reviewedAt are null.",
+      "correction": "Keep lightweight candidate reviews non-authoritative; require named reviewer and timestamp for HUMAN_SELECTED only.",
+      "implementationStatus": "IMPLEMENTED"
+    },
+    {
+      "id": "F-031",
+      "category": "review_gate",
+      "severity": "HIGH",
+      "originalStageAssessment": "VIOLATION",
+      "downstreamImpact": "DEGRADING",
+      "problem": "Art-direction conformity was marked PASS despite visible material, repair-story and priority failures.",
+      "evidence": "The image shows generic distress, mineral-like panels and toy-defense dominance while review.json marks artDirectionConformity PASS.",
+      "correction": "Use the specific Salvaged Frontier assessment label and allow acceptance only after all concrete art-direction cues pass.",
+      "implementationStatus": "IMPLEMENTED"
+    },
+    {
+      "id": "F-032",
+      "category": "evidence",
+      "severity": "HIGH",
+      "originalStageAssessment": "LIMITATION",
+      "downstreamImpact": "BLOCKING",
+      "problem": "The historical review promotes the whole 2x2 sheet without identifying which candidate should survive.",
+      "evidence": "No selected region, quadrant identifier or crop binding exists in result.json or review.json.",
+      "correction": "Do not promote this sheet; use it only as historical exploration evidence and start v2 from the closed canon.",
+      "implementationStatus": "IMPLEMENTED"
+    }
+  ],
+  "acceptanceForNextGeneration": [
+    "Exactly one object construction and one gameplay state appear across all four quadrants.",
+    "Hero front, compatible rear, matching black silhouette and elevated mobile view are present.",
+    "Three panels, two feet, frame, brace, joints, material assignment, wear and asymmetry remain identical across views.",
+    "Threat-facing front has no mint interaction cue; protected rear repair socket is visible only on the player-safe side.",
+    "The single copper repair brace connects plausible structural joints and explains one causal weak span.",
+    "Reclaimed panels read as manufactured composite, not stone, concrete, parchment or ceramic.",
+    "Salvaged Frontier identity is carried by bounded repair and replacement history while Toy Defense supplies readability only.",
+    "No emblem, pseudo-logo, generated text, uniform distress, decorative brace or invented mechanism is present.",
+    "All five review dimensions are PASS and at least one preserve rule is recorded.",
+    "gpt-image-2 use is explicitly confirmed at import."
+  ],
+  "canonical": false,
+  "productionApproved": false
+}

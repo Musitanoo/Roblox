@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "UNSCORED",
+  "evidenceRunId": null,
+  "hardGateResults": {"A": {}, "B": {}, "C": {}},
+  "reviewers": [],
+  "taskTestSummary": {"A": null, "B": null, "C": null},
+  "humanDecision": {
+    "selectedBlindLabel": null,
+    "rationale": null,
+    "remainingRisks": [],
+    "approvedBy": null,
+    "approvedAt": null
+  }
+}

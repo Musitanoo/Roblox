@@ -58,9 +58,6 @@ function BuildPlanStore.new(): Store
 	}, BuildPlanStore)
 end
 
-function BuildPlanStore.ClonePlan(_self: Store, plan: BuildPlan): BuildPlan
-	return clonePlan(plan)
-end
 function BuildPlanStore.GetPlan(self: Store): BuildPlan
 	return clonePlan(self._plan)
 end

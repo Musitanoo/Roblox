@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/component-evidence-map.schema.json",
+  "$defs": {
+    "mapping": {
+      "type": "object",
+      "required": ["componentId", "objectNamePatterns"],
+      "properties": {
+        "componentId": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_]*$"},
+        "objectNamePatterns": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_]*$"}
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "asset": {
+      "type": "object",
+      "required": ["components"],
+      "properties": {
+        "components": {
+          "type": "array",
+          "minItems": 3,
+          "items": {"$ref": "#/$defs/mapping"}
+        }
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "type": "object",
+  "required": ["$schema", "schemaVersion", "mappingVersion", "purpose", "generatorPath", "assets"],
+  "properties": {
+    "$schema": {"const": "https://roblox-top1.local/schemas/component-evidence-map.schema.json"},
+    "schemaVersion": {"const": "1.0.0"},
+    "mappingVersion": {"const": "1.0.0"},
+    "purpose": {"type": "string", "minLength": 30},
+    "generatorPath": {"const": "tools/blender/build_art_direction.py"},
+    "assets": {
+      "type": "object",
+      "required": ["barricade", "objective_core", "enemy_standard", "floor_module", "damage_effect"],
+      "properties": {
+        "barricade": {"$ref": "#/$defs/asset"},
+        "objective_core": {"$ref": "#/$defs/asset"},
+        "enemy_standard": {"$ref": "#/$defs/asset"},
+        "floor_module": {"$ref": "#/$defs/asset"},
+        "damage_effect": {"$ref": "#/$defs/asset"}
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

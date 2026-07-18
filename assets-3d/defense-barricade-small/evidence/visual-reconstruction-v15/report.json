@@ -1,0 +1,147 @@
+{
+  "schemaVersion": "1.1.0",
+  "evidenceId": "defense-barricade-small-visual-reconstruction-v15",
+  "assetKey": "defense_barricade_small",
+  "contractRevision": 15,
+  "generatedAt": "2026-07-17T17:54:15.2597807+02:00",
+  "status": "PARTIAL",
+  "automationStatus": "PASS",
+  "internalVisualStatus": "PARTIAL",
+  "humanReviewStatus": "PENDING",
+  "productionApproved": false,
+  "authority": {
+    "contractSha256": "4007359aad9898b758666d3dbdcd06f9c4f4c33362642edc71b2509858009fb9",
+    "precanonicalReference": "../../precanonical/results/defense-barricade-web-001-result-001/raw/generated-001.png",
+    "precanonicalReferenceSha256": "219ebd23eff48a3c32413c4ca80660ba725b4689bf523b61b6eaa79ac17865bd",
+    "visualCanonId": "vc_barricade__salvaged-frontier__v1",
+    "visualCanonSha256": "5e196aa1ab2bdaaa9c024d250ea76f82b134848b4dcd32b2741f7970c5c77e58",
+    "visualCanonStatus": "CANDIDATE",
+    "visualCanonProductionEligible": false,
+    "generatorSha256": "34642e84af8b3d15bb12e3d365f5157aa911ab484b59bacf92eed426e64e2460"
+  },
+  "reconstruction": {
+    "componentCount": 42,
+    "triangleCount": 1496,
+    "targetTriangleCount": 1500,
+    "absoluteMaximumTriangles": 2000,
+    "dimensionsStuds": [
+      8.0,
+      4.0,
+      2.0
+    ],
+    "dimensionTolerancePercent": 0.25,
+    "pivot": "BASE_CENTER",
+    "materialCount": 8,
+    "mainManifest": "../../build/manifest.json",
+    "mainManifestSha256": "928eb73f8b9a55ece347318d524bfcfdde1d0bde929d544e5c78383d26244386",
+    "geometrySha256": "8775739cb8df98c818cde2343c134dce5c075010294740fe42984b180100388c",
+    "semanticSha256": "abb0fb084b2689eb5f9d9c2818ba84a0d3c6df143bad6b81b467a36c82e735a1",
+    "geometryStatus": "PASS",
+    "renderVerificationStatus": "PASS"
+  },
+  "stateFamily": {
+    "coverage": [
+      "intact",
+      "damaged",
+      "critical"
+    ],
+    "topologyPreserved": true,
+    "componentNamesPreserved": true,
+    "dimensionsPreserved": true,
+    "pivotPreserved": true,
+    "triangleCountPreserved": true,
+    "semanticHashesUnique": true,
+    "glbHashesUnique": true,
+    "publishedComparisonStatus": "PASS",
+    "determinismReport": "../../build/state-determinism/determinism-report.json",
+    "determinismReportSha256": "96fa400e6a504c0ab6a05fd8fe91eeba53df1088798b79a7b4088a9bbb35cdc7",
+    "statesManifest": "../../build/states/states-manifest.json",
+    "statesManifestSha256": "227d4eff8a7011484c7cfb489609b0abe1d0c5577f6a2e2bd3f8f565d680d7e2",
+    "reviewBoard": "../../build/states/state-review.html",
+    "reviewBoardSha256": "17c65ea14621d4371f178ecc435002aa1b1488b29977335b230b97705e65c0a6"
+  },
+  "renderDeterminism": {
+    "comparisonSchemaVersion": "1.1.0",
+    "decodedFormat": "non-interlaced RGBA8",
+    "runABViewCount": 24,
+    "runABExactViewCount": 24,
+    "runABBoundedToleranceViewCount": 0,
+    "maximumDifferentPixelCount": 0,
+    "maximumChannelDelta": 0
+  },
+  "stateArtifacts": [
+    {
+      "stateId": "intact",
+      "triangleCount": 1496,
+      "semanticSha256": "abb0fb084b2689eb5f9d9c2818ba84a0d3c6df143bad6b81b467a36c82e735a1",
+      "glbSha256": "f5333c0333176ce8bced8b94d4420d98e9d1c6511d23e985e220041d3a2b7b22",
+      "fbxSha256": "89e92f148a5948790011e0fe36be50cacc86771f8c34230bbae5fa6cbedd5047",
+      "manifestSha256": "8731387f61e44f1b8aaef94b079b4d46874972e9613045a4dd92a2ba057f0581",
+      "sourceBlendSha256": "84b790b635b810bf64ca1577f70ee4a642485496e3fc4bb9a42d624f9c969588"
+    },
+    {
+      "stateId": "damaged",
+      "triangleCount": 1496,
+      "semanticSha256": "b30f5c47d9e0a76095478fbbfc4c530242cdc34d42baa2e89c214e8ba99d21c5",
+      "glbSha256": "ab2407537aca5384b029439c75d7e98a22c2b8de6b12f4d6aa94610ff4edf437",
+      "fbxSha256": "8f2c6a30743e82a7cf4079268d162a36fe18b58d7fe7cd124bb8bf93cb292503",
+      "manifestSha256": "f7376501b04bcb2fc014f64183ca2e2634d19c038d8b5e92159376abb223fc6d",
+      "sourceBlendSha256": "c71153d43aef2b1bbec9df769611f9445789764ee6a22ce7a77700419f82b1e0"
+    },
+    {
+      "stateId": "critical",
+      "triangleCount": 1496,
+      "semanticSha256": "e1d075b597c76e73bc1b2c2ae8b59295f338e50ffd0d64056a5894695622ce7e",
+      "glbSha256": "405b01b6a31405d8f1f3d4ada3a18e0f0760c755d45599a31b8fa1065244bd9f",
+      "fbxSha256": "328a5317d4b741d20507b224ce7132ea3253f820f3e8d2f1ef793d7cac8a9d3f",
+      "manifestSha256": "bf52011f82c723242cfb2f029cd73ef0fbacb8c64fdf5ee7cf17231de50d39cb",
+      "sourceBlendSha256": "f627ccbc670d930808339888b255470e90311a7c9ee3bfa668d63a257b8c64d4"
+    }
+  ],
+  "workbench": {
+    "sessionId": "defense-barricade-small-012c50f1fcc4",
+    "mode": "OBSERVE",
+    "status": "PASS",
+    "referenceImmutability": "PASS",
+    "session": "../../workbench/defense-barricade-small-012c50f1fcc4/session.json",
+    "sessionSha256": "48bae5721d70eb94d82ad98e11e54727bd92140f36f4b766c3794e9f8473f5be",
+    "sceneManifest": "../../workbench/defense-barricade-small-012c50f1fcc4/base-scene-manifest.json",
+    "sceneManifestSha256": "9c3b8112c190149de97fb509abf5df88b0681488d383b8f05e492b92bfdf712e"
+  },
+  "visualReview": {
+    "review": "../../review.json",
+    "score": 89,
+    "status": "PARTIAL",
+    "automationReviewStatus": "PASS",
+    "humanReviewStatus": "PENDING",
+    "rubric": {
+      "silhouette": 23,
+      "proportions": 18,
+      "artDirection": 17,
+      "gameplayReadability": 19,
+      "originality": 12
+    }
+  },
+  "verification": {
+    "stateCompilation": "PASS",
+    "stateDeterminism": "PASS",
+    "stateInvariantCount": 3,
+    "stateInvariantPassCount": 3,
+    "publishedStateSynchronization": "PASS",
+    "workbenchInspection": "PASS",
+    "workbenchReferenceImmutability": "PASS"
+  },
+  "unresolvedProductionGates": [
+    "visualCanonCompleteMultimodalPacket",
+    "visualCanonHumanLock",
+    "humanArtReview",
+    "cloudPackageV1",
+    "cloudSamePackageV2",
+    "studioStagingConfirmed",
+    "studioPackageIntegration",
+    "studioGoldenLighting",
+    "physicalMobile",
+    "benchmark1_30_100",
+    "cleanFrozenProvenance"
+  ]
+}

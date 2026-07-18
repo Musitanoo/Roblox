@@ -1,0 +1,1530 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Poste opérateur précanonique</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0d1418;
+      --panel: #172228;
+      --panel-2: #1d2b32;
+      --panel-3: #111b20;
+      --line: #324750;
+      --text: #eef4f0;
+      --muted: #9eb0ad;
+      --copper: #dc8b43;
+      --copper-soft: rgba(220, 139, 67, .14);
+      --mint: #70d9bd;
+      --mint-soft: rgba(112, 217, 189, .12);
+      --warning: #f4c45e;
+      --danger: #ef7777;
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at 8% 0%, rgba(220, 139, 67, .13), transparent 34rem),
+        radial-gradient(circle at 100% 12%, rgba(112, 217, 189, .08), transparent 30rem),
+        var(--bg);
+      color: var(--text);
+      font: 15px/1.5 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    button, textarea, input, select { font: inherit; }
+    button {
+      appearance: none;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      padding: 11px 15px;
+      background: var(--copper);
+      color: #17120d;
+      font-weight: 800;
+      cursor: pointer;
+      transition: transform .12s ease, filter .12s ease, border-color .12s ease;
+    }
+    button:hover { transform: translateY(-1px); filter: brightness(1.06); }
+    button:disabled { opacity: .42; cursor: not-allowed; transform: none; }
+    button.secondary { color: var(--text); background: var(--panel-2); border-color: var(--line); }
+    button.mint { background: var(--mint); color: #0d211c; }
+    button.danger { background: transparent; color: var(--danger); border-color: rgba(239,119,119,.45); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin-bottom: 8px; font-size: clamp(28px, 4vw, 44px); line-height: 1.05; }
+    h2 { margin-bottom: 8px; font-size: 20px; }
+    h3 { margin-bottom: 8px; color: var(--mint); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+    code { color: var(--muted); overflow-wrap: anywhere; }
+    .muted { color: var(--muted); }
+    .hidden { display: none !important; }
+    .eyebrow { color: var(--copper); font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .shell { width: min(1500px, calc(100% - 28px)); margin: 22px auto 60px; }
+    header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(23,34,40,.82);
+      white-space: nowrap;
+    }
+    .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 16px var(--mint); }
+    .layout { display: grid; grid-template-columns: 330px minmax(0, 1fr); gap: 20px; align-items: start; }
+    .sidebar { position: sticky; top: 18px; display: grid; gap: 16px; }
+    .main { display: grid; gap: 18px; min-width: 0; }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(29,43,50,.94), rgba(23,34,40,.94));
+      box-shadow: 0 18px 60px rgba(0,0,0,.2);
+      padding: 20px;
+    }
+    .notice { display: none; padding: 13px 15px; border: 1px solid var(--line); border-radius: 12px; }
+    .notice.show { display: block; }
+    .notice.ok { border-color: rgba(112,217,189,.55); background: var(--mint-soft); }
+    .notice.error { border-color: rgba(239,119,119,.55); background: rgba(239,119,119,.08); }
+    .progress-head { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+    .progress-track { height: 10px; overflow: hidden; border-radius: 999px; background: #0b1216; border: 1px solid var(--line); }
+    .progress-fill { height: 100%; width: 0; background: linear-gradient(90deg, var(--copper), var(--mint)); transition: width .25s ease; }
+    .object-list { display: grid; gap: 10px; margin-top: 16px; }
+    .object {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(13,20,24,.45);
+      transition: border-color .15s ease, background .15s ease;
+    }
+    .object.active { border-color: rgba(220,139,67,.75); background: var(--copper-soft); }
+    .object.complete { border-color: rgba(112,217,189,.45); }
+    .object.selected-object { box-shadow: 0 0 0 2px rgba(238,244,240,.16); }
+    .object.filtered-out { display: none; }
+    .object-title {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      color: var(--text);
+      text-align: left;
+      font-weight: 800;
+    }
+    .object-title:hover { transform: none; filter: none; color: var(--mint); }
+    .object-title small { color: var(--muted); font-weight: 650; }
+    .state-list { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+    .state-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 9px;
+      border-radius: 9px;
+      border: 1px solid var(--line);
+      background: var(--panel-3);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .state-chip:hover { transform: translateY(-1px); border-color: var(--muted); }
+    .state-chip::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #62727a; }
+    .state-chip.current { color: #17120d; background: var(--copper); border-color: var(--copper); }
+    .state-chip.accepted { color: #0d211c; background: var(--mint); border-color: var(--mint); cursor: pointer; }
+    .state-chip.review { color: #241b08; background: var(--warning); border-color: var(--warning); cursor: pointer; }
+    .state-chip.blocked { color: #2a0f0f; background: var(--danger); border-color: var(--danger); }
+    .state-chip.current::before,
+    .state-chip.accepted::before,
+    .state-chip.review::before,
+    .state-chip.blocked::before { background: currentColor; opacity: .72; }
+    .state-chip.selected {
+      outline: 3px solid rgba(238,244,240,.82);
+      outline-offset: 2px;
+    }
+    .state-chip.filtered-out { display: none; }
+    .campaign-tools { display: grid; grid-template-columns: 1fr auto; gap: 9px; margin-top: 14px; }
+    .campaign-tools select { min-width: 0; }
+    .campaign-tools button { padding: 9px 11px; }
+    .campaign-summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 7px;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 11px;
+      text-align: center;
+    }
+    .campaign-summary span { padding: 7px 5px; border: 1px solid var(--line); border-radius: 9px; background: var(--panel-3); }
+    .task-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: center;
+      border-color: rgba(220,139,67,.6);
+      background:
+        linear-gradient(120deg, rgba(220,139,67,.17), transparent 55%),
+        linear-gradient(180deg, rgba(29,43,50,.96), rgba(23,34,40,.96));
+    }
+    .task-kicker { color: var(--copper); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .task-title { margin: 3px 0 6px; font-size: clamp(24px, 3vw, 36px); line-height: 1.08; }
+    .state-name { color: var(--mint); }
+    .task-count {
+      min-width: 140px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      background: rgba(13,20,24,.62);
+      text-align: center;
+    }
+    .task-count strong { display: block; font-size: 30px; color: var(--copper); }
+    .next-strip {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: center;
+      padding: 13px 16px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: rgba(13,20,24,.52);
+    }
+    .work-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(310px, .75fr); gap: 18px; align-items: start; }
+    .stack { display: grid; gap: 18px; }
+    textarea, input, select {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #0e171c;
+      color: var(--text);
+      padding: 11px 12px;
+    }
+    textarea { min-height: 105px; resize: vertical; }
+    label { display: grid; gap: 6px; color: var(--muted); font-weight: 650; }
+    .prompt { min-height: 390px; max-height: 620px; font: 12px/1.45 ui-monospace, SFMono-Regular, Consolas, monospace; white-space: pre-wrap; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+    .attachment {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      align-items: center;
+      padding: 10px 0;
+      border-top: 1px solid var(--line);
+    }
+    .drop {
+      border: 2px dashed #506a75;
+      border-radius: 16px;
+      padding: 34px 18px;
+      text-align: center;
+      background: rgba(13,20,24,.55);
+      transition: border-color .15s ease, background .15s ease;
+    }
+    .drop.drag { border-color: var(--mint); background: var(--mint-soft); }
+    .drop strong { display: block; font-size: 18px; margin-bottom: 5px; }
+    .drop input { display: none; }
+    .confirm {
+      grid-template-columns: 22px 1fr;
+      align-items: start;
+      margin-top: 13px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(13,20,24,.5);
+    }
+    .confirm input { width: 18px; height: 18px; margin-top: 2px; }
+    .model-lock {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 14px;
+      padding: 14px;
+      border: 1px solid rgba(112,217,189,.45);
+      border-radius: 13px;
+      background: var(--mint-soft);
+    }
+    .model-lock strong { color: var(--mint); font-size: 18px; }
+    .preview {
+      display: none;
+      width: 100%;
+      max-height: 650px;
+      object-fit: contain;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #090f12;
+    }
+    .form-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; }
+    .assessment { display: grid; grid-template-columns: 1fr 150px; gap: 10px; align-items: center; padding: 8px 0; border-top: 1px solid var(--line); }
+    .review-defaults { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+    .review-defaults button { padding: 8px 11px; }
+    .review-gate { margin-top: 14px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; background: rgba(13,20,24,.52); color: var(--muted); }
+    .review-gate.pass { border-color: rgba(112,217,189,.55); background: var(--mint-soft); color: var(--text); }
+    .review-gate.blocked { border-color: rgba(244,196,94,.55); background: rgba(244,196,94,.08); }
+    .meta { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 9px; }
+    .meta div { padding: 11px; border: 1px solid var(--line); border-radius: 11px; background: rgba(13,20,24,.47); }
+    .meta span { display: block; color: var(--muted); font-size: 12px; }
+    .meta strong { overflow-wrap: anywhere; }
+    .archive-preview img { width: 100%; max-height: 520px; object-fit: contain; border-radius: 13px; border: 1px solid var(--line); background: #090f12; }
+    .browser-card {
+      padding: 0;
+      overflow: hidden;
+      border-color: rgba(112,217,189,.42);
+    }
+    .browser-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(100deg, rgba(112,217,189,.10), transparent 55%);
+    }
+    .browser-head h2 { margin-bottom: 4px; font-size: clamp(22px, 3vw, 31px); }
+    .browser-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
+    .browser-actions button { padding: 9px 12px; }
+    .browser-grid { display: grid; grid-template-columns: minmax(320px, 1.1fr) minmax(300px, .9fr); min-height: 470px; }
+    .browser-visual { display: grid; align-content: start; gap: 13px; padding: 20px; border-right: 1px solid var(--line); background: rgba(9,15,18,.42); }
+    .browser-preview {
+      display: none;
+      width: 100%;
+      max-height: 610px;
+      object-fit: contain;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #090f12;
+    }
+    .empty-preview {
+      display: grid;
+      min-height: 390px;
+      place-items: center;
+      padding: 34px;
+      border: 2px dashed #415861;
+      border-radius: 14px;
+      background:
+        linear-gradient(135deg, rgba(220,139,67,.05), transparent 45%),
+        #0b1317;
+      text-align: center;
+    }
+    .empty-preview strong { display: block; margin-bottom: 8px; font-size: 21px; color: var(--text); }
+    .browser-detail { display: grid; align-content: start; gap: 17px; padding: 20px; }
+    .browser-prompt-panel {
+      display: grid;
+      gap: 9px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      background: rgba(13,20,24,.58);
+    }
+    .browser-prompt {
+      min-height: 230px;
+      max-height: 430px;
+      font: 11px/1.45 ui-monospace, SFMono-Regular, Consolas, monospace;
+      white-space: pre-wrap;
+    }
+    .status-row { display: flex; align-items: center; flex-wrap: wrap; gap: 9px; }
+    .status-pill { display: inline-flex; align-items: center; gap: 8px; padding: 7px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel-3); color: var(--muted); font-weight: 850; font-size: 12px; }
+    .status-pill.to-generate { color: var(--copper); border-color: rgba(220,139,67,.55); }
+    .status-pill.to-review { color: var(--warning); border-color: rgba(244,196,94,.55); }
+    .status-pill.accepted { color: var(--mint); border-color: rgba(112,217,189,.55); }
+    .status-pill.blocked { color: var(--danger); border-color: rgba(239,119,119,.55); }
+    .status-explanation { margin: 0; padding: 13px; border-left: 3px solid var(--line); background: rgba(13,20,24,.45); color: var(--muted); }
+    .attempt-grid { display: grid; gap: 9px; }
+    .attempt-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: var(--panel-3);
+      color: var(--text);
+      text-align: left;
+    }
+    .attempt-card:hover { transform: none; border-color: var(--muted); }
+    .attempt-card.selected { border-color: var(--mint); box-shadow: 0 0 0 2px rgba(112,217,189,.15); }
+    .attempt-card:disabled { opacity: .72; }
+    .attempt-card small { display: block; color: var(--muted); font-weight: 600; }
+    .attempt-card .attempt-status { color: var(--muted); font-size: 11px; }
+    .browser-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 20px;
+      border-top: 1px solid var(--line);
+      background: rgba(13,20,24,.62);
+    }
+    .browser-footer strong { color: var(--mint); }
+    .complete {
+      text-align: center;
+      padding: 60px 24px;
+      border-color: rgba(112,217,189,.6);
+      background:
+        radial-gradient(circle at 50% 0%, rgba(112,217,189,.16), transparent 28rem),
+        linear-gradient(180deg, rgba(29,43,50,.96), rgba(23,34,40,.96));
+    }
+    .complete .seal { display: grid; place-items: center; width: 72px; height: 72px; margin: 0 auto 18px; border-radius: 50%; background: var(--mint); color: #0d211c; font-size: 34px; font-weight: 900; }
+    @media (max-width: 1080px) {
+      .layout { grid-template-columns: 280px minmax(0,1fr); }
+      .work-grid { grid-template-columns: 1fr; }
+      .browser-grid { grid-template-columns: 1fr; }
+      .browser-visual { border-right: 0; border-bottom: 1px solid var(--line); }
+    }
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 18px, 720px); margin-top: 14px; }
+      header, .layout, .task-hero { display: grid; grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      .form-grid, .meta { grid-template-columns: 1fr; }
+      .browser-head, .browser-footer { display: grid; }
+      .browser-actions { justify-content: stretch; }
+      .browser-actions button { flex: 1; }
+      .task-count { justify-self: stretch; }
+      .badge { justify-self: start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div>
+        <div class="eyebrow">Salvaged Frontier · génération contrôlée par état</div>
+        <h1>Poste opérateur précanonique</h1>
+        <p class="muted">Un objet, un état, une génération GPT Image 2. Le poste enchaîne automatiquement la campagne.</p>
+      </div>
+      <div class="badge"><span class="dot"></span><span id="status">Connexion locale…</span></div>
+    </header>
+
+    <div id="notice" class="notice"></div>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <section id="campaignNav" class="card hidden">
+          <div class="progress-head">
+            <h2>Campagne</h2>
+            <strong id="progressText">0 / 16</strong>
+          </div>
+          <div class="progress-track"><div id="progressFill" class="progress-fill"></div></div>
+          <p id="objectProgress" class="muted" style="margin:10px 0 0"></p>
+          <div class="campaign-tools">
+            <select id="campaignFilter" aria-label="Filtrer les états">
+              <option value="ALL">Tous les états</option>
+              <option value="REMAINING">Pas encore acceptés</option>
+              <option value="NOT_GENERATED">Pas encore générés</option>
+              <option value="GENERATED">Avec une génération</option>
+              <option value="TO_REVIEW">À revoir</option>
+              <option value="ACCEPTED">Acceptés</option>
+              <option value="BLOCKED">Bloqués</option>
+            </select>
+            <button id="jumpCurrent" class="secondary">Tâche active</button>
+          </div>
+          <div class="campaign-summary">
+            <span id="notGeneratedCount">— à générer</span>
+            <span id="reviewCount">— à revoir</span>
+            <span id="acceptedCount">— acceptés</span>
+          </div>
+          <div id="objectList" class="object-list"></div>
+        </section>
+
+        <section class="card">
+          <h2>Contrat</h2>
+          <div class="meta">
+            <div><span>Modèle requis</span><strong id="requiredModel">—</strong></div>
+            <div><span>Tentative</span><strong id="attemptIndex">—</strong></div>
+            <div><span>Request</span><strong id="requestId">—</strong></div>
+            <div><span>Hash transport</span><strong id="transportHash">—</strong></div>
+          </div>
+          <p class="muted" style="margin:13px 0 0">Chaque image reste non canonique jusqu’à rationalisation, paquet multimodal complet et verrouillage humain.</p>
+        </section>
+
+        <section class="card">
+          <h2>Sécurité</h2>
+          <p class="muted">Serveur local uniquement. Aucun cookie, mot de passe, token Web ou clé API n’est lu.</p>
+          <button id="closeServer" class="danger">Fermer le poste</button>
+        </section>
+      </aside>
+
+      <main class="main">
+        <section id="completeCard" class="card complete hidden">
+          <div class="seal">✓</div>
+          <h1>Campagne précanonique terminée</h1>
+          <p>Les 16 couples objet × état disposent d’une génération distincte et d’une revue enregistrée.</p>
+          <p class="muted">Cette réussite clôt la collecte d’images d’état. Elle ne verrouille pas encore les canons et n’approuve pas la production 3D.</p>
+        </section>
+
+        <section id="taskHero" class="card task-hero hidden">
+          <div>
+            <div id="taskKicker" class="task-kicker">À générer maintenant</div>
+            <h2 class="task-title"><span id="taskObject">—</span> · <span id="taskState" class="state-name">—</span></h2>
+            <p id="taskInstruction" class="muted">Une génération distincte pour cet état uniquement.</p>
+            <div id="nextStrip" class="next-strip hidden">
+              <span><strong>Ensuite</strong><br><span id="nextTaskText" class="muted"></span></span>
+              <span>→</span>
+            </div>
+          </div>
+          <div class="task-count">
+            <strong id="taskOrdinal">— / 16</strong>
+            <span id="objectOrdinal" class="muted">Objet — / 6</span>
+          </div>
+        </section>
+
+        <section id="taskBrowser" class="card browser-card hidden">
+          <div class="browser-head">
+            <div>
+              <div class="eyebrow">Explorateur objet × état</div>
+              <h2><span id="browserObject">—</span> · <span id="browserState" class="state-name">—</span></h2>
+              <p id="browserPosition" class="muted"></p>
+            </div>
+            <div class="browser-actions">
+              <button id="previousTask" class="secondary">← État précédent</button>
+              <button id="nextTask" class="secondary">État suivant →</button>
+              <button id="returnCurrent">Revenir à la tâche active</button>
+            </div>
+          </div>
+          <div class="browser-grid">
+            <div class="browser-visual">
+              <img id="browserImage" class="browser-preview" alt="Génération précanonique de l’état sélectionné">
+              <div id="browserEmpty" class="empty-preview">
+                <div>
+                  <strong id="browserEmptyTitle">Aucune génération pour cet état</strong>
+                  <span id="browserEmptyText" class="muted">Cet emplacement est réservé et visible avant sa génération.</span>
+                </div>
+              </div>
+              <p id="browserImageMeta" class="muted" style="margin:0"></p>
+            </div>
+            <div class="browser-detail">
+              <div class="status-row">
+                <span id="browserStatus" class="status-pill">—</span>
+                <span id="browserAttemptCount" class="muted"></span>
+              </div>
+              <p id="browserExplanation" class="status-explanation"></p>
+              <div class="meta">
+                <div><span>Objet</span><strong id="browserMetaObject">—</strong></div>
+                <div><span>État</span><strong id="browserMetaState">—</strong></div>
+                <div><span>Ordre campagne</span><strong id="browserMetaOrder">—</strong></div>
+                <div><span>Décision retenue</span><strong id="browserMetaDecision">—</strong></div>
+              </div>
+              <div>
+                <h3>Dépendance de continuité</h3>
+                <p id="browserPredecessor" class="muted"></p>
+              </div>
+              <div class="browser-prompt-panel">
+                <div class="status-row">
+                  <h3 style="margin:0">Prompt de cet objet × état</h3>
+                  <span id="browserPromptStatus" class="status-pill">Chargement…</span>
+                </div>
+                <p id="browserPromptExplanation" class="muted" style="margin:0"></p>
+                <textarea id="browserPrompt" class="browser-prompt" readonly></textarea>
+                <div class="actions" style="margin-top:0">
+                  <button id="copySelectedPrompt" class="secondary">Copier ce prompt</button>
+                  <button id="openSelectedTask" class="mint">Générer cet état maintenant</button>
+                </div>
+              </div>
+              <div>
+                <h3>Historique des générations</h3>
+                <div id="attemptList" class="attempt-grid"></div>
+              </div>
+            </div>
+          </div>
+          <div class="browser-footer">
+            <span>Consultation et prompts libres. La tâche active ne change que lorsque tu choisis explicitement « Générer cet état ».</span>
+            <strong id="browserFooterStatus">—</strong>
+          </div>
+        </section>
+
+        <div id="activeWorkspace" class="work-grid hidden">
+          <div class="stack">
+            <section class="card" id="submissionCard">
+              <h2>1. Générer l’état actif</h2>
+              <p class="muted">Copie ce contrat fermé sans le réécrire. Il demande une seule image et interdit tout mélange d’états.</p>
+              <textarea id="prompt" class="prompt" readonly></textarea>
+              <div class="actions">
+                <button id="copyPrompt">Copier le texte exact</button>
+                <button id="openChatGPT" class="mint">Ouvrir ChatGPT Web</button>
+              </div>
+              <div id="attachmentsBlock" class="hidden">
+                <h3 style="margin-top:20px">Référence de continuité obligatoire</h3>
+                <p class="muted">Attache cette image avant le prompt. Elle garantit que le nouvel état reste le même objet.</p>
+                <div id="attachments"></div>
+              </div>
+            </section>
+
+            <section class="card" id="importCard">
+              <h2>2. Déposer l’unique résultat</h2>
+              <div class="model-lock">
+                <span>Modèle obligatoire</span>
+                <strong id="lockedModel">gpt-image-2</strong>
+                <label class="confirm" style="margin:0">
+                  <input id="modelConfirmed" type="checkbox">
+                  <span>Je confirme que <strong>gpt-image-2</strong> était explicitement sélectionné ou visible dans l’interface au moment de la génération.</span>
+                </label>
+              </div>
+              <div id="drop" class="drop" style="margin-top:14px">
+                <strong>Glisse l’image téléchargée ici</strong>
+                <span class="muted">ou clique pour sélectionner un PNG, JPEG ou WebP</span>
+                <input id="file" type="file" accept="image/png,image/jpeg,image/webp">
+              </div>
+              <p id="fileName" class="muted" style="margin:10px 0 0"></p>
+              <label class="confirm">
+                <input id="attest" type="checkbox">
+                <span>Je confirme avoir utilisé le texte exact, demandé exactement une génération, téléchargé un seul résultat et n’avoir lancé aucun retry automatique.</span>
+              </label>
+              <div class="actions">
+                <button id="importImage" disabled>Importer et vérifier</button>
+              </div>
+            </section>
+
+            <section class="card hidden" id="reviewCard">
+              <h2>3. Revoir cet objet dans cet état</h2>
+              <p class="muted">La revue enregistrée fera avancer immédiatement le poste vers l’état suivant, ou préparera une nouvelle tentative ciblée sur ce même état.</p>
+              <img id="preview" class="preview" alt="Résultat précanonique importé">
+              <div class="form-grid" style="margin-top:16px">
+                <label>Décision
+                  <select id="decision">
+                    <option value="PRECANONICAL_CANDIDATE">Valider cet état et continuer</option>
+                    <option value="REVISION_REQUIRED">Corriger ce même état</option>
+                    <option value="REJECTED">Rejeter et reconstruire ce même état</option>
+                    <option value="HUMAN_SELECTED">Sélection humaine forte et continuer</option>
+                  </select>
+                </label>
+                <label>Reviewer — requis uniquement pour sélection humaine
+                  <input id="reviewer" placeholder="Nom de l’autorité humaine" disabled>
+                </label>
+              </div>
+              <h3 style="margin-top:20px">Évaluation</h3>
+              <div id="assessment"></div>
+              <div class="form-grid" style="margin-top:16px">
+                <label>À préserver — une règle par ligne
+                  <textarea id="preserve"></textarea>
+                </label>
+                <label>À corriger — une règle par ligne
+                  <textarea id="correct"></textarea>
+                </label>
+              </div>
+              <div class="review-defaults">
+                <button id="restorePreserve" type="button" class="secondary">Restaurer les invariants proposés</button>
+                <span id="preserveDefaultsMeta" class="muted"></span>
+              </div>
+              <label style="margin-top:12px">Interdictions pour la prochaine tentative — une règle par ligne
+                <textarea id="forbidNext"></textarea>
+              </label>
+              <div id="reviewGuidance" class="review-gate blocked"></div>
+              <div class="actions">
+                <button id="saveReview" disabled>Enregistrer et passer à la suite</button>
+              </div>
+            </section>
+          </div>
+
+          <aside class="stack">
+            <section class="card">
+              <h2>Ce que tu fais</h2>
+              <ol class="muted" style="padding-left:20px;margin-bottom:0">
+                <li>Sélectionne visiblement GPT Image 2.</li>
+                <li>Ajoute la référence si le poste en fournit une.</li>
+                <li>Colle le texte exact et génère une seule fois.</li>
+                <li>Dépose l’image puis décide.</li>
+                <li>Choisis ensuite librement une autre voie disponible.</li>
+              </ol>
+            </section>
+            <section class="card">
+              <h2>État courant</h2>
+              <div class="meta">
+                <div><span>Objet</span><strong id="metaObject">—</strong></div>
+                <div><span>État</span><strong id="metaState">—</strong></div>
+                <div><span>Position</span><strong id="metaPosition">—</strong></div>
+                <div><span>Format</span><strong id="imageSpec">—</strong></div>
+              </div>
+            </section>
+            <section class="card">
+              <h2>Règle de continuité</h2>
+              <p class="muted">Les états ne sont jamais conçus comme des objets indépendants. Endommagé dérive d’intact accepté ; critique dérive d’endommagé accepté. Les composants, ancres, matériaux, empreinte et landmarks restent stables.</p>
+            </section>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const token = location.hash.slice(1);
+    const headers = {"X-Operator-Token": token};
+    const initialNavigation = new URLSearchParams(location.search);
+    const allowedCampaignFilters = new Set([
+      "ALL",
+      "REMAINING",
+      "NOT_GENERATED",
+      "GENERATED",
+      "TO_REVIEW",
+      "ACCEPTED",
+      "BLOCKED"
+    ]);
+    let state = null;
+    let selectedFile = null;
+    let reviewDefaultsRequestId = null;
+    let selectedTaskId = initialNavigation.get("task");
+    let selectedTaskPrompt = null;
+    const initialAttemptIndex = Number(initialNavigation.get("attempt"));
+    let selectedAttemptIndex =
+      Number.isInteger(initialAttemptIndex) && initialAttemptIndex > 0
+        ? initialAttemptIndex
+        : null;
+    let campaignFilter = allowedCampaignFilters.has(initialNavigation.get("filter"))
+      ? initialNavigation.get("filter")
+      : "ALL";
+    const assessmentLabels = {
+      functionalConformity: "Fonction et orientation comprises en une seconde",
+      artDirectionConformity: "Salvaged Frontier prioritaire, Toy Defense disciplinant",
+      visualHierarchy: "Silhouette et hiérarchie lisibles sur mobile",
+      internalCoherence: "Même construction exacte dans les quatre vues",
+      stateCoherence: "Un seul état et continuité du même objet"
+    };
+    const stateLabels = {intact: "Intact", damaged: "Endommagé", critical: "Critique"};
+    const generationStatusLabels = {
+      NOT_GENERATED: "Pas encore généré",
+      TO_GENERATE: "À générer",
+      TO_REVIEW: "À revoir",
+      ACCEPTED: "Accepté",
+      BLOCKED: "Bloqué"
+    };
+    const attemptStatusLabels = {
+      READY: "Prête à générer",
+      VISUAL_REVIEW_REQUIRED: "Image importée · revue requise",
+      REVISION_REQUIRED: "Révision demandée",
+      REJECTED: "Rejetée",
+      REVIEW_RECORDED: "Revue enregistrée",
+      ACCEPTED: "Acceptée"
+    };
+    const decisionLabels = {
+      PRECANONICAL_CANDIDATE: "Candidat précanonique",
+      HUMAN_SELECTED: "Sélection humaine",
+      REVISION_REQUIRED: "Révision demandée",
+      REJECTED: "Rejetée"
+    };
+
+    function notice(message, kind = "ok") {
+      const node = document.querySelector("#notice");
+      node.textContent = message;
+      node.className = `notice show ${kind}`;
+    }
+
+    async function api(path, options = {}) {
+      const response = await fetch(path, {
+        ...options,
+        headers: {...headers, "Content-Type": "application/json", ...(options.headers || {})}
+      });
+      const payload = await response.json();
+      if (!response.ok || !payload.ok) throw new Error(payload.error || `HTTP ${response.status}`);
+      return payload;
+    }
+
+    function lines(id) {
+      return document.querySelector(id).value.split(/\r?\n/).map(x => x.trim()).filter(Boolean);
+    }
+
+    function writeNavigationUrl(mode = "replace") {
+      const url = new URL(location.href);
+      if (selectedTaskId) url.searchParams.set("task", selectedTaskId);
+      else url.searchParams.delete("task");
+      if (selectedTaskId && selectedAttemptIndex) {
+        url.searchParams.set("attempt", String(selectedAttemptIndex));
+      } else {
+        url.searchParams.delete("attempt");
+      }
+      if (campaignFilter !== "ALL") url.searchParams.set("filter", campaignFilter);
+      else url.searchParams.delete("filter");
+      history[mode === "push" ? "pushState" : "replaceState"]({}, "", url);
+    }
+
+    function resetIntake() {
+      selectedFile = null;
+      document.querySelector("#file").value = "";
+      document.querySelector("#fileName").textContent = "";
+      document.querySelector("#attest").checked = false;
+      document.querySelector("#modelConfirmed").checked = false;
+      document.querySelector("#preserve").value = "";
+      document.querySelector("#correct").value = "";
+      document.querySelector("#forbidNext").value = "";
+      document.querySelector("#reviewer").value = "";
+      document.querySelector("#decision").value = "PRECANONICAL_CANDIDATE";
+      for (const key of Object.keys(assessmentLabels)) {
+        document.querySelector(`#assessment-${key}`).value = "UNKNOWN";
+      }
+      updateImportButton();
+      updateReviewReadiness();
+    }
+
+    function applyReviewDefaults(force = false) {
+      if (
+        !state ||
+        state.status !== "VISUAL_REVIEW_REQUIRED" ||
+        !state.reviewDefaults
+      ) {
+        return;
+      }
+      if (!force && reviewDefaultsRequestId === state.requestId) return;
+      document.querySelector("#preserve").value =
+        state.reviewDefaults.preserve.join("\n");
+      reviewDefaultsRequestId = state.requestId;
+      const inherited = state.reviewDefaults.sources.some(
+        source => source.kind === "PREVIOUS_ACCEPTED_REVIEW"
+      );
+      document.querySelector("#preserveDefaultsMeta").textContent = inherited
+        ? "Prérempli depuis la revue précédente et les invariants du canon. Modifiable avant validation."
+        : "Prérempli depuis les invariants du canon. Modifiable avant validation.";
+      updateReviewReadiness();
+    }
+
+    function allCampaignTasks(campaign) {
+      return campaign.tasks || campaign.objects.flatMap(object => object.states);
+    }
+
+    function taskMatchesFilter(task) {
+      if (campaignFilter === "ALL") return true;
+      if (campaignFilter === "REMAINING") return task.status !== "ACCEPTED";
+      if (campaignFilter === "NOT_GENERATED") return !task.viewable;
+      if (campaignFilter === "GENERATED") return task.viewable;
+      return task.generationStatus === campaignFilter;
+    }
+
+    function selectTask(taskId, attemptIndex = null) {
+      selectedTaskId = taskId;
+      selectedAttemptIndex = attemptIndex;
+      selectedTaskPrompt = null;
+      writeNavigationUrl("push");
+      render();
+      document.querySelector("#taskBrowser").scrollIntoView({behavior: "smooth", block: "start"});
+    }
+
+    function returnToCurrentTask() {
+      selectedTaskId = null;
+      selectedAttemptIndex = null;
+      selectedTaskPrompt = null;
+      writeNavigationUrl("push");
+      render();
+      document.querySelector("#taskHero").scrollIntoView({behavior: "smooth", block: "start"});
+    }
+
+    function renderCampaignNav(campaign) {
+      document.querySelector("#campaignNav").classList.remove("hidden");
+      const progress = campaign.progress;
+      const tasks = allCampaignTasks(campaign);
+      document.querySelector("#progressText").textContent = `${progress.completedTasks} / ${progress.totalTasks}`;
+      document.querySelector("#progressFill").style.width = `${100 * progress.completedTasks / progress.totalTasks}%`;
+      document.querySelector("#objectProgress").textContent =
+        `${progress.completedObjects} objet(s) complet(s) sur ${progress.totalObjects}`;
+      document.querySelector("#notGeneratedCount").textContent =
+        `${tasks.filter(task => !task.viewable).length} à générer`;
+      document.querySelector("#reviewCount").textContent =
+        `${tasks.filter(task => task.generationStatus === "TO_REVIEW").length} à revoir`;
+      document.querySelector("#acceptedCount").textContent =
+        `${tasks.filter(task => task.status === "ACCEPTED").length} acceptés`;
+      document.querySelector("#campaignFilter").value = campaignFilter;
+      document.querySelector("#jumpCurrent").disabled = !campaign.currentTask;
+
+      const root = document.querySelector("#objectList");
+      root.innerHTML = "";
+      for (const object of campaign.objects) {
+        const visibleStates = object.states.filter(taskMatchesFilter);
+        const section = document.createElement("div");
+        section.className =
+          `object ${object.status.toLowerCase()} ${object.states.some(task => task.taskId === selectedTaskId) ? "selected-object" : ""} ${visibleStates.length ? "" : "filtered-out"}`;
+        const title = document.createElement("button");
+        title.type = "button";
+        title.className = "object-title";
+        title.innerHTML =
+          `<span>${object.displayName}</span><small>${object.states.filter(task => task.status === "ACCEPTED").length}/${object.states.length}</small>`;
+        title.title = `Explorer les ${object.states.length} états de ${object.displayName}`;
+        title.onclick = () => {
+          const preferred =
+            object.states.find(task => task.taskId === selectedTaskId) ||
+            object.states.find(task => taskMatchesFilter(task)) ||
+            object.states[0];
+          selectTask(preferred.taskId);
+        };
+        const states = document.createElement("div");
+        states.className = "state-list";
+        for (const task of object.states) {
+          const chip = document.createElement("button");
+          chip.type = "button";
+          const isCurrent = campaign.currentTask && campaign.currentTask.taskId === task.taskId;
+          const cssStatus =
+            task.status === "ACCEPTED" ? "accepted" :
+            task.status === "VISUAL_REVIEW_REQUIRED" ? "review" :
+            task.status === "BLOCKED" ? "blocked" : "";
+          chip.className = [
+            "state-chip",
+            isCurrent ? "current" : cssStatus,
+            selectedTaskId === task.taskId ? "selected" : "",
+            taskMatchesFilter(task) ? "" : "filtered-out"
+          ].join(" ");
+          chip.textContent = stateLabels[task.stateId] || task.stateId;
+          chip.title =
+            `${task.ordinal}/16 · ${generationStatusLabels[task.generationStatus]} · ${task.attemptCount} tentative(s)`;
+          chip.setAttribute(
+            "aria-label",
+            `${object.displayName}, ${stateLabels[task.stateId] || task.stateId}, ${generationStatusLabels[task.generationStatus]}`
+          );
+          chip.onclick = () => selectTask(task.taskId);
+          states.append(chip);
+        }
+        section.append(title, states);
+        root.append(section);
+      }
+    }
+
+    function renderTaskHero(campaign) {
+      const task = campaign.currentTask;
+      document.querySelector("#taskHero").classList.toggle("hidden", !task);
+      if (!task) return;
+      document.querySelector("#taskObject").textContent = task.displayName;
+      document.querySelector("#taskState").textContent = stateLabels[task.stateId] || task.stateId;
+      document.querySelector("#taskOrdinal").textContent = `${task.ordinal} / ${campaign.progress.totalTasks}`;
+      document.querySelector("#objectOrdinal").textContent = `Objet ${task.objectOrdinal} / ${campaign.progress.totalObjects}`;
+      document.querySelector("#taskInstruction").textContent =
+        `Tentative ${task.attemptCount}/${campaign.maxAttemptsPerTask} · une image dédiée à l’état ${stateLabels[task.stateId] || task.stateId}, sans afficher les autres états.`;
+      document.querySelector("#metaObject").textContent = task.displayName;
+      document.querySelector("#metaState").textContent = stateLabels[task.stateId] || task.stateId;
+      document.querySelector("#metaPosition").textContent =
+        `État ${task.stateOrdinal}/${task.stateCount} · tâche ${task.ordinal}/16`;
+      const next = campaign.nextTask;
+      document.querySelector("#nextStrip").classList.toggle("hidden", !next);
+      if (next) {
+        document.querySelector("#nextTaskText").textContent =
+          `${next.displayName} · ${stateLabels[next.stateId] || next.stateId}`;
+      }
+    }
+
+    function statusExplanation(task) {
+      if (task.generationStatus === "ACCEPTED") {
+        return "Cet état possède une génération acceptée et une revue hashée. Tu peux consulter son image et toutes les tentatives antérieures sans modifier la campagne.";
+      }
+      if (task.generationStatus === "TO_REVIEW") {
+        return "Une image a été importée pour cet état. Tu peux sélectionner cette tâche pour effectuer sa revue, sans terminer les autres voies auparavant.";
+      }
+      if (task.generationStatus === "TO_GENERATE") {
+        return "Le contrat exact de cet état est prêt. Tu peux le choisir comme tâche active et le générer sans suivre l’ordre global du catalogue.";
+      }
+      if (task.generationStatus === "BLOCKED") {
+        return "Cette tâche est bloquée. Consulte son historique et la dépendance indiquée avant de reprendre la campagne.";
+      }
+      if (task.predecessor) {
+        return `Le prompt canonique est consultable maintenant. La génération exacte sera déverrouillée après l’acceptation de ${task.predecessor.displayName} · ${stateLabels[task.predecessor.stateId] || task.predecessor.stateId}, afin de joindre sa référence de continuité.`;
+      }
+      return "Cet état peut être choisi immédiatement : aucun ordre global entre objets n’est imposé.";
+    }
+
+    function attemptLabel(attempt) {
+      const status = attemptStatusLabels[attempt.status] || attempt.status;
+      const decision = attempt.decision
+        ? decisionLabels[attempt.decision] || attempt.decision
+        : null;
+      return decision && decision !== status ? `${status} · ${decision}` : status;
+    }
+
+    async function renderSelectedImage(task, attempt = null) {
+      const image = document.querySelector("#browserImage");
+      const empty = document.querySelector("#browserEmpty");
+      const meta = document.querySelector("#browserImageMeta");
+      const viewable = attempt ? attempt.viewable : task.viewable;
+      image.style.display = "none";
+      empty.classList.toggle("hidden", viewable);
+      if (!viewable) {
+        document.querySelector("#browserEmptyTitle").textContent =
+          task.generationStatus === "NOT_GENERATED"
+            ? "État planifié · aucune génération"
+            : "Aucune image disponible";
+        document.querySelector("#browserEmptyText").textContent =
+          statusExplanation(task);
+        meta.textContent = "Le statut et la dépendance restent consultables avant toute génération.";
+        return;
+      }
+      const query = new URLSearchParams({taskId: task.taskId});
+      if (attempt) query.set("attemptIndex", String(attempt.attemptIndex));
+      await loadImage(`/api/task-image?${query.toString()}`, image);
+      empty.classList.add("hidden");
+      meta.textContent = attempt
+        ? `Tentative ${attempt.attemptIndex} · ${attemptLabel(attempt)}`
+        : task.status === "ACCEPTED"
+          ? `Génération retenue · ${generationStatusLabels[task.generationStatus]}`
+          : `Dernière génération disponible · ${generationStatusLabels[task.generationStatus]}`;
+    }
+
+    async function renderSelectedPrompt(task, campaign) {
+      const taskId = task.taskId;
+      const status = document.querySelector("#browserPromptStatus");
+      const explanation = document.querySelector("#browserPromptExplanation");
+      const textarea = document.querySelector("#browserPrompt");
+      const copyButton = document.querySelector("#copySelectedPrompt");
+      const actionButton = document.querySelector("#openSelectedTask");
+      status.textContent = "Chargement…";
+      status.className = "status-pill";
+      textarea.value = "";
+      copyButton.disabled = true;
+      actionButton.disabled = true;
+      const payload = await api(
+        `/api/task-prompt?taskId=${encodeURIComponent(taskId)}`
+      );
+      if (selectedTaskId !== taskId) return;
+      selectedTaskPrompt = payload.prompt;
+      textarea.value = payload.prompt.submissionText;
+      copyButton.disabled = false;
+      if (payload.prompt.exactTransportPrompt) {
+        status.textContent = "PROMPT EXACT HASHÉ";
+        status.className = "status-pill accepted";
+        explanation.textContent =
+          "Ce texte est le transport exact de la tentative active. Copie-le sans modification.";
+      } else {
+        status.textContent = "APERÇU CANONIQUE";
+        status.className = "status-pill to-generate";
+        explanation.textContent =
+          "Prompt accessible sans ordre. Il deviendra un transport exact hashé lorsque la référence de continuité de cet objet sera acceptée.";
+      }
+      const isCurrent =
+        campaign.currentTask && campaign.currentTask.taskId === taskId;
+      if (isCurrent) {
+        actionButton.textContent =
+          task.generationStatus === "TO_REVIEW"
+            ? "Ouvrir la revue active"
+            : "Ouvrir l’espace de génération";
+        actionButton.disabled = false;
+      } else if (task.activationEligible) {
+        actionButton.textContent =
+          task.generationStatus === "TO_REVIEW"
+            ? "Reprendre la revue de cet état"
+            : "Générer cet état maintenant";
+        actionButton.disabled = false;
+      } else if (task.status === "ACCEPTED") {
+        actionButton.textContent = "État déjà accepté";
+        actionButton.disabled = true;
+      } else {
+        actionButton.textContent = "Continuité précédente requise";
+        actionButton.disabled = true;
+      }
+    }
+
+    function renderTaskBrowser(campaign) {
+      const tasks = allCampaignTasks(campaign);
+      if (!selectedTaskId && campaign.status === "COMPLETE" && tasks.length) {
+        selectedTaskId = tasks[tasks.length - 1].taskId;
+        writeNavigationUrl("replace");
+      }
+      let task = tasks.find(item => item.taskId === selectedTaskId);
+      if (selectedTaskId && !task) {
+        selectedTaskId = null;
+        selectedAttemptIndex = null;
+        writeNavigationUrl("replace");
+        task = null;
+      }
+      const browser = document.querySelector("#taskBrowser");
+      browser.classList.toggle("hidden", !task);
+      if (!task) return;
+
+      const index = tasks.findIndex(item => item.taskId === task.taskId);
+      document.querySelector("#browserObject").textContent = task.displayName;
+      document.querySelector("#browserState").textContent =
+        stateLabels[task.stateId] || task.stateId;
+      document.querySelector("#browserPosition").textContent =
+        `Objet ${task.objectOrdinal}/${campaign.progress.totalObjects} · état ${task.stateOrdinal}/${task.stateCount} · tâche ${task.ordinal}/${campaign.progress.totalTasks}`;
+      document.querySelector("#previousTask").disabled = index <= 0;
+      document.querySelector("#nextTask").disabled = index >= tasks.length - 1;
+      document.querySelector("#returnCurrent").classList.toggle(
+        "hidden",
+        !campaign.currentTask
+      );
+
+      const status = document.querySelector("#browserStatus");
+      status.textContent = generationStatusLabels[task.generationStatus] || task.generationStatus;
+      status.className = `status-pill ${task.generationStatus.toLowerCase().replaceAll("_", "-")}`;
+      document.querySelector("#browserAttemptCount").textContent =
+        `${task.attemptCount} tentative(s) enregistrée(s)`;
+      document.querySelector("#browserExplanation").textContent = statusExplanation(task);
+      document.querySelector("#browserMetaObject").textContent = task.displayName;
+      document.querySelector("#browserMetaState").textContent =
+        stateLabels[task.stateId] || task.stateId;
+      document.querySelector("#browserMetaOrder").textContent =
+        `${task.ordinal} / ${campaign.progress.totalTasks}`;
+      document.querySelector("#browserMetaDecision").textContent =
+        task.acceptedDecision
+          ? decisionLabels[task.acceptedDecision] || task.acceptedDecision
+          : task.latestDecision
+            ? decisionLabels[task.latestDecision] || task.latestDecision
+            : "Aucune";
+      document.querySelector("#browserPredecessor").textContent = task.predecessor
+        ? `${task.predecessor.displayName} · ${stateLabels[task.predecessor.stateId] || task.predecessor.stateId} · ${generationStatusLabels[
+            task.predecessor.status === "ACCEPTED"
+              ? "ACCEPTED"
+              : task.predecessor.status === "VISUAL_REVIEW_REQUIRED"
+                ? "TO_REVIEW"
+                : task.predecessor.status === "READY"
+                  ? "TO_GENERATE"
+                  : task.predecessor.status === "BLOCKED"
+                    ? "BLOCKED"
+                    : "NOT_GENERATED"
+          ]}`
+        : "Premier état de l’objet : il dérive directement du canon visuel sélectionné.";
+
+      const attemptRoot = document.querySelector("#attemptList");
+      attemptRoot.innerHTML = "";
+      if (!task.attempts.length) {
+        const placeholder = document.createElement("p");
+        placeholder.className = "muted";
+        placeholder.textContent = "Aucune tentative créée : cet état attend son tour dans la campagne.";
+        attemptRoot.append(placeholder);
+      } else {
+        for (const attempt of task.attempts) {
+          const card = document.createElement("button");
+          card.type = "button";
+          card.className =
+            `attempt-card ${selectedAttemptIndex === attempt.attemptIndex ? "selected" : ""}`;
+          card.disabled = !attempt.viewable;
+          card.innerHTML =
+            `<span><strong>Tentative ${attempt.attemptIndex}</strong><small>${attempt.requestId} · source ${attempt.sourceKind.toLowerCase()}</small></span>` +
+            `<span class="attempt-status">${attemptLabel(attempt)}</span>`;
+          if (attempt.viewable) {
+            card.onclick = () => selectTask(task.taskId, attempt.attemptIndex);
+          }
+          attemptRoot.append(card);
+        }
+      }
+
+      let selectedAttempt = selectedAttemptIndex === null
+        ? null
+        : task.attempts.find(item => item.attemptIndex === selectedAttemptIndex) || null;
+      if (selectedAttemptIndex !== null && selectedAttempt === null) {
+        selectedAttemptIndex = null;
+        writeNavigationUrl("replace");
+      }
+      const isCurrent = campaign.currentTask && campaign.currentTask.taskId === task.taskId;
+      document.querySelector("#browserFooterStatus").textContent =
+        isCurrent
+          ? "Tâche active"
+          : task.activationEligible
+            ? "Disponible hors ordre"
+            : task.promptAccessible
+              ? "Prompt consultable"
+              : generationStatusLabels[task.generationStatus];
+      renderSelectedImage(task, selectedAttempt).catch(error => notice(error.message, "error"));
+      renderSelectedPrompt(task, campaign).catch(error => notice(error.message, "error"));
+    }
+
+    function render() {
+      const campaignMode = state.mode === "campaign";
+      const complete = campaignMode && state.status === "CAMPAIGN_COMPLETE";
+      if (
+        complete &&
+        !selectedTaskId &&
+        state.campaign &&
+        allCampaignTasks(state.campaign).length
+      ) {
+        selectedTaskId = allCampaignTasks(state.campaign).at(-1).taskId;
+      }
+      document.querySelector("#status").textContent = complete ? "CAMPAGNE TERMINÉE" : state.status;
+      document.querySelector("#completeCard").classList.toggle("hidden", !complete);
+      if (campaignMode) {
+        renderCampaignNav(state.campaign);
+        renderTaskHero(state.campaign);
+        renderTaskBrowser(state.campaign);
+        document.querySelector("#requiredModel").textContent = state.campaign.requiredModel;
+        document.querySelector("#lockedModel").textContent = state.campaign.requiredModel;
+      } else {
+        document.querySelector("#campaignNav").classList.add("hidden");
+        document.querySelector("#taskHero").classList.add("hidden");
+        document.querySelector("#taskBrowser").classList.add("hidden");
+        document.querySelector("#requiredModel").textContent = "preuve UI optionnelle";
+      }
+      const browsing = campaignMode && selectedTaskId !== null;
+      document.querySelector("#activeWorkspace").classList.toggle(
+        "hidden",
+        complete || browsing
+      );
+      if (complete) {
+        document.querySelector("#requestId").textContent = "—";
+        document.querySelector("#attemptIndex").textContent = "—";
+        document.querySelector("#transportHash").textContent = "—";
+        notice("Les 16 revues sont enregistrées. Le poste ne laisse aucune tâche orpheline.", "ok");
+        return;
+      }
+
+      document.querySelector("#prompt").value = state.submissionText;
+      document.querySelector("#requestId").textContent = state.requestId;
+      document.querySelector("#attemptIndex").textContent = state.plannedGenerationIndex;
+      document.querySelector("#transportHash").textContent = state.submissionTextSha256.slice(0, 16);
+      document.querySelector("#imageSpec").textContent =
+        `${state.imageSpec.aspectRatio} · ${state.imageSpec.background} · ${state.imageSpec.lighting}`;
+
+      const attachments = document.querySelector("#attachments");
+      attachments.innerHTML = "";
+      document.querySelector("#attachmentsBlock").classList.toggle("hidden", !state.attachments.length);
+      for (const item of state.attachments) {
+        const row = document.createElement("div");
+        row.className = "attachment";
+        const code = document.createElement("code");
+        code.textContent = item.path;
+        const button = document.createElement("button");
+        button.className = "secondary";
+        button.textContent = "Copier le chemin";
+        button.onclick = () => navigator.clipboard.writeText(item.path);
+        row.append(code, button);
+        attachments.append(row);
+      }
+
+      const ready = state.status === "READY_FOR_HUMAN_WEB_SUBMISSION";
+      document.querySelector("#submissionCard").classList.toggle("hidden", !ready);
+      document.querySelector("#importCard").classList.toggle("hidden", !ready);
+      const reviewVisible = state.status === "VISUAL_REVIEW_REQUIRED";
+      document.querySelector("#reviewCard").classList.toggle("hidden", !reviewVisible);
+      if (reviewVisible) {
+        applyReviewDefaults();
+        updateReviewReadiness();
+        loadPreview().catch(error => notice(error.message, "error"));
+      }
+    }
+
+    async function refresh() {
+      const payload = await api("/api/session");
+      state = payload.session;
+      render();
+    }
+
+    async function loadImage(path, target) {
+      const loadKey = `${path}:${Date.now()}:${Math.random()}`;
+      target.dataset.pendingLoadKey = loadKey;
+      const response = await fetch(`${path}${path.includes("?") ? "&" : "?"}t=${Date.now()}`, {headers});
+      if (!response.ok) {
+        let message = `HTTP ${response.status}`;
+        try { message = (await response.json()).error || message; } catch (_) {}
+        throw new Error(message);
+      }
+      const blob = await response.blob();
+      if (target.dataset.pendingLoadKey !== loadKey) return;
+      if (target.dataset.objectUrl) URL.revokeObjectURL(target.dataset.objectUrl);
+      const objectUrl = URL.createObjectURL(blob);
+      target.dataset.objectUrl = objectUrl;
+      target.src = objectUrl;
+      target.style.display = "block";
+    }
+
+    async function loadPreview() {
+      await loadImage("/api/result-image", document.querySelector("#preview"));
+    }
+
+    document.querySelector("#campaignFilter").onchange = event => {
+      campaignFilter = event.target.value;
+      writeNavigationUrl("replace");
+      render();
+    };
+    document.querySelector("#jumpCurrent").onclick = () => {
+      if (state.campaign.currentTask) {
+        returnToCurrentTask();
+      }
+    };
+    document.querySelector("#returnCurrent").onclick = returnToCurrentTask;
+    document.querySelector("#copySelectedPrompt").onclick = async () => {
+      if (!selectedTaskPrompt) return;
+      await navigator.clipboard.writeText(selectedTaskPrompt.submissionText);
+      notice(
+        selectedTaskPrompt.exactTransportPrompt
+          ? "Prompt exact hashé copié."
+          : "Aperçu canonique copié. Attends son déverrouillage avant toute importation.",
+        "ok"
+      );
+    };
+    document.querySelector("#openSelectedTask").onclick = async () => {
+      if (!state || !selectedTaskId) return;
+      const task = allCampaignTasks(state.campaign).find(
+        item => item.taskId === selectedTaskId
+      );
+      if (!task) return;
+      if (
+        state.campaign.currentTask &&
+        state.campaign.currentTask.taskId === task.taskId
+      ) {
+        returnToCurrentTask();
+        return;
+      }
+      try {
+        const payload = await api("/api/select-task", {
+          method: "POST",
+          body: JSON.stringify({taskId: task.taskId})
+        });
+        state = payload.session;
+        selectedTaskId = null;
+        selectedAttemptIndex = null;
+        selectedTaskPrompt = null;
+        writeNavigationUrl("push");
+        resetIntake();
+        render();
+        notice(
+          `${task.displayName} · ${stateLabels[task.stateId] || task.stateId} est maintenant la tâche active.`,
+          "ok"
+        );
+      } catch (error) {
+        notice(error.message, "error");
+      }
+    };
+    document.querySelector("#previousTask").onclick = () => {
+      const tasks = allCampaignTasks(state.campaign);
+      const index = tasks.findIndex(task => task.taskId === selectedTaskId);
+      if (index > 0) selectTask(tasks[index - 1].taskId);
+    };
+    document.querySelector("#nextTask").onclick = () => {
+      const tasks = allCampaignTasks(state.campaign);
+      const index = tasks.findIndex(task => task.taskId === selectedTaskId);
+      if (index >= 0 && index < tasks.length - 1) {
+        selectTask(tasks[index + 1].taskId);
+      }
+    };
+    document.addEventListener("keydown", event => {
+      if (!state || state.mode !== "campaign" || !selectedTaskId) return;
+      if (["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement.tagName)) return;
+      if (event.key === "Escape" && state.campaign.currentTask) {
+        event.preventDefault();
+        returnToCurrentTask();
+      } else if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        document.querySelector("#previousTask").click();
+      } else if (event.key === "ArrowRight") {
+        event.preventDefault();
+        document.querySelector("#nextTask").click();
+      }
+    });
+    window.addEventListener("popstate", () => {
+      const params = new URLSearchParams(location.search);
+      selectedTaskId = params.get("task");
+      selectedTaskPrompt = null;
+      const attempt = Number(params.get("attempt"));
+      selectedAttemptIndex =
+        Number.isInteger(attempt) && attempt > 0 ? attempt : null;
+      campaignFilter = allowedCampaignFilters.has(params.get("filter"))
+        ? params.get("filter")
+        : "ALL";
+      if (state) render();
+    });
+
+    document.querySelector("#copyPrompt").onclick = async () => {
+      await navigator.clipboard.writeText(state.submissionText);
+      notice("Texte exact copié. Colle-le sans modification dans ChatGPT Web.");
+    };
+    document.querySelector("#openChatGPT").onclick = () => {
+      window.open(state.chatgptUrl, "_blank", "noopener,noreferrer");
+    };
+
+    const drop = document.querySelector("#drop");
+    const fileInput = document.querySelector("#file");
+    drop.onclick = () => fileInput.click();
+    drop.ondragover = event => { event.preventDefault(); drop.classList.add("drag"); };
+    drop.ondragleave = () => drop.classList.remove("drag");
+    drop.ondrop = event => {
+      event.preventDefault();
+      drop.classList.remove("drag");
+      if (event.dataTransfer.files.length) chooseFile(event.dataTransfer.files[0]);
+    };
+    fileInput.onchange = () => {
+      if (fileInput.files.length) chooseFile(fileInput.files[0]);
+    };
+    function chooseFile(file) {
+      selectedFile = file;
+      document.querySelector("#fileName").textContent =
+        `${file.name} · ${(file.size / 1024 / 1024).toFixed(2)} Mo`;
+      updateImportButton();
+    }
+    function updateImportButton() {
+      const modelOk = state && state.mode === "campaign"
+        ? document.querySelector("#modelConfirmed").checked
+        : true;
+      document.querySelector("#importImage").disabled =
+        !(selectedFile && document.querySelector("#attest").checked && modelOk);
+    }
+    document.querySelector("#attest").onchange = updateImportButton;
+    document.querySelector("#modelConfirmed").onchange = updateImportButton;
+
+    document.querySelector("#importImage").onclick = async () => {
+      try {
+        const button = document.querySelector("#importImage");
+        button.disabled = true;
+        button.textContent = "Validation et import…";
+        const dataUrl = await new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result);
+          reader.onerror = () => reject(reader.error);
+          reader.readAsDataURL(selectedFile);
+        });
+        const encoded = String(dataUrl).split(",", 2)[1];
+        const requiredModel = state.mode === "campaign" ? state.campaign.requiredModel : null;
+        const payload = await api("/api/import", {
+          method: "POST",
+          body: JSON.stringify({
+            filename: selectedFile.name,
+            imageBase64: encoded,
+            modelName: requiredModel,
+            modelNameConfirmed: state.mode === "campaign"
+              ? document.querySelector("#modelConfirmed").checked
+              : false,
+            attestation: {
+              exactSubmissionTextUsed: true,
+              noPromptRewrite: true,
+              exactlyOneGenerationRequested: true,
+              oneResultDownloaded: true,
+              noAutomaticRetry: true
+            }
+          })
+        });
+        state = payload.session;
+        notice("Image validée, hashée et liée à cet objet et cet état. Effectue maintenant la revue.");
+        render();
+      } catch (error) {
+        notice(error.message, "error");
+      } finally {
+        document.querySelector("#importImage").textContent = "Importer et vérifier";
+        updateImportButton();
+      }
+    };
+
+    const assessmentRoot = document.querySelector("#assessment");
+    for (const [key, label] of Object.entries(assessmentLabels)) {
+      const row = document.createElement("label");
+      row.className = "assessment";
+      const span = document.createElement("span");
+      span.textContent = label;
+      const select = document.createElement("select");
+      select.id = `assessment-${key}`;
+      for (const value of ["PASS", "FAIL", "UNKNOWN"]) {
+        const option = document.createElement("option");
+        option.value = value;
+        option.textContent = value;
+        if (value === "UNKNOWN") option.selected = true;
+        select.append(option);
+      }
+      select.onchange = updateReviewReadiness;
+      row.append(span, select);
+      assessmentRoot.append(row);
+    }
+
+    function updateReviewReadiness() {
+      const decision = document.querySelector("#decision").value;
+      const reviewerInput = document.querySelector("#reviewer");
+      const reviewerAllowed = decision === "HUMAN_SELECTED";
+      reviewerInput.disabled = !reviewerAllowed;
+      if (!reviewerAllowed) reviewerInput.value = "";
+      const allPass = Object.keys(assessmentLabels).every(
+        key => document.querySelector(`#assessment-${key}`).value === "PASS"
+      );
+      const hasPreserve = lines("#preserve").length > 0;
+      const hasCorrect = lines("#correct").length > 0;
+      const hasForbid = lines("#forbidNext").length > 0;
+      const hasReviewer = reviewerInput.value.trim().length >= 2;
+      const missing = [];
+      let label = "Enregistrer et passer à la suite";
+      if (decision === "PRECANONICAL_CANDIDATE") {
+        label = "Valider cet état et continuer";
+        if (!allPass) missing.push("les cinq critères doivent être PASS");
+        if (!hasPreserve) missing.push("ajoute au moins une règle à préserver");
+      } else if (decision === "HUMAN_SELECTED") {
+        label = "Sélection humaine et continuer";
+        if (!allPass) missing.push("les cinq critères doivent être PASS");
+        if (!hasPreserve) missing.push("ajoute au moins une règle à préserver");
+        if (!hasReviewer) missing.push("indique l’autorité humaine");
+      } else if (decision === "REVISION_REQUIRED") {
+        label = "Enregistrer la correction ciblée";
+        if (!hasCorrect) missing.push("décris au moins une correction observable");
+      } else if (decision === "REJECTED") {
+        label = "Rejeter et reconstruire cet état";
+        if (!hasCorrect) missing.push("décris au moins une correction observable");
+        if (!hasForbid) missing.push("ajoute au moins une interdiction pour la prochaine tentative");
+      }
+      const button = document.querySelector("#saveReview");
+      button.textContent = label;
+      button.disabled = missing.length > 0;
+      const guidance = document.querySelector("#reviewGuidance");
+      if (missing.length) {
+        guidance.className = "review-gate blocked";
+        guidance.textContent = `Acceptation bloquée : ${missing.join(" ; ")}.`;
+      } else {
+        guidance.className = "review-gate pass";
+        guidance.textContent = decision === "REVISION_REQUIRED" || decision === "REJECTED"
+          ? "Revue actionnable : la prochaine tentative recevra ces corrections sans retry automatique."
+          : "Porte d’acceptation complète : cinq PASS et identité à préserver enregistrée.";
+      }
+    }
+
+    document.querySelector("#decision").onchange = updateReviewReadiness;
+    document.querySelector("#reviewer").oninput = updateReviewReadiness;
+    document.querySelector("#preserve").oninput = updateReviewReadiness;
+    document.querySelector("#correct").oninput = updateReviewReadiness;
+    document.querySelector("#forbidNext").oninput = updateReviewReadiness;
+    document.querySelector("#restorePreserve").onclick = () => {
+      applyReviewDefaults(true);
+      notice("Les invariants proposés ont été restaurés. Tu peux toujours les modifier.", "ok");
+    };
+
+    document.querySelector("#saveReview").onclick = async () => {
+      const previousTask = state.mode === "campaign" ? state.campaign.currentTask : null;
+      const decision = document.querySelector("#decision").value;
+      try {
+        const button = document.querySelector("#saveReview");
+        button.disabled = true;
+        button.textContent = "Enregistrement et préparation…";
+        const assessment = {};
+        for (const key of Object.keys(assessmentLabels)) {
+          assessment[key] = document.querySelector(`#assessment-${key}`).value;
+        }
+        const payload = await api("/api/review", {
+          method: "POST",
+          body: JSON.stringify({
+            decision,
+            reviewer: decision === "HUMAN_SELECTED"
+              ? (document.querySelector("#reviewer").value.trim() || null)
+              : null,
+            assessment,
+            preserve: lines("#preserve"),
+            correct: lines("#correct"),
+            forbidNext: lines("#forbidNext")
+          })
+        });
+        state = payload.session;
+        resetIntake();
+        render();
+        if (state.status === "CAMPAIGN_COMPLETE") {
+          notice("Dernière revue enregistrée : les 16 états sont couverts.", "ok");
+        } else if (
+          previousTask &&
+          state.campaign.currentTask &&
+          previousTask.taskId === state.campaign.currentTask.taskId
+        ) {
+          notice(
+            `Nouvelle tentative préparée pour ${previousTask.displayName} · ${stateLabels[previousTask.stateId]}.`,
+            "ok"
+          );
+        } else if (state.campaign && state.campaign.currentTask) {
+          notice(
+            `Revue enregistrée. Prochaine génération : ${state.campaign.currentTask.displayName} · ${stateLabels[state.campaign.currentTask.stateId]}.`,
+            "ok"
+          );
+        }
+      } catch (error) {
+        notice(error.message, "error");
+      } finally {
+        updateReviewReadiness();
+      }
+    };
+
+    document.querySelector("#closeServer").onclick = async () => {
+      try { await api("/api/close", {method: "POST", body: "{}"}); } catch (_) {}
+      document.body.innerHTML =
+        '<div class="shell"><section class="card complete"><h1>Poste fermé</h1><p>La campagne, les images et toutes les preuves hashées sont conservées.</p></section></div>';
+    };
+
+    if (!token) {
+      notice("Jeton local absent. Relance le poste avec la commande officielle.", "error");
+    } else {
+      refresh().catch(error => notice(error.message, "error"));
+    }
+  </script>
+</body>
+</html>

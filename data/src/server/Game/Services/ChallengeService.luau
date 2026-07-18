@@ -52,6 +52,7 @@ type BuildService = {
 	snapshot: (self: BuildService) -> DefenseSnapshot,
 	restore: (self: BuildService, snapshot: DefenseSnapshot) -> (),
 	setBuildEnabled: (self: BuildService, enabled: boolean) -> (),
+	isOwner: (self: BuildService, player: Player) -> boolean,
 }
 type RouteService = {
 	chooseRoamerRoute: (self: RouteService) -> RouteId,
@@ -188,6 +189,10 @@ function ChallengeService._handleStartRequest(self: Service, player: Player)
 	if player.Parent ~= Players or self:_rateLimited(player) then
 		return
 	end
+	if not self._buildService:isOwner(player) then
+		ChallengeService._reply(self._requestStart, player, false, "Mode observation")
+		return
+	end
 	if self._transitioning or self._finishing or self._stateService:getPhase() ~= "PREPARATION" then
 		ChallengeService._reply(self._requestStart, player, false, "Challenge déjà en cours")
 		return
@@ -208,6 +213,10 @@ end
 
 function ChallengeService._handleReturnRequest(self: Service, player: Player)
 	if player.Parent ~= Players or self:_rateLimited(player) then
+		return
+	end
+	if not self._buildService:isOwner(player) then
+		ChallengeService._reply(self._requestReturn, player, false, "Mode observation")
 		return
 	end
 	if self._transitioning or self._finishing or self._stateService:getPhase() ~= "REVIEW" then
@@ -264,6 +273,9 @@ function ChallengeService._run(self: Service, token: number)
 	local totalWaves = #ChallengeConfig.waves
 	for _, wave in ChallengeConfig.waves do
 		if not self:_runWave(wave, totalWaves, token) then
+			if token == self._runToken and self._stateService:getPhase() == "DEFENDING" then
+				self:_finish("DEFEAT")
+			end
 			return
 		end
 	end

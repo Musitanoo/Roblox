@@ -1,9 +1,9 @@
 --!strict
 
 local RouteConfig = {
-	routes = table.freeze({ "Left", "Right" }),
 	wallCost = 40,
 	slowTrapCost = 15,
+	gridBaseStepCost = 10,
 	roamerPreferredChance = 0.75,
 	baseTravelCost = table.freeze({
 		Left = 0,

@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/precanonical-browser-doctor.schema.json",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/precanonical-browser-doctor.schema.json"
+    },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "browserAdapter": {
+      "enum": [
+        "codex_chrome",
+        "codex_iab"
+      ]
+    },
+    "requiredBackend": {
+      "enum": [
+        "chrome",
+        "iab"
+      ]
+    },
+    "requiredTaskTool": {
+      "const": "mcp__node_repl__js"
+    },
+    "status": {
+      "enum": [
+        "BLOCKED",
+        "FAIL"
+      ]
+    },
+    "localInstallationStatus": {
+      "enum": [
+        "PASS",
+        "FAIL"
+      ]
+    },
+    "currentTaskToolExposureStatus": {
+      "const": "UNKNOWN"
+    },
+    "repositoryCanLaunchBrowser": {
+      "const": false
+    },
+    "submissionReady": {
+      "const": false
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]+$"
+          },
+          "status": {
+            "enum": [
+              "PASS",
+              "FAIL",
+              "UNKNOWN",
+              "SKIP"
+            ]
+          },
+          "detail": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "status",
+          "detail"
+        ],
+        "unevaluatedProperties": false
+      },
+      "minItems": 6
+    },
+    "exposedNodeReplTools": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "blockingReasons": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "recommendedAction": {
+      "type": "string",
+      "minLength": 30
+    },
+    "productionApproved": {
+      "const": false
+    }
+  },
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "generatedAt",
+    "browserAdapter",
+    "requiredBackend",
+    "requiredTaskTool",
+    "status",
+    "localInstallationStatus",
+    "currentTaskToolExposureStatus",
+    "repositoryCanLaunchBrowser",
+    "submissionReady",
+    "checks",
+    "exposedNodeReplTools",
+    "blockingReasons",
+    "recommendedAction",
+    "productionApproved"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "browserAdapter": {
+            "const": "codex_iab"
+          }
+        },
+        "required": [
+          "browserAdapter"
+        ]
+      },
+      "then": {
+        "properties": {
+          "requiredBackend": {
+            "const": "iab"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "requiredBackend": {
+            "const": "chrome"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "localInstallationStatus": {
+            "const": "PASS"
+          }
+        },
+        "required": [
+          "localInstallationStatus"
+        ]
+      },
+      "then": {
+        "properties": {
+          "status": {
+            "const": "BLOCKED"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "status": {
+            "const": "FAIL"
+          }
+        }
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}

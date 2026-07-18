@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.0.0",
+  "states": [
+    {
+      "id": "intact",
+      "visualChange": "All three armor masses remain seated; one older copper reinforcement may remain as maintained history.",
+      "invariants": [
+        "footprint",
+        "pivot",
+        "frame proportions",
+        "repair socket location",
+        "three-panel identity"
+      ]
+    },
+    {
+      "id": "damaged",
+      "visualChange": "One threat-facing panel shifts or opens along the declared weak span while the same frame and repair path remain obvious.",
+      "invariants": [
+        "footprint",
+        "pivot",
+        "frame proportions",
+        "repair socket location",
+        "component identities"
+      ]
+    },
+    {
+      "id": "critical",
+      "visualChange": "The same failure chain widens: a second major separation exposes the load path and the structure visibly sags without changing its footprint.",
+      "invariants": [
+        "footprint",
+        "pivot",
+        "repair socket location",
+        "standard frame identity",
+        "recognizable original silhouette"
+      ]
+    }
+  ],
+  "independentStateDesignForbidden": true
+}

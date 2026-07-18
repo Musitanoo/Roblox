@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0.0",
+  "version": "0.1.0",
+  "status": "EXPLORATION",
+  "productionApproved": false,
+  "finalTerritory": null,
+  "project": {
+    "name": "Roblox Top 1",
+    "genre": "cooperative persistent fortress defense",
+    "platformPriority": "mobile-first",
+    "visualProtagonist": "player fortress"
+  },
+  "northStar": "A small personal survival machine, visibly authored by its players, learns from every attack and remains readable before decorative.",
+  "tone": [
+    "stylized",
+    "expressive",
+    "non-gore",
+    "lightly-unsettling",
+    "occasionally-funny",
+    "highly-readable"
+  ],
+  "territories": [
+    "industrial-toy-defense",
+    "salvaged-frontier",
+    "clean-tactical-diorama"
+  ],
+  "contracts": {
+    "calibration": "art/calibration/calibration-kit.json",
+    "camera": "art/calibration/camera-rig.json",
+    "palette": "art/palettes/semantic-palette.json",
+    "materials": "art/materials/material-rules.json",
+    "lighting": "art/lighting/lighting-profiles.json",
+    "provenance": "art/references/provenance.json",
+    "rubric": "art/qa/visual-rubric.json"
+  },
+  "gates": {
+    "allHardGatesRequired": true,
+    "weightedScoreMinimum": 90,
+    "humanSelectionRequired": true,
+    "studioEvidenceRequired": true,
+    "mobileEvidenceRequired": true,
+    "sixthAssetTransferProofRequired": true
+  },
+  "forbidden": [
+    "color-only-state",
+    "decorative-microtext",
+    "floating-idle-fragments",
+    "subpixel-silhouette-features",
+    "unbounded-grunge",
+    "baked-directional-lighting-in-albedo",
+    "unlicensed-production-reference",
+    "unique-uploads-for-identical-meshes"
+  ]
+}

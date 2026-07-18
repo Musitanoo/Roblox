@@ -1,19 +1,48 @@
-# Roblox Top 1 — Game Design Document v1.0
+# Roblox Top 1 — Game Design Document v1.0.4
 
-**Statut : CANON DE CONCEPTION — prêt pour préproduction et vertical slice**  
-**Date : 15 juillet 2026**  
-**Nom commercial : à définir**  
-**Genre : PvE coopératif, forteresse persistante, base defense, action, expéditions**  
-**Joueurs : 1 à 4**  
-**Plateforme prioritaire : Roblox, mobile-first**  
-**North Star : première expérience Roblox mondiale par CCU moyen sur 30 jours**  
-**Preuve de rétention : UNKNOWN jusqu’aux playtests et cohortes réelles**
+| Champ | Valeur |
+| --- | --- |
+| ID | `PRODUCT-GDD-001` |
+| Classe | `CONTRACT` de vision et de conception |
+| Cycle de vie | `ACCEPTED` |
+| Version | 1.0.4 |
+| Propriétaire / approbateur | Founder |
+| Scope | Vision produit, systèmes cibles et garde-fous ; 1 à 4 joueurs, mobile-first |
+| Remplace | Version 1.0.3 du même document |
+| Dernière revue | 2026-07-18 |
+| Revue suivante | Décision produit, preuve invalidante ou acceptation d'un nouveau contrat de slice |
+| Nom commercial | À définir |
+| North Star | Première expérience Roblox mondiale par CCU moyen sur 30 jours |
+| Preuve de rétention | `UNKNOWN` jusqu'aux playtests et cohortes réelles |
+
+## Journal de révision
+
+- `1.0.4` — ADR-0002 renonce au gate participant G3 pour le séquencement
+  interne ; la preuve joueur reste `UNKNOWN` et Action 0.4.1 demeure
+  `IN_REVIEW` jusqu'à son acceptation explicite.
+- `1.0.3` — remplacement de la promesse publique non prouvée « la horde
+  apprend » par la boucle effectivement testée ; `H-HORDE-001` reste une
+  variante marketing conditionnelle jusqu'à sa validation.
+- `1.0.2` — ajout du registre global de définition qui inventorie toutes les
+  décisions encore ouvertes sans autoriser les gates futurs.
+- `1.0.1` — intégration des contrats candidats Action 0.4.1, Progression 0.5.1
+  et Persistence 0.6.1 ; aucune extension de scope runtime.
+- `1.0.0` — vision founder acceptée pour préproduction et vertical slices.
+
+Les principes réellement immuables sont extraits dans la
+[Constitution produit](docs/00-governance/PRODUCT_CONSTITUTION.md). Les systèmes,
+valeurs et seuils non observés de ce GDD restent des hypothèses à valider ; le
+statut `ACCEPTED` autorise leur test, pas une revendication de résultat joueur.
+La [Doctrine d’innovation et de rétention durable](docs/PRODUCT_INNOVATION_AND_RETENTION_DOCTRINE.md)
+accepte une méthode de mesure et d’expérimentation. Ses signatures, motivations,
+horloges et effets comportementaux restent des hypothèses nommées ; elle sépare
+les métriques Roblox officielles des diagnostics internes `RT1_*`.
 
 ---
 
 # 0. Avertissement de vérité
 
-Ce document est conçu pour maximiser la probabilité de rétention volontaire, de divertissement durable et de compatibilité avec les signaux de distribution Roblox. Il ne peut pas garantir une « rétention parfaite ». Roblox mesure notamment le play-through rate, les départs avant 60 et 180 secondes, les jours joués, le temps joué, les sessions qualifiées, le retour intentionnel avec des amis et les comportements de dépense. Le système explore d’abord des cohortes, puis élargit la distribution lorsque leur comportement est bon. citeturn560303view0
+Ce document est conçu pour maximiser la probabilité de rétention volontaire, de divertissement durable et de compatibilité avec les signaux de distribution Roblox. Il ne peut pas garantir une « rétention parfaite ». Roblox décrit notamment des signaux de recommandation liés au play-through qualifié, à la rétention, à l'engagement, à la monétisation et au jeu entre amis. Le système de recommandation personnalise ensuite la sélection et le classement des expériences. ([Roblox — Discovery](https://create.roblox.com/docs/production/promotion/discovery))
 
 La rétention ne sera considérée comme prouvée que lorsque de vrais joueurs :
 
@@ -24,6 +53,30 @@ La rétention ne sera considérée comme prouvée que lorsque de vrais joueurs :
 5. relancent volontairement ;
 6. reviennent lors des jours suivants ;
 7. invitent ou rejoignent réellement des amis.
+
+## 0.1 Carte d'application actuelle
+
+Le GDD décrit la destination produit. Les contrats de slice décrivent un
+sous-ensemble implémentable et testable ; ils ne deviennent autoritaires dans
+leur scope qu'après acceptation ou dérogation explicite conforme à la
+[roadmap](docs/00-governance/ROADMAP_AND_STAGE_GATES.md).
+
+| Niveau | Document | Autorité actuelle | Relation au GDD |
+| --- | --- | --- | --- |
+| Baseline exécutable | [Build Loop 0.3](docs/BUILD_LOOP_0_3.md) | `ACCEPTED`, `PASS TECHNIQUE` | Construction sur grille, snapshot et rematch |
+| Action | [Action Loop 0.4.1](docs/ACTION_LOOP_0_4.md) | `IN_REVIEW` | Sous-ensemble Fight, Repair, Rescue des sections 11 et 14 |
+| Progression | [Progression Loop 0.5.1](docs/PROGRESSION_LOOP_0_5.md) | `IN_REVIEW` | Sous-ensemble temporaire et horizontal de la section 17 |
+| Persistence | [Persistence Loop 0.6.1](docs/PERSISTENCE_LOOP_0_6.md) | `IN_REVIEW` | Profil versionné et récupérable pour les sections 8 et 17 |
+
+Cette carte est un routage documentaire, pas une preuve d'implémentation. G3
+reste `UNKNOWN`, mais son exécution participant est `WAIVED_BY_FOUNDER` pour le
+séquencement interne par ADR-0002. Action 0.4.1 reste `IN_REVIEW` et G4 reste
+fermé.
+
+Les décisions non fermées de l'ensemble du GDD sont inventoriées dans le
+[registre global de définition](docs/00-governance/PRODUCT_DEFINITION_REGISTER.md).
+Une entrée `OPEN`, `DEFERRED_BY_GATE` ou `OPTIONAL_DECISION` conserve une
+question sans transformer la vision en scope autorisé.
 
 ---
 
@@ -48,9 +101,14 @@ Le joueur n’est pas seulement un tireur. Il est simultanément :
 - allié utile ;
 - propriétaire d’un lieu reconnaissable.
 
-## 1.3 Promesse publique
+## 1.3 Promesse publique compatible avec l'état prouvé
 
-> **Construis ta forteresse. La horde apprend. Prouve qu’elle peut survivre.**
+> **Construis ta forteresse. Comprends sa chute. Prouve qu’elle peut survivre.**
+
+La variante historique « La horde apprend » reste la promesse candidate de
+`H-HORDE-001`. Elle ne doit pas être publiée comme une capacité du jeu tant que
+l'adaptation limitée, lisible et contrable de la horde n'a pas été implémentée
+et validée par le protocole prévu.
 
 ## 1.4 Boucle émotionnelle
 
@@ -123,7 +181,7 @@ Le jeu doit satisfaire deux profils sans créer deux jeux séparés.
 - participe aux défis et événements ;
 - développe une identité reconnue.
 
-Roblox recommande de concevoir simultanément pour les joueurs qui passent rapidement d’une expérience à l’autre et pour ceux qui deviennent profondément engagés. La plateforme souligne aussi que les FTUE rapides, le jeu social et le mobile-first sont particulièrement importants. citeturn200316view0
+Roblox recommande de concevoir simultanément pour les joueurs qui passent rapidement d’une expérience à l’autre et pour ceux qui deviennent profondément engagés. La plateforme souligne aussi que les FTUE rapides, le jeu social et le mobile-first sont particulièrement importants. ([Roblox — Design for Roblox](https://create.roblox.com/docs/production/game-design/design-for-roblox))
 
 ---
 
@@ -164,7 +222,7 @@ Les nouveaux outils, interactions et choix sont plus importants que l’augmenta
 
 ## 4.7 Mobile first
 
-Toute action centrale doit être réalisable confortablement au tactile. Roblox indique que la majorité de son audience joue sur mobile et recommande une UI principalement visuelle et pensée d’abord pour ces appareils. citeturn200316view0
+Toute action centrale doit être réalisable confortablement au tactile. Roblox indique que la majorité de son audience joue sur mobile et recommande une UI principalement visuelle et pensée d’abord pour ces appareils. ([Roblox — Design for Roblox](https://create.roblox.com/docs/production/game-design/design-for-roblox))
 
 ## 4.8 Easy to stop, desirable to return
 
@@ -196,7 +254,7 @@ Le joueur apprend à :
 - coopérer ;
 - adapter sa stratégie.
 
-Les recherches en théorie de l’autodétermination associent autonomie, compétence et relation au plaisir et à l’intention de rejouer ; les contrôles intuitifs soutiennent aussi la compétence perçue. citeturn560303view6
+La théorie de l’autodétermination identifie autonomie, compétence et relation comme besoins psychologiques associés à la motivation et au bien-être. Cette théorie informe une hypothèse de design ; elle ne prouve pas la rétention de ce jeu. ([Ryan & Deci, 2000](https://www.selfdeterminationtheory.org/SDT/documents/2000_RyanDeci_SDT.pdf))
 
 ## 5.3 Progression
 
@@ -235,7 +293,7 @@ Les amis changent réellement le résultat par :
 - visites ;
 - appels de détresse.
 
-Roblox considère le retour intentionnel avec des amis comme un signal de recommandation et décrit les joueurs comme une source durable de contenu les uns pour les autres. citeturn560303view0turn200316view0
+Roblox inclut le jeu entre amis parmi les signaux de recommandation et décrit les joueurs comme une source durable de contenu les uns pour les autres. ([Roblox — Discovery](https://create.roblox.com/docs/production/promotion/discovery), [Design for Roblox](https://create.roblox.com/docs/production/game-design/design-for-roblox))
 
 ## 5.6 Anticipation
 
@@ -297,7 +355,7 @@ Roblox considère le retour intentionnel avec des amis comme un signal de recomm
 
 # 7. Première expérience utilisateur
 
-Roblox définit l’onboarding comme les premières minutes et recommande de limiter les abandons grâce à une expérience rapide, visuelle et mesurable par funnel et expérimentation. citeturn560303view1turn200316view4
+Roblox définit l’onboarding comme les premières minutes et recommande de limiter les abandons grâce à une expérience rapide, visuelle et mesurable par funnel et expérimentation. ([Roblox — Onboarding](https://create.roblox.com/docs/production/game-design/onboarding), [Experiments](https://create.roblox.com/docs/production/experiments))
 
 ## 7.1 Règle fondamentale
 
@@ -379,6 +437,11 @@ Il commence dans une mini-forteresse fonctionnelle, volontairement imparfaite.
 ---
 
 # 8. La forteresse persistante
+
+Le contrat candidat [Persistence Loop 0.6.1](docs/PERSISTENCE_LOOP_0_6.md)
+spécifie uniquement la couche de profil nécessaire à la première preuve de
+retour. Il ne rend pas persistants par défaut tous les systèmes décrits dans ce
+chapitre et reste soumis à G4.
 
 ## 8.1 Rôle
 
@@ -730,6 +793,11 @@ Exemples :
 
 # 14. Combat manuel
 
+Le premier profil d'implémentation candidat est
+[Action Loop 0.4.1](docs/ACTION_LOOP_0_4.md). Son scope Fight, Repair, Rescue est
+plus étroit que la liste cible de ce chapitre et doit être livré par sous-gates
+réversibles s'il est explicitement autorisé.
+
 ## 14.1 Rôle
 
 > **La forteresse gère l’ordinaire. Les joueurs gèrent l’extraordinaire.**
@@ -874,6 +942,11 @@ Le joueur choisit :
 ---
 
 # 17. Progression
+
+[Progression Loop 0.5.1](docs/PROGRESSION_LOOP_0_5.md) est le contrat candidat
+minimal : état mémoire serveur, trois difficultés et cinq sidegrades. Les
+matériaux, la progression multi-session et l'économie complète du présent
+chapitre restent hors de cette slice.
 
 Le concept canonique conserve le principe :
 
@@ -1085,7 +1158,7 @@ Après une défaite ou avant un challenge difficile :
 - rôle suggéré ;
 - récompense équitable.
 
-Roblox permet des invitations contextualisées avec données de lancement afin de router ou personnaliser l’arrivée de l’ami. citeturn200316view1
+Roblox permet des invitations contextualisées avec données de lancement afin de router ou personnaliser l’arrivée de l’ami. ([Roblox — Player invite prompts](https://create.roblox.com/docs/production/promotion/invite-prompts))
 
 ## 19.6 Permissions
 
@@ -1301,7 +1374,7 @@ Ils doivent être mémorisables et commercialement distinctifs.
 
 ## 24.4 Avatar
 
-Conserver l’identité Roblox du joueur autant que possible, car la visibilité de l’avatar et l’identité commune à la plateforme soutiennent l’expression sociale. citeturn200316view0
+Conserver l’identité Roblox du joueur autant que possible, car la visibilité de l’avatar et l’identité commune à la plateforme soutiennent l’expression sociale. ([Roblox — Design for Roblox](https://create.roblox.com/docs/production/game-design/design-for-roblox))
 
 ---
 
@@ -1417,7 +1490,7 @@ Reporté après validation de :
 - limites ;
 - protection contre duplication et fraude.
 
-Les règles Roblox imposent aussi des restrictions par utilisateur pour certains échanges et objets aléatoires payants ; le jeu devra consulter les politiques applicables avant d’exposer ces fonctions. citeturn200316view2
+Les règles Roblox imposent aussi des restrictions par utilisateur pour certains échanges et objets aléatoires payants ; le jeu devra consulter les politiques applicables avant d’exposer ces fonctions. ([Roblox — Paid random items policy guidelines](https://create.roblox.com/docs/production/monetization/paid-random-items))
 
 ---
 
@@ -1451,13 +1524,13 @@ Monétiser l’identité et le confort social, pas la victoire.
 - loot boxes de puissance ;
 - private servers prohibitifs.
 
-Roblox déconseille les mécaniques où le plaisir s’arrête prématurément et peut être rétabli par paiement ; la plateforme recommande aussi de ne pas entraver le jeu social. citeturn200316view3turn200316view0
+Roblox déconseille les pratiques de monétisation trompeuses ou créant une fausse urgence et recommande de ne pas entraver le jeu social. ([Roblox — Monetization](https://create.roblox.com/docs/production/monetization), [Design for Roblox](https://create.roblox.com/docs/production/game-design/design-for-roblox))
 
 ---
 
 # 29. LiveOps
 
-Roblox décrit le LiveOps comme une combinaison de cadence de contenu, mises à jour majeures, qualité de vie et correctifs. La cadence légère doit réutiliser les systèmes existants afin de réduire le coût de production et de débogage. citeturn560303view3
+Roblox décrit le LiveOps comme une combinaison de cadence de contenu, mises à jour majeures, qualité de vie et correctifs. La cadence légère doit réutiliser les systèmes existants afin de réduire le coût de production et de débogage. ([Roblox — LiveOps essentials](https://create.roblox.com/docs/production/game-design/liveops-essentials))
 
 ## 29.1 Cadence réaliste pour deux personnes
 
@@ -1493,7 +1566,7 @@ Chaque événement doit définir :
 - communication ;
 - mesure après événement.
 
-Roblox recommande de lier les événements à des actions et KPIs explicites, puis de mesurer leur effet. citeturn560303view5
+Roblox recommande de lier les événements à des actions et KPIs explicites, puis de mesurer leur effet. ([Roblox — LiveOps planning](https://create.roblox.com/docs/production/game-design/liveops-planning))
 
 ## 29.3 Pas de FOMO destructrice
 
@@ -1557,7 +1630,7 @@ Roblox recommande de lier les événements à des actions et KPIs explicites, pu
 
 # 31. Analytics
 
-Roblox recommande d’optimiser d’abord D1 et le temps de session, puis D7/D30, avant d’accélérer fortement l’acquisition. Les benchmarks comparables deviennent disponibles à partir d’environ 100 DAU. citeturn560303view4
+Roblox recommande d’optimiser d’abord D1 et le temps de session avant d’accélérer fortement l’acquisition. Les benchmark scorecards comparables deviennent disponibles à partir de 100 DAU. ([Roblox — Analytics](https://create.roblox.com/docs/production/analytics))
 
 ## 31.1 Funnel onboarding
 
@@ -1621,7 +1694,7 @@ Voir section 7.
 
 # 32. Expérimentation
 
-Roblox permet d’utiliser les funnels et expériences pour mesurer l’impact causal de variantes d’onboarding. citeturn560303view1turn200316view4
+Roblox permet d’utiliser les funnels et expériences pour mesurer l’impact causal de variantes d’onboarding. Les expériences avec moins d'environ 1 000 DAU peuvent manquer de puissance statistique ; les playtests et tests déterministes restent donc nécessaires au stade prototype. ([Roblox — Experiments](https://create.roblox.com/docs/production/experiments))
 
 ## 32.1 Tests prioritaires
 
@@ -1667,11 +1740,16 @@ PASS seulement si :
 
 ## 33.3 Bêta
 
-Comparer ensuite aux benchmarks Roblox similaires plutôt qu’appliquer un chiffre universel. Les cohortes quotidiennes et hebdomadaires permettent de suivre les retours et l’effet des mises à jour. citeturn560303view2
+Comparer ensuite aux benchmarks Roblox similaires plutôt qu’appliquer un chiffre universel. Les cohortes quotidiennes et hebdomadaires permettent de suivre les retours et l’effet des mises à jour. ([Roblox — Retention](https://create.roblox.com/docs/production/analytics/retention))
 
 ---
 
 # 34. Vertical slice v1.0
+
+Cette section est un inventaire cible de vision, non une autorisation de tout
+implémenter simultanément. L'ordre et le scope réellement autorisés sont ceux de
+la [roadmap et des stage gates](docs/00-governance/ROADMAP_AND_STAGE_GATES.md),
+puis du contrat de slice accepté applicable.
 
 ## 34.1 Base
 
@@ -1810,7 +1888,7 @@ Réponse : télégraphie, budget d’adaptation et autopsie.
 
 | Loi | Réponse de conception |
 |---|---|
-| Promesse immédiate | Forteresse + horde apprenante visibles dans le marketing et la première minute |
+| Promesse immédiate | Forteresse + chute compréhensible visibles dans le marketing et la première minute ; horde apprenante réservée à `H-HORDE-001` après validation |
 | Action avant explication | Tourelle, tir et micro-défense immédiats |
 | Verbe simple, conséquences profondes | Préparer et tester, avec systèmes combinatoires |
 | Autonomie, compétence, relation | Base libre, maîtrise réelle, coopération utile |
@@ -1842,16 +1920,47 @@ Réponse : télégraphie, budget d’adaptation et autopsie.
 
 ---
 
-# 39. Déclaration canonique finale
+# 39. Déclaration de vision v1.0
 
-**Roblox Top 1 est un jeu PvE coopératif de forteresse persistante. Chaque joueur construit et prépare librement une base personnelle, explore des territoires pour obtenir les matériaux et technologies adaptés aux menaces futures, puis sélectionne volontairement des challenges de difficulté croissante. Pendant la défense, ses pièges et tourelles gèrent la pression ordinaire tandis que les joueurs combattent, réparent, coordonnent et répondent aux crises. Une horde lisible observe certaines dépendances de la base et adapte une partie de ses attaques dans un budget limité, sans tricher. Après chaque assaut, la forteresse est restaurée, la bataille est analysée et le joueur peut modifier sa stratégie puis relancer. Les difficultés supérieures accélèrent une progression bornée fondée sur la maîtrise, la recherche et les nouvelles possibilités, tandis que la puissance brute reste plafonnée. La forteresse, les relations et l’histoire des défenses constituent l’identité durable du joueur.**
+Cette déclaration décrit la direction si ses hypothèses successives passent. Elle
+ne rend pas la horde adaptative, les expéditions, la persistance ou le social
+autorisés avant leurs gates.
+
+**Roblox Top 1 vise un PvE coopératif de forteresse persistante. Chaque joueur construit et prépare librement une base personnelle, explore des territoires pour obtenir les matériaux et technologies adaptés aux menaces futures, puis sélectionne volontairement des challenges de difficulté croissante. Pendant la défense, ses pièges et tourelles gèrent la pression ordinaire tandis que les joueurs combattent, réparent, coordonnent et répondent aux crises. Si `H-HORDE-001` est validée, une horde lisible observe certaines dépendances de la base et adapte une partie de ses attaques dans un budget limité, sans tricher. Après chaque assaut, la forteresse est restaurée, la bataille est analysée et le joueur peut modifier sa stratégie puis relancer. Les difficultés supérieures accélèrent une progression bornée fondée sur la maîtrise, la recherche et les nouvelles possibilités, tandis que la puissance brute reste plafonnée. La forteresse, les relations et l’histoire des défenses constituent l’identité durable visée du joueur.**
 
 ---
 
-# 40. Formule définitive
+# 40. Formule directrice v1.0
 
-> **La base est une hypothèse.**  
-> **La horde est le test.**  
-> **La bataille produit les preuves.**  
+> **La base est une hypothèse.**<br>
+> **La horde est le test.**<br>
+> **La bataille produit les preuves.**<br>
 > **La reconstruction est la progression.**
 
+---
+
+# 41. Méthode acceptée et hypothèses d’innovation
+
+Le projet ne cherche ni à plaire littéralement à tous ni à rendre le joueur
+incapable de s’arrêter. Il cherche une entrée rapidement lisible pour ses
+segments cibles, plusieurs formes de contribution utiles et un retour volontaire
+fondé sur la maîtrise, l’identité, la relation et la confiance.
+
+Les cinq signatures candidates ne sont pas des fonctionnalités promises. Elles
+forment un registre d’hypothèses ordonné :
+
+1. `H-FAILURE-001 / Every Failure Teaches` : hypothèse active ;
+2. `H-HORDE-001 / The Horde Learns` : non testée, subordonnée à la première ;
+3. `H-FORTRESS-001 / The Living Fortress` : différée après G3 ;
+4. `H-SOCIAL-001 / Answer the Call` : différée jusqu’à G5 ;
+5. `H-PREPARE-001 / Prepare for Tomorrow` : différée après preuve de la boucle.
+
+Seule `H-FAILURE-001` est prioritaire maintenant. Une horde adaptative n’est
+testée qu’après un signal suffisant que l’autopsie seule produit compréhension,
+modification et rematch. Aucun biais psychologique, signal Discovery, diagnostic
+interne ou KPI brut ne remplace cette observation.
+
+La méthode complète, y compris la formule du CCU30 observé, la séparation entre
+métriques officielles et internes, les guardrails, les niveaux de preuve et les
+critères de décision, est
+[PRODUCT_INNOVATION_AND_RETENTION_DOCTRINE.md](docs/PRODUCT_INNOVATION_AND_RETENTION_DOCTRINE.md).

@@ -1,0 +1,133 @@
+GPT IMAGE 2 — ONE OBJECT, ONE GAMEPLAY STATE, ONE IMAGE
+
+Use the `gpt-image-2` image model. If that exact model is not selected or
+visible in the interface, stop and do not substitute another model.
+
+Generate exactly one image: a clean 2x2 state-definition board. Every quadrant
+must depict the exact same object construction in the exact same target state.
+
+CROSS-VIEW IDENTITY LOCK — THIS IS NOT A FOUR-CONCEPT SHEET
+- Freeze one design before rendering. The four quadrants are four camera or
+  diagnostic views of that one frozen asset, never alternatives or variants.
+- Camera and rendering mode may change; geometry, proportions, component count,
+  component placement, joint placement, asymmetry, repair history, material
+  assignment, wear pattern and state damage topology may not change.
+- The solid black silhouette must match the outer contour of the hero view.
+- The rear view must be mechanically compatible with the front view and expose
+  only the explicitly defined safe-side interaction components.
+- Fail the image rather than improvising a different brace, foot, panel, cap,
+  socket, emblem or decorative solution in another quadrant.
+
+TARGET
+- Object: Defense Barricade Small (`barricade`)
+- State: `damaged` only
+- Art direction: Salvaged Frontier owns world identity; Industrial Toy Defense
+  contributes disciplined one-second readability only.
+- Canon: vc_barricade__salvaged-frontier__v1
+- Gameplay function: temporary path-blocking defensive structure
+- One-second promise: This broad grounded object blocks a lane now, shows where it is weakening, and can be understood before the next enemy reaches it.
+- Dimensions: 8.0 x 4.0 x
+  2.0 Roblox studs; pivot bottom_center.
+
+BOARD LAYOUT
+- Top left: hero three-quarter front, complete object visible.
+- Top right: three-quarter rear, same construction and state.
+- Bottom left: solid black silhouette, no internal shading.
+- Bottom right: elevated Roblox third-person mobile gameplay camera.
+- Keep identical scale and recognizable proportions across the two perspective
+  views; this is a turnaround proof, not a concept-variation sheet.
+- Neutral mid-gray background, neutral studio light, no environment or props.
+- No captions, labels, letters, numbers, logos or generated text in the image.
+- Do not show intact/damaged/critical comparisons or any second gameplay state.
+
+IDENTITY AND CONSTRUCTION
+- World role: A temporary, deliberately understandable interruption in the enemy route that turns path control into a visible player-authored hypothesis.
+- Emotional intent: Dependable and brave without appearing invulnerable; its damage should create urgency and useful concern rather than helplessness.
+- Territory thesis: A dependable standardized lane-blocking chassis whose single replaced panel and diagonal brace make prior survival memorable without weakening its broad mobile silhouette.
+- Front/orientation: The reinforced presentation face addresses incoming enemies; the flatter service face and interaction light address the player.
+- Interaction read: A complete, waist-height service socket or status module is readable from the safe rear side.
+- Danger read: Breaks, tilted panels and exposed structure progress from one localized weakness to a wide critical breach.
+- Recognition landmarks: broad eight-stud blocking span, two heavy outer feet, three-panel rhythm inside a continuous frame, rear service interaction module
+- Negative spaces: ground clearance between the two feet, controlled gaps separating the three bays, small service recess around the rear interaction module
+
+REQUIRED COMPONENTS
+- FoundationFeet: two broad low feet at outer lower thirds; Transfer impact load to the ground and define the collision footprint. Relationship: Mechanically joined to the outer frame posts through visible load-bearing brackets. Reading role: Signals stability and makes the lane-blocking footprint honest.
+- StructuralFrame: wide rectangular frame at full perimeter; Carry the barricade silhouette and preserve identity across all damage states. Relationship: Connects feet, posts, rails and every blocking bay into one repairable chassis. Reading role: Primary silhouette authority and invariant identity carrier.
+- BlockingPanels: three thick inset panels at three central bays; Present the enemy-facing impact area and communicate localized structural damage. Relationship: Captured inside the frame with readable hinges, clamps or brackets. Reading role: Explains what physically blocks enemies and where failure begins.
+- ServiceModule: protected socket or complete ring at rear upper-right quadrant; Expose the player-facing repair and status interaction point. Relationship: Mounted to the structural frame, never to a disposable panel. Reading role: Separates friendly interaction from enemy-facing armor.
+
+FORM HIERARCHY
+- Primary 72%: wide rectangular structural frame, three chunky blocking panel masses, two low stabilizing feet
+- Secondary 23%: outer posts and cross rails explaining load paths, rear braces connecting frame to feet, service socket and protected status light
+- Tertiary 5% maximum: few large fasteners at real joints, controlled edge wear at impact and repair contacts, tertiary detail only at real joints; no standalone emblem, badge or assembly mark
+- Construction translation: Thick rails, protected panel bays and planted feet establish Industrial-level clarity first; one copper-bounded replacement plate and one large diagonal repair brace then explain how the same frame survived an earlier assault.
+
+MATERIAL SYSTEM
+- structural_zone: coated_structure; primary; dark to middle-dark; Broad clean planes with controlled bevel highlights and no random noise. Wear: Only at feet, joints, panel contacts and enemy-facing edges.
+- blocking_zone: impact_panel; secondary; middle value; Large calm surfaces that preserve the three-bay rhythm. Wear: Directional impact wear, never uniform grime.
+- interaction_zone: protected_emissive; interaction; small bright accent; Clean protected lens or insert, not a painted glow. Wear: Minimal and shielded from direct impact.
+
+TARGET STATE CONTRACT — `damaged`
+- Summary: One localized failure makes the barrier visibly weaker while the chassis, footprint and repair affordance remain unmistakably usable.
+- Required changes:
+- One panel drops, opens or shifts along a plausible joint.
+- One frame or bracket break exposes bare structure without creating a full passage.
+- Shape and silhouette cues:
+- single broken shoulder in the top rhythm
+- one panel visibly misaligned
+- overall span and feet unchanged
+- Value cues:
+- one bright exposed structural edge
+- warning-value service focal point
+- Color cues:
+- warning role replaces interaction role locally
+- base palette remains dominant
+- Light cues:
+- asymmetric warning blink
+- no continuous critical emission
+- Motion posture implied in the still:
+- damaged bay settles once
+- brief stress vibration after impact
+- VFX cues, kept sparse and non-obscuring:
+- short directional dust burst
+- occasional small stress spark at the exposed joint
+- Component operations:
+- BlockingPanels / ROTATE: One panel rotates around its real support and remains attached.
+- StructuralFrame / EXPOSE: Expose one local load path at the impact side.
+- ServiceModule / RECOLOR: Switch the contained ready accent to warning.
+- Territory translation: Damage opens the declared replacement joint and displaces one large bay; critical state widens the same breach and bends its load path instead of distributing cracks or fragments.
+
+INVARIANTS — NEVER CHANGE
+- Dimensions, footprint, pivot and front orientation remain fixed across territories and states.
+- The structural frame, two-foot grounding logic and three-bay rhythm remain recognizable.
+- The player interaction point remains on the safe rear side at the same gameplay anchor.
+- Damage never moves the collision footprint or invents detached gameplay-blocking fragments.
+- Component IDs and effect anchors remain stable across regeneration.
+
+CONTINUITY REFERENCE
+- Attach the exact hash-bound image shown by the operator.
+- It is the accepted previous gameplay state of this same object.
+- Transform that construction into the target state; do not redesign it.
+- Preserve footprint, camera-facing identity, component count, anchors, materials and recognition landmarks unless the target state explicitly changes a named component.
+
+STYLE DISCIPLINE
+- Thick standardized rectangles/trapezoids, large protected apertures, explicit
+  load paths and one or two causal repairs.
+- Deep slate chassis, bone-sand reclaimed panels and bounded sun-copper repair
+  history. Mint is a small protected interaction cue only. Warning and critical
+  colors remain localized semantic signals.
+- Broad calm planes, consistent structural bevels, low secondary density and
+  extremely low tertiary density.
+- Damage or activation must read through shape, silhouette, posture and value;
+  never through color alone.
+- Salvaged Frontier must be carried by one causal, load-bearing repair and one
+  bounded replacement history. Wear alone is not sufficient art-direction
+  evidence, and a decorative diagonal stripe is not a repair story.
+- Bone-sand reclaimed composite must read as manufactured composite, never
+  medieval stone, raw concrete, parchment or ceramic slab.
+- A protected interaction emission appears only where the canon places the
+  interaction zone. Never move a friendly light onto the threat-facing armor.
+- Every brace terminates at plausible structural joints and load paths, never
+  as decoration on a disposable panel.
+- The image is precanonical visual evidence only. It does not authorize hidden
+  geometry, canon lock or production.

@@ -1,5 +1,7 @@
 --!strict
 
+local Players = game:GetService("Players")
+
 type Colors = {
 	panel: Color3,
 	panelSecondary: Color3,
@@ -213,6 +215,8 @@ end
 
 function HUDController.update(self: Controller)
 	local phase = readString(self._replicationRoot, "Phase")
+	local isOwner = self._replicationRoot:GetAttribute("BuildOwnerUserId")
+		== Players.LocalPlayer.UserId
 	local viewport = if workspace.CurrentCamera
 		then workspace.CurrentCamera.ViewportSize
 		else Vector2.new(1280, 720)
@@ -235,6 +239,13 @@ function HUDController.update(self: Controller)
 		else self._colors.green
 
 	self._preparationPanel.Visible = phase == "PREPARATION"
+	self._launchButton.Active = phase == "PREPARATION" and isOwner
+	self._launchButton.Selectable = self._launchButton.Active
+	self._launchButton.AutoButtonColor = self._launchButton.Active
+	self._launchButton.BackgroundColor3 = if isOwner
+		then self._colors.yellow
+		else self._colors.muted
+	self._launchButton.Text = if isOwner then "LANCER\nCHALLENGE 2" else "MODE\nOBSERVATION"
 	self._statusPanel.Visible = phase ~= "REVIEW"
 	if phase == "PREPARATION" then
 		self._statusLabel.Text = string.format(

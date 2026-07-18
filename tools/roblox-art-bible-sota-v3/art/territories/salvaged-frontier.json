@@ -1,0 +1,194 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/territory.schema.json",
+  "schemaVersion": "2.1.0",
+  "territoryId": "salvaged-frontier",
+  "status": "CANDIDATE",
+  "vision": "A hopeful frontier civilization survives through dependable standardized chassis and visible, purposeful adaptations; every asymmetry records a repair decision while every function remains instantly readable.",
+  "pillars": [
+    "standardized_chassis",
+    "purposeful_adaptation",
+    "causal_repair_history",
+    "thick_readable_function",
+    "warm_human_authorship"
+  ],
+  "antiPillars": [
+    "random_scrap_heap",
+    "decorative_repair_without_cause",
+    "muddy_monochrome",
+    "fragile_silhouette",
+    "literal_construction_toy_motifs"
+  ],
+  "paletteBias": {
+    "neutralTemperature": "cool_structure_warm_repair",
+    "accentSaturation": 0.64,
+    "warningCoverageMax": 0.08
+  },
+  "shapeLanguage": {
+    "angleFamiliesDegrees": [
+      0,
+      15,
+      30,
+      45,
+      90
+    ],
+    "asymmetry": {
+      "target": 0.24,
+      "max": 0.36
+    },
+    "primarySecondarySizeRatio": {
+      "min": 2.5,
+      "max": 4.8
+    },
+    "roundness": "chunky_repaired"
+  },
+  "materialBias": [
+    "painted_metal",
+    "reclaimed_composite",
+    "bare_metal",
+    "rubber",
+    "reclaimed_wood"
+  ],
+  "surfaceAssignments": {
+    "primary": "painted_metal",
+    "secondary": "reclaimed_composite",
+    "accent": "painted_metal",
+    "interaction": "polymer",
+    "threat": "reclaimed_composite",
+    "warning": "polymer",
+    "critical": "polymer",
+    "rubber": "rubber",
+    "bareMetal": "bare_metal"
+  },
+  "repairGrammar": {
+    "allowedReasons": [
+      "replace",
+      "reinforce",
+      "seal",
+      "reroute"
+    ],
+    "maxPatchFamiliesPerAsset": 2,
+    "maxUniqueFastenerScale": 1
+  },
+  "assetRecipes": {
+    "barricade": {
+      "assetId": "barricade",
+      "primaryPrimitives": [
+        "two_mismatched_panels",
+        "central_beam"
+      ],
+      "secondaryPrimitives": [
+        "diagonal_repair_brace",
+        "weighted_feet"
+      ],
+      "asymmetryTarget": 0.24,
+      "moduleCountTarget": 6,
+      "bevelRatioTarget": 0.05,
+      "stateBreakStrategy": "repaired_panel_fails_then_central_beam_bends",
+      "detailBandTargets": {
+        "primary": 0.72,
+        "secondary": 0.23,
+        "tertiary": 0.05
+      }
+    },
+    "objective_core": {
+      "assetId": "objective_core",
+      "primaryPrimitives": [
+        "recovered_tank",
+        "protected_core"
+      ],
+      "secondaryPrimitives": [
+        "offset_service_box",
+        "three_repair_bands"
+      ],
+      "asymmetryTarget": 0.22,
+      "moduleCountTarget": 7,
+      "bevelRatioTarget": 0.048,
+      "stateBreakStrategy": "service_box_opens_then_core_shield_tears",
+      "detailBandTargets": {
+        "primary": 0.72,
+        "secondary": 0.23,
+        "tertiary": 0.05
+      }
+    },
+    "enemy_standard": {
+      "assetId": "enemy_standard",
+      "primaryPrimitives": [
+        "hunched_pear_body",
+        "bowed_visible_zombie_head",
+        "bent_stagger_legs"
+      ],
+      "secondaryPrimitives": [
+        "one_reaching_and_one_dragging_open_arm",
+        "oblique_violet_crown_to_shoulder_bloom"
+      ],
+      "asymmetryTarget": 0.3,
+      "moduleCountTarget": 5,
+      "bevelRatioTarget": 0.042,
+      "stateBreakStrategy": "bloom_side_collapses_then_same_fracture_widens_and_knee_buckles",
+      "detailBandTargets": {
+        "primary": 0.72,
+        "secondary": 0.23,
+        "tertiary": 0.05
+      }
+    },
+    "floor_module": {
+      "assetId": "floor_module",
+      "primaryPrimitives": [
+        "square_salvaged_plate"
+      ],
+      "secondaryPrimitives": [
+        "one_replacement_quadrant",
+        "edge_straps"
+      ],
+      "asymmetryTarget": 0.16,
+      "moduleCountTarget": 5,
+      "bevelRatioTarget": 0.035,
+      "stateBreakStrategy": "replacement_quadrant_lifts_then_plate_splits",
+      "detailBandTargets": {
+        "primary": 0.72,
+        "secondary": 0.23,
+        "tertiary": 0.05
+      }
+    },
+    "damage_effect": {
+      "assetId": "damage_effect",
+      "primaryPrimitives": [
+        "asymmetric_arc"
+      ],
+      "secondaryPrimitives": [
+        "three_heavy_shards",
+        "short_spark_reroute"
+      ],
+      "asymmetryTarget": 0.34,
+      "moduleCountTarget": 5,
+      "bevelRatioTarget": 0.025,
+      "stateBreakStrategy": "arc_frays_toward_failed_repair",
+      "detailBandTargets": {
+        "primary": 0.72,
+        "secondary": 0.23,
+        "tertiary": 0.05
+      }
+    }
+  },
+  "referenceBoardId": "salvaged-frontier-board-v2",
+  "comparisonBudget": {
+    "revisionRounds": 2,
+    "artistHoursCap": 24.0,
+    "triangleBudgetsRef": "art/calibration/calibration-kit.json#/assets"
+  },
+  "automation": {
+    "deterministicSeed": 2207,
+    "generatorVersion": "6.0.0"
+  },
+  "blockoutPalette": {
+    "primary": "#343A3C",
+    "secondary": "#B8AD96",
+    "accent": "#C7763E",
+    "interaction": "#5FE0C1",
+    "threat": "#9D455B",
+    "warning": "#E5B94A",
+    "critical": "#E4524E",
+    "rubber": "#202322",
+    "bareMetal": "#7F8783"
+  }
+}

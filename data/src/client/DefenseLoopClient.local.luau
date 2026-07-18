@@ -46,6 +46,9 @@ assert(playerGui:IsA("PlayerGui"), "Local PlayerGui is required")
 
 local replicationRoot = ReplicatedStorage:WaitForChild("Game")
 assert(replicationRoot:IsA("Folder"), "ReplicatedStorage.Game must be a Folder")
+while replicationRoot:GetAttribute("Ready") ~= true do
+	replicationRoot:GetAttributeChangedSignal("Ready"):Wait()
+end
 local remotes = replicationRoot:WaitForChild("Remotes")
 assert(remotes:IsA("Folder"), "ReplicatedStorage.Game.Remotes must be a Folder")
 local buildRequest = remotes:WaitForChild("BuildRequest")
@@ -124,9 +127,15 @@ local function updateInterface()
 	review:update()
 end
 
+local function isLocalOwner(): boolean
+	return replicationRoot:GetAttribute("BuildOwnerUserId") == localPlayer.UserId
+end
+
 local launchButton = hud:getLaunchButton()
 launchButton.Activated:Connect(function()
-	requestStart:FireServer()
+	if isLocalOwner() and replicationRoot:GetAttribute("Phase") == "PREPARATION" then
+		requestStart:FireServer()
+	end
 end)
 requestStart.OnClientEvent:Connect(function(accepted: unknown, message: unknown)
 	if typeof(accepted) == "boolean" and typeof(message) == "string" then
@@ -140,7 +149,9 @@ ProximityPromptService.PromptTriggered:Connect(
 			return
 		end
 		if prompt.Name == "StartPrompt" and prompt.Parent == challengeConsole then
-			requestStart:FireServer()
+			if isLocalOwner() and replicationRoot:GetAttribute("Phase") == "PREPARATION" then
+				requestStart:FireServer()
+			end
 		end
 	end
 )
