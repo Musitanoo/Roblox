@@ -1,0 +1,35 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/precanonical-result.schema.json",
+  "schemaVersion": "1.0.0",
+  "resultId": "defense-barricade-web-001-result-001",
+  "requestId": "defense-barricade-web-001",
+  "status": "WEB_RESULT_IMPORTED",
+  "importedAt": "2026-07-16T20:02:00.583568Z",
+  "request": {
+    "path": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\precanonical\\requests\\defense-barricade-web-001\\request.json",
+    "sha256": "01ba411cce74e29e0150765ace17502dbc7ae39767ee6d1c502cf81e3da89862"
+  },
+  "promptHash": "c5051ec4a2cb5253d76b5ff73b5ebfa17e22ac353db6babec1676fbab1a07819",
+  "generationIndex": 1,
+  "provenance": {
+    "surface": "ChatGPT Web / ChatGPT Images",
+    "modelName": null,
+    "modelNameEvidence": "NOT_CONFIRMED",
+    "downloadMethod": "manual_download"
+  },
+  "images": [
+    {
+      "path": "raw/generated-001.png",
+      "sha256": "219ebd23eff48a3c32413c4ca80660ba725b4689bf523b61b6eaa79ac17865bd",
+      "bytes": 1751955,
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG"
+    }
+  ],
+  "resultDigest": "f835b96536feeda3da3cf0983a7f24fdd9920903cd5db75f4c2e739e999fb41b",
+  "canonical": false,
+  "geometryAuthority": false,
+  "humanReviewStatus": "PENDING",
+  "productionApproved": false
+}

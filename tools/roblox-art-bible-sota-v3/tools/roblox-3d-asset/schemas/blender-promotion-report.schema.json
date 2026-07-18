@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/blender-promotion-report.schema.json",
+  "title": "Blender Promotion Reproduction Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "schemaVersion", "status", "sessionId", "changeSetId", "sandboxContract", "authoritativeContract", "authoritativeContractSha256", "authoritativeSourceModified", "sourceEquivalence", "semanticDeterminism", "binaryDeterminism", "candidateReproduction", "productionApproved"],
+  "properties": {
+    "$schema": {"const": "https://roblox-top1.local/schemas/blender-promotion-report.schema.json"},
+    "schemaVersion": {"const": "1.0.0"},
+    "status": {"enum": ["PASS", "FAIL"]},
+    "sessionId": {"type": "string"}, "changeSetId": {"type": "string"}, "sandboxContract": {"type": "string"},
+    "authoritativeContract": {"type": "string"},
+    "authoritativeContractSha256": {"$ref": "#/$defs/hash"},
+    "authoritativeSourceModified": {"type": "boolean"},
+    "sourceEquivalence": {"type": "object", "required": ["passed", "checks"]},
+    "semanticDeterminism": {"type": "object", "required": ["passed", "buildA", "buildB"]},
+    "binaryDeterminism": {"type": "object", "required": ["passed", "artifacts"]},
+    "candidateReproduction": {"type": "object", "required": ["passed", "checks"]},
+    "productionApproved": {"const": false}
+  },
+  "$defs": {
+    "hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

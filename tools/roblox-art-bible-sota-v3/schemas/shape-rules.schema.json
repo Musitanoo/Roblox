@@ -1,0 +1,437 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/shape-rules.schema.json",
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "global",
+    "functionFamilies",
+    "forbidden"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/shape-rules.schema.json"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "global": {
+      "type": "object",
+      "properties": {
+        "asymmetryScale": {
+          "type": "object",
+          "properties": {
+            "max": {
+              "type": "number",
+              "minimum": 0
+            },
+            "min": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "max",
+            "min"
+          ]
+        },
+        "bevelRadiusAsSmallestDimensionRatio": {
+          "type": "object",
+          "properties": {
+            "functional": {
+              "type": "object",
+              "properties": {
+                "max": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "min": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              },
+              "unevaluatedProperties": false,
+              "required": [
+                "max",
+                "min"
+              ]
+            },
+            "structural": {
+              "type": "object",
+              "properties": {
+                "max": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "min": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              },
+              "unevaluatedProperties": false,
+              "required": [
+                "max",
+                "min"
+              ]
+            },
+            "tertiary": {
+              "type": "object",
+              "properties": {
+                "max": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "min": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              },
+              "unevaluatedProperties": false,
+              "required": [
+                "max",
+                "min"
+              ]
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "functional",
+            "structural",
+            "tertiary"
+          ]
+        },
+        "danger": {
+          "type": "object",
+          "properties": {
+            "critical": {
+              "type": "string",
+              "minLength": 1
+            },
+            "warning": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "critical",
+            "warning"
+          ]
+        },
+        "destruction": {
+          "type": "object",
+          "properties": {
+            "impactDirection": {
+              "type": "string",
+              "minLength": 1
+            },
+            "stateProgression": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "impactDirection",
+            "stateProgression"
+          ]
+        },
+        "frontBack": {
+          "type": "object",
+          "properties": {
+            "back": {
+              "type": "string",
+              "minLength": 1
+            },
+            "front": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "back",
+            "front"
+          ]
+        },
+        "interaction": {
+          "type": "object",
+          "properties": {
+            "disabled": {
+              "type": "string",
+              "minLength": 1
+            },
+            "ready": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "disabled",
+            "ready"
+          ]
+        },
+        "minimumVisibleThicknessRef": {
+          "type": "string",
+          "minLength": 1
+        },
+        "volumeHierarchyMeasurement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "volumeHierarchyTarget": {
+          "type": "object",
+          "properties": {
+            "primary": {
+              "type": "number",
+              "minimum": 0
+            },
+            "secondary": {
+              "type": "number",
+              "minimum": 0
+            },
+            "tertiary": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "primary",
+            "secondary",
+            "tertiary"
+          ]
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": [
+        "asymmetryScale",
+        "bevelRadiusAsSmallestDimensionRatio",
+        "danger",
+        "destruction",
+        "frontBack",
+        "interaction",
+        "minimumVisibleThicknessRef",
+        "volumeHierarchyMeasurement",
+        "volumeHierarchyTarget"
+      ]
+    },
+    "functionFamilies": {
+      "type": "object",
+      "minProperties": 5,
+      "properties": {
+        "damage_vfx": {
+          "type": "object",
+          "properties": {
+            "forbidden": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "primary": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 3,
+              "maxItems": 3
+            },
+            "secondary": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1,
+              "maxItems": 1
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "forbidden",
+            "primary",
+            "secondary"
+          ]
+        },
+        "defense": {
+          "type": "object",
+          "properties": {
+            "forbidden": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "primary": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "secondary": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 2,
+              "maxItems": 2
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "forbidden",
+            "primary",
+            "secondary"
+          ]
+        },
+        "enemy": {
+          "type": "object",
+          "properties": {
+            "forbidden": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "primary": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "secondary": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 2,
+              "maxItems": 2
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "forbidden",
+            "primary",
+            "secondary"
+          ]
+        },
+        "floor": {
+          "type": "object",
+          "properties": {
+            "forbidden": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1,
+              "maxItems": 1
+            },
+            "primary": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 2,
+              "maxItems": 2
+            },
+            "secondary": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 2,
+              "maxItems": 2
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "forbidden",
+            "primary",
+            "secondary"
+          ]
+        },
+        "objective": {
+          "type": "object",
+          "properties": {
+            "forbidden": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1,
+              "maxItems": 1
+            },
+            "primary": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 3,
+              "maxItems": 3
+            },
+            "secondary": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 2,
+              "maxItems": 2
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "forbidden",
+            "primary",
+            "secondary"
+          ]
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": [
+        "damage_vfx",
+        "defense",
+        "enemy",
+        "floor",
+        "objective"
+      ]
+    },
+    "forbidden": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  },
+  "unevaluatedProperties": false
+}

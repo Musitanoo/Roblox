@@ -1,0 +1,695 @@
+{
+  "artifacts": {
+    "blend": {
+      "bytes": 135639,
+      "path": "assets-3d/defense-barricade-small/build/source.blend",
+      "sha256": "72d35121cda394a0c386024bcbefaf09705387a85d595b61e2df26d79b21e627"
+    },
+    "fbxUpdate": {
+      "bytes": 159052,
+      "path": "assets-3d/defense-barricade-small/build/asset-update.fbx",
+      "sha256": "cd1e431ef61b3247999e1fecfb4cd7a8c9ce93f8d26aec867772d12d40f756f5"
+    },
+    "geometry": "assets-3d/defense-barricade-small/build/geometry.json",
+    "glb": {
+      "bytes": 143680,
+      "path": "assets-3d/defense-barricade-small/build/asset.glb",
+      "sha256": "b2975cab97358686d0b1aa86c1b960f595a8f9c0a60759929c3fa9ae45143cd7"
+    },
+    "provenance": "assets-3d/defense-barricade-small/build/provenance.json",
+    "renders": [
+      "assets-3d/defense-barricade-small/build/renders/front.png",
+      "assets-3d/defense-barricade-small/build/renders/rear.png",
+      "assets-3d/defense-barricade-small/build/renders/left.png",
+      "assets-3d/defense-barricade-small/build/renders/right.png",
+      "assets-3d/defense-barricade-small/build/renders/top.png",
+      "assets-3d/defense-barricade-small/build/renders/perspective.png",
+      "assets-3d/defense-barricade-small/build/renders/mobile_distance.png",
+      "assets-3d/defense-barricade-small/build/renders/silhouette.png"
+    ]
+  },
+  "assetKey": "defense_barricade_small",
+  "binaryDeterminism": {
+    "canonicalOutputPathRequired": true,
+    "fbxUpdate": "stable after deterministic UUID and header normalization",
+    "glb": "stable"
+  },
+  "dimensionsStuds": {
+    "depth": 2.0,
+    "height": 4.0,
+    "width": 8.0
+  },
+  "materialCount": 8,
+  "meshCount": 42,
+  "renderVerification": {
+    "acceptedModes": [
+      "EXACT",
+      "BOUNDED_PIXEL_TOLERANCE"
+    ],
+    "pixelTolerance": {
+      "maximumChannelDelta": 1,
+      "maximumDifferentPixelCount": 24,
+      "maximumDifferentPixelRatio": 0.0001,
+      "maximumNormalizedMeanAbsoluteError": 1e-06
+    },
+    "requiredConsecutiveStableFrames": 2,
+    "status": "PASS",
+    "views": [
+      {
+        "attemptCount": 2,
+        "attempts": [
+          {
+            "accepted": true,
+            "attempt": 1,
+            "contentSha256": "d43ef51a8b2597ea130096fef2eb34f1c4d892a87fccdf89080633436672a2a1",
+            "maximumNearBlackPixelRatio": 0.12,
+            "nearBlackPixelRatio": 0.0
+          },
+          {
+            "accepted": true,
+            "attempt": 2,
+            "contentSha256": "d43ef51a8b2597ea130096fef2eb34f1c4d892a87fccdf89080633436672a2a1",
+            "maximumNearBlackPixelRatio": 0.12,
+            "nearBlackPixelRatio": 0.0,
+            "stabilityComparison": {
+              "differentPixelCount": 0,
+              "differentPixelRatio": 0.0,
+              "dimensions": {
+                "first": [
+                  512,
+                  512
+                ],
+                "passed": true,
+                "second": [
+                  512,
+                  512
+                ]
+              },
+              "first": "d43ef51a8b2597ea130096fef2eb34f1c4d892a87fccdf89080633436672a2a1",
+              "maximumChannelDelta": 0,
+              "mode": "EXACT",
+              "normalizedMeanAbsoluteError": 0.0,
+              "passed": true,
+              "second": "d43ef51a8b2597ea130096fef2eb34f1c4d892a87fccdf89080633436672a2a1",
+              "tolerance": {
+                "maximumChannelDelta": 1,
+                "maximumDifferentPixelCount": 24,
+                "maximumDifferentPixelRatio": 0.0001,
+                "maximumNormalizedMeanAbsoluteError": 1e-06
+              }
+            }
+          }
+        ],
+        "contentSha256": "d43ef51a8b2597ea130096fef2eb34f1c4d892a87fccdf89080633436672a2a1",
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\assets-3d\\defense-barricade-small\\build\\renders\\front.png",
+        "stabilityComparison": {
+          "differentPixelCount": 0,
+          "differentPixelRatio": 0.0,
+          "dimensions": {
+            "first": [
+              512,
+              512
+            ],
+            "passed": true,
+            "second": [
+              512,
+              512
+            ]
+          },
+          "first": "d43ef51a8b2597ea130096fef2eb34f1c4d892a87fccdf89080633436672a2a1",
+          "maximumChannelDelta": 0,
+          "mode": "EXACT",
+          "normalizedMeanAbsoluteError": 0.0,
+          "passed": true,
+          "second": "d43ef51a8b2597ea130096fef2eb34f1c4d892a87fccdf89080633436672a2a1",
+          "tolerance": {
+            "maximumChannelDelta": 1,
+            "maximumDifferentPixelCount": 24,
+            "maximumDifferentPixelRatio": 0.0001,
+            "maximumNormalizedMeanAbsoluteError": 1e-06
+          }
+        },
+        "stabilityMode": "EXACT",
+        "status": "PASS",
+        "view": "front"
+      },
+      {
+        "attemptCount": 2,
+        "attempts": [
+          {
+            "accepted": true,
+            "attempt": 1,
+            "contentSha256": "f20b01e7497ddea4dd650229d97c0a2f5c5db65c266f5f926d99228dc0f9cc17",
+            "maximumNearBlackPixelRatio": 0.12,
+            "nearBlackPixelRatio": 0.0
+          },
+          {
+            "accepted": true,
+            "attempt": 2,
+            "contentSha256": "f20b01e7497ddea4dd650229d97c0a2f5c5db65c266f5f926d99228dc0f9cc17",
+            "maximumNearBlackPixelRatio": 0.12,
+            "nearBlackPixelRatio": 0.0,
+            "stabilityComparison": {
+              "differentPixelCount": 0,
+              "differentPixelRatio": 0.0,
+              "dimensions": {
+                "first": [
+                  512,
+                  512
+                ],
+                "passed": true,
+                "second": [
+                  512,
+                  512
+                ]
+              },
+              "first": "f20b01e7497ddea4dd650229d97c0a2f5c5db65c266f5f926d99228dc0f9cc17",
+              "maximumChannelDelta": 0,
+              "mode": "EXACT",
+              "normalizedMeanAbsoluteError": 0.0,
+              "passed": true,
+              "second": "f20b01e7497ddea4dd650229d97c0a2f5c5db65c266f5f926d99228dc0f9cc17",
+              "tolerance": {
+                "maximumChannelDelta": 1,
+                "maximumDifferentPixelCount": 24,
+                "maximumDifferentPixelRatio": 0.0001,
+                "maximumNormalizedMeanAbsoluteError": 1e-06
+              }
+            }
+          }
+        ],
+        "contentSha256": "f20b01e7497ddea4dd650229d97c0a2f5c5db65c266f5f926d99228dc0f9cc17",
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\assets-3d\\defense-barricade-small\\build\\renders\\rear.png",
+        "stabilityComparison": {
+          "differentPixelCount": 0,
+          "differentPixelRatio": 0.0,
+          "dimensions": {
+            "first": [
+              512,
+              512
+            ],
+            "passed": true,
+            "second": [
+              512,
+              512
+            ]
+          },
+          "first": "f20b01e7497ddea4dd650229d97c0a2f5c5db65c266f5f926d99228dc0f9cc17",
+          "maximumChannelDelta": 0,
+          "mode": "EXACT",
+          "normalizedMeanAbsoluteError": 0.0,
+          "passed": true,
+          "second": "f20b01e7497ddea4dd650229d97c0a2f5c5db65c266f5f926d99228dc0f9cc17",
+          "tolerance": {
+            "maximumChannelDelta": 1,
+            "maximumDifferentPixelCount": 24,
+            "maximumDifferentPixelRatio": 0.0001,
+            "maximumNormalizedMeanAbsoluteError": 1e-06
+          }
+        },
+        "stabilityMode": "EXACT",
+        "status": "PASS",
+        "view": "rear"
+      },
+      {
+        "attemptCount": 2,
+        "attempts": [
+          {
+            "accepted": true,
+            "attempt": 1,
+            "contentSha256": "e418dc4b0fed21a16c6937ea6de56cb4a5828b492a5e952a63243c6cbedc7897",
+            "maximumNearBlackPixelRatio": 0.12,
+            "nearBlackPixelRatio": 0.0
+          },
+          {
+            "accepted": true,
+            "attempt": 2,
+            "contentSha256": "e418dc4b0fed21a16c6937ea6de56cb4a5828b492a5e952a63243c6cbedc7897",
+            "maximumNearBlackPixelRatio": 0.12,
+            "nearBlackPixelRatio": 0.0,
+            "stabilityComparison": {
+              "differentPixelCount": 0,
+              "differentPixelRatio": 0.0,
+              "dimensions": {
+                "first": [
+                  512,
+                  512
+                ],
+                "passed": true,
+                "second": [
+                  512,
+                  512
+                ]
+              },
+              "first": "e418dc4b0fed21a16c6937ea6de56cb4a5828b492a5e952a63243c6cbedc7897",
+              "maximumChannelDelta": 0,
+              "mode": "EXACT",
+              "normalizedMeanAbsoluteError": 0.0,
+              "passed": true,
+              "second": "e418dc4b0fed21a16c6937ea6de56cb4a5828b492a5e952a63243c6cbedc7897",
+              "tolerance": {
+                "maximumChannelDelta": 1,
+                "maximumDifferentPixelCount": 24,
+                "maximumDifferentPixelRatio": 0.0001,
+                "maximumNormalizedMeanAbsoluteError": 1e-06
+              }
+            }
+          }
+        ],
+        "contentSha256": "e418dc4b0fed21a16c6937ea6de56cb4a5828b492a5e952a63243c6cbedc7897",
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\assets-3d\\defense-barricade-small\\build\\renders\\left.png",
+        "stabilityComparison": {
+          "differentPixelCount": 0,
+          "differentPixelRatio": 0.0,
+          "dimensions": {
+            "first": [
+              512,
+              512
+            ],
+            "passed": true,
+            "second": [
+              512,
+              512
+            ]
+          },
+          "first": "e418dc4b0fed21a16c6937ea6de56cb4a5828b492a5e952a63243c6cbedc7897",
+          "maximumChannelDelta": 0,
+          "mode": "EXACT",
+          "normalizedMeanAbsoluteError": 0.0,
+          "passed": true,
+          "second": "e418dc4b0fed21a16c6937ea6de56cb4a5828b492a5e952a63243c6cbedc7897",
+          "tolerance": {
+            "maximumChannelDelta": 1,
+            "maximumDifferentPixelCount": 24,
+            "maximumDifferentPixelRatio": 0.0001,
+            "maximumNormalizedMeanAbsoluteError": 1e-06
+          }
+        },
+        "stabilityMode": "EXACT",
+        "status": "PASS",
+        "view": "left"
+      },
+      {
+        "attemptCount": 2,
+        "attempts": [
+          {
+            "accepted": true,
+            "attempt": 1,
+            "contentSha256": "3bef068a0a156784454df314c166dd553d0fc69660d01a204268e64e46999ccc",
+            "maximumNearBlackPixelRatio": 0.12,
+            "nearBlackPixelRatio": 0.0
+          },
+          {
+            "accepted": true,
+            "attempt": 2,
+            "contentSha256": "3bef068a0a156784454df314c166dd553d0fc69660d01a204268e64e46999ccc",
+            "maximumNearBlackPixelRatio": 0.12,
+            "nearBlackPixelRatio": 0.0,
+            "stabilityComparison": {
+              "differentPixelCount": 0,
+              "differentPixelRatio": 0.0,
+              "dimensions": {
+                "first": [
+                  512,
+                  512
+                ],
+                "passed": true,
+                "second": [
+                  512,
+                  512
+                ]
+              },
+              "first": "3bef068a0a156784454df314c166dd553d0fc69660d01a204268e64e46999ccc",
+              "maximumChannelDelta": 0,
+              "mode": "EXACT",
+              "normalizedMeanAbsoluteError": 0.0,
+              "passed": true,
+              "second": "3bef068a0a156784454df314c166dd553d0fc69660d01a204268e64e46999ccc",
+              "tolerance": {
+                "maximumChannelDelta": 1,
+                "maximumDifferentPixelCount": 24,
+                "maximumDifferentPixelRatio": 0.0001,
+                "maximumNormalizedMeanAbsoluteError": 1e-06
+              }
+            }
+          }
+        ],
+        "contentSha256": "3bef068a0a156784454df314c166dd553d0fc69660d01a204268e64e46999ccc",
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\assets-3d\\defense-barricade-small\\build\\renders\\right.png",
+        "stabilityComparison": {
+          "differentPixelCount": 0,
+          "differentPixelRatio": 0.0,
+          "dimensions": {
+            "first": [
+              512,
+              512
+            ],
+            "passed": true,
+            "second": [
+              512,
+              512
+            ]
+          },
+          "first": "3bef068a0a156784454df314c166dd553d0fc69660d01a204268e64e46999ccc",
+          "maximumChannelDelta": 0,
+          "mode": "EXACT",
+          "normalizedMeanAbsoluteError": 0.0,
+          "passed": true,
+          "second": "3bef068a0a156784454df314c166dd553d0fc69660d01a204268e64e46999ccc",
+          "tolerance": {
+            "maximumChannelDelta": 1,
+            "maximumDifferentPixelCount": 24,
+            "maximumDifferentPixelRatio": 0.0001,
+            "maximumNormalizedMeanAbsoluteError": 1e-06
+          }
+        },
+        "stabilityMode": "EXACT",
+        "status": "PASS",
+        "view": "right"
+      },
+      {
+        "attemptCount": 2,
+        "attempts": [
+          {
+            "accepted": true,
+            "attempt": 1,
+            "contentSha256": "d5837f43d499132e61b1bbb3558c8e5eb2e5d6c36b703e956737d3463f450861",
+            "maximumNearBlackPixelRatio": 0.12,
+            "nearBlackPixelRatio": 0.0
+          },
+          {
+            "accepted": true,
+            "attempt": 2,
+            "contentSha256": "d5837f43d499132e61b1bbb3558c8e5eb2e5d6c36b703e956737d3463f450861",
+            "maximumNearBlackPixelRatio": 0.12,
+            "nearBlackPixelRatio": 0.0,
+            "stabilityComparison": {
+              "differentPixelCount": 0,
+              "differentPixelRatio": 0.0,
+              "dimensions": {
+                "first": [
+                  512,
+                  512
+                ],
+                "passed": true,
+                "second": [
+                  512,
+                  512
+                ]
+              },
+              "first": "d5837f43d499132e61b1bbb3558c8e5eb2e5d6c36b703e956737d3463f450861",
+              "maximumChannelDelta": 0,
+              "mode": "EXACT",
+              "normalizedMeanAbsoluteError": 0.0,
+              "passed": true,
+              "second": "d5837f43d499132e61b1bbb3558c8e5eb2e5d6c36b703e956737d3463f450861",
+              "tolerance": {
+                "maximumChannelDelta": 1,
+                "maximumDifferentPixelCount": 24,
+                "maximumDifferentPixelRatio": 0.0001,
+                "maximumNormalizedMeanAbsoluteError": 1e-06
+              }
+            }
+          }
+        ],
+        "contentSha256": "d5837f43d499132e61b1bbb3558c8e5eb2e5d6c36b703e956737d3463f450861",
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\assets-3d\\defense-barricade-small\\build\\renders\\top.png",
+        "stabilityComparison": {
+          "differentPixelCount": 0,
+          "differentPixelRatio": 0.0,
+          "dimensions": {
+            "first": [
+              512,
+              512
+            ],
+            "passed": true,
+            "second": [
+              512,
+              512
+            ]
+          },
+          "first": "d5837f43d499132e61b1bbb3558c8e5eb2e5d6c36b703e956737d3463f450861",
+          "maximumChannelDelta": 0,
+          "mode": "EXACT",
+          "normalizedMeanAbsoluteError": 0.0,
+          "passed": true,
+          "second": "d5837f43d499132e61b1bbb3558c8e5eb2e5d6c36b703e956737d3463f450861",
+          "tolerance": {
+            "maximumChannelDelta": 1,
+            "maximumDifferentPixelCount": 24,
+            "maximumDifferentPixelRatio": 0.0001,
+            "maximumNormalizedMeanAbsoluteError": 1e-06
+          }
+        },
+        "stabilityMode": "EXACT",
+        "status": "PASS",
+        "view": "top"
+      },
+      {
+        "attemptCount": 2,
+        "attempts": [
+          {
+            "accepted": true,
+            "attempt": 1,
+            "contentSha256": "0ed30b90d088efa26dc0d9f84085cb4fb3fefae6b27cf9a87ac65210271370d4",
+            "maximumNearBlackPixelRatio": 0.12,
+            "nearBlackPixelRatio": 0.0
+          },
+          {
+            "accepted": true,
+            "attempt": 2,
+            "contentSha256": "0ed30b90d088efa26dc0d9f84085cb4fb3fefae6b27cf9a87ac65210271370d4",
+            "maximumNearBlackPixelRatio": 0.12,
+            "nearBlackPixelRatio": 0.0,
+            "stabilityComparison": {
+              "differentPixelCount": 0,
+              "differentPixelRatio": 0.0,
+              "dimensions": {
+                "first": [
+                  512,
+                  512
+                ],
+                "passed": true,
+                "second": [
+                  512,
+                  512
+                ]
+              },
+              "first": "0ed30b90d088efa26dc0d9f84085cb4fb3fefae6b27cf9a87ac65210271370d4",
+              "maximumChannelDelta": 0,
+              "mode": "EXACT",
+              "normalizedMeanAbsoluteError": 0.0,
+              "passed": true,
+              "second": "0ed30b90d088efa26dc0d9f84085cb4fb3fefae6b27cf9a87ac65210271370d4",
+              "tolerance": {
+                "maximumChannelDelta": 1,
+                "maximumDifferentPixelCount": 24,
+                "maximumDifferentPixelRatio": 0.0001,
+                "maximumNormalizedMeanAbsoluteError": 1e-06
+              }
+            }
+          }
+        ],
+        "contentSha256": "0ed30b90d088efa26dc0d9f84085cb4fb3fefae6b27cf9a87ac65210271370d4",
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\assets-3d\\defense-barricade-small\\build\\renders\\perspective.png",
+        "stabilityComparison": {
+          "differentPixelCount": 0,
+          "differentPixelRatio": 0.0,
+          "dimensions": {
+            "first": [
+              512,
+              512
+            ],
+            "passed": true,
+            "second": [
+              512,
+              512
+            ]
+          },
+          "first": "0ed30b90d088efa26dc0d9f84085cb4fb3fefae6b27cf9a87ac65210271370d4",
+          "maximumChannelDelta": 0,
+          "mode": "EXACT",
+          "normalizedMeanAbsoluteError": 0.0,
+          "passed": true,
+          "second": "0ed30b90d088efa26dc0d9f84085cb4fb3fefae6b27cf9a87ac65210271370d4",
+          "tolerance": {
+            "maximumChannelDelta": 1,
+            "maximumDifferentPixelCount": 24,
+            "maximumDifferentPixelRatio": 0.0001,
+            "maximumNormalizedMeanAbsoluteError": 1e-06
+          }
+        },
+        "stabilityMode": "EXACT",
+        "status": "PASS",
+        "view": "perspective"
+      },
+      {
+        "attemptCount": 2,
+        "attempts": [
+          {
+            "accepted": true,
+            "attempt": 1,
+            "contentSha256": "e1a6bc7aa395c2b97ce4f1e60c296607de5f787579b30557c6ff74de9d659854",
+            "maximumNearBlackPixelRatio": 0.12,
+            "nearBlackPixelRatio": 0.0
+          },
+          {
+            "accepted": true,
+            "attempt": 2,
+            "contentSha256": "e1a6bc7aa395c2b97ce4f1e60c296607de5f787579b30557c6ff74de9d659854",
+            "maximumNearBlackPixelRatio": 0.12,
+            "nearBlackPixelRatio": 0.0,
+            "stabilityComparison": {
+              "differentPixelCount": 0,
+              "differentPixelRatio": 0.0,
+              "dimensions": {
+                "first": [
+                  512,
+                  512
+                ],
+                "passed": true,
+                "second": [
+                  512,
+                  512
+                ]
+              },
+              "first": "e1a6bc7aa395c2b97ce4f1e60c296607de5f787579b30557c6ff74de9d659854",
+              "maximumChannelDelta": 0,
+              "mode": "EXACT",
+              "normalizedMeanAbsoluteError": 0.0,
+              "passed": true,
+              "second": "e1a6bc7aa395c2b97ce4f1e60c296607de5f787579b30557c6ff74de9d659854",
+              "tolerance": {
+                "maximumChannelDelta": 1,
+                "maximumDifferentPixelCount": 24,
+                "maximumDifferentPixelRatio": 0.0001,
+                "maximumNormalizedMeanAbsoluteError": 1e-06
+              }
+            }
+          }
+        ],
+        "contentSha256": "e1a6bc7aa395c2b97ce4f1e60c296607de5f787579b30557c6ff74de9d659854",
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\assets-3d\\defense-barricade-small\\build\\renders\\mobile_distance.png",
+        "stabilityComparison": {
+          "differentPixelCount": 0,
+          "differentPixelRatio": 0.0,
+          "dimensions": {
+            "first": [
+              512,
+              512
+            ],
+            "passed": true,
+            "second": [
+              512,
+              512
+            ]
+          },
+          "first": "e1a6bc7aa395c2b97ce4f1e60c296607de5f787579b30557c6ff74de9d659854",
+          "maximumChannelDelta": 0,
+          "mode": "EXACT",
+          "normalizedMeanAbsoluteError": 0.0,
+          "passed": true,
+          "second": "e1a6bc7aa395c2b97ce4f1e60c296607de5f787579b30557c6ff74de9d659854",
+          "tolerance": {
+            "maximumChannelDelta": 1,
+            "maximumDifferentPixelCount": 24,
+            "maximumDifferentPixelRatio": 0.0001,
+            "maximumNormalizedMeanAbsoluteError": 1e-06
+          }
+        },
+        "stabilityMode": "EXACT",
+        "status": "PASS",
+        "view": "mobile_distance"
+      },
+      {
+        "attemptCount": 2,
+        "attempts": [
+          {
+            "accepted": true,
+            "attempt": 1,
+            "contentSha256": "fe22e80ec9615d0924cc222b7c0c97bc725ffbcaa10cf06a3619dd41c20cefb3",
+            "maximumNearBlackPixelRatio": 0.35,
+            "nearBlackPixelRatio": 0.0
+          },
+          {
+            "accepted": true,
+            "attempt": 2,
+            "contentSha256": "fe22e80ec9615d0924cc222b7c0c97bc725ffbcaa10cf06a3619dd41c20cefb3",
+            "maximumNearBlackPixelRatio": 0.35,
+            "nearBlackPixelRatio": 0.0,
+            "stabilityComparison": {
+              "differentPixelCount": 0,
+              "differentPixelRatio": 0.0,
+              "dimensions": {
+                "first": [
+                  512,
+                  512
+                ],
+                "passed": true,
+                "second": [
+                  512,
+                  512
+                ]
+              },
+              "first": "fe22e80ec9615d0924cc222b7c0c97bc725ffbcaa10cf06a3619dd41c20cefb3",
+              "maximumChannelDelta": 0,
+              "mode": "EXACT",
+              "normalizedMeanAbsoluteError": 0.0,
+              "passed": true,
+              "second": "fe22e80ec9615d0924cc222b7c0c97bc725ffbcaa10cf06a3619dd41c20cefb3",
+              "tolerance": {
+                "maximumChannelDelta": 1,
+                "maximumDifferentPixelCount": 24,
+                "maximumDifferentPixelRatio": 0.0001,
+                "maximumNormalizedMeanAbsoluteError": 1e-06
+              }
+            }
+          }
+        ],
+        "contentSha256": "fe22e80ec9615d0924cc222b7c0c97bc725ffbcaa10cf06a3619dd41c20cefb3",
+        "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\assets-3d\\defense-barricade-small\\build\\renders\\silhouette.png",
+        "stabilityComparison": {
+          "differentPixelCount": 0,
+          "differentPixelRatio": 0.0,
+          "dimensions": {
+            "first": [
+              512,
+              512
+            ],
+            "passed": true,
+            "second": [
+              512,
+              512
+            ]
+          },
+          "first": "fe22e80ec9615d0924cc222b7c0c97bc725ffbcaa10cf06a3619dd41c20cefb3",
+          "maximumChannelDelta": 0,
+          "mode": "EXACT",
+          "normalizedMeanAbsoluteError": 0.0,
+          "passed": true,
+          "second": "fe22e80ec9615d0924cc222b7c0c97bc725ffbcaa10cf06a3619dd41c20cefb3",
+          "tolerance": {
+            "maximumChannelDelta": 1,
+            "maximumDifferentPixelCount": 24,
+            "maximumDifferentPixelRatio": 0.0001,
+            "maximumNormalizedMeanAbsoluteError": 1e-06
+          }
+        },
+        "stabilityMode": "EXACT",
+        "status": "PASS",
+        "view": "silhouette"
+      }
+    ]
+  },
+  "revision": 19,
+  "schemaVersion": "1.0.0",
+  "stateId": "intact",
+  "status": "PASS",
+  "triangleCount": 1688,
+  "visualCanon": {
+    "canonId": "vc_barricade__salvaged-frontier__v1",
+    "productionEligible": false,
+    "sha256": "2cf485afb6bd7297a1ffccbb72c60f1e186706fe2eb47b0bcb24af407ba9cc52",
+    "status": "CANDIDATE"
+  }
+}

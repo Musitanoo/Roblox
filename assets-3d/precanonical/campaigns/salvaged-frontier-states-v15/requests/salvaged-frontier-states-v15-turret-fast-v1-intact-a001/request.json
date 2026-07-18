@@ -1,0 +1,86 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/precanonical-request.schema.json",
+  "schemaVersion": "1.0.0",
+  "requestId": "salvaged-frontier-states-v15-turret-fast-v1-intact-a001",
+  "assetKey": "turret_fast_v1",
+  "artDirection": "salvaged-frontier",
+  "generationSurface": "chatgpt_web_images",
+  "status": "PRECANONICAL_SPEC_COMPLETE",
+  "stage": "state_definition",
+  "policy": {
+    "path": "art/precanonical/policy.json",
+    "sha256": "befd65dbd9ca4192c96d705582e92e4311d20723730d05c2fd29d1be6a2e80f9"
+  },
+  "constitution": {
+    "path": "art/selected/salvaged-frontier-constitution.json",
+    "sha256": "1a7ea88c2d06be01530b6e02b70b6f9dc176f5b74d0cb98f4d565b8a322a9491"
+  },
+  "compiler": {
+    "path": "tools/art/precanonical_campaign.py",
+    "sha256": "69bc8e27c96a7f2b386f40fbaf91543bb86f32f430703565a9d61c85857e06cc"
+  },
+  "sourceBrief": {
+    "path": "source-brief.json",
+    "sha256": "75ba7ec14ae46ec8788d2dc1d22c6741c37ac525039d6f1abf73d6932bc8a191"
+  },
+  "parentResult": null,
+  "revisionInstructions": [],
+  "files": {
+    "brief": {
+      "path": "brief.md",
+      "sha256": "6b8573a5a262d56bf5b0eb7adb0f458385309ee5b1e53b0567c082a12a0db7fe"
+    },
+    "prompt": {
+      "path": "prompt.txt",
+      "sha256": "44aa2f7142392e6c5b3e9f3f74fd9796e949627f7b59af030b066c941651a3ed"
+    },
+    "negativeConstraints": {
+      "path": "negative-constraints.txt",
+      "sha256": "14d50e13fe5df6c5de5a02e2aae5adb6d0729452f39e0f17f94a572c40ea73aa"
+    },
+    "requestedViews": {
+      "path": "requested-views.json",
+      "sha256": "f34a21632b71d06d7b2a026a02cea32a8942ada34aff34fffccd65060700977b"
+    },
+    "requestedStates": {
+      "path": "requested-states.json",
+      "sha256": "05cbf43625e5abd2ff6ab2b162be99cba60f9a48d5cb32cb52b20ed508c63f7c"
+    }
+  },
+  "promptHash": "44aa2f7142392e6c5b3e9f3f74fd9796e949627f7b59af030b066c941651a3ed",
+  "requestedViewIds": [
+    "hero_three_quarter_front",
+    "three_quarter_rear",
+    "black_silhouette",
+    "mobile_landscape"
+  ],
+  "requestedStateIds": [
+    "intact"
+  ],
+  "imageSpec": {
+    "aspectRatio": "1:1",
+    "background": "neutral_mid_gray",
+    "lighting": "neutral_studio",
+    "singleObjectOnly": true
+  },
+  "budget": {
+    "maximumWebGenerations": 1,
+    "consumedWebGenerations": 0,
+    "reserveForCorrections": 0,
+    "humanConfirmationRequired": true
+  },
+  "automation": {
+    "browserAdapter": "codex_chrome",
+    "automaticSubmissionAuthorized": false,
+    "automaticRetry": false,
+    "automaticCodexImageFallback": false,
+    "automaticApiFallback": false,
+    "browserReasoningForbidden": true
+  },
+  "authority": {
+    "canonical": false,
+    "geometryAuthority": false,
+    "humanSelectionRequired": true,
+    "productionApproved": false
+  }
+}

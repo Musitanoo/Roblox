@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/status.schema.json",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/status.schema.json"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "artifactVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "truthModel": {
+      "type": "object",
+      "properties": {
+        "specificationStatus": {
+          "enum": [
+            "PASS",
+            "FAIL"
+          ]
+        },
+        "staticValidationStatus": {
+          "enum": [
+            "PENDING_VERIFICATION",
+            "PASS",
+            "FAIL"
+          ]
+        },
+        "precanonicalWorkflowStatus": {
+          "enum": [
+            "UNKNOWN",
+            "PASS",
+            "FAIL"
+          ]
+        },
+        "blenderExecutionStatus": {
+          "enum": [
+            "UNKNOWN",
+            "BLOCKED_IN_THIS_ENVIRONMENT",
+            "PASS",
+            "FAIL"
+          ]
+        },
+        "blenderEvidenceTier": {
+          "enum": [
+            "NONE",
+            "BUILD_ONLY",
+            "SMOKE_COMPLETE",
+            "FULL_COMPLETE"
+          ]
+        },
+        "studioEvidenceStatus": {
+          "enum": [
+            "UNKNOWN",
+            "BLOCKED",
+            "PASS",
+            "FAIL"
+          ]
+        },
+        "mobileEvidenceStatus": {
+          "enum": [
+            "UNKNOWN",
+            "BLOCKED",
+            "PASS",
+            "FAIL"
+          ]
+        },
+        "humanSelectionStatus": {
+          "enum": [
+            "PENDING",
+            "PASS",
+            "FAIL"
+          ]
+        },
+        "visualCanonStatus": {
+          "enum": [
+            "UNKNOWN",
+            "DRAFT",
+            "CANDIDATE_COMPLETE",
+            "SELECTED_PARTIAL",
+            "LOCKED",
+            "FAIL"
+          ]
+        },
+        "transferEvidenceStatus": {
+          "enum": [
+            "UNKNOWN",
+            "PARTIAL",
+            "PASS",
+            "FAIL"
+          ]
+        },
+        "transferStudioPublicationStatus": {
+          "enum": [
+            "UNKNOWN",
+            "BLOCKED",
+            "PASS",
+            "FAIL"
+          ]
+        },
+        "transferStudioIntegrationStatus": {
+          "enum": [
+            "UNKNOWN",
+            "PARTIAL",
+            "BLOCKED",
+            "PASS",
+            "FAIL"
+          ]
+        },
+        "productionApproved": {
+          "type": "boolean"
+        },
+        "finalTerritory": {
+          "anyOf": [
+            {
+              "enum": [
+                "industrial-toy-defense",
+                "salvaged-frontier",
+                "clean-tactical-diorama"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "specificationStatus",
+        "staticValidationStatus",
+        "precanonicalWorkflowStatus",
+        "blenderExecutionStatus",
+        "blenderEvidenceTier",
+        "studioEvidenceStatus",
+        "mobileEvidenceStatus",
+        "humanSelectionStatus",
+        "visualCanonStatus",
+        "transferEvidenceStatus",
+        "transferStudioPublicationStatus",
+        "transferStudioIntegrationStatus",
+        "productionApproved",
+        "finalTerritory"
+      ],
+      "unevaluatedProperties": false
+    },
+    "blockingReasons": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "definitionOfPass": {
+      "type": "string",
+      "minLength": 20
+    }
+  },
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "artifactVersion",
+    "generatedAt",
+    "truthModel",
+    "blockingReasons",
+    "definitionOfPass"
+  ],
+  "unevaluatedProperties": false
+}

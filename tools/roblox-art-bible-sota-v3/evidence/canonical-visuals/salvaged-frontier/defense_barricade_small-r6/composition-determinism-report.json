@@ -1,0 +1,110 @@
+{
+  "boardCount": 17,
+  "comparisons": [
+    {
+      "boardId": "orthographic",
+      "exact": true,
+      "runASha256": "ebd523b8a9394c9d3557b74cf00ef284f997abdee1b90b51e32142536ecd3b17",
+      "runBSha256": "ebd523b8a9394c9d3557b74cf00ef284f997abdee1b90b51e32142536ecd3b17"
+    },
+    {
+      "boardId": "perspective",
+      "exact": true,
+      "runASha256": "a8bc458ae30fd973eecf106bcb19e6eef6a97b2a0f015dea2a5751596627ba33",
+      "runBSha256": "a8bc458ae30fd973eecf106bcb19e6eef6a97b2a0f015dea2a5751596627ba33"
+    },
+    {
+      "boardId": "black_silhouette",
+      "exact": true,
+      "runASha256": "6bc9ada17059f0ef56cfc22b73c31cdfe87d7a31b9e3d3b4b555939bbe3b5a7a",
+      "runBSha256": "6bc9ada17059f0ef56cfc22b73c31cdfe87d7a31b9e3d3b4b555939bbe3b5a7a"
+    },
+    {
+      "boardId": "component_breakdown",
+      "exact": true,
+      "runASha256": "4fdaa78830c52dfa09b40b65f386e97d6300f229e55698c5fb4818a5d5c35371",
+      "runBSha256": "4fdaa78830c52dfa09b40b65f386e97d6300f229e55698c5fb4818a5d5c35371"
+    },
+    {
+      "boardId": "proportions",
+      "exact": true,
+      "runASha256": "55b23b9bd0a176e996d74d54e30bdedf3fb3b66215092cf057bccde110a220b7",
+      "runBSha256": "55b23b9bd0a176e996d74d54e30bdedf3fb3b66215092cf057bccde110a220b7"
+    },
+    {
+      "boardId": "materials",
+      "exact": true,
+      "runASha256": "8ef447dd2e88330153bd988e165daf661fbd0e36367f1c31acd02d0d441133c7",
+      "runBSha256": "8ef447dd2e88330153bd988e165daf661fbd0e36367f1c31acd02d0d441133c7"
+    },
+    {
+      "boardId": "semantic_zones",
+      "exact": true,
+      "runASha256": "21ff806af017630528c4ee70be338d311e1ed623d2530ba89ff2d3079f10868f",
+      "runBSha256": "21ff806af017630528c4ee70be338d311e1ed623d2530ba89ff2d3079f10868f"
+    },
+    {
+      "boardId": "all_states",
+      "exact": true,
+      "runASha256": "1c2416b56024382032a2b3f891ff5f5266e28c1bc1f0c97b66f7883af93b6e5e",
+      "runBSha256": "1c2416b56024382032a2b3f891ff5f5266e28c1bc1f0c97b66f7883af93b6e5e"
+    },
+    {
+      "boardId": "state_comparison",
+      "exact": true,
+      "runASha256": "a40842618da97b20ef0a1a869eac0120ed1037c7c906904d71eb660d80230169",
+      "runBSha256": "a40842618da97b20ef0a1a869eac0120ed1037c7c906904d71eb660d80230169"
+    },
+    {
+      "boardId": "mobile_near",
+      "exact": true,
+      "runASha256": "360fcb1364f459a3b0e5c5c8498e83ffec603f9fff26b6208287079036a4eb4e",
+      "runBSha256": "360fcb1364f459a3b0e5c5c8498e83ffec603f9fff26b6208287079036a4eb4e"
+    },
+    {
+      "boardId": "mobile_mid",
+      "exact": true,
+      "runASha256": "0da1973ec05d002339677d9905fc072cdf639d15c01969dd782d348dc204bd76",
+      "runBSha256": "0da1973ec05d002339677d9905fc072cdf639d15c01969dd782d348dc204bd76"
+    },
+    {
+      "boardId": "mobile_far",
+      "exact": true,
+      "runASha256": "8650dacc5a58a4a6c3744cf531521ff67f7e747fc3dc836b89c48d489e70c188",
+      "runBSha256": "8650dacc5a58a4a6c3744cf531521ff67f7e747fc3dc836b89c48d489e70c188"
+    },
+    {
+      "boardId": "lighting_matrix",
+      "exact": true,
+      "runASha256": "9de4453a6e7070ca5c0af1b57493cdf14f5f1526e182a450a50de33e0ebc9b0f",
+      "runBSha256": "9de4453a6e7070ca5c0af1b57493cdf14f5f1526e182a450a50de33e0ebc9b0f"
+    },
+    {
+      "boardId": "repetition_1",
+      "exact": true,
+      "runASha256": "6f84e4197c9379ff6a66e5ed533f6f2edfa63dced5223c5d685e2ce49c34389e",
+      "runBSha256": "6f84e4197c9379ff6a66e5ed533f6f2edfa63dced5223c5d685e2ce49c34389e"
+    },
+    {
+      "boardId": "repetition_30",
+      "exact": true,
+      "runASha256": "9461e409b0b384cc68748685fa73fe93b28641715bef0edc7a8c9fcb5b310e27",
+      "runBSha256": "9461e409b0b384cc68748685fa73fe93b28641715bef0edc7a8c9fcb5b310e27"
+    },
+    {
+      "boardId": "repetition_100",
+      "exact": true,
+      "runASha256": "f6c46b367d003294e6c645f1aaac909237ea6b57f6ed8dd2efce139a78a77470",
+      "runBSha256": "f6c46b367d003294e6c645f1aaac909237ea6b57f6ed8dd2efce139a78a77470"
+    },
+    {
+      "boardId": "required_and_forbidden_annotations",
+      "exact": true,
+      "runASha256": "e5e465da8b1a2e8759de95aea3b8af57f9f89918ca6ef3d1989a73a7bd0a8bc0",
+      "runBSha256": "e5e465da8b1a2e8759de95aea3b8af57f9f89918ca6ef3d1989a73a7bd0a8bc0"
+    }
+  ],
+  "productionApproved": false,
+  "schemaVersion": "1.0.0",
+  "status": "PASS"
+}

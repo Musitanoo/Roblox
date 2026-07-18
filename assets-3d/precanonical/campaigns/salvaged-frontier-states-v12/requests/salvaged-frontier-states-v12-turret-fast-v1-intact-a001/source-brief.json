@@ -1,0 +1,164 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/precanonical-brief.schema.json",
+  "schemaVersion": "1.0.0",
+  "briefId": "turret_fast_v1-salvaged-frontier-state-campaign",
+  "assetKey": "turret_fast_v1",
+  "displayName": "Fast Defense Turret",
+  "artDirection": "salvaged-frontier",
+  "gameplayFunction": "fast-firing player defense turret with unmistakable forward aim, interaction socket, and escalating damage readability",
+  "oneSecondRead": "This planted twin-barrel machine aims forward, fires rapidly, exposes a safe-side interaction socket and clearly loses capability as damage escalates.",
+  "worldRole": "A rapid-response player defense that converts aim, coverage and sustained fire into a readable fortress hypothesis.",
+  "emotionalIntent": "Alert, energetic and reassuring when active; damage should feel mechanically specific and urgently repairable.",
+  "dimensionsStuds": {
+    "width": 4.8,
+    "height": 5.4,
+    "depth": 5.2
+  },
+  "orientation": {
+    "front": "Two aligned fast barrels, protected apertures and a clear forward wedge sit above a compact planted pedestal.",
+    "playerSide": "A complete protected socket sits below the weapon body on the player-safe side and opens when disabled.",
+    "threatSide": "Player-safe weapon readiness is distinguished from enemy threat; barrel posture and service state carry damage readability."
+  },
+  "interactionZones": [
+    {
+      "id": "foundation_zone",
+      "purpose": "Show planted stable defense.",
+      "location": "foundation",
+      "requiredCue": "Broad base and short pedestal. Dark grounded mass. Color role: primary."
+    },
+    {
+      "id": "firing_zone",
+      "purpose": "Show aim, readiness and weapon function.",
+      "location": "muzzles",
+      "requiredCue": "Two parallel barrels and forward apertures. Readable metal separation. Color role: bareMetal."
+    },
+    {
+      "id": "interaction_zone",
+      "purpose": "Guide repair and upgrade access.",
+      "location": "interaction_socket",
+      "requiredCue": "Complete protected socket when usable. Small high-contrast focal point. Color role: interaction."
+    },
+    {
+      "id": "failure_zone",
+      "purpose": "Show exactly which firing or support capability failed.",
+      "location": "failed_component",
+      "requiredCue": "Dropped barrel, opened guard, tilted upper mass and exposed core. Warning then critical contrast at causal failure. Color role: warning."
+    }
+  ],
+  "components": [
+    {
+      "id": "foundation",
+      "function": "Ground the weapon and define the stable gameplay footprint.",
+      "mobility": "fixed"
+    },
+    {
+      "id": "weapon_body",
+      "function": "Carry rotation, yokes, barrels and state posture.",
+      "mobility": "mobile"
+    },
+    {
+      "id": "twin_barrels",
+      "function": "Communicate fast sustained fire and forward aim.",
+      "mobility": "destructible"
+    },
+    {
+      "id": "service_mass",
+      "function": "Define rear orientation and house plausible feed, cooling and repair systems.",
+      "mobility": "destructible"
+    },
+    {
+      "id": "interaction_socket",
+      "function": "Expose safe-side repair and upgrade interaction.",
+      "mobility": "replaceable"
+    }
+  ],
+  "movements": [
+    "smooth target tracking",
+    "fast bounded recoil",
+    "uneven tracking",
+    "only functional barrel recoils",
+    "tracking fully stopped",
+    "upper mass settles into disabled tilt"
+  ],
+  "states": [
+    {
+      "id": "intact",
+      "visualChange": "Two aligned barrels, complete socket and closed service mass communicate a fast ready defense with full tracking capability. Both barrels align and both muzzle guards remain complete. The service mass is closed and the interaction socket is complete.",
+      "invariants": [
+        "Four-point-eight by five-point-four by five-point-two dimensions and bottom-center pivot remain fixed.",
+        "Twin-barrel intact identity, forward aim and rear service mass remain recognizable.",
+        "The interaction socket stays on the player-safe side and never becomes a muzzle.",
+        "Damage follows the same component chain: barrel, guard, structure, upper-body posture and socket.",
+        "Foundation footprint and rotation axis remain stable across states and territories."
+      ]
+    },
+    {
+      "id": "damaged",
+      "visualChange": "One barrel drops and one guard opens, visibly reducing firing confidence while the turret remains the same repairable defense. One barrel and muzzle assembly rotates downward within its support. One guard opens and bare support structure becomes visible.",
+      "invariants": [
+        "Four-point-eight by five-point-four by five-point-two dimensions and bottom-center pivot remain fixed.",
+        "Twin-barrel intact identity, forward aim and rear service mass remain recognizable.",
+        "The interaction socket stays on the player-safe side and never becomes a muzzle.",
+        "Damage follows the same component chain: barrel, guard, structure, upper-body posture and socket.",
+        "Foundation footprint and rotation axis remain stable across states and territories."
+      ]
+    },
+    {
+      "id": "critical",
+      "visualChange": "One barrel is absent, the upper mass tilts and the socket opens, communicating disabled imminent failure without changing the foundation. One barrel and muzzle are absent from the active silhouette. The upper mass tilts, critical core exposes and interaction socket opens.",
+      "invariants": [
+        "Four-point-eight by five-point-four by five-point-two dimensions and bottom-center pivot remain fixed.",
+        "Twin-barrel intact identity, forward aim and rear service mass remain recognizable.",
+        "The interaction socket stays on the player-safe side and never becomes a muzzle.",
+        "Damage follows the same component chain: barrel, guard, structure, upper-body posture and socket.",
+        "Foundation footprint and rotation axis remain stable across states and territories."
+      ]
+    }
+  ],
+  "collisionPromise": "Keep the bottom_center pivot, footprint and gameplay anchors identical in every generated state.",
+  "viewDistanceStuds": {
+    "near": 3,
+    "mid": 30,
+    "far": 60
+  },
+  "expectedSimultaneousInstances": 30,
+  "obligations": [
+    "Reconstruct every primary and secondary component defined by this canon.",
+    "Produce every required state from the same component structure and stable anchors.",
+    "Preserve the one-second function, front, interaction, danger and state readings.",
+    "Record this canon ID and exact SHA-256 in the compliance envelope."
+  ],
+  "constraints": [
+    "Dimensions are 4.8 x 5.4 x 5.2 studs with tolerance 0.005.",
+    "Triangle budget maximum is 3500.",
+    "Texture class is medium.",
+    "Pivot is bottom_center and component anchors remain stable.",
+    "One UV set and one material slot maximum per production mesh component."
+  ],
+  "freedoms": [
+    "service_detail: one approved cooling, feed or repair motif per territory. Adds construction identity without changing function.",
+    "muzzle_guard_profile: territory-approved rectangle or trapezoid family. Expresses DA while preserving twin-barrel recognition.",
+    "idle_tracking_phase: bounded phase and speed only. Prevents synchronized defenses while preserving readiness."
+  ],
+  "prohibitions": [
+    "single-barrel intact variant",
+    "missile, laser or heavy-cannon reinterpretation",
+    "friendly socket on the firing face",
+    "needle barrels or thin loose wires",
+    "floating armor plates",
+    "damage shown only by emissive color",
+    "new palette, material, angle, bevel or damage language",
+    "random junk pile silhouette",
+    "uniform rust",
+    "decorative repair with no causal reason",
+    "more than three visible material families",
+    "loose cable spaghetti",
+    "asymmetry that changes gameplay anchors",
+    "literal construction-toy motifs or pristine molded-plastic identity",
+    "thin_loose_wires",
+    "microtext",
+    "free_floating_fragments",
+    "detail_without_silhouette_function_identity"
+  ],
+  "productionApproved": false
+}

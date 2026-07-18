@@ -1,0 +1,26 @@
+[mcp_servers.blender_visual_workbench]
+command = "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+args = ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "C:\\Project\\Roblox\\scripts\\r3d-mcp.ps1"]
+cwd = "C:\\Project\\Roblox"
+enabled = true
+required = false
+startup_timeout_sec = 20
+tool_timeout_sec = 600
+default_tools_approval_mode = "writes"
+enabled_tools = [
+  "get_blender_environment",
+  "begin_workbench_session",
+  "get_scene_manifest",
+  "create_change_set",
+  "preview_change_set",
+  "apply_change_set",
+  "revert_last_change",
+  "reset_candidate",
+  "compare_candidate_to_reference",
+  "prepare_promotion_sandbox",
+  "verify_promotion",
+  "close_workbench_session",
+]
+
+[mcp_servers.blender_visual_workbench.tools.get_blender_environment]
+approval_mode = "approve"

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "industrial-toy-defense",
+  "status": "CANDIDATE",
+  "vision": "A snap-together survival machine whose chunky construction, protected joints and safety accents make every function obvious.",
+  "pillars": ["chunky modular mass", "protected circular mechanisms", "broad safety accents", "clean controlled wear", "obvious front and support side"],
+  "antiPillars": ["miniature realism", "loose cables", "dense greebles", "uniform bevels at every scale", "toy-store gloss"],
+  "shapeGrammar": {
+    "primary": ["stable rectangle", "wide foot", "protected cylinder"],
+    "secondary": ["thick chamfer", "framed inset", "locking tab"],
+    "signature": "paired protected fasteners framing one readable status core",
+    "asymmetryPolicy": "functional-only and below 0.12 projected area"
+  },
+  "palette": {"neutralDark": "#354052", "neutralMid": "#68717F", "neutralLight": "#B7C1CC", "buildable": "#D58B31", "interactive": "#61E7C4", "critical": "#E64A4A", "enemy": "#73935C"},
+  "materialBias": ["painted_metal", "polymer", "rubber"],
+  "bevelFamiliesStuds": {"primary": [0.12, 0.18], "secondary": [0.06, 0.10], "tertiary": [0.02, 0.04]},
+  "damageLanguage": "one displaced panel, one directional fracture and exposed dark support; never confetti debris"
+}

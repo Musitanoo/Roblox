@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/smoke-evidence.schema.json",
+  "title": "Blender Smoke Evidence Attestation",
+  "type": "object",
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "render": {
+      "type": "object",
+      "required": ["jobId", "path", "sha256"],
+      "properties": {
+        "jobId": {"type": "string", "minLength": 1},
+        "path": {"type": "string", "pattern": "^build/[^/]+/renders/smoke/.+\\.png$"},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      },
+      "unevaluatedProperties": false
+    },
+    "stress": {
+      "type": "object",
+      "required": ["sceneId", "count", "path", "sha256"],
+      "properties": {
+        "sceneId": {"enum": ["stress_barricade_30", "stress_enemy_standard_30"]},
+        "count": {"const": 30},
+        "path": {"type": "string", "pattern": "^build/[^/]+/renders/smoke/.+\\.png$"},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      },
+      "unevaluatedProperties": false
+    },
+    "territory": {
+      "type": "object",
+      "required": ["territoryId", "status", "buildReportSha256", "inputHashes", "expectedRenderCount", "actualRenderCount", "renderEvidenceComplete", "renderEvidence", "stressEvidence"],
+      "properties": {
+        "territoryId": {"enum": ["industrial-toy-defense", "salvaged-frontier", "clean-tactical-diorama"]},
+        "status": {"const": "PASS"},
+        "buildReportSha256": {"$ref": "#/$defs/sha256"},
+        "inputHashes": {
+          "type": "object",
+          "required": ["territory", "calibration", "camera", "renderMatrix", "lighting", "generator"],
+          "additionalProperties": {"$ref": "#/$defs/sha256"}
+        },
+        "expectedRenderCount": {"const": 108},
+        "actualRenderCount": {"const": 108},
+        "renderEvidenceComplete": {"const": true},
+        "renderEvidence": {"type": "array", "minItems": 108, "maxItems": 108, "items": {"$ref": "#/$defs/render"}},
+        "stressEvidence": {"type": "array", "minItems": 2, "maxItems": 2, "items": {"$ref": "#/$defs/stress"}}
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "required": ["$schema", "schemaVersion", "status", "generatedAt", "evidenceTier", "rendererTruth", "territories", "totalExpectedRenderCount", "totalActualRenderCount", "totalStressRenderCount", "artifactsBundled", "artifactRetentionNote", "issues"],
+  "properties": {
+    "$schema": {"const": "https://roblox-top1.local/schemas/smoke-evidence.schema.json"},
+    "schemaVersion": {"const": "3.0.0"},
+    "status": {"const": "PASS"},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "evidenceTier": {"const": "SMOKE_COMPLETE"},
+    "rendererTruth": {"const": "BLENDER_PREFLIGHT_ONLY_STUDIO_IS_CANONICAL"},
+    "territories": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"$ref": "#/$defs/territory"}},
+    "totalExpectedRenderCount": {"const": 324},
+    "totalActualRenderCount": {"const": 324},
+    "totalStressRenderCount": {"const": 6},
+    "artifactsBundled": {"const": false},
+    "artifactRetentionNote": {"type": "string", "minLength": 1},
+    "issues": {"type": "array", "maxItems": 0, "items": {"type": "string"}}
+  },
+  "unevaluatedProperties": false
+}

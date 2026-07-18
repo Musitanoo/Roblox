@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/blind-study-manifest.schema.json",
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "studyId",
+    "status",
+    "generatedAt",
+    "publicPackageId",
+    "privacyCheck",
+    "targets",
+    "artifacts",
+    "externalBlockers"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/blind-study-manifest.schema.json"
+    },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "studyId": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "READY_FOR_HUMAN_COLLECTION",
+        "SEALED",
+        "BLOCKED"
+      ]
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "publicPackageId": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "privacyCheck": {
+      "type": "object",
+      "required": [
+        "status",
+        "forbiddenIdentifiersFound"
+      ],
+      "properties": {
+        "status": {
+          "const": "PASS"
+        },
+        "forbiddenIdentifiersFound": {
+          "type": "array",
+          "maxItems": 0
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "targets": {
+      "type": "object",
+      "required": [
+        "minimumParticipants",
+        "targetParticipants",
+        "minimumExperts",
+        "targetExperts",
+        "trialsPerParticipant",
+        "ratingsPerExpert"
+      ],
+      "properties": {
+        "minimumParticipants": {
+          "type": "integer",
+          "minimum": 8
+        },
+        "targetParticipants": {
+          "type": "integer",
+          "minimum": 8
+        },
+        "minimumExperts": {
+          "type": "integer",
+          "minimum": 2
+        },
+        "targetExperts": {
+          "type": "integer",
+          "minimum": 2
+        },
+        "trialsPerParticipant": {
+          "const": 30
+        },
+        "ratingsPerExpert": {
+          "const": 27
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "artifacts": {
+      "type": "array",
+      "minItems": 8,
+      "items": {
+        "type": "object",
+        "required": [
+          "kind",
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "kind": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "unevaluatedProperties": false
+      }
+    },
+    "externalBlockers": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 3
+      }
+    }
+  },
+  "unevaluatedProperties": false
+}

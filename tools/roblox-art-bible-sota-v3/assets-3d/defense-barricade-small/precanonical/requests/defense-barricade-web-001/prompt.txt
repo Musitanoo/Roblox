@@ -1,0 +1,73 @@
+PRECANONICAL VISUALIZATION — NOT A 3D OR CANONICAL AUTHORITY
+
+Reconstruct the following gameplay object as a visual design proposal. Do not
+invent missing functions, hidden mechanisms, logos, text or additional parts.
+
+ART-DIRECTION PRECEDENCE
+- Salvaged Frontier is the sole identity authority.
+- Industrial Toy Defense contributes readability discipline only.
+- Never create a fifty-fifty hybrid or a literal construction toy.
+- Thesis: A warm, intelligent frontier civilization survives by standardizing what must remain dependable and visibly adapting what history has damaged. Every object is a clear tool first, a record of player ingenuity second, and decorative scenery never.
+- Standardized chassis share: 75%–85%.
+- Authored adaptation share: 15%–25%.
+- Detail hierarchy: 72% primary, 23% secondary, 5% tertiary.
+- Global asymmetry target: 0.24, maximum 0.36.
+
+OBJECT IDENTITY
+- Name: Defense Barricade Small
+- Gameplay function: A temporary player-built barrier that delays ground enemies, exposes understandable damage and creates time for the group to adapt its defense.
+- One-second read: The player must immediately read a broad grounded friendly barrier, its threat-facing side, its repair access and whether it remains intact, damaged or critical.
+- World role: A dependable standardized fortress module carrying one visible field reinforcement that records how its builders adapted a previously weak defensive line.
+- Emotional intent: Competent, protective and hopeful under pressure: the barricade should feel maintained and worth repairing, never improvised trash or disposable scenery.
+- Dimensions: 8.0 × 4.0 × 2.0 Roblox studs.
+- Front: The broad reinforced face points toward incoming enemies.
+- Player side: The calmer rear face exposes a protected mint repair status socket.
+- Threat side: The threat-facing side presents continuous armor masses and no interaction-colored focal point.
+- Collision promise: A simple rectangular gameplay hitbox matches the broad frame and never follows small repair details or displaced cosmetic fragments.
+- Expected simultaneous instances: 30
+
+REQUIRED COMPONENTS
+- ground_feet: Provide an honest broad footprint and transfer impact into the ground. (fixed)
+- standard_frame: Carry the stable family silhouette, dimensions and collision promise. (fixed)
+- armor_panels: Form three large readable defensive masses inside the chassis. (destructible)
+- repair_brace: Record one purposeful reinforcement of a known weak span. (replaceable)
+- repair_socket: Expose the safe-side interaction and state signal without dominating the silhouette. (fixed)
+
+INTERACTION ZONES
+- repair_socket at Upper-right area of the rear service face.: Communicate the player-safe repair and inspection point.; cue: A protected recessed socket with a small local mint light and a distinct complete shape.
+
+STATES — ALL DERIVE FROM THE SAME OBJECT
+- intact: All three armor masses remain seated; one older copper reinforcement may remain as maintained history. | invariants: footprint, pivot, frame proportions, repair socket location, three-panel identity
+- damaged: One threat-facing panel shifts or opens along the declared weak span while the same frame and repair path remain obvious. | invariants: footprint, pivot, frame proportions, repair socket location, component identities
+- critical: The same failure chain widens: a second major separation exposes the load path and the structure visibly sags without changing its footprint. | invariants: footprint, pivot, repair socket location, standard frame identity, recognizable original silhouette
+
+OBLIGATIONS
+- Preserve a wide, low and grounded defensive silhouette with two visibly load-bearing feet.
+- Use three large panel masses within a standardized thick frame.
+- Show exactly one dominant reinforcement story classified as reinforcement.
+- Keep the rear repair socket protected, local and readable from the elevated gameplay camera.
+- Make damage progress through one causal failure chain while preserving the same object.
+
+CONSTRAINTS
+- Keep standardized chassis share between seventy-five and eighty-five percent.
+- Keep authored adaptation share between fifteen and twenty-five percent.
+- Use at most three visible material families and no more than two repair narratives.
+- Keep asymmetry near 0.24 and below the constitution maximum of 0.36.
+- Maintain function, front direction and state readability at sixty studs and in groups of thirty.
+
+BOUNDED FREEDOMS
+- Explore the exact local angle and attachment language of the single copper reinforcement brace.
+- Vary controlled panel-edge wear and small fastener groupings without altering silhouette or function.
+- Explore subtle value differences among reclaimed composite panels inside the approved palette.
+
+STAGE INSTRUCTION
+Produce one clean 2x2 exploration sheet containing four genuinely different silhouette solutions. Each candidate must change at least two primary-mass or negative-space decisions while preserving the same required components, dimensions, front direction and gameplay function. A brace-angle, fastener, wear or trim swap alone is not a different silhouette. Keep the same scale, neutral camera and simplified materials. Do not label the candidates with generated text.
+
+OUTPUT DISCIPLINE
+- Stylized, chunky, purposefully repaired and readable on mobile.
+- Broad calm planes, explicit load paths, thick joints and protected apertures.
+- Deep slate chassis, bone-sand reclaimed composite and bounded sun-copper repair history.
+- Mint is local interaction information only; never broad decoration.
+- Neutral studio lighting and a neutral background.
+- No cinematic depth of field, environmental scene or unrelated props.
+- The proposal is visual evidence only and must not imply validated hidden geometry.

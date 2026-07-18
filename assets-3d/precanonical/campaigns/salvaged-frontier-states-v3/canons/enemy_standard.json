@@ -1,0 +1,750 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/visual-canon.schema.json",
+  "schemaVersion": "1.0.0",
+  "canonId": "vc_enemy_standard__salvaged-frontier__v1",
+  "assetId": "enemy_standard",
+  "territoryId": "salvaged-frontier",
+  "version": 1,
+  "status": "CANDIDATE",
+  "authority": {
+    "gdd": {
+      "path": "Roblox_Top_1_Game_Design_Document_v1.0.md",
+      "sha256": "fd3ba04f92d3b1578d8c7ebfd5d1d8b3a571bd0a5da910f9b45b3720983dc6a6"
+    },
+    "retention": {
+      "path": "plans/product-innovation-retention-doctrine.md",
+      "sha256": "98c1e9b2be8601c4ecc94b4e5da997fcfd73bf75b9b99c18831b61b71dc24562"
+    },
+    "artDirection": {
+      "path": "art/art-direction.json",
+      "sha256": "ab1e3b2607fc916fa660fb20b90c2b62ee6985a866c3a65090bef4996a7eef22"
+    },
+    "calibration": {
+      "path": "art/calibration/calibration-kit.json",
+      "sha256": "8a33c6c8a9b5a02ef460f5e698907a4d6d623e2f5c475047cd3dbdccc102ace9"
+    },
+    "shapeLanguage": {
+      "path": "art/shape-language/rules.json",
+      "sha256": "76fcd0eaaace7f34d7fb88fdc6470315518efd8e586649393ceb32356a7addc7"
+    },
+    "materials": {
+      "path": "art/materials/material-rules.json",
+      "sha256": "41fadb667eb50a2252e6721649afee1b38b98a667ea7c2051f5f465ad9896b83"
+    },
+    "selectedConstitution": {
+      "path": "art/selected/salvaged-frontier-constitution.json",
+      "sha256": "14d356e67f309ca891ede69d7964d8990716b782d59bcaae024e1bf94d9aa310"
+    }
+  },
+  "identity": {
+    "canonicalName": "Standard Horde Enemy",
+    "category": "baseline_walking_threat",
+    "gameplayFunction": "standard walking horde enemy",
+    "worldRole": "The readable baseline test unit that exposes whether the player's route, damage and defensive hypotheses actually work.",
+    "affiliation": "hostile_horde",
+    "manufactureContext": "A recurring expedition threat shaped by the hostile world rather than a player-like soldier, built for mass readability and fair telegraphing.",
+    "emotionalIntent": "Slightly unsettling, forceful and occasionally absurd, but never visually deceptive or gore-dependent.",
+    "technologyLevel": "world-adapted bio-mechanical scavenger",
+    "character": [
+      "forward-driven",
+      "heavy-handed",
+      "persistent",
+      "legible"
+    ],
+    "territoryVisualThesis": "A compressed scavenger threat whose forward wedge, heavy adapted limb and unstable shell history oppose the fortress's calm competence while remaining bold enough for horde readability."
+  },
+  "instantRead": {
+    "oneSecondPromise": "This compact forward-heavy creature advances toward the fortress, threatens structures, and clearly shows when it is weakened.",
+    "orientationCue": "A forward wedge, visor or head aperture leads the compressed torso; the rear closes into a service-like dorsal mass.",
+    "interactionCue": "No friendly interaction socket is present; readable target zones must not resemble repair affordances.",
+    "dangerCue": "Forward posture, heavy hands and threat accents communicate intent before attack effects begin.",
+    "relationToPlayer": "Hostile but fair test instrument whose telegraphs allow preparation, reaction and post-failure understanding.",
+    "responsibleElements": [
+      "forward wedge or visor",
+      "compressed torso",
+      "two oversized hands",
+      "short planted legs",
+      "A forward wedge, visor or head aperture leads the compressed torso; the rear closes into a service-like dorsal mass.",
+      "No friendly interaction socket is present; readable target zones must not resemble repair affordances.",
+      "Forward posture, heavy hands and threat accents communicate intent before attack effects begin."
+    ]
+  },
+  "dimensions": {
+    "unit": "stud",
+    "width": 2.5,
+    "height": 5.5,
+    "depth": 2.5,
+    "toleranceStuds": 0.005,
+    "pivot": "feet_center",
+    "proportionRules": [
+      "The torso and shoulder mass dominate over limbs.",
+      "Hands are oversized enough to communicate structural threat at distance.",
+      "Legs remain short and planted so the silhouette cannot be confused with a player avatar.",
+      "The forward wedge remains inside the two-and-a-half-stud width."
+    ]
+  },
+  "silhouette": {
+    "targetReadDistanceStuds": 60,
+    "views": {
+      "front": "A compressed non-human threat with broad shoulder mass, heavy hands and a clear forward visor or wedge.",
+      "back": "A closed dorsal mass and narrower rear silhouette separate retreat direction from the active threat face.",
+      "left": "The forward lean, compact legs and heavy leading arm reveal attack intent without animation.",
+      "right": "The counter-profile preserves forward weight while approved asymmetry may shift armor or one heavy hand.",
+      "top": "A tapered forward footprint points toward the target and avoids a player-like shoulder rectangle.",
+      "bottom": "Two grounded feet and compact leg connections remain simple and robust for animation and mobile visibility.",
+      "threeQuarterFront": "The canonical read combines forward wedge, heavy hands, compressed torso and fortress-facing momentum.",
+      "threeQuarterBack": "The dorsal mass and rear taper remain readable without adding decorative appendages.",
+      "gameCamera": "In a horde, each unit remains one forward-driving threat token with clear state posture and no thin-limb noise."
+    },
+    "recognitionLandmarks": [
+      "forward wedge or visor",
+      "compressed torso",
+      "two oversized hands",
+      "short planted legs"
+    ],
+    "negativeSpaces": [
+      "clear gap between heavy hands and torso",
+      "small leg separation readable from front",
+      "rear taper around dorsal mass"
+    ],
+    "intentionalAsymmetry": "Twenty-four-percent controlled asymmetry expresses adaptation inside a seventy-five-to-eighty-five-percent standardized chassis; footprint, facing, collision promise, pivots and gameplay anchors remain fixed.",
+    "distanceRule": "The primary function, orientation and state must remain readable at 60 studs in the canonical mobile landscape and portrait views."
+  },
+  "formHierarchy": {
+    "targetRatios": {
+      "primary": 0.72,
+      "secondary": 0.23,
+      "tertiary": 0.05
+    },
+    "primary": [
+      "compressed capsule torso",
+      "forward wedge head",
+      "two heavy hand masses"
+    ],
+    "secondary": [
+      "shoulder armor",
+      "short planted legs",
+      "dorsal service or carapace mass"
+    ],
+    "tertiary": [
+      "one or two threat apertures",
+      "few large joint clamps",
+      "controlled world-adaptation scars"
+    ],
+    "territoryConstructionTranslation": "A thick compressed torso, blunt attacking hand and forward sensor establish behavior first; unequal shell plates and one burdened side imply hostile adaptation without using the player's copper authorship language."
+  },
+  "construction": {
+    "components": [
+      {
+        "id": "TorsoMass",
+        "function": "Carry the enemy identity, health posture and animation center.",
+        "position": "central upper body",
+        "form": "compressed capsule",
+        "materialRole": "primary",
+        "relationship": "Supports head wedge, shoulders, arms and compact legs.",
+        "mobility": "mobile",
+        "visibility": "Visible from every gameplay angle.",
+        "readingRole": "Primary silhouette and state posture carrier."
+      },
+      {
+        "id": "ForwardSensor",
+        "function": "Declare facing, target intent and hostile awareness.",
+        "position": "front upper torso",
+        "form": "wedge or active aperture",
+        "materialRole": "threat",
+        "relationship": "Embedded in the torso and aligned with movement direction.",
+        "mobility": "mobile",
+        "visibility": "Dominant from front and three-quarter front.",
+        "readingRole": "Prevents orientation ambiguity in a dense horde."
+      },
+      {
+        "id": "HeavyHands",
+        "function": "Communicate the ability to damage fortress structures.",
+        "position": "front lateral lower torso",
+        "form": "two oversized blunt masses",
+        "materialRole": "secondary",
+        "relationship": "Connected through thick visible arms and shoulders.",
+        "mobility": "mobile",
+        "visibility": "Readable from front, sides and game camera.",
+        "readingRole": "Makes threat type legible before the attack lands."
+      },
+      {
+        "id": "LocomotionBase",
+        "function": "Provide grounded, non-player-like walking support.",
+        "position": "lower body",
+        "form": "short legs and broad feet",
+        "materialRole": "rubber",
+        "relationship": "Carries the compressed torso with a forward-biased gait.",
+        "mobility": "mobile",
+        "visibility": "Visible at near and mid range, simplified at far range.",
+        "readingRole": "Signals persistent advance and stable contact."
+      }
+    ],
+    "plausibilityRules": [
+      "Every visible part belongs to a named component and has a functional relationship to at least one neighboring component.",
+      "No part floats, interpenetrates without an approved joint, or relies on unexplained support.",
+      "Moving, replaceable and destructible components preserve declared axes, anchors and clearance.",
+      "The compiler may simplify tertiary finish but may not remove a primary or secondary semantic component."
+    ],
+    "stableNamingRule": "Component IDs and gameplay anchors never change without an approved canon revision."
+  },
+  "artDirection": {
+    "territoryThesis": "A hopeful fortress culture of intelligent survival: calm standardized chassis make every tool dependable, while one or two visible adaptations turn scarcity, repair and shared history into proud authorship without post-apocalyptic noise.",
+    "shapeGrammar": [
+      "thick standardized rectangles and trapezoids",
+      "large protected apertures and explicit load-bearing joints",
+      "one localized offset brace or replacement module",
+      "mismatched but compatible secondary masses",
+      "visible replacement, reinforcement, sealing or rerouting logic"
+    ],
+    "exaggeration": "Function, load paths, service access and the single authored adaptation are enlarged enough to read on mobile; distress, dirt and tiny mechanics never carry identity.",
+    "edgeLanguage": "Large consistent structural bevels create calm readable highlights; only the boundary of an approved repair may use a sharper cut or visibly renewed edge, and nothing becomes razor-thin.",
+    "detailDensity": "Low secondary construction density and extremely low tertiary density; seventy-two percent primary mass, twenty-three percent functional secondary structure and five percent causal finish.",
+    "asymmetry": "Twenty-four-percent controlled asymmetry expresses adaptation inside a seventy-five-to-eighty-five-percent standardized chassis; footprint, facing, collision promise, pivots and gameplay anchors remain fixed.",
+    "materialLanguage": "Deep coated structure, reclaimed composite panels, exposed durable metal, matte contacts and rare contextual wood surround carefully protected interaction technology.",
+    "paletteLogic": "Deep slate and bone-sand create a quiet frontier base; sun-baked copper identifies player intervention, while mint interaction, raspberry threat, gold warning and red critical remain bounded semantic roles.",
+    "surfaceTreatment": "Broad calm planes, one or two patch boundaries and directional abrasion tell a construction history without uniform grime, material roulette or photoreal texture chatter.",
+    "wearLogic": "Every scar must name a cause: prior impact, heat, hand contact, ground abrasion or an approved repair operation; damage widens one causal chain and repair reverses it.",
+    "signatureDetails": [
+      "one heavier hostile hand",
+      "one offset burdened dorsal shell",
+      "raspberry forward sensor with no friendly copper frame"
+    ],
+    "forbidden": [
+      "random junk pile silhouette",
+      "uniform rust",
+      "decorative repair with no causal reason",
+      "more than three visible material families",
+      "loose cable spaghetti",
+      "asymmetry that changes gameplay anchors",
+      "literal construction-toy motifs or pristine molded-plastic identity"
+    ]
+  },
+  "materials": [
+    {
+      "zoneId": "body_zone",
+      "family": "stylized_hostile_shell",
+      "semanticRole": "primary",
+      "valueRange": "middle-dark",
+      "surfaceFinish": "Broad faceted shell or worn composite with controlled highlights.",
+      "wear": "Directional world wear and defensive impacts, never gore.",
+      "boundaryRule": "Body shell stays distinct from sensor, hands and exposed structure.",
+      "lightingBehavior": "Maintains a readable body mass against both light and dark grounds.",
+      "territoryTranslation": "Deep coated structure, reclaimed composite panels, exposed durable metal, matte contacts and rare contextual wood surround carefully protected interaction technology. Broad calm planes, one or two patch boundaries and directional abrasion tell a construction history without uniform grime, material roulette or photoreal texture chatter. Palette rule: Deep slate and bone-sand create a quiet frontier base; sun-baked copper identifies player intervention, while mint interaction, raspberry threat, gold warning and red critical remain bounded semantic roles."
+    },
+    {
+      "zoneId": "threat_zone",
+      "family": "hostile_sensor",
+      "semanticRole": "threat",
+      "valueRange": "small bright or dark high contrast",
+      "surfaceFinish": "Contained aperture with no friendly ring language.",
+      "wear": "State-driven interruption, not dirt.",
+      "boundaryRule": "Threat accent remains concentrated at the forward face.",
+      "lightingBehavior": "Never blooms enough to erase wedge orientation.",
+      "territoryTranslation": "Deep coated structure, reclaimed composite panels, exposed durable metal, matte contacts and rare contextual wood surround carefully protected interaction technology. Broad calm planes, one or two patch boundaries and directional abrasion tell a construction history without uniform grime, material roulette or photoreal texture chatter. Palette rule: Deep slate and bone-sand create a quiet frontier base; sun-baked copper identifies player intervention, while mint interaction, raspberry threat, gold warning and red critical remain bounded semantic roles."
+    },
+    {
+      "zoneId": "attack_zone",
+      "family": "impact_limb",
+      "semanticRole": "secondary",
+      "valueRange": "middle value",
+      "surfaceFinish": "Blunt durable surfaces with readable contact planes.",
+      "wear": "Concentrated on leading knuckles or impact faces.",
+      "boundaryRule": "Hands remain visually separate from torso and ground.",
+      "lightingBehavior": "Preserves negative space during horde overlap.",
+      "territoryTranslation": "Deep coated structure, reclaimed composite panels, exposed durable metal, matte contacts and rare contextual wood surround carefully protected interaction technology. Broad calm planes, one or two patch boundaries and directional abrasion tell a construction history without uniform grime, material roulette or photoreal texture chatter. Palette rule: Deep slate and bone-sand create a quiet frontier base; sun-baked copper identifies player intervention, while mint interaction, raspberry threat, gold warning and red critical remain bounded semantic roles."
+    }
+  ],
+  "semanticZones": [
+    {
+      "id": "threat_zone",
+      "purpose": "Declare hostile facing and attack intent.",
+      "shapeRule": "Forward wedge plus heavy hands.",
+      "valueRule": "High-contrast front focal area.",
+      "colorRole": "threat",
+      "motionRule": "tracks target",
+      "vfxAnchor": "forward_sensor",
+      "audioRole": "threat_telegraph"
+    },
+    {
+      "id": "body_zone",
+      "purpose": "Carry identity and readable health posture.",
+      "shapeRule": "Compressed torso with broad shoulders.",
+      "valueRule": "Dominant mid-dark mass.",
+      "colorRole": "primary",
+      "motionRule": "forward gait",
+      "vfxAnchor": "torso_center",
+      "audioRole": "body_impacts"
+    },
+    {
+      "id": "attack_zone",
+      "purpose": "Show what physically threatens the fortress.",
+      "shapeRule": "Oversized blunt hands separated from torso.",
+      "valueRule": "Readable secondary masses.",
+      "colorRole": "secondary",
+      "motionRule": "windup and strike",
+      "vfxAnchor": "hand_impacts",
+      "audioRole": "attack_windup"
+    },
+    {
+      "id": "vulnerability_zone",
+      "purpose": "Make worsening health readable without gore.",
+      "shapeRule": "Posture collapse and exposed non-gory structure.",
+      "valueRule": "Warning or critical contrast at causal break.",
+      "colorRole": "warning",
+      "motionRule": "staggered gait",
+      "vfxAnchor": "largest_damage",
+      "audioRole": "strain_and_stagger"
+    }
+  ],
+  "states": [
+    {
+      "id": "intact",
+      "summary": "A forward-driven, balanced baseline threat with active sensor, heavy hands and a steady gait toward the fortress.",
+      "invariants": [
+        "Two-and-a-half by five-and-a-half by two-and-a-half bounds and feet-center pivot remain fixed.",
+        "Forward sensor, compressed torso, heavy hands and short legs remain recognizable.",
+        "The enemy never becomes player-proportioned or gains friendly interaction language.",
+        "Damage changes posture and exposure without changing hitbox anchors arbitrarily.",
+        "Threat direction remains readable before attack VFX or audio."
+      ],
+      "changes": [
+        "Torso remains compressed and forward-biased.",
+        "Both heavy hands and the forward sensor are fully active."
+      ],
+      "cues": {
+        "shape": [
+          "balanced heavy hands",
+          "clear forward wedge",
+          "upright compressed torso"
+        ],
+        "silhouette": [
+          "balanced heavy hands",
+          "clear forward wedge",
+          "upright compressed torso"
+        ],
+        "value": [
+          "stable body mass",
+          "small high-contrast threat face"
+        ],
+        "color": [
+          "contained threat accent",
+          "no warning or critical spread"
+        ],
+        "light": [
+          "steady hostile sensor",
+          "no flicker"
+        ],
+        "motion": [
+          "steady forward gait",
+          "clear attack windup"
+        ],
+        "vfx": [
+          "minimal foot contact",
+          "attack VFX only after telegraph"
+        ],
+        "audio": [
+          "regular heavy steps",
+          "distinct pre-attack cue"
+        ]
+      },
+      "componentOperations": [
+        {
+          "componentId": "ForwardSensor",
+          "operation": "EMIT",
+          "description": "Maintain the steady hostile-facing signal."
+        },
+        {
+          "componentId": "HeavyHands",
+          "operation": "PRESERVE",
+          "description": "Keep both attack masses complete and readable."
+        }
+      ],
+      "transitions": [
+        {
+          "to": "damaged",
+          "durationSeconds": 0.25,
+          "sequence": [
+            "directional hit reaction",
+            "one shoulder drops",
+            "sensor flickers",
+            "gait becomes uneven"
+          ],
+          "reversible": false
+        }
+      ],
+      "territoryTranslation": "Damage drops the burdened side and opens one large shell joint; critical state deepens the same non-gory exposure and collapses posture without adding noisy fragments."
+    },
+    {
+      "id": "damaged",
+      "summary": "A visible asymmetric stagger and one weakened attack side show reduced health while facing, role and route pressure remain clear.",
+      "invariants": [
+        "Two-and-a-half by five-and-a-half by two-and-a-half bounds and feet-center pivot remain fixed.",
+        "Forward sensor, compressed torso, heavy hands and short legs remain recognizable.",
+        "The enemy never becomes player-proportioned or gains friendly interaction language.",
+        "Damage changes posture and exposure without changing hitbox anchors arbitrarily.",
+        "Threat direction remains readable before attack VFX or audio."
+      ],
+      "changes": [
+        "One shoulder or heavy hand drops within approved articulation limits.",
+        "The sensor flickers and the gait becomes asymmetrically labored."
+      ],
+      "cues": {
+        "shape": [
+          "one lowered shoulder",
+          "uneven hand height",
+          "forward wedge remains visible"
+        ],
+        "silhouette": [
+          "one lowered shoulder",
+          "uneven hand height",
+          "forward wedge remains visible"
+        ],
+        "value": [
+          "one exposed bright structure edge",
+          "warning contrast on damaged side"
+        ],
+        "color": [
+          "warning accent local to damaged side",
+          "threat accent remains at front"
+        ],
+        "light": [
+          "brief sensor interruption",
+          "warning flicker after impacts"
+        ],
+        "motion": [
+          "asymmetric staggered gait",
+          "slower recovery after strike"
+        ],
+        "vfx": [
+          "short directional impact fragment",
+          "rare non-occluding spark or dust"
+        ],
+        "audio": [
+          "uneven step cadence",
+          "audible strain before attack"
+        ]
+      },
+      "componentOperations": [
+        {
+          "componentId": "HeavyHands",
+          "operation": "ROTATE",
+          "description": "Lower one hand and shoulder while preserving attack readability."
+        },
+        {
+          "componentId": "ForwardSensor",
+          "operation": "EMIT",
+          "description": "Use an interrupted hostile signal rather than a color-only change."
+        }
+      ],
+      "transitions": [
+        {
+          "to": "critical",
+          "durationSeconds": 0.3,
+          "sequence": [
+            "second major stagger",
+            "torso compresses lower",
+            "one attack mass becomes unusable",
+            "sensor enters critical pulse"
+          ],
+          "reversible": false
+        }
+      ],
+      "territoryTranslation": "Damage drops the burdened side and opens one large shell joint; critical state deepens the same non-gory exposure and collapses posture without adding noisy fragments."
+    },
+    {
+      "id": "critical",
+      "summary": "A low collapsing posture, disabled attack side and broken sensor rhythm communicate imminent defeat without gore or identity loss.",
+      "invariants": [
+        "Two-and-a-half by five-and-a-half by two-and-a-half bounds and feet-center pivot remain fixed.",
+        "Forward sensor, compressed torso, heavy hands and short legs remain recognizable.",
+        "The enemy never becomes player-proportioned or gains friendly interaction language.",
+        "Damage changes posture and exposure without changing hitbox anchors arbitrarily.",
+        "Threat direction remains readable before attack VFX or audio."
+      ],
+      "changes": [
+        "Torso drops and leans while the feet remain grounded.",
+        "One attack side becomes visibly unusable and the sensor enters a broken critical rhythm."
+      ],
+      "cues": {
+        "shape": [
+          "low compressed posture",
+          "one unusable attack side",
+          "forward direction still readable"
+        ],
+        "silhouette": [
+          "low compressed posture",
+          "one unusable attack side",
+          "forward direction still readable"
+        ],
+        "value": [
+          "dark collapsed body",
+          "small critical exposed region"
+        ],
+        "color": [
+          "critical accent limited to sensor or exposed structure",
+          "base hostile palette remains dominant"
+        ],
+        "light": [
+          "broken critical sensor pulse",
+          "long dark gaps"
+        ],
+        "motion": [
+          "labored short gait",
+          "failed or greatly slowed attack recovery"
+        ],
+        "vfx": [
+          "brief residual dust at each stagger",
+          "no persistent fog"
+        ],
+        "audio": [
+          "broken step rhythm",
+          "low critical strain"
+        ]
+      },
+      "componentOperations": [
+        {
+          "componentId": "TorsoMass",
+          "operation": "ROTATE",
+          "description": "Lower and lean the torso inside the stable gameplay footprint."
+        },
+        {
+          "componentId": "HeavyHands",
+          "operation": "MOVE",
+          "description": "Make one attack side visibly unusable without detached gore."
+        },
+        {
+          "componentId": "ForwardSensor",
+          "operation": "EMIT",
+          "description": "Use an irregular critical rhythm with dark gaps."
+        }
+      ],
+      "transitions": [],
+      "territoryTranslation": "Damage drops the burdened side and opens one large shell joint; critical state deepens the same non-gory exposure and collapses posture without adding noisy fragments."
+    }
+  ],
+  "invariants": [
+    "Two-and-a-half by five-and-a-half by two-and-a-half bounds and feet-center pivot remain fixed.",
+    "Forward sensor, compressed torso, heavy hands and short legs remain recognizable.",
+    "The enemy never becomes player-proportioned or gains friendly interaction language.",
+    "Damage changes posture and exposure without changing hitbox anchors arbitrarily.",
+    "Threat direction remains readable before attack VFX or audio."
+  ],
+  "allowedVariations": [
+    {
+      "id": "shell_scars",
+      "range": "zero to three broad non-gory marks",
+      "justification": "Adds horde variation without changing role recognition."
+    },
+    {
+      "id": "hand_asymmetry",
+      "range": "up to territory asymmetry target",
+      "justification": "Creates character while keeping both hands readable as the attack family."
+    },
+    {
+      "id": "gait_phase",
+      "range": "full animation phase with shared pose limits",
+      "justification": "Prevents synchronized horde motion without changing telegraph timing."
+    }
+  ],
+  "forbidden": [
+    "player-like heroic proportions",
+    "thin limb silhouette",
+    "gore, exposed organs or realistic wounds",
+    "friendly complete interaction ring",
+    "hidden front direction",
+    "uniform particle fog around the enemy",
+    "decorative horns, wings or weapons not defined by gameplay",
+    "random junk pile silhouette",
+    "uniform rust",
+    "decorative repair with no causal reason",
+    "more than three visible material families",
+    "loose cable spaghetti",
+    "asymmetry that changes gameplay anchors",
+    "literal construction-toy motifs or pristine molded-plastic identity",
+    "thin_loose_wires",
+    "microtext",
+    "free_floating_fragments",
+    "detail_without_silhouette_function_identity"
+  ],
+  "visualPacket": {
+    "status": "SPECIFIED",
+    "coverageRule": "If a component or state is absent from every bound board, the canon is incomplete and cannot be LOCKED.",
+    "boards": [
+      {
+        "id": "orthographic",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "perspective",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "black_silhouette",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "component_breakdown",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "proportions",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "materials",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "semantic_zones",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "all_states",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "state_comparison",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "mobile_near",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "mobile_mid",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "mobile_far",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "lighting_matrix",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "repetition_1",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "repetition_30",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "repetition_100",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "required_and_forbidden_annotations",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      }
+    ]
+  },
+  "generationContract": {
+    "mode": "RECONSTRUCT_CANON_DO_NOT_AUTHOR_OBJECT",
+    "obligations": [
+      "Reconstruct every primary and secondary component defined by this canon.",
+      "Produce every required state from the same component structure and stable anchors.",
+      "Preserve the one-second function, front, interaction, danger and state readings.",
+      "Record this canon ID and exact SHA-256 in the compliance envelope."
+    ],
+    "constraints": [
+      "Dimensions are 2.5 x 5.5 x 2.5 studs with tolerance 0.005.",
+      "Triangle budget maximum is 5000.",
+      "Texture class is medium.",
+      "Pivot is feet_center and component anchors remain stable.",
+      "One UV set and one material slot maximum per production mesh component."
+    ],
+    "tolerances": [
+      "Dimension error may not exceed 0.005 stud.",
+      "Only the explicitly listed allowedVariations may vary.",
+      "Tertiary details may be simplified when they fall below the minimum mobile screen-space band."
+    ],
+    "forbidden": [
+      "player-like heroic proportions",
+      "thin limb silhouette",
+      "gore, exposed organs or realistic wounds",
+      "friendly complete interaction ring",
+      "hidden front direction",
+      "uniform particle fog around the enemy",
+      "decorative horns, wings or weapons not defined by gameplay",
+      "random junk pile silhouette",
+      "uniform rust",
+      "decorative repair with no causal reason",
+      "more than three visible material families",
+      "loose cable spaghetti",
+      "asymmetry that changes gameplay anchors",
+      "literal construction-toy motifs or pristine molded-plastic identity",
+      "thin_loose_wires",
+      "microtext",
+      "free_floating_fragments",
+      "detail_without_silhouette_function_identity"
+    ],
+    "complianceReportRequired": true,
+    "minimumStatusForExploration": "CANDIDATE",
+    "minimumStatusForProduction": "LOCKED",
+    "silentCanonMutationForbidden": true
+  },
+  "approval": {
+    "required": true,
+    "status": "PENDING",
+    "approvedBy": null,
+    "approvedAt": null,
+    "decisionRecord": null,
+    "approvedEvidencePackageSha256": null,
+    "revisionReason": null
+  },
+  "provenance": {
+    "sourceKind": "AUTHORED_CANON_COMPILED_FROM_GDD_RETENTION_AND_ART_GRAMMAR",
+    "authoredAt": "2026-07-16T15:36:48Z",
+    "authoredBy": "Codex under founder authority; human lock still required",
+    "generator": "tools.art.build_visual_canons",
+    "inputHashes": {
+      "source": "01b7ca9fff037cd1ff2b1d887db3af0156cd13feb0dfbb5ad6bce6673b0e5633",
+      "gdd": "fd3ba04f92d3b1578d8c7ebfd5d1d8b3a571bd0a5da910f9b45b3720983dc6a6",
+      "retention": "98c1e9b2be8601c4ecc94b4e5da997fcfd73bf75b9b99c18831b61b71dc24562",
+      "artDirection": "ab1e3b2607fc916fa660fb20b90c2b62ee6985a866c3a65090bef4996a7eef22",
+      "calibration": "8a33c6c8a9b5a02ef460f5e698907a4d6d623e2f5c475047cd3dbdccc102ace9",
+      "shapeLanguage": "76fcd0eaaace7f34d7fb88fdc6470315518efd8e586649393ceb32356a7addc7",
+      "materials": "41fadb667eb50a2252e6721649afee1b38b98a667ea7c2051f5f465ad9896b83",
+      "selectedConstitution": "14d356e67f309ca891ede69d7964d8990716b782d59bcaae024e1bf94d9aa310",
+      "territory": "c0d4adf11e932f649812ce58cb07239264fbbc73690d90ee8eb044dcd4f52361",
+      "generator": "7a3f0ab925868cbbafb5971da66a04ec15dcbb018c0b3ab5a7ea75fb687b7f5d"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0.0",
+  "states": [
+    {
+      "id": "damaged",
+      "visualChange": "One localized failure makes the barrier visibly weaker while the chassis, footprint and repair affordance remain unmistakably usable. One panel drops, opens or shifts along a plausible joint. One frame or bracket break exposes bare structure without creating a full passage.",
+      "invariants": [
+        "Dimensions, footprint, pivot and front orientation remain fixed across territories and states.",
+        "The structural frame, two-foot grounding logic and three-bay rhythm remain recognizable.",
+        "The player interaction point remains on the safe rear side at the same gameplay anchor.",
+        "Damage never moves the collision footprint or invents detached gameplay-blocking fragments.",
+        "Component IDs and effect anchors remain stable across regeneration."
+      ]
+    }
+  ],
+  "independentStateDesignForbidden": true
+}

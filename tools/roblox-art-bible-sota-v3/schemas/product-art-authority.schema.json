@@ -1,0 +1,210 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/product-art-authority.schema.json",
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "stringList": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 3
+      }
+    }
+  },
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "authorityId",
+    "version",
+    "status",
+    "productionApproved",
+    "recordedAt",
+    "recordedBy",
+    "sourceProjection",
+    "globalRules",
+    "hypothesisBoundaries",
+    "changePolicy"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/product-art-authority.schema.json"
+    },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "authorityId": {
+      "const": "product-art-authority-v1"
+    },
+    "version": {
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "status": {
+      "const": "ACCEPTED_TECHNICAL_PROJECTION"
+    },
+    "productionApproved": {
+      "const": false
+    },
+    "recordedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "recordedBy": {
+      "type": "string",
+      "minLength": 10
+    },
+    "sourceProjection": {
+      "type": "object",
+      "required": [
+        "gddPath",
+        "gddDocumentVersion",
+        "sectionHeadings",
+        "contentSha256"
+      ],
+      "properties": {
+        "gddPath": {
+          "const": "Roblox_Top_1_Game_Design_Document_v1.0.md"
+        },
+        "gddDocumentVersion": {
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "sectionHeadings": {
+          "$ref": "#/$defs/stringList"
+        },
+        "contentSha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "globalRules": {
+      "type": "object",
+      "required": [
+        "productPromise",
+        "retentionRole",
+        "readability",
+        "failureLanguage",
+        "stateRedundancy",
+        "productionRule",
+        "silentMutationForbidden",
+        "detailHierarchy"
+      ],
+      "properties": {
+        "productPromise": {
+          "type": "string",
+          "minLength": 20
+        },
+        "retentionRole": {
+          "type": "string",
+          "minLength": 20
+        },
+        "readability": {
+          "$ref": "#/$defs/stringList"
+        },
+        "failureLanguage": {
+          "$ref": "#/$defs/stringList"
+        },
+        "stateRedundancy": {
+          "const": [
+            "shape",
+            "silhouette",
+            "value",
+            "color",
+            "light",
+            "motion",
+            "vfx",
+            "audio"
+          ]
+        },
+        "productionRule": {
+          "type": "string",
+          "minLength": 20
+        },
+        "silentMutationForbidden": {
+          "const": true
+        },
+        "detailHierarchy": {
+          "type": "object",
+          "required": [
+            "primary",
+            "secondary",
+            "tertiary"
+          ],
+          "properties": {
+            "primary": {
+              "const": 0.72
+            },
+            "secondary": {
+              "const": 0.23
+            },
+            "tertiary": {
+              "const": 0.05
+            }
+          },
+          "unevaluatedProperties": false
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "hypothesisBoundaries": {
+      "type": "object",
+      "required": [
+        "hordeLearning"
+      ],
+      "properties": {
+        "hordeLearning": {
+          "type": "object",
+          "required": [
+            "status",
+            "visualMarketingClaimAllowed",
+            "rule"
+          ],
+          "properties": {
+            "status": {
+              "const": "UNPROVEN"
+            },
+            "visualMarketingClaimAllowed": {
+              "const": false
+            },
+            "rule": {
+              "type": "string",
+              "minLength": 20
+            }
+          },
+          "unevaluatedProperties": false
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "changePolicy": {
+      "type": "object",
+      "required": [
+        "unrelatedGddEditsInvalidateCanons",
+        "selectedSectionEditsInvalidateCanons",
+        "migrationRequired",
+        "historicalEvidenceImmutable"
+      ],
+      "properties": {
+        "unrelatedGddEditsInvalidateCanons": {
+          "const": false
+        },
+        "selectedSectionEditsInvalidateCanons": {
+          "const": true
+        },
+        "migrationRequired": {
+          "const": true
+        },
+        "historicalEvidenceImmutable": {
+          "const": true
+        }
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

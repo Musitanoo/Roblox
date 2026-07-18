@@ -1,0 +1,311 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/material-rules.schema.json",
+  "$defs": {
+    "semanticRoleProfile": {
+      "type": "object",
+      "required": ["blender", "studio"],
+      "properties": {
+        "blender": {
+          "type": "object",
+          "required": ["roughness", "metallic", "coat", "emission"],
+          "properties": {
+            "roughness": {"type": "number", "minimum": 0, "maximum": 1},
+            "metallic": {"type": "number", "minimum": 0, "maximum": 1},
+            "coat": {"type": "number", "minimum": 0, "maximum": 1},
+            "emission": {"type": "number", "minimum": 0, "maximum": 1}
+          },
+          "unevaluatedProperties": false
+        },
+        "studio": {
+          "type": "object",
+          "required": ["material", "castShadow"],
+          "properties": {
+            "material": {"enum": ["SmoothPlastic", "Neon", "Rubber", "Metal"]},
+            "castShadow": {"type": "boolean"}
+          },
+          "unevaluatedProperties": false
+        }
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "robloxContract",
+    "textureClassRef",
+    "semanticRoleProfiles",
+    "materials",
+    "lightingRobustness"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/material-rules.schema.json"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "robloxContract": {
+      "type": "object",
+      "properties": {
+        "builtInMaterialsPreferredWhenIdentityPermits": {
+          "type": "boolean"
+        },
+        "emissiveCapabilityProbeRequired": {
+          "type": "boolean"
+        },
+        "internalTextureDimensionMax": {
+          "type": "number",
+          "minimum": 0
+        },
+        "materialSlotsMaxPerMeshObject": {
+          "type": "number",
+          "minimum": 0
+        },
+        "normalConvention": {
+          "type": "string",
+          "minLength": 1
+        },
+        "optionalCapabilityGatedMaps": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "maxItems": 1
+        },
+        "productionMapSet": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "uvRange": {
+          "type": "object",
+          "properties": {
+            "max": {
+              "type": "number",
+              "minimum": 0
+            },
+            "min": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "max",
+            "min"
+          ]
+        },
+        "uvSetsMaxPerMeshComponent": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": [
+        "builtInMaterialsPreferredWhenIdentityPermits",
+        "emissiveCapabilityProbeRequired",
+        "internalTextureDimensionMax",
+        "materialSlotsMaxPerMeshObject",
+        "normalConvention",
+        "optionalCapabilityGatedMaps",
+        "productionMapSet",
+        "uvRange",
+        "uvSetsMaxPerMeshComponent"
+      ]
+    },
+    "textureClassRef": {
+      "type": "string"
+    },
+    "semanticRoleProfiles": {
+      "type": "object",
+      "required": ["primary", "secondary", "accent", "interaction", "threat", "warning", "critical", "rubber", "bareMetal"],
+      "properties": {
+        "primary": {"$ref": "#/$defs/semanticRoleProfile"},
+        "secondary": {"$ref": "#/$defs/semanticRoleProfile"},
+        "accent": {"$ref": "#/$defs/semanticRoleProfile"},
+        "interaction": {"$ref": "#/$defs/semanticRoleProfile"},
+        "threat": {"$ref": "#/$defs/semanticRoleProfile"},
+        "warning": {"$ref": "#/$defs/semanticRoleProfile"},
+        "critical": {"$ref": "#/$defs/semanticRoleProfile"},
+        "rubber": {"$ref": "#/$defs/semanticRoleProfile"},
+        "bareMetal": {"$ref": "#/$defs/semanticRoleProfile"}
+      },
+      "additionalProperties": false
+    },
+    "materials": {
+      "type": "object",
+      "minProperties": 5,
+      "additionalProperties": false,
+      "patternProperties": {
+        "^[a-z_]+$": {
+          "type": "object",
+          "required": [
+            "baseColorRole",
+            "studioMaterial",
+            "roughness",
+            "metalness",
+            "normalStrengthMax",
+            "patternScaleStuds",
+            "dirtMax",
+            "stateBehavior",
+            "textureCostClass"
+          ],
+          "properties": {
+            "baseColorRole": {
+              "type": "string"
+            },
+            "studioMaterial": {
+              "enum": [
+                "SmoothPlastic",
+                "Metal",
+                "Rubber",
+                "WoodPlanks",
+                "Concrete",
+                "CorrodedMetal"
+              ]
+            },
+            "roughness": {
+              "type": "object",
+              "properties": {
+                "min": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "max": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                }
+              },
+              "required": [
+                "min",
+                "max"
+              ],
+              "unevaluatedProperties": false
+            },
+            "metalness": {
+              "type": "object",
+              "properties": {
+                "min": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                "max": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                }
+              },
+              "required": [
+                "min",
+                "max"
+              ],
+              "unevaluatedProperties": false
+            },
+            "normalStrengthMax": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "patternScaleStuds": {
+              "type": "object",
+              "properties": {
+                "min": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "max": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                }
+              },
+              "required": [
+                "min",
+                "max"
+              ],
+              "unevaluatedProperties": false
+            },
+            "dirtMax": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "stateBehavior": {
+              "type": "object",
+              "properties": {
+                "critical": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "damaged": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "intact": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "unevaluatedProperties": false,
+              "required": [
+                "critical",
+                "damaged",
+                "intact"
+              ]
+            },
+            "textureCostClass": {
+              "enum": [
+                "tiny",
+                "small",
+                "medium",
+                "large"
+              ]
+            }
+          },
+          "unevaluatedProperties": false
+        }
+      }
+    },
+    "lightingRobustness": {
+      "type": "object",
+      "properties": {
+        "forbidden": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "mustPassProfiles": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 4,
+          "maxItems": 4
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": [
+        "forbidden",
+        "mustPassProfiles"
+      ]
+    }
+  },
+  "unevaluatedProperties": false
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top-1.local/schemas/roblox-3d-asset-1.0.0.json",
+  "title": "Roblox 3D Asset Contract",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schemaVersion",
+    "assetKey",
+    "revision",
+    "visualCanon",
+    "dimensionsStuds",
+    "pivot",
+    "triangleBudget",
+    "materials",
+    "geometry",
+    "renders",
+    "publication"
+  ],
+  "properties": {
+    "schemaVersion": {"const": "1.0.0"},
+    "assetKey": {"type": "string", "pattern": "^[a-z][a-z0-9_]{2,63}$"},
+    "revision": {"type": "integer", "minimum": 1},
+    "visualCanon": {
+      "type": "object",
+      "required": [
+        "canonId",
+        "assetId",
+        "territoryId",
+        "path",
+        "sha256",
+        "minimumStatus",
+        "productionStatus"
+      ],
+      "properties": {
+        "canonId": {"type": "string", "pattern": "^vc_[a-z0-9_]+__[a-z0-9-]+__v[0-9]+$"},
+        "assetId": {"type": "string", "pattern": "^[a-z][a-z0-9_]+$"},
+        "territoryId": {"type": "string", "pattern": "^[a-z][a-z0-9-]+$"},
+        "path": {
+          "type": "string",
+          "pattern": "^(?!/)(?![A-Za-z]:)(?!.*\\\\)(?!.*(?:^|/)\\.\\.(?:/|$))(?:[^/]+/)*canonical-visuals/(?:[^/]+/)*[^/]+\\.json$"
+        },
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "minimumStatus": {"enum": ["CANDIDATE", "ACCEPTED", "LOCKED", "REVISED"]},
+        "productionStatus": {"const": "LOCKED"}
+      },
+      "additionalProperties": false
+    },
+    "pivot": {"const": "BASE_CENTER"},
+    "publication": {
+      "type": "object",
+      "required": ["environment", "createFormat", "updateFormat"],
+      "properties": {
+        "environment": {"const": "staging"},
+        "createFormat": {"const": "glb"},
+        "updateFormat": {"const": "fbx"}
+      }
+    }
+  }
+}

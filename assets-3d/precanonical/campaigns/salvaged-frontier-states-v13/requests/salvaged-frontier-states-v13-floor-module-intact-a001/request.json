@@ -1,0 +1,86 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/precanonical-request.schema.json",
+  "schemaVersion": "1.0.0",
+  "requestId": "salvaged-frontier-states-v13-floor-module-intact-a001",
+  "assetKey": "floor_module",
+  "artDirection": "salvaged-frontier",
+  "generationSurface": "chatgpt_web_images",
+  "status": "PRECANONICAL_SPEC_COMPLETE",
+  "stage": "state_definition",
+  "policy": {
+    "path": "art/precanonical/policy.json",
+    "sha256": "df4e0354825fc5c4e78900351375fbc168601120e777400cbdb2150c3e31aa6f"
+  },
+  "constitution": {
+    "path": "art/selected/salvaged-frontier-constitution.json",
+    "sha256": "57d6d4cef6af66a72f742d030ad24ecb6f9bc80c4dc7310385798ed1453cbef6"
+  },
+  "compiler": {
+    "path": "tools/art/precanonical_campaign.py",
+    "sha256": "5cccd9c2bd2785797ab118a5fcba460238882f4ed1ac1e41999e03a765d10bc3"
+  },
+  "sourceBrief": {
+    "path": "source-brief.json",
+    "sha256": "5de082c9b84e121f5584d31712f5526c5a9671c555fe499439c84e4c166c847e"
+  },
+  "parentResult": null,
+  "revisionInstructions": [],
+  "files": {
+    "brief": {
+      "path": "brief.md",
+      "sha256": "172323befc74f130fa5bc62ed2822dca0a460c9570cdc3638da6b4f1e74fb589"
+    },
+    "prompt": {
+      "path": "prompt.txt",
+      "sha256": "df5687d1e4827a3e2126710176ddb29e46de025c5bc749fe4ad72e0df2e20f42"
+    },
+    "negativeConstraints": {
+      "path": "negative-constraints.txt",
+      "sha256": "e2309fbcce824b3feb577492df8f2d32a78114ba372ffd4261823b02968a2529"
+    },
+    "requestedViews": {
+      "path": "requested-views.json",
+      "sha256": "f34a21632b71d06d7b2a026a02cea32a8942ada34aff34fffccd65060700977b"
+    },
+    "requestedStates": {
+      "path": "requested-states.json",
+      "sha256": "54b452d4789aad53a09000349f0e44a3bdc3c4d7eda192172162896fed4d235e"
+    }
+  },
+  "promptHash": "df5687d1e4827a3e2126710176ddb29e46de025c5bc749fe4ad72e0df2e20f42",
+  "requestedViewIds": [
+    "hero_three_quarter_front",
+    "three_quarter_rear",
+    "black_silhouette",
+    "mobile_landscape"
+  ],
+  "requestedStateIds": [
+    "intact"
+  ],
+  "imageSpec": {
+    "aspectRatio": "1:1",
+    "background": "neutral_mid_gray",
+    "lighting": "neutral_studio",
+    "singleObjectOnly": true
+  },
+  "budget": {
+    "maximumWebGenerations": 1,
+    "consumedWebGenerations": 0,
+    "reserveForCorrections": 0,
+    "humanConfirmationRequired": true
+  },
+  "automation": {
+    "browserAdapter": "codex_chrome",
+    "automaticSubmissionAuthorized": false,
+    "automaticRetry": false,
+    "automaticCodexImageFallback": false,
+    "automaticApiFallback": false,
+    "browserReasoningForbidden": true
+  },
+  "authority": {
+    "canonical": false,
+    "geometryAuthority": false,
+    "humanSelectionRequired": true,
+    "productionApproved": false
+  }
+}

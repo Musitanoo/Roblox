@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Canon visuel — Defense Barricade Small</title>
+  <style>
+    :root { color-scheme: dark; font: 16px/1.45 Inter,Segoe UI,sans-serif;
+      --bg:#091014;--surface:#111c22;--line:#29414a;--text:#edf7f3;
+      --muted:#9db2ad;--mint:#66e0bb;--gold:#efc15a;--red:#ff6478; }
+    * { box-sizing:border-box }
+    body { margin:0;background:var(--bg);color:var(--text) }
+    header { position:sticky;top:0;z-index:3;padding:18px 30px;background:#0d181df2;
+      border-bottom:2px solid var(--mint);backdrop-filter:blur(12px) }
+    h1 { margin:0 0 4px;font-size:clamp(22px,3vw,36px) }
+    h2 { margin:0 0 8px;font-size:clamp(22px,3vw,32px) }
+    p { margin:4px 0;color:var(--muted) }
+    .gate { color:var(--gold);font-weight:750 }
+    .actions { display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;align-items:center }
+    a.button,.primary { color:#07110e;background:var(--mint);padding:9px 13px;
+      border:0;border-radius:9px;text-decoration:none;font-weight:750;cursor:pointer }
+    a.secondary { color:var(--text);background:#20323a }
+    .progress { margin-left:auto;color:var(--mint);font-weight:750 }
+    main { display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
+      gap:18px;padding:24px }
+    .card { border:1px solid var(--line);border-radius:15px;overflow:hidden;background:var(--surface) }
+    .card.pass { border-color:var(--mint) }
+    .card.fail { border-color:var(--red) }
+    .card img { display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#05090b }
+    .card-head { display:flex;justify-content:space-between;gap:12px;padding:13px 15px 8px }
+    .badge { color:var(--gold);font-size:12px;text-transform:uppercase;letter-spacing:.05em }
+    .card.pass .badge { color:var(--mint) }
+    .card.fail .badge { color:var(--red) }
+    .card-review { padding:4px 15px 15px }
+    .choice { display:flex;gap:8px;flex-wrap:wrap }
+    .choice button { padding:7px 10px;border:1px solid var(--line);border-radius:8px;
+      color:var(--text);background:#0c151a;cursor:pointer }
+    .choice button.selected-pass { border-color:var(--mint);background:#14352d;color:var(--mint) }
+    .choice button.selected-fail { border-color:var(--red);background:#371921;color:#ff9baa }
+    textarea,input,select { width:100%;margin-top:9px;padding:10px 11px;border:1px solid var(--line);
+      border-radius:9px;color:var(--text);background:#091216;font:inherit }
+    textarea { min-height:72px;resize:vertical }
+    .review { margin:10px 24px 32px;padding:24px;border:1px solid var(--line);
+      border-radius:16px;background:var(--surface);scroll-margin-top:190px }
+    .review-grid { display:grid;grid-template-columns:minmax(320px,1fr) minmax(320px,1fr);
+      gap:22px;margin-top:18px }
+    .check-row { display:flex;justify-content:space-between;align-items:center;
+      gap:15px;padding:12px 0;border-bottom:1px solid var(--line) }
+    label { display:block;margin:12px 0 4px;color:var(--muted) }
+    .hint { min-height:24px;margin:12px 0;color:var(--gold) }
+    .primary:disabled { opacity:.45;cursor:not-allowed }
+    .danger { border:1px solid var(--red);color:#ff9baa;background:transparent;
+      padding:8px 12px;border-radius:9px;cursor:pointer }
+    code { color:var(--mint);word-break:break-all }
+    @media (max-width:820px) {
+      header { position:static;padding:16px }
+      main { grid-template-columns:1fr;padding:14px }
+      .review { margin:8px 14px 24px;padding:17px }
+      .review-grid { grid-template-columns:1fr }
+      .progress { width:100%;margin-left:0 }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Defense Barricade Small · paquet canonique r15</h1>
+    <p>A dependable standardized lane-blocking chassis whose single replaced panel and diagonal brace make prior survival memorable without weakening its broad mobile silhouette.</p>
+    <p class="gate">CANDIDATE · revue humaine obligatoire · productionApproved=false</p>
+    <p>Digest : <code>b94a6f2e92470c066b635f342f5a6aae92f9d0f3f3c5023b1ebea0e13c4424a4</code></p>
+    <div class="actions">
+      <a class="button" href="#review">Commencer la revue</a>
+      <a class="button" href="evidence-manifest.json">Manifest de preuve</a>
+      <a class="button secondary" href="human-review.json">Gabarit JSON</a>
+      <a class="button" href="raw-render-report.json">Déterminisme Blender</a>
+      <span class="progress" id="progress">0/17 planches · 0/7 gates</span>
+    </div>
+  </header>
+  <main><article class="card" data-board="orthographic"><a href="boards/01-orthographic.png" target="_blank"><img src="boards/01-orthographic.png" alt="orthographic"></a><div class="card-head"><strong>01. orthographic</strong><span class="badge" id="badge-orthographic">PENDING</span></div><div class="card-review"><div class="choice" data-choice-board="orthographic"><button type="button" data-value="PASS">Conforme</button><button type="button" data-value="FAIL">À corriger</button></div><textarea data-comment-board="orthographic" maxlength="2000" placeholder="Commentaire précis si nécessaire"></textarea></div></article><article class="card" data-board="perspective"><a href="boards/02-perspective.png" target="_blank"><img src="boards/02-perspective.png" alt="perspective"></a><div class="card-head"><strong>02. perspective</strong><span class="badge" id="badge-perspective">PENDING</span></div><div class="card-review"><div class="choice" data-choice-board="perspective"><button type="button" data-value="PASS">Conforme</button><button type="button" data-value="FAIL">À corriger</button></div><textarea data-comment-board="perspective" maxlength="2000" placeholder="Commentaire précis si nécessaire"></textarea></div></article><article class="card" data-board="black_silhouette"><a href="boards/03-black_silhouette.png" target="_blank"><img src="boards/03-black_silhouette.png" alt="black_silhouette"></a><div class="card-head"><strong>03. black_silhouette</strong><span class="badge" id="badge-black_silhouette">PENDING</span></div><div class="card-review"><div class="choice" data-choice-board="black_silhouette"><button type="button" data-value="PASS">Conforme</button><button type="button" data-value="FAIL">À corriger</button></div><textarea data-comment-board="black_silhouette" maxlength="2000" placeholder="Commentaire précis si nécessaire"></textarea></div></article><article class="card" data-board="component_breakdown"><a href="boards/04-component_breakdown.png" target="_blank"><img src="boards/04-component_breakdown.png" alt="component_breakdown"></a><div class="card-head"><strong>04. component_breakdown</strong><span class="badge" id="badge-component_breakdown">PENDING</span></div><div class="card-review"><div class="choice" data-choice-board="component_breakdown"><button type="button" data-value="PASS">Conforme</button><button type="button" data-value="FAIL">À corriger</button></div><textarea data-comment-board="component_breakdown" maxlength="2000" placeholder="Commentaire précis si nécessaire"></textarea></div></article><article class="card" data-board="proportions"><a href="boards/05-proportions.png" target="_blank"><img src="boards/05-proportions.png" alt="proportions"></a><div class="card-head"><strong>05. proportions</strong><span class="badge" id="badge-proportions">PENDING</span></div><div class="card-review"><div class="choice" data-choice-board="proportions"><button type="button" data-value="PASS">Conforme</button><button type="button" data-value="FAIL">À corriger</button></div><textarea data-comment-board="proportions" maxlength="2000" placeholder="Commentaire précis si nécessaire"></textarea></div></article><article class="card" data-board="materials"><a href="boards/06-materials.png" target="_blank"><img src="boards/06-materials.png" alt="materials"></a><div class="card-head"><strong>06. materials</strong><span class="badge" id="badge-materials">PENDING</span></div><div class="card-review"><div class="choice" data-choice-board="materials"><button type="button" data-value="PASS">Conforme</button><button type="button" data-value="FAIL">À corriger</button></div><textarea data-comment-board="materials" maxlength="2000" placeholder="Commentaire précis si nécessaire"></textarea></div></article><article class="card" data-board="semantic_zones"><a href="boards/07-semantic_zones.png" target="_blank"><img src="boards/07-semantic_zones.png" alt="semantic_zones"></a><div class="card-head"><strong>07. semantic_zones</strong><span class="badge" id="badge-semantic_zones">PENDING</span></div><div class="card-review"><div class="choice" data-choice-board="semantic_zones"><button type="button" data-value="PASS">Conforme</button><button type="button" data-value="FAIL">À corriger</button></div><textarea data-comment-board="semantic_zones" maxlength="2000" placeholder="Commentaire précis si nécessaire"></textarea></div></article><article class="card" data-board="all_states"><a href="boards/08-all_states.png" target="_blank"><img src="boards/08-all_states.png" alt="all_states"></a><div class="card-head"><strong>08. all_states</strong><span class="badge" id="badge-all_states">PENDING</span></div><div class="card-review"><div class="choice" data-choice-board="all_states"><button type="button" data-value="PASS">Conforme</button><button type="button" data-value="FAIL">À corriger</button></div><textarea data-comment-board="all_states" maxlength="2000" placeholder="Commentaire précis si nécessaire"></textarea></div></article><article class="card" data-board="state_comparison"><a href="boards/09-state_comparison.png" target="_blank"><img src="boards/09-state_comparison.png" alt="state_comparison"></a><div class="card-head"><strong>09. state_comparison</strong><span class="badge" id="badge-state_comparison">PENDING</span></div><div class="card-review"><div class="choice" data-choice-board="state_comparison"><button type="button" data-value="PASS">Conforme</button><button type="button" data-value="FAIL">À corriger</button></div><textarea data-comment-board="state_comparison" maxlength="2000" placeholder="Commentaire précis si nécessaire"></textarea></div></article><article class="card" data-board="mobile_near"><a href="boards/10-mobile_near.png" target="_blank"><img src="boards/10-mobile_near.png" alt="mobile_near"></a><div class="card-head"><strong>10. mobile_near</strong><span class="badge" id="badge-mobile_near">PENDING</span></div><div class="card-review"><div class="choice" data-choice-board="mobile_near"><button type="button" data-value="PASS">Conforme</button><button type="button" data-value="FAIL">À corriger</button></div><textarea data-comment-board="mobile_near" maxlength="2000" placeholder="Commentaire précis si nécessaire"></textarea></div></article><article class="card" data-board="mobile_mid"><a href="boards/11-mobile_mid.png" target="_blank"><img src="boards/11-mobile_mid.png" alt="mobile_mid"></a><div class="card-head"><strong>11. mobile_mid</strong><span class="badge" id="badge-mobile_mid">PENDING</span></div><div class="card-review"><div class="choice" data-choice-board="mobile_mid"><button type="button" data-value="PASS">Conforme</button><button type="button" data-value="FAIL">À corriger</button></div><textarea data-comment-board="mobile_mid" maxlength="2000" placeholder="Commentaire précis si nécessaire"></textarea></div></article><article class="card" data-board="mobile_far"><a href="boards/12-mobile_far.png" target="_blank"><img src="boards/12-mobile_far.png" alt="mobile_far"></a><div class="card-head"><strong>12. mobile_far</strong><span class="badge" id="badge-mobile_far">PENDING</span></div><div class="card-review"><div class="choice" data-choice-board="mobile_far"><button type="button" data-value="PASS">Conforme</button><button type="button" data-value="FAIL">À corriger</button></div><textarea data-comment-board="mobile_far" maxlength="2000" placeholder="Commentaire précis si nécessaire"></textarea></div></article><article class="card" data-board="lighting_matrix"><a href="boards/13-lighting_matrix.png" target="_blank"><img src="boards/13-lighting_matrix.png" alt="lighting_matrix"></a><div class="card-head"><strong>13. lighting_matrix</strong><span class="badge" id="badge-lighting_matrix">PENDING</span></div><div class="card-review"><div class="choice" data-choice-board="lighting_matrix"><button type="button" data-value="PASS">Conforme</button><button type="button" data-value="FAIL">À corriger</button></div><textarea data-comment-board="lighting_matrix" maxlength="2000" placeholder="Commentaire précis si nécessaire"></textarea></div></article><article class="card" data-board="repetition_1"><a href="boards/14-repetition_1.png" target="_blank"><img src="boards/14-repetition_1.png" alt="repetition_1"></a><div class="card-head"><strong>14. repetition_1</strong><span class="badge" id="badge-repetition_1">PENDING</span></div><div class="card-review"><div class="choice" data-choice-board="repetition_1"><button type="button" data-value="PASS">Conforme</button><button type="button" data-value="FAIL">À corriger</button></div><textarea data-comment-board="repetition_1" maxlength="2000" placeholder="Commentaire précis si nécessaire"></textarea></div></article><article class="card" data-board="repetition_30"><a href="boards/15-repetition_30.png" target="_blank"><img src="boards/15-repetition_30.png" alt="repetition_30"></a><div class="card-head"><strong>15. repetition_30</strong><span class="badge" id="badge-repetition_30">PENDING</span></div><div class="card-review"><div class="choice" data-choice-board="repetition_30"><button type="button" data-value="PASS">Conforme</button><button type="button" data-value="FAIL">À corriger</button></div><textarea data-comment-board="repetition_30" maxlength="2000" placeholder="Commentaire précis si nécessaire"></textarea></div></article><article class="card" data-board="repetition_100"><a href="boards/16-repetition_100.png" target="_blank"><img src="boards/16-repetition_100.png" alt="repetition_100"></a><div class="card-head"><strong>16. repetition_100</strong><span class="badge" id="badge-repetition_100">PENDING</span></div><div class="card-review"><div class="choice" data-choice-board="repetition_100"><button type="button" data-value="PASS">Conforme</button><button type="button" data-value="FAIL">À corriger</button></div><textarea data-comment-board="repetition_100" maxlength="2000" placeholder="Commentaire précis si nécessaire"></textarea></div></article><article class="card" data-board="required_and_forbidden_annotations"><a href="boards/17-required_and_forbidden_annotations.png" target="_blank"><img src="boards/17-required_and_forbidden_annotations.png" alt="required_and_forbidden_annotations"></a><div class="card-head"><strong>17. required_and_forbidden_annotations</strong><span class="badge" id="badge-required_and_forbidden_annotations">PENDING</span></div><div class="card-review"><div class="choice" data-choice-board="required_and_forbidden_annotations"><button type="button" data-value="PASS">Conforme</button><button type="button" data-value="FAIL">À corriger</button></div><textarea data-comment-board="required_and_forbidden_annotations" maxlength="2000" placeholder="Commentaire précis si nécessaire"></textarea></div></article></main>
+  <section class="review" id="review">
+    <h2>Décision humaine liée au digest</h2>
+    <p>Examine chaque planche en taille réelle, statue sur les sept gates, puis
+      télécharge le fichier de revue. Aucun choix n’est prérempli.</p>
+    <div class="review-grid">
+      <div>
+        <h3>Gates obligatoires</h3>
+        <div class="check-row" data-check="oneSecondFunctionRead"><span>Fonction comprise en une seconde</span><div class="choice" data-choice-check="oneSecondFunctionRead"><button type="button" data-value="PASS">PASS</button><button type="button" data-value="FAIL">FAIL</button></div></div><div class="check-row" data-check="stateReadWithoutColorOnly"><span>États lisibles sans dépendre de la couleur</span><div class="choice" data-choice-check="stateReadWithoutColorOnly"><button type="button" data-value="PASS">PASS</button><button type="button" data-value="FAIL">FAIL</button></div></div><div class="check-row" data-check="mobileNearMidFar"><span>Lecture mobile proche, moyenne et lointaine</span><div class="choice" data-choice-check="mobileNearMidFar"><button type="button" data-value="PASS">PASS</button><button type="button" data-value="FAIL">FAIL</button></div></div><div class="check-row" data-check="lightingRobustness"><span>Robustesse sous les quatre éclairages</span><div class="choice" data-choice-check="lightingRobustness"><button type="button" data-value="PASS">PASS</button><button type="button" data-value="FAIL">FAIL</button></div></div><div class="check-row" data-check="repetitionOneThirtyHundred"><span>Densité maîtrisée à 1, 30 et 100 exemplaires</span><div class="choice" data-choice-check="repetitionOneThirtyHundred"><button type="button" data-value="PASS">PASS</button><button type="button" data-value="FAIL">FAIL</button></div></div><div class="check-row" data-check="requiredAndForbiddenCompliance"><span>Exigences et interdictions respectées</span><div class="choice" data-choice-check="requiredAndForbiddenCompliance"><button type="button" data-value="PASS">PASS</button><button type="button" data-value="FAIL">FAIL</button></div></div><div class="check-row" data-check="artDirectionQuality"><span>Qualité Salvaged Frontier au niveau production</span><div class="choice" data-choice-check="artDirectionQuality"><button type="button" data-value="PASS">PASS</button><button type="button" data-value="FAIL">FAIL</button></div></div>
+      </div>
+      <div>
+        <h3>Autorité et décision</h3>
+        <label for="reviewer">Nom de l’autorité humaine</label>
+        <input id="reviewer" maxlength="200" autocomplete="name"
+          placeholder="Ex. Nelson — Founder / Art Director">
+        <label for="decision">Décision</label>
+        <select id="decision">
+          <option value="">Choisir après la revue</option>
+          <option value="LOCK">LOCK — verrouiller ce canon</option>
+          <option value="REVISION_REQUIRED">REVISION_REQUIRED — corriger</option>
+          <option value="REJECT">REJECT — rejeter cette proposition</option>
+        </select>
+        <label for="decisionRecord">Justification vérifiable</label>
+        <textarea id="decisionRecord" maxlength="4000"
+          placeholder="Pourquoi cette décision est-elle correcte au regard du GDD, de la DA, des états, du mobile et des interdictions ?"></textarea>
+        <p class="hint" id="hint">Les 17 planches et les 7 gates doivent être examinés.</p>
+        <div class="actions">
+          <button class="primary" id="download" type="button" disabled>
+            Télécharger human-review-completed.json
+          </button>
+          <button class="danger" id="reset" type="button">Réinitialiser la revue locale</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    const TEMPLATE = {"$schema": "https://roblox-top1.local/schemas/visual-canon-human-review.schema.json", "schemaVersion": "1.0.0", "status": "PENDING", "assetKey": "defense_barricade_small", "assetId": "barricade", "territoryId": "salvaged-frontier", "revision": 15, "canonId": "vc_barricade__salvaged-frontier__v1", "evidenceManifest": "evidence/canonical-visuals/salvaged-frontier/defense_barricade_small-r15/evidence-manifest.json", "evidenceManifestSha256": "d9804c162d861c2463dd2e0589dd6d3f75d09d8e26ff701e0880c6717b8833dc", "evidencePackageSha256": "b94a6f2e92470c066b635f342f5a6aae92f9d0f3f3c5023b1ebea0e13c4424a4", "reviewer": null, "reviewedAt": null, "decision": null, "decisionRecord": null, "allowedDecisions": ["LOCK", "REVISION_REQUIRED", "REJECT"], "boards": {"orthographic": {"status": "PENDING", "comment": null}, "perspective": {"status": "PENDING", "comment": null}, "black_silhouette": {"status": "PENDING", "comment": null}, "component_breakdown": {"status": "PENDING", "comment": null}, "proportions": {"status": "PENDING", "comment": null}, "materials": {"status": "PENDING", "comment": null}, "semantic_zones": {"status": "PENDING", "comment": null}, "all_states": {"status": "PENDING", "comment": null}, "state_comparison": {"status": "PENDING", "comment": null}, "mobile_near": {"status": "PENDING", "comment": null}, "mobile_mid": {"status": "PENDING", "comment": null}, "mobile_far": {"status": "PENDING", "comment": null}, "lighting_matrix": {"status": "PENDING", "comment": null}, "repetition_1": {"status": "PENDING", "comment": null}, "repetition_30": {"status": "PENDING", "comment": null}, "repetition_100": {"status": "PENDING", "comment": null}, "required_and_forbidden_annotations": {"status": "PENDING", "comment": null}}, "mandatoryChecks": {"oneSecondFunctionRead": "PENDING", "stateReadWithoutColorOnly": "PENDING", "mobileNearMidFar": "PENDING", "lightingRobustness": "PENDING", "repetitionOneThirtyHundred": "PENDING", "requiredAndForbiddenCompliance": "PENDING", "artDirectionQuality": "PENDING"}, "productionApproved": false};
+    const storageKey = `visual-canon-review:${TEMPLATE.evidencePackageSha256}`;
+    let state = structuredClone(TEMPLATE);
+    try {
+      const saved = JSON.parse(localStorage.getItem(storageKey) || "null");
+      if (saved && saved.evidencePackageSha256 === TEMPLATE.evidencePackageSha256) {
+        state = saved;
+      }
+    } catch (_) {}
+
+    const boardIds = Object.keys(TEMPLATE.boards);
+    const checkIds = Object.keys(TEMPLATE.mandatoryChecks);
+    const byId = id => document.getElementById(id);
+    const choiceButtons = (selector, value) =>
+      [...document.querySelectorAll(`${selector} button`)].forEach(button => {
+        button.classList.toggle("selected-pass", button.dataset.value === value && value === "PASS");
+        button.classList.toggle("selected-fail", button.dataset.value === value && value === "FAIL");
+      });
+
+    function persist() {
+      state.reviewer = byId("reviewer").value.trim() || null;
+      state.decision = byId("decision").value || null;
+      state.decisionRecord = byId("decisionRecord").value.trim() || null;
+      localStorage.setItem(storageKey, JSON.stringify(state));
+    }
+
+    function render() {
+      boardIds.forEach(id => {
+        const status = state.boards[id].status;
+        const card = document.querySelector(`[data-board="${id}"]`);
+        card.classList.toggle("pass", status === "PASS");
+        card.classList.toggle("fail", status === "FAIL");
+        byId(`badge-${id}`).textContent = status;
+        choiceButtons(`[data-choice-board="${id}"]`, status);
+        document.querySelector(`[data-comment-board="${id}"]`).value =
+          state.boards[id].comment || "";
+      });
+      checkIds.forEach(id => {
+        choiceButtons(`[data-choice-check="${id}"]`, state.mandatoryChecks[id]);
+      });
+      byId("reviewer").value = state.reviewer || "";
+      byId("decision").value = state.decision || "";
+      byId("decisionRecord").value = state.decisionRecord || "";
+
+      const boardValues = boardIds.map(id => state.boards[id].status);
+      const checkValues = checkIds.map(id => state.mandatoryChecks[id]);
+      const boardsDone = boardValues.filter(value => value !== "PENDING").length;
+      const checksDone = checkValues.filter(value => value !== "PENDING").length;
+      byId("progress").textContent = `${boardsDone}/17 planches · ${checksDone}/7 gates`;
+
+      const allDone = boardsDone === boardIds.length && checksDone === checkIds.length;
+      const failed = boardValues.includes("FAIL") || checkValues.includes("FAIL");
+      const identityReady = (state.reviewer || "").length >= 2;
+      const recordReady = (state.decisionRecord || "").length >= 3;
+      const decision = state.decision;
+      const coherentDecision =
+        (decision === "LOCK" && !failed) ||
+        ((decision === "REVISION_REQUIRED" || decision === "REJECT") && failed);
+      const ready = allDone && identityReady && recordReady && coherentDecision;
+      byId("download").disabled = !ready;
+      if (!allDone) {
+        byId("hint").textContent = "Les 17 planches et les 7 gates doivent être examinés.";
+      } else if (!identityReady || !recordReady || !decision) {
+        byId("hint").textContent = "Renseigne l’autorité, la décision et sa justification.";
+      } else if (!coherentDecision) {
+        byId("hint").textContent = failed
+          ? "LOCK est interdit tant qu’un élément est en échec."
+          : "Une révision ou un rejet exige au moins un échec explicite.";
+      } else {
+        byId("hint").textContent = "Revue cohérente et prête à être téléchargée.";
+      }
+    }
+
+    document.querySelectorAll("[data-choice-board]").forEach(group => {
+      group.querySelectorAll("button").forEach(button => {
+        button.onclick = () => {
+          state.boards[group.dataset.choiceBoard].status = button.dataset.value;
+          persist();
+          render();
+        };
+      });
+    });
+    document.querySelectorAll("[data-comment-board]").forEach(field => {
+      field.oninput = () => {
+        state.boards[field.dataset.commentBoard].comment = field.value.trim() || null;
+        persist();
+      };
+    });
+    document.querySelectorAll("[data-choice-check]").forEach(group => {
+      group.querySelectorAll("button").forEach(button => {
+        button.onclick = () => {
+          state.mandatoryChecks[group.dataset.choiceCheck] = button.dataset.value;
+          persist();
+          render();
+        };
+      });
+    });
+    ["reviewer", "decision", "decisionRecord"].forEach(id => {
+      byId(id).oninput = () => { persist(); render(); };
+      byId(id).onchange = () => { persist(); render(); };
+    });
+    byId("download").onclick = () => {
+      persist();
+      const completed = structuredClone(state);
+      completed.reviewedAt = new Date().toISOString();
+      completed.status = {
+        LOCK: "APPROVED",
+        REVISION_REQUIRED: "REVISION_REQUIRED",
+        REJECT: "REJECTED"
+      }[completed.decision];
+      const blob = new Blob([JSON.stringify(completed, null, 2) + "\n"],
+        {type:"application/json"});
+      const anchor = document.createElement("a");
+      anchor.href = URL.createObjectURL(blob);
+      anchor.download = "human-review-completed.json";
+      anchor.click();
+      setTimeout(() => URL.revokeObjectURL(anchor.href), 1000);
+      byId("hint").textContent = "Revue téléchargée. Valide-la avec lock-canon en dry-run.";
+    };
+    byId("reset").onclick = () => {
+      if (!confirm("Effacer uniquement la progression locale de cette revue ?")) return;
+      localStorage.removeItem(storageKey);
+      state = structuredClone(TEMPLATE);
+      render();
+    };
+    render();
+  </script>
+</body>
+</html>

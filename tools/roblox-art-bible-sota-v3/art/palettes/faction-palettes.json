@@ -1,0 +1,43 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/faction-palettes.schema.json",
+  "schemaVersion": "2.0.0",
+  "factions": {
+    "player_fortress": {
+      "base": [
+        "#354052",
+        "#D8DDE4"
+      ],
+      "accent": [
+        "#D58B31",
+        "#61E7C4"
+      ],
+      "shapeFamily": "stable_rectilinear_interlocking",
+      "dangerOverride": "#E64A4A"
+    },
+    "enemy_horde": {
+      "base": [
+        "#30283F",
+        "#654A78"
+      ],
+      "accent": [
+        "#A84876",
+        "#E64A4A"
+      ],
+      "shapeFamily": "violet_biological_role_silhouettes",
+      "dangerOverride": "#F2C94C"
+    },
+    "objective_system": {
+      "base": [
+        "#354052",
+        "#68717F"
+      ],
+      "accent": [
+        "#66A3FF",
+        "#61E7C4"
+      ],
+      "shapeFamily": "concentric_protected_core",
+      "dangerOverride": "#E64A4A"
+    }
+  },
+  "rule": "Faction palette may shift hue within approved ranges, but semantic state roles override faction accents."
+}

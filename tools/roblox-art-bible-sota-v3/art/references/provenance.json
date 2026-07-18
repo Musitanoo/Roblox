@@ -1,0 +1,631 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/provenance.schema.json",
+  "schemaVersion": "3.0.0",
+  "policy": {
+    "minimumReferencesPerTerritory": 12,
+    "embedOnlyWhenRedistributable": true,
+    "unknownLicenseBlocksProductionUse": true,
+    "logosAndExactAssetSilhouettesForbidden": true,
+    "boardMethod": "linked_contact_sheet_without_third_party_binary_embedding"
+  },
+  "humanApproval": {
+    "status": "PENDING",
+    "reviewer": null,
+    "reviewedAt": null,
+    "decisionRecord": null
+  },
+  "references": [
+    {
+      "referenceId": "itd-01",
+      "territoryId": "industrial-toy-defense",
+      "title": "LEGO Technic construction range",
+      "sourceUrl": "https://www.lego.com/en-us/themes/technic",
+      "sourceOwner": "LEGO Group",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "official_reference_inspiration_only",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "chunky modular volumes",
+        "visible mechanical function"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "itd-02",
+      "territoryId": "industrial-toy-defense",
+      "title": "LEGO Technic Cat D11 material",
+      "sourceUrl": "https://www.lego.com/cdn/cs/set/assets/blt6f73fbe4deaac79f/LEGO_Jan2022_UK_STITCHED_R1.pdf",
+      "sourceOwner": "LEGO Group",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "official_reference_inspiration_only",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "large toy massing",
+        "safety yellow accents"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "itd-03",
+      "territoryId": "industrial-toy-defense",
+      "title": "PLAYMOBIL construction theme",
+      "sourceUrl": "https://www.playmobil.com/en-us/shop-online/themes/construction",
+      "sourceOwner": "geobra Brandstätter",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "official_reference_inspiration_only",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "toy-scale simplification",
+        "friendly industrial proportions"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "itd-04",
+      "territoryId": "industrial-toy-defense",
+      "title": "OSHA safety color code",
+      "sourceUrl": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.144",
+      "sourceOwner": "U.S. Department of Labor",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "public_domain",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "red danger",
+        "yellow caution"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "itd-05",
+      "territoryId": "industrial-toy-defense",
+      "title": "OSHA recommended color coding",
+      "sourceUrl": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.145AppA",
+      "sourceOwner": "U.S. Department of Labor",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "public_domain",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "semantic warning hierarchy",
+        "contrast"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "itd-06",
+      "territoryId": "industrial-toy-defense",
+      "title": "Caterpillar construction equipment",
+      "sourceUrl": "https://www.cat.com/en_US/by-industry/construction.html",
+      "sourceOwner": "Caterpillar Inc.",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "official_reference_inspiration_only",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "counterweighted masses",
+        "functional guarding"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "itd-07",
+      "territoryId": "industrial-toy-defense",
+      "title": "Cat excavator family",
+      "sourceUrl": "https://www.cat.com/en_US/by-industry/construction/excavator-family.html",
+      "sourceOwner": "Caterpillar Inc.",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "official_reference_inspiration_only",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "stable base proportions",
+        "primary-secondary mass hierarchy"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "itd-08",
+      "territoryId": "industrial-toy-defense",
+      "title": "Roblox texture specifications",
+      "sourceUrl": "https://create.roblox.com/docs/art/modeling/texture-specifications",
+      "sourceOwner": "Roblox Corporation",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "official_documentation",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "texture scale discipline",
+        "single-material constraint"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "itd-09",
+      "territoryId": "industrial-toy-defense",
+      "title": "Roblox mesh specifications",
+      "sourceUrl": "https://create.roblox.com/docs/art/modeling/specifications",
+      "sourceOwner": "Roblox Corporation",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "official_documentation",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "watertight forms",
+        "triangle constraints"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "itd-10",
+      "territoryId": "industrial-toy-defense",
+      "title": "Roblox built-in materials",
+      "sourceUrl": "https://create.roblox.com/docs/parts/materials",
+      "sourceOwner": "Roblox Corporation",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "official_documentation",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "mobile material economy",
+        "broad material categories"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "itd-11",
+      "territoryId": "industrial-toy-defense",
+      "title": "NASA robotic arm systems",
+      "sourceUrl": "https://www.nasa.gov/international-space-station/robotic-arms/",
+      "sourceOwner": "NASA",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "public_domain",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "clear joint hierarchy",
+        "protective housings"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "itd-12",
+      "territoryId": "industrial-toy-defense",
+      "title": "NIST machine safety research portal",
+      "sourceUrl": "https://www.nist.gov/topics/robotics",
+      "sourceOwner": "NIST",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "public_domain",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "legible industrial systems",
+        "functional segmentation"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "sf-01",
+      "territoryId": "salvaged-frontier",
+      "title": "Perseverance rover components",
+      "sourceUrl": "https://science.nasa.gov/mission/mars-2020-perseverance/spacecraft/mars-rover/",
+      "sourceOwner": "NASA",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "public_domain",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "layered protective systems",
+        "purposeful exposed hardware"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "sf-02",
+      "territoryId": "salvaged-frontier",
+      "title": "Perseverance raw images",
+      "sourceUrl": "https://mars.nasa.gov/mars2020/multimedia/raw-images/",
+      "sourceOwner": "NASA/JPL-Caltech",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "public_domain",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "dust response",
+        "field-repaired visual logic"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "sf-03",
+      "territoryId": "salvaged-frontier",
+      "title": "Apollo 13 improvised carbon-dioxide filter",
+      "sourceUrl": "https://www.nasa.gov/history/alsj/a13/a13mr04.htm",
+      "sourceOwner": "NASA",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "public_domain",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "improvised interfaces",
+        "repair from mismatched parts"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "sf-04",
+      "territoryId": "salvaged-frontier",
+      "title": "Apollo 13 lithium hydroxide canister",
+      "sourceUrl": "https://airandspace.si.edu/collection-objects/lithium-hydroxide-canister-apollo-13/nasm_A19781545000",
+      "sourceOwner": "Smithsonian Institution",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "official_reference_inspiration_only",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "patched assembly",
+        "functional straps"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "sf-05",
+      "territoryId": "salvaged-frontier",
+      "title": "UNHCR shelter catalogue",
+      "sourceUrl": "https://emergency.unhcr.org/emergency-assistance/shelter-camp-and-settlement/shelter/shelter-solutions",
+      "sourceOwner": "UNHCR",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "official_reference_inspiration_only",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "modular shelter logic",
+        "human-scale reinforcement"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "sf-06",
+      "territoryId": "salvaged-frontier",
+      "title": "UNHCR shelter sustainability",
+      "sourceUrl": "https://www.unhcr.org/handbooks/environmental-guidelines/shelter",
+      "sourceOwner": "UNHCR",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "official_reference_inspiration_only",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "repairable construction",
+        "resource-aware materials"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "sf-07",
+      "territoryId": "salvaged-frontier",
+      "title": "Poly Haven worn wood planks",
+      "sourceUrl": "https://polyhaven.com/a/worn_wood_planks",
+      "sourceOwner": "Poly Haven",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "cc0",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "large readable wear",
+        "reclaimed wood scale"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "sf-08",
+      "territoryId": "salvaged-frontier",
+      "title": "Poly Haven old wooden planks",
+      "sourceUrl": "https://polyhaven.com/a/old_wooden_planks",
+      "sourceOwner": "Poly Haven",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "cc0",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "board variation",
+        "non-uniform but bounded wear"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "sf-09",
+      "territoryId": "salvaged-frontier",
+      "title": "Poly Haven rusty metal",
+      "sourceUrl": "https://polyhaven.com/textures?q=rusty+metal",
+      "sourceOwner": "Poly Haven",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "cc0",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "controlled oxidation",
+        "large patches over micro-noise"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "sf-10",
+      "territoryId": "salvaged-frontier",
+      "title": "NASA ISS maintenance",
+      "sourceUrl": "https://www.nasa.gov/international-space-station/space-station-research-and-technology/",
+      "sourceOwner": "NASA",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "public_domain",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "service access",
+        "replacement modules"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "sf-11",
+      "territoryId": "salvaged-frontier",
+      "title": "FEMA temporary structures guidance",
+      "sourceUrl": "https://www.fema.gov/emergency-managers/risk-management/building-science",
+      "sourceOwner": "FEMA",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "public_domain",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "structural bracing",
+        "clear load paths"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "sf-12",
+      "territoryId": "salvaged-frontier",
+      "title": "U.S. Army Corps field engineering resources",
+      "sourceUrl": "https://www.usace.army.mil/Missions/Emergency-Operations/",
+      "sourceOwner": "U.S. Army Corps of Engineers",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "public_domain",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "field construction",
+        "large reinforcement cues"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "ctd-01",
+      "territoryId": "clean-tactical-diorama",
+      "title": "Bauhaus chess set, Josef Hartwig",
+      "sourceUrl": "https://www.moma.org/collection/works/4022",
+      "sourceOwner": "The Museum of Modern Art",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "official_reference_inspiration_only",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "function encoded by shape",
+        "reduced geometric vocabulary"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "ctd-02",
+      "territoryId": "clean-tactical-diorama",
+      "title": "LEGO Architecture theme",
+      "sourceUrl": "https://www.lego.com/en-us/themes/architecture",
+      "sourceOwner": "LEGO Group",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "official_reference_inspiration_only",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "clean modular massing",
+        "limited surface noise"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "ctd-03",
+      "territoryId": "clean-tactical-diorama",
+      "title": "Into the Breach official site",
+      "sourceUrl": "https://subsetgames.com/itb.html",
+      "sourceOwner": "Subset Games",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "official_reference_inspiration_only",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "tactical board readability",
+        "clear threat telegraphing"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "ctd-04",
+      "territoryId": "clean-tactical-diorama",
+      "title": "Mini Metro official site",
+      "sourceUrl": "https://dinopoloclub.com/games/mini-metro/",
+      "sourceOwner": "Dinosaur Polo Club",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "official_reference_inspiration_only",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "semantic color restraint",
+        "systemic clarity"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "ctd-05",
+      "territoryId": "clean-tactical-diorama",
+      "title": "Monument Valley official site",
+      "sourceUrl": "https://www.monumentvalleygame.com/",
+      "sourceOwner": "ustwo games",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "official_reference_inspiration_only",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "clean planes",
+        "controlled palette"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "ctd-06",
+      "territoryId": "clean-tactical-diorama",
+      "title": "NASA mission control history",
+      "sourceUrl": "https://www.nasa.gov/history/mission-control/",
+      "sourceOwner": "NASA",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "public_domain",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "information hierarchy",
+        "functional panels"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "ctd-07",
+      "territoryId": "clean-tactical-diorama",
+      "title": "NIST visual display ergonomics",
+      "sourceUrl": "https://www.nist.gov/topics/human-factors",
+      "sourceOwner": "NIST",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "public_domain",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "human-factor clarity",
+        "consistent control groupings"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "ctd-08",
+      "territoryId": "clean-tactical-diorama",
+      "title": "Roblox lighting documentation",
+      "sourceUrl": "https://create.roblox.com/docs/environment/lighting",
+      "sourceOwner": "Roblox Corporation",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "official_documentation",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "lighting robustness",
+        "soft versus realistic comparison"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "ctd-09",
+      "territoryId": "clean-tactical-diorama",
+      "title": "Roblox camera API",
+      "sourceUrl": "https://create.roblox.com/docs/reference/engine/classes/Camera",
+      "sourceOwner": "Roblox Corporation",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "official_documentation",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "camera-normalized validation",
+        "vertical FOV"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "ctd-10",
+      "territoryId": "clean-tactical-diorama",
+      "title": "Material Design accessibility",
+      "sourceUrl": "https://m3.material.io/foundations/accessible-design/overview",
+      "sourceOwner": "Google",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "official_reference_inspiration_only",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "redundant state cues",
+        "clear hierarchy"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "ctd-11",
+      "territoryId": "clean-tactical-diorama",
+      "title": "W3C use of color",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html",
+      "sourceOwner": "W3C",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "official_standard",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "not color-only",
+        "redundant cueing"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    },
+    {
+      "referenceId": "ctd-12",
+      "territoryId": "clean-tactical-diorama",
+      "title": "W3C non-text contrast",
+      "sourceUrl": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+      "sourceOwner": "W3C",
+      "retrievedAt": "2026-07-15",
+      "licenseStatus": "official_standard",
+      "embeddedInRepository": false,
+      "approvedStatus": "approved_inspiration",
+      "allowedUse": "principle_extraction_only",
+      "extractableCues": [
+        "3:1 boundary proxy",
+        "component legibility"
+      ],
+      "copyProhibition": "Use abstract principles only; do not reproduce logos, characters, exact compositions, or proprietary asset silhouettes."
+    }
+  ]
+}

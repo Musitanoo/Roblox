@@ -1,0 +1,35 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/precanonical-result.schema.json",
+  "schemaVersion": "1.0.0",
+  "resultId": "salvaged-frontier-states-v3-damage-effect-damaged-a001-result-001",
+  "requestId": "salvaged-frontier-states-v3-damage-effect-damaged-a001",
+  "status": "WEB_RESULT_IMPORTED",
+  "importedAt": "2026-07-17T20:16:23.332382Z",
+  "request": {
+    "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\requests\\salvaged-frontier-states-v3-damage-effect-damaged-a001\\request.json",
+    "sha256": "4ddd7080fb5b5ae61578d1f0f8d00053fbaca692d27df60c9febcf8362992228"
+  },
+  "promptHash": "6c03587d0754b7990a906a0cbafd4115aad161daa06bb3303d0cf9b1957a2f8d",
+  "generationIndex": 1,
+  "provenance": {
+    "surface": "ChatGPT Web / ChatGPT Images",
+    "modelName": "gpt-image-2",
+    "modelNameEvidence": "UI_CONFIRMED",
+    "downloadMethod": "manual_download"
+  },
+  "images": [
+    {
+      "path": "raw/generated-001.png",
+      "sha256": "ca3e757f2e4031c5f27f7eace2fac27a0a3fb752a329034ee51e081cf22e8c0d",
+      "bytes": 1437064,
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG"
+    }
+  ],
+  "resultDigest": "b13c9c4c72cba1d58d3edb49ec88d4f672ed4bb91621450ecb961b24b10212b1",
+  "canonical": false,
+  "geometryAuthority": false,
+  "humanReviewStatus": "PENDING",
+  "productionApproved": false
+}

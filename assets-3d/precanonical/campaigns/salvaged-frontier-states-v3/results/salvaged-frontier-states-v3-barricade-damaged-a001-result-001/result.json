@@ -1,0 +1,35 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/precanonical-result.schema.json",
+  "schemaVersion": "1.0.0",
+  "resultId": "salvaged-frontier-states-v3-barricade-damaged-a001-result-001",
+  "requestId": "salvaged-frontier-states-v3-barricade-damaged-a001",
+  "status": "WEB_RESULT_IMPORTED",
+  "importedAt": "2026-07-17T20:09:55.980535Z",
+  "request": {
+    "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\requests\\salvaged-frontier-states-v3-barricade-damaged-a001\\request.json",
+    "sha256": "5d4ce263dcac2902ee61347bce793d7447e0f4b786be9363f07fd85fc3e93c11"
+  },
+  "promptHash": "48b2d613a32ee903a0fdb63a177c9eaf1f294e1e3799777d010654e91264f39a",
+  "generationIndex": 1,
+  "provenance": {
+    "surface": "ChatGPT Web / ChatGPT Images",
+    "modelName": "gpt-image-2",
+    "modelNameEvidence": "UI_CONFIRMED",
+    "downloadMethod": "manual_download"
+  },
+  "images": [
+    {
+      "path": "raw/generated-001.png",
+      "sha256": "4e7c7250854ce1eaf1028beb62af526c8ad9ef502a49cb5184f792a6b2dd6114",
+      "bytes": 1753839,
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG"
+    }
+  ],
+  "resultDigest": "8ea2da266fbb3af7d46787f6d2f4289e59656833cdcf04837142f557b2598f2d",
+  "canonical": false,
+  "geometryAuthority": false,
+  "humanReviewStatus": "PENDING",
+  "productionApproved": false
+}

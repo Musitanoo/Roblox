@@ -1,0 +1,248 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/material-rules.schema.json",
+  "schemaVersion": "2.1.0",
+  "robloxContract": {
+    "materialSlotsMaxPerMeshObject": 1,
+    "uvSetsMaxPerMeshComponent": 1,
+    "uvRange": {
+      "min": 0.0,
+      "max": 1.0
+    },
+    "normalConvention": "OpenGL_tangent_space",
+    "internalTextureDimensionMax": 1024,
+    "productionMapSet": [
+      "albedo",
+      "roughness",
+      "metalness",
+      "normal"
+    ],
+    "optionalCapabilityGatedMaps": [
+      "emissive"
+    ],
+    "emissiveCapabilityProbeRequired": true,
+    "builtInMaterialsPreferredWhenIdentityPermits": true
+  },
+  "textureClassRef": "art/calibration/calibration-kit.json#/textureClasses",
+  "semanticRoleProfiles": {
+    "primary": {
+      "blender": {"roughness": 0.52, "metallic": 0.05, "coat": 0.18, "emission": 0.0},
+      "studio": {"material": "SmoothPlastic", "castShadow": true}
+    },
+    "secondary": {
+      "blender": {"roughness": 0.68, "metallic": 0.0, "coat": 0.08, "emission": 0.0},
+      "studio": {"material": "SmoothPlastic", "castShadow": true}
+    },
+    "accent": {
+      "blender": {"roughness": 0.44, "metallic": 0.12, "coat": 0.22, "emission": 0.0},
+      "studio": {"material": "SmoothPlastic", "castShadow": true}
+    },
+    "interaction": {
+      "blender": {"roughness": 0.24, "metallic": 0.0, "coat": 0.34, "emission": 0.65},
+      "studio": {"material": "Neon", "castShadow": false}
+    },
+    "threat": {
+      "blender": {"roughness": 0.56, "metallic": 0.02, "coat": 0.12, "emission": 0.0},
+      "studio": {"material": "SmoothPlastic", "castShadow": true}
+    },
+    "warning": {
+      "blender": {"roughness": 0.44, "metallic": 0.03, "coat": 0.12, "emission": 0.0},
+      "studio": {"material": "SmoothPlastic", "castShadow": true}
+    },
+    "critical": {
+      "blender": {"roughness": 0.48, "metallic": 0.02, "coat": 0.10, "emission": 0.0},
+      "studio": {"material": "SmoothPlastic", "castShadow": true}
+    },
+    "rubber": {
+      "blender": {"roughness": 0.92, "metallic": 0.0, "coat": 0.0, "emission": 0.0},
+      "studio": {"material": "Rubber", "castShadow": true}
+    },
+    "bareMetal": {
+      "blender": {"roughness": 0.30, "metallic": 0.92, "coat": 0.08, "emission": 0.0},
+      "studio": {"material": "Metal", "castShadow": true}
+    }
+  },
+  "materials": {
+    "painted_metal": {
+      "baseColorRole": "world_neutral_dark",
+      "studioMaterial": "SmoothPlastic",
+      "roughness": {
+        "min": 0.52,
+        "max": 0.78
+      },
+      "metalness": {
+        "min": 0.0,
+        "max": 0.08
+      },
+      "normalStrengthMax": 0.35,
+      "patternScaleStuds": {
+        "min": 0.5,
+        "max": 4.0
+      },
+      "dirtMax": 0.25,
+      "stateBehavior": {
+        "intact": "broad_clean_planes",
+        "damaged": "one_edge_exposure",
+        "critical": "large_exposed_structure"
+      },
+      "textureCostClass": "medium"
+    },
+    "bare_metal": {
+      "baseColorRole": "disabled",
+      "studioMaterial": "Metal",
+      "roughness": {
+        "min": 0.32,
+        "max": 0.62
+      },
+      "metalness": {
+        "min": 0.82,
+        "max": 1.0
+      },
+      "normalStrengthMax": 0.25,
+      "patternScaleStuds": {
+        "min": 0.8,
+        "max": 5.0
+      },
+      "dirtMax": 0.2,
+      "stateBehavior": {
+        "intact": "rare_functional_exposure",
+        "damaged": "wider_exposure",
+        "critical": "structural_exposure"
+      },
+      "textureCostClass": "medium"
+    },
+    "polymer": {
+      "baseColorRole": "world_neutral_light",
+      "studioMaterial": "SmoothPlastic",
+      "roughness": {
+        "min": 0.45,
+        "max": 0.75
+      },
+      "metalness": {
+        "min": 0.0,
+        "max": 0.02
+      },
+      "normalStrengthMax": 0.2,
+      "patternScaleStuds": {
+        "min": 0.4,
+        "max": 3.0
+      },
+      "dirtMax": 0.12,
+      "stateBehavior": {
+        "intact": "clean_shell",
+        "damaged": "single_chip",
+        "critical": "large_missing_panel"
+      },
+      "textureCostClass": "small"
+    },
+    "rubber": {
+      "baseColorRole": "world_neutral_dark",
+      "studioMaterial": "Rubber",
+      "roughness": {
+        "min": 0.78,
+        "max": 0.96
+      },
+      "metalness": {
+        "min": 0.0,
+        "max": 0.0
+      },
+      "normalStrengthMax": 0.3,
+      "patternScaleStuds": {
+        "min": 0.2,
+        "max": 2.0
+      },
+      "dirtMax": 0.2,
+      "stateBehavior": {
+        "intact": "matte",
+        "damaged": "compression",
+        "critical": "split_mass"
+      },
+      "textureCostClass": "small"
+    },
+    "reclaimed_wood": {
+      "baseColorRole": "player_buildable",
+      "studioMaterial": "WoodPlanks",
+      "roughness": {
+        "min": 0.68,
+        "max": 0.92
+      },
+      "metalness": {
+        "min": 0.0,
+        "max": 0.0
+      },
+      "normalStrengthMax": 0.4,
+      "patternScaleStuds": {
+        "min": 0.8,
+        "max": 5.0
+      },
+      "dirtMax": 0.3,
+      "stateBehavior": {
+        "intact": "large_grain_only",
+        "damaged": "one_split",
+        "critical": "two_major_splits"
+      },
+      "textureCostClass": "medium"
+    },
+    "reclaimed_composite": {
+      "baseColorRole": "world_neutral_light",
+      "studioMaterial": "SmoothPlastic",
+      "roughness": {
+        "min": 0.58,
+        "max": 0.82
+      },
+      "metalness": {
+        "min": 0.0,
+        "max": 0.06
+      },
+      "normalStrengthMax": 0.28,
+      "patternScaleStuds": {
+        "min": 0.7,
+        "max": 4.5
+      },
+      "dirtMax": 0.2,
+      "stateBehavior": {
+        "intact": "broad_reclaimed_panel",
+        "damaged": "one_joint_exposure",
+        "critical": "large_missing_module"
+      },
+      "textureCostClass": "medium"
+    },
+    "concrete": {
+      "baseColorRole": "world_neutral_light",
+      "studioMaterial": "Concrete",
+      "roughness": {
+        "min": 0.76,
+        "max": 0.96
+      },
+      "metalness": {
+        "min": 0.0,
+        "max": 0.0
+      },
+      "normalStrengthMax": 0.25,
+      "patternScaleStuds": {
+        "min": 1.0,
+        "max": 6.0
+      },
+      "dirtMax": 0.18,
+      "stateBehavior": {
+        "intact": "broad_value",
+        "damaged": "one_spall",
+        "critical": "large_crack_plane"
+      },
+      "textureCostClass": "medium"
+    }
+  },
+  "lightingRobustness": {
+    "mustPassProfiles": [
+      "Lighting_Gameplay_Default",
+      "Lighting_HighContrast",
+      "Lighting_Adverse_Night",
+      "Lighting_Neutral_QA"
+    ],
+    "forbidden": [
+      "identity_dependent_on_specular_only",
+      "micro_normal_noise",
+      "full_surface_grunge",
+      "material_tuned_to_one_light"
+    ]
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "schemaVersion": "1.0.0",
+  "evidenceId": "defense-barricade-small-visual-reconstruction-v5",
+  "assetKey": "defense_barricade_small",
+  "contractRevision": 5,
+  "generatedAt": "2026-07-17T11:55:46+02:00",
+  "status": "PARTIAL",
+  "automationStatus": "PASS",
+  "artisticStatus": "REVISION_REQUIRED",
+  "productionApproved": false,
+  "authority": {
+    "contractSha256": "b4284bf1075e1509d3d78b5965e107020b97af11ac970d2a475414dd22bcd17d",
+    "visualCanonId": "vc_barricade__salvaged-frontier__v1",
+    "visualCanonSha256": "5e196aa1ab2bdaaa9c024d250ea76f82b134848b4dcd32b2741f7970c5c77e58",
+    "visualCanonStatus": "CANDIDATE",
+    "visualCanonProductionEligible": false
+  },
+  "baseline": {
+    "workbenchSessionId": "defense-barricade-small-fe7caf3ac237",
+    "workbenchSession": "../../workbench/defense-barricade-small-fe7caf3ac237/session.json",
+    "contractRevision": 3,
+    "componentCount": 11,
+    "triangleCount": 1188,
+    "semanticSha256": "91d6d8e6bde8162efb792dd6f56eeb6dae5eab5193f0fcaa21ba0f5fa9047633",
+    "decision": "REVISION_REQUIRED"
+  },
+  "reconstruction": {
+    "workbenchSessionId": "defense-barricade-small-b5f464dd439e",
+    "workbenchSession": "../../workbench/defense-barricade-small-b5f464dd439e/session.json",
+    "componentCount": 29,
+    "triangleCount": 1916,
+    "targetTriangleCount": 1500,
+    "absoluteMaximumTriangles": 2000,
+    "dimensionsStuds": [
+      8.0,
+      4.0,
+      2.0
+    ],
+    "pivot": "BASE_CENTER",
+    "semanticSha256": "357149334d1b22aa28d560c526f38968acf9cb88b8ddaa6e6066f68e8751934b",
+    "geometryStatus": "PASS"
+  },
+  "stateFamily": {
+    "coverage": [
+      "intact",
+      "damaged",
+      "critical"
+    ],
+    "topologyPreserved": true,
+    "dimensionsPreserved": true,
+    "pivotPreserved": true,
+    "triangleCountPreserved": true,
+    "semanticHashesUnique": true,
+    "glbHashesUnique": true,
+    "publishedComparisonStatus": "PASS",
+    "determinismReport": "../../build/state-determinism/determinism-report.json",
+    "determinismReportSha256": "88c6fd09c5da3a92e9ef9d27d43314e4bb6dafe4646a944c0fd9aa6790f6def1",
+    "reviewBoard": "../../build/states/state-review.html",
+    "reviewBoardSha256": "690c64057d9db8eec8885c0a2647333dac6bbd9f4ae25e7739a65e6700c1268c"
+  },
+  "stateArtifacts": [
+    {
+      "stateId": "intact",
+      "triangleCount": 1916,
+      "glbSha256": "a62554006ce0273c71dbe39c1b9d04fc2bedbef60a22160d30beb32b8827dc40",
+      "fbxSha256": "d1533642b71115733f061db4e885f1886f964875d96b17808bc47630d96cc830"
+    },
+    {
+      "stateId": "damaged",
+      "triangleCount": 1916,
+      "glbSha256": "474c4146a930b57760c5c3bba1c25dc5a83ca806ae536971afab4e7946d3bf96",
+      "fbxSha256": "b8d0dce822f181c2a138c627f69508b09d2f524ab607ff6cfa9884f50c6ba990"
+    },
+    {
+      "stateId": "critical",
+      "triangleCount": 1916,
+      "glbSha256": "786ecf444133c4dacaea1f94d3802168bfa9e869330644a1e16e1100c98a65dc",
+      "fbxSha256": "526676c19e944a5882768686edddbf988b36134e40b9ff916fea8c10590f795b"
+    }
+  ],
+  "visualReview": {
+    "review": "../../review.json",
+    "score": 87,
+    "status": "PARTIAL",
+    "strengths": [
+      "stable broad silhouette and convincing grounding",
+      "readable three-panel construction and repair brace",
+      "causal continuity across intact, damaged and critical",
+      "rear-only redundant state signal preserves front gameplay hierarchy"
+    ],
+    "revisionRequired": [
+      "add controlled semantic wear and reclaimed history",
+      "strengthen damaged mobile-distance silhouette without becoming critical",
+      "add one functional signature motif that survives distance",
+      "recover triangle headroom toward the 1500 target"
+    ]
+  },
+  "verification": {
+    "r3dTests": {
+      "status": "PASS",
+      "testCount": 43
+    },
+    "stateCompilation": "PASS",
+    "stateDeterminism": "PASS",
+    "publishedStateSynchronization": "PASS",
+    "workbenchReferenceImmutability": "PASS"
+  },
+  "unresolvedProductionGates": [
+    "visualCanonProductionLock",
+    "visualReview",
+    "cloudPackageV1",
+    "cloudSamePackageV2",
+    "studioStagingConfirmed",
+    "studioPackageIntegration",
+    "benchmark",
+    "provenance"
+  ]
+}

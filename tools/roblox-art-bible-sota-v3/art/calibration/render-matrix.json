@@ -1,0 +1,303 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/render-matrix.schema.json",
+  "schemaVersion": "3.0.0",
+  "modes": {
+    "smoke": {
+      "evidenceTier": "PREVIEW_ONLY",
+      "jobs": [
+        {
+          "jobId": "mobile_semantic_smoke",
+          "assetIds": [
+            "barricade",
+            "objective_core",
+            "enemy_standard",
+            "floor_module",
+            "damage_effect"
+          ],
+          "stateIds": [
+            "intact",
+            "critical"
+          ],
+          "cameraIds": [
+            "near",
+            "mid",
+            "far"
+          ],
+          "lightingProfileIds": [
+            "Lighting_Gameplay_Default",
+            "Lighting_Adverse_Night"
+          ],
+          "backgroundIds": [
+            "world_neutral_light",
+            "world_neutral_dark"
+          ],
+          "resolutionIds": [
+            "mobile_landscape_hard"
+          ],
+          "passIds": [
+            "beauty"
+          ]
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "assetIds": [
+            "barricade",
+            "objective_core",
+            "enemy_standard",
+            "floor_module",
+            "damage_effect"
+          ],
+          "stateIds": [
+            "intact"
+          ],
+          "cameraIds": [
+            "far"
+          ],
+          "lightingProfileIds": [
+            "Lighting_Neutral_QA"
+          ],
+          "backgroundIds": [
+            "world_neutral_light",
+            "world_neutral_dark"
+          ],
+          "resolutionIds": [
+            "mobile_landscape_hard"
+          ],
+          "passIds": [
+            "silhouette"
+          ]
+        },
+        {
+          "jobId": "detail_band_smoke",
+          "assetIds": [
+            "barricade",
+            "objective_core",
+            "enemy_standard",
+            "floor_module",
+            "damage_effect"
+          ],
+          "stateIds": [
+            "intact"
+          ],
+          "cameraIds": [
+            "near"
+          ],
+          "lightingProfileIds": [
+            "Lighting_Neutral_QA"
+          ],
+          "backgroundIds": [
+            "world_neutral_light"
+          ],
+          "resolutionIds": [
+            "mobile_landscape_hard"
+          ],
+          "passIds": [
+            "detail_band"
+          ]
+        }
+      ],
+      "expectedRenderCount": 108
+    },
+    "full": {
+      "evidenceTier": "BLENDER_PREFLIGHT_COMPLETE",
+      "jobs": [
+        {
+          "jobId": "semantic_state_lighting",
+          "assetIds": [
+            "barricade",
+            "objective_core",
+            "enemy_standard",
+            "floor_module",
+            "damage_effect"
+          ],
+          "stateIds": [
+            "intact",
+            "damaged",
+            "critical"
+          ],
+          "cameraIds": [
+            "near",
+            "mid",
+            "far"
+          ],
+          "lightingProfileIds": [
+            "Lighting_Gameplay_Default",
+            "Lighting_HighContrast",
+            "Lighting_Adverse_Night",
+            "Lighting_Neutral_QA"
+          ],
+          "backgroundIds": [
+            "world_neutral_light",
+            "world_neutral_dark"
+          ],
+          "resolutionIds": [
+            "mobile_landscape_hard"
+          ],
+          "passIds": [
+            "beauty"
+          ]
+        },
+        {
+          "jobId": "orientation_silhouette",
+          "assetIds": [
+            "barricade",
+            "objective_core",
+            "enemy_standard",
+            "floor_module",
+            "damage_effect"
+          ],
+          "stateIds": [
+            "intact"
+          ],
+          "cameraIds": [
+            "far",
+            "front",
+            "back",
+            "three_quarter"
+          ],
+          "lightingProfileIds": [
+            "Lighting_Gameplay_Default",
+            "Lighting_Adverse_Night"
+          ],
+          "backgroundIds": [
+            "world_neutral_light",
+            "world_neutral_dark"
+          ],
+          "resolutionIds": [
+            "mobile_landscape_hard"
+          ],
+          "passIds": [
+            "silhouette"
+          ]
+        },
+        {
+          "jobId": "state_silhouette_comparison",
+          "assetIds": [
+            "barricade",
+            "objective_core",
+            "enemy_standard",
+            "floor_module",
+            "damage_effect"
+          ],
+          "stateIds": [
+            "intact",
+            "damaged",
+            "critical"
+          ],
+          "cameraIds": [
+            "near"
+          ],
+          "lightingProfileIds": [
+            "Lighting_Neutral_QA"
+          ],
+          "backgroundIds": [
+            "world_neutral_light"
+          ],
+          "resolutionIds": [
+            "mobile_landscape_hard"
+          ],
+          "passIds": [
+            "silhouette"
+          ]
+        },
+        {
+          "jobId": "material_and_detail_qa",
+          "assetIds": [
+            "barricade",
+            "objective_core",
+            "enemy_standard",
+            "floor_module",
+            "damage_effect"
+          ],
+          "stateIds": [
+            "intact"
+          ],
+          "cameraIds": [
+            "near"
+          ],
+          "lightingProfileIds": [
+            "Lighting_Neutral_QA"
+          ],
+          "backgroundIds": [
+            "world_neutral_light",
+            "world_neutral_dark"
+          ],
+          "resolutionIds": [
+            "mobile_landscape_hard"
+          ],
+          "passIds": [
+            "flat_albedo",
+            "detail_band"
+          ]
+        },
+        {
+          "jobId": "resolution_orientation_framing",
+          "assetIds": [
+            "barricade",
+            "objective_core",
+            "enemy_standard",
+            "floor_module",
+            "damage_effect"
+          ],
+          "stateIds": [
+            "critical"
+          ],
+          "cameraIds": [
+            "three_quarter"
+          ],
+          "lightingProfileIds": [
+            "Lighting_Gameplay_Default"
+          ],
+          "backgroundIds": [
+            "world_neutral_dark"
+          ],
+          "resolutionIds": [
+            "mobile_landscape_hard",
+            "mobile_landscape_mid",
+            "reference_landscape",
+            "mobile_narrow_portrait"
+          ],
+          "passIds": [
+            "beauty"
+          ]
+        }
+      ],
+      "expectedRenderCount": 421
+    }
+  },
+  "groupScenes": [
+    {
+      "id": "stress_barricade_30",
+      "assetId": "barricade",
+      "count": 30
+    },
+    {
+      "id": "stress_enemy_30",
+      "assetId": "enemy_standard",
+      "count": 30
+    },
+    {
+      "id": "mixed_gameplay",
+      "assetId": "objective_core",
+      "count": 1
+    }
+  ],
+  "fileNameTemplate": "{territory}__{asset}__{state}__{camera}__{lighting}__{background}__{resolution}__{pass}.png",
+  "comparisonRule": "A mode expands the calibration kit's applicable asset/state pairs identically for all territories; per-territory omissions are invalid.",
+  "coveragePolicy": {
+    "method": "risk_based_constrained_combinatorial_matrix",
+    "rationale": "Avoid a brute-force Cartesian explosion while guaranteeing every gameplay state, canonical distance, lighting profile, background, required resolution, silhouette orientation and diagnostic pass is exercised in an explicit job.",
+    "fullModeRequiredCoverage": {
+      "allAssets": true,
+      "allApplicableStatesInBeauty": true,
+      "allApplicableStatesInSilhouette": true,
+      "allCanonicalDistancesInBeauty": true,
+      "allLightingProfilesInBeauty": true,
+      "bothBackgroundsInBeauty": true,
+      "allRequiredResolutions": true,
+      "frontBackThreeQuarterSilhouette": true,
+      "allDiagnosticPasses": true
+    },
+    "perTerritoryOmissionsForbidden": true
+  }
+}

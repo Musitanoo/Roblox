@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/reimport-probe.schema.json",
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "artifact": {
+      "type": "object",
+      "required": ["path", "sha256"],
+      "properties": {
+        "path": {"type": "string", "pattern": "^evidence/studio/reimport-probe/(?:v1|v2|source)\\.glb$"},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "type": "object",
+  "required": ["schemaVersion", "generatedAt", "sourceAsset", "roleNode", "verticalShiftStuds", "versions", "active", "source"],
+  "properties": {
+    "schemaVersion": {"const": "1.0.0"},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "sourceAsset": {"const": "build/industrial-toy-defense/exports/barricade/barricade__intact.glb"},
+    "roleNode": {"const": "ROLE_interaction"},
+    "verticalShiftStuds": {"const": 0.25},
+    "versions": {
+      "type": "object",
+      "required": ["v1", "v2"],
+      "properties": {
+        "v1": {"$ref": "#/$defs/artifact"},
+        "v2": {"$ref": "#/$defs/artifact"}
+      },
+      "unevaluatedProperties": false
+    },
+    "active": {"enum": ["v1", "v2"]},
+    "source": {"$ref": "#/$defs/artifact"}
+  },
+  "unevaluatedProperties": false
+}

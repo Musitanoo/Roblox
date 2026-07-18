@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0.0",
+  "states": [
+    {
+      "id": "intact",
+      "visualChange": "A clean aligned cell whose inset, perimeter and four connection edges form a quiet dependable foundation. All edge keys and inset corners remain aligned. The walkable surface remains calm and uninterrupted.",
+      "invariants": [
+        "Four-by-half-by-four dimensions, bottom-center pivot and collision plane remain fixed.",
+        "Edge keys align across every territory and state.",
+        "The central inset and perimeter remain the primary top-view identity.",
+        "Damage never creates an unfair collision step or changes placement anchors.",
+        "Repeated modules reuse identical mesh and material combinations."
+      ]
+    }
+  ],
+  "independentStateDesignForbidden": true
+}

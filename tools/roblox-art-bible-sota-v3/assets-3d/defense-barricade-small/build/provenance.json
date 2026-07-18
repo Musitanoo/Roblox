@@ -1,0 +1,23 @@
+{
+  "assetKey": "defense_barricade_small",
+  "blenderVersion": "5.2.0 LTS",
+  "contractSha256": "f0c7e306bd4c20a1ba6a7fb44181ee30997ad6fa42dfb7834edd6d21369bbf06",
+  "generatedAt": "2026-07-18T09:32:18.524639+00:00",
+  "generator": "tools/roblox-3d-asset/blender/compile_asset.py",
+  "generatorSha256": "34642e84af8b3d15bb12e3d365f5157aa911ab484b59bacf92eed426e64e2460",
+  "git": {
+    "commit": "3bdd0eca94c2920cca4d9e193ed3ce1a36264bf7",
+    "dirty": true,
+    "status": "PARTIAL"
+  },
+  "revision": 19,
+  "schemaVersion": "1.0.0",
+  "semanticSha256": "fe9f6fbe9aec8013475ae6913c4923ea5a3e2df38da68a6c9ac19ebaeb6bd62c",
+  "stateId": "intact",
+  "visualCanon": {
+    "canonId": "vc_barricade__salvaged-frontier__v1",
+    "path": "art/canonical-visuals/salvaged-frontier/barricade.json",
+    "sha256": "2cf485afb6bd7297a1ffccbb72c60f1e186706fe2eb47b0bcb24af407ba9cc52",
+    "status": "CANDIDATE"
+  }
+}

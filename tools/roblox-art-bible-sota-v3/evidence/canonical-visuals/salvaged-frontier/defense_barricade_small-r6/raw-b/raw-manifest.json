@@ -1,0 +1,624 @@
+{
+  "assetKey": "defense_barricade_small",
+  "buildManifestSha256": "2a767329fe9384ba1f06179490f10d4cbd4ed93414ff5d41d0ae89414a047b4d",
+  "canonId": "vc_barricade__salvaged-frontier__v1",
+  "canonSha256": "5e196aa1ab2bdaaa9c024d250ea76f82b134848b4dcd32b2741f7970c5c77e58",
+  "contractSha256": "1a03c5151f91c205d8a5014e3fb2602ffe4c1995aa5b8949e0297752a0516415",
+  "evidenceClass": "REAL_RENDERED",
+  "productionApproved": false,
+  "renderer": {
+    "blenderVersion": "5.2.0 LTS",
+    "colorMode": "RGBA8",
+    "ditherIntensity": 0.0,
+    "engine": "BLENDER_EEVEE",
+    "factoryStartup": true,
+    "requiredConsecutiveMatchingFrames": 2,
+    "resolution": [
+      1280,
+      720
+    ],
+    "sourceBlendReadOnly": true
+  },
+  "rendererScriptSha256": "056925e88bda37073c7d3bff2fbfd0a73701c1d8e3ce735e835ecb4ffce09988",
+  "renders": [
+    {
+      "attemptCount": 2,
+      "attempts": [
+        {
+          "accepted": true,
+          "attempt": 1,
+          "contentSha256": "3ebc30e789a62e436625261c3a183f33830c126a71082e7a99f46518262c794a",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0
+        },
+        {
+          "accepted": true,
+          "attempt": 2,
+          "contentSha256": "3ebc30e789a62e436625261c3a183f33830c126a71082e7a99f46518262c794a",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0
+        }
+      ],
+      "bytes": 587061,
+      "camera": {
+        "location": [
+          10.0,
+          -14.0,
+          7.0
+        ],
+        "orthoScale": 8.5,
+        "target": [
+          0.0,
+          0.0,
+          2.0
+        ],
+        "type": "ORTHO"
+      },
+      "contentSha256": "3ebc30e789a62e436625261c3a183f33830c126a71082e7a99f46518262c794a",
+      "height": 720,
+      "path": "mobile_near.png",
+      "sha256": "3b25408b450dd632c50f2c153d96637aa4fa6f7e72f1f502e597e55683307d27",
+      "status": "PASS",
+      "viewId": "mobile_near",
+      "width": 1280
+    },
+    {
+      "attemptCount": 2,
+      "attempts": [
+        {
+          "accepted": true,
+          "attempt": 1,
+          "contentSha256": "2b6df210428d41307425b3d1d72bc5e84687983212700efb671c4ce0bdd3e839",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0
+        },
+        {
+          "accepted": true,
+          "attempt": 2,
+          "contentSha256": "2b6df210428d41307425b3d1d72bc5e84687983212700efb671c4ce0bdd3e839",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0
+        }
+      ],
+      "bytes": 554889,
+      "camera": {
+        "location": [
+          12.0,
+          -17.0,
+          10.0
+        ],
+        "orthoScale": 14.0,
+        "target": [
+          0.0,
+          0.0,
+          2.0
+        ],
+        "type": "ORTHO"
+      },
+      "contentSha256": "2b6df210428d41307425b3d1d72bc5e84687983212700efb671c4ce0bdd3e839",
+      "height": 720,
+      "path": "mobile_mid.png",
+      "sha256": "63eefc4ed83345e39ef6d0ba3ef8cfa0d74f2444309c33964027a1aa23062cce",
+      "status": "PASS",
+      "viewId": "mobile_mid",
+      "width": 1280
+    },
+    {
+      "attemptCount": 2,
+      "attempts": [
+        {
+          "accepted": true,
+          "attempt": 1,
+          "contentSha256": "b73d984b4e43e5813cb2e95f640ba7cb4959e34c3b42dcf219f3136a0758250d",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0
+        },
+        {
+          "accepted": true,
+          "attempt": 2,
+          "contentSha256": "b73d984b4e43e5813cb2e95f640ba7cb4959e34c3b42dcf219f3136a0758250d",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0
+        }
+      ],
+      "bytes": 428277,
+      "camera": {
+        "location": [
+          14.0,
+          -20.0,
+          12.0
+        ],
+        "orthoScale": 22.0,
+        "target": [
+          0.0,
+          0.0,
+          2.0
+        ],
+        "type": "ORTHO"
+      },
+      "contentSha256": "b73d984b4e43e5813cb2e95f640ba7cb4959e34c3b42dcf219f3136a0758250d",
+      "height": 720,
+      "path": "mobile_far.png",
+      "sha256": "eba3d18fad0c5121c0c03c8d9953581581fbe610bc40898e571660e13ad434e0",
+      "status": "PASS",
+      "viewId": "mobile_far",
+      "width": 1280
+    },
+    {
+      "attemptCount": 2,
+      "attempts": [
+        {
+          "accepted": true,
+          "attempt": 1,
+          "contentSha256": "797b17f783d90ce7345c886dafddbea4bbd54107025953e2003b002385afaf3b",
+          "maximumNearBlackPixelRatio": 0.3,
+          "nearBlackPixelRatio": 0.0
+        },
+        {
+          "accepted": true,
+          "attempt": 2,
+          "contentSha256": "797b17f783d90ce7345c886dafddbea4bbd54107025953e2003b002385afaf3b",
+          "maximumNearBlackPixelRatio": 0.3,
+          "nearBlackPixelRatio": 0.0
+        }
+      ],
+      "bytes": 668585,
+      "camera": {
+        "location": [
+          9.0,
+          -11.0,
+          8.0
+        ],
+        "orthoScale": 10.0,
+        "target": [
+          0.0,
+          0.0,
+          2.0
+        ],
+        "type": "ORTHO"
+      },
+      "contentSha256": "797b17f783d90ce7345c886dafddbea4bbd54107025953e2003b002385afaf3b",
+      "height": 720,
+      "lightingProfile": {
+        "id": "neutral_qa",
+        "lights": [
+          {
+            "color": [
+              1.0,
+              0.94,
+              0.84
+            ],
+            "energy": 1000.0,
+            "size": 5.0
+          },
+          {
+            "color": [
+              0.72,
+              0.86,
+              1.0
+            ],
+            "energy": 650.0,
+            "size": 4.0
+          },
+          {
+            "color": [
+              0.75,
+              1.0,
+              0.92
+            ],
+            "energy": 450.0,
+            "size": 3.0
+          }
+        ],
+        "world": [
+          0.025,
+          0.03,
+          0.045
+        ]
+      },
+      "path": "lighting_neutral_qa.png",
+      "sha256": "8a4cb5d5585857b42d1158e71f02f8af8fd2826cc3d85e6e3df366ba68db2d14",
+      "status": "PASS",
+      "viewId": "lighting_neutral_qa",
+      "width": 1280
+    },
+    {
+      "attemptCount": 2,
+      "attempts": [
+        {
+          "accepted": true,
+          "attempt": 1,
+          "contentSha256": "6c5181a0ccfec7427cbee98fe2aa184cf4c3113f5e0d5f3e89d8b7782d47b029",
+          "maximumNearBlackPixelRatio": 0.3,
+          "nearBlackPixelRatio": 0.0
+        },
+        {
+          "accepted": true,
+          "attempt": 2,
+          "contentSha256": "6c5181a0ccfec7427cbee98fe2aa184cf4c3113f5e0d5f3e89d8b7782d47b029",
+          "maximumNearBlackPixelRatio": 0.3,
+          "nearBlackPixelRatio": 0.0
+        }
+      ],
+      "bytes": 701657,
+      "camera": {
+        "location": [
+          9.0,
+          -11.0,
+          8.0
+        ],
+        "orthoScale": 10.0,
+        "target": [
+          0.0,
+          0.0,
+          2.0
+        ],
+        "type": "ORTHO"
+      },
+      "contentSha256": "6c5181a0ccfec7427cbee98fe2aa184cf4c3113f5e0d5f3e89d8b7782d47b029",
+      "height": 720,
+      "lightingProfile": {
+        "id": "gameplay_default",
+        "lights": [
+          {
+            "color": [
+              1.0,
+              0.72,
+              0.46
+            ],
+            "energy": 1250.0,
+            "size": 6.0
+          },
+          {
+            "color": [
+              0.48,
+              0.72,
+              1.0
+            ],
+            "energy": 720.0,
+            "size": 5.0
+          },
+          {
+            "color": [
+              0.62,
+              1.0,
+              0.84
+            ],
+            "energy": 380.0,
+            "size": 3.0
+          }
+        ],
+        "world": [
+          0.035,
+          0.045,
+          0.055
+        ]
+      },
+      "path": "lighting_gameplay_default.png",
+      "sha256": "2b96a360b7f58178f67a444ec4fbf43064dbe67d0c28fd756fee7f0793c03517",
+      "status": "PASS",
+      "viewId": "lighting_gameplay_default",
+      "width": 1280
+    },
+    {
+      "attemptCount": 2,
+      "attempts": [
+        {
+          "accepted": true,
+          "attempt": 1,
+          "contentSha256": "b64f9381fd7ed348d47d7ce67a0e7c20416a8f80f58d77bbbff7177a352c963a",
+          "maximumNearBlackPixelRatio": 0.3,
+          "nearBlackPixelRatio": 0.0
+        },
+        {
+          "accepted": true,
+          "attempt": 2,
+          "contentSha256": "b64f9381fd7ed348d47d7ce67a0e7c20416a8f80f58d77bbbff7177a352c963a",
+          "maximumNearBlackPixelRatio": 0.3,
+          "nearBlackPixelRatio": 0.0
+        }
+      ],
+      "bytes": 595652,
+      "camera": {
+        "location": [
+          9.0,
+          -11.0,
+          8.0
+        ],
+        "orthoScale": 10.0,
+        "target": [
+          0.0,
+          0.0,
+          2.0
+        ],
+        "type": "ORTHO"
+      },
+      "contentSha256": "b64f9381fd7ed348d47d7ce67a0e7c20416a8f80f58d77bbbff7177a352c963a",
+      "height": 720,
+      "lightingProfile": {
+        "id": "high_contrast",
+        "lights": [
+          {
+            "color": [
+              1.0,
+              0.9,
+              0.7
+            ],
+            "energy": 1550.0,
+            "size": 3.0
+          },
+          {
+            "color": [
+              0.35,
+              0.58,
+              1.0
+            ],
+            "energy": 240.0,
+            "size": 2.5
+          },
+          {
+            "color": [
+              0.45,
+              1.0,
+              0.78
+            ],
+            "energy": 160.0,
+            "size": 2.0
+          }
+        ],
+        "world": [
+          0.012,
+          0.014,
+          0.02
+        ]
+      },
+      "path": "lighting_high_contrast.png",
+      "sha256": "ea455718661783b3325dadad41a74c7b6fc5ce510a233dc6ce21a55ae01d765b",
+      "status": "PASS",
+      "viewId": "lighting_high_contrast",
+      "width": 1280
+    },
+    {
+      "attemptCount": 2,
+      "attempts": [
+        {
+          "accepted": true,
+          "attempt": 1,
+          "contentSha256": "0d74ee9e51db646944b00f205e5675b044a62eec2a8ba4aa31f7064718e6a659",
+          "maximumNearBlackPixelRatio": 0.3,
+          "nearBlackPixelRatio": 0.0
+        },
+        {
+          "accepted": true,
+          "attempt": 2,
+          "contentSha256": "0d74ee9e51db646944b00f205e5675b044a62eec2a8ba4aa31f7064718e6a659",
+          "maximumNearBlackPixelRatio": 0.3,
+          "nearBlackPixelRatio": 0.0
+        }
+      ],
+      "bytes": 523042,
+      "camera": {
+        "location": [
+          9.0,
+          -11.0,
+          8.0
+        ],
+        "orthoScale": 10.0,
+        "target": [
+          0.0,
+          0.0,
+          2.0
+        ],
+        "type": "ORTHO"
+      },
+      "contentSha256": "0d74ee9e51db646944b00f205e5675b044a62eec2a8ba4aa31f7064718e6a659",
+      "height": 720,
+      "lightingProfile": {
+        "id": "adverse_night",
+        "lights": [
+          {
+            "color": [
+              0.28,
+              0.48,
+              1.0
+            ],
+            "energy": 520.0,
+            "size": 5.0
+          },
+          {
+            "color": [
+              0.18,
+              0.72,
+              1.0
+            ],
+            "energy": 260.0,
+            "size": 4.0
+          },
+          {
+            "color": [
+              1.0,
+              0.38,
+              0.16
+            ],
+            "energy": 300.0,
+            "size": 2.5
+          }
+        ],
+        "world": [
+          0.006,
+          0.01,
+          0.025
+        ]
+      },
+      "path": "lighting_adverse_night.png",
+      "sha256": "09c803bb7ba935300f4ff8f6577cf568c37e7bbddf8b1d515646e98fffb03641",
+      "status": "PASS",
+      "viewId": "lighting_adverse_night",
+      "width": 1280
+    },
+    {
+      "attemptCount": 2,
+      "attempts": [
+        {
+          "accepted": true,
+          "attempt": 1,
+          "contentSha256": "9e0c262099a2361b9f39b7985852ed8cbc4e7d9bece7022714549df4ba29c65e",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0
+        },
+        {
+          "accepted": true,
+          "attempt": 2,
+          "contentSha256": "9e0c262099a2361b9f39b7985852ed8cbc4e7d9bece7022714549df4ba29c65e",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0
+        }
+      ],
+      "bytes": 540227,
+      "camera": {
+        "location": [
+          12.0,
+          -17.0,
+          10.0
+        ],
+        "orthoScale": 15.0,
+        "target": [
+          0.0,
+          0.0,
+          1.5
+        ],
+        "type": "ORTHO"
+      },
+      "contentSha256": "9e0c262099a2361b9f39b7985852ed8cbc4e7d9bece7022714549df4ba29c65e",
+      "height": 720,
+      "path": "repetition_1.png",
+      "repetition": {
+        "layout": {
+          "columns": 1,
+          "rows": 1
+        },
+        "modelCount": 1,
+        "renderObjectCount": 29,
+        "reuseMode": "LINKED_MESH_DATA",
+        "uniqueMeshDataCount": 29
+      },
+      "sha256": "9735bfa508c9d47a5b75da7752984e7a673cd9b5e3aee777901da14b9e47e719",
+      "status": "PASS",
+      "viewId": "repetition_1",
+      "width": 1280
+    },
+    {
+      "attemptCount": 3,
+      "attempts": [
+        {
+          "accepted": true,
+          "attempt": 1,
+          "contentSha256": "cb425cfb61ebd44de3a2619fba8086aff3d610aeb98cc723129dfd7517d9219a",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0
+        },
+        {
+          "accepted": true,
+          "attempt": 2,
+          "contentSha256": "e4202356b709b2811732a67d7f5c9ea39de1ca387e8b5fe8732583d81894ac25",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0
+        },
+        {
+          "accepted": true,
+          "attempt": 3,
+          "contentSha256": "e4202356b709b2811732a67d7f5c9ea39de1ca387e8b5fe8732583d81894ac25",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0
+        }
+      ],
+      "bytes": 518364,
+      "camera": {
+        "location": [
+          48.0,
+          -58.0,
+          52.0
+        ],
+        "orthoScale": 62.0,
+        "target": [
+          0.0,
+          0.0,
+          1.5
+        ],
+        "type": "ORTHO"
+      },
+      "contentSha256": "e4202356b709b2811732a67d7f5c9ea39de1ca387e8b5fe8732583d81894ac25",
+      "height": 720,
+      "path": "repetition_30.png",
+      "repetition": {
+        "layout": {
+          "columns": 6,
+          "rows": 5
+        },
+        "modelCount": 30,
+        "renderObjectCount": 870,
+        "reuseMode": "LINKED_MESH_DATA",
+        "uniqueMeshDataCount": 29
+      },
+      "sha256": "d5d7babefc5ad355d02ececfd818cd9287e30f6dfdd001f62a2ad30519e6434c",
+      "status": "PASS",
+      "viewId": "repetition_30",
+      "width": 1280
+    },
+    {
+      "attemptCount": 2,
+      "attempts": [
+        {
+          "accepted": true,
+          "attempt": 1,
+          "contentSha256": "3ad19867432c69d2d6939368dcf73e0e8b95249902f801dc2e80308858ed05ab",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0
+        },
+        {
+          "accepted": true,
+          "attempt": 2,
+          "contentSha256": "3ad19867432c69d2d6939368dcf73e0e8b95249902f801dc2e80308858ed05ab",
+          "maximumNearBlackPixelRatio": 0.2,
+          "nearBlackPixelRatio": 0.0
+        }
+      ],
+      "bytes": 520043,
+      "camera": {
+        "location": [
+          82.0,
+          -92.0,
+          86.0
+        ],
+        "orthoScale": 108.0,
+        "target": [
+          0.0,
+          0.0,
+          1.5
+        ],
+        "type": "ORTHO"
+      },
+      "contentSha256": "3ad19867432c69d2d6939368dcf73e0e8b95249902f801dc2e80308858ed05ab",
+      "height": 720,
+      "path": "repetition_100.png",
+      "repetition": {
+        "layout": {
+          "columns": 10,
+          "rows": 10
+        },
+        "modelCount": 100,
+        "renderObjectCount": 2900,
+        "reuseMode": "LINKED_MESH_DATA",
+        "uniqueMeshDataCount": 29
+      },
+      "sha256": "1c1b0b0f3ea2c562947a87491dcbd399371828d190cdeefd44042cb35a9d7364",
+      "status": "PASS",
+      "viewId": "repetition_100",
+      "width": 1280
+    }
+  ],
+  "revision": 6,
+  "schemaVersion": "1.0.0",
+  "sourceBlendSha256": "c9848064562a21d743f361eb965b4c73eb9781a3992d6902a5147d8c5d2a3e02",
+  "status": "PASS"
+}

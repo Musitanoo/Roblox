@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/blender-verification-report.schema.json",
+  "type": "object",
+  "required": ["$schema", "schemaVersion", "status", "generatedAt", "blenderExecutable", "inputHashes", "territories", "issues"],
+  "properties": {
+    "$schema": {"const": "https://roblox-top1.local/schemas/blender-verification-report.schema.json"},
+    "schemaVersion": {"const": "3.0.0"},
+    "status": {"enum": ["PASS", "FAIL"]},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "blenderExecutable": {"type": "string", "minLength": 1},
+    "inputHashes": {
+      "type": "object",
+      "required": ["generator", "materials"],
+      "properties": {
+        "generator": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "materials": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      },
+      "unevaluatedProperties": false
+    },
+    "territories": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["territoryId", "status", "runExitCodes", "canonicalReportSha256", "exportSha256", "issues"],
+        "properties": {
+          "territoryId": {"enum": ["industrial-toy-defense", "salvaged-frontier", "clean-tactical-diorama"]},
+          "status": {"enum": ["PASS", "FAIL"]},
+          "runExitCodes": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {"type": "integer"}
+          },
+          "canonicalReportSha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+          "exportSha256": {
+            "type": "object",
+            "minProperties": 13,
+            "maxProperties": 13,
+            "additionalProperties": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+          },
+          "issues": {"type": "array", "items": {"type": "string"}}
+        },
+        "unevaluatedProperties": false
+      }
+    },
+    "issues": {"type": "array", "items": {"type": "string"}}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"const": "PASS"}}},
+      "then": {"properties": {"issues": {"maxItems": 0}}}
+    }
+  ],
+  "unevaluatedProperties": false
+}

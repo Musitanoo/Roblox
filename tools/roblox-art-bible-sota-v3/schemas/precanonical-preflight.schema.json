@@ -1,0 +1,131 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/precanonical-preflight.schema.json",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/precanonical-preflight.schema.json"
+    },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "request": {
+      "$ref": "#/$defs/binding"
+    },
+    "requestId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]+$"
+    },
+    "promptHash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "BLOCKED",
+        "FAIL"
+      ]
+    },
+    "nextState": {
+      "enum": [
+        "WEB_PREFLIGHT_PASS",
+        "READY_FOR_WEB_GENERATION",
+        "BUDGET_EXHAUSTED",
+        "RESULT_AMBIGUOUS"
+      ]
+    },
+    "remainingGenerations": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]+$"
+          },
+          "status": {
+            "enum": [
+              "PASS",
+              "BLOCKED",
+              "FAIL"
+            ]
+          },
+          "detail": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "status",
+          "detail"
+        ],
+        "unevaluatedProperties": false
+      },
+      "minItems": 1
+    },
+    "blockingReasons": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "quotaRemaining": {
+      "const": "UNKNOWN"
+    },
+    "consumesQuota": {
+      "const": false
+    },
+    "productionApproved": {
+      "const": false
+    }
+  },
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "generatedAt",
+    "request",
+    "requestId",
+    "promptHash",
+    "status",
+    "nextState",
+    "remainingGenerations",
+    "checks",
+    "blockingReasons",
+    "quotaRemaining",
+    "consumesQuota",
+    "productionApproved"
+  ],
+  "$defs": {
+    "binding": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "unevaluatedProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

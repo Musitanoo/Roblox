@@ -1,0 +1,732 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/visual-canon.schema.json",
+  "schemaVersion": "2.0.0",
+  "canonId": "vc_damage_effect__salvaged-frontier__v1",
+  "assetId": "damage_effect",
+  "territoryId": "salvaged-frontier",
+  "version": 1,
+  "status": "CANDIDATE",
+  "authority": {
+    "productArtContract": {
+      "path": "art/authority/product-art-authority-v1.json",
+      "sha256": "217c95da6202e43ad542094bcc2389493748c9d4bc9045e95647de9b6d98e2ca"
+    },
+    "retention": {
+      "path": "docs/PRODUCT_INNOVATION_AND_RETENTION_DOCTRINE.md",
+      "sha256": "b1b045849e5540cea71c7a9965f5e16351168b25e50550e5bafea40d832bc5ad"
+    },
+    "objectProductContracts": {
+      "path": "art/canonical-visuals/object-product-contracts.json",
+      "sha256": "4bc2a2657e9b5086f820ece02bf502b8c781c9bdddd5dda711a27acc499c2184"
+    },
+    "artDirection": {
+      "path": "art/art-direction.json",
+      "sha256": "ab1e3b2607fc916fa660fb20b90c2b62ee6985a866c3a65090bef4996a7eef22"
+    },
+    "calibration": {
+      "path": "art/calibration/calibration-kit.json",
+      "sha256": "8a33c6c8a9b5a02ef460f5e698907a4d6d623e2f5c475047cd3dbdccc102ace9"
+    },
+    "shapeLanguage": {
+      "path": "art/shape-language/rules.json",
+      "sha256": "76fcd0eaaace7f34d7fb88fdc6470315518efd8e586649393ceb32356a7addc7"
+    },
+    "materials": {
+      "path": "art/materials/material-rules.json",
+      "sha256": "41fadb667eb50a2252e6721649afee1b38b98a667ea7c2051f5f465ad9896b83"
+    },
+    "selectedConstitution": {
+      "path": "art/selected/salvaged-frontier-constitution.json",
+      "sha256": "1a7ea88c2d06be01530b6e02b70b6f9dc176f5b74d0cb98f4d565b8a322a9491"
+    }
+  },
+  "productIntent": {
+    "retentionBinding": {
+      "primaryHypothesis": {
+        "id": "H-FAILURE-001",
+        "status": "TESTING",
+        "priority": "P0a",
+        "designContribution": "A bounded directional impact sentence should expose hit source, target and severity quickly enough to support causal learning.",
+        "intendedPlayerBehavior": "The player notices where damage came from, relates it to the struck component and can later explain the relevant failure.",
+        "recognitionTest": "On mobile during combat, players identify source direction, struck target and damaged versus critical severity without a color-only signal.",
+        "decisionMetric": "A non-briefed player points to the correct incoming direction and target after one event without the effect obscuring the next decision.",
+        "failureCondition": "The effect reads as a symmetric explosion, hides the target, points the wrong way, persists too long or communicates severity only through hue.",
+        "guardrails": [
+          "No full-screen flash, persistent fog, camera obstruction or unbounded particle count.",
+          "Direction must derive from the real impact vector.",
+          "Reduced-motion and photosensitivity settings must retain causal information."
+        ],
+        "gate": "G3",
+        "claimBoundary": "The VFX is an information design hypothesis and does not by itself prove understanding, retention or correct runtime damage."
+      },
+      "secondaryHypotheses": [],
+      "evidenceStatus": "UNPROVEN"
+    },
+    "evidenceBoundary": "These bindings express falsifiable design intent only; retention, readability, implementation and runtime behavior remain unproven until their named human and technical gates pass."
+  },
+  "runtimeStateModel": {
+    "primaryGenerationStates": [
+      "damaged",
+      "critical"
+    ],
+    "compositionRule": "Select exactly one severity grammar and instantiate it from the real source-to-impact vector, target material response and accessibility settings.",
+    "operationalOverlays": [],
+    "transientStates": [
+      {
+        "id": "reduced_motion",
+        "applicability": "The player has requested reduced motion or reduced effects.",
+        "visualCues": [
+          "static directional wedge remains readable",
+          "fragment travel and residual lifetime are reduced"
+        ],
+        "geometryPolicy": "Preserve contact, direction and severity shapes while reducing motion amplitude.",
+        "gameplayTruth": "Accessibility changes presentation only and never damage outcome."
+      }
+    ],
+    "terminalState": null,
+    "coverageBoundary": "Damaged and critical are event-severity reference grammars, not persistent object health states or physical meshes."
+  },
+  "identity": {
+    "canonicalName": "Directional Damage Effect",
+    "category": "gameplay_information_vfx",
+    "gameplayFunction": "communicate hit direction, damage severity and impact cause",
+    "worldRole": "A short-lived visual sentence that tells the player where the hit came from, what it struck and how severe the consequence is.",
+    "affiliation": "neutral_gameplay_feedback",
+    "manufactureContext": "Not a physical manufactured object; it is a disciplined visual grammar attached to canonical impact anchors and state transitions.",
+    "emotionalIntent": "Punchy, satisfying and informative without obscuring the target, camera or next decision.",
+    "technologyLevel": "stylized world-response effect",
+    "character": [
+      "directional",
+      "brief",
+      "causal",
+      "restrained"
+    ],
+    "territoryVisualThesis": "A forceful graphic impact sentence whose large vector wedge, bent arc and two or three material-matched fragments preserve target visibility and frontier tactility."
+  },
+  "instantRead": {
+    "oneSecondPromise": "A clear wedge, arc and few large fragments point back to the impact source and distinguish serious from critical damage.",
+    "orientationCue": "The dominant cone or wedge aligns with incoming force and terminates at the exact impact anchor.",
+    "interactionCue": "No interaction affordance is present; the effect only explains an event.",
+    "dangerCue": "Severity grows through angle, scale, fragmentation, timing and audio, never through hue alone.",
+    "relationToPlayer": "Neutral explanatory feedback that supports competence and post-failure understanding.",
+    "responsibleElements": [
+      "dominant directional wedge",
+      "impact-centered arc",
+      "two or three large fragments",
+      "short residual tail",
+      "The dominant cone or wedge aligns with incoming force and terminates at the exact impact anchor.",
+      "No interaction affordance is present; the effect only explains an event.",
+      "Severity grows through angle, scale, fragmentation, timing and audio, never through hue alone."
+    ]
+  },
+  "dimensions": {
+    "unit": "stud",
+    "width": 4.0,
+    "height": 4.0,
+    "depth": 4.0,
+    "toleranceStuds": 0.005,
+    "pivot": "impact_center",
+    "proportionRules": [
+      "The effect remains inside a four-stud cube around the impact center.",
+      "The primary directional shape carries most visible area.",
+      "Only two or three large secondary fragments are allowed.",
+      "Residual smoke or sparks remain thin enough to preserve target readability."
+    ]
+  },
+  "silhouette": {
+    "targetReadDistanceStuds": 30,
+    "views": {
+      "front": "A directional wedge and arc terminate at the impact center with few large fragments spreading along the force vector.",
+      "back": "The source direction remains inferable through taper and fragment trail rather than a symmetric explosion.",
+      "left": "The primary wedge shows depth and a clean origin-to-impact relationship.",
+      "right": "The counter-profile confirms the same vector and avoids spherical fog.",
+      "top": "A readable directional fan reveals hit angle without surrounding the target uniformly.",
+      "bottom": "No decorative underside exists; any ground contact is a brief directional dust shape.",
+      "threeQuarterFront": "The canonical view shows source vector, target contact, severity arc and limited fragments in one glance.",
+      "threeQuarterBack": "The taper and residual trail preserve causality from the opposite side.",
+      "gameCamera": "At mobile scale the effect reads as one arrow-like event sentence and disappears before it blocks the next decision."
+    },
+    "recognitionLandmarks": [
+      "dominant directional wedge",
+      "impact-centered arc",
+      "two or three large fragments",
+      "short residual tail"
+    ],
+    "negativeSpaces": [
+      "clear target center after flash",
+      "open space opposite the impact vector",
+      "gaps between large fragments"
+    ],
+    "intentionalAsymmetry": "Asymmetry follows the impact direction and target normal only; the same vector topology must remain consistent across diagnostic views of one generated state.",
+    "distanceRule": "The primary function, orientation and state must remain readable at 30 studs in the canonical mobile landscape and portrait views."
+  },
+  "formHierarchy": {
+    "targetRatios": {
+      "primary": 0.72,
+      "secondary": 0.23,
+      "tertiary": 0.05
+    },
+    "primary": [
+      "directional cone or wedge",
+      "impact arc"
+    ],
+    "secondary": [
+      "two or three large fragments",
+      "short directional streak"
+    ],
+    "tertiary": [
+      "few sparks",
+      "thin residual smoke",
+      "brief contact flash"
+    ],
+    "territoryConstructionTranslation": "The effect inherits Industrial-level shape economy and direction clarity, then expresses Salvaged Frontier through material-matched fragments, warm edge sparks and restrained dusty weight."
+  },
+  "construction": {
+    "components": [
+      {
+        "id": "ImpactFlash",
+        "function": "Mark the exact contact point for less than the maximum flash duration.",
+        "position": "impact center",
+        "form": "compact flash",
+        "materialRole": "warning",
+        "relationship": "Anchored to the target contact and immediately yields to the directional shape.",
+        "mobility": "ephemeral",
+        "visibility": "Visible from all gameplay views for a very short interval.",
+        "readingRole": "Pins the event to the correct target."
+      },
+      {
+        "id": "DirectionalWedge",
+        "function": "Communicate incoming force direction and primary severity.",
+        "position": "aligned through impact center",
+        "form": "cone, wedge or arc",
+        "materialRole": "critical",
+        "relationship": "Starts opposite the source and terminates at the impact anchor.",
+        "mobility": "ephemeral",
+        "visibility": "Dominant during the primary shape interval.",
+        "readingRole": "Carries cause and direction before decorative fragments."
+      },
+      {
+        "id": "MajorFragments",
+        "function": "Reinforce material response and severity with a bounded fragment count.",
+        "position": "along outgoing force vector",
+        "form": "two or three large shapes",
+        "materialRole": "bareMetal",
+        "relationship": "Emerge from the impact anchor and never become persistent geometry.",
+        "mobility": "ephemeral",
+        "visibility": "Readable near and mid range, omitted when too small at far range.",
+        "readingRole": "Supports severity without particle fog."
+      },
+      {
+        "id": "ResidualTrail",
+        "function": "Preserve causality briefly after the primary impact shape ends.",
+        "position": "thin vector-aligned tail",
+        "form": "smoke, spark or energy streak",
+        "materialRole": "secondary",
+        "relationship": "Fades from source vector toward the impact center.",
+        "mobility": "ephemeral",
+        "visibility": "Short-lived and non-occluding.",
+        "readingRole": "Allows a late glance to recover hit direction."
+      }
+    ],
+    "plausibilityRules": [
+      "Every visible part belongs to a named component and has a functional relationship to at least one neighboring component.",
+      "No part floats, interpenetrates without an approved joint, or relies on unexplained support.",
+      "Moving, replaceable and destructible components preserve declared axes, anchors and clearance.",
+      "The compiler may simplify tertiary finish but may not remove a primary or secondary semantic component."
+    ],
+    "stableNamingRule": "Component IDs and gameplay anchors never change without an approved canon revision."
+  },
+  "artDirection": {
+    "territoryThesis": "A transient Salvaged Frontier impact sentence communicates target, direction, severity and cause through one graphic vector, material-matched fragments and restrained dusty weight without becoming physical scenery.",
+    "shapeGrammar": [
+      "one dominant directional wedge",
+      "one bent or broken secondary arc",
+      "two or three large target-matched fragments",
+      "one clean negative-space corridor around the target"
+    ],
+    "exaggeration": "Direction and severity are enlarged enough to read for a fraction of a second on mobile, while fragment count, spark density and total screen coverage remain strictly bounded.",
+    "edgeLanguage": "The main vector uses one clean graphic edge and the fragments inherit the target material; no structural bevel language, chassis outline or persistent solid frame is allowed.",
+    "detailDensity": "One primary vector, one secondary arc and at most three readable fragments carry the effect; micro-particles and decorative debris are forbidden.",
+    "asymmetry": "Asymmetry follows the impact direction and target normal only; the same vector topology must remain consistent across diagnostic views of one generated state.",
+    "materialLanguage": "Fragments briefly inherit the struck material, warm copper-gold edges indicate force and a restrained dust body adds frontier tactility; the effect owns no chassis material system.",
+    "paletteLogic": "Target-matched fragments and a bounded warm force accent carry meaning; mint interaction, permanent player-construction colors and broad critical red fields are forbidden.",
+    "surfaceTreatment": "Use crisp vector readability, broad translucent dust and a few solid fragments with no painted lighting, texture chatter, smoke cloud or cinematic bloom.",
+    "wearLogic": "The effect has no persistent wear history; severity changes the same impact sentence and disappears without leaving invented geometry or undocumented damage.",
+    "signatureDetails": [
+      "two or three material-matched heavy fragments",
+      "one readable dust wedge",
+      "one bent copper-gold directional arc"
+    ],
+    "forbidden": [
+      "physical chassis, pedestal, brace, panel, foot or service socket",
+      "persistent prop, debris pile or environmental object reading",
+      "screen-filling smoke, bloom or particle noise",
+      "more than three readable solid fragments",
+      "hidden target, hidden lane or ambiguous impact direction",
+      "invented text, icon, emblem or user-interface graphic"
+    ]
+  },
+  "materials": [
+    {
+      "zoneId": "direction_zone",
+      "family": "stylized_energy_or_dust",
+      "semanticRole": "critical",
+      "valueRange": "high contrast but bounded",
+      "surfaceFinish": "Graphic solid shapes with soft controlled falloff, not realistic volumetric fog.",
+      "wear": "Not applicable; the effect is transient.",
+      "boundaryRule": "The primary shape remains separated from the target silhouette.",
+      "lightingBehavior": "Readable under all profiles without becoming a white screen flash.",
+      "territoryTranslation": "Fragments briefly inherit the struck material, warm copper-gold edges indicate force and a restrained dust body adds frontier tactility; the effect owns no chassis material system. Use crisp vector readability, broad translucent dust and a few solid fragments with no painted lighting, texture chatter, smoke cloud or cinematic bloom. Palette rule: Target-matched fragments and a bounded warm force accent carry meaning; mint interaction, permanent player-construction colors and broad critical red fields are forbidden."
+    },
+    {
+      "zoneId": "severity_zone",
+      "family": "material_response_fragments",
+      "semanticRole": "bareMetal",
+      "valueRange": "middle to bright accents",
+      "surfaceFinish": "Large simple fragments derived from the struck material family.",
+      "wear": "Not applicable beyond the event frame.",
+      "boundaryRule": "Fragment count and lifetime remain bounded by the canon.",
+      "lightingBehavior": "Keeps distinct shapes at mobile resolution.",
+      "territoryTranslation": "Fragments briefly inherit the struck material, warm copper-gold edges indicate force and a restrained dust body adds frontier tactility; the effect owns no chassis material system. Use crisp vector readability, broad translucent dust and a few solid fragments with no painted lighting, texture chatter, smoke cloud or cinematic bloom. Palette rule: Target-matched fragments and a bounded warm force accent carry meaning; mint interaction, permanent player-construction colors and broad critical red fields are forbidden."
+    }
+  ],
+  "semanticZones": [
+    {
+      "id": "contact_zone",
+      "purpose": "Identify the exact struck point.",
+      "shapeRule": "Compact centered flash.",
+      "valueRule": "Brief brightest point.",
+      "colorRole": "warning",
+      "motionRule": "instant flash",
+      "vfxAnchor": "impact_center",
+      "audioRole": "contact_click"
+    },
+    {
+      "id": "direction_zone",
+      "purpose": "Reveal source-to-target force direction.",
+      "shapeRule": "Tapered wedge or arc.",
+      "valueRule": "Strong readable directional mass.",
+      "colorRole": "critical",
+      "motionRule": "fast expansion",
+      "vfxAnchor": "force_vector",
+      "audioRole": "directional_hit"
+    },
+    {
+      "id": "severity_zone",
+      "purpose": "Differentiate damaged and critical consequences.",
+      "shapeRule": "Bounded scale, break count and fragment spread.",
+      "valueRule": "More contrast for critical but never full-screen.",
+      "colorRole": "critical",
+      "motionRule": "severity-scaled decay",
+      "vfxAnchor": "major_fragments",
+      "audioRole": "severity_layer"
+    }
+  ],
+  "states": [
+    {
+      "id": "damaged",
+      "summary": "A compact directional impact explains one serious but repairable hit with one wedge, one arc and two large fragments.",
+      "gameplayTruth": {
+        "status": "VISUAL_ONLY",
+        "contractRef": "PD-08",
+        "trigger": "A validated event classifies the hit as serious but non-critical.",
+        "capabilityEffect": "The effect reports an existing damage outcome and never calculates or changes it.",
+        "collisionEffect": "The effect is non-collidable, non-queryable and transient.",
+        "visualClaim": "One compact wedge, one arc and two major fragments reveal contact, source direction and repairable severity.",
+        "claimBoundary": "Material fragments may echo the struck surface but may not invent hidden geometry or persistent debris."
+      },
+      "invariants": [
+        "Impact-center pivot and four-stud bounds remain fixed.",
+        "The dominant shape aligns with the real incoming-force vector.",
+        "Target, direction and severity remain readable without color.",
+        "Hit flash, primary shape and residual durations remain within calibration limits.",
+        "The effect never persists as collidable or queryable gameplay geometry."
+      ],
+      "changes": [
+        "Primary shape uses the lower approved scale and lifetime.",
+        "Two large fragments and a short residual trail reinforce direction."
+      ],
+      "cues": {
+        "shape": [
+          "single compact wedge",
+          "two separated fragments",
+          "clear open space around target"
+        ],
+        "silhouette": [
+          "single compact wedge",
+          "two separated fragments",
+          "clear open space around target"
+        ],
+        "value": [
+          "brief bright contact point",
+          "mid-high directional mass"
+        ],
+        "color": [
+          "warning-dominant palette",
+          "critical color absent or minimal"
+        ],
+        "light": [
+          "flash under 0.12 seconds",
+          "no persistent emission"
+        ],
+        "motion": [
+          "fast directional expansion",
+          "short controlled decay"
+        ],
+        "vfx": [
+          "two large fragments",
+          "thin residual vector"
+        ],
+        "audio": [
+          "clear directional impact",
+          "single repairable damage layer"
+        ]
+      },
+      "componentOperations": [
+        {
+          "componentId": "DirectionalWedge",
+          "operation": "EMIT",
+          "description": "Emit the compact force-aligned primary shape."
+        },
+        {
+          "componentId": "MajorFragments",
+          "operation": "EMIT",
+          "description": "Emit exactly two large readable fragments."
+        }
+      ],
+      "transitions": [
+        {
+          "to": "critical",
+          "durationSeconds": 0.0,
+          "sequence": [
+            "a later hit qualifies as critical",
+            "critical effect uses its own bounded event",
+            "no damaged particles persist into the new event"
+          ],
+          "reversible": false
+        }
+      ],
+      "territoryTranslation": "One compact vector wedge, one continuous bent arc and two or three target-matched fragments identify a meaningful hit while preserving target silhouette and lane visibility."
+    },
+    {
+      "id": "critical",
+      "summary": "A larger broken wedge, stronger arc and three major fragments communicate a critical causal hit while leaving the target and lane visible.",
+      "gameplayTruth": {
+        "status": "VISUAL_ONLY",
+        "contractRef": "PD-08",
+        "trigger": "A validated event classifies the hit as critical.",
+        "capabilityEffect": "The effect reports higher severity and never changes damage, stagger or destruction.",
+        "collisionEffect": "The effect is non-collidable, non-queryable and transient.",
+        "visualClaim": "A larger broken directional wedge, stronger arc and exactly three major fragments increase severity without hiding cause.",
+        "claimBoundary": "Critical presentation may not become a symmetric explosion, full-screen flash or persistent environmental effect."
+      },
+      "invariants": [
+        "Impact-center pivot and four-stud bounds remain fixed.",
+        "The dominant shape aligns with the real incoming-force vector.",
+        "Target, direction and severity remain readable without color.",
+        "Hit flash, primary shape and residual durations remain within calibration limits.",
+        "The effect never persists as collidable or queryable gameplay geometry."
+      ],
+      "changes": [
+        "Primary wedge becomes larger and visibly broken into a critical double-chevron rhythm.",
+        "Three large fragments and a longer but still bounded residual reinforce severity."
+      ],
+      "cues": {
+        "shape": [
+          "broken larger wedge",
+          "three major fragments",
+          "stronger but still directional spread"
+        ],
+        "silhouette": [
+          "broken larger wedge",
+          "three major fragments",
+          "stronger but still directional spread"
+        ],
+        "value": [
+          "higher contrast primary event",
+          "dark gaps inside the broken critical shape"
+        ],
+        "color": [
+          "critical role at primary shape",
+          "warning remnant at contact"
+        ],
+        "light": [
+          "brief stronger contact flash",
+          "interrupted critical glow rather than sustained bloom"
+        ],
+        "motion": [
+          "sharper expansion",
+          "slightly longer bounded decay"
+        ],
+        "vfx": [
+          "three large fragments",
+          "thin directional smoke or energy tail"
+        ],
+        "audio": [
+          "heavier directional impact",
+          "distinct critical consequence layer"
+        ]
+      },
+      "componentOperations": [
+        {
+          "componentId": "DirectionalWedge",
+          "operation": "BREAK",
+          "description": "Use a larger broken force-aligned critical shape."
+        },
+        {
+          "componentId": "MajorFragments",
+          "operation": "EMIT",
+          "description": "Emit exactly three large readable fragments."
+        }
+      ],
+      "transitions": [],
+      "territoryTranslation": "The same vector expands, the primary arc breaks once and one fragment becomes larger; density stays bounded and the effect never resembles a persistent object or a second gameplay state."
+    }
+  ],
+  "invariants": [
+    "Impact-center pivot and four-stud bounds remain fixed.",
+    "The dominant shape aligns with the real incoming-force vector.",
+    "Target, direction and severity remain readable without color.",
+    "Hit flash, primary shape and residual durations remain within calibration limits.",
+    "The effect never persists as collidable or queryable gameplay geometry."
+  ],
+  "allowedVariations": [
+    {
+      "id": "fragment_rotation",
+      "range": "seeded rotation within the force-aligned spread",
+      "justification": "Prevents identical impacts while preserving direction."
+    },
+    {
+      "id": "residual_density",
+      "range": "zero to the territory-approved non-occluding maximum",
+      "justification": "Adapts material response without hiding the target."
+    },
+    {
+      "id": "arc_curvature",
+      "range": "bounded by the canonical source-to-target vector",
+      "justification": "Allows stylization while retaining causality."
+    }
+  ],
+  "forbidden": [
+    "uniform sphere explosion",
+    "particle fog occlusion",
+    "full-screen white flash",
+    "more than three large fragments",
+    "effect direction unrelated to actual hit source",
+    "persistent floating debris",
+    "severity expressed only by color",
+    "physical chassis, pedestal, brace, panel, foot or service socket",
+    "persistent prop, debris pile or environmental object reading",
+    "screen-filling smoke, bloom or particle noise",
+    "more than three readable solid fragments",
+    "hidden target, hidden lane or ambiguous impact direction",
+    "invented text, icon, emblem or user-interface graphic",
+    "thin_loose_wires",
+    "microtext",
+    "free_floating_fragments",
+    "detail_without_silhouette_function_identity"
+  ],
+  "visualPacket": {
+    "status": "SPECIFIED",
+    "coverageRule": "If a component or state is absent from every bound board, the canon is incomplete and cannot be LOCKED.",
+    "boards": [
+      {
+        "id": "orthographic",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "perspective",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "black_silhouette",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "component_breakdown",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "proportions",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "materials",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "semantic_zones",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "all_states",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "state_comparison",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "mobile_near",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "mobile_mid",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "mobile_far",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "lighting_matrix",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "repetition_1",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "repetition_30",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "repetition_100",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "required_and_forbidden_annotations",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      }
+    ]
+  },
+  "generationContract": {
+    "mode": "RECONSTRUCT_CANON_DO_NOT_AUTHOR_OBJECT",
+    "obligations": [
+      "Reconstruct every primary and secondary component defined by this canon.",
+      "Produce every required state from the same component structure and stable anchors.",
+      "Preserve the one-second function, front, interaction, danger and state readings.",
+      "Record this canon ID and exact SHA-256 in the compliance envelope."
+    ],
+    "constraints": [
+      "Dimensions are 4.0 x 4.0 x 4.0 studs with tolerance 0.005.",
+      "Triangle budget maximum is 300.",
+      "Texture class is small.",
+      "Pivot is impact_center and component anchors remain stable.",
+      "One UV set and one material slot maximum per production mesh component."
+    ],
+    "tolerances": [
+      "Dimension error may not exceed 0.005 stud.",
+      "Only the explicitly listed allowedVariations may vary.",
+      "Tertiary details may be simplified when they fall below the minimum mobile screen-space band."
+    ],
+    "forbidden": [
+      "uniform sphere explosion",
+      "particle fog occlusion",
+      "full-screen white flash",
+      "more than three large fragments",
+      "effect direction unrelated to actual hit source",
+      "persistent floating debris",
+      "severity expressed only by color",
+      "physical chassis, pedestal, brace, panel, foot or service socket",
+      "persistent prop, debris pile or environmental object reading",
+      "screen-filling smoke, bloom or particle noise",
+      "more than three readable solid fragments",
+      "hidden target, hidden lane or ambiguous impact direction",
+      "invented text, icon, emblem or user-interface graphic",
+      "thin_loose_wires",
+      "microtext",
+      "free_floating_fragments",
+      "detail_without_silhouette_function_identity"
+    ],
+    "promptDiscipline": {
+      "subjectClass": "transient_vfx",
+      "identityLockRules": [
+        "Freeze one exact source-to-impact vector, contact anchor, wedge grammar, arc family and fragment count across all quadrants.",
+        "Treat the board as four diagnostic views of one frozen transient event, never a physical prop or four explosion concepts.",
+        "The black silhouette must preserve directional taper and open target space."
+      ],
+      "styleRules": [
+        "Use graphic solid impact shapes, material-matched broad fragments and restrained dusty weight with no physical chassis.",
+        "Salvaged Frontier appears through tactile material response and warm bounded edge accents, not repair history or construction grammar.",
+        "Prioritize target visibility, direction and severity over spectacle."
+      ],
+      "negativeRules": [
+        "No chassis, panel, brace, service socket, repair band, wood construction or persistent object silhouette.",
+        "No symmetric sphere explosion, fog cloud, debris storm, full-screen white flash or more than the declared major fragments.",
+        "No direction unrelated to the real source vector and no color-only severity."
+      ],
+      "outputSelfChecks": [
+        "All quadrants depict the same frozen vector, contact point, fragment count and target severity.",
+        "The target center and incoming direction remain visible in grayscale.",
+        "Nothing reads as a manufactured object, collision volume or persistent debris."
+      ]
+    },
+    "complianceReportRequired": true,
+    "minimumStatusForExploration": "CANDIDATE",
+    "minimumStatusForProduction": "LOCKED",
+    "silentCanonMutationForbidden": true
+  },
+  "approval": {
+    "required": true,
+    "status": "PENDING",
+    "approvedBy": null,
+    "approvedAt": null,
+    "decisionRecord": null,
+    "approvedEvidencePackageSha256": null,
+    "revisionReason": null
+  },
+  "provenance": {
+    "sourceKind": "AUTHORED_CANON_COMPILED_FROM_GDD_RETENTION_AND_ART_GRAMMAR",
+    "authoredAt": "2026-07-18T09:05:09Z",
+    "authoredBy": "Codex under founder authority; human lock still required",
+    "generator": "tools.art.build_visual_canons",
+    "inputHashes": {
+      "source": "b26432ba320eab7d4c4dbff5929625a2dcc040b9f785ea3e239678d64c5535a5",
+      "productArtContract": "217c95da6202e43ad542094bcc2389493748c9d4bc9045e95647de9b6d98e2ca",
+      "retention": "b1b045849e5540cea71c7a9965f5e16351168b25e50550e5bafea40d832bc5ad",
+      "objectProductContracts": "4bc2a2657e9b5086f820ece02bf502b8c781c9bdddd5dda711a27acc499c2184",
+      "artDirection": "ab1e3b2607fc916fa660fb20b90c2b62ee6985a866c3a65090bef4996a7eef22",
+      "calibration": "8a33c6c8a9b5a02ef460f5e698907a4d6d623e2f5c475047cd3dbdccc102ace9",
+      "shapeLanguage": "76fcd0eaaace7f34d7fb88fdc6470315518efd8e586649393ceb32356a7addc7",
+      "materials": "41fadb667eb50a2252e6721649afee1b38b98a667ea7c2051f5f465ad9896b83",
+      "selectedConstitution": "1a7ea88c2d06be01530b6e02b70b6f9dc176f5b74d0cb98f4d565b8a322a9491",
+      "territory": "3b59d12273d24e5aea3b7a06611aafffad495f482a1696dc4a1c1fc41749f3d6",
+      "generator": "5c51fd21f87b3f91ab69e760af8ba2820f06ba2204da0376e0148d9c9d2cd3bb"
+    }
+  }
+}

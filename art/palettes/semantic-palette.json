@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "colorSpace": "sRGB",
+  "policy": {
+    "colorIsNeverTheOnlySignal": true,
+    "lightingProfilesRequired": ["Lighting_Gameplay_Default", "Lighting_HighContrast", "Lighting_Adverse_Night", "Lighting_Neutral_QA"],
+    "testModes": ["grayscale", "protanopia", "deuteranopia", "tritanopia"]
+  },
+  "roles": {
+    "world_neutral_dark": {"hex": "#354052", "maximumVisibleAreaRatio": 0.55, "redundantCue": "large stable mass"},
+    "world_neutral_mid": {"hex": "#68717F", "maximumVisibleAreaRatio": 0.45, "redundantCue": "secondary structure"},
+    "world_neutral_light": {"hex": "#B7C1CC", "maximumVisibleAreaRatio": 0.25, "redundantCue": "readable plane or lit edge"},
+    "player_buildable": {"hex": "#D58B31", "maximumVisibleAreaRatio": 0.18, "redundantCue": "thick frame and build icon"},
+    "interactive_ready": {"hex": "#61E7C4", "maximumVisibleAreaRatio": 0.10, "redundantCue": "steady ring and slow pulse"},
+    "warning": {"hex": "#F2C94C", "maximumVisibleAreaRatio": 0.08, "redundantCue": "single pulse and chevron"},
+    "critical": {"hex": "#E64A4A", "maximumVisibleAreaRatio": 0.08, "redundantCue": "fracture, double pulse and alarm"},
+    "disabled": {"hex": "#59616D", "maximumVisibleAreaRatio": 0.20, "redundantCue": "closed or lowered pose, emissive off"},
+    "enemy_biological": {"hex": "#73935C", "maximumVisibleAreaRatio": 0.25, "redundantCue": "organic forward silhouette and locomotion"}
+  }
+}

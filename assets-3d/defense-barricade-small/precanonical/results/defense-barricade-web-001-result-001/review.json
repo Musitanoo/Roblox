@@ -1,0 +1,26 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/precanonical-review.schema.json",
+  "schemaVersion": "1.0.0",
+  "reviewId": "defense-barricade-web-001-result-001-review-001",
+  "result": {
+    "path": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\precanonical\\results\\defense-barricade-web-001-result-001\\result.json",
+    "sha256": "b991a2de4423c615f27ed39c8e0d50084b73d0f64fa5fd4f4c1556db81a6a423"
+  },
+  "resultDigest": "f835b96536feeda3da3cf0983a7f24fdd9920903cd5db75f4c2e739e999fb41b",
+  "decision": "PRECANONICAL_CANDIDATE",
+  "reviewer": null,
+  "reviewedAt": null,
+  "assessment": {
+    "functionalConformity": "PASS",
+    "artDirectionConformity": "PASS",
+    "visualHierarchy": "UNKNOWN",
+    "internalCoherence": "UNKNOWN",
+    "stateCoherence": "UNKNOWN"
+  },
+  "preserve": [],
+  "correct": [],
+  "forbidNext": [],
+  "canonicalizationAuthorized": false,
+  "canonical": false,
+  "productionApproved": false
+}

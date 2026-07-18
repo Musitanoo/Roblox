@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0.0",
+  "states": [
+    {
+      "id": "intact",
+      "visualChange": "A closed protective crown, stable pedestal and calm luminous heartbeat communicate a secure but valuable fortress heart. All buttresses and rings form a complete protective envelope. The core pulse is slow, regular and spatially contained.",
+      "invariants": [
+        "Six-by-seven-by-six dimensions, footprint and bottom-center pivot remain fixed.",
+        "The luminous protected center, pedestal and crown hierarchy remain recognizable.",
+        "The player-facing access opening and rear service spine never swap.",
+        "State progression increases core exposure without changing the core anchor.",
+        "The objective remains visually friendly and never acquires weapon silhouettes."
+      ]
+    }
+  ],
+  "independentStateDesignForbidden": true
+}

@@ -1,0 +1,955 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/studio-report.schema.json",
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "stateCheck": {
+      "type": "object",
+      "required": [
+        "pass",
+        "sourceSha256Present",
+        "sourceIdentityMatches"
+      ],
+      "properties": {
+        "pass": {
+          "type": "boolean"
+        },
+        "reason": {
+          "enum": [
+            "missing",
+            "scene_missing",
+            "bounds_mismatch",
+            "source_identity_missing",
+            "source_identity_mismatch"
+          ]
+        },
+        "observed": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "prefixItems": [
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          ],
+          "items": false
+        },
+        "target": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "prefixItems": [
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          ],
+          "items": false
+        },
+        "sourceSha256Present": {
+          "type": "boolean"
+        },
+        "sourceIdentityMatches": {
+          "type": "boolean"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "pass": {
+                "const": true
+              }
+            },
+            "required": [
+              "pass"
+            ]
+          },
+          "then": {
+            "required": [
+              "observed",
+              "target"
+            ],
+            "properties": {
+              "sourceSha256Present": {
+                "const": true
+              },
+              "sourceIdentityMatches": {
+                "const": true
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "reason"
+            ]
+          },
+          "then": {
+            "properties": {
+              "pass": {
+                "const": false
+              }
+            }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "assetStateChecks": {
+      "type": "object",
+      "required": [
+        "intact",
+        "damaged",
+        "critical"
+      ],
+      "properties": {
+        "intact": {
+          "$ref": "#/$defs/stateCheck"
+        },
+        "damaged": {
+          "$ref": "#/$defs/stateCheck"
+        },
+        "critical": {
+          "$ref": "#/$defs/stateCheck"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "floorStateChecks": {
+      "type": "object",
+      "required": ["intact", "damaged"],
+      "properties": {
+        "intact": {"$ref": "#/$defs/stateCheck"},
+        "damaged": {"$ref": "#/$defs/stateCheck"}
+      },
+      "unevaluatedProperties": false
+    },
+    "effectStateChecks": {
+      "type": "object",
+      "required": ["damaged", "critical"],
+      "properties": {
+        "damaged": {"$ref": "#/$defs/stateCheck"},
+        "critical": {"$ref": "#/$defs/stateCheck"}
+      },
+      "unevaluatedProperties": false
+    },
+    "reuseCheck": {
+      "type": "object",
+      "required": [
+        "pass",
+        "observedCount",
+        "distinctSignatures",
+        "meshPartCount",
+        "sourceSha256Count",
+        "issues"
+      ],
+      "properties": {
+        "pass": {
+          "type": "boolean"
+        },
+        "observedCount": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "distinctSignatures": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "meshPartCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sourceSha256Count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "lightingCheck": {
+      "type": "object",
+      "required": [
+        "ok",
+        "code",
+        "profileId",
+        "evidenceFresh",
+        "capturedAtUnix",
+        "issues"
+      ],
+      "properties": {
+        "ok": {
+          "type": "boolean"
+        },
+        "code": {
+          "enum": [
+            "PASS",
+            "READ_ONLY_PRECONDITION_MISMATCH",
+            "UNKNOWN_PROFILE",
+            "MUTATION_FAILED",
+            "READBACK_MISMATCH",
+            "EVIDENCE_MISSING",
+            "EVIDENCE_STALE"
+          ]
+        },
+        "profileId": {
+          "enum": [
+            "Lighting_Gameplay_Default",
+            "Lighting_HighContrast",
+            "Lighting_Adverse_Night",
+            "Lighting_Neutral_QA"
+          ]
+        },
+        "evidenceFresh": {
+          "type": "boolean"
+        },
+        "capturedAtUnix": {
+          "type": ["integer", "null"],
+          "minimum": 0
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "ok": { "const": true } },
+            "required": ["ok"]
+          },
+          "then": {
+            "properties": {
+              "code": { "const": "PASS" },
+              "evidenceFresh": { "const": true },
+              "capturedAtUnix": { "type": "integer" },
+              "issues": { "maxItems": 0 }
+            }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "artifact": {
+      "type": "object",
+      "required": [
+        "kind",
+        "path",
+        "bytes",
+        "sha256"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "studio_report_json",
+            "capture_manifest_json",
+            "place_file",
+            "screenshot",
+            "microprofiler_dump"
+          ]
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^evidence/studio/"
+        },
+        "bytes": {
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "status",
+    "territoryId",
+    "privacy",
+    "environmentChecks",
+    "generatedAt",
+    "sceneChecks",
+    "zoneChecks",
+    "assetChecks",
+    "reuseChecks",
+    "lightingChecks",
+    "cameraChecks",
+    "artifacts",
+    "issues"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/studio-report.schema.json"
+    },
+    "schemaVersion": {
+      "const": "3.0.0"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED"
+      ]
+    },
+    "territoryId": {
+      "enum": [
+        "industrial-toy-defense",
+        "salvaged-frontier",
+        "clean-tactical-diorama"
+      ]
+    },
+    "placeId": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1
+    },
+    "placeVersion": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "privacy": {
+      "type": "object",
+      "required": [
+        "rawPlaceIdIncluded",
+        "rawCreatorIdIncluded",
+        "rawApiKeyIncluded"
+      ],
+      "properties": {
+        "rawPlaceIdIncluded": { "const": false },
+        "rawCreatorIdIncluded": { "const": false },
+        "rawApiKeyIncluded": { "const": false }
+      },
+      "unevaluatedProperties": false
+    },
+    "environmentChecks": {
+      "type": "object",
+      "required": [
+        "deploymentMarkedStaging",
+        "localConfigComplete",
+        "savedCloudPlaceVerified",
+        "expectedCreatorMatches",
+        "creatorAllowlistVerified",
+        "editModeVerified"
+      ],
+      "properties": {
+        "deploymentMarkedStaging": { "type": "boolean" },
+        "localConfigComplete": { "type": "boolean" },
+        "savedCloudPlaceVerified": { "type": "boolean" },
+        "expectedCreatorMatches": { "type": "boolean" },
+        "creatorAllowlistVerified": { "type": "boolean" },
+        "editModeVerified": { "type": "boolean" }
+      },
+      "unevaluatedProperties": false
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sceneChecks": {
+      "type": "object",
+      "required": [
+        "scenePresent",
+        "placeholderCount",
+        "missingSourceCount",
+        "referenceAvatarPresent",
+        "artTerritoryMatches",
+        "sceneSessionPresent"
+      ],
+      "properties": {
+        "scenePresent": {
+          "type": "boolean"
+        },
+        "placeholderCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "missingSourceCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "referenceAvatarPresent": {
+          "type": "boolean"
+        },
+        "artTerritoryMatches": {
+          "type": "boolean"
+        },
+        "sceneSessionPresent": {
+          "type": "boolean"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "zoneChecks": {
+      "type": "object",
+      "required": [
+        "Zone_Isolated_Light",
+        "Zone_Isolated_Dark",
+        "Zone_States",
+        "Zone_Stress_30",
+        "Zone_Stress_100",
+        "Zone_Mixed_Gameplay",
+        "Zone_Graybox_Reference",
+        "ValidationCameras",
+        "ReferenceDecor"
+      ],
+      "properties": {
+        "Zone_Isolated_Light": {
+          "type": "boolean"
+        },
+        "Zone_Isolated_Dark": {
+          "type": "boolean"
+        },
+        "Zone_States": {
+          "type": "boolean"
+        },
+        "Zone_Stress_30": {
+          "type": "boolean"
+        },
+        "Zone_Stress_100": {
+          "type": "boolean"
+        },
+        "Zone_Mixed_Gameplay": {
+          "type": "boolean"
+        },
+        "Zone_Graybox_Reference": {
+          "type": "boolean"
+        },
+        "ValidationCameras": {
+          "type": "boolean"
+        },
+        "ReferenceDecor": {
+          "type": "boolean"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "assetChecks": {
+      "type": "object",
+      "required": [
+        "barricade",
+        "objective_core",
+        "enemy_standard",
+        "floor_module",
+        "damage_effect"
+      ],
+      "properties": {
+        "barricade": {
+          "$ref": "#/$defs/assetStateChecks"
+        },
+        "objective_core": {
+          "$ref": "#/$defs/assetStateChecks"
+        },
+        "enemy_standard": {
+          "$ref": "#/$defs/assetStateChecks"
+        },
+        "floor_module": {
+          "$ref": "#/$defs/floorStateChecks"
+        },
+        "damage_effect": {
+          "$ref": "#/$defs/effectStateChecks"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "reuseChecks": {
+      "type": "object",
+      "required": [
+        "Stress_barricade_30",
+        "Stress_enemy_standard_30",
+        "Stress_barricade_100",
+        "Stress_enemy_standard_100"
+      ],
+      "properties": {
+        "Stress_barricade_30": {
+          "$ref": "#/$defs/reuseCheck"
+        },
+        "Stress_enemy_standard_30": {
+          "$ref": "#/$defs/reuseCheck"
+        },
+        "Stress_barricade_100": {
+          "$ref": "#/$defs/reuseCheck"
+        },
+        "Stress_enemy_standard_100": {
+          "$ref": "#/$defs/reuseCheck"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "lightingChecks": {
+      "type": "object",
+      "required": [
+        "Lighting_Gameplay_Default",
+        "Lighting_HighContrast",
+        "Lighting_Adverse_Night",
+        "Lighting_Neutral_QA"
+      ],
+      "properties": {
+        "Lighting_Gameplay_Default": {
+          "$ref": "#/$defs/lightingCheck"
+        },
+        "Lighting_HighContrast": {
+          "$ref": "#/$defs/lightingCheck"
+        },
+        "Lighting_Adverse_Night": {
+          "$ref": "#/$defs/lightingCheck"
+        },
+        "Lighting_Neutral_QA": {
+          "$ref": "#/$defs/lightingCheck"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "cameraChecks": {
+      "type": "object",
+      "required": [
+        "near",
+        "mid",
+        "far",
+        "front",
+        "back",
+        "three_quarter"
+      ],
+      "properties": {
+        "near": {
+          "type": "boolean"
+        },
+        "mid": {
+          "type": "boolean"
+        },
+        "far": {
+          "type": "boolean"
+        },
+        "front": {
+          "type": "boolean"
+        },
+        "back": {
+          "type": "boolean"
+        },
+        "three_quarter": {
+          "type": "boolean"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/artifact"
+      },
+      "uniqueItems": true
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "PASS"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "issues": {
+            "maxItems": 0
+          },
+          "environmentChecks": {
+            "properties": {
+              "deploymentMarkedStaging": { "const": true },
+              "localConfigComplete": { "const": true },
+              "savedCloudPlaceVerified": { "const": true },
+              "expectedCreatorMatches": { "const": true },
+              "creatorAllowlistVerified": { "const": true },
+              "editModeVerified": { "const": true }
+            }
+          },
+          "sceneChecks": {
+            "properties": {
+              "scenePresent": {
+                "const": true
+              },
+              "placeholderCount": {
+                "const": 0
+              },
+              "missingSourceCount": {
+                "const": 0
+              },
+              "referenceAvatarPresent": {
+                "const": true
+              },
+              "artTerritoryMatches": {
+                "const": true
+              },
+              "sceneSessionPresent": {
+                "const": true
+              }
+            }
+          },
+          "zoneChecks": {
+            "properties": {
+              "Zone_Isolated_Light": {
+                "const": true
+              },
+              "Zone_Isolated_Dark": {
+                "const": true
+              },
+              "Zone_States": {
+                "const": true
+              },
+              "Zone_Stress_30": {
+                "const": true
+              },
+              "Zone_Stress_100": {
+                "const": true
+              },
+              "Zone_Mixed_Gameplay": {
+                "const": true
+              },
+              "Zone_Graybox_Reference": {
+                "const": true
+              },
+              "ValidationCameras": {
+                "const": true
+              },
+              "ReferenceDecor": {
+                "const": true
+              }
+            }
+          },
+          "cameraChecks": {
+            "properties": {
+              "near": {
+                "const": true
+              },
+              "mid": {
+                "const": true
+              },
+              "far": {
+                "const": true
+              },
+              "front": {
+                "const": true
+              },
+              "back": {
+                "const": true
+              },
+              "three_quarter": {
+                "const": true
+              }
+            }
+          },
+          "reuseChecks": {
+            "properties": {
+              "Stress_barricade_30": {
+                "properties": {
+                  "pass": {
+                    "const": true
+                  },
+                  "observedCount": {
+                    "const": 30
+                  },
+                  "distinctSignatures": {
+                    "const": 1
+                  },
+                  "sourceSha256Count": {
+                    "const": 1
+                  }
+                }
+              },
+              "Stress_enemy_standard_30": {
+                "properties": {
+                  "pass": {
+                    "const": true
+                  },
+                  "observedCount": {
+                    "const": 30
+                  },
+                  "distinctSignatures": {
+                    "const": 1
+                  },
+                  "sourceSha256Count": {
+                    "const": 1
+                  }
+                }
+              },
+              "Stress_barricade_100": {
+                "properties": {
+                  "pass": {
+                    "const": true
+                  },
+                  "observedCount": {
+                    "const": 100
+                  },
+                  "distinctSignatures": {
+                    "const": 1
+                  },
+                  "sourceSha256Count": {
+                    "const": 1
+                  }
+                }
+              },
+              "Stress_enemy_standard_100": {
+                "properties": {
+                  "pass": {
+                    "const": true
+                  },
+                  "observedCount": {
+                    "const": 100
+                  },
+                  "distinctSignatures": {
+                    "const": 1
+                  },
+                  "sourceSha256Count": {
+                    "const": 1
+                  }
+                }
+              }
+            }
+          },
+          "lightingChecks": {
+            "properties": {
+              "Lighting_Gameplay_Default": {
+                "properties": {
+                  "ok": {
+                    "const": true
+                  },
+                  "code": {
+                    "const": "PASS"
+                  }
+                }
+              },
+              "Lighting_HighContrast": {
+                "properties": {
+                  "ok": {
+                    "const": true
+                  },
+                  "code": {
+                    "const": "PASS"
+                  }
+                }
+              },
+              "Lighting_Adverse_Night": {
+                "properties": {
+                  "ok": {
+                    "const": true
+                  },
+                  "code": {
+                    "const": "PASS"
+                  }
+                }
+              },
+              "Lighting_Neutral_QA": {
+                "properties": {
+                  "ok": {
+                    "const": true
+                  },
+                  "code": {
+                    "const": "PASS"
+                  }
+                }
+              }
+            }
+          },
+          "assetChecks": {
+            "properties": {
+              "barricade": {
+                "properties": {
+                  "intact": {
+                    "properties": {
+                      "pass": {
+                        "const": true
+                      }
+                    }
+                  },
+                  "damaged": {
+                    "properties": {
+                      "pass": {
+                        "const": true
+                      }
+                    }
+                  },
+                  "critical": {
+                    "properties": {
+                      "pass": {
+                        "const": true
+                      }
+                    }
+                  }
+                }
+              },
+              "objective_core": {
+                "properties": {
+                  "intact": {
+                    "properties": {
+                      "pass": {
+                        "const": true
+                      }
+                    }
+                  },
+                  "damaged": {
+                    "properties": {
+                      "pass": {
+                        "const": true
+                      }
+                    }
+                  },
+                  "critical": {
+                    "properties": {
+                      "pass": {
+                        "const": true
+                      }
+                    }
+                  }
+                }
+              },
+              "enemy_standard": {
+                "properties": {
+                  "intact": {
+                    "properties": {
+                      "pass": {
+                        "const": true
+                      }
+                    }
+                  },
+                  "damaged": {
+                    "properties": {
+                      "pass": {
+                        "const": true
+                      }
+                    }
+                  },
+                  "critical": {
+                    "properties": {
+                      "pass": {
+                        "const": true
+                      }
+                    }
+                  }
+                }
+              },
+              "floor_module": {
+                "properties": {
+                  "intact": {
+                    "properties": {
+                      "pass": {
+                        "const": true
+                      }
+                    }
+                  },
+                  "damaged": {
+                    "properties": {
+                      "pass": {
+                        "const": true
+                      }
+                    }
+                  },
+                  "critical": {
+                    "properties": {
+                      "pass": {
+                        "const": true
+                      }
+                    }
+                  }
+                }
+              },
+              "damage_effect": {
+                "properties": {
+                  "intact": {
+                    "properties": {
+                      "pass": {
+                        "const": true
+                      }
+                    }
+                  },
+                  "damaged": {
+                    "properties": {
+                      "pass": {
+                        "const": true
+                      }
+                    }
+                  },
+                  "critical": {
+                    "properties": {
+                      "pass": {
+                        "const": true
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "BLOCKED"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "issues": {
+            "minItems": 1
+          }
+        }
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}

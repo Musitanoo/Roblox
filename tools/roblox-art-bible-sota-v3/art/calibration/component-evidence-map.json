@@ -1,0 +1,49 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/component-evidence-map.schema.json",
+  "schemaVersion": "1.0.0",
+  "mappingVersion": "1.0.0",
+  "purpose": "Map stable canonical component IDs to deterministic Blender object-name evidence without changing the artistic canon.",
+  "generatorPath": "tools/blender/build_art_direction.py",
+  "assets": {
+    "barricade": {
+      "components": [
+        {"componentId": "FoundationFeet", "objectNamePatterns": ["Foot", "BaseSkid", "Foundation"]},
+        {"componentId": "StructuralFrame", "objectNamePatterns": ["Frame", "Rail", "Post", "Beam", "Brace"]},
+        {"componentId": "BlockingPanels", "objectNamePatterns": ["Panel", "Slat", "Bay"]},
+        {"componentId": "ServiceModule", "objectNamePatterns": ["Interaction", "Service", "Socket", "Patch"]}
+      ]
+    },
+    "objective_core": {
+      "components": [
+        {"componentId": "Pedestal", "objectNamePatterns": ["Base", "Pedestal", "Skid", "Tank"]},
+        {"componentId": "ProtectedCore", "objectNamePatterns": ["Core"]},
+        {"componentId": "ProtectiveCage", "objectNamePatterns": ["Guard", "Ring", "Cage", "Band", "Crown"]},
+        {"componentId": "ServiceSpine", "objectNamePatterns": ["Service", "Spine", "Strut", "Latch", "Clamp", "Bridge", "Collar"]}
+      ]
+    },
+    "enemy_standard": {
+      "components": [
+        {"componentId": "HunchedBody", "objectNamePatterns": ["HunchedBody", "Torso", "Body", "Chest"]},
+        {"componentId": "ZombieHead", "objectNamePatterns": ["ZombieHead", "Head", "Face", "Jaw", "Eye"]},
+        {"componentId": "ShamblingArms", "objectNamePatterns": ["ShamblingArm", "Arm", "Hand", "Forearm"]},
+        {"componentId": "StaggerLegs", "objectNamePatterns": ["StaggerLeg", "Foot", "Leg", "Shin", "Hip"]},
+        {"componentId": "FrontierBloom", "objectNamePatterns": ["FrontierBloom", "Bloom", "CrownGrowth", "ShoulderGrowth"]}
+      ]
+    },
+    "floor_module": {
+      "components": [
+        {"componentId": "StructuralSlab", "objectNamePatterns": ["Tile", "Deck", "Slab", "Base"]},
+        {"componentId": "CentralInset", "objectNamePatterns": ["Center", "Inset", "Recess", "Quadrant", "Plate"]},
+        {"componentId": "EdgeKeys", "objectNamePatterns": ["Edge", "Corner", "Key", "Lock", "Rail"]}
+      ]
+    },
+    "damage_effect": {
+      "components": [
+        {"componentId": "ImpactFlash", "objectNamePatterns": ["ImpactFlash", "Flash", "Burst", "ArcMass", "CleanImpact"]},
+        {"componentId": "DirectionalWedge", "objectNamePatterns": ["Direction", "Blade", "Wedge", "Split", "Reroute"]},
+        {"componentId": "MajorFragments", "objectNamePatterns": ["Fragment", "Shard", "Debris"]},
+        {"componentId": "ResidualTrail", "objectNamePatterns": ["Ring", "Trail", "Arc", "Streak", "Smoke"]}
+      ]
+    }
+  }
+}

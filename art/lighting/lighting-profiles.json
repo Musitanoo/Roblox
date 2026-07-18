@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.0.0",
+  "status": "CALIBRATION",
+  "readOnlyStudioProperties": {
+    "LightingStyle": "must be configured through an authorized Studio surface and verified by readback",
+    "PrioritizeLightingQuality": "must be configured through an authorized Studio surface and verified by readback"
+  },
+  "profiles": {
+    "Lighting_Gameplay_Default": {
+      "LightingStyle": "Realistic",
+      "PrioritizeLightingQuality": false,
+      "ClockTime": 14.0,
+      "GeographicLatitude": 25.0,
+      "Brightness": 2.2,
+      "ExposureCompensation": 0.0,
+      "Ambient": [55, 60, 70],
+      "OutdoorAmbient": [126, 132, 145],
+      "GlobalShadows": true,
+      "ShadowSoftness": 0.65,
+      "EnvironmentDiffuseScale": 0.65,
+      "EnvironmentSpecularScale": 0.45,
+      "Atmosphere": {"Density": 0.18, "Offset": 0.08, "Color": [199, 213, 225], "Decay": [92, 105, 125], "Glare": 0.0, "Haze": 0.7},
+      "ColorCorrection": {"Brightness": 0.0, "Contrast": 0.08, "Saturation": -0.05, "TintColor": [255, 252, 246]},
+      "Bloom": {"Enabled": false, "Intensity": 0.0, "Size": 24, "Threshold": 1.0}
+    },
+    "Lighting_HighContrast": {
+      "LightingStyle": "Realistic",
+      "PrioritizeLightingQuality": true,
+      "ClockTime": 11.0,
+      "GeographicLatitude": 35.0,
+      "Brightness": 2.8,
+      "ExposureCompensation": -0.15,
+      "Ambient": [32, 36, 44],
+      "OutdoorAmbient": [112, 118, 128],
+      "GlobalShadows": true,
+      "ShadowSoftness": 0.2,
+      "EnvironmentDiffuseScale": 0.6,
+      "EnvironmentSpecularScale": 0.55,
+      "Atmosphere": {"Density": 0.08, "Offset": 0.0, "Color": [216, 224, 232], "Decay": [104, 112, 126], "Glare": 0.0, "Haze": 0.2},
+      "ColorCorrection": {"Brightness": 0.0, "Contrast": 0.22, "Saturation": -0.08, "TintColor": [255, 247, 236]},
+      "Bloom": {"Enabled": false, "Intensity": 0.0, "Size": 24, "Threshold": 1.0}
+    },
+    "Lighting_Adverse_Night": {
+      "LightingStyle": "Realistic",
+      "PrioritizeLightingQuality": false,
+      "ClockTime": 0.5,
+      "GeographicLatitude": 20.0,
+      "Brightness": 1.5,
+      "ExposureCompensation": 0.05,
+      "Ambient": [20, 27, 45],
+      "OutdoorAmbient": [38, 52, 78],
+      "GlobalShadows": true,
+      "ShadowSoftness": 0.4,
+      "EnvironmentDiffuseScale": 0.35,
+      "EnvironmentSpecularScale": 0.5,
+      "Atmosphere": {"Density": 0.28, "Offset": 0.12, "Color": [86, 111, 151], "Decay": [18, 28, 48], "Glare": 0.0, "Haze": 1.2},
+      "ColorCorrection": {"Brightness": -0.02, "Contrast": 0.12, "Saturation": -0.12, "TintColor": [214, 226, 255]},
+      "Bloom": {"Enabled": true, "Intensity": 0.2, "Size": 18, "Threshold": 1.1}
+    },
+    "Lighting_Neutral_QA": {
+      "LightingStyle": "Soft",
+      "PrioritizeLightingQuality": false,
+      "ClockTime": 12.0,
+      "GeographicLatitude": 0.0,
+      "Brightness": 2.0,
+      "ExposureCompensation": 0.0,
+      "Ambient": [128, 128, 128],
+      "OutdoorAmbient": [128, 128, 128],
+      "GlobalShadows": false,
+      "ShadowSoftness": 0.0,
+      "EnvironmentDiffuseScale": 0.5,
+      "EnvironmentSpecularScale": 0.25,
+      "Atmosphere": {"Density": 0.0, "Offset": 0.0, "Color": [255, 255, 255], "Decay": [255, 255, 255], "Glare": 0.0, "Haze": 0.0},
+      "ColorCorrection": {"Brightness": 0.0, "Contrast": 0.0, "Saturation": 0.0, "TintColor": [255, 255, 255]},
+      "Bloom": {"Enabled": false, "Intensity": 0.0, "Size": 24, "Threshold": 1.0}
+    }
+  }
+}

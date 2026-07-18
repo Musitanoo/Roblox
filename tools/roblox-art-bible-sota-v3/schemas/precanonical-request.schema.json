@@ -1,0 +1,326 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/precanonical-request.schema.json",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/precanonical-request.schema.json"
+    },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "requestId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]+$"
+    },
+    "assetKey": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_]+$"
+    },
+    "artDirection": {
+      "const": "salvaged-frontier"
+    },
+    "generationSurface": {
+      "const": "chatgpt_web_images"
+    },
+    "status": {
+      "const": "PRECANONICAL_SPEC_COMPLETE"
+    },
+    "stage": {
+      "enum": [
+        "exploration",
+        "consolidation",
+        "precanonical_board",
+        "state_definition",
+        "correction"
+      ]
+    },
+    "policy": {
+      "$ref": "#/$defs/binding"
+    },
+    "constitution": {
+      "$ref": "#/$defs/binding"
+    },
+    "compiler": {
+      "$ref": "#/$defs/binding"
+    },
+    "sourceBrief": {
+      "$ref": "#/$defs/binding"
+    },
+    "parentResult": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/binding"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "revisionInstructions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 5
+      },
+      "uniqueItems": true
+    },
+    "files": {
+      "type": "object",
+      "properties": {
+        "brief": {
+          "$ref": "#/$defs/binding"
+        },
+        "prompt": {
+          "$ref": "#/$defs/binding"
+        },
+        "negativeConstraints": {
+          "$ref": "#/$defs/binding"
+        },
+        "requestedViews": {
+          "$ref": "#/$defs/binding"
+        },
+        "requestedStates": {
+          "$ref": "#/$defs/binding"
+        }
+      },
+      "required": [
+        "brief",
+        "prompt",
+        "negativeConstraints",
+        "requestedViews",
+        "requestedStates"
+      ],
+      "unevaluatedProperties": false
+    },
+    "promptHash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "requestedViewIds": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "exploration_sheet",
+          "hero_three_quarter_front",
+          "three_quarter_rear",
+          "front",
+          "rear",
+          "left",
+          "right",
+          "top",
+          "bottom",
+          "black_silhouette",
+          "component_breakdown",
+          "functional_zones",
+          "state_lineup",
+          "mobile_landscape",
+          "mobile_portrait"
+        ]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "requestedStateIds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_]+$"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "imageSpec": {
+      "type": "object",
+      "properties": {
+        "aspectRatio": {
+          "enum": [
+            "1:1",
+            "4:3",
+            "3:2",
+            "16:9"
+          ]
+        },
+        "background": {
+          "enum": [
+            "neutral_mid_gray",
+            "neutral_light",
+            "neutral_dark"
+          ]
+        },
+        "lighting": {
+          "enum": [
+            "neutral_studio",
+            "roblox_gameplay_approximation"
+          ]
+        },
+        "singleObjectOnly": {
+          "const": true
+        }
+      },
+      "required": [
+        "aspectRatio",
+        "background",
+        "lighting",
+        "singleObjectOnly"
+      ],
+      "unevaluatedProperties": false
+    },
+    "budget": {
+      "type": "object",
+      "properties": {
+        "maximumWebGenerations": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8
+        },
+        "consumedWebGenerations": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reserveForCorrections": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "humanConfirmationRequired": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "maximumWebGenerations",
+        "consumedWebGenerations",
+        "reserveForCorrections",
+        "humanConfirmationRequired"
+      ],
+      "unevaluatedProperties": false
+    },
+    "automation": {
+      "type": "object",
+      "properties": {
+        "browserAdapter": {
+          "enum": [
+            "codex_chrome",
+            "codex_iab"
+          ]
+        },
+        "automaticSubmissionAuthorized": {
+          "type": "boolean"
+        },
+        "automaticRetry": {
+          "const": false
+        },
+        "automaticCodexImageFallback": {
+          "const": false
+        },
+        "automaticApiFallback": {
+          "const": false
+        },
+        "browserReasoningForbidden": {
+          "const": true
+        }
+      },
+      "required": [
+        "browserAdapter",
+        "automaticSubmissionAuthorized",
+        "automaticRetry",
+        "automaticCodexImageFallback",
+        "automaticApiFallback",
+        "browserReasoningForbidden"
+      ],
+      "unevaluatedProperties": false
+    },
+    "authority": {
+      "type": "object",
+      "properties": {
+        "canonical": {
+          "const": false
+        },
+        "geometryAuthority": {
+          "const": false
+        },
+        "humanSelectionRequired": {
+          "const": true
+        },
+        "productionApproved": {
+          "const": false
+        }
+      },
+      "required": [
+        "canonical",
+        "geometryAuthority",
+        "humanSelectionRequired",
+        "productionApproved"
+      ],
+      "unevaluatedProperties": false
+    }
+  },
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "requestId",
+    "assetKey",
+    "artDirection",
+    "generationSurface",
+    "status",
+    "stage",
+    "policy",
+    "constitution",
+    "compiler",
+    "sourceBrief",
+    "parentResult",
+    "revisionInstructions",
+    "files",
+    "promptHash",
+    "requestedViewIds",
+    "requestedStateIds",
+    "imageSpec",
+    "budget",
+    "automation",
+    "authority"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "stage": {
+            "const": "correction"
+          }
+        },
+        "required": [
+          "stage"
+        ]
+      },
+      "then": {
+        "properties": {
+          "parentResult": {
+            "$ref": "#/$defs/binding"
+          },
+          "revisionInstructions": {
+            "minItems": 1
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "binding": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "unevaluatedProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

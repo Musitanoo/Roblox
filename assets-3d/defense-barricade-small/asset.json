@@ -1,0 +1,1052 @@
+{
+  "artStyle": [
+    "stylized",
+    "chunky",
+    "salvaged-frontier",
+    "purposefully-repaired",
+    "mobile-readable"
+  ],
+  "assetKey": "defense_barricade_small",
+  "dimensionsStuds": {
+    "depth": 2.0,
+    "height": 4.0,
+    "tolerancePercent": 0.25,
+    "width": 8.0
+  },
+  "displayName": "Defense Barricade Small",
+  "expectedSimultaneousInstances": 30,
+  "forbidden": [
+    "scripts in visual package",
+    "text",
+    "logos",
+    "thin wires",
+    "floating fragments",
+    "baked lighting"
+  ],
+  "function": "Temporary defensive barrier with readable damage states",
+  "geometry": {
+    "parts": [
+      {
+        "chamfer": 0.1,
+        "material": "Rubber",
+        "name": "DEF_BarricadeSmall_FootL",
+        "position": [
+          -3.18,
+          0.11,
+          0.0
+        ],
+        "size": [
+          1.64,
+          0.22,
+          2.0
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "chamfer": 0.1,
+        "material": "Rubber",
+        "name": "DEF_BarricadeSmall_FootR",
+        "position": [
+          3.18,
+          0.11,
+          0.0
+        ],
+        "size": [
+          1.64,
+          0.22,
+          2.0
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "chamfer": 0.18,
+        "material": "ChassisSlate",
+        "name": "DEF_BarricadeSmall_FootUpperL",
+        "position": [
+          -3.18,
+          0.53,
+          -0.04
+        ],
+        "size": [
+          1.62,
+          0.62,
+          1.78
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "chamfer": 0.18,
+        "material": "ChassisSlate",
+        "name": "DEF_BarricadeSmall_FootUpperR",
+        "position": [
+          3.18,
+          0.53,
+          -0.04
+        ],
+        "size": [
+          1.62,
+          0.62,
+          1.78
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "chamfer": 0.11,
+        "material": "ChassisSlate",
+        "name": "DEF_BarricadeSmall_FootToeL",
+        "position": [
+          -3.18,
+          0.33,
+          -0.58
+        ],
+        "size": [
+          1.42,
+          0.34,
+          0.72
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "chamfer": 0.11,
+        "material": "ChassisSlate",
+        "name": "DEF_BarricadeSmall_FootToeR",
+        "position": [
+          3.18,
+          0.33,
+          -0.58
+        ],
+        "size": [
+          1.42,
+          0.34,
+          0.72
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "bevel": 0.04,
+        "chamfer": 0.12,
+        "material": "ChassisSlate",
+        "name": "DEF_BarricadeSmall_RailBottom",
+        "position": [
+          0.0,
+          0.86,
+          0.0
+        ],
+        "size": [
+          8.0,
+          0.72,
+          0.82
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "chamfer": 0.12,
+        "material": "ChassisSlate",
+        "name": "DEF_BarricadeSmall_RailTop",
+        "position": [
+          0.0,
+          3.69,
+          0.0
+        ],
+        "size": [
+          2.5,
+          0.62,
+          1.02
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "chamfer": 0.12,
+        "material": "ChassisSlate",
+        "name": "DEF_BarricadeSmall_RailTopL",
+        "position": [
+          -2.5,
+          3.69,
+          0.0
+        ],
+        "size": [
+          2.5,
+          0.62,
+          1.02
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "chamfer": 0.12,
+        "material": "ChassisSlate",
+        "name": "DEF_BarricadeSmall_RailTopR",
+        "position": [
+          2.5,
+          3.69,
+          0.0
+        ],
+        "size": [
+          2.5,
+          0.62,
+          1.02
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "bevel": 0.04,
+        "chamfer": 0.14,
+        "material": "ChassisSlate",
+        "name": "DEF_BarricadeSmall_PostL",
+        "position": [
+          -3.55,
+          2.18,
+          0.0
+        ],
+        "size": [
+          0.9,
+          3.36,
+          1.06
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "bevel": 0.04,
+        "chamfer": 0.14,
+        "material": "ChassisSlate",
+        "name": "DEF_BarricadeSmall_PostR",
+        "position": [
+          3.55,
+          2.18,
+          0.0
+        ],
+        "size": [
+          0.9,
+          3.36,
+          1.06
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "bevel": 0.05,
+        "chamfer": 0.16,
+        "material": "ChassisSlate",
+        "name": "DEF_BarricadeSmall_CornerCapL",
+        "position": [
+          -3.4,
+          3.58,
+          -0.02
+        ],
+        "size": [
+          1.2,
+          0.84,
+          1.12
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "bevel": 0.05,
+        "chamfer": 0.16,
+        "material": "ChassisSlate",
+        "name": "DEF_BarricadeSmall_CornerCapR",
+        "position": [
+          3.4,
+          3.58,
+          -0.02
+        ],
+        "size": [
+          1.2,
+          0.84,
+          1.12
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "bevel": 0.05,
+        "material": "ChassisSlate",
+        "name": "DEF_BarricadeSmall_MullionL",
+        "position": [
+          -1.19,
+          2.2,
+          -0.03
+        ],
+        "size": [
+          0.3,
+          2.4,
+          0.52
+        ],
+        "type": "box"
+      },
+      {
+        "bevel": 0.05,
+        "material": "ChassisSlate",
+        "name": "DEF_BarricadeSmall_MullionR",
+        "position": [
+          1.19,
+          2.2,
+          -0.03
+        ],
+        "size": [
+          0.3,
+          2.4,
+          0.52
+        ],
+        "type": "box"
+      },
+      {
+        "chamfer": 0.2,
+        "material": "BareMetal",
+        "name": "DEF_BarricadeSmall_PanelBackingL",
+        "position": [
+          -2.35,
+          2.2,
+          0.04
+        ],
+        "size": [
+          2.24,
+          2.48,
+          0.2
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "chamfer": 0.2,
+        "material": "ChassisSlate",
+        "name": "DEF_BarricadeSmall_PanelBackingC",
+        "position": [
+          0.0,
+          2.2,
+          0.04
+        ],
+        "size": [
+          2.29,
+          2.48,
+          0.2
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "chamfer": 0.2,
+        "material": "ChassisSlate",
+        "name": "DEF_BarricadeSmall_PanelBackingR",
+        "position": [
+          2.35,
+          2.2,
+          0.04
+        ],
+        "size": [
+          2.24,
+          2.48,
+          0.2
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "bevel": 0.06,
+        "chamfer": 0.18,
+        "material": "ReclaimedCompositeWarm",
+        "name": "DEF_BarricadeSmall_PanelL",
+        "position": [
+          -2.35,
+          2.18,
+          -0.25
+        ],
+        "rotationDegrees": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "size": [
+          1.82,
+          2.02,
+          0.56
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "bevel": 0.06,
+        "chamfer": 0.18,
+        "material": "ReclaimedComposite",
+        "name": "DEF_BarricadeSmall_PanelC",
+        "position": [
+          0.0,
+          2.2,
+          -0.25
+        ],
+        "rotationDegrees": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "size": [
+          1.89,
+          2.02,
+          0.56
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "bevel": 0.06,
+        "chamfer": 0.18,
+        "material": "ReclaimedCompositePale",
+        "name": "DEF_BarricadeSmall_PanelR",
+        "position": [
+          2.35,
+          2.2,
+          -0.25
+        ],
+        "rotationDegrees": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "size": [
+          1.84,
+          2.02,
+          0.56
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "bevel": 0.06,
+        "material": "SunCopper",
+        "name": "DEF_BarricadeSmall_RepairBrace",
+        "position": [
+          -1.15,
+          2.15,
+          -0.48
+        ],
+        "rotationDegrees": [
+          0.0,
+          0.0,
+          -36.0
+        ],
+        "size": [
+          0.46,
+          3.15,
+          0.3
+        ],
+        "type": "box"
+      },
+      {
+        "chamfer": 0.12,
+        "material": "SunCopper",
+        "name": "DEF_BarricadeSmall_RepairJointTop",
+        "position": [
+          -0.05,
+          3.42,
+          -0.65
+        ],
+        "size": [
+          0.82,
+          0.62,
+          0.22
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "chamfer": 0.12,
+        "material": "SunCopper",
+        "name": "DEF_BarricadeSmall_RepairJointBottom",
+        "position": [
+          -2.25,
+          0.88,
+          -0.65
+        ],
+        "size": [
+          0.82,
+          0.62,
+          0.22
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "axis": "Z",
+        "material": "BareMetal",
+        "name": "DEF_BarricadeSmall_RepairBoltTop",
+        "position": [
+          -0.05,
+          3.42,
+          -0.8
+        ],
+        "segments": 8,
+        "size": [
+          0.2,
+          0.2,
+          0.1
+        ],
+        "type": "cylinder"
+      },
+      {
+        "axis": "Z",
+        "material": "BareMetal",
+        "name": "DEF_BarricadeSmall_RepairBoltBottom",
+        "position": [
+          -2.25,
+          0.88,
+          -0.8
+        ],
+        "segments": 8,
+        "size": [
+          0.2,
+          0.2,
+          0.1
+        ],
+        "type": "cylinder"
+      },
+      {
+        "chamfer": 0.08,
+        "material": "BareMetal",
+        "name": "DEF_BarricadeSmall_TopRailInset",
+        "position": [
+          0.0,
+          3.7,
+          -0.58
+        ],
+        "size": [
+          2.8,
+          0.26,
+          0.16
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "chamfer": 0.08,
+        "material": "Rubber",
+        "name": "DEF_BarricadeSmall_LowerServiceRecess",
+        "position": [
+          0.0,
+          0.87,
+          -0.5
+        ],
+        "size": [
+          1.8,
+          0.22,
+          0.14
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "chamfer": 0.1,
+        "material": "SunCopper",
+        "name": "DEF_BarricadeSmall_CornerRepairPatchL",
+        "position": [
+          -3.48,
+          3.56,
+          -0.64
+        ],
+        "size": [
+          0.72,
+          0.5,
+          0.14
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "material": "BareMetal",
+        "name": "DEF_BarricadeSmall_FootGussetL",
+        "position": [
+          -3.18,
+          0.9,
+          -0.5
+        ],
+        "rotationDegrees": [
+          0.0,
+          0.0,
+          -10.0
+        ],
+        "size": [
+          0.5,
+          0.7,
+          0.2
+        ],
+        "type": "box"
+      },
+      {
+        "material": "BareMetal",
+        "name": "DEF_BarricadeSmall_FootGussetR",
+        "position": [
+          3.18,
+          0.9,
+          -0.5
+        ],
+        "rotationDegrees": [
+          0.0,
+          0.0,
+          10.0
+        ],
+        "size": [
+          0.5,
+          0.7,
+          0.2
+        ],
+        "type": "box"
+      },
+      {
+        "axis": "Z",
+        "material": "BareMetal",
+        "name": "DEF_BarricadeSmall_FrameBoltL",
+        "position": [
+          -3.55,
+          2.35,
+          -0.62
+        ],
+        "segments": 8,
+        "size": [
+          0.28,
+          0.28,
+          0.1
+        ],
+        "type": "cylinder"
+      },
+      {
+        "axis": "Z",
+        "material": "BareMetal",
+        "name": "DEF_BarricadeSmall_FrameBoltR",
+        "position": [
+          3.55,
+          2.35,
+          -0.62
+        ],
+        "segments": 8,
+        "size": [
+          0.28,
+          0.28,
+          0.1
+        ],
+        "type": "cylinder"
+      },
+      {
+        "material": "BareMetal",
+        "name": "DEF_BarricadeSmall_PanelLatchL",
+        "position": [
+          -2.35,
+          1.03,
+          -0.58
+        ],
+        "size": [
+          0.58,
+          0.3,
+          0.14
+        ],
+        "type": "box"
+      },
+      {
+        "chamfer": 0.08,
+        "material": "BareMetal",
+        "name": "DEF_BarricadeSmall_PanelLatchC",
+        "position": [
+          0.0,
+          1.03,
+          -0.58
+        ],
+        "size": [
+          0.58,
+          0.3,
+          0.14
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "material": "BareMetal",
+        "name": "DEF_BarricadeSmall_PanelLatchR",
+        "position": [
+          2.35,
+          1.03,
+          -0.58
+        ],
+        "size": [
+          0.58,
+          0.3,
+          0.14
+        ],
+        "type": "box"
+      },
+      {
+        "material": "BareMetal",
+        "name": "DEF_BarricadeSmall_FootWearPlateR",
+        "position": [
+          3.18,
+          0.58,
+          -0.94
+        ],
+        "size": [
+          0.72,
+          0.22,
+          0.08
+        ],
+        "type": "box"
+      },
+      {
+        "bevel": 0.05,
+        "material": "ChassisSlate",
+        "name": "DEF_BarricadeSmall_RearBraceL",
+        "position": [
+          -3.35,
+          1.15,
+          0.42
+        ],
+        "rotationDegrees": [
+          0.0,
+          0.0,
+          -18.0
+        ],
+        "size": [
+          0.26,
+          1.45,
+          0.28
+        ],
+        "type": "box"
+      },
+      {
+        "bevel": 0.05,
+        "material": "ChassisSlate",
+        "name": "DEF_BarricadeSmall_RearBraceR",
+        "position": [
+          3.35,
+          1.15,
+          0.42
+        ],
+        "rotationDegrees": [
+          0.0,
+          0.0,
+          18.0
+        ],
+        "size": [
+          0.26,
+          1.45,
+          0.28
+        ],
+        "type": "box"
+      },
+      {
+        "chamfer": 0.14,
+        "material": "SunCopper",
+        "name": "DEF_BarricadeSmall_ServiceHousing",
+        "position": [
+          3.35,
+          2.78,
+          0.45
+        ],
+        "size": [
+          0.8,
+          0.86,
+          0.3
+        ],
+        "type": "chamfered_box"
+      },
+      {
+        "axis": "Z",
+        "material": "InteractionMint",
+        "name": "DEF_BarricadeSmall_Light",
+        "position": [
+          3.35,
+          2.78,
+          0.66
+        ],
+        "segments": 8,
+        "size": [
+          0.44,
+          0.44,
+          0.12
+        ],
+        "type": "cylinder"
+      }
+    ]
+  },
+  "materials": [
+    {
+      "color": "#40484B",
+      "metallic": 0.38,
+      "name": "ChassisSlate",
+      "roughness": 0.52
+    },
+    {
+      "color": "#C7B99C",
+      "metallic": 0.05,
+      "name": "ReclaimedComposite",
+      "roughness": 0.68
+    },
+    {
+      "color": "#B7A484",
+      "metallic": 0.04,
+      "name": "ReclaimedCompositeWarm",
+      "roughness": 0.72
+    },
+    {
+      "color": "#D1C4A9",
+      "metallic": 0.04,
+      "name": "ReclaimedCompositePale",
+      "roughness": 0.66
+    },
+    {
+      "color": "#B86E3F",
+      "metallic": 0.42,
+      "name": "SunCopper",
+      "roughness": 0.46
+    },
+    {
+      "color": "#5FE0C1",
+      "emissionColor": "#5FE0C1",
+      "emissionStrength": 2.4,
+      "metallic": 0.05,
+      "name": "InteractionMint",
+      "roughness": 0.28
+    },
+    {
+      "color": "#89918C",
+      "metallic": 0.75,
+      "name": "BareMetal",
+      "roughness": 0.35
+    },
+    {
+      "color": "#E5A13A",
+      "emissionColor": "#E5A13A",
+      "emissionStrength": 2.0,
+      "metallic": 0.08,
+      "name": "WarningGold",
+      "roughness": 0.32
+    },
+    {
+      "color": "#E44945",
+      "emissionColor": "#E44945",
+      "emissionStrength": 2.8,
+      "metallic": 0.05,
+      "name": "CriticalRed",
+      "roughness": 0.3
+    },
+    {
+      "color": "#252827",
+      "metallic": 0.0,
+      "name": "Rubber",
+      "roughness": 0.82
+    }
+  ],
+  "pivot": "BASE_CENTER",
+  "publication": {
+    "apiKeyEnv": "ROBLOX_OPEN_CLOUD_API_KEY",
+    "createFormat": "glb",
+    "creatorAllowlistEnv": "ROBLOX_3D_ALLOWED_CREATOR_IDS",
+    "creatorIdEnv": "ROBLOX_STAGING_CREATOR_ID",
+    "creatorType": "User",
+    "environment": "staging",
+    "registry": "assets-3d/registry/staging.json",
+    "updateFormat": "fbx"
+  },
+  "renders": {
+    "resolution": 512,
+    "views": [
+      "front",
+      "rear",
+      "left",
+      "right",
+      "top",
+      "perspective",
+      "silhouette",
+      "mobile_distance"
+    ]
+  },
+  "revision": 19,
+  "schemaVersion": "1.0.0",
+  "states": {
+    "default": "intact",
+    "variants": [
+      {
+        "description": "All three bays are aligned, the segmented top load path is closed and the protected rear-right service socket emits mint.",
+        "id": "intact",
+        "partOverrides": []
+      },
+      {
+        "description": "The left bay visibly settles and twists, its top load segment drops out of line, exposed metal appears at the failed mullion and the protected rear-right service socket switches to warning gold.",
+        "id": "damaged",
+        "partOverrides": [
+          {
+            "name": "DEF_BarricadeSmall_RailTopL",
+            "position": [
+              -2.46,
+              3.34,
+              0.1
+            ],
+            "rotationDegrees": [
+              0.0,
+              3.0,
+              -16.0
+            ]
+          },
+          {
+            "name": "DEF_BarricadeSmall_PanelBackingL",
+            "position": [
+              -2.45,
+              1.68,
+              0.06
+            ],
+            "rotationDegrees": [
+              0.0,
+              12.0,
+              -23.0
+            ]
+          },
+          {
+            "name": "DEF_BarricadeSmall_PanelL",
+            "position": [
+              -2.45,
+              1.64,
+              -0.28
+            ],
+            "rotationDegrees": [
+              0.0,
+              12.0,
+              -23.0
+            ]
+          },
+          {
+            "material": "BareMetal",
+            "name": "DEF_BarricadeSmall_MullionL",
+            "position": [
+              -1.34,
+              1.84,
+              0.14
+            ],
+            "rotationDegrees": [
+              0.0,
+              8.0,
+              -17.0
+            ]
+          },
+          {
+            "material": "WarningGold",
+            "name": "DEF_BarricadeSmall_Light"
+          }
+        ]
+      },
+      {
+        "description": "The same left-to-center failure chain opens into one dominant breach: the left panel falls forward, the center bay twists, the copper field repair strains with the load and the rear-right service socket turns critical red while feet, outer span and interaction anchor remain stable.",
+        "id": "critical",
+        "partOverrides": [
+          {
+            "material": "BareMetal",
+            "name": "DEF_BarricadeSmall_RailTopL",
+            "position": [
+              -2.42,
+              3.32,
+              0.12
+            ],
+            "rotationDegrees": [
+              0.0,
+              10.0,
+              -18.0
+            ]
+          },
+          {
+            "name": "DEF_BarricadeSmall_PanelBackingL",
+            "position": [
+              -2.48,
+              1.62,
+              0.1
+            ],
+            "rotationDegrees": [
+              0.0,
+              16.0,
+              -28.0
+            ]
+          },
+          {
+            "name": "DEF_BarricadeSmall_PanelL",
+            "position": [
+              -2.48,
+              1.58,
+              -0.4
+            ],
+            "rotationDegrees": [
+              0.0,
+              16.0,
+              -28.0
+            ]
+          },
+          {
+            "name": "DEF_BarricadeSmall_PanelBackingC",
+            "position": [
+              -0.18,
+              1.78,
+              0.1
+            ],
+            "rotationDegrees": [
+              0.0,
+              -18.0,
+              13.0
+            ]
+          },
+          {
+            "name": "DEF_BarricadeSmall_PanelC",
+            "position": [
+              -0.18,
+              1.76,
+              -0.36
+            ],
+            "rotationDegrees": [
+              0.0,
+              -18.0,
+              13.0
+            ]
+          },
+          {
+            "material": "BareMetal",
+            "name": "DEF_BarricadeSmall_MullionL",
+            "position": [
+              -1.4,
+              1.72,
+              0.28
+            ],
+            "rotationDegrees": [
+              0.0,
+              18.0,
+              -26.0
+            ]
+          },
+          {
+            "name": "DEF_BarricadeSmall_RepairBrace",
+            "position": [
+              -1.38,
+              2.05,
+              -0.62
+            ],
+            "rotationDegrees": [
+              0.0,
+              0.0,
+              -36.0
+            ]
+          },
+          {
+            "name": "DEF_BarricadeSmall_ServiceHousing",
+            "position": [
+              3.05,
+              3.05,
+              0.51
+            ],
+            "rotationDegrees": [
+              0.0,
+              28.0,
+              -12.0
+            ]
+          },
+          {
+            "material": "CriticalRed",
+            "name": "DEF_BarricadeSmall_Light",
+            "position": [
+              3.35,
+              2.72,
+              0.72
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "triangleBudget": {
+    "absoluteMaximum": 2000,
+    "target": 1500
+  },
+  "visualCanon": {
+    "assetId": "barricade",
+    "canonId": "vc_barricade__salvaged-frontier__v1",
+    "minimumStatus": "CANDIDATE",
+    "path": "tools/roblox-art-bible-sota-v3/art/canonical-visuals/salvaged-frontier/barricade.json",
+    "productionStatus": "LOCKED",
+    "sha256": "2cf485afb6bd7297a1ffccbb72c60f1e186706fe2eb47b0bcb24af407ba9cc52",
+    "territoryId": "salvaged-frontier"
+  }
+}

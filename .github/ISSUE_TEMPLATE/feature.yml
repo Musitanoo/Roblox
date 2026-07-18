@@ -1,0 +1,39 @@
+name: Expérience ou fonctionnalité
+description: Proposer un changement répondant à une hypothèse joueur mesurable.
+title: "feat: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problème joueur
+      description: Quel comportement ou besoin joueur voulons-nous améliorer ?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Résultat observable
+      description: Que doit-on pouvoir constater dans la plus petite expérience jouable ?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critères d'acceptation
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Hors périmètre
+      description: Ce que cette expérimentation ne doit pas construire ou modifier.
+  - type: textarea
+    id: verification
+    attributes:
+      label: Méthode de validation
+      description: Tests automatisés, scénario Studio et mesure joueur attendue.
+    validations:
+      required: true

@@ -1,0 +1,647 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/visual-canon.schema.json",
+  "schemaVersion": "1.0.0",
+  "canonId": "vc_floor_module__salvaged-frontier__v1",
+  "assetId": "floor_module",
+  "territoryId": "salvaged-frontier",
+  "version": 1,
+  "status": "CANDIDATE",
+  "authority": {
+    "gdd": {
+      "path": "Roblox_Top_1_Game_Design_Document_v1.0.md",
+      "sha256": "fd3ba04f92d3b1578d8c7ebfd5d1d8b3a571bd0a5da910f9b45b3720983dc6a6"
+    },
+    "retention": {
+      "path": "plans/product-innovation-retention-doctrine.md",
+      "sha256": "98c1e9b2be8601c4ecc94b4e5da997fcfd73bf75b9b99c18831b61b71dc24562"
+    },
+    "artDirection": {
+      "path": "art/art-direction.json",
+      "sha256": "ab1e3b2607fc916fa660fb20b90c2b62ee6985a866c3a65090bef4996a7eef22"
+    },
+    "calibration": {
+      "path": "art/calibration/calibration-kit.json",
+      "sha256": "8a33c6c8a9b5a02ef460f5e698907a4d6d623e2f5c475047cd3dbdccc102ace9"
+    },
+    "shapeLanguage": {
+      "path": "art/shape-language/rules.json",
+      "sha256": "76fcd0eaaace7f34d7fb88fdc6470315518efd8e586649393ceb32356a7addc7"
+    },
+    "materials": {
+      "path": "art/materials/material-rules.json",
+      "sha256": "41fadb667eb50a2252e6721649afee1b38b98a667ea7c2051f5f465ad9896b83"
+    },
+    "selectedConstitution": {
+      "path": "art/selected/salvaged-frontier-constitution.json",
+      "sha256": "03b7c0ea39bb273ab5d2f6fd4e81f0c7c9ff7183f7f6262bcfb23d69d2654594"
+    }
+  },
+  "identity": {
+    "canonicalName": "Fortress Floor Module",
+    "category": "repeatable_building_cell",
+    "gameplayFunction": "repeatable fortress floor cell",
+    "worldRole": "The smallest visible unit of fortress authorship, alignment and future expansion, repeated enough to define the player's home without visual noise.",
+    "affiliation": "player_fortress",
+    "manufactureContext": "A standardized workshop cell designed to snap, carry structures, expose damage and preserve clear construction logic at large counts.",
+    "emotionalIntent": "Orderly, dependable and satisfying to assemble; damage should reveal a local maintenance problem rather than make the whole base look dirty.",
+    "technologyLevel": "modular fortress construction system",
+    "character": [
+      "precise",
+      "reusable",
+      "grounded",
+      "quiet"
+    ],
+    "territoryVisualThesis": "A precise fortress grid cell whose single approved replacement quadrant records maintenance while every edge key, footprint and construction rhythm stays exact."
+  },
+  "instantRead": {
+    "oneSecondPromise": "This square cell is safe buildable ground, shows how neighboring modules connect, and clearly reveals when one local section is damaged.",
+    "orientationCue": "Edge keys and one subtle service orientation distinguish the canonical front without disrupting seamless tiling.",
+    "interactionCue": "Approved sockets or edge keys show valid construction relationships; no false button-like decoration is allowed.",
+    "dangerCue": "A damaged state creates one causal displaced inset or broken edge key, never a random crack web.",
+    "relationToPlayer": "Friendly persistent authored ground that supports planning and spatial memory.",
+    "responsibleElements": [
+      "four-stud square footprint",
+      "central octagonal or square inset",
+      "structural perimeter band",
+      "aligned edge keys or sockets",
+      "Edge keys and one subtle service orientation distinguish the canonical front without disrupting seamless tiling.",
+      "Approved sockets or edge keys show valid construction relationships; no false button-like decoration is allowed.",
+      "A damaged state creates one causal displaced inset or broken edge key, never a random crack web."
+    ]
+  },
+  "dimensions": {
+    "unit": "stud",
+    "width": 4.0,
+    "height": 0.5,
+    "depth": 4.0,
+    "toleranceStuds": 0.005,
+    "pivot": "bottom_center",
+    "proportionRules": [
+      "The module remains a four-by-four square and half a stud thick.",
+      "The central inset occupies most of the top surface and leaves a structural perimeter.",
+      "Edge keys align exactly with adjacent modules.",
+      "No detail rises enough to obstruct player movement or placement readability."
+    ]
+  },
+  "silhouette": {
+    "targetReadDistanceStuds": 30,
+    "views": {
+      "front": "A shallow structural cell with a clear perimeter, central inset and one restrained orientation cue.",
+      "back": "The opposite edge repeats the connection language without inventing a second front.",
+      "left": "Half-stud thickness, edge key and top inset remain readable as one sturdy tile.",
+      "right": "The matching connection edge preserves seamless tiling and collision honesty.",
+      "top": "A square or approved octagonal inset dominates, framed by connection-ready structural edges.",
+      "bottom": "A minimal support lattice or solid underside explains grounding without invisible detail.",
+      "threeQuarterFront": "The canonical view combines top inset, structural thickness, edge keys and clean contact with neighboring cells.",
+      "threeQuarterBack": "The restrained rear edge remains compatible with tiling and preserves the same construction grammar.",
+      "gameCamera": "At normal build-camera elevation, many modules read as one coherent fortress plane with individual cells still selectable."
+    },
+    "recognitionLandmarks": [
+      "four-stud square footprint",
+      "central octagonal or square inset",
+      "structural perimeter band",
+      "aligned edge keys or sockets"
+    ],
+    "negativeSpaces": [
+      "thin controlled seam between adjacent cells",
+      "recess around the central inset",
+      "approved socket openings at real connection points"
+    ],
+    "intentionalAsymmetry": "Twenty-four-percent controlled asymmetry expresses adaptation inside a seventy-five-to-eighty-five-percent standardized chassis; footprint, facing, collision promise, pivots and gameplay anchors remain fixed.",
+    "distanceRule": "The primary function, orientation and state must remain readable at 30 studs in the canonical mobile landscape and portrait views."
+  },
+  "formHierarchy": {
+    "targetRatios": {
+      "primary": 0.72,
+      "secondary": 0.23,
+      "tertiary": 0.05
+    },
+    "primary": [
+      "square structural slab",
+      "large central inset"
+    ],
+    "secondary": [
+      "edge keys",
+      "connection sockets",
+      "shallow service orientation cue"
+    ],
+    "tertiary": [
+      "few corner fasteners",
+      "minimal edge wear",
+      "one approved repair patch"
+    ],
+    "territoryConstructionTranslation": "A calm square chassis, large inset and thick edge keys provide tile readability; only one quadrant or connector receives a copper-bounded replacement treatment."
+  },
+  "construction": {
+    "components": [
+      {
+        "id": "StructuralSlab",
+        "function": "Carry the player and every attached fortress system.",
+        "position": "full footprint",
+        "form": "shallow square slab",
+        "materialRole": "primary",
+        "relationship": "Supports the inset and all four connection edges.",
+        "mobility": "fixed",
+        "visibility": "Visible from all construction and gameplay views.",
+        "readingRole": "Primary buildable-ground identity."
+      },
+      {
+        "id": "CentralInset",
+        "function": "Break the top plane into a readable modular cell without becoming decoration.",
+        "position": "top center",
+        "form": "large square or octagonal recess",
+        "materialRole": "secondary",
+        "relationship": "Contained inside the structural perimeter with consistent depth.",
+        "mobility": "destructible",
+        "visibility": "Dominant from top and game camera.",
+        "readingRole": "Keeps individual cells legible in a larger floor."
+      },
+      {
+        "id": "EdgeKeys",
+        "function": "Explain snapping, adjacency and structural continuity.",
+        "position": "four perimeter edges",
+        "form": "broad keys or sockets",
+        "materialRole": "bareMetal",
+        "relationship": "Aligned exactly to neighboring modules.",
+        "mobility": "destructible",
+        "visibility": "Visible near seams and in damaged state.",
+        "readingRole": "Makes modular construction plausible and readable."
+      }
+    ],
+    "plausibilityRules": [
+      "Every visible part belongs to a named component and has a functional relationship to at least one neighboring component.",
+      "No part floats, interpenetrates without an approved joint, or relies on unexplained support.",
+      "Moving, replaceable and destructible components preserve declared axes, anchors and clearance.",
+      "The compiler may simplify tertiary finish but may not remove a primary or secondary semantic component."
+    ],
+    "stableNamingRule": "Component IDs and gameplay anchors never change without an approved canon revision."
+  },
+  "artDirection": {
+    "territoryThesis": "A hopeful fortress culture of intelligent survival: calm standardized chassis make every tool dependable, while one or two visible adaptations turn scarcity, repair and shared history into proud authorship without post-apocalyptic noise.",
+    "shapeGrammar": [
+      "thick standardized rectangles and trapezoids",
+      "large protected apertures and explicit load-bearing joints",
+      "one localized offset brace or replacement module",
+      "mismatched but compatible secondary masses",
+      "visible replacement, reinforcement, sealing or rerouting logic"
+    ],
+    "exaggeration": "Function, load paths, service access and the single authored adaptation are enlarged enough to read on mobile; distress, dirt and tiny mechanics never carry identity.",
+    "edgeLanguage": "Large consistent structural bevels create calm readable highlights; only the boundary of an approved repair may use a sharper cut or visibly renewed edge, and nothing becomes razor-thin.",
+    "detailDensity": "Low secondary construction density and extremely low tertiary density; seventy-two percent primary mass, twenty-three percent functional secondary structure and five percent causal finish.",
+    "asymmetry": "Twenty-four-percent controlled asymmetry expresses adaptation inside a seventy-five-to-eighty-five-percent standardized chassis; footprint, facing, collision promise, pivots and gameplay anchors remain fixed.",
+    "materialLanguage": "Deep coated structure, reclaimed composite panels, exposed durable metal, matte contacts and rare contextual wood surround carefully protected interaction technology.",
+    "paletteLogic": "Deep slate and bone-sand create a quiet frontier base; sun-baked copper identifies player intervention, while mint interaction, raspberry threat, gold warning and red critical remain bounded semantic roles.",
+    "surfaceTreatment": "Broad calm planes, one or two patch boundaries and directional abrasion tell a construction history without uniform grime, material roulette or photoreal texture chatter.",
+    "wearLogic": "Every scar must name a cause: prior impact, heat, hand contact, ground abrasion or an approved repair operation; damage widens one causal chain and repair reverses it.",
+    "signatureDetails": [
+      "single copper-bounded replacement quadrant",
+      "one grouped fastener cluster at the real joint",
+      "one bone-sand reclaimed composite insert"
+    ],
+    "forbidden": [
+      "random junk pile silhouette",
+      "uniform rust",
+      "decorative repair with no causal reason",
+      "more than three visible material families",
+      "loose cable spaghetti",
+      "asymmetry that changes gameplay anchors",
+      "literal construction-toy motifs or pristine molded-plastic identity"
+    ]
+  },
+  "materials": [
+    {
+      "zoneId": "walkable_zone",
+      "family": "fortress_floor",
+      "semanticRole": "primary",
+      "valueRange": "middle value",
+      "surfaceFinish": "Calm non-slippery broad plane with no baked lighting.",
+      "wear": "Only on travel lanes and connection edges, bounded below state cues.",
+      "boundaryRule": "Walkable material remains continuous across intact neighbors.",
+      "lightingBehavior": "Avoids glare and preserves module seams in bright and dark lighting.",
+      "territoryTranslation": "Deep coated structure, reclaimed composite panels, exposed durable metal, matte contacts and rare contextual wood surround carefully protected interaction technology. Broad calm planes, one or two patch boundaries and directional abrasion tell a construction history without uniform grime, material roulette or photoreal texture chatter. Palette rule: Deep slate and bone-sand create a quiet frontier base; sun-baked copper identifies player intervention, while mint interaction, raspberry threat, gold warning and red critical remain bounded semantic roles."
+    },
+    {
+      "zoneId": "connection_zone",
+      "family": "structural_connector",
+      "semanticRole": "bareMetal",
+      "valueRange": "middle-light edge accent",
+      "surfaceFinish": "Clean functional contact surfaces.",
+      "wear": "Contact polish only.",
+      "boundaryRule": "Connector material appears only at real adjacency interfaces.",
+      "lightingBehavior": "Creates restrained edge highlights without checkerboard noise.",
+      "territoryTranslation": "Deep coated structure, reclaimed composite panels, exposed durable metal, matte contacts and rare contextual wood surround carefully protected interaction technology. Broad calm planes, one or two patch boundaries and directional abrasion tell a construction history without uniform grime, material roulette or photoreal texture chatter. Palette rule: Deep slate and bone-sand create a quiet frontier base; sun-baked copper identifies player intervention, while mint interaction, raspberry threat, gold warning and red critical remain bounded semantic roles."
+    }
+  ],
+  "semanticZones": [
+    {
+      "id": "walkable_zone",
+      "purpose": "Show safe traversable player ground.",
+      "shapeRule": "Large calm central plane.",
+      "valueRule": "Stable middle value.",
+      "colorRole": "primary",
+      "motionRule": "still",
+      "vfxAnchor": "surface_center",
+      "audioRole": "footstep_surface"
+    },
+    {
+      "id": "connection_zone",
+      "purpose": "Show modular snapping and neighbor relationships.",
+      "shapeRule": "Broad aligned edge keys.",
+      "valueRule": "Subtle edge contrast.",
+      "colorRole": "bareMetal",
+      "motionRule": "placement only",
+      "vfxAnchor": "edge_keys",
+      "audioRole": "placement_snap"
+    },
+    {
+      "id": "damage_zone",
+      "purpose": "Reveal one local structural failure and its repair target.",
+      "shapeRule": "One displaced inset corner or broken edge key.",
+      "valueRule": "Localized warning contrast.",
+      "colorRole": "warning",
+      "motionRule": "brief settle",
+      "vfxAnchor": "largest_break",
+      "audioRole": "local_crack"
+    }
+  ],
+  "states": [
+    {
+      "id": "intact",
+      "summary": "A clean aligned cell whose inset, perimeter and four connection edges form a quiet dependable foundation.",
+      "invariants": [
+        "Four-by-half-by-four dimensions, bottom-center pivot and collision plane remain fixed.",
+        "Edge keys align across every territory and state.",
+        "The central inset and perimeter remain the primary top-view identity.",
+        "Damage never creates an unfair collision step or changes placement anchors.",
+        "Repeated modules reuse identical mesh and material combinations."
+      ],
+      "changes": [
+        "All edge keys and inset corners remain aligned.",
+        "The walkable surface remains calm and uninterrupted."
+      ],
+      "cues": {
+        "shape": [
+          "flat continuous top plane",
+          "complete perimeter",
+          "aligned connection edges"
+        ],
+        "silhouette": [
+          "flat continuous top plane",
+          "complete perimeter",
+          "aligned connection edges"
+        ],
+        "value": [
+          "stable mid-value surface",
+          "subtle connector highlights"
+        ],
+        "color": [
+          "fortress base palette",
+          "no warning dominance"
+        ],
+        "light": [
+          "no emission",
+          "consistent bevel response"
+        ],
+        "motion": [
+          "fully still",
+          "placement snap only"
+        ],
+        "vfx": [
+          "brief placement dust only",
+          "no persistent particles"
+        ],
+        "audio": [
+          "stable footstep material",
+          "clear placement snap"
+        ]
+      },
+      "componentOperations": [
+        {
+          "componentId": "StructuralSlab",
+          "operation": "PRESERVE",
+          "description": "Keep the walkable slab continuous and level."
+        },
+        {
+          "componentId": "EdgeKeys",
+          "operation": "PRESERVE",
+          "description": "Keep all connection edges aligned to the grid."
+        }
+      ],
+      "transitions": [
+        {
+          "to": "damaged",
+          "durationSeconds": 0.25,
+          "sequence": [
+            "directional impact",
+            "one inset corner drops",
+            "one edge key exposes",
+            "localized warning appears"
+          ],
+          "reversible": true
+        }
+      ],
+      "territoryTranslation": "Damage lifts the known replacement seam and one edge key; critical state widens that same split without a random fracture web or misleading collision."
+    },
+    {
+      "id": "damaged",
+      "summary": "One localized displaced corner or connector exposes a clear repair target while the module remains walkable, placeable and recognizable.",
+      "invariants": [
+        "Four-by-half-by-four dimensions, bottom-center pivot and collision plane remain fixed.",
+        "Edge keys align across every territory and state.",
+        "The central inset and perimeter remain the primary top-view identity.",
+        "Damage never creates an unfair collision step or changes placement anchors.",
+        "Repeated modules reuse identical mesh and material combinations."
+      ],
+      "changes": [
+        "One inset corner shifts downward or opens.",
+        "One connected edge exposes its structural key without creating a random crack web."
+      ],
+      "cues": {
+        "shape": [
+          "one localized top-plane interruption",
+          "three intact corners preserve square identity",
+          "overall half-stud thickness unchanged"
+        ],
+        "silhouette": [
+          "one localized top-plane interruption",
+          "three intact corners preserve square identity",
+          "overall half-stud thickness unchanged"
+        ],
+        "value": [
+          "bright exposed connector at one edge",
+          "localized warning contrast"
+        ],
+        "color": [
+          "warning role only at damaged corner",
+          "base floor palette remains dominant"
+        ],
+        "light": [
+          "no emission required",
+          "exposed edge catches readable highlight"
+        ],
+        "motion": [
+          "single settle after impact",
+          "no looping wobble"
+        ],
+        "vfx": [
+          "short dust puff from damaged seam",
+          "no fog occlusion"
+        ],
+        "audio": [
+          "localized structural crack",
+          "slightly altered footstep near damage"
+        ]
+      },
+      "componentOperations": [
+        {
+          "componentId": "CentralInset",
+          "operation": "MOVE",
+          "description": "Lower one approved corner without creating a collision hazard."
+        },
+        {
+          "componentId": "EdgeKeys",
+          "operation": "EXPOSE",
+          "description": "Expose one connector as the repair target."
+        }
+      ],
+      "transitions": [
+        {
+          "to": "intact",
+          "durationSeconds": 0.9,
+          "sequence": [
+            "connector reseats",
+            "inset corner rises",
+            "surface plane closes",
+            "placement confirmation plays"
+          ],
+          "reversible": true
+        }
+      ],
+      "territoryTranslation": "Damage lifts the known replacement seam and one edge key; critical state widens that same split without a random fracture web or misleading collision."
+    }
+  ],
+  "invariants": [
+    "Four-by-half-by-four dimensions, bottom-center pivot and collision plane remain fixed.",
+    "Edge keys align across every territory and state.",
+    "The central inset and perimeter remain the primary top-view identity.",
+    "Damage never creates an unfair collision step or changes placement anchors.",
+    "Repeated modules reuse identical mesh and material combinations."
+  ],
+  "allowedVariations": [
+    {
+      "id": "surface_wear",
+      "range": "0 to 5 percent of visible top area",
+      "justification": "Adds bounded lived-in history without turning the floor into noise."
+    },
+    {
+      "id": "repair_patch",
+      "range": "zero or one approved patch per module",
+      "justification": "Supports persistent identity while keeping tiling readable."
+    },
+    {
+      "id": "rotation",
+      "range": "multiples of ninety degrees only",
+      "justification": "Allows layout variation while preserving grid and edge-key compatibility."
+    }
+  ],
+  "forbidden": [
+    "random crack network",
+    "raised micro-detail that harms movement",
+    "unique mesh for every repeated tile",
+    "painted arrows, text or false interaction buttons",
+    "color-only damage",
+    "unmatched edge keys",
+    "baked shadows or dirt in the albedo",
+    "random junk pile silhouette",
+    "uniform rust",
+    "decorative repair with no causal reason",
+    "more than three visible material families",
+    "loose cable spaghetti",
+    "asymmetry that changes gameplay anchors",
+    "literal construction-toy motifs or pristine molded-plastic identity",
+    "thin_loose_wires",
+    "microtext",
+    "free_floating_fragments",
+    "detail_without_silhouette_function_identity"
+  ],
+  "visualPacket": {
+    "status": "SPECIFIED",
+    "coverageRule": "If a component or state is absent from every bound board, the canon is incomplete and cannot be LOCKED.",
+    "boards": [
+      {
+        "id": "orthographic",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "perspective",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "black_silhouette",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "component_breakdown",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "proportions",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "materials",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "semantic_zones",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "all_states",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "state_comparison",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "mobile_near",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "mobile_mid",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "mobile_far",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "lighting_matrix",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "repetition_1",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "repetition_30",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "repetition_100",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "required_and_forbidden_annotations",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      }
+    ]
+  },
+  "generationContract": {
+    "mode": "RECONSTRUCT_CANON_DO_NOT_AUTHOR_OBJECT",
+    "obligations": [
+      "Reconstruct every primary and secondary component defined by this canon.",
+      "Produce every required state from the same component structure and stable anchors.",
+      "Preserve the one-second function, front, interaction, danger and state readings.",
+      "Record this canon ID and exact SHA-256 in the compliance envelope."
+    ],
+    "constraints": [
+      "Dimensions are 4.0 x 0.5 x 4.0 studs with tolerance 0.005.",
+      "Triangle budget maximum is 800.",
+      "Texture class is small.",
+      "Pivot is bottom_center and component anchors remain stable.",
+      "One UV set and one material slot maximum per production mesh component."
+    ],
+    "tolerances": [
+      "Dimension error may not exceed 0.005 stud.",
+      "Only the explicitly listed allowedVariations may vary.",
+      "Tertiary details may be simplified when they fall below the minimum mobile screen-space band."
+    ],
+    "forbidden": [
+      "random crack network",
+      "raised micro-detail that harms movement",
+      "unique mesh for every repeated tile",
+      "painted arrows, text or false interaction buttons",
+      "color-only damage",
+      "unmatched edge keys",
+      "baked shadows or dirt in the albedo",
+      "random junk pile silhouette",
+      "uniform rust",
+      "decorative repair with no causal reason",
+      "more than three visible material families",
+      "loose cable spaghetti",
+      "asymmetry that changes gameplay anchors",
+      "literal construction-toy motifs or pristine molded-plastic identity",
+      "thin_loose_wires",
+      "microtext",
+      "free_floating_fragments",
+      "detail_without_silhouette_function_identity"
+    ],
+    "complianceReportRequired": true,
+    "minimumStatusForExploration": "CANDIDATE",
+    "minimumStatusForProduction": "LOCKED",
+    "silentCanonMutationForbidden": true
+  },
+  "approval": {
+    "required": true,
+    "status": "PENDING",
+    "approvedBy": null,
+    "approvedAt": null,
+    "decisionRecord": null,
+    "approvedEvidencePackageSha256": null,
+    "revisionReason": null
+  },
+  "provenance": {
+    "sourceKind": "AUTHORED_CANON_COMPILED_FROM_GDD_RETENTION_AND_ART_GRAMMAR",
+    "authoredAt": "2026-07-16T15:36:48Z",
+    "authoredBy": "Codex under founder authority; human lock still required",
+    "generator": "tools.art.build_visual_canons",
+    "inputHashes": {
+      "source": "9c3800fbd37f04e31353a53231ad6c53d0a2a4919c22b9b68232c898f7054cce",
+      "gdd": "fd3ba04f92d3b1578d8c7ebfd5d1d8b3a571bd0a5da910f9b45b3720983dc6a6",
+      "retention": "98c1e9b2be8601c4ecc94b4e5da997fcfd73bf75b9b99c18831b61b71dc24562",
+      "artDirection": "ab1e3b2607fc916fa660fb20b90c2b62ee6985a866c3a65090bef4996a7eef22",
+      "calibration": "8a33c6c8a9b5a02ef460f5e698907a4d6d623e2f5c475047cd3dbdccc102ace9",
+      "shapeLanguage": "76fcd0eaaace7f34d7fb88fdc6470315518efd8e586649393ceb32356a7addc7",
+      "materials": "41fadb667eb50a2252e6721649afee1b38b98a667ea7c2051f5f465ad9896b83",
+      "selectedConstitution": "03b7c0ea39bb273ab5d2f6fd4e81f0c7c9ff7183f7f6262bcfb23d69d2654594",
+      "territory": "3b59d12273d24e5aea3b7a06611aafffad495f482a1696dc4a1c1fc41749f3d6",
+      "generator": "2a83313dfad161ba97b6e9d1f7c2ec9c5b6c07d0a407d5a6654ac605b09a91d8"
+    }
+  }
+}

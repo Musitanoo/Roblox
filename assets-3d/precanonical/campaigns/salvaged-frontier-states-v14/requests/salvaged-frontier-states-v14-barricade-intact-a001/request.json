@@ -1,0 +1,86 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/precanonical-request.schema.json",
+  "schemaVersion": "1.0.0",
+  "requestId": "salvaged-frontier-states-v14-barricade-intact-a001",
+  "assetKey": "barricade",
+  "artDirection": "salvaged-frontier",
+  "generationSurface": "chatgpt_web_images",
+  "status": "PRECANONICAL_SPEC_COMPLETE",
+  "stage": "state_definition",
+  "policy": {
+    "path": "art/precanonical/policy.json",
+    "sha256": "befd65dbd9ca4192c96d705582e92e4311d20723730d05c2fd29d1be6a2e80f9"
+  },
+  "constitution": {
+    "path": "art/selected/salvaged-frontier-constitution.json",
+    "sha256": "1a7ea88c2d06be01530b6e02b70b6f9dc176f5b74d0cb98f4d565b8a322a9491"
+  },
+  "compiler": {
+    "path": "tools/art/precanonical_campaign.py",
+    "sha256": "69bc8e27c96a7f2b386f40fbaf91543bb86f32f430703565a9d61c85857e06cc"
+  },
+  "sourceBrief": {
+    "path": "source-brief.json",
+    "sha256": "da2feeef062a12b36b5c1d27de891aa2fa4539c7427f81e03063f08d8d6f7f24"
+  },
+  "parentResult": null,
+  "revisionInstructions": [],
+  "files": {
+    "brief": {
+      "path": "brief.md",
+      "sha256": "105eae757f2d2c9506387c745982e74b9c223f5ca4e36659955f79cf438a8029"
+    },
+    "prompt": {
+      "path": "prompt.txt",
+      "sha256": "cc7ae9df6affad622c9d600d340c1c7fcd48a7528f096138e47150889be47d40"
+    },
+    "negativeConstraints": {
+      "path": "negative-constraints.txt",
+      "sha256": "1fbf49cf831d5ab63a128bd217f77a3f92a5ccab0cd91ed74fbc17caca69ff50"
+    },
+    "requestedViews": {
+      "path": "requested-views.json",
+      "sha256": "f34a21632b71d06d7b2a026a02cea32a8942ada34aff34fffccd65060700977b"
+    },
+    "requestedStates": {
+      "path": "requested-states.json",
+      "sha256": "075d49d1abd988c3a6a8ef316ff2af4134fc21e00c452f5a46332db069fadd17"
+    }
+  },
+  "promptHash": "cc7ae9df6affad622c9d600d340c1c7fcd48a7528f096138e47150889be47d40",
+  "requestedViewIds": [
+    "hero_three_quarter_front",
+    "three_quarter_rear",
+    "black_silhouette",
+    "mobile_landscape"
+  ],
+  "requestedStateIds": [
+    "intact"
+  ],
+  "imageSpec": {
+    "aspectRatio": "1:1",
+    "background": "neutral_mid_gray",
+    "lighting": "neutral_studio",
+    "singleObjectOnly": true
+  },
+  "budget": {
+    "maximumWebGenerations": 1,
+    "consumedWebGenerations": 0,
+    "reserveForCorrections": 0,
+    "humanConfirmationRequired": true
+  },
+  "automation": {
+    "browserAdapter": "codex_chrome",
+    "automaticSubmissionAuthorized": false,
+    "automaticRetry": false,
+    "automaticCodexImageFallback": false,
+    "automaticApiFallback": false,
+    "browserReasoningForbidden": true
+  },
+  "authority": {
+    "canonical": false,
+    "geometryAuthority": false,
+    "humanSelectionRequired": true,
+    "productionApproved": false
+  }
+}

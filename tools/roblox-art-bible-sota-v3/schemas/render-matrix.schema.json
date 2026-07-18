@@ -1,0 +1,322 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/render-matrix.schema.json",
+  "$defs": {
+    "assetId": {
+      "enum": [
+        "barricade",
+        "objective_core",
+        "enemy_standard",
+        "floor_module",
+        "damage_effect"
+      ]
+    },
+    "stateId": {
+      "enum": [
+        "intact",
+        "damaged",
+        "critical"
+      ]
+    },
+    "cameraId": {
+      "enum": [
+        "near",
+        "mid",
+        "far",
+        "front",
+        "back",
+        "three_quarter"
+      ]
+    },
+    "lightingProfileId": {
+      "enum": [
+        "Lighting_Gameplay_Default",
+        "Lighting_HighContrast",
+        "Lighting_Adverse_Night",
+        "Lighting_Neutral_QA"
+      ]
+    },
+    "backgroundId": {
+      "enum": [
+        "world_neutral_light",
+        "world_neutral_dark"
+      ]
+    },
+    "resolutionId": {
+      "enum": [
+        "mobile_landscape_hard",
+        "mobile_landscape_mid",
+        "reference_landscape",
+        "mobile_narrow_portrait",
+        "mobile_tall_portrait"
+      ]
+    },
+    "passId": {
+      "enum": [
+        "beauty",
+        "silhouette",
+        "flat_albedo",
+        "detail_band"
+      ]
+    },
+    "job": {
+      "type": "object",
+      "required": [
+        "jobId",
+        "assetIds",
+        "stateIds",
+        "cameraIds",
+        "lightingProfileIds",
+        "backgroundIds",
+        "resolutionIds",
+        "passIds"
+      ],
+      "properties": {
+        "jobId": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$"
+        },
+        "assetIds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/assetId"
+          }
+        },
+        "stateIds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/stateId"
+          }
+        },
+        "cameraIds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/cameraId"
+          }
+        },
+        "lightingProfileIds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/lightingProfileId"
+          }
+        },
+        "backgroundIds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/backgroundId"
+          }
+        },
+        "resolutionIds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/resolutionId"
+          }
+        },
+        "passIds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/passId"
+          }
+        }
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "modes",
+    "groupScenes",
+    "fileNameTemplate",
+    "comparisonRule",
+    "coveragePolicy"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/render-matrix.schema.json"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "modes": {
+      "type": "object",
+      "required": [
+        "smoke",
+        "full"
+      ],
+      "properties": {
+        "smoke": {
+          "type": "object",
+          "required": [
+            "evidenceTier",
+            "jobs",
+            "expectedRenderCount"
+          ],
+          "properties": {
+            "evidenceTier": {
+              "const": "PREVIEW_ONLY"
+            },
+            "jobs": {
+              "type": "array",
+              "minItems": 3,
+              "items": {
+                "$ref": "#/$defs/job"
+              }
+            },
+            "expectedRenderCount": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 2000
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        "full": {
+          "type": "object",
+          "required": [
+            "evidenceTier",
+            "jobs",
+            "expectedRenderCount"
+          ],
+          "properties": {
+            "evidenceTier": {
+              "const": "BLENDER_PREFLIGHT_COMPLETE"
+            },
+            "jobs": {
+              "type": "array",
+              "minItems": 4,
+              "items": {
+                "$ref": "#/$defs/job"
+              }
+            },
+            "expectedRenderCount": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 2000
+            }
+          },
+          "unevaluatedProperties": false
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "groupScenes": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "assetId",
+          "count"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "assetId": {
+            "$ref": "#/$defs/assetId"
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 30
+          }
+        },
+        "unevaluatedProperties": false
+      }
+    },
+    "fileNameTemplate": {
+      "type": "string",
+      "minLength": 20
+    },
+    "comparisonRule": {
+      "type": "string",
+      "minLength": 20
+    },
+    "coveragePolicy": {
+      "type": "object",
+      "required": [
+        "method",
+        "rationale",
+        "fullModeRequiredCoverage",
+        "perTerritoryOmissionsForbidden"
+      ],
+      "properties": {
+        "method": {
+          "const": "risk_based_constrained_combinatorial_matrix"
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 80
+        },
+        "fullModeRequiredCoverage": {
+          "type": "object",
+          "required": [
+            "allAssets",
+            "allApplicableStatesInBeauty",
+            "allApplicableStatesInSilhouette",
+            "allCanonicalDistancesInBeauty",
+            "allLightingProfilesInBeauty",
+            "bothBackgroundsInBeauty",
+            "allRequiredResolutions",
+            "frontBackThreeQuarterSilhouette",
+            "allDiagnosticPasses"
+          ],
+          "properties": {
+            "allAssets": {
+              "const": true
+            },
+            "allApplicableStatesInBeauty": {
+              "const": true
+            },
+            "allApplicableStatesInSilhouette": {
+              "const": true
+            },
+            "allCanonicalDistancesInBeauty": {
+              "const": true
+            },
+            "allLightingProfilesInBeauty": {
+              "const": true
+            },
+            "bothBackgroundsInBeauty": {
+              "const": true
+            },
+            "allRequiredResolutions": {
+              "const": true
+            },
+            "frontBackThreeQuarterSilhouette": {
+              "const": true
+            },
+            "allDiagnosticPasses": {
+              "const": true
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        "perTerritoryOmissionsForbidden": {
+          "const": true
+        }
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

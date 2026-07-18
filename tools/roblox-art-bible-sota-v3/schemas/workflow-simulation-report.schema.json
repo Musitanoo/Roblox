@@ -1,0 +1,311 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/workflow-simulation-report.schema.json",
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "artifact": {
+      "type": "object",
+      "required": [
+        "path",
+        "bytes",
+        "sha256"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^build/simulations/complete-workflow/"
+        },
+        "bytes": {
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "stage": {
+      "type": "object",
+      "required": [
+        "id",
+        "order",
+        "evidenceClass",
+        "status",
+        "assertions",
+        "artifact"
+      ],
+      "properties": {
+        "id": {
+          "enum": [
+            "static_contracts",
+            "precanonical_campaign",
+            "blind_human_study",
+            "visual_canon_locks",
+            "blender_full_build",
+            "sixth_asset_transfer",
+            "studio_golden_scene",
+            "studio_simulator",
+            "physical_mobile",
+            "cloud_publication_update",
+            "studio_integration_rollback",
+            "production_boundary"
+          ]
+        },
+        "order": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 12
+        },
+        "evidenceClass": {
+          "enum": [
+            "REAL_LOCAL",
+            "SYNTHETIC_DOUBLE"
+          ]
+        },
+        "status": {
+          "enum": [
+            "PASS",
+            "FAIL"
+          ]
+        },
+        "assertions": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "artifact": {
+          "$ref": "#/$defs/artifact"
+        }
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "simulationId",
+    "generatedAt",
+    "mode",
+    "selectedTerritory",
+    "status",
+    "productionApproved",
+    "authorityBoundary",
+    "stages",
+    "containment",
+    "realProductionStatus",
+    "evidencePackageSha256",
+    "limitations",
+    "issues"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/workflow-simulation-report.schema.json"
+    },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "simulationId": {
+      "type": "string",
+      "pattern": "^complete-workflow-[a-z0-9-]+$"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "mode": {
+      "const": "SIMULATION_ONLY"
+    },
+    "selectedTerritory": {
+      "enum": [
+        "industrial-toy-defense",
+        "salvaged-frontier",
+        "clean-tactical-diorama"
+      ]
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "FAIL"
+      ]
+    },
+    "productionApproved": {
+      "const": false
+    },
+    "authorityBoundary": {
+      "type": "object",
+      "required": [
+        "syntheticEvidenceIsProductionEvidence",
+        "humanAuthoritySimulated",
+        "externalSystemsMutated",
+        "realApprovalUnchanged",
+        "simulationPassDoesNotImplyProductionPass"
+      ],
+      "properties": {
+        "syntheticEvidenceIsProductionEvidence": {
+          "const": false
+        },
+        "humanAuthoritySimulated": {
+          "const": true
+        },
+        "externalSystemsMutated": {
+          "const": false
+        },
+        "realApprovalUnchanged": {
+          "const": true
+        },
+        "simulationPassDoesNotImplyProductionPass": {
+          "const": true
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "stages": {
+      "type": "array",
+      "minItems": 12,
+      "maxItems": 12,
+      "items": {
+        "$ref": "#/$defs/stage"
+      }
+    },
+    "containment": {
+      "type": "object",
+      "required": [
+        "outputRoot",
+        "protectedSurfaceDigestBefore",
+        "protectedSurfaceDigestAfter",
+        "protectedSurfacesUnchanged",
+        "networkCalls",
+        "studioMutations",
+        "cloudMutations",
+        "secretsRead",
+        "productionValidatorRejectedSyntheticMobile",
+        "productionValidatorRejectedSyntheticSimulator"
+      ],
+      "properties": {
+        "outputRoot": {
+          "type": "string",
+          "pattern": "^build/simulations/complete-workflow/"
+        },
+        "protectedSurfaceDigestBefore": {
+          "$ref": "#/$defs/sha256"
+        },
+        "protectedSurfaceDigestAfter": {
+          "$ref": "#/$defs/sha256"
+        },
+        "protectedSurfacesUnchanged": {
+          "const": true
+        },
+        "networkCalls": {
+          "const": 0
+        },
+        "studioMutations": {
+          "const": 0
+        },
+        "cloudMutations": {
+          "const": 0
+        },
+        "secretsRead": {
+          "const": false
+        },
+        "productionValidatorRejectedSyntheticMobile": {
+          "const": true
+        },
+        "productionValidatorRejectedSyntheticSimulator": {
+          "const": true
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "realProductionStatus": {
+      "type": "object",
+      "required": [
+        "status",
+        "implementationStatus",
+        "productionApproved",
+        "reportPath",
+        "sha256"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "FAIL",
+            "BLOCKED",
+            "UNKNOWN",
+            "PARTIAL"
+          ]
+        },
+        "implementationStatus": {
+          "enum": [
+            "FAIL",
+            "BLOCKED",
+            "UNKNOWN",
+            "PARTIAL"
+          ]
+        },
+        "productionApproved": {
+          "const": false
+        },
+        "reportPath": {
+          "const": "assets-3d/defense-barricade-small/qa/final-report.json"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "evidencePackageSha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "limitations": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "string",
+        "minLength": 20
+      },
+      "uniqueItems": true
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "PASS"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "issues": {
+            "maxItems": 0
+          },
+          "stages": {
+            "items": {
+              "properties": {
+                "status": {
+                  "const": "PASS"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}

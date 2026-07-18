@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/blind-map.schema.json",
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "studyId",
+    "generatedAt",
+    "mapping",
+    "sealedSubmissionsSha256",
+    "saltId"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/blind-map.schema.json"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "studyId": {
+      "type": "string"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "mapping": {
+      "type": "object",
+      "properties": {
+        "A": {
+          "enum": [
+            "industrial-toy-defense",
+            "salvaged-frontier",
+            "clean-tactical-diorama"
+          ]
+        },
+        "B": {
+          "enum": [
+            "industrial-toy-defense",
+            "salvaged-frontier",
+            "clean-tactical-diorama"
+          ]
+        },
+        "C": {
+          "enum": [
+            "industrial-toy-defense",
+            "salvaged-frontier",
+            "clean-tactical-diorama"
+          ]
+        }
+      },
+      "required": [
+        "A",
+        "B",
+        "C"
+      ],
+      "unevaluatedProperties": false
+    },
+    "sealedSubmissionsSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "saltId": {
+      "type": "string",
+      "minLength": 8
+    }
+  },
+  "unevaluatedProperties": false
+}

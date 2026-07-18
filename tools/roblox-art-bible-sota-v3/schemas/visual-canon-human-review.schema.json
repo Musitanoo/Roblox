@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/visual-canon-human-review.schema.json",
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "reviewStatus": {
+      "enum": ["PENDING", "PASS", "FAIL"]
+    },
+    "boardReview": {
+      "type": "object",
+      "required": ["status", "comment"],
+      "properties": {
+        "status": {
+          "$ref": "#/$defs/reviewStatus"
+        },
+        "comment": {
+          "type": ["string", "null"],
+          "maxLength": 2000
+        }
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "status",
+    "assetKey",
+    "assetId",
+    "territoryId",
+    "revision",
+    "canonId",
+    "evidenceManifest",
+    "evidenceManifestSha256",
+    "evidencePackageSha256",
+    "reviewer",
+    "reviewedAt",
+    "decision",
+    "decisionRecord",
+    "allowedDecisions",
+    "boards",
+    "mandatoryChecks",
+    "productionApproved"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/visual-canon-human-review.schema.json"
+    },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "status": {
+      "enum": ["PENDING", "APPROVED", "REVISION_REQUIRED", "REJECTED"]
+    },
+    "assetKey": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$"
+    },
+    "assetId": {
+      "enum": [
+        "barricade",
+        "objective_core",
+        "enemy_standard",
+        "floor_module",
+        "damage_effect",
+        "turret_fast_v1"
+      ]
+    },
+    "territoryId": {
+      "enum": [
+        "industrial-toy-defense",
+        "salvaged-frontier",
+        "clean-tactical-diorama"
+      ]
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "canonId": {
+      "type": "string",
+      "pattern": "^vc_[a-z0-9_]+__[a-z0-9-]+__v[1-9][0-9]*$"
+    },
+    "evidenceManifest": {
+      "type": "string",
+      "minLength": 3,
+      "pattern": "^[^:].*$"
+    },
+    "evidenceManifestSha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "evidencePackageSha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "reviewer": {
+      "type": ["string", "null"],
+      "minLength": 2,
+      "maxLength": 200
+    },
+    "reviewedAt": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "decision": {
+      "type": ["string", "null"],
+      "enum": [null, "LOCK", "REVISION_REQUIRED", "REJECT"]
+    },
+    "decisionRecord": {
+      "type": ["string", "null"],
+      "minLength": 3,
+      "maxLength": 4000
+    },
+    "allowedDecisions": {
+      "const": ["LOCK", "REVISION_REQUIRED", "REJECT"]
+    },
+    "boards": {
+      "type": "object",
+      "minProperties": 17,
+      "maxProperties": 17,
+      "additionalProperties": {
+        "$ref": "#/$defs/boardReview"
+      }
+    },
+    "mandatoryChecks": {
+      "type": "object",
+      "required": [
+        "oneSecondFunctionRead",
+        "stateReadWithoutColorOnly",
+        "mobileNearMidFar",
+        "lightingRobustness",
+        "repetitionOneThirtyHundred",
+        "requiredAndForbiddenCompliance",
+        "artDirectionQuality"
+      ],
+      "properties": {
+        "oneSecondFunctionRead": {
+          "$ref": "#/$defs/reviewStatus"
+        },
+        "stateReadWithoutColorOnly": {
+          "$ref": "#/$defs/reviewStatus"
+        },
+        "mobileNearMidFar": {
+          "$ref": "#/$defs/reviewStatus"
+        },
+        "lightingRobustness": {
+          "$ref": "#/$defs/reviewStatus"
+        },
+        "repetitionOneThirtyHundred": {
+          "$ref": "#/$defs/reviewStatus"
+        },
+        "requiredAndForbiddenCompliance": {
+          "$ref": "#/$defs/reviewStatus"
+        },
+        "artDirectionQuality": {
+          "$ref": "#/$defs/reviewStatus"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "productionApproved": {
+      "const": false
+    }
+  },
+  "unevaluatedProperties": false
+}

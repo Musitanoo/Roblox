@@ -1,0 +1,88 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/precanonical-request.schema.json",
+  "schemaVersion": "1.0.0",
+  "requestId": "salvaged-frontier-states-v4-enemy-standard-intact-a001",
+  "assetKey": "enemy_standard",
+  "artDirection": "salvaged-frontier",
+  "generationSurface": "chatgpt_web_images",
+  "status": "PRECANONICAL_SPEC_COMPLETE",
+  "stage": "state_definition",
+  "policy": {
+    "path": "art/precanonical/policy.json",
+    "sha256": "9028bdc911558acc001ecfb7b4c0c487f3fc6799c59f55e87f66a638fd701164"
+  },
+  "constitution": {
+    "path": "art/selected/salvaged-frontier-constitution.json",
+    "sha256": "c10a5b665f467ae176ae49cd9e4b1f04a46cc3357a6e0f4486bb65b76eade407"
+  },
+  "compiler": {
+    "path": "tools/art/precanonical_campaign.py",
+    "sha256": "8b22518cb2153b6b1dc9caebfe7feca422089e39df75d0d28aa5e8b3b1e60da5"
+  },
+  "sourceBrief": {
+    "path": "source-brief.json",
+    "sha256": "91388ad3c52533439400fed2d883bf787344fb11f52ec74ac4088fbc824d3949"
+  },
+  "parentResult": null,
+  "revisionInstructions": [
+    "Rebuild from the revised visual canon. Do not reuse or imitate the superseded robot, mech, armored golem or brute-like result."
+  ],
+  "files": {
+    "brief": {
+      "path": "brief.md",
+      "sha256": "d9bd199be7838e610a037b8a4b0783b4c8821ba6a7bf1060227f1b81a50ace0b"
+    },
+    "prompt": {
+      "path": "prompt.txt",
+      "sha256": "c9e43c862d9a8f87502c3c4f73883804ea3b34d523e5c9de468c2c22088cbeb4"
+    },
+    "negativeConstraints": {
+      "path": "negative-constraints.txt",
+      "sha256": "f60938106d21ec14e7d76d39d6fffee546ab70ce06e49a59e327147c8e58b598"
+    },
+    "requestedViews": {
+      "path": "requested-views.json",
+      "sha256": "f34a21632b71d06d7b2a026a02cea32a8942ada34aff34fffccd65060700977b"
+    },
+    "requestedStates": {
+      "path": "requested-states.json",
+      "sha256": "0a5446d0e66b67da4c3dfb78153e0b44d0ea83b82103b76f761bd733017b5092"
+    }
+  },
+  "promptHash": "c9e43c862d9a8f87502c3c4f73883804ea3b34d523e5c9de468c2c22088cbeb4",
+  "requestedViewIds": [
+    "hero_three_quarter_front",
+    "three_quarter_rear",
+    "black_silhouette",
+    "mobile_landscape"
+  ],
+  "requestedStateIds": [
+    "intact"
+  ],
+  "imageSpec": {
+    "aspectRatio": "1:1",
+    "background": "neutral_mid_gray",
+    "lighting": "neutral_studio",
+    "singleObjectOnly": true
+  },
+  "budget": {
+    "maximumWebGenerations": 1,
+    "consumedWebGenerations": 0,
+    "reserveForCorrections": 0,
+    "humanConfirmationRequired": true
+  },
+  "automation": {
+    "browserAdapter": "codex_chrome",
+    "automaticSubmissionAuthorized": false,
+    "automaticRetry": false,
+    "automaticCodexImageFallback": false,
+    "automaticApiFallback": false,
+    "browserReasoningForbidden": true
+  },
+  "authority": {
+    "canonical": false,
+    "geometryAuthority": false,
+    "humanSelectionRequired": true,
+    "productionApproved": false
+  }
+}

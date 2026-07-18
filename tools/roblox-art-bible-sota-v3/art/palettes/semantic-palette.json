@@ -1,0 +1,141 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/semantic-palette.schema.json",
+  "schemaVersion": "2.0.0",
+  "colorSpace": "sRGB",
+  "roles": {
+    "world_neutral_dark": {
+      "hex": "#354052",
+      "maxVisibleAreaRatio": 0.55,
+      "minimumLocalContrastRatio": 1.0,
+      "redundantCue": {
+        "shape": "large_supporting_mass",
+        "motion": "none",
+        "audio": "none"
+      }
+    },
+    "world_neutral_light": {
+      "hex": "#D8DDE4",
+      "maxVisibleAreaRatio": 0.45,
+      "minimumLocalContrastRatio": 1.0,
+      "redundantCue": {
+        "shape": "large_supporting_plane",
+        "motion": "none",
+        "audio": "none"
+      }
+    },
+    "player_buildable": {
+      "hex": "#D58B31",
+      "maxVisibleAreaRatio": 0.18,
+      "minimumLocalContrastRatio": 3.0,
+      "redundantCue": {
+        "shape": "thick_frame_or_socket",
+        "motion": "placement_ghost",
+        "audio": "build_confirm"
+      }
+    },
+    "interactive_ready": {
+      "hex": "#61E7C4",
+      "maxVisibleAreaRatio": 0.1,
+      "minimumLocalContrastRatio": 3.0,
+      "redundantCue": {
+        "shape": "complete_ring",
+        "motion": "slow_single_pulse",
+        "audio": "ready_chime"
+      }
+    },
+    "warning": {
+      "hex": "#F2C94C",
+      "maxVisibleAreaRatio": 0.08,
+      "minimumLocalContrastRatio": 3.0,
+      "redundantCue": {
+        "shape": "single_chevron",
+        "motion": "medium_pulse",
+        "audio": "warning_tick"
+      }
+    },
+    "critical": {
+      "hex": "#E64A4A",
+      "maxVisibleAreaRatio": 0.08,
+      "minimumLocalContrastRatio": 3.0,
+      "redundantCue": {
+        "shape": "broken_double_chevron",
+        "motion": "double_pulse",
+        "audio": "critical_alarm"
+      }
+    },
+    "disabled": {
+      "hex": "#68717F",
+      "maxVisibleAreaRatio": 0.2,
+      "minimumLocalContrastRatio": 2.0,
+      "redundantCue": {
+        "shape": "open_ring_or_crossbar",
+        "motion": "none",
+        "audio": "disabled_click"
+      }
+    },
+    "enemy_threat": {
+      "hex": "#A84876",
+      "maxVisibleAreaRatio": 0.16,
+      "minimumLocalContrastRatio": 3.0,
+      "redundantCue": {
+        "shape": "hostile_forward_mass_or_face",
+        "motion": "hostile_stride",
+        "audio": "threat_vocal"
+      }
+    },
+    "objective_anchor": {
+      "hex": "#66A3FF",
+      "maxVisibleAreaRatio": 0.14,
+      "minimumLocalContrastRatio": 3.0,
+      "redundantCue": {
+        "shape": "concentric_core",
+        "motion": "stable_breath",
+        "audio": "core_hum"
+      }
+    }
+  },
+  "stateEncoding": {
+    "intact": {
+      "primaryRole": "interactive_ready",
+      "shapeCue": "continuous_outline",
+      "motionCue": "stable",
+      "audioCue": "clean"
+    },
+    "damaged": {
+      "primaryRole": "warning",
+      "shapeCue": "one_major_break_or_offset",
+      "motionCue": "irregular_single_pulse",
+      "audioCue": "strained"
+    },
+    "critical": {
+      "primaryRole": "critical",
+      "shapeCue": "two_or_more_major_breaks_and_exposed_core",
+      "motionCue": "double_pulse",
+      "audioCue": "alarm"
+    },
+    "disabled": {
+      "primaryRole": "disabled",
+      "shapeCue": "open_circuit_or_crossbar",
+      "motionCue": "none",
+      "audioCue": "low_click"
+    }
+  },
+  "accessibility": {
+    "colorNeverSoleCarrier": true,
+    "requiredTransforms": [
+      "grayscale",
+      "protanopia",
+      "deuteranopia",
+      "tritanopia"
+    ],
+    "cvdModel": "Machado_2009_100_percent_matrices",
+    "minimumBoundaryContrastProxy": 3.0,
+    "textContrastWhenUsed": 4.5,
+    "threeLightingBehaviorRequired": [
+      "Gameplay_Default",
+      "HighContrast",
+      "Adverse_Night"
+    ],
+    "neutralQaBehaviorRequired": true
+  }
+}

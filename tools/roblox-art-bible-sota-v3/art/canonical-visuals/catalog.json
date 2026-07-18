@@ -1,0 +1,331 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/visual-canon-catalog.schema.json",
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-07-18T09:05:09Z",
+  "status": "PASS",
+  "sourcePath": "art/canonical-visuals/source.json",
+  "sourceSha256": "b26432ba320eab7d4c4dbff5929625a2dcc040b9f785ea3e239678d64c5535a5",
+  "authorityHashes": {
+    "productArtContract": "217c95da6202e43ad542094bcc2389493748c9d4bc9045e95647de9b6d98e2ca",
+    "retention": "b1b045849e5540cea71c7a9965f5e16351168b25e50550e5bafea40d832bc5ad",
+    "objectProductContracts": "4bc2a2657e9b5086f820ece02bf502b8c781c9bdddd5dda711a27acc499c2184",
+    "artDirection": "ab1e3b2607fc916fa660fb20b90c2b62ee6985a866c3a65090bef4996a7eef22",
+    "calibration": "8a33c6c8a9b5a02ef460f5e698907a4d6d623e2f5c475047cd3dbdccc102ace9",
+    "shapeLanguage": "76fcd0eaaace7f34d7fb88fdc6470315518efd8e586649393ceb32356a7addc7",
+    "materials": "41fadb667eb50a2252e6721649afee1b38b98a667ea7c2051f5f465ad9896b83",
+    "selectedConstitution": "1a7ea88c2d06be01530b6e02b70b6f9dc176f5b74d0cb98f4d565b8a322a9491"
+  },
+  "coverage": {
+    "territoryCount": 3,
+    "assetCount": 6,
+    "canonCount": 18,
+    "stateDefinitionCount": 48,
+    "territories": [
+      "industrial-toy-defense",
+      "salvaged-frontier",
+      "clean-tactical-diorama"
+    ],
+    "assets": [
+      "barricade",
+      "objective_core",
+      "enemy_standard",
+      "floor_module",
+      "damage_effect",
+      "turret_fast_v1"
+    ]
+  },
+  "entries": [
+    {
+      "canonId": "vc_barricade__industrial-toy-defense__v1",
+      "assetId": "barricade",
+      "territoryId": "industrial-toy-defense",
+      "version": 1,
+      "status": "CANDIDATE",
+      "path": "art/canonical-visuals/industrial-toy-defense/barricade.json",
+      "sha256": "e9984b05c218c824832518ba966a9c7d53c86646d228cdebcf1f3d9d73ab6238",
+      "stateIds": [
+        "intact",
+        "damaged",
+        "critical"
+      ],
+      "visualPacketStatus": "SPECIFIED",
+      "productionEligible": false
+    },
+    {
+      "canonId": "vc_objective_core__industrial-toy-defense__v1",
+      "assetId": "objective_core",
+      "territoryId": "industrial-toy-defense",
+      "version": 1,
+      "status": "CANDIDATE",
+      "path": "art/canonical-visuals/industrial-toy-defense/objective_core.json",
+      "sha256": "ec248835df27bb02c2c4de324fc575d7fdffb045d9c3bf0814a92628525805f8",
+      "stateIds": [
+        "intact",
+        "damaged",
+        "critical"
+      ],
+      "visualPacketStatus": "SPECIFIED",
+      "productionEligible": false
+    },
+    {
+      "canonId": "vc_enemy_standard__industrial-toy-defense__v1",
+      "assetId": "enemy_standard",
+      "territoryId": "industrial-toy-defense",
+      "version": 1,
+      "status": "CANDIDATE",
+      "path": "art/canonical-visuals/industrial-toy-defense/enemy_standard.json",
+      "sha256": "23391b63b01bd61fa015c3af3da4ba21ffbab54a999b2f8442e54ff76900166a",
+      "stateIds": [
+        "intact",
+        "damaged",
+        "critical"
+      ],
+      "visualPacketStatus": "SPECIFIED",
+      "productionEligible": false
+    },
+    {
+      "canonId": "vc_floor_module__industrial-toy-defense__v1",
+      "assetId": "floor_module",
+      "territoryId": "industrial-toy-defense",
+      "version": 1,
+      "status": "CANDIDATE",
+      "path": "art/canonical-visuals/industrial-toy-defense/floor_module.json",
+      "sha256": "aed6bbba2e8e8090e604dea9563fe0dca50c2250d4a7c29adf8a7aefb5bb452d",
+      "stateIds": [
+        "intact",
+        "damaged"
+      ],
+      "visualPacketStatus": "SPECIFIED",
+      "productionEligible": false
+    },
+    {
+      "canonId": "vc_damage_effect__industrial-toy-defense__v1",
+      "assetId": "damage_effect",
+      "territoryId": "industrial-toy-defense",
+      "version": 1,
+      "status": "CANDIDATE",
+      "path": "art/canonical-visuals/industrial-toy-defense/damage_effect.json",
+      "sha256": "486518d3f10ebb6cfd65fe497357e6a2af5221f716a7c9b1e2764d87d8360a46",
+      "stateIds": [
+        "damaged",
+        "critical"
+      ],
+      "visualPacketStatus": "SPECIFIED",
+      "productionEligible": false
+    },
+    {
+      "canonId": "vc_turret_fast_v1__industrial-toy-defense__v1",
+      "assetId": "turret_fast_v1",
+      "territoryId": "industrial-toy-defense",
+      "version": 1,
+      "status": "CANDIDATE",
+      "path": "art/canonical-visuals/industrial-toy-defense/turret_fast_v1.json",
+      "sha256": "44f9233043272bfcdef12fbad8c7ffef5fc7fc700d14732aa757a6ebbb06019f",
+      "stateIds": [
+        "intact",
+        "damaged",
+        "critical"
+      ],
+      "visualPacketStatus": "SPECIFIED",
+      "productionEligible": false
+    },
+    {
+      "canonId": "vc_barricade__salvaged-frontier__v1",
+      "assetId": "barricade",
+      "territoryId": "salvaged-frontier",
+      "version": 1,
+      "status": "CANDIDATE",
+      "path": "art/canonical-visuals/salvaged-frontier/barricade.json",
+      "sha256": "2cf485afb6bd7297a1ffccbb72c60f1e186706fe2eb47b0bcb24af407ba9cc52",
+      "stateIds": [
+        "intact",
+        "damaged",
+        "critical"
+      ],
+      "visualPacketStatus": "SPECIFIED",
+      "productionEligible": false
+    },
+    {
+      "canonId": "vc_objective_core__salvaged-frontier__v1",
+      "assetId": "objective_core",
+      "territoryId": "salvaged-frontier",
+      "version": 1,
+      "status": "CANDIDATE",
+      "path": "art/canonical-visuals/salvaged-frontier/objective_core.json",
+      "sha256": "b55699df5fe1eb6e73ce5e61992593a261b064edd8be1b59ef6b6ecbdc9bec9c",
+      "stateIds": [
+        "intact",
+        "damaged",
+        "critical"
+      ],
+      "visualPacketStatus": "SPECIFIED",
+      "productionEligible": false
+    },
+    {
+      "canonId": "vc_enemy_standard__salvaged-frontier__v1",
+      "assetId": "enemy_standard",
+      "territoryId": "salvaged-frontier",
+      "version": 1,
+      "status": "CANDIDATE",
+      "path": "art/canonical-visuals/salvaged-frontier/enemy_standard.json",
+      "sha256": "8482f9d1c4f09d78e86b3c81e48b71ef5128321e92937a79a6913607424c7056",
+      "stateIds": [
+        "intact",
+        "damaged",
+        "critical"
+      ],
+      "visualPacketStatus": "SPECIFIED",
+      "productionEligible": false
+    },
+    {
+      "canonId": "vc_floor_module__salvaged-frontier__v1",
+      "assetId": "floor_module",
+      "territoryId": "salvaged-frontier",
+      "version": 1,
+      "status": "CANDIDATE",
+      "path": "art/canonical-visuals/salvaged-frontier/floor_module.json",
+      "sha256": "0d7c6cfa61381b9fc75f146c48f23e00070321054796e5bda22f1659cc4df46d",
+      "stateIds": [
+        "intact",
+        "damaged"
+      ],
+      "visualPacketStatus": "SPECIFIED",
+      "productionEligible": false
+    },
+    {
+      "canonId": "vc_damage_effect__salvaged-frontier__v1",
+      "assetId": "damage_effect",
+      "territoryId": "salvaged-frontier",
+      "version": 1,
+      "status": "CANDIDATE",
+      "path": "art/canonical-visuals/salvaged-frontier/damage_effect.json",
+      "sha256": "171a1ec8690cc03b8c2429608ee5eb67680725a838e122d3f72cb8b9c3401ceb",
+      "stateIds": [
+        "damaged",
+        "critical"
+      ],
+      "visualPacketStatus": "SPECIFIED",
+      "productionEligible": false
+    },
+    {
+      "canonId": "vc_turret_fast_v1__salvaged-frontier__v1",
+      "assetId": "turret_fast_v1",
+      "territoryId": "salvaged-frontier",
+      "version": 1,
+      "status": "CANDIDATE",
+      "path": "art/canonical-visuals/salvaged-frontier/turret_fast_v1.json",
+      "sha256": "cb716f4cfb75a72048cd7935632e103757aa069a6b35388ec3df1a0b7d601b74",
+      "stateIds": [
+        "intact",
+        "damaged",
+        "critical"
+      ],
+      "visualPacketStatus": "SPECIFIED",
+      "productionEligible": false
+    },
+    {
+      "canonId": "vc_barricade__clean-tactical-diorama__v1",
+      "assetId": "barricade",
+      "territoryId": "clean-tactical-diorama",
+      "version": 1,
+      "status": "CANDIDATE",
+      "path": "art/canonical-visuals/clean-tactical-diorama/barricade.json",
+      "sha256": "b3dc1534b10ac4a0ab8a7b60070e53e8371a686ae5ca0e6137d84bcd336753fd",
+      "stateIds": [
+        "intact",
+        "damaged",
+        "critical"
+      ],
+      "visualPacketStatus": "SPECIFIED",
+      "productionEligible": false
+    },
+    {
+      "canonId": "vc_objective_core__clean-tactical-diorama__v1",
+      "assetId": "objective_core",
+      "territoryId": "clean-tactical-diorama",
+      "version": 1,
+      "status": "CANDIDATE",
+      "path": "art/canonical-visuals/clean-tactical-diorama/objective_core.json",
+      "sha256": "912fb2b5c2c77fc944f93f53e6c16cbfdb58e7b90fd5c497c90737d021549833",
+      "stateIds": [
+        "intact",
+        "damaged",
+        "critical"
+      ],
+      "visualPacketStatus": "SPECIFIED",
+      "productionEligible": false
+    },
+    {
+      "canonId": "vc_enemy_standard__clean-tactical-diorama__v1",
+      "assetId": "enemy_standard",
+      "territoryId": "clean-tactical-diorama",
+      "version": 1,
+      "status": "CANDIDATE",
+      "path": "art/canonical-visuals/clean-tactical-diorama/enemy_standard.json",
+      "sha256": "a0bfe23d6bd2a66603f87dce5972a475d0c651187aa7b281bddaa158355e36ab",
+      "stateIds": [
+        "intact",
+        "damaged",
+        "critical"
+      ],
+      "visualPacketStatus": "SPECIFIED",
+      "productionEligible": false
+    },
+    {
+      "canonId": "vc_floor_module__clean-tactical-diorama__v1",
+      "assetId": "floor_module",
+      "territoryId": "clean-tactical-diorama",
+      "version": 1,
+      "status": "CANDIDATE",
+      "path": "art/canonical-visuals/clean-tactical-diorama/floor_module.json",
+      "sha256": "286cfcc5c17f930d21e1207d0cd3ec90df6b83ff033405031a9f62dd7f15aa10",
+      "stateIds": [
+        "intact",
+        "damaged"
+      ],
+      "visualPacketStatus": "SPECIFIED",
+      "productionEligible": false
+    },
+    {
+      "canonId": "vc_damage_effect__clean-tactical-diorama__v1",
+      "assetId": "damage_effect",
+      "territoryId": "clean-tactical-diorama",
+      "version": 1,
+      "status": "CANDIDATE",
+      "path": "art/canonical-visuals/clean-tactical-diorama/damage_effect.json",
+      "sha256": "b88ebb06669a165e190e5c2ec213fdbbac36c007cb882ad2cab743598ca71089",
+      "stateIds": [
+        "damaged",
+        "critical"
+      ],
+      "visualPacketStatus": "SPECIFIED",
+      "productionEligible": false
+    },
+    {
+      "canonId": "vc_turret_fast_v1__clean-tactical-diorama__v1",
+      "assetId": "turret_fast_v1",
+      "territoryId": "clean-tactical-diorama",
+      "version": 1,
+      "status": "CANDIDATE",
+      "path": "art/canonical-visuals/clean-tactical-diorama/turret_fast_v1.json",
+      "sha256": "1d730d1e4b845ac7390faf8bce9d4abe6dddd4510b85123e283b8228e29bdaad",
+      "stateIds": [
+        "intact",
+        "damaged",
+        "critical"
+      ],
+      "visualPacketStatus": "SPECIFIED",
+      "productionEligible": false
+    }
+  ],
+  "productionGate": {
+    "selectedTerritory": "salvaged-frontier",
+    "requiredCanonStatus": "LOCKED",
+    "requiredVisualPacketStatus": "COMPLETE",
+    "humanApprovalRequired": true,
+    "requiredCanonCount": 6,
+    "eligibleCanonCount": 0,
+    "status": "BLOCKED",
+    "reason": "The selected territory is fixed, but its six canons still require complete multimodal board binding and explicit human lock."
+  }
+}

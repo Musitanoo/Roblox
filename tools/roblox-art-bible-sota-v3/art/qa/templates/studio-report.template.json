@@ -1,0 +1,227 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/studio-report.schema.json",
+  "schemaVersion": "3.0.0",
+  "status": "BLOCKED",
+  "territoryId": "industrial-toy-defense",
+  "placeId": null,
+  "placeVersion": null,
+  "privacy": {
+    "rawPlaceIdIncluded": false,
+    "rawCreatorIdIncluded": false,
+    "rawApiKeyIncluded": false
+  },
+  "environmentChecks": {
+    "deploymentMarkedStaging": false,
+    "localConfigComplete": false,
+    "savedCloudPlaceVerified": false,
+    "expectedCreatorMatches": false,
+    "creatorAllowlistVerified": false,
+    "editModeVerified": false
+  },
+  "generatedAt": "2026-07-15T00:00:00Z",
+  "sceneChecks": {
+    "scenePresent": false,
+    "placeholderCount": 0,
+    "missingSourceCount": 13,
+    "referenceAvatarPresent": false,
+    "artTerritoryMatches": false,
+    "sceneSessionPresent": false
+  },
+  "zoneChecks": {
+    "Zone_Isolated_Light": false,
+    "Zone_Isolated_Dark": false,
+    "Zone_States": false,
+    "Zone_Stress_30": false,
+    "Zone_Stress_100": false,
+    "Zone_Mixed_Gameplay": false,
+    "Zone_Graybox_Reference": false,
+    "ValidationCameras": false,
+    "ReferenceDecor": false
+  },
+  "assetChecks": {
+    "barricade": {
+      "intact": {
+        "pass": false,
+        "reason": "scene_missing",
+        "sourceSha256Present": false,
+        "sourceIdentityMatches": false
+      },
+      "damaged": {
+        "pass": false,
+        "reason": "scene_missing",
+        "sourceSha256Present": false,
+        "sourceIdentityMatches": false
+      },
+      "critical": {
+        "pass": false,
+        "reason": "scene_missing",
+        "sourceSha256Present": false,
+        "sourceIdentityMatches": false
+      }
+    },
+    "objective_core": {
+      "intact": {
+        "pass": false,
+        "reason": "scene_missing",
+        "sourceSha256Present": false,
+        "sourceIdentityMatches": false
+      },
+      "damaged": {
+        "pass": false,
+        "reason": "scene_missing",
+        "sourceSha256Present": false,
+        "sourceIdentityMatches": false
+      },
+      "critical": {
+        "pass": false,
+        "reason": "scene_missing",
+        "sourceSha256Present": false,
+        "sourceIdentityMatches": false
+      }
+    },
+    "enemy_standard": {
+      "intact": {
+        "pass": false,
+        "reason": "scene_missing",
+        "sourceSha256Present": false,
+        "sourceIdentityMatches": false
+      },
+      "damaged": {
+        "pass": false,
+        "reason": "scene_missing",
+        "sourceSha256Present": false,
+        "sourceIdentityMatches": false
+      },
+      "critical": {
+        "pass": false,
+        "reason": "scene_missing",
+        "sourceSha256Present": false,
+        "sourceIdentityMatches": false
+      }
+    },
+    "floor_module": {
+      "intact": {
+        "pass": false,
+        "reason": "scene_missing",
+        "sourceSha256Present": false,
+        "sourceIdentityMatches": false
+      },
+      "damaged": {
+        "pass": false,
+        "reason": "scene_missing",
+        "sourceSha256Present": false,
+        "sourceIdentityMatches": false
+      }
+    },
+    "damage_effect": {
+      "damaged": {
+        "pass": false,
+        "reason": "scene_missing",
+        "sourceSha256Present": false,
+        "sourceIdentityMatches": false
+      },
+      "critical": {
+        "pass": false,
+        "reason": "scene_missing",
+        "sourceSha256Present": false,
+        "sourceIdentityMatches": false
+      }
+    }
+  },
+  "reuseChecks": {
+    "Stress_barricade_30": {
+      "pass": false,
+      "observedCount": 0,
+      "distinctSignatures": 0,
+      "meshPartCount": 0,
+      "sourceSha256Count": 0,
+      "issues": [
+        "Evidence not executed."
+      ]
+    },
+    "Stress_enemy_standard_30": {
+      "pass": false,
+      "observedCount": 0,
+      "distinctSignatures": 0,
+      "meshPartCount": 0,
+      "sourceSha256Count": 0,
+      "issues": [
+        "Evidence not executed."
+      ]
+    },
+    "Stress_barricade_100": {
+      "pass": false,
+      "observedCount": 0,
+      "distinctSignatures": 0,
+      "meshPartCount": 0,
+      "sourceSha256Count": 0,
+      "issues": [
+        "Evidence not executed."
+      ]
+    },
+    "Stress_enemy_standard_100": {
+      "pass": false,
+      "observedCount": 0,
+      "distinctSignatures": 0,
+      "meshPartCount": 0,
+      "sourceSha256Count": 0,
+      "issues": [
+        "Evidence not executed."
+      ]
+    }
+  },
+  "lightingChecks": {
+    "Lighting_Gameplay_Default": {
+      "ok": false,
+      "code": "EVIDENCE_MISSING",
+      "profileId": "Lighting_Gameplay_Default",
+      "evidenceFresh": false,
+      "capturedAtUnix": null,
+      "issues": [
+        "Profile not verified in Studio."
+      ]
+    },
+    "Lighting_HighContrast": {
+      "ok": false,
+      "code": "EVIDENCE_MISSING",
+      "profileId": "Lighting_HighContrast",
+      "evidenceFresh": false,
+      "capturedAtUnix": null,
+      "issues": [
+        "Profile not verified in Studio."
+      ]
+    },
+    "Lighting_Adverse_Night": {
+      "ok": false,
+      "code": "EVIDENCE_MISSING",
+      "profileId": "Lighting_Adverse_Night",
+      "evidenceFresh": false,
+      "capturedAtUnix": null,
+      "issues": [
+        "Profile not verified in Studio."
+      ]
+    },
+    "Lighting_Neutral_QA": {
+      "ok": false,
+      "code": "EVIDENCE_MISSING",
+      "profileId": "Lighting_Neutral_QA",
+      "evidenceFresh": false,
+      "capturedAtUnix": null,
+      "issues": [
+        "Profile not verified in Studio."
+      ]
+    }
+  },
+  "cameraChecks": {
+    "near": false,
+    "mid": false,
+    "far": false,
+    "front": false,
+    "back": false,
+    "three_quarter": false
+  },
+  "artifacts": [],
+  "issues": [
+    "Template only: execute GoldenSceneValidator in Roblox Studio."
+  ]
+}

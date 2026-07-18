@@ -1,0 +1,32 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/status.schema.json",
+  "schemaVersion": "3.0.0",
+  "artifactVersion": "3.14.0",
+  "generatedAt": "2026-07-16T21:42:05Z",
+  "truthModel": {
+    "specificationStatus": "PASS",
+    "staticValidationStatus": "PASS",
+    "precanonicalWorkflowStatus": "PASS",
+    "blenderExecutionStatus": "PASS",
+    "blenderEvidenceTier": "BUILD_ONLY",
+    "studioEvidenceStatus": "UNKNOWN",
+    "mobileEvidenceStatus": "BLOCKED",
+    "humanSelectionStatus": "PASS",
+    "visualCanonStatus": "SELECTED_PARTIAL",
+    "transferEvidenceStatus": "PARTIAL",
+    "transferStudioPublicationStatus": "UNKNOWN",
+    "transferStudioIntegrationStatus": "UNKNOWN",
+    "productionApproved": false,
+    "finalTerritory": "salvaged-frontier"
+  },
+  "blockingReasons": [
+    "The object-by-state campaign is installed and structurally verified, but its sixteen distinct gpt-image-2 generations and reviews have not yet been human-executed and accepted.",
+    "The founder selected Salvaged Frontier and locked its creative constitution, but the six selected object canons still require complete 17-board multimodal packets and hash-bound human approvals.",
+    "No named physical low-tier mobile device has completed the schema-required sustained A/B performance, memory, thermal, crash, and interaction protocol.",
+    "The founder selection is explicit, but the blinded study remains incomplete and is not used as decision proof.",
+    "The v3.7 comparison publication and Studio integration evidence predates the optimized Salvaged Frontier constitution and must be restaged before it can support the selected version.",
+    "The sixth unseen asset turret_fast_v1 passes the current automated transfer proof but still requires human approval bound to the selected Salvaged Frontier evidence digest.",
+    "LibMP returned valid zero-frame snapshots and SceneAnalysisService was disabled in the active Studio runtime; these optional simulator diagnostics remain blocked."
+  ],
+  "definitionOfPass": "Each layer passes only from its own current observable evidence. Production approval additionally requires six LOCKED Salvaged Frontier canons with complete hash-bound multimodal packets, refreshed Studio and transfer evidence, physical-device proof, and final human approval."
+}

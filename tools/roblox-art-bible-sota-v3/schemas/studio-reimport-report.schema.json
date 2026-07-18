@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/studio-reimport-report.schema.json",
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "type": "object",
+  "required": ["schemaVersion", "status", "generatedAt", "stagingIdentity", "importV1", "reimportV2", "privacy"],
+  "properties": {
+    "schemaVersion": {"const": "1.0.0"},
+    "status": {"const": "PASS"},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "stagingIdentity": {
+      "type": "object",
+      "required": ["localConfigComplete", "savedCloudPlace", "expectedCreatorMatches", "allowedCreatorMatches", "deploymentMarker", "editMode"],
+      "properties": {
+        "localConfigComplete": {"const": true},
+        "savedCloudPlace": {"const": true},
+        "expectedCreatorMatches": {"const": true},
+        "allowedCreatorMatches": {"const": true},
+        "deploymentMarker": {"const": true},
+        "editMode": {"const": true}
+      },
+      "unevaluatedProperties": false
+    },
+    "importV1": {
+      "type": "object",
+      "required": ["sourceSha256", "assetUploadCompleted", "meshCount", "semanticRoleCount", "boundsStuds", "reimportIdentityPresent"],
+      "properties": {
+        "sourceSha256": {"$ref": "#/$defs/sha256"},
+        "assetUploadCompleted": {"const": true},
+        "meshCount": {"const": 6},
+        "semanticRoleCount": {"const": 6},
+        "boundsStuds": {"type": "array", "prefixItems": [{"const": 8}, {"const": 4}, {"type": "number", "minimum": 1.99, "maximum": 2.01}], "items": false},
+        "reimportIdentityPresent": {"const": true}
+      },
+      "unevaluatedProperties": false
+    },
+    "reimportV2": {
+      "type": "object",
+      "required": ["sourceSha256", "meshIdChanged", "interactionDeltaStuds", "modelSentinelPreserved", "meshPropertySentinelsPreserved", "renderFidelityPreserved", "castShadowPreserved", "canCollidePreserved"],
+      "properties": {
+        "sourceSha256": {"$ref": "#/$defs/sha256"},
+        "meshIdChanged": {"const": true},
+        "interactionDeltaStuds": {"type": "array", "prefixItems": [{"const": 0}, {"const": 0.25}, {"const": 0}], "items": false},
+        "modelSentinelPreserved": {"const": true},
+        "meshPropertySentinelsPreserved": {"const": true},
+        "renderFidelityPreserved": {"const": true},
+        "castShadowPreserved": {"const": true},
+        "canCollidePreserved": {"const": true}
+      },
+      "unevaluatedProperties": false
+    },
+    "privacy": {
+      "type": "object",
+      "required": ["containsPlaceId", "containsCreatorId", "containsAssetId", "containsApiKey"],
+      "properties": {
+        "containsPlaceId": {"const": false},
+        "containsCreatorId": {"const": false},
+        "containsAssetId": {"const": false},
+        "containsApiKey": {"const": false}
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

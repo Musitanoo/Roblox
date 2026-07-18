@@ -1,0 +1,130 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/performance-report.schema.json",
+  "schemaVersion": "2.0.0",
+  "status": "BLOCKED",
+  "territoryId": "industrial-toy-defense",
+  "generatedAt": "2026-07-15T00:00:00Z",
+  "device": {
+    "deviceIdHash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "manufacturer": "UNEXECUTED",
+    "model": "UNEXECUTED",
+    "osName": "UNEXECUTED",
+    "osVersion": "UNEXECUTED",
+    "chipset": "UNEXECUTED",
+    "ramGb": 1,
+    "display": {
+      "widthPx": 640,
+      "heightPx": 360,
+      "densityDpi": 1,
+      "orientation": "both"
+    },
+    "refreshRateHz": 60,
+    "graphicsQualityLevel": 1
+  },
+  "protocol": {
+    "protocolVersion": "2.0.0",
+    "placeId": 1,
+    "placeVersion": 0,
+    "experienceBuildSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "coldLaunch": true,
+    "warmupSeconds": 60,
+    "activeSessionMinutes": 15,
+    "grayboxPasses": 5,
+    "candidatePasses": 5,
+    "sequence": [
+      "A",
+      "B",
+      "A",
+      "B",
+      "A",
+      "B",
+      "A",
+      "B",
+      "A",
+      "B"
+    ],
+    "sameCameraPath": true,
+    "sameServerState": true,
+    "sameGraphicsQuality": true
+  },
+  "graybox": {
+    "sampleCount": 1,
+    "frameTimeMs": {
+      "median": 0,
+      "p95": 0,
+      "p99": 0,
+      "mad": 0,
+      "max": 0
+    },
+    "fps": {
+      "median": 1,
+      "minimum": 0
+    },
+    "memoryMb": {
+      "median": 0,
+      "p95": 0,
+      "max": 0,
+      "byCategory": {}
+    },
+    "crashes": 0,
+    "thermal": {
+      "start": "unknown",
+      "end": "unknown",
+      "throttleObserved": false,
+      "method": "not executed"
+    }
+  },
+  "candidate": {
+    "sampleCount": 1,
+    "frameTimeMs": {
+      "median": 0,
+      "p95": 0,
+      "p99": 0,
+      "mad": 0,
+      "max": 0
+    },
+    "fps": {
+      "median": 1,
+      "minimum": 0
+    },
+    "memoryMb": {
+      "median": 0,
+      "p95": 0,
+      "max": 0,
+      "byCategory": {}
+    },
+    "crashes": 0,
+    "thermal": {
+      "start": "unknown",
+      "end": "unknown",
+      "throttleObserved": false,
+      "method": "not executed"
+    }
+  },
+  "regressions": {
+    "frameTimeMedianPct": 0,
+    "frameTimeP95Pct": 0,
+    "memoryP95Mb": 0,
+    "minimumFpsDelta": 0,
+    "thresholds": {
+      "maxFrameTimeMedianPct": 10,
+      "maxFrameTimeP95Pct": 15,
+      "maxMemoryP95Mb": 64,
+      "minimumCandidateFps": 30,
+      "crashesAllowed": 0,
+      "thermalThrottleAllowed": false
+    },
+    "pass": false
+  },
+  "visualChecks": {
+    "landscape640x360": false,
+    "narrowPortrait360x640": false,
+    "stateReadability": false,
+    "interactionReadability": false,
+    "captureViewportVerified": false
+  },
+  "artifacts": [],
+  "issues": [
+    "Template only: replace every UNEXECUTED value and attach real-device evidence."
+  ]
+}

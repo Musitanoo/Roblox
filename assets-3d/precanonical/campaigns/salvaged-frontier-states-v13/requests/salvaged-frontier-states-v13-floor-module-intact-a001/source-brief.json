@@ -1,0 +1,135 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/precanonical-brief.schema.json",
+  "schemaVersion": "1.0.0",
+  "briefId": "floor_module-salvaged-frontier-state-campaign",
+  "assetKey": "floor_module",
+  "displayName": "Fortress Floor Module",
+  "artDirection": "salvaged-frontier",
+  "gameplayFunction": "repeatable fortress floor cell",
+  "oneSecondRead": "This square cell is safe buildable ground, shows how neighboring modules connect, and clearly reveals when one local section is damaged.",
+  "worldRole": "The smallest visible unit of fortress authorship, alignment and future expansion, repeated enough to define the player's home without visual noise.",
+  "emotionalIntent": "Orderly, dependable and satisfying to assemble; damage should reveal a local maintenance problem rather than make the whole base look dirty.",
+  "dimensionsStuds": {
+    "width": 4.0,
+    "height": 0.5,
+    "depth": 4.0
+  },
+  "orientation": {
+    "front": "A shallow structural cell with a clear perimeter, central inset and one restrained orientation cue.",
+    "playerSide": "Approved sockets or edge keys show valid construction relationships; no false button-like decoration is allowed.",
+    "threatSide": "A damaged state creates one causal displaced inset or broken edge key, never a random crack web."
+  },
+  "interactionZones": [
+    {
+      "id": "walkable_zone",
+      "purpose": "Show safe traversable player ground.",
+      "location": "surface_center",
+      "requiredCue": "Large calm central plane. Stable middle value. Color role: primary."
+    },
+    {
+      "id": "connection_zone",
+      "purpose": "Show modular snapping and neighbor relationships.",
+      "location": "edge_keys",
+      "requiredCue": "Broad aligned edge keys. Subtle edge contrast. Color role: bareMetal."
+    },
+    {
+      "id": "damage_zone",
+      "purpose": "Reveal one local structural failure and its repair target.",
+      "location": "largest_break",
+      "requiredCue": "One displaced inset corner or broken edge key. Localized warning contrast. Color role: warning."
+    }
+  ],
+  "components": [
+    {
+      "id": "structural_slab",
+      "function": "Carry the player and every attached fortress system.",
+      "mobility": "fixed"
+    },
+    {
+      "id": "central_inset",
+      "function": "Break the top plane into a readable modular cell without becoming decoration.",
+      "mobility": "destructible"
+    },
+    {
+      "id": "edge_keys",
+      "function": "Explain snapping, adjacency and structural continuity.",
+      "mobility": "destructible"
+    }
+  ],
+  "movements": [
+    "fully still",
+    "placement snap only",
+    "single settle after impact",
+    "no looping wobble"
+  ],
+  "states": [
+    {
+      "id": "intact",
+      "visualChange": "A clean aligned cell whose inset, perimeter and four connection edges form a quiet dependable foundation. All edge keys and inset corners remain aligned. The walkable surface remains calm and uninterrupted.",
+      "invariants": [
+        "Four-by-half-by-four dimensions, bottom-center pivot and collision plane remain fixed.",
+        "Edge keys align across every territory and state.",
+        "The central inset and perimeter remain the primary top-view identity.",
+        "Damage never creates an unfair collision step or changes placement anchors.",
+        "Repeated modules reuse identical mesh and material combinations."
+      ]
+    },
+    {
+      "id": "damaged",
+      "visualChange": "One localized displaced corner or connector exposes a clear repair target while the module remains walkable, placeable and recognizable. One inset corner shifts downward or opens. One connected edge exposes its structural key without creating a random crack web.",
+      "invariants": [
+        "Four-by-half-by-four dimensions, bottom-center pivot and collision plane remain fixed.",
+        "Edge keys align across every territory and state.",
+        "The central inset and perimeter remain the primary top-view identity.",
+        "Damage never creates an unfair collision step or changes placement anchors.",
+        "Repeated modules reuse identical mesh and material combinations."
+      ]
+    }
+  ],
+  "collisionPromise": "Keep the bottom_center pivot, footprint and gameplay anchors identical in every generated state.",
+  "viewDistanceStuds": {
+    "near": 3,
+    "mid": 15,
+    "far": 30
+  },
+  "expectedSimultaneousInstances": 100,
+  "obligations": [
+    "Reconstruct every primary and secondary component defined by this canon.",
+    "Produce every required state from the same component structure and stable anchors.",
+    "Preserve the one-second function, front, interaction, danger and state readings.",
+    "Record this canon ID and exact SHA-256 in the compliance envelope."
+  ],
+  "constraints": [
+    "Dimensions are 4.0 x 0.5 x 4.0 studs with tolerance 0.005.",
+    "Triangle budget maximum is 800.",
+    "Texture class is small.",
+    "Pivot is bottom_center and component anchors remain stable.",
+    "One UV set and one material slot maximum per production mesh component."
+  ],
+  "freedoms": [
+    "surface_wear: 0 to 5 percent of visible top area. Adds bounded lived-in history without turning the floor into noise.",
+    "repair_patch: zero or one approved patch per module. Supports persistent identity while keeping tiling readable.",
+    "rotation: multiples of ninety degrees only. Allows layout variation while preserving grid and edge-key compatibility."
+  ],
+  "prohibitions": [
+    "random crack network",
+    "raised micro-detail that harms movement",
+    "unique mesh for every repeated tile",
+    "painted arrows, text or false interaction buttons",
+    "color-only damage",
+    "unmatched edge keys",
+    "baked shadows or dirt in the albedo",
+    "random junk pile silhouette",
+    "uniform rust",
+    "decorative repair with no causal reason",
+    "more than three visible material families",
+    "loose cable spaghetti",
+    "asymmetry that changes gameplay anchors",
+    "literal construction-toy motifs or pristine molded-plastic identity",
+    "thin_loose_wires",
+    "microtext",
+    "free_floating_fragments",
+    "detail_without_silhouette_function_identity"
+  ],
+  "productionApproved": false
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "slice": "Defense Loop 0.2",
+  "milestone": "two-lane-failure-to-learning-full-graybox",
+  "sourceBaselineCommit": "ddcfd8c",
+  "localSnapshot": {
+    "relativePath": "studio/DefenseLoop-0.2-full.rbxl",
+    "format": "rbxl",
+    "length": 111499,
+    "sha256": "4586DE0D61F4C75D3B63C67A8C0ACD96ED691F2847CB7CFB90315345F625B4BD",
+    "capturedUtc": "2026-07-15T11:13:43.2964558Z"
+  },
+  "studioInstance": {
+    "name": "Expérience sans titre",
+    "id": "7f5fb084-b3e7-4e9d-9e20-04bd7519705e",
+    "mode": "Edit",
+    "published": false
+  },
+  "workspaceInventory": {
+    "prototypeChildren": [
+      "ArenaBounds",
+      "BaseFloor",
+      "BuildPads",
+      "ChallengeConsole",
+      "EnemySpawns",
+      "Lanes",
+      "ObjectiveCore",
+      "PlayerSpawn",
+      "ReviewMarkers",
+      "Runtime"
+    ],
+    "enemySpawns": ["LeftSpawn", "RightSpawn"],
+    "lanes": {
+      "LeftLane": ["Node01", "Node02", "Node03", "Node04", "Node05", "Visuals"],
+      "RightLane": ["Node01", "Node02", "Node03", "Node04", "Node05", "Visuals"]
+    },
+    "buildPads": [
+      "CoreLeft",
+      "CoreRight",
+      "Left01",
+      "Left02",
+      "Left03",
+      "Right01",
+      "Right02",
+      "Right03"
+    ],
+    "reviewMarkers": ["FirstBreachMarker", "LeftLaneMarker", "RightLaneMarker"],
+    "runtimeFolders": ["Defenses", "Enemies"]
+  },
+  "templateInventory": ["BasicZombie", "Brute", "SlowTrap", "Turret", "Wall"],
+  "syncInventory": {
+    "serverServiceCount": 7,
+    "clientControllerCount": 3,
+    "remoteCount": 4
+  },
+  "notes": [
+    "The rbxl file is ignored and exists only as local recovery for Studio-authoritative geometry and templates.",
+    "Synchronized Luau remains authoritative on disk and must be reconnected through native Script Sync after recovery.",
+    "No DataStore access, publication, or external asset is included."
+  ]
+}

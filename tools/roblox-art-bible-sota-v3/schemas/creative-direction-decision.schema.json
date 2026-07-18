@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/creative-direction-decision.schema.json",
+  "$defs": {
+    "stringList": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 12
+      }
+    }
+  },
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "decisionId",
+    "status",
+    "selectionKind",
+    "selectedTerritory",
+    "selectedConstitutionPath",
+    "selectedConstitutionSha256",
+    "approvedBy",
+    "approvedAt",
+    "productionApproved",
+    "studyStatus",
+    "studyUse",
+    "strategicRationale",
+    "readabilityDiscipline",
+    "evidenceBoundary",
+    "rejectedAlternatives"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/creative-direction-decision.schema.json"
+    },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "decisionId": {
+      "const": "founder-salvaged-frontier-selection-v1"
+    },
+    "status": {
+      "const": "FOUNDER_APPROVED"
+    },
+    "selectionKind": {
+      "const": "STRATEGIC_CREATIVE_SELECTION"
+    },
+    "selectedTerritory": {
+      "const": "salvaged-frontier"
+    },
+    "selectedConstitutionPath": {
+      "const": "art/selected/salvaged-frontier-constitution.json"
+    },
+    "selectedConstitutionSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "approvedBy": {
+      "const": "Founder"
+    },
+    "approvedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "productionApproved": {
+      "const": false
+    },
+    "studyStatus": {
+      "const": "INCOMPLETE"
+    },
+    "studyUse": {
+      "const": "NOT_USED_AS_DECISION_PROOF"
+    },
+    "strategicRationale": {
+      "type": "string",
+      "minLength": 120
+    },
+    "readabilityDiscipline": {
+      "type": "object",
+      "required": [
+        "source",
+        "role",
+        "identityOverrideForbidden"
+      ],
+      "properties": {
+        "source": {
+          "const": "industrial-toy-defense"
+        },
+        "role": {
+          "type": "string",
+          "minLength": 80
+        },
+        "identityOverrideForbidden": {
+          "const": true
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "evidenceBoundary": {
+      "$ref": "#/$defs/stringList"
+    },
+    "rejectedAlternatives": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "territoryId",
+          "reason"
+        ],
+        "properties": {
+          "territoryId": {
+            "enum": [
+              "industrial-toy-defense",
+              "clean-tactical-diorama"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 80
+          }
+        },
+        "unevaluatedProperties": false
+      }
+    }
+  },
+  "unevaluatedProperties": false
+}

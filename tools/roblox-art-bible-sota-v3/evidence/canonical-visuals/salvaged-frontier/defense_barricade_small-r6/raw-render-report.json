@@ -1,0 +1,316 @@
+{
+  "assetKey": "defense_barricade_small",
+  "canonId": "vc_barricade__salvaged-frontier__v1",
+  "canonSha256": "5e196aa1ab2bdaaa9c024d250ea76f82b134848b4dcd32b2741f7970c5c77e58",
+  "contractSha256": "1a03c5151f91c205d8a5014e3fb2602ffe4c1995aa5b8949e0297752a0516415",
+  "evidenceClass": "REAL_RENDERED",
+  "invariants": {
+    "assetKey": true,
+    "buildManifestSha256": true,
+    "canonId": true,
+    "canonSha256": true,
+    "contractSha256": true,
+    "rendererScriptSha256": true,
+    "revision": true,
+    "sourceBlendSha256": true
+  },
+  "productionApproved": false,
+  "renders": [
+    {
+      "differentPixelCount": 0,
+      "differentPixelRatio": 0.0,
+      "dimensions": {
+        "first": [
+          1280,
+          720
+        ],
+        "passed": true,
+        "second": [
+          1280,
+          720
+        ]
+      },
+      "first": "3ebc30e789a62e436625261c3a183f33830c126a71082e7a99f46518262c794a",
+      "maximumChannelDelta": 0,
+      "mode": "EXACT",
+      "normalizedMeanAbsoluteError": 0.0,
+      "passed": true,
+      "runAFileSha256": "679b028a1a0b6c3b457c0e87af06fc34d57ce1b82128c4d0bb1c12bbba6ad9ef",
+      "runBFileSha256": "3b25408b450dd632c50f2c153d96637aa4fa6f7e72f1f502e597e55683307d27",
+      "second": "3ebc30e789a62e436625261c3a183f33830c126a71082e7a99f46518262c794a",
+      "tolerance": {
+        "maximumChannelDelta": 1,
+        "maximumDifferentPixelRatio": 1e-05,
+        "maximumNormalizedMeanAbsoluteError": 1e-06
+      },
+      "viewId": "mobile_near"
+    },
+    {
+      "differentPixelCount": 0,
+      "differentPixelRatio": 0.0,
+      "dimensions": {
+        "first": [
+          1280,
+          720
+        ],
+        "passed": true,
+        "second": [
+          1280,
+          720
+        ]
+      },
+      "first": "2b6df210428d41307425b3d1d72bc5e84687983212700efb671c4ce0bdd3e839",
+      "maximumChannelDelta": 0,
+      "mode": "EXACT",
+      "normalizedMeanAbsoluteError": 0.0,
+      "passed": true,
+      "runAFileSha256": "a20dace408f24bca89eb9ab337be958b0100f091a9efc16cc7b80023b887f7b5",
+      "runBFileSha256": "63eefc4ed83345e39ef6d0ba3ef8cfa0d74f2444309c33964027a1aa23062cce",
+      "second": "2b6df210428d41307425b3d1d72bc5e84687983212700efb671c4ce0bdd3e839",
+      "tolerance": {
+        "maximumChannelDelta": 1,
+        "maximumDifferentPixelRatio": 1e-05,
+        "maximumNormalizedMeanAbsoluteError": 1e-06
+      },
+      "viewId": "mobile_mid"
+    },
+    {
+      "differentPixelCount": 0,
+      "differentPixelRatio": 0.0,
+      "dimensions": {
+        "first": [
+          1280,
+          720
+        ],
+        "passed": true,
+        "second": [
+          1280,
+          720
+        ]
+      },
+      "first": "b73d984b4e43e5813cb2e95f640ba7cb4959e34c3b42dcf219f3136a0758250d",
+      "maximumChannelDelta": 0,
+      "mode": "EXACT",
+      "normalizedMeanAbsoluteError": 0.0,
+      "passed": true,
+      "runAFileSha256": "f077dba9da4767715607ff2652da63d726353afe6368d2dc72f1657d94eef4f0",
+      "runBFileSha256": "eba3d18fad0c5121c0c03c8d9953581581fbe610bc40898e571660e13ad434e0",
+      "second": "b73d984b4e43e5813cb2e95f640ba7cb4959e34c3b42dcf219f3136a0758250d",
+      "tolerance": {
+        "maximumChannelDelta": 1,
+        "maximumDifferentPixelRatio": 1e-05,
+        "maximumNormalizedMeanAbsoluteError": 1e-06
+      },
+      "viewId": "mobile_far"
+    },
+    {
+      "differentPixelCount": 0,
+      "differentPixelRatio": 0.0,
+      "dimensions": {
+        "first": [
+          1280,
+          720
+        ],
+        "passed": true,
+        "second": [
+          1280,
+          720
+        ]
+      },
+      "first": "797b17f783d90ce7345c886dafddbea4bbd54107025953e2003b002385afaf3b",
+      "maximumChannelDelta": 0,
+      "mode": "EXACT",
+      "normalizedMeanAbsoluteError": 0.0,
+      "passed": true,
+      "runAFileSha256": "7f6c0ef69a812b32f331a7ae131a2a9477fc49c35e20e838a0d5cafb43ea4e6d",
+      "runBFileSha256": "8a4cb5d5585857b42d1158e71f02f8af8fd2826cc3d85e6e3df366ba68db2d14",
+      "second": "797b17f783d90ce7345c886dafddbea4bbd54107025953e2003b002385afaf3b",
+      "tolerance": {
+        "maximumChannelDelta": 1,
+        "maximumDifferentPixelRatio": 1e-05,
+        "maximumNormalizedMeanAbsoluteError": 1e-06
+      },
+      "viewId": "lighting_neutral_qa"
+    },
+    {
+      "differentPixelCount": 0,
+      "differentPixelRatio": 0.0,
+      "dimensions": {
+        "first": [
+          1280,
+          720
+        ],
+        "passed": true,
+        "second": [
+          1280,
+          720
+        ]
+      },
+      "first": "6c5181a0ccfec7427cbee98fe2aa184cf4c3113f5e0d5f3e89d8b7782d47b029",
+      "maximumChannelDelta": 0,
+      "mode": "EXACT",
+      "normalizedMeanAbsoluteError": 0.0,
+      "passed": true,
+      "runAFileSha256": "716bb35ca8b770fbf93b637d91c6c165fd8738697ef503bd87d6fddc6f81683e",
+      "runBFileSha256": "2b96a360b7f58178f67a444ec4fbf43064dbe67d0c28fd756fee7f0793c03517",
+      "second": "6c5181a0ccfec7427cbee98fe2aa184cf4c3113f5e0d5f3e89d8b7782d47b029",
+      "tolerance": {
+        "maximumChannelDelta": 1,
+        "maximumDifferentPixelRatio": 1e-05,
+        "maximumNormalizedMeanAbsoluteError": 1e-06
+      },
+      "viewId": "lighting_gameplay_default"
+    },
+    {
+      "differentPixelCount": 0,
+      "differentPixelRatio": 0.0,
+      "dimensions": {
+        "first": [
+          1280,
+          720
+        ],
+        "passed": true,
+        "second": [
+          1280,
+          720
+        ]
+      },
+      "first": "b64f9381fd7ed348d47d7ce67a0e7c20416a8f80f58d77bbbff7177a352c963a",
+      "maximumChannelDelta": 0,
+      "mode": "EXACT",
+      "normalizedMeanAbsoluteError": 0.0,
+      "passed": true,
+      "runAFileSha256": "ffd3a1af57604ab89132b309d0476a967fbb0e7e77d8752e4f814bfd43af2299",
+      "runBFileSha256": "ea455718661783b3325dadad41a74c7b6fc5ce510a233dc6ce21a55ae01d765b",
+      "second": "b64f9381fd7ed348d47d7ce67a0e7c20416a8f80f58d77bbbff7177a352c963a",
+      "tolerance": {
+        "maximumChannelDelta": 1,
+        "maximumDifferentPixelRatio": 1e-05,
+        "maximumNormalizedMeanAbsoluteError": 1e-06
+      },
+      "viewId": "lighting_high_contrast"
+    },
+    {
+      "differentPixelCount": 0,
+      "differentPixelRatio": 0.0,
+      "dimensions": {
+        "first": [
+          1280,
+          720
+        ],
+        "passed": true,
+        "second": [
+          1280,
+          720
+        ]
+      },
+      "first": "0d74ee9e51db646944b00f205e5675b044a62eec2a8ba4aa31f7064718e6a659",
+      "maximumChannelDelta": 0,
+      "mode": "EXACT",
+      "normalizedMeanAbsoluteError": 0.0,
+      "passed": true,
+      "runAFileSha256": "51e7c41b4f6d646ce2d5dc28bc0f767fac0d8e9187e11a19611a08f5bec18e05",
+      "runBFileSha256": "09c803bb7ba935300f4ff8f6577cf568c37e7bbddf8b1d515646e98fffb03641",
+      "second": "0d74ee9e51db646944b00f205e5675b044a62eec2a8ba4aa31f7064718e6a659",
+      "tolerance": {
+        "maximumChannelDelta": 1,
+        "maximumDifferentPixelRatio": 1e-05,
+        "maximumNormalizedMeanAbsoluteError": 1e-06
+      },
+      "viewId": "lighting_adverse_night"
+    },
+    {
+      "differentPixelCount": 0,
+      "differentPixelRatio": 0.0,
+      "dimensions": {
+        "first": [
+          1280,
+          720
+        ],
+        "passed": true,
+        "second": [
+          1280,
+          720
+        ]
+      },
+      "first": "9e0c262099a2361b9f39b7985852ed8cbc4e7d9bece7022714549df4ba29c65e",
+      "maximumChannelDelta": 0,
+      "mode": "EXACT",
+      "normalizedMeanAbsoluteError": 0.0,
+      "passed": true,
+      "runAFileSha256": "d01542f5a74f34d0a12e3a9c237670e79f8fe520c5e454dfa3d0b76da3e144f4",
+      "runBFileSha256": "9735bfa508c9d47a5b75da7752984e7a673cd9b5e3aee777901da14b9e47e719",
+      "second": "9e0c262099a2361b9f39b7985852ed8cbc4e7d9bece7022714549df4ba29c65e",
+      "tolerance": {
+        "maximumChannelDelta": 1,
+        "maximumDifferentPixelRatio": 1e-05,
+        "maximumNormalizedMeanAbsoluteError": 1e-06
+      },
+      "viewId": "repetition_1"
+    },
+    {
+      "differentPixelCount": 0,
+      "differentPixelRatio": 0.0,
+      "dimensions": {
+        "first": [
+          1280,
+          720
+        ],
+        "passed": true,
+        "second": [
+          1280,
+          720
+        ]
+      },
+      "first": "e4202356b709b2811732a67d7f5c9ea39de1ca387e8b5fe8732583d81894ac25",
+      "maximumChannelDelta": 0,
+      "mode": "EXACT",
+      "normalizedMeanAbsoluteError": 0.0,
+      "passed": true,
+      "runAFileSha256": "459b0d16d3ac14e0d55a2ca109f11b47f5ef5b9a3eff1f4457eccdd30cd85462",
+      "runBFileSha256": "d5d7babefc5ad355d02ececfd818cd9287e30f6dfdd001f62a2ad30519e6434c",
+      "second": "e4202356b709b2811732a67d7f5c9ea39de1ca387e8b5fe8732583d81894ac25",
+      "tolerance": {
+        "maximumChannelDelta": 1,
+        "maximumDifferentPixelRatio": 1e-05,
+        "maximumNormalizedMeanAbsoluteError": 1e-06
+      },
+      "viewId": "repetition_30"
+    },
+    {
+      "differentPixelCount": 0,
+      "differentPixelRatio": 0.0,
+      "dimensions": {
+        "first": [
+          1280,
+          720
+        ],
+        "passed": true,
+        "second": [
+          1280,
+          720
+        ]
+      },
+      "first": "3ad19867432c69d2d6939368dcf73e0e8b95249902f801dc2e80308858ed05ab",
+      "maximumChannelDelta": 0,
+      "mode": "EXACT",
+      "normalizedMeanAbsoluteError": 0.0,
+      "passed": true,
+      "runAFileSha256": "74bf8c0304cc9e0657f257238e929c9519d95b91bf8cdf7d246637ea498876a4",
+      "runBFileSha256": "1c1b0b0f3ea2c562947a87491dcbd399371828d190cdeefd44042cb35a9d7364",
+      "second": "3ad19867432c69d2d6939368dcf73e0e8b95249902f801dc2e80308858ed05ab",
+      "tolerance": {
+        "maximumChannelDelta": 1,
+        "maximumDifferentPixelRatio": 1e-05,
+        "maximumNormalizedMeanAbsoluteError": 1e-06
+      },
+      "viewId": "repetition_100"
+    }
+  ],
+  "revision": 6,
+  "runAManifestSha256": "007d0d325ea3b103d4998b45dfa03e44a204cb9bff45d566f14d4cbd90f0ff8f",
+  "runBManifestSha256": "3df42c68edd4f81db9e24f1d9c8fc118fef206ff275d1275e80a26488ecae992",
+  "schemaVersion": "1.0.0",
+  "sourceBlendSha256": "c9848064562a21d743f361eb965b4c73eb9781a3992d6902a5147d8c5d2a3e02",
+  "status": "PASS"
+}

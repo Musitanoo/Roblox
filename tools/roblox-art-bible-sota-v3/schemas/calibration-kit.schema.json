@@ -1,0 +1,789 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/calibration-kit.schema.json",
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "status",
+    "unit",
+    "axisContractRef",
+    "sharedRules",
+    "textureClasses",
+    "assets",
+    "goldenScene"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/calibration-kit.schema.json"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "status": {
+      "const": "LOCKED_FOR_COMPARISON"
+    },
+    "unit": {
+      "const": "stud"
+    },
+    "axisContractRef": {
+      "type": "string"
+    },
+    "sharedRules": {
+      "type": "object",
+      "properties": {
+        "dimensionToleranceStuds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "dimensionsMustMatchAcrossTerritories": {
+          "type": "boolean"
+        },
+        "materialSlotsMaxPerMesh": {
+          "type": "number",
+          "minimum": 0
+        },
+        "noFinalTexturesBeforeTerritorySelection": {
+          "type": "boolean"
+        },
+        "pivotToleranceStuds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "pivotsMustMatchAcrossTerritories": {
+          "type": "boolean"
+        },
+        "revisionRoundsPerTerritory": {
+          "type": "number",
+          "minimum": 0
+        },
+        "states": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "triangleBudgetTolerance": {
+          "type": "number",
+          "minimum": 0
+        },
+        "uvSetsMaxPerMesh": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": [
+        "dimensionToleranceStuds",
+        "dimensionsMustMatchAcrossTerritories",
+        "materialSlotsMaxPerMesh",
+        "noFinalTexturesBeforeTerritorySelection",
+        "pivotToleranceStuds",
+        "pivotsMustMatchAcrossTerritories",
+        "revisionRoundsPerTerritory",
+        "states",
+        "triangleBudgetTolerance",
+        "uvSetsMaxPerMesh"
+      ]
+    },
+    "textureClasses": {
+      "type": "object",
+      "required": [
+        "tiny",
+        "small",
+        "medium",
+        "large"
+      ],
+      "properties": {
+        "tiny": {
+          "type": "object",
+          "properties": {
+            "maxAssetExtentStuds": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "albedoMax": {
+              "type": "integer",
+              "enum": [
+                64,
+                128,
+                256,
+                512,
+                1024
+              ]
+            },
+            "nonAlbedoMax": {
+              "type": "integer",
+              "enum": [
+                64,
+                128,
+                256,
+                512,
+                1024
+              ]
+            }
+          },
+          "required": [
+            "maxAssetExtentStuds",
+            "albedoMax",
+            "nonAlbedoMax"
+          ],
+          "unevaluatedProperties": false
+        },
+        "small": {
+          "type": "object",
+          "properties": {
+            "maxAssetExtentStuds": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "albedoMax": {
+              "type": "integer",
+              "enum": [
+                64,
+                128,
+                256,
+                512,
+                1024
+              ]
+            },
+            "nonAlbedoMax": {
+              "type": "integer",
+              "enum": [
+                64,
+                128,
+                256,
+                512,
+                1024
+              ]
+            }
+          },
+          "required": [
+            "maxAssetExtentStuds",
+            "albedoMax",
+            "nonAlbedoMax"
+          ],
+          "unevaluatedProperties": false
+        },
+        "medium": {
+          "type": "object",
+          "properties": {
+            "maxAssetExtentStuds": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "albedoMax": {
+              "type": "integer",
+              "enum": [
+                64,
+                128,
+                256,
+                512,
+                1024
+              ]
+            },
+            "nonAlbedoMax": {
+              "type": "integer",
+              "enum": [
+                64,
+                128,
+                256,
+                512,
+                1024
+              ]
+            }
+          },
+          "required": [
+            "maxAssetExtentStuds",
+            "albedoMax",
+            "nonAlbedoMax"
+          ],
+          "unevaluatedProperties": false
+        },
+        "large": {
+          "type": "object",
+          "properties": {
+            "maxAssetExtentStuds": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "albedoMax": {
+              "type": "integer",
+              "enum": [
+                64,
+                128,
+                256,
+                512,
+                1024
+              ]
+            },
+            "nonAlbedoMax": {
+              "type": "integer",
+              "enum": [
+                64,
+                128,
+                256,
+                512,
+                1024
+              ]
+            }
+          },
+          "required": [
+            "maxAssetExtentStuds",
+            "albedoMax",
+            "nonAlbedoMax"
+          ],
+          "unevaluatedProperties": false
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "assets": {
+      "type": "object",
+      "required": [
+        "barricade",
+        "objective_core",
+        "enemy_standard",
+        "floor_module",
+        "damage_effect"
+      ],
+      "properties": {
+        "barricade": {
+          "type": "object",
+          "required": [
+            "dimensions",
+            "pivot",
+            "triangleBudgetMax",
+            "textureBudgetClass",
+            "targetReadDistanceStuds",
+            "function",
+            "requiredStateVariants"
+          ],
+          "properties": {
+            "dimensions": {
+              "type": "object",
+              "properties": {
+                "width": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "height": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "depth": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                }
+              },
+              "required": [
+                "width",
+                "height",
+                "depth"
+              ],
+              "unevaluatedProperties": false
+            },
+            "pivot": {
+              "enum": [
+                "bottom_center",
+                "feet_center",
+                "impact_center"
+              ]
+            },
+            "triangleBudgetMax": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20000
+            },
+            "textureBudgetClass": {
+              "enum": [
+                "tiny",
+                "small",
+                "medium",
+                "large"
+              ]
+            },
+            "targetReadDistanceStuds": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "function": {
+              "type": "string",
+              "minLength": 20
+            },
+            "requiredStateVariants": {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "const": "intact"
+                },
+                {
+                  "const": "damaged"
+                },
+                {
+                  "const": "critical"
+                }
+              ],
+              "items": false
+            },
+            "timingSeconds": {
+              "type": "object",
+              "maxProperties": 0
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        "objective_core": {
+          "type": "object",
+          "required": [
+            "dimensions",
+            "pivot",
+            "triangleBudgetMax",
+            "textureBudgetClass",
+            "targetReadDistanceStuds",
+            "function",
+            "requiredStateVariants"
+          ],
+          "properties": {
+            "dimensions": {
+              "type": "object",
+              "properties": {
+                "width": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "height": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "depth": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                }
+              },
+              "required": [
+                "width",
+                "height",
+                "depth"
+              ],
+              "unevaluatedProperties": false
+            },
+            "pivot": {
+              "enum": [
+                "bottom_center",
+                "feet_center",
+                "impact_center"
+              ]
+            },
+            "triangleBudgetMax": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20000
+            },
+            "textureBudgetClass": {
+              "enum": [
+                "tiny",
+                "small",
+                "medium",
+                "large"
+              ]
+            },
+            "targetReadDistanceStuds": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "function": {
+              "type": "string",
+              "minLength": 20
+            },
+            "requiredStateVariants": {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "const": "intact"
+                },
+                {
+                  "const": "damaged"
+                },
+                {
+                  "const": "critical"
+                }
+              ],
+              "items": false
+            },
+            "timingSeconds": {
+              "type": "object",
+              "maxProperties": 0
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        "enemy_standard": {
+          "type": "object",
+          "required": [
+            "dimensions",
+            "pivot",
+            "triangleBudgetMax",
+            "textureBudgetClass",
+            "targetReadDistanceStuds",
+            "function",
+            "requiredStateVariants"
+          ],
+          "properties": {
+            "dimensions": {
+              "type": "object",
+              "properties": {
+                "width": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "height": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "depth": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                }
+              },
+              "required": [
+                "width",
+                "height",
+                "depth"
+              ],
+              "unevaluatedProperties": false
+            },
+            "pivot": {
+              "enum": [
+                "bottom_center",
+                "feet_center",
+                "impact_center"
+              ]
+            },
+            "triangleBudgetMax": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20000
+            },
+            "textureBudgetClass": {
+              "enum": [
+                "tiny",
+                "small",
+                "medium",
+                "large"
+              ]
+            },
+            "targetReadDistanceStuds": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "function": {
+              "type": "string",
+              "minLength": 20
+            },
+            "requiredStateVariants": {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "const": "intact"
+                },
+                {
+                  "const": "damaged"
+                },
+                {
+                  "const": "critical"
+                }
+              ],
+              "items": false
+            },
+            "timingSeconds": {
+              "type": "object",
+              "maxProperties": 0
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        "floor_module": {
+          "type": "object",
+          "required": [
+            "dimensions",
+            "pivot",
+            "triangleBudgetMax",
+            "textureBudgetClass",
+            "targetReadDistanceStuds",
+            "function",
+            "requiredStateVariants"
+          ],
+          "properties": {
+            "dimensions": {
+              "type": "object",
+              "properties": {
+                "width": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "height": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "depth": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                }
+              },
+              "required": [
+                "width",
+                "height",
+                "depth"
+              ],
+              "unevaluatedProperties": false
+            },
+            "pivot": {
+              "enum": [
+                "bottom_center",
+                "feet_center",
+                "impact_center"
+              ]
+            },
+            "triangleBudgetMax": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20000
+            },
+            "textureBudgetClass": {
+              "enum": [
+                "tiny",
+                "small",
+                "medium",
+                "large"
+              ]
+            },
+            "targetReadDistanceStuds": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "function": {
+              "type": "string",
+              "minLength": 20
+            },
+            "requiredStateVariants": {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "const": "intact"
+                },
+                {
+                  "const": "damaged"
+                }
+              ],
+              "items": false
+            },
+            "timingSeconds": {
+              "type": "object",
+              "maxProperties": 0
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        "damage_effect": {
+          "type": "object",
+          "required": [
+            "dimensions",
+            "pivot",
+            "triangleBudgetMax",
+            "textureBudgetClass",
+            "targetReadDistanceStuds",
+            "function",
+            "requiredStateVariants"
+          ],
+          "properties": {
+            "dimensions": {
+              "type": "object",
+              "properties": {
+                "width": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "height": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "depth": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                }
+              },
+              "required": [
+                "width",
+                "height",
+                "depth"
+              ],
+              "unevaluatedProperties": false
+            },
+            "pivot": {
+              "enum": [
+                "bottom_center",
+                "feet_center",
+                "impact_center"
+              ]
+            },
+            "triangleBudgetMax": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 20000
+            },
+            "textureBudgetClass": {
+              "enum": [
+                "tiny",
+                "small",
+                "medium",
+                "large"
+              ]
+            },
+            "targetReadDistanceStuds": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "function": {
+              "type": "string",
+              "minLength": 20
+            },
+            "requiredStateVariants": {
+              "type": "array",
+              "prefixItems": [
+                {
+                  "const": "damaged"
+                },
+                {
+                  "const": "critical"
+                }
+              ],
+              "items": false
+            },
+            "timingSeconds": {
+              "type": "object",
+              "properties": {
+                "hitFlashMax": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "primaryShape": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "residualMax": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              },
+              "unevaluatedProperties": false,
+              "required": [
+                "hitFlashMax",
+                "primaryShape",
+                "residualMax"
+              ]
+            }
+          },
+          "unevaluatedProperties": false
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "goldenScene": {
+      "type": "object",
+      "properties": {
+        "avatar": {
+          "type": "object",
+          "properties": {
+            "heightReference": {
+              "type": "boolean"
+            },
+            "rig": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "heightReference",
+            "rig"
+          ]
+        },
+        "grounds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "isolatedCopiesPerVariant": {
+          "type": "number",
+          "minimum": 0
+        },
+        "requiredProfiles": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "size": {
+          "type": "object",
+          "properties": {
+            "depth": {
+              "type": "number",
+              "minimum": 0
+            },
+            "width": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "unevaluatedProperties": false,
+          "required": [
+            "depth",
+            "width"
+          ]
+        },
+        "stressCopyCounts": {
+          "type": "array",
+          "prefixItems": [
+            { "const": 30 },
+            { "const": 100 }
+          ],
+          "items": false,
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "zones": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 8,
+          "maxItems": 8
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": [
+        "avatar",
+        "grounds",
+        "isolatedCopiesPerVariant",
+        "requiredProfiles",
+        "size",
+        "stressCopyCounts",
+        "zones"
+      ]
+    }
+  },
+  "unevaluatedProperties": false
+}

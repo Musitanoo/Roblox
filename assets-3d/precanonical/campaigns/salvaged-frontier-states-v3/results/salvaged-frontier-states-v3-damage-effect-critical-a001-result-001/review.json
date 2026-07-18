@@ -1,0 +1,32 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/precanonical-review.schema.json",
+  "schemaVersion": "1.0.0",
+  "reviewId": "salvaged-frontier-states-v3-damage-effect-critical-a001-result-001-review-001",
+  "result": {
+    "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\results\\salvaged-frontier-states-v3-damage-effect-critical-a001-result-001\\result.json",
+    "sha256": "28640b4ff030c11a180031aa519e8eb3a9b309aaf49fa7331ef2a2ae14ff1400"
+  },
+  "resultDigest": "cce00f83af892c96e62abd5c268bc183e7703687bacf3da7c37194f8a7f99c85",
+  "decision": "PRECANONICAL_CANDIDATE",
+  "reviewer": null,
+  "reviewedAt": null,
+  "assessment": {
+    "functionalConformity": "PASS",
+    "artDirectionConformity": "PASS",
+    "visualHierarchy": "PASS",
+    "internalCoherence": "PASS",
+    "stateCoherence": "PASS"
+  },
+  "preserve": [
+    "Impact-center pivot and four-stud bounds remain fixed.",
+    "The dominant shape aligns with the real incoming-force vector.",
+    "Target, direction and severity remain readable without color.",
+    "Hit flash, primary shape and residual durations remain within calibration limits.",
+    "The effect never persists as collidable or queryable gameplay geometry."
+  ],
+  "correct": [],
+  "forbidNext": [],
+  "canonicalizationAuthorized": false,
+  "canonical": false,
+  "productionApproved": false
+}

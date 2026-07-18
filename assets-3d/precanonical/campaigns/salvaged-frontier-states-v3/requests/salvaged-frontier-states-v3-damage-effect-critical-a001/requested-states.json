@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0.0",
+  "states": [
+    {
+      "id": "critical",
+      "visualChange": "A larger broken wedge, stronger arc and three major fragments communicate a critical causal hit while leaving the target and lane visible. Primary wedge becomes larger and visibly broken into a critical double-chevron rhythm. Three large fragments and a longer but still bounded residual reinforce severity.",
+      "invariants": [
+        "Impact-center pivot and four-stud bounds remain fixed.",
+        "The dominant shape aligns with the real incoming-force vector.",
+        "Target, direction and severity remain readable without color.",
+        "Hit flash, primary shape and residual durations remain within calibration limits.",
+        "The effect never persists as collidable or queryable gameplay geometry."
+      ]
+    }
+  ],
+  "independentStateDesignForbidden": true
+}

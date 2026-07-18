@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/expert-session.schema.json",
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "studyId",
+    "publicPackageId",
+    "reviewerId",
+    "reviewerRole",
+    "startedAt",
+    "completedAt",
+    "ratings",
+    "candidateNotes"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/expert-session.schema.json"
+    },
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "studyId": {
+      "type": "string",
+      "minLength": 3
+    },
+    "publicPackageId": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "reviewerId": {
+      "type": "string",
+      "pattern": "^R[0-9]{2,4}$"
+    },
+    "reviewerRole": {
+      "enum": [
+        "function_silhouette",
+        "art_direction_coherence"
+      ]
+    },
+    "startedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "completedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ratings": {
+      "type": "array",
+      "minItems": 27,
+      "items": {
+        "type": "object",
+        "required": [
+          "blindLabel",
+          "dimensionId",
+          "score",
+          "confidence"
+        ],
+        "properties": {
+          "blindLabel": {
+            "enum": [
+              "A",
+              "B",
+              "C"
+            ]
+          },
+          "dimensionId": {
+            "type": "string",
+            "minLength": 3
+          },
+          "score": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        },
+        "unevaluatedProperties": false
+      }
+    },
+    "candidateNotes": {
+      "type": "object",
+      "required": [
+        "A",
+        "B",
+        "C"
+      ],
+      "properties": {
+        "A": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "B": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "C": {
+          "type": "string",
+          "maxLength": 2000
+        }
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

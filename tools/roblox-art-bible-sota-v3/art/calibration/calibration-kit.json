@@ -1,0 +1,167 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/calibration-kit.schema.json",
+  "schemaVersion": "3.0.0",
+  "status": "LOCKED_FOR_COMPARISON",
+  "unit": "stud",
+  "axisContractRef": "art/art-direction.json#/axisContract",
+  "sharedRules": {
+    "states": [
+      "intact",
+      "damaged",
+      "critical"
+    ],
+    "pivotsMustMatchAcrossTerritories": true,
+    "dimensionsMustMatchAcrossTerritories": true,
+    "noFinalTexturesBeforeTerritorySelection": true,
+    "revisionRoundsPerTerritory": 2,
+    "dimensionToleranceStuds": 0.005,
+    "pivotToleranceStuds": 0.002,
+    "triangleBudgetTolerance": 0,
+    "materialSlotsMaxPerMesh": 1,
+    "uvSetsMaxPerMesh": 1
+  },
+  "textureClasses": {
+    "tiny": {
+      "maxAssetExtentStuds": 2.0,
+      "albedoMax": 128,
+      "nonAlbedoMax": 128
+    },
+    "small": {
+      "maxAssetExtentStuds": 5.0,
+      "albedoMax": 256,
+      "nonAlbedoMax": 256
+    },
+    "medium": {
+      "maxAssetExtentStuds": 10.0,
+      "albedoMax": 512,
+      "nonAlbedoMax": 512
+    },
+    "large": {
+      "maxAssetExtentStuds": 20.0,
+      "albedoMax": 1024,
+      "nonAlbedoMax": 1024
+    }
+  },
+  "assets": {
+    "barricade": {
+      "dimensions": {
+        "width": 8.0,
+        "height": 4.0,
+        "depth": 2.0
+      },
+      "pivot": "bottom_center",
+      "triangleBudgetMax": 2000,
+      "textureBudgetClass": "medium",
+      "targetReadDistanceStuds": 60,
+      "function": "temporary path-blocking defensive structure",
+      "requiredStateVariants": [
+        "intact",
+        "damaged",
+        "critical"
+      ]
+    },
+    "objective_core": {
+      "dimensions": {
+        "width": 6.0,
+        "height": 7.0,
+        "depth": 6.0
+      },
+      "pivot": "bottom_center",
+      "triangleBudgetMax": 4500,
+      "textureBudgetClass": "medium",
+      "targetReadDistanceStuds": 60,
+      "function": "primary defendable objective and visual anchor",
+      "requiredStateVariants": [
+        "intact",
+        "damaged",
+        "critical"
+      ]
+    },
+    "enemy_standard": {
+      "dimensions": {
+        "width": 2.5,
+        "height": 5.5,
+        "depth": 2.5
+      },
+      "pivot": "feet_center",
+      "triangleBudgetMax": 5000,
+      "textureBudgetClass": "medium",
+      "targetReadDistanceStuds": 60,
+      "function": "standard walking horde enemy",
+      "requiredStateVariants": [
+        "intact",
+        "damaged",
+        "critical"
+      ]
+    },
+    "floor_module": {
+      "dimensions": {
+        "width": 4.0,
+        "height": 0.5,
+        "depth": 4.0
+      },
+      "pivot": "bottom_center",
+      "triangleBudgetMax": 800,
+      "textureBudgetClass": "small",
+      "targetReadDistanceStuds": 30,
+      "function": "repeatable fortress floor cell",
+      "requiredStateVariants": [
+        "intact",
+        "damaged"
+      ]
+    },
+    "damage_effect": {
+      "dimensions": {
+        "width": 4.0,
+        "height": 4.0,
+        "depth": 4.0
+      },
+      "pivot": "impact_center",
+      "triangleBudgetMax": 300,
+      "textureBudgetClass": "small",
+      "targetReadDistanceStuds": 30,
+      "function": "communicate hit direction, damage severity and impact cause",
+      "requiredStateVariants": [
+        "damaged",
+        "critical"
+      ],
+      "timingSeconds": {
+        "hitFlashMax": 0.12,
+        "primaryShape": 0.35,
+        "residualMax": 1.2
+      }
+    }
+  },
+  "goldenScene": {
+    "size": {
+      "width": 160.0,
+      "depth": 600.0
+    },
+    "isolatedCopiesPerVariant": 1,
+    "stressCopyCounts": [30, 100],
+    "grounds": [
+      "world_neutral_light",
+      "world_neutral_dark"
+    ],
+    "avatar": {
+      "rig": "R15",
+      "heightReference": true
+    },
+    "requiredProfiles": [
+      "Lighting_Gameplay_Default",
+      "Lighting_HighContrast",
+      "Lighting_Adverse_Night",
+      "Lighting_Neutral_QA"
+    ],
+    "zones": [
+      "avatar_grid",
+      "isolated_light",
+      "isolated_dark",
+      "states",
+      "stress_30",
+      "stress_100",
+      "mixed_gameplay",
+      "graybox_reference"
+    ]
+  }
+}

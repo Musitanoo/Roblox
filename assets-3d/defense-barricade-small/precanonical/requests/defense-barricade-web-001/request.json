@@ -1,0 +1,85 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/precanonical-request.schema.json",
+  "schemaVersion": "1.0.0",
+  "requestId": "defense-barricade-web-001",
+  "assetKey": "defense_barricade_small",
+  "artDirection": "salvaged-frontier",
+  "generationSurface": "chatgpt_web_images",
+  "status": "PRECANONICAL_SPEC_COMPLETE",
+  "stage": "exploration",
+  "policy": {
+    "path": "art/precanonical/policy.json",
+    "sha256": "2c693c80910530c5df6c4aadf09f1a03357c9655997b2fd4b53a1c8171f2f1ed"
+  },
+  "constitution": {
+    "path": "art/selected/salvaged-frontier-constitution.json",
+    "sha256": "768d8f87be87b3e267b5667b2c80cdb18e22cb4f8bc89c44787cf3389398eb9c"
+  },
+  "compiler": {
+    "path": "tools/art/precanonical.py",
+    "sha256": "b9c12776eec27dab17395b1ef592b35b9b1ee6cc8cd9c8f87b5fcf6c5c0880bb"
+  },
+  "sourceBrief": {
+    "path": "source-brief.json",
+    "sha256": "998a0df1988193182dacf2ac877882b87d69596535f67ce64c10c5028ffb7d74"
+  },
+  "parentResult": null,
+  "revisionInstructions": [],
+  "files": {
+    "brief": {
+      "path": "brief.md",
+      "sha256": "3faddb297fc6d54942d5c0ed97941649dca756991b768233c3aa54adabf298c4"
+    },
+    "prompt": {
+      "path": "prompt.txt",
+      "sha256": "c5051ec4a2cb5253d76b5ff73b5ebfa17e22ac353db6babec1676fbab1a07819"
+    },
+    "negativeConstraints": {
+      "path": "negative-constraints.txt",
+      "sha256": "4762e81bf8c84ce550af90ac08e99b2f72a84db478dac830eb01158ad3bda88b"
+    },
+    "requestedViews": {
+      "path": "requested-views.json",
+      "sha256": "c8e9e892ac587eb165916785b5c40401ed35b91ce55068027d00f72754054f33"
+    },
+    "requestedStates": {
+      "path": "requested-states.json",
+      "sha256": "3f55def6cebf3cf96477e2d61c1fca8fb8f0b26bf55a3126afcfe728dfdf1b5b"
+    }
+  },
+  "promptHash": "c5051ec4a2cb5253d76b5ff73b5ebfa17e22ac353db6babec1676fbab1a07819",
+  "requestedViewIds": [
+    "exploration_sheet"
+  ],
+  "requestedStateIds": [
+    "intact",
+    "damaged",
+    "critical"
+  ],
+  "imageSpec": {
+    "aspectRatio": "1:1",
+    "background": "neutral_mid_gray",
+    "lighting": "neutral_studio",
+    "singleObjectOnly": true
+  },
+  "budget": {
+    "maximumWebGenerations": 4,
+    "consumedWebGenerations": 0,
+    "reserveForCorrections": 1,
+    "humanConfirmationRequired": true
+  },
+  "automation": {
+    "browserAdapter": "codex_iab",
+    "automaticSubmissionAuthorized": false,
+    "automaticRetry": false,
+    "automaticCodexImageFallback": false,
+    "automaticApiFallback": false,
+    "browserReasoningForbidden": true
+  },
+  "authority": {
+    "canonical": false,
+    "geometryAuthority": false,
+    "humanSelectionRequired": true,
+    "productionApproved": false
+  }
+}

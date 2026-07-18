@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/canon-compliance-report.schema.json",
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "check": {
+      "type": "object",
+      "required": ["id", "category", "status", "evidence", "issues"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+        "category": {"enum": ["geometric", "visual", "functional", "technical", "perceptual", "human"]},
+        "status": {"enum": ["PASS", "FAIL", "PARTIAL", "BLOCKED", "UNKNOWN", "SKIPPED"]},
+        "evidence": {"type": "array", "items": {"type": "string", "minLength": 3}},
+        "issues": {"type": "array", "items": {"type": "string", "minLength": 3}}
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "type": "object",
+  "required": ["$schema", "schemaVersion", "generatedAt", "status", "canon", "build", "functionalEvidence", "checks", "productionEligible", "blockingReasons"],
+  "properties": {
+    "$schema": {"const": "https://roblox-top1.local/schemas/canon-compliance-report.schema.json"},
+    "schemaVersion": {"const": "1.0.0"},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "status": {"enum": ["PASS", "FAIL", "PARTIAL", "BLOCKED", "UNKNOWN"]},
+    "canon": {
+      "type": "object",
+      "required": ["canonId", "path", "sha256", "status"],
+      "properties": {
+        "canonId": {"type": "string", "pattern": "^vc_"},
+        "path": {"type": "string", "minLength": 3},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "status": {"enum": ["DRAFT", "CANDIDATE", "ACCEPTED", "LOCKED", "REVISED"]}
+      },
+      "unevaluatedProperties": false
+    },
+    "build": {
+      "type": "object",
+      "required": ["reportPath", "reportSha256", "assetId", "territoryId", "stateIds"],
+      "properties": {
+        "reportPath": {"type": "string", "minLength": 3},
+        "reportSha256": {"$ref": "#/$defs/sha256"},
+        "assetId": {"type": "string", "minLength": 3},
+        "territoryId": {"type": "string", "minLength": 3},
+        "stateIds": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}}
+      },
+      "unevaluatedProperties": false
+    },
+    "functionalEvidence": {
+      "type": "object",
+      "required": ["mode", "sources"],
+      "properties": {
+        "mode": {"enum": ["COMPONENT_OBJECT_MAP", "TRANSFER_GRAMMAR_AUDIT"]},
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["path", "sha256"],
+            "properties": {
+              "path": {"type": "string", "minLength": 3},
+              "sha256": {"$ref": "#/$defs/sha256"}
+            },
+            "unevaluatedProperties": false
+          }
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "checks": {"type": "array", "minItems": 6, "items": {"$ref": "#/$defs/check"}},
+    "productionEligible": {"type": "boolean"},
+    "blockingReasons": {"type": "array", "items": {"type": "string", "minLength": 3}, "uniqueItems": true}
+  },
+  "unevaluatedProperties": false
+}

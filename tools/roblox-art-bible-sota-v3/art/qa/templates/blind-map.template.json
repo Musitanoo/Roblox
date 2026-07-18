@@ -1,0 +1,13 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/blind-map.schema.json",
+  "schemaVersion": "2.0.0",
+  "studyId": "art-direction-vertical-slice-v1",
+  "generatedAt": null,
+  "mapping": {
+    "A": null,
+    "B": null,
+    "C": null
+  },
+  "sealedSubmissionsSha256": null,
+  "saltId": null
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/creative-direction-decision.schema.json",
+  "schemaVersion": "1.0.0",
+  "decisionId": "founder-salvaged-frontier-selection-v1",
+  "status": "FOUNDER_APPROVED",
+  "selectionKind": "STRATEGIC_CREATIVE_SELECTION",
+  "selectedTerritory": "salvaged-frontier",
+  "selectedConstitutionPath": "art/selected/salvaged-frontier-constitution.json",
+    "selectedConstitutionSha256": "1a7ea88c2d06be01530b6e02b70b6f9dc176f5b74d0cb98f4d565b8a322a9491",
+  "approvedBy": "Founder",
+  "approvedAt": "2026-07-17T21:07:11Z",
+  "productionApproved": false,
+  "studyStatus": "INCOMPLETE",
+  "studyUse": "NOT_USED_AS_DECISION_PROOF",
+  "strategicRationale": "Salvaged Frontier remains selected because it uniquely turns the persistent fortress, preparation, repair, expedition recovery and social memory into one coherent world identity. The standard horde enemy is revised under founder authority into the Violet Frontier Rôdeur: an unmistakably biological, non-gory zombie whose head-led silhouette, violet faction identity and causal posture states support role readability without borrowing the wall-breaking promise of a brute. Industrial Toy Defense continues to constrain only execution clarity.",
+  "readabilityDiscipline": {
+    "source": "industrial-toy-defense",
+    "role": "Industrial Toy Defense contributes thick massing, explicit joints, protected apertures, bounded accents, modular repetition and one-second state clarity as non-negotiable execution discipline.",
+    "identityOverrideForbidden": true
+  },
+  "evidenceBoundary": [
+    "This decision records founder creative authority and is not presented as the result of a complete blinded population study.",
+    "The existing participant and exploratory AI submissions remain preserved but are insufficient to seal the study.",
+    "The current six selected visual canons remain CANDIDATE until all required boards and hash-bound human approvals exist.",
+    "The Violet Frontier Rôdeur is a founder-directed candidate revision and requires a fresh intact, damaged and critical image sequence before canon lock.",
+    "Physical low-tier mobile evidence, refreshed Studio integration and final sixth-asset approval remain separate production gates.",
+    "productionApproved remains false and no production art lock is created by this decision."
+  ],
+  "rejectedAlternatives": [
+    {
+      "territoryId": "industrial-toy-defense",
+      "reason": "Its immediate readability is excellent, but as the primary identity it risks turning the world into a generic construction-toy factory and weakens the GDD's themes of persistent repair history, expedition recovery and personal fortress memory."
+    },
+    {
+      "territoryId": "clean-tactical-diorama",
+      "reason": "Its diagrammatic clarity is useful for QA, but as the world identity it is too emotionally neutral and pristine to carry the hopeful frontier, visible adaptation, social authorship and accumulated history required by the GDD."
+    }
+  ]
+}

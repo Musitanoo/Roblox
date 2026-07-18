@@ -1,0 +1,306 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/object-product-contracts.schema.json",
+  "$defs": {
+    "stringList": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 8}
+    },
+    "hypothesis": {
+      "type": "object",
+      "required": [
+        "id",
+        "status",
+        "scope",
+        "implementationAllowed",
+        "claimBoundary"
+      ],
+      "properties": {
+        "id": {"pattern": "^H-[A-Z0-9-]+$"},
+        "status": {"enum": ["TESTING", "UNTESTED", "DEFERRED"]},
+        "scope": {"type": "string", "minLength": 20},
+        "implementationAllowed": {"type": "boolean"},
+        "claimBoundary": {"type": "string", "minLength": 30}
+      },
+      "unevaluatedProperties": false
+    },
+    "retentionBinding": {
+      "type": "object",
+      "required": [
+        "primaryHypothesis",
+        "secondaryHypotheses",
+        "evidenceStatus"
+      ],
+      "properties": {
+        "primaryHypothesis": {
+          "type": "object",
+          "required": [
+            "id",
+            "status",
+            "priority",
+            "designContribution",
+            "intendedPlayerBehavior",
+            "recognitionTest",
+            "decisionMetric",
+            "failureCondition",
+            "guardrails",
+            "gate",
+            "claimBoundary"
+          ],
+          "properties": {
+            "id": {"const": "H-FAILURE-001"},
+            "status": {"const": "TESTING"},
+            "priority": {"const": "P0a"},
+            "designContribution": {"type": "string", "minLength": 30},
+            "intendedPlayerBehavior": {"type": "string", "minLength": 30},
+            "recognitionTest": {"type": "string", "minLength": 30},
+            "decisionMetric": {"type": "string", "minLength": 30},
+            "failureCondition": {"type": "string", "minLength": 30},
+            "guardrails": {"$ref": "#/$defs/stringList"},
+            "gate": {"const": "G3"},
+            "claimBoundary": {"type": "string", "minLength": 30}
+          },
+          "unevaluatedProperties": false
+        },
+        "secondaryHypotheses": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/hypothesis"}
+        },
+        "evidenceStatus": {"const": "UNPROVEN"}
+      },
+      "unevaluatedProperties": false
+    },
+    "runtimeItem": {
+      "type": "object",
+      "required": [
+        "id",
+        "applicability",
+        "visualCues",
+        "geometryPolicy",
+        "gameplayTruth"
+      ],
+      "properties": {
+        "id": {"pattern": "^[a-z][a-z0-9_]*$"},
+        "applicability": {"type": "string", "minLength": 15},
+        "visualCues": {"$ref": "#/$defs/stringList"},
+        "geometryPolicy": {"type": "string", "minLength": 20},
+        "gameplayTruth": {"type": "string", "minLength": 20}
+      },
+      "unevaluatedProperties": false
+    },
+    "runtimeStateModel": {
+      "type": "object",
+      "required": [
+        "primaryGenerationStates",
+        "compositionRule",
+        "operationalOverlays",
+        "transientStates",
+        "terminalState",
+        "coverageBoundary"
+      ],
+      "properties": {
+        "primaryGenerationStates": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 3,
+          "uniqueItems": true,
+          "items": {"enum": ["intact", "damaged", "critical"]}
+        },
+        "compositionRule": {"type": "string", "minLength": 40},
+        "operationalOverlays": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/runtimeItem"}
+        },
+        "transientStates": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/runtimeItem"}
+        },
+        "terminalState": {
+          "anyOf": [
+            {"type": "null"},
+            {
+              "type": "object",
+              "required": [
+                "id",
+                "derivedFrom",
+                "description",
+                "generationPolicy",
+                "visualCues",
+                "gameplayTruth"
+              ],
+              "properties": {
+                "id": {"pattern": "^[a-z][a-z0-9_]*$"},
+                "derivedFrom": {"enum": ["intact", "damaged", "critical"]},
+                "description": {"type": "string", "minLength": 25},
+                "generationPolicy": {"const": "RUNTIME_ONLY_NOT_PRIMARY_GPT_IMAGE_TASK"},
+                "visualCues": {"$ref": "#/$defs/stringList"},
+                "gameplayTruth": {"type": "string", "minLength": 30}
+              },
+              "unevaluatedProperties": false
+            }
+          ]
+        },
+        "coverageBoundary": {"type": "string", "minLength": 40}
+      },
+      "unevaluatedProperties": false
+    },
+    "stateTruth": {
+      "type": "object",
+      "required": [
+        "status",
+        "contractRef",
+        "trigger",
+        "capabilityEffect",
+        "collisionEffect",
+        "visualClaim",
+        "claimBoundary"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "CANDIDATE_REQUIRES_GAMEPLAY_CONTRACT",
+            "VISUAL_ONLY",
+            "BOUND"
+          ]
+        },
+        "contractRef": {"type": ["string", "null"]},
+        "trigger": {"type": "string", "minLength": 20},
+        "capabilityEffect": {"type": "string", "minLength": 20},
+        "collisionEffect": {"type": "string", "minLength": 20},
+        "visualClaim": {"type": "string", "minLength": 20},
+        "claimBoundary": {"type": "string", "minLength": 30}
+      },
+      "unevaluatedProperties": false
+    },
+    "promptDiscipline": {
+      "type": "object",
+      "required": [
+        "subjectClass",
+        "identityLockRules",
+        "styleRules",
+        "negativeRules",
+        "outputSelfChecks"
+      ],
+      "properties": {
+        "subjectClass": {
+          "enum": [
+            "modular_defense",
+            "protected_objective",
+            "organic_enemy",
+            "repeatable_architecture",
+            "transient_vfx",
+            "mechanical_weapon"
+          ]
+        },
+        "identityLockRules": {"$ref": "#/$defs/stringList"},
+        "styleRules": {"$ref": "#/$defs/stringList"},
+        "negativeRules": {"$ref": "#/$defs/stringList"},
+        "outputSelfChecks": {"$ref": "#/$defs/stringList"}
+      },
+      "unevaluatedProperties": false
+    },
+    "asset": {
+      "type": "object",
+      "required": [
+        "retentionBinding",
+        "runtimeStateModel",
+        "stateTruth",
+        "promptDiscipline"
+      ],
+      "properties": {
+        "retentionBinding": {"$ref": "#/$defs/retentionBinding"},
+        "runtimeStateModel": {"$ref": "#/$defs/runtimeStateModel"},
+        "stateTruth": {
+          "type": "object",
+          "minProperties": 2,
+          "maxProperties": 3,
+          "propertyNames": {"enum": ["intact", "damaged", "critical"]},
+          "additionalProperties": {"$ref": "#/$defs/stateTruth"}
+        },
+        "promptDiscipline": {"$ref": "#/$defs/promptDiscipline"}
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "authority",
+    "globalRules",
+    "assets"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/object-product-contracts.schema.json"
+    },
+    "schemaVersion": {"const": "1.0.0"},
+    "authority": {
+      "type": "object",
+      "required": ["productArtContract", "retentionDoctrine"],
+      "properties": {
+        "productArtContract": {
+          "type": "object",
+          "required": ["path", "sha256"],
+          "properties": {
+            "path": {"const": "art/authority/product-art-authority-v1.json"},
+            "sha256": {"pattern": "^[0-9a-f]{64}$"}
+          },
+          "unevaluatedProperties": false
+        },
+        "retentionDoctrine": {
+          "type": "object",
+          "required": ["path", "sha256"],
+          "properties": {
+            "path": {"const": "docs/PRODUCT_INNOVATION_AND_RETENTION_DOCTRINE.md"},
+            "sha256": {"pattern": "^[0-9a-f]{64}$"}
+          },
+          "unevaluatedProperties": false
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "globalRules": {
+      "type": "object",
+      "required": [
+        "primaryGenerationRule",
+        "stateCompositionRule",
+        "truthRule",
+        "evidenceBoundary"
+      ],
+      "properties": {
+        "primaryGenerationRule": {"type": "string", "minLength": 40},
+        "stateCompositionRule": {"type": "string", "minLength": 40},
+        "truthRule": {"type": "string", "minLength": 40},
+        "evidenceBoundary": {"type": "string", "minLength": 40}
+      },
+      "unevaluatedProperties": false
+    },
+    "assets": {
+      "type": "object",
+      "required": [
+        "barricade",
+        "objective_core",
+        "enemy_standard",
+        "floor_module",
+        "damage_effect",
+        "turret_fast_v1"
+      ],
+      "properties": {
+        "barricade": {"$ref": "#/$defs/asset"},
+        "objective_core": {"$ref": "#/$defs/asset"},
+        "enemy_standard": {"$ref": "#/$defs/asset"},
+        "floor_module": {"$ref": "#/$defs/asset"},
+        "damage_effect": {"$ref": "#/$defs/asset"},
+        "turret_fast_v1": {"$ref": "#/$defs/asset"}
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

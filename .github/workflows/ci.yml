@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  repository-check:
+    name: Repository check
+    runs-on: windows-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+
+      - name: Install pinned Rokit toolchain
+        shell: pwsh
+        run: |
+          $archive = Join-Path $env:RUNNER_TEMP "rokit.zip"
+          $extractDirectory = Join-Path $env:RUNNER_TEMP "rokit"
+          Invoke-WebRequest `
+            -Uri "https://github.com/rojo-rbx/rokit/releases/download/v1.2.0/rokit-1.2.0-windows-x86_64.zip" `
+            -OutFile $archive
+          Expand-Archive -LiteralPath $archive -DestinationPath $extractDirectory
+          $rokit = Get-ChildItem -LiteralPath $extractDirectory -Filter "rokit.exe" -Recurse | Select-Object -First 1
+          if (-not $rokit) {
+            throw "Rokit executable was not found in the release archive."
+          }
+          & $rokit.FullName self-install
+          if ($LASTEXITCODE -ne 0) {
+            throw "Rokit self-install failed with exit code $LASTEXITCODE."
+          }
+          & "$env:USERPROFILE\.rokit\bin\rokit.exe" install --no-trust-check
+          if ($LASTEXITCODE -ne 0) {
+            throw "Rokit tool installation failed with exit code $LASTEXITCODE."
+          }
+
+      - name: Run repository checks
+        shell: pwsh
+        run: ./scripts/check.ps1

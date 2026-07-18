@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/art-lock.schema.json",
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "artVersion",
+    "status",
+    "productionApproved",
+    "selectedTerritory",
+    "selectionAuthorityKind",
+    "lockedAt",
+    "lockedBy",
+    "selectionDecisionSha256",
+    "selectedConstitutionSha256",
+    "selectedCanonCount",
+    "evidenceIndexSha256",
+    "canonicalFiles",
+    "sixthAssetId",
+    "sixthAssetTransferReportSha256",
+    "sixthAssetEvidencePackageSha256",
+    "sixthAssetReviewSha256"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/art-lock.schema.json"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "artVersion": {
+      "type": "string",
+      "pattern": "^1\\.[0-9]+\\.[0-9]+$"
+    },
+    "status": {
+      "const": "V1_LOCKED"
+    },
+    "productionApproved": {
+      "const": true
+    },
+    "selectedTerritory": {
+      "enum": [
+        "industrial-toy-defense",
+        "salvaged-frontier",
+        "clean-tactical-diorama"
+      ]
+    },
+    "selectionAuthorityKind": {
+      "enum": [
+        "FOUNDER_STRATEGIC_SELECTION",
+        "BLIND_STUDY_SELECTION"
+      ]
+    },
+    "lockedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "lockedBy": {
+      "type": "string",
+      "minLength": 3
+    },
+    "selectionDecisionSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "selectedConstitutionSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "selectedCanonCount": {
+      "const": 6
+    },
+    "evidenceIndexSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "canonicalFiles": {
+      "type": "array",
+      "minItems": 10,
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "required": [
+          "path",
+          "sha256"
+        ],
+        "unevaluatedProperties": false
+      }
+    },
+    "sixthAssetId": {
+      "const": "turret_fast_v1"
+    },
+    "sixthAssetTransferReportSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "sixthAssetEvidencePackageSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "sixthAssetReviewSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "unevaluatedProperties": false
+}

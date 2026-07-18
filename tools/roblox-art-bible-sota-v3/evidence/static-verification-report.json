@@ -1,0 +1,192 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/static-verification-report.schema.json",
+  "schemaVersion": "1.0.0",
+  "status": "PASS",
+  "generatedAt": "2026-07-18T09:38:45.354668Z",
+  "toolchain": {
+    "pythonVersion": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "bashAvailable": false,
+    "powershellAvailable": true,
+    "blenderAvailable": true,
+    "luauAnalyzeAvailable": true,
+    "seleneAvailable": true,
+    "styluaAvailable": true,
+    "rojoAvailable": false
+  },
+  "checks": [
+    {
+      "id": "pinned_python_dependencies",
+      "required": true,
+      "command": [
+        "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\.venv\\Scripts\\python.exe",
+        "-m",
+        "tools.art.check_dependencies"
+      ],
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 309,
+      "stdoutTail": "[PASS] 15 pinned Python dependencies match.\n",
+      "stderrTail": ""
+    },
+    {
+      "id": "generated_luau_drift",
+      "required": true,
+      "command": [
+        "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\.venv\\Scripts\\python.exe",
+        "-m",
+        "tools.art.generate_luau",
+        "--check"
+      ],
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 247,
+      "stdoutTail": "[PASS] Studio Luau configuration is synchronized.\n",
+      "stderrTail": ""
+    },
+    {
+      "id": "schema_semantic_validation",
+      "required": true,
+      "command": [
+        "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\.venv\\Scripts\\python.exe",
+        "-m",
+        "tools.art.validate_library",
+        "--report",
+        "evidence/static-validation-report.json"
+      ],
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 6032,
+      "stdoutTail": "[PASS] 66 schemas, 60 manifest instances, semantics and generated code validated.\n",
+      "stderrTail": ""
+    },
+    {
+      "id": "transfer_evidence_integrity",
+      "required": true,
+      "command": [
+        "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\.venv\\Scripts\\python.exe",
+        "-m",
+        "tools.art.validate_transfer_report",
+        "evidence/transfer/turret-fast-v1/report.json"
+      ],
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 443,
+      "stdoutTail": "[PASS] Transfer report integrity validated (PARTIAL): evidence\\transfer\\turret-fast-v1\\report.json\n",
+      "stderrTail": ""
+    },
+    {
+      "id": "python_compileall",
+      "required": true,
+      "command": [
+        "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\.venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "tools",
+        "tests"
+      ],
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 135,
+      "stdoutTail": "",
+      "stderrTail": ""
+    },
+    {
+      "id": "pytest_adversarial",
+      "required": true,
+      "command": [
+        "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "--override-ini=addopts=",
+        "-q"
+      ],
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 201128,
+      "stdoutTail": "........................................................................ [ 47%]\n........................................................................ [ 94%]\n.........                                                                [100%]\n153 passed in 200.70s (0:03:20)\n",
+      "stderrTail": ""
+    },
+    {
+      "id": "r3d_unit_tests",
+      "required": true,
+      "command": [
+        "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\.venv\\Scripts\\python.exe",
+        "tools/roblox-3d-asset/r3d.py",
+        "test"
+      ],
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 4112,
+      "stdoutTail": "",
+      "stderrTail": "ract.ContractTests.test_rejects_asset_budget_above_visual_canon_maximum) ... ok\ntest_rejects_invalid_emission_strength (test_contract.ContractTests.test_rejects_invalid_emission_strength) ... ok\ntest_rejects_missing_visual_canon (test_contract.ContractTests.test_rejects_missing_visual_canon) ... ok\ntest_rejects_non_locked_production_status (test_contract.ContractTests.test_rejects_non_locked_production_status) ... ok\ntest_rejects_non_staging_publication (test_contract.ContractTests.test_rejects_non_staging_publication) ... ok\ntest_rejects_oversized_or_non_finite_bevel (test_contract.ContractTests.test_rejects_oversized_or_non_finite_bevel) ... ok\ntest_rejects_state_coverage_drift_from_visual_canon (test_contract.ContractTests.test_rejects_state_coverage_drift_from_visual_canon) ... ok\ntest_rejects_state_override_for_unknown_component (test_contract.ContractTests.test_rejects_state_override_for_unknown_component) ... ok\ntest_rejects_state_topology_mutation (test_contract.ContractTests.test_rejects_state_topology_mutation) ... ok\ntest_rejects_triangle_budget_above_roblox_limit (test_contract.ContractTests.test_rejects_triangle_budget_above_roblox_limit) ... ok\ntest_rejects_unbounded_cylinder_configuration (test_contract.ContractTests.test_rejects_unbounded_cylinder_configuration) ... ok\ntest_source_package_visual_canon_resolution_stays_bounded (test_contract.ContractTests.test_source_package_visual_canon_resolution_stays_bounded) ... ok\ntest_vertical_slice_contract_passes (test_contract.ContractTests.test_vertical_slice_contract_passes) ... ok\ntest_visual_canon_path_must_be_normalized_and_repo_relative (test_contract.ContractTests.test_visual_canon_path_must_be_normalized_and_repo_relative) ... ok\ntest_visual_canon_resolver_rejects_escape_before_io (test_contract.ContractTests.test_visual_canon_resolver_rejects_escape_before_io) ... ok\ntest_png_content_hash_ignores_metadata_but_not_pixels (test_determinism.DeterminismTests.test_png_content_hash_ignores_metadata_but_not_pixels) ... ok\ntest_published_state_must_match_deterministic_reference (test_determinism.DeterminismTests.test_published_state_must_match_deterministic_reference) ... ok\ntest_render_comparison_accepts_only_bounded_raster_variance (test_determinism.DeterminismTests.test_render_comparison_accepts_only_bounded_raster_variance) ... ok\ntest_find_git_rejects_unusable_file (test_doctor.DoctorTests.test_find_git_rejects_unusable_file) ... ok\ntest_find_git_requires_an_executable_version_probe (test_doctor.DoctorTests.test_find_git_requires_an_executable_version_probe) ... ok\ntest_git_check_uses_discovered_absolute_executable (test_doctor.DoctorTests.test_git_check_uses_discovered_absolute_executable) ... ok\ntest_windows_candidates_include_standard_program_files_git (test_doctor.DoctorTests.test_windows_candidates_include_standard_program_files_git) ... ok\ntest_confirm_without_credentials_is_blocked_before_network (test_publisher.PublisherTests.test_confirm_without_credentials_is_blocked_before_network) ... ok\ntest_creator_must_be_in_explicit_allowlist (test_publisher.PublisherTests.test_creator_must_be_in_explicit_allowlist) ... ok\ntest_dry_run_never_calls_network (test_publisher.PublisherTests.test_dry_run_never_calls_network) ... ok\ntest_existing_package_dry_run_uses_fbx_for_update (test_publisher.PublisherTests.test_existing_package_dry_run_uses_fbx_for_update) ... ok\ntest_bound_partial_review_passes_its_own_gate (test_report.ReportTests.test_bound_partial_review_passes_its_own_gate) ... ok\ntest_evidence_byte_drift_fails (test_report.ReportTests.test_evidence_byte_drift_fails) ... ok\ntest_missing_cloud_and_studio_gates_never_approve_production (test_report.ReportTests.test_missing_cloud_and_studio_gates_never_approve_production) ... ok\ntest_review_schema_declares_all_authority_bindings (test_report.ReportTests.test_review_schema_declares_all_authority_bindings) ... ok\ntest_same_revision_with_different_contract_bytes_fails (test_report.ReportTests.test_same_revision_with_different_contract_bytes_fails) ... ok\ntest_visual_canon_hash_drift_fails (test_report.ReportTests.test_visual_canon_hash_drift_fails) ... ok\ntest_visual_review_fails_closed_when_declared_evidence_is_missing (test_report.ReportTests.test_visual_review_fails_closed_when_declared_evidence_is_missing) ... ok\ntest_visual_review_pass_requires_both_approval_classes (test_report.ReportTests.test_visual_review_pass_requires_both_approval_classes) ... ok\ntest_visual_review_rejects_evidence_path_escape (test_report.ReportTests.test_visual_review_rejects_evidence_path_escape) ... ok\ntest_damaged_state_changes_transform_and_material_only (test_state_variants.StateVariantTests.test_damaged_state_changes_transform_and_material_only) ... ok\ntest_default_state_is_intact_and_does_not_mutate_source (test_state_variants.StateVariantTests.test_default_state_is_intact_and_does_not_mutate_source) ... ok\ntest_unknown_state_fails_closed (test_state_variants.StateVariantTests.test_unknown_state_fails_closed) ... ok\ntest_fail_has_priority (test_status.StatusTests.test_fail_has_priority) ... ok\ntest_only_pass_returns_zero (test_status.StatusTests.test_only_pass_returns_zero) ... ok\ntest_skipped_never_becomes_pass (test_status.StatusTests.test_skipped_never_becomes_pass) ... ok\ntest_mutating_operator_scripts_default_to_dry_run (test_studio_scripts.StudioScriptTests.test_mutating_operator_scripts_default_to_dry_run) ... ok\ntest_no_script_is_named_atomic (test_studio_scripts.StudioScriptTests.test_no_script_is_named_atomic) ... ok\ntest_staged_swap_retains_rollback (test_studio_scripts.StudioScriptTests.test_staged_swap_retains_rollback) ... ok\ntest_configured_child_environment_cannot_reintroduce_secrets (test_workbench_contract.WorkbenchContractTests.test_configured_child_environment_cannot_reintroduce_secrets) ... ok\ntest_declared_dimension_change_is_source_bound (test_workbench_contract.WorkbenchContractTests.test_declared_dimension_change_is_source_bound) ... ok\ntest_promoted_source_rejects_wrong_authoritative_path (test_workbench_contract.WorkbenchContractTests.test_promoted_source_rejects_wrong_authoritative_path) ... ok\ntest_promoted_source_requires_exact_semantic_equivalence (test_workbench_contract.WorkbenchContractTests.test_promoted_source_requires_exact_semantic_equivalence) ... ok\ntest_rejects_arbitrary_python_operation (test_workbench_contract.WorkbenchContractTests.test_rejects_arbitrary_python_operation) ... ok\ntest_rejects_operation_beyond_bound (test_workbench_contract.WorkbenchContractTests.test_rejects_operation_beyond_bound) ... ok\ntest_rejects_out_of_repo_contract (test_workbench_contract.WorkbenchContractTests.test_rejects_out_of_repo_contract) ... ok\ntest_rejects_stale_reference_hash (test_workbench_contract.WorkbenchContractTests.test_rejects_stale_reference_hash) ... ok\ntest_rejects_undeclared_component (test_workbench_contract.WorkbenchContractTests.test_rejects_undeclared_component) ... ok\ntest_sanitized_environment_drops_roblox_secrets (test_workbench_contract.WorkbenchContractTests.test_sanitized_environment_drops_roblox_secrets) ... ok\ntest_forbidden_tools_are_not_exposed (test_workbench_mcp.WorkbenchMcpTests.test_forbidden_tools_are_not_exposed) ... ok\ntest_initialize_declares_tools_capability_and_authority_limit (test_workbench_mcp.WorkbenchMcpTests.test_initialize_declares_tools_capability_and_authority_limit) ... ok\ntest_project_config_uses_stdio_launcher_and_write_approvals (test_workbench_mcp.WorkbenchMcpTests.test_project_config_uses_stdio_launcher_and_write_approvals) ... skipped 'project MCP config is installed by the host repository'\ntest_tools_list_is_closed_and_schema_backed (test_workbench_mcp.WorkbenchMcpTests.test_tools_list_is_closed_and_schema_backed) ... ok\ntest_unknown_tool_fails_closed_without_traceback (test_workbench_mcp.WorkbenchMcpTests.test_unknown_tool_fails_closed_without_traceback) ... ok\n\n----------------------------------------------------------------------\nRan 75 tests in 3.717s\n\nOK (skipped=1)\n"
+    },
+    {
+      "id": "shell_syntax",
+      "required": false,
+      "command": [
+        "bash",
+        "-n",
+        "scripts/art-direction.sh"
+      ],
+      "status": "SKIPPED",
+      "exitCode": null,
+      "durationMs": 0,
+      "stdoutTail": "",
+      "stderrTail": "Tool unavailable in packaging environment."
+    },
+    {
+      "id": "installer_powershell_syntax",
+      "required": true,
+      "command": [
+        "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+        "-NoProfile",
+        "-Command",
+        "$errors=$null; [System.Management.Automation.Language.Parser]::ParseFile('scripts/install-workflow.ps1',[ref]$null,[ref]$errors) | Out-Null; if ($errors.Count -gt 0) { $errors | ForEach-Object { Write-Error $_ }; exit 1 }"
+      ],
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 187,
+      "stdoutTail": "",
+      "stderrTail": ""
+    },
+    {
+      "id": "runner_powershell_syntax",
+      "required": true,
+      "command": [
+        "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+        "-NoProfile",
+        "-Command",
+        "$errors=$null; [System.Management.Automation.Language.Parser]::ParseFile('scripts/art-direction.ps1',[ref]$null,[ref]$errors) | Out-Null; if ($errors.Count -gt 0) { $errors | ForEach-Object { Write-Error $_ }; exit 1 }"
+      ],
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 202,
+      "stdoutTail": "",
+      "stderrTail": ""
+    },
+    {
+      "id": "powershell_luau_validation",
+      "required": true,
+      "command": [
+        "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.EXE",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "scripts/art-direction.ps1",
+        "validate-luau"
+      ],
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 3082,
+      "stdoutTail": "\n=== Luau static validation ===\n[PASS] StyLua 2.5.2\n[PASS] Selene 0.31.0\n[PASS] Luau LSP 1.68.1\n> StyLua hand-authored Studio sources\n> Selene hand-authored Studio sources\nResults:\n0 errors\n0 warnings\n0 parse errors\n> Luau LSP core and generated modules\n[PASS] Hand-authored Luau is formatted/linted; core and generated modules type-check.\n[SKIP] Plugin/CaptureController type resolution requires the installed Studio hierarchy sourcemap.\n",
+      "stderrTail": "[INFO] Loading definitions file: @roblox - C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\studio\\tooling\\globalTypes.d.luau\n[INFO] sourcemap is disabled - automatic updating on sourcemap changes disabled\n[INFO] Loading Luau configuration from c:\\Project\\Roblox\\.luaurc\n[INFO] Loading Luau configuration from c:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\.luaurc\n"
+    }
+  ],
+  "pytestPassed": 153,
+  "limitations": [
+    "Rojo was not available in the packaging environment."
+  ]
+}

@@ -1,0 +1,659 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/visual-canon.schema.json",
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "stringList": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 3}
+    },
+    "dimensions": {
+      "type": "object",
+      "required": ["unit", "width", "height", "depth", "toleranceStuds", "pivot", "proportionRules"],
+      "properties": {
+        "unit": {"const": "stud"},
+        "width": {"type": "number", "exclusiveMinimum": 0},
+        "height": {"type": "number", "exclusiveMinimum": 0},
+        "depth": {"type": "number", "exclusiveMinimum": 0},
+        "toleranceStuds": {"type": "number", "exclusiveMinimum": 0, "maximum": 0.05},
+        "pivot": {"enum": ["bottom_center", "feet_center", "impact_center"]},
+        "proportionRules": {"$ref": "#/$defs/stringList"}
+      },
+      "unevaluatedProperties": false
+    },
+    "cueSet": {
+      "type": "object",
+      "required": ["shape", "silhouette", "value", "color", "light", "motion", "vfx", "audio"],
+      "properties": {
+        "shape": {"$ref": "#/$defs/stringList"},
+        "silhouette": {"$ref": "#/$defs/stringList"},
+        "value": {"$ref": "#/$defs/stringList"},
+        "color": {"$ref": "#/$defs/stringList"},
+        "light": {"$ref": "#/$defs/stringList"},
+        "motion": {"$ref": "#/$defs/stringList"},
+        "vfx": {"$ref": "#/$defs/stringList"},
+        "audio": {"$ref": "#/$defs/stringList"}
+      },
+      "unevaluatedProperties": false
+    },
+    "retentionHypothesis": {
+      "type": "object",
+      "required": ["id", "status", "scope", "implementationAllowed", "claimBoundary"],
+      "properties": {
+        "id": {"pattern": "^H-[A-Z0-9-]+$"},
+        "status": {"enum": ["TESTING", "UNTESTED", "DEFERRED"]},
+        "scope": {"type": "string", "minLength": 20},
+        "implementationAllowed": {"type": "boolean"},
+        "claimBoundary": {"type": "string", "minLength": 30}
+      },
+      "unevaluatedProperties": false
+    },
+    "retentionBinding": {
+      "type": "object",
+      "required": ["primaryHypothesis", "secondaryHypotheses", "evidenceStatus"],
+      "properties": {
+        "primaryHypothesis": {
+          "type": "object",
+          "required": [
+            "id",
+            "status",
+            "priority",
+            "designContribution",
+            "intendedPlayerBehavior",
+            "recognitionTest",
+            "decisionMetric",
+            "failureCondition",
+            "guardrails",
+            "gate",
+            "claimBoundary"
+          ],
+          "properties": {
+            "id": {"const": "H-FAILURE-001"},
+            "status": {"const": "TESTING"},
+            "priority": {"const": "P0a"},
+            "designContribution": {"type": "string", "minLength": 30},
+            "intendedPlayerBehavior": {"type": "string", "minLength": 30},
+            "recognitionTest": {"type": "string", "minLength": 30},
+            "decisionMetric": {"type": "string", "minLength": 30},
+            "failureCondition": {"type": "string", "minLength": 30},
+            "guardrails": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {"type": "string", "minLength": 8}
+            },
+            "gate": {"const": "G3"},
+            "claimBoundary": {"type": "string", "minLength": 30}
+          },
+          "unevaluatedProperties": false
+        },
+        "secondaryHypotheses": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/retentionHypothesis"}
+        },
+        "evidenceStatus": {"const": "UNPROVEN"}
+      },
+      "unevaluatedProperties": false
+    },
+    "runtimeItem": {
+      "type": "object",
+      "required": ["id", "applicability", "visualCues", "geometryPolicy", "gameplayTruth"],
+      "properties": {
+        "id": {"pattern": "^[a-z][a-z0-9_]*$"},
+        "applicability": {"type": "string", "minLength": 15},
+        "visualCues": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 8}
+        },
+        "geometryPolicy": {"type": "string", "minLength": 20},
+        "gameplayTruth": {"type": "string", "minLength": 20}
+      },
+      "unevaluatedProperties": false
+    },
+    "runtimeStateModel": {
+      "type": "object",
+      "required": [
+        "primaryGenerationStates",
+        "compositionRule",
+        "operationalOverlays",
+        "transientStates",
+        "terminalState",
+        "coverageBoundary"
+      ],
+      "properties": {
+        "primaryGenerationStates": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 3,
+          "uniqueItems": true,
+          "items": {"enum": ["intact", "damaged", "critical"]}
+        },
+        "compositionRule": {"type": "string", "minLength": 40},
+        "operationalOverlays": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/runtimeItem"}
+        },
+        "transientStates": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {"$ref": "#/$defs/runtimeItem"}
+        },
+        "terminalState": {
+          "anyOf": [
+            {"type": "null"},
+            {
+              "type": "object",
+              "required": [
+                "id",
+                "derivedFrom",
+                "description",
+                "generationPolicy",
+                "visualCues",
+                "gameplayTruth"
+              ],
+              "properties": {
+                "id": {"pattern": "^[a-z][a-z0-9_]*$"},
+                "derivedFrom": {"enum": ["intact", "damaged", "critical"]},
+                "description": {"type": "string", "minLength": 25},
+                "generationPolicy": {"const": "RUNTIME_ONLY_NOT_PRIMARY_GPT_IMAGE_TASK"},
+                "visualCues": {
+                  "type": "array",
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "items": {"type": "string", "minLength": 8}
+                },
+                "gameplayTruth": {"type": "string", "minLength": 30}
+              },
+              "unevaluatedProperties": false
+            }
+          ]
+        },
+        "coverageBoundary": {"type": "string", "minLength": 40}
+      },
+      "unevaluatedProperties": false
+    },
+    "stateTruth": {
+      "type": "object",
+      "required": [
+        "status",
+        "contractRef",
+        "trigger",
+        "capabilityEffect",
+        "collisionEffect",
+        "visualClaim",
+        "claimBoundary"
+      ],
+      "properties": {
+        "status": {
+          "enum": ["CANDIDATE_REQUIRES_GAMEPLAY_CONTRACT", "VISUAL_ONLY", "BOUND"]
+        },
+        "contractRef": {"type": ["string", "null"]},
+        "trigger": {"type": "string", "minLength": 20},
+        "capabilityEffect": {"type": "string", "minLength": 20},
+        "collisionEffect": {"type": "string", "minLength": 20},
+        "visualClaim": {"type": "string", "minLength": 20},
+        "claimBoundary": {"type": "string", "minLength": 30}
+      },
+      "unevaluatedProperties": false
+    },
+    "promptDiscipline": {
+      "type": "object",
+      "required": ["subjectClass", "identityLockRules", "styleRules", "negativeRules", "outputSelfChecks"],
+      "properties": {
+        "subjectClass": {
+          "enum": [
+            "modular_defense",
+            "protected_objective",
+            "organic_enemy",
+            "repeatable_architecture",
+            "transient_vfx",
+            "mechanical_weapon"
+          ]
+        },
+        "identityLockRules": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 8}
+        },
+        "styleRules": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 8}
+        },
+        "negativeRules": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 8}
+        },
+        "outputSelfChecks": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 8}
+        }
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "canonId",
+    "assetId",
+    "territoryId",
+    "version",
+    "status",
+    "authority",
+    "productIntent",
+    "runtimeStateModel",
+    "identity",
+    "instantRead",
+    "dimensions",
+    "silhouette",
+    "formHierarchy",
+    "construction",
+    "artDirection",
+    "materials",
+    "semanticZones",
+    "states",
+    "invariants",
+    "allowedVariations",
+    "forbidden",
+    "visualPacket",
+    "generationContract",
+    "approval",
+    "provenance"
+  ],
+  "properties": {
+    "$schema": {"const": "https://roblox-top1.local/schemas/visual-canon.schema.json"},
+    "schemaVersion": {"const": "2.0.0"},
+    "canonId": {"type": "string", "pattern": "^vc_[a-z0-9_]+__[a-z0-9-]+__v[0-9]+$"},
+    "assetId": {"enum": ["barricade", "objective_core", "enemy_standard", "floor_module", "damage_effect", "turret_fast_v1"]},
+    "territoryId": {"enum": ["industrial-toy-defense", "salvaged-frontier", "clean-tactical-diorama"]},
+    "version": {"type": "integer", "minimum": 1},
+    "status": {"enum": ["DRAFT", "CANDIDATE", "ACCEPTED", "LOCKED", "REVISED"]},
+    "authority": {
+      "type": "object",
+      "required": ["productArtContract", "retention", "objectProductContracts", "artDirection", "calibration", "shapeLanguage", "materials", "selectedConstitution"],
+      "additionalProperties": {
+        "type": "object",
+        "required": ["path", "sha256"],
+        "properties": {
+          "path": {"type": "string", "minLength": 3},
+          "sha256": {"$ref": "#/$defs/sha256"}
+        },
+        "unevaluatedProperties": false
+      }
+    },
+    "productIntent": {
+      "type": "object",
+      "required": ["retentionBinding", "evidenceBoundary"],
+      "properties": {
+        "retentionBinding": {"$ref": "#/$defs/retentionBinding"},
+        "evidenceBoundary": {"type": "string", "minLength": 40}
+      },
+      "unevaluatedProperties": false
+    },
+    "runtimeStateModel": {"$ref": "#/$defs/runtimeStateModel"},
+    "identity": {
+      "type": "object",
+      "required": ["canonicalName", "category", "gameplayFunction", "worldRole", "affiliation", "manufactureContext", "emotionalIntent", "technologyLevel", "character", "territoryVisualThesis"],
+      "properties": {
+        "canonicalName": {"type": "string", "minLength": 3},
+        "category": {"type": "string", "minLength": 3},
+        "gameplayFunction": {"type": "string", "minLength": 10},
+        "worldRole": {"type": "string", "minLength": 20},
+        "affiliation": {"type": "string", "minLength": 3},
+        "manufactureContext": {"type": "string", "minLength": 20},
+        "emotionalIntent": {"type": "string", "minLength": 20},
+        "technologyLevel": {"type": "string", "minLength": 10},
+        "character": {"$ref": "#/$defs/stringList"},
+        "territoryVisualThesis": {"type": "string", "minLength": 30}
+      },
+      "unevaluatedProperties": false
+    },
+    "instantRead": {
+      "type": "object",
+      "required": ["oneSecondPromise", "orientationCue", "interactionCue", "dangerCue", "relationToPlayer", "responsibleElements"],
+      "properties": {
+        "oneSecondPromise": {"type": "string", "minLength": 20},
+        "orientationCue": {"type": "string", "minLength": 10},
+        "interactionCue": {"type": "string", "minLength": 10},
+        "dangerCue": {"type": "string", "minLength": 10},
+        "relationToPlayer": {"type": "string", "minLength": 10},
+        "responsibleElements": {"$ref": "#/$defs/stringList"}
+      },
+      "unevaluatedProperties": false
+    },
+    "dimensions": {"$ref": "#/$defs/dimensions"},
+    "silhouette": {
+      "type": "object",
+      "required": ["targetReadDistanceStuds", "views", "recognitionLandmarks", "negativeSpaces", "intentionalAsymmetry", "distanceRule"],
+      "properties": {
+        "targetReadDistanceStuds": {"type": "integer", "minimum": 15, "maximum": 120},
+        "views": {
+          "type": "object",
+          "required": ["front", "back", "left", "right", "top", "bottom", "threeQuarterFront", "threeQuarterBack", "gameCamera"],
+          "additionalProperties": {"type": "string", "minLength": 20}
+        },
+        "recognitionLandmarks": {"$ref": "#/$defs/stringList"},
+        "negativeSpaces": {"$ref": "#/$defs/stringList"},
+        "intentionalAsymmetry": {"type": "string", "minLength": 20},
+        "distanceRule": {"type": "string", "minLength": 20}
+      },
+      "unevaluatedProperties": false
+    },
+    "formHierarchy": {
+      "type": "object",
+      "required": ["targetRatios", "primary", "secondary", "tertiary", "territoryConstructionTranslation"],
+      "properties": {
+        "targetRatios": {
+          "type": "object",
+          "required": ["primary", "secondary", "tertiary"],
+          "properties": {
+            "primary": {"const": 0.72},
+            "secondary": {"const": 0.23},
+            "tertiary": {"const": 0.05}
+          },
+          "unevaluatedProperties": false
+        },
+        "primary": {"$ref": "#/$defs/stringList"},
+        "secondary": {"$ref": "#/$defs/stringList"},
+        "tertiary": {"$ref": "#/$defs/stringList"},
+        "territoryConstructionTranslation": {"type": "string", "minLength": 30}
+      },
+      "unevaluatedProperties": false
+    },
+    "construction": {
+      "type": "object",
+      "required": ["components", "plausibilityRules", "stableNamingRule"],
+      "properties": {
+        "components": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["id", "function", "position", "form", "materialRole", "relationship", "mobility", "visibility", "readingRole"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_]*$"},
+              "function": {"type": "string", "minLength": 10},
+              "position": {"type": "string", "minLength": 5},
+              "form": {"type": "string", "minLength": 5},
+              "materialRole": {"type": "string", "minLength": 3},
+              "relationship": {"type": "string", "minLength": 10},
+              "mobility": {"enum": ["fixed", "mobile", "destructible", "replaceable", "ephemeral"]},
+              "visibility": {"type": "string", "minLength": 10},
+              "readingRole": {"type": "string", "minLength": 10}
+            },
+            "unevaluatedProperties": false
+          }
+        },
+        "plausibilityRules": {"$ref": "#/$defs/stringList"},
+        "stableNamingRule": {"const": "Component IDs and gameplay anchors never change without an approved canon revision."}
+      },
+      "unevaluatedProperties": false
+    },
+    "artDirection": {
+      "type": "object",
+      "required": ["territoryThesis", "shapeGrammar", "exaggeration", "edgeLanguage", "detailDensity", "asymmetry", "materialLanguage", "paletteLogic", "surfaceTreatment", "wearLogic", "signatureDetails", "forbidden"],
+      "properties": {
+        "territoryThesis": {"type": "string", "minLength": 30},
+        "shapeGrammar": {"$ref": "#/$defs/stringList"},
+        "exaggeration": {"type": "string", "minLength": 20},
+        "edgeLanguage": {"type": "string", "minLength": 20},
+        "detailDensity": {"type": "string", "minLength": 20},
+        "asymmetry": {"type": "string", "minLength": 20},
+        "materialLanguage": {"type": "string", "minLength": 20},
+        "paletteLogic": {"type": "string", "minLength": 20},
+        "surfaceTreatment": {"type": "string", "minLength": 20},
+        "wearLogic": {"type": "string", "minLength": 20},
+        "signatureDetails": {"$ref": "#/$defs/stringList"},
+        "forbidden": {"$ref": "#/$defs/stringList"}
+      },
+      "unevaluatedProperties": false
+    },
+    "materials": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["zoneId", "family", "semanticRole", "valueRange", "surfaceFinish", "wear", "boundaryRule", "lightingBehavior", "territoryTranslation"],
+        "properties": {
+          "zoneId": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+          "family": {"type": "string", "minLength": 3},
+          "semanticRole": {"type": "string", "minLength": 3},
+          "valueRange": {"type": "string", "minLength": 5},
+          "surfaceFinish": {"type": "string", "minLength": 10},
+          "wear": {"type": "string", "minLength": 10},
+          "boundaryRule": {"type": "string", "minLength": 10},
+          "lightingBehavior": {"type": "string", "minLength": 10},
+          "territoryTranslation": {"type": "string", "minLength": 20}
+        },
+        "unevaluatedProperties": false
+      }
+    },
+    "semanticZones": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["id", "purpose", "shapeRule", "valueRule", "colorRole", "motionRule", "vfxAnchor", "audioRole"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+          "purpose": {"type": "string", "minLength": 10},
+          "shapeRule": {"type": "string", "minLength": 10},
+          "valueRule": {"type": "string", "minLength": 10},
+          "colorRole": {"type": "string", "minLength": 3},
+          "motionRule": {"type": "string", "minLength": 5},
+          "vfxAnchor": {"type": "string", "minLength": 5},
+          "audioRole": {"type": "string", "minLength": 5}
+        },
+        "unevaluatedProperties": false
+      }
+    },
+    "states": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["id", "summary", "gameplayTruth", "invariants", "changes", "cues", "componentOperations", "transitions", "territoryTranslation"],
+        "properties": {
+          "id": {"enum": ["intact", "damaged", "critical"]},
+          "summary": {"type": "string", "minLength": 20},
+          "gameplayTruth": {"$ref": "#/$defs/stateTruth"},
+          "invariants": {"$ref": "#/$defs/stringList"},
+          "changes": {"$ref": "#/$defs/stringList"},
+          "cues": {"$ref": "#/$defs/cueSet"},
+          "componentOperations": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["componentId", "operation", "description"],
+              "properties": {
+                "componentId": {"type": "string", "pattern": "^[A-Za-z][A-Za-z0-9_]*$"},
+                "operation": {"enum": ["PRESERVE", "MOVE", "ROTATE", "EXPOSE", "OPEN", "BREAK", "REMOVE", "RECOLOR", "EMIT", "DEFORM"]},
+                "description": {"type": "string", "minLength": 10}
+              },
+              "unevaluatedProperties": false
+            }
+          },
+          "transitions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["to", "durationSeconds", "sequence", "reversible"],
+              "properties": {
+                "to": {"enum": ["intact", "damaged", "critical"]},
+                "durationSeconds": {"type": "number", "minimum": 0, "maximum": 10},
+                "sequence": {"$ref": "#/$defs/stringList"},
+                "reversible": {"type": "boolean"}
+              },
+              "unevaluatedProperties": false
+            }
+          },
+          "territoryTranslation": {"type": "string", "minLength": 30}
+        },
+        "unevaluatedProperties": false
+      }
+    },
+    "invariants": {"$ref": "#/$defs/stringList"},
+    "allowedVariations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "range", "justification"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+          "range": {"type": "string", "minLength": 5},
+          "justification": {"type": "string", "minLength": 10}
+        },
+        "unevaluatedProperties": false
+      }
+    },
+    "forbidden": {"$ref": "#/$defs/stringList"},
+    "visualPacket": {
+      "type": "object",
+      "required": ["status", "coverageRule", "boards"],
+      "properties": {
+        "status": {"enum": ["SPECIFIED", "PARTIAL", "COMPLETE"]},
+        "coverageRule": {"const": "If a component or state is absent from every bound board, the canon is incomplete and cannot be LOCKED."},
+        "boards": {
+          "type": "array",
+          "minItems": 15,
+          "items": {
+            "type": "object",
+            "required": ["id", "required", "status", "evidence"],
+            "properties": {
+              "id": {"type": "string", "pattern": "^[a-z][a-z0-9_]*$"},
+              "required": {"const": true},
+              "status": {"enum": ["SPECIFIED", "BOUND"]},
+              "evidence": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["path", "sha256"],
+                  "properties": {
+                    "path": {"type": "string", "minLength": 3},
+                    "sha256": {"$ref": "#/$defs/sha256"}
+                  },
+                  "unevaluatedProperties": false
+                }
+              }
+            },
+            "unevaluatedProperties": false
+          }
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "generationContract": {
+      "type": "object",
+      "required": ["mode", "obligations", "constraints", "tolerances", "forbidden", "promptDiscipline", "complianceReportRequired", "minimumStatusForExploration", "minimumStatusForProduction", "silentCanonMutationForbidden"],
+      "properties": {
+        "mode": {"const": "RECONSTRUCT_CANON_DO_NOT_AUTHOR_OBJECT"},
+        "obligations": {"$ref": "#/$defs/stringList"},
+        "constraints": {"$ref": "#/$defs/stringList"},
+        "tolerances": {"$ref": "#/$defs/stringList"},
+        "forbidden": {"$ref": "#/$defs/stringList"},
+        "promptDiscipline": {"$ref": "#/$defs/promptDiscipline"},
+        "complianceReportRequired": {"const": true},
+        "minimumStatusForExploration": {"const": "CANDIDATE"},
+        "minimumStatusForProduction": {"const": "LOCKED"},
+        "silentCanonMutationForbidden": {"const": true}
+      },
+      "unevaluatedProperties": false
+    },
+    "approval": {
+      "type": "object",
+      "required": ["required", "status", "approvedBy", "approvedAt", "decisionRecord", "approvedEvidencePackageSha256", "revisionReason"],
+      "properties": {
+        "required": {"const": true},
+        "status": {"enum": ["PENDING", "APPROVED", "REJECTED"]},
+        "approvedBy": {"type": ["string", "null"]},
+        "approvedAt": {"type": ["string", "null"], "format": "date-time"},
+        "decisionRecord": {"type": ["string", "null"]},
+        "approvedEvidencePackageSha256": {
+          "anyOf": [{"$ref": "#/$defs/sha256"}, {"type": "null"}]
+        },
+        "revisionReason": {"type": ["string", "null"]}
+      },
+      "unevaluatedProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["sourceKind", "authoredAt", "authoredBy", "generator", "inputHashes"],
+      "properties": {
+        "sourceKind": {"const": "AUTHORED_CANON_COMPILED_FROM_GDD_RETENTION_AND_ART_GRAMMAR"},
+        "authoredAt": {"type": "string", "format": "date-time"},
+        "authoredBy": {"type": "string", "minLength": 10},
+        "generator": {"const": "tools.art.build_visual_canons"},
+        "inputHashes": {
+          "type": "object",
+          "minProperties": 7,
+          "additionalProperties": {"$ref": "#/$defs/sha256"}
+        }
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"const": "LOCKED"}}, "required": ["status"]},
+      "then": {
+        "properties": {
+          "visualPacket": {
+            "properties": {
+              "status": {"const": "COMPLETE"},
+              "boards": {
+                "items": {
+                  "properties": {
+                    "status": {"const": "BOUND"},
+                    "evidence": {"minItems": 1}
+                  }
+                }
+              }
+            }
+          },
+          "approval": {
+            "properties": {
+              "status": {"const": "APPROVED"},
+              "approvedBy": {"type": "string", "minLength": 2},
+              "approvedAt": {"type": "string", "format": "date-time"},
+              "decisionRecord": {"type": "string", "minLength": 3},
+              "approvedEvidencePackageSha256": {"$ref": "#/$defs/sha256"}
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"approval": {"properties": {"status": {"const": "APPROVED"}}, "required": ["status"]}}},
+      "then": {
+        "properties": {
+          "approval": {
+            "properties": {
+              "approvedBy": {"type": "string", "minLength": 2},
+              "approvedAt": {"type": "string", "format": "date-time"},
+              "decisionRecord": {"type": "string", "minLength": 3},
+              "approvedEvidencePackageSha256": {"$ref": "#/$defs/sha256"}
+            }
+          }
+        }
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}

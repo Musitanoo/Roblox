@@ -1,0 +1,587 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/performance-report.schema.json",
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "metricSummary": {
+      "type": "object",
+      "required": [
+        "sampleCount",
+        "frameTimeMs",
+        "fps",
+        "memoryMb",
+        "crashes",
+        "thermal"
+      ],
+      "properties": {
+        "sampleCount": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "frameTimeMs": {
+          "type": "object",
+          "required": [
+            "median",
+            "p95",
+            "p99",
+            "mad",
+            "max"
+          ],
+          "properties": {
+            "median": {
+              "type": "number",
+              "minimum": 0
+            },
+            "p95": {
+              "type": "number",
+              "minimum": 0
+            },
+            "p99": {
+              "type": "number",
+              "minimum": 0
+            },
+            "mad": {
+              "type": "number",
+              "minimum": 0
+            },
+            "max": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        "fps": {
+          "type": "object",
+          "required": [
+            "median",
+            "minimum"
+          ],
+          "properties": {
+            "median": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "minimum": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        "memoryMb": {
+          "type": "object",
+          "required": [
+            "median",
+            "p95",
+            "max",
+            "byCategory"
+          ],
+          "properties": {
+            "median": {
+              "type": "number",
+              "minimum": 0
+            },
+            "p95": {
+              "type": "number",
+              "minimum": 0
+            },
+            "max": {
+              "type": "number",
+              "minimum": 0
+            },
+            "byCategory": {
+              "type": "object",
+              "propertyNames": {
+                "pattern": "^[A-Za-z][A-Za-z0-9_ /.-]{0,63}$"
+              },
+              "additionalProperties": {
+                "type": "number",
+                "minimum": 0
+              }
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        "crashes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "thermal": {
+          "type": "object",
+          "required": [
+            "start",
+            "end",
+            "throttleObserved",
+            "method"
+          ],
+          "properties": {
+            "start": {
+              "enum": [
+                "nominal",
+                "fair",
+                "serious",
+                "critical",
+                "unknown"
+              ]
+            },
+            "end": {
+              "enum": [
+                "nominal",
+                "fair",
+                "serious",
+                "critical",
+                "unknown"
+              ]
+            },
+            "throttleObserved": {
+              "type": "boolean"
+            },
+            "method": {
+              "type": "string",
+              "minLength": 3
+            }
+          },
+          "unevaluatedProperties": false
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "artifact": {
+      "type": "object",
+      "required": [
+        "kind",
+        "path",
+        "bytes",
+        "sha256"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "raw_metrics",
+            "microprofiler_dump",
+            "microprofiler_screenshot",
+            "device_log",
+            "landscape_screenshot",
+            "portrait_screenshot",
+            "video"
+          ]
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^evidence/mobile/"
+        },
+        "bytes": {
+          "type": "integer",
+          "exclusiveMinimum": 0
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "unevaluatedProperties": false
+    }
+  },
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "status",
+    "territoryId",
+    "generatedAt",
+    "device",
+    "protocol",
+    "graybox",
+    "candidate",
+    "regressions",
+    "visualChecks",
+    "artifacts",
+    "issues"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/performance-report.schema.json"
+    },
+    "schemaVersion": {
+      "const": "2.0.0"
+    },
+    "status": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED"
+      ]
+    },
+    "territoryId": {
+      "enum": [
+        "industrial-toy-defense",
+        "salvaged-frontier",
+        "clean-tactical-diorama"
+      ]
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "device": {
+      "type": "object",
+      "required": [
+        "deviceIdHash",
+        "manufacturer",
+        "model",
+        "osName",
+        "osVersion",
+        "chipset",
+        "ramGb",
+        "display",
+        "refreshRateHz",
+        "graphicsQualityLevel"
+      ],
+      "properties": {
+        "deviceIdHash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "manufacturer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model": {
+          "type": "string",
+          "minLength": 1
+        },
+        "osName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "osVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "chipset": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ramGb": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "display": {
+          "type": "object",
+          "required": [
+            "widthPx",
+            "heightPx",
+            "densityDpi",
+            "orientation"
+          ],
+          "properties": {
+            "widthPx": {
+              "type": "integer",
+              "minimum": 240
+            },
+            "heightPx": {
+              "type": "integer",
+              "minimum": 240
+            },
+            "densityDpi": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "orientation": {
+              "enum": [
+                "landscape",
+                "portrait",
+                "both"
+              ]
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        "refreshRateHz": {
+          "type": "number",
+          "minimum": 30,
+          "maximum": 240
+        },
+        "graphicsQualityLevel": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "protocol": {
+      "type": "object",
+      "required": [
+        "protocolVersion",
+        "placeId",
+        "placeVersion",
+        "experienceBuildSha256",
+        "coldLaunch",
+        "warmupSeconds",
+        "activeSessionMinutes",
+        "grayboxPasses",
+        "candidatePasses",
+        "sequence",
+        "sameCameraPath",
+        "sameServerState",
+        "sameGraphicsQuality"
+      ],
+      "properties": {
+        "protocolVersion": {
+          "const": "2.0.0"
+        },
+        "placeId": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "placeVersion": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "experienceBuildSha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "coldLaunch": {
+          "const": true
+        },
+        "warmupSeconds": {
+          "type": "integer",
+          "minimum": 60
+        },
+        "activeSessionMinutes": {
+          "type": "number",
+          "minimum": 15
+        },
+        "grayboxPasses": {
+          "type": "integer",
+          "minimum": 5
+        },
+        "candidatePasses": {
+          "type": "integer",
+          "minimum": 5
+        },
+        "sequence": {
+          "type": "array",
+          "minItems": 10,
+          "items": {
+            "enum": [
+              "A",
+              "B"
+            ]
+          }
+        },
+        "sameCameraPath": {
+          "const": true
+        },
+        "sameServerState": {
+          "const": true
+        },
+        "sameGraphicsQuality": {
+          "const": true
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "graybox": {
+      "$ref": "#/$defs/metricSummary"
+    },
+    "candidate": {
+      "$ref": "#/$defs/metricSummary"
+    },
+    "regressions": {
+      "type": "object",
+      "required": [
+        "frameTimeMedianPct",
+        "frameTimeP95Pct",
+        "memoryP95Mb",
+        "minimumFpsDelta",
+        "thresholds",
+        "pass"
+      ],
+      "properties": {
+        "frameTimeMedianPct": {
+          "type": "number"
+        },
+        "frameTimeP95Pct": {
+          "type": "number"
+        },
+        "memoryP95Mb": {
+          "type": "number"
+        },
+        "minimumFpsDelta": {
+          "type": "number"
+        },
+        "thresholds": {
+          "type": "object",
+          "required": [
+            "maxFrameTimeMedianPct",
+            "maxFrameTimeP95Pct",
+            "maxMemoryP95Mb",
+            "minimumCandidateFps",
+            "crashesAllowed",
+            "thermalThrottleAllowed"
+          ],
+          "properties": {
+            "maxFrameTimeMedianPct": {
+              "type": "number",
+              "minimum": 0
+            },
+            "maxFrameTimeP95Pct": {
+              "type": "number",
+              "minimum": 0
+            },
+            "maxMemoryP95Mb": {
+              "type": "number",
+              "minimum": 0
+            },
+            "minimumCandidateFps": {
+              "type": "number",
+              "minimum": 1
+            },
+            "crashesAllowed": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "thermalThrottleAllowed": {
+              "type": "boolean"
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        "pass": {
+          "type": "boolean"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "visualChecks": {
+      "type": "object",
+      "required": [
+        "landscape640x360",
+        "narrowPortrait360x640",
+        "stateReadability",
+        "interactionReadability",
+        "captureViewportVerified"
+      ],
+      "properties": {
+        "landscape640x360": {
+          "type": "boolean"
+        },
+        "narrowPortrait360x640": {
+          "type": "boolean"
+        },
+        "stateReadability": {
+          "type": "boolean"
+        },
+        "interactionReadability": {
+          "type": "boolean"
+        },
+        "captureViewportVerified": {
+          "type": "boolean"
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "artifacts": {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "$ref": "#/$defs/artifact"
+      },
+      "uniqueItems": true
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "PASS"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "issues": {
+            "maxItems": 0
+          },
+          "regressions": {
+            "properties": {
+              "pass": {
+                "const": true
+              }
+            }
+          },
+          "visualChecks": {
+            "properties": {
+              "landscape640x360": {
+                "const": true
+              },
+              "narrowPortrait360x640": {
+                "const": true
+              },
+              "stateReadability": {
+                "const": true
+              },
+              "interactionReadability": {
+                "const": true
+              },
+              "captureViewportVerified": {
+                "const": true
+              }
+            }
+          },
+          "candidate": {
+            "properties": {
+              "crashes": {
+                "const": 0
+              },
+              "thermal": {
+                "properties": {
+                  "throttleObserved": {
+                    "const": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "BLOCKED"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "issues": {
+            "minItems": 1
+          }
+        }
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}

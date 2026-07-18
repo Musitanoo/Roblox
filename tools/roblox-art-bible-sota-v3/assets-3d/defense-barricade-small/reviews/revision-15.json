@@ -1,0 +1,91 @@
+{
+  "$schema": "https://roblox-top-1.local/schemas/roblox-3d-asset-review-1.0.0.json",
+  "schemaVersion": "1.2.0",
+  "assetKey": "defense_barricade_small",
+  "revision": 15,
+  "contractSha256": "4007359aad9898b758666d3dbdcd06f9c4f4c33362642edc71b2509858009fb9",
+  "visualCanonSha256": "5e196aa1ab2bdaaa9c024d250ea76f82b134848b4dcd32b2741f7970c5c77e58",
+  "evidenceDigest": {
+    "scheme": "sha256-canonical-json-path-sha256-v1",
+    "sha256": "9be0370ab37eb0bafb4089c70f15dd0df5094221beac977c47280a508fecdeb2",
+    "fileCount": 2
+  },
+  "reviewStatus": "PARTIAL",
+  "automationReviewStatus": "PARTIAL",
+  "humanReviewStatus": "PENDING",
+  "score": 89,
+  "rubric": {
+    "silhouette": {
+      "maximum": 25,
+      "score": 23
+    },
+    "proportions": {
+      "maximum": 20,
+      "score": 18
+    },
+    "artDirection": {
+      "maximum": 20,
+      "score": 17
+    },
+    "gameplayReadability": {
+      "maximum": 20,
+      "score": 19
+    },
+    "originality": {
+      "maximum": 15,
+      "score": 12
+    }
+  },
+  "evidence": [
+    "evidence/visual-reconstruction-v15/report.md",
+    "evidence/visual-reconstruction-v15/report.json"
+  ],
+  "evidenceCompletenessStatus": "PARTIAL",
+  "evidenceCompletenessReason": "The release-source copy retains only the two immutable revision-15 reports; generated build and render evidence is intentionally not reconstructed or copied.",
+  "unavailableEvidence": [
+    "build/states/state-review.html",
+    "build/state-determinism/determinism-report.json",
+    "build/states/intact/renders/front.png",
+    "build/states/intact/renders/rear.png",
+    "build/states/intact/renders/perspective.png",
+    "build/states/intact/renders/mobile_distance.png",
+    "build/states/intact/renders/silhouette.png",
+    "build/states/damaged/renders/front.png",
+    "build/states/damaged/renders/rear.png",
+    "build/states/damaged/renders/perspective.png",
+    "build/states/damaged/renders/mobile_distance.png",
+    "build/states/damaged/renders/silhouette.png",
+    "build/states/critical/renders/front.png",
+    "build/states/critical/renders/rear.png",
+    "build/states/critical/renders/perspective.png",
+    "build/states/critical/renders/mobile_distance.png",
+    "build/states/critical/renders/silhouette.png"
+  ],
+  "supersedes": [
+    "evidence/first-result-audit/report.md",
+    "evidence/visual-reconstruction-v5/report.md",
+    "evidence/visual-reconstruction-v6/report.md"
+  ],
+  "strengths": [
+    "The exact 8 x 4 x 2 stud blocker keeps a broad grounded silhouette, three readable bays and heavy three-level feet at mobile distance.",
+    "The replacement panel, oversized sun-copper diagonal repair and protected rear socket create a controlled Salvaged Frontier history without random junk or front-facing interaction cues.",
+    "Intact, damaged and critical derive from one topology-preserving family with 42 stable component names, identical dimensions, pivot and 1496-triangle topology.",
+    "Damaged breaks one shoulder and settles one panel; critical widens the same causal breach and mechanically opens the rear socket by displacing its copper cover.",
+    "Published GLB, FBX, geometry, semantic output and all 24 rendered views pass the deterministic A/B gate with zero different pixels."
+  ],
+  "remainingIssues": [
+    "The bound visual canon is still CANDIDATE: its complete multimodal board packet and hash-bound human lock do not yet exist.",
+    "The internal visual score is 89/100, not the 90-point production-art threshold; final controlled surface finish, foot/contact richness and expert originality review remain unresolved.",
+    "No Roblox Studio staging import/reimport proof currently verifies wrapper preservation, collision authority, SurfaceAppearance, lighting, state switching or console health for revision 15.",
+    "No physical low-tier mobile run or balanced 1/30/100 benchmark proves sustained runtime performance.",
+    "No independent expert review or founder art approval is bound to the exact revision-15 evidence digest.",
+    "Final Roblox SurfaceAppearance/PBR behavior and state readability under the golden Studio lighting matrix remain UNKNOWN."
+  ],
+  "notes": [
+    "The internal visual score of 89 is deliberately not rounded up; automationReviewStatus PASS records current evidence integrity, not final artistic approval.",
+    "Revision 15 reaches 1496 triangles, four below the 1500-triangle target and below the canon maximum of 2000.",
+    "The dimension tolerance was tightened from 1 percent to 0.25 percent so the 2-stud depth obeys the canon's 0.005-stud tolerance.",
+    "The render verifier uses decoded RGBA8 pixels and records exact or tightly bounded comparison evidence; it never converts a visible difference into PASS.",
+    "Production remains forbidden while the canon is CANDIDATE, Studio/mobile gates are absent and humanReviewStatus is PENDING."
+  ]
+}

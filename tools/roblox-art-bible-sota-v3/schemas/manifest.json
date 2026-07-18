@@ -1,0 +1,254 @@
+{
+  "schemaVersion": "3.0.0",
+  "mappings": [
+    {
+      "path": "STATUS.json",
+      "schema": "schemas/status.schema.json"
+    },
+    {
+      "path": "art/art-direction.json",
+      "schema": "schemas/art-direction.schema.json"
+    },
+    {
+      "path": "art/selected/salvaged-frontier-constitution.json",
+      "schema": "schemas/art-constitution.schema.json"
+    },
+    {
+      "path": "art/decision/founder-direction-decision.json",
+      "schema": "schemas/creative-direction-decision.schema.json"
+    },
+    {
+      "path": "art/precanonical/policy.json",
+      "schema": "schemas/precanonical-policy.schema.json"
+    },
+    {
+      "path": "art/precanonical/examples/defense-barricade-small-brief.json",
+      "schema": "schemas/precanonical-brief.schema.json"
+    },
+    {
+      "path": "assets-3d/defense-barricade-small/precanonical/requests/defense-barricade-web-001/request.json",
+      "schema": "schemas/precanonical-request.schema.json"
+    },
+    {
+      "path": "art/calibration/calibration-kit.json",
+      "schema": "schemas/calibration-kit.schema.json"
+    },
+    {
+      "path": "art/calibration/camera-rig.json",
+      "schema": "schemas/camera-rig.schema.json"
+    },
+    {
+      "path": "art/calibration/render-matrix.json",
+      "schema": "schemas/render-matrix.schema.json"
+    },
+    {
+      "path": "art/calibration/component-evidence-map.json",
+      "schema": "schemas/component-evidence-map.schema.json"
+    },
+    {
+      "path": "art/palettes/semantic-palette.json",
+      "schema": "schemas/semantic-palette.schema.json"
+    },
+    {
+      "path": "art/palettes/faction-palettes.json",
+      "schema": "schemas/faction-palettes.schema.json"
+    },
+    {
+      "path": "art/materials/material-rules.json",
+      "schema": "schemas/material-rules.schema.json"
+    },
+    {
+      "path": "art/shape-language/rules.json",
+      "schema": "schemas/shape-rules.schema.json"
+    },
+    {
+      "path": "art/lighting/lighting-profiles.json",
+      "schema": "schemas/lighting-profiles.schema.json"
+    },
+    {
+      "path": "art/references/provenance.json",
+      "schema": "schemas/provenance.schema.json"
+    },
+    {
+      "path": "art/qa/visual-rubric.json",
+      "schema": "schemas/visual-rubric.schema.json"
+    },
+    {
+      "path": "art/qa/task-protocol.json",
+      "schema": "schemas/task-protocol.schema.json"
+    },
+    {
+      "path": "art/territories/industrial-toy-defense.json",
+      "schema": "schemas/territory.schema.json"
+    },
+    {
+      "path": "art/territories/salvaged-frontier.json",
+      "schema": "schemas/territory.schema.json"
+    },
+    {
+      "path": "art/territories/clean-tactical-diorama.json",
+      "schema": "schemas/territory.schema.json"
+    },
+    {
+      "path": "art/transfer/turret-fast-v1.json",
+      "schema": "schemas/transfer-asset.schema.json"
+    },
+    {
+      "path": "art/transfer/turret-fast-v1-review.json",
+      "schema": "schemas/transfer-review.schema.json"
+    },
+    {
+      "path": "art/canonical-visuals/source.json",
+      "schema": "schemas/visual-canon-source.schema.json"
+    },
+    {
+      "path": "art/canonical-visuals/object-product-contracts.json",
+      "schema": "schemas/object-product-contracts.schema.json"
+    },
+    {
+      "path": "art/canonical-visuals/catalog.json",
+      "schema": "schemas/visual-canon-catalog.schema.json"
+    },
+    {
+      "path": "art/canonical-visuals/industrial-toy-defense/barricade.json",
+      "schema": "schemas/visual-canon.schema.json"
+    },
+    {
+      "path": "art/canonical-visuals/industrial-toy-defense/objective_core.json",
+      "schema": "schemas/visual-canon.schema.json"
+    },
+    {
+      "path": "art/canonical-visuals/industrial-toy-defense/enemy_standard.json",
+      "schema": "schemas/visual-canon.schema.json"
+    },
+    {
+      "path": "art/canonical-visuals/industrial-toy-defense/floor_module.json",
+      "schema": "schemas/visual-canon.schema.json"
+    },
+    {
+      "path": "art/canonical-visuals/industrial-toy-defense/damage_effect.json",
+      "schema": "schemas/visual-canon.schema.json"
+    },
+    {
+      "path": "art/canonical-visuals/industrial-toy-defense/turret_fast_v1.json",
+      "schema": "schemas/visual-canon.schema.json"
+    },
+    {
+      "path": "art/canonical-visuals/salvaged-frontier/barricade.json",
+      "schema": "schemas/visual-canon.schema.json"
+    },
+    {
+      "path": "art/canonical-visuals/salvaged-frontier/objective_core.json",
+      "schema": "schemas/visual-canon.schema.json"
+    },
+    {
+      "path": "art/canonical-visuals/salvaged-frontier/enemy_standard.json",
+      "schema": "schemas/visual-canon.schema.json"
+    },
+    {
+      "path": "art/canonical-visuals/salvaged-frontier/floor_module.json",
+      "schema": "schemas/visual-canon.schema.json"
+    },
+    {
+      "path": "art/canonical-visuals/salvaged-frontier/damage_effect.json",
+      "schema": "schemas/visual-canon.schema.json"
+    },
+    {
+      "path": "art/canonical-visuals/salvaged-frontier/turret_fast_v1.json",
+      "schema": "schemas/visual-canon.schema.json"
+    },
+    {
+      "path": "art/canonical-visuals/clean-tactical-diorama/barricade.json",
+      "schema": "schemas/visual-canon.schema.json"
+    },
+    {
+      "path": "art/canonical-visuals/clean-tactical-diorama/objective_core.json",
+      "schema": "schemas/visual-canon.schema.json"
+    },
+    {
+      "path": "art/canonical-visuals/clean-tactical-diorama/enemy_standard.json",
+      "schema": "schemas/visual-canon.schema.json"
+    },
+    {
+      "path": "art/canonical-visuals/clean-tactical-diorama/floor_module.json",
+      "schema": "schemas/visual-canon.schema.json"
+    },
+    {
+      "path": "art/canonical-visuals/clean-tactical-diorama/damage_effect.json",
+      "schema": "schemas/visual-canon.schema.json"
+    },
+    {
+      "path": "art/canonical-visuals/clean-tactical-diorama/turret_fast_v1.json",
+      "schema": "schemas/visual-canon.schema.json"
+    },
+    {
+      "path": "art/qa/templates/studio-report.template.json",
+      "schema": "schemas/studio-report.schema.json"
+    },
+    {
+      "path": "art/qa/templates/performance-report.template.json",
+      "schema": "schemas/performance-report.schema.json"
+    },
+    {
+      "path": "art/qa/templates/studio-simulator-report.template.json",
+      "schema": "schemas/studio-simulator-report.schema.json"
+    },
+    {
+      "path": "evidence/mobile/studio-simulator/report.json",
+      "schema": "schemas/studio-simulator-report.schema.json"
+    },
+    {
+      "path": "evidence/static-verification-report.json",
+      "schema": "schemas/static-verification-report.schema.json",
+      "required": false
+    },
+    {
+      "path": "evidence/blender/blender-verification-report.json",
+      "schema": "schemas/blender-verification-report.schema.json",
+      "required": false
+    },
+    {
+      "path": "evidence/blender/smoke-evidence.json",
+      "schema": "schemas/smoke-evidence.schema.json",
+      "required": false
+    },
+    {
+      "path": "evidence/blender/full-evidence.json",
+      "schema": "schemas/full-evidence.schema.json",
+      "required": false
+    },
+    {
+      "path": "evidence/blender/visual-quality-report.json",
+      "schema": "schemas/visual-quality-report.schema.json",
+      "required": false
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/report.json",
+      "schema": "schemas/transfer-report.schema.json",
+      "required": false
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/studio-import-manifest.json",
+      "schema": "schemas/transfer-import-queue.schema.json",
+      "required": false
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/studio-publication-report.json",
+      "schema": "schemas/transfer-publication-report.schema.json",
+      "required": false
+    },
+    {
+      "path": "evidence/transfer/turret-fast-v1/studio-transfer-report.json",
+      "schema": "schemas/transfer-studio-report.schema.json",
+      "required": false
+    },
+    {
+      "path": "evidence/studio/reimport-probe/manifest.json",
+      "schema": "schemas/reimport-probe.schema.json"
+    },
+    {
+      "path": "evidence/studio/reimport-probe/studio-reimport-report.json",
+      "schema": "schemas/studio-reimport-report.schema.json"
+    }
+  ]
+}

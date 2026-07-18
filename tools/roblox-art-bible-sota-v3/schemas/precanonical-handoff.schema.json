@@ -1,0 +1,238 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/precanonical-handoff.schema.json",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/precanonical-handoff.schema.json"
+    },
+    "schemaVersion": {
+      "const": "1.1.0"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "const": "AWAITING_TASK_BROWSER_CAPABILITY"
+    },
+    "requestId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]+$"
+    },
+    "generationSurface": {
+      "const": "chatgpt_web_images"
+    },
+    "browserAdapter": {
+      "enum": [
+        "codex_chrome",
+        "codex_iab"
+      ]
+    },
+    "request": {
+      "$ref": "#/$defs/binding"
+    },
+    "preflight": {
+      "$ref": "#/$defs/binding"
+    },
+    "browserDoctor": {
+      "$ref": "#/$defs/binding"
+    },
+    "transportReadiness": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "const": "UNVERIFIED"
+        },
+        "scope": {
+          "const": "current_codex_task"
+        },
+        "requiredTaskTool": {
+          "const": "mcp__node_repl__js"
+        },
+        "requiredBackend": {
+          "enum": [
+            "chrome",
+            "iab"
+          ]
+        },
+        "localInstallationIsSufficient": {
+          "const": false
+        }
+      },
+      "required": [
+        "status",
+        "scope",
+        "requiredTaskTool",
+        "requiredBackend",
+        "localInstallationIsSufficient"
+      ],
+      "unevaluatedProperties": false
+    },
+    "prompt": {
+      "type": "string",
+      "minLength": 100
+    },
+    "negativeConstraints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 3
+      },
+      "minItems": 5,
+      "uniqueItems": true
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/binding"
+      },
+      "uniqueItems": true
+    },
+    "imageSpec": {
+      "type": "object",
+      "properties": {
+        "aspectRatio": {
+          "enum": [
+            "1:1",
+            "4:3",
+            "3:2",
+            "16:9"
+          ]
+        },
+        "background": {
+          "type": "string",
+          "minLength": 3
+        },
+        "lighting": {
+          "type": "string",
+          "minLength": 3
+        }
+      },
+      "required": [
+        "aspectRatio",
+        "background",
+        "lighting"
+      ],
+      "unevaluatedProperties": false
+    },
+    "humanConfirmationRequired": {
+      "type": "boolean"
+    },
+    "submissionAuthorized": {
+      "const": false
+    },
+    "remainingGenerations": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "quotaRemaining": {
+      "const": "UNKNOWN"
+    },
+    "instructions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 10
+      },
+      "minItems": 4,
+      "uniqueItems": true
+    },
+    "forbiddenActions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 10
+      },
+      "minItems": 5,
+      "uniqueItems": true
+    },
+    "productionApproved": {
+      "const": false
+    }
+  },
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "generatedAt",
+    "status",
+    "requestId",
+    "generationSurface",
+    "browserAdapter",
+    "request",
+    "preflight",
+    "browserDoctor",
+    "transportReadiness",
+    "prompt",
+    "negativeConstraints",
+    "attachments",
+    "imageSpec",
+    "humanConfirmationRequired",
+    "submissionAuthorized",
+    "remainingGenerations",
+    "quotaRemaining",
+    "instructions",
+    "forbiddenActions",
+    "productionApproved"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "browserAdapter": {
+            "const": "codex_iab"
+          }
+        },
+        "required": [
+          "browserAdapter"
+        ]
+      },
+      "then": {
+        "properties": {
+          "attachments": {
+            "maxItems": 0
+          },
+          "transportReadiness": {
+            "properties": {
+              "requiredBackend": {
+                "const": "iab"
+              }
+            }
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "transportReadiness": {
+            "properties": {
+              "requiredBackend": {
+                "const": "chrome"
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "binding": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "unevaluatedProperties": false
+    }
+  },
+  "unevaluatedProperties": false
+}

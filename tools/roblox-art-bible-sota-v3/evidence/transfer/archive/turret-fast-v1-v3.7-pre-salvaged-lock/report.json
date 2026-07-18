@@ -1,0 +1,911 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/transfer-report.schema.json",
+  "schemaVersion": "1.0.0",
+  "assetId": "turret_fast_v1",
+  "generatedAt": "2026-07-16T08:32:29.327444Z",
+  "rendererTruth": "BLENDER_TRANSFER_PREFLIGHT_HUMAN_AND_STUDIO_AUTHORITIES_REMAIN_SEPARATE",
+  "automatedStatus": "PASS",
+  "automatedScore": 100,
+  "overallStatus": "PARTIAL",
+  "inputHashes": {
+    "contract": "11f64322e7baa6e6c6d8fc31801ab9298d99cb85301cd9600ff334286875a7e3",
+    "humanReview": "abdf90bce6c33ff7f4ea64717d1c6efc635ca7338e08f49f346759165df02d3f",
+    "generator": "b17d84f9eaecb9e717300dfa6732eb3211bc1ac20e1301db274e93fc7b33f0f2",
+    "proofBuilder": "14f7fc4a62dc47fbc1873a96182325dffd3373c97e971d802d8fecee09c09275",
+    "transferBuildValidator": "77e0b94ac37de1fb491e5e1c9eeeefb3be6a7ca211c27eee1f462f97649eec21",
+    "metricLibrary": "705628d2ea387b52384f15d7e2a0456db38724a3bb994e01147d4461b9e11122",
+    "baseCompiler": "0e1d1497a592e7554f88ae3f3d93ca4070cb265ac1bd65ab85d5157b87a0da65",
+    "shapeLanguage": "76fcd0eaaace7f34d7fb88fdc6470315518efd8e586649393ceb32356a7addc7",
+    "semanticPalette": "26c8146c2d50becaa6e85d3af53e5a1ead9f0952897eeebb380c0a5e0d710a36",
+    "materials": "6e2ad4bd95cb2dd4776b65e6dfeb088af35349a7ec74469bd6c0f40edd553f5e",
+    "camera": "f2daf7d92ff4db38a588cb29588c5856c8894ec0c11d30d3d01c527bf7cd8d44",
+    "lighting": "8e3db2df064ac33f79703e21aa702709a7162fa43b56d07f706e3af03647e085",
+    "industrial-toy-defense": "376db838f206a46e114993ab5c666a155341215931069b879527666ebd144450",
+    "salvaged-frontier": "21d9dd89f05f64e6504f940b0090e30b12a785a9b6efc1f45b6216b2086604cb",
+    "clean-tactical-diorama": "dbd1c6cb8aa43922a884751abcb8d0895e312439eb17d0ed501a5d3e50282d3c"
+  },
+  "thresholds": {
+    "minimumMaskAreaRatio": 0.01,
+    "maximumFrameContactPixels": 0,
+    "minimumDamagedDifference": 0.012,
+    "minimumCriticalDifference": 0.045,
+    "minimumCriticalLead": 0.008,
+    "minimumCrossTerritoryDifference": 0.04,
+    "minimumFrontBackDifference": 0.025,
+    "minimumFarBboxHeightRatio": 0.035,
+    "minimumPortraitBboxHeightRatio": 0.18
+  },
+  "territories": [
+    {
+      "territoryId": "industrial-toy-defense",
+      "status": "PASS",
+      "fullBuildReportSha256": "c5fb51969265d56fe0db8c713aba893c70b6ad91e3493a1a2e4a5796d70bd97b",
+      "geometry": {
+        "variantCount": 3,
+        "maximumTriangles": 1148,
+        "triangleBudget": 3500,
+        "exportCount": 3,
+        "fullRenderCount": 36
+      },
+      "grammarAuditStatus": "PASS",
+      "determinism": {
+        "status": "PASS",
+        "runExitCodes": [
+          0,
+          0
+        ],
+        "canonicalReportSha256": "1f7b7204129c4218922c0fab327ca7c44fe61940913486282409e7adf45211c2",
+        "exportSha256": {
+          "intact": "a89d7b7277c72ae9c3cb0fb0bc76c85867f3c2da6ae316b4b5ff5abf4430c8c6",
+          "damaged": "80ba6a8d1fce1b70fcb8ce135f8f34840e8625aa936631e1043af6f1794d58d3",
+          "critical": "0120d10c32390c5c5618c0398ee2da3bf83a0e070bda03fb0d553825cf949d88"
+        }
+      },
+      "portableArtifacts": [
+        {
+          "kind": "BACK_SILHOUETTE",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/orientation/back_silhouette.png",
+          "bytes": 202050,
+          "sha256": "33604bba21c2422dd1cf414bfa80ab8fefc03cde0d8c8e34522afc476cade698"
+        },
+        {
+          "kind": "FAR_MOBILE",
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/far-mobile/critical.png",
+          "bytes": 200957,
+          "sha256": "06aec94d3159634ea63fb3bd84ead422516574b78b8739cdcbcfbb1359e747bd"
+        },
+        {
+          "kind": "FAR_MOBILE",
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/far-mobile/damaged.png",
+          "bytes": 201339,
+          "sha256": "b2c997b80bad74650a7379bd772d7795934383aa02ca7072c89cad1716d48aaa"
+        },
+        {
+          "kind": "FAR_MOBILE",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/far-mobile/intact.png",
+          "bytes": 201131,
+          "sha256": "4e30ad14a885b3f860648f5c69e799a6d5da67b966cb47c4f280644a636c29d0"
+        },
+        {
+          "kind": "FRONT_SILHOUETTE",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/orientation/front_silhouette.png",
+          "bytes": 202155,
+          "sha256": "0656572218c9f49ba74fdb8dfc795a8a66efcd3177f834ed223695dec842e1be"
+        },
+        {
+          "kind": "GLB",
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/exports/critical.glb",
+          "bytes": 78956,
+          "sha256": "0120d10c32390c5c5618c0398ee2da3bf83a0e070bda03fb0d553825cf949d88"
+        },
+        {
+          "kind": "GLB",
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/exports/damaged.glb",
+          "bytes": 92796,
+          "sha256": "80ba6a8d1fce1b70fcb8ce135f8f34840e8625aa936631e1043af6f1794d58d3"
+        },
+        {
+          "kind": "GLB",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/exports/intact.glb",
+          "bytes": 89436,
+          "sha256": "a89d7b7277c72ae9c3cb0fb0bc76c85867f3c2da6ae316b4b5ff5abf4430c8c6"
+        },
+        {
+          "kind": "HERO",
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/hero/critical.png",
+          "bytes": 805455,
+          "sha256": "91c89b802c6c4d7345241b3fdb851fda15bd0cdba1b32ef7fa67220af531b6d7"
+        },
+        {
+          "kind": "HERO",
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/hero/damaged.png",
+          "bytes": 843904,
+          "sha256": "1d3cc65106b49fc0a73d3fee526c3e0fbb551da0d5017e9dd398a5fa494179f0"
+        },
+        {
+          "kind": "HERO",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/hero/intact.png",
+          "bytes": 832563,
+          "sha256": "6488b83a21dd9a6556ba4af8f6ae3dcedd41c964c6482146777685e291100f67"
+        },
+        {
+          "kind": "PORTRAIT_MOBILE",
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/portrait-mobile/critical.png",
+          "bytes": 216111,
+          "sha256": "5f1dfb7ee86b24f0031d6485eb466622f0c2b821245039500bb2cf6d95fe8535"
+        },
+        {
+          "kind": "PORTRAIT_MOBILE",
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/portrait-mobile/damaged.png",
+          "bytes": 218386,
+          "sha256": "4205d42923e0ff92bd1512c524b5fc20868c54e4da8d3894736bcbc76e5d3de3"
+        },
+        {
+          "kind": "PORTRAIT_MOBILE",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/portrait-mobile/intact.png",
+          "bytes": 218604,
+          "sha256": "7e4df31d276a5b4fc315d9c5fdb3c2290ef98d347014ed2a84b1fba012cc1e26"
+        },
+        {
+          "kind": "STATE_SILHOUETTE",
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/state-silhouette/critical.png",
+          "bytes": 201580,
+          "sha256": "861bd9bee7d5f19a228ba5359f07e9afed2ddfdb8cfe16ab87f2b8b41beb15bd"
+        },
+        {
+          "kind": "STATE_SILHOUETTE",
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/state-silhouette/damaged.png",
+          "bytes": 202075,
+          "sha256": "7303dc513ce5f46065787b36ee85d28760dcf032e9bfa4b24ae78f189bc06493"
+        },
+        {
+          "kind": "STATE_SILHOUETTE",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/state-silhouette/intact.png",
+          "bytes": 201652,
+          "sha256": "4a80200894ec1de21ac25e5f7ccdfa4749191d0edd48832e2e801722b25e696e"
+        }
+      ],
+      "silhouetteCases": [
+        {
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/state-silhouette/critical.png",
+          "sha256": "861bd9bee7d5f19a228ba5359f07e9afed2ddfdb8cfe16ab87f2b8b41beb15bd",
+          "maskAreaRatio": 0.022096354166666665,
+          "bboxWidthRatio": 0.134375,
+          "bboxHeightRatio": 0.25833333333333336,
+          "frameContactPixels": 0,
+          "pass": true
+        },
+        {
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/state-silhouette/damaged.png",
+          "sha256": "7303dc513ce5f46065787b36ee85d28760dcf032e9bfa4b24ae78f189bc06493",
+          "maskAreaRatio": 0.025959201388888888,
+          "bboxWidthRatio": 0.1484375,
+          "bboxHeightRatio": 0.28055555555555556,
+          "frameContactPixels": 0,
+          "pass": true
+        },
+        {
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/state-silhouette/intact.png",
+          "sha256": "4a80200894ec1de21ac25e5f7ccdfa4749191d0edd48832e2e801722b25e696e",
+          "maskAreaRatio": 0.028936631944444444,
+          "bboxWidthRatio": 0.15625,
+          "bboxHeightRatio": 0.29444444444444445,
+          "frameContactPixels": 0,
+          "pass": true
+        }
+      ],
+      "stateComparisons": [
+        {
+          "fromState": "intact",
+          "toState": "damaged",
+          "intersectionOverUnion": 0.8682422451994092,
+          "differenceRatio": 0.13175775480059082,
+          "minimumDifference": 0.012,
+          "pass": true
+        },
+        {
+          "fromState": "intact",
+          "toState": "critical",
+          "intersectionOverUnion": 0.6470093850679367,
+          "differenceRatio": 0.3529906149320633,
+          "minimumDifference": 0.045,
+          "pass": true
+        }
+      ],
+      "severityOrdering": {
+        "damagedDifferenceRatio": 0.13175775480059082,
+        "criticalDifferenceRatio": 0.3529906149320633,
+        "minimumCriticalLead": 0.008,
+        "pass": true
+      },
+      "orientationComparison": {
+        "fromState": "intact",
+        "toState": "intact",
+        "intersectionOverUnion": 0.8190816607093758,
+        "differenceRatio": 0.18091833929062417,
+        "minimumDifference": 0.025,
+        "pass": true
+      },
+      "mobileFraming": [
+        {
+          "kind": "FAR_MOBILE",
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/far-mobile/critical.png",
+          "foregroundAreaRatio": 0.0015755208333333333,
+          "foregroundBboxHeightRatio": 0.06666666666666667,
+          "frameContactPixels": 0,
+          "pass": true
+        },
+        {
+          "kind": "FAR_MOBILE",
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/far-mobile/damaged.png",
+          "foregroundAreaRatio": 0.0018402777777777777,
+          "foregroundBboxHeightRatio": 0.07222222222222222,
+          "frameContactPixels": 0,
+          "pass": true
+        },
+        {
+          "kind": "FAR_MOBILE",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/far-mobile/intact.png",
+          "foregroundAreaRatio": 0.002026909722222222,
+          "foregroundBboxHeightRatio": 0.075,
+          "frameContactPixels": 0,
+          "pass": true
+        },
+        {
+          "kind": "PORTRAIT_MOBILE",
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/portrait-mobile/critical.png",
+          "foregroundAreaRatio": 0.06760416666666667,
+          "foregroundBboxHeightRatio": 0.2609375,
+          "frameContactPixels": 0,
+          "pass": true
+        },
+        {
+          "kind": "PORTRAIT_MOBILE",
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/portrait-mobile/damaged.png",
+          "foregroundAreaRatio": 0.07815972222222223,
+          "foregroundBboxHeightRatio": 0.2828125,
+          "frameContactPixels": 0,
+          "pass": true
+        },
+        {
+          "kind": "PORTRAIT_MOBILE",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/industrial-toy-defense/portrait-mobile/intact.png",
+          "foregroundAreaRatio": 0.08555989583333333,
+          "foregroundBboxHeightRatio": 0.2984375,
+          "frameContactPixels": 0,
+          "pass": true
+        }
+      ],
+      "issues": []
+    },
+    {
+      "territoryId": "salvaged-frontier",
+      "status": "PASS",
+      "fullBuildReportSha256": "65769ee71add81c905603be8d2745431667c812f0ec604f859a0f7ac8bbfe281",
+      "geometry": {
+        "variantCount": 3,
+        "maximumTriangles": 1156,
+        "triangleBudget": 3500,
+        "exportCount": 3,
+        "fullRenderCount": 36
+      },
+      "grammarAuditStatus": "PASS",
+      "determinism": {
+        "status": "PASS",
+        "runExitCodes": [
+          0,
+          0
+        ],
+        "canonicalReportSha256": "51efff4b61942be6e0c4c7990fc2d4247a0198a51b12b42d78e2e12601ce439f",
+        "exportSha256": {
+          "intact": "f930ea0f5d74623ba7839c92f709539f500284488f0e96619bd88523498915f0",
+          "damaged": "1d8e63f81ae6e4d0f29dd037ee671c3f52cacf8e166a42d162e381c883643184",
+          "critical": "33a924f037d44bda121a8ef69d066cb500b9ddb7f38d590b4128e6cfd2a96032"
+        }
+      },
+      "portableArtifacts": [
+        {
+          "kind": "BACK_SILHOUETTE",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/orientation/back_silhouette.png",
+          "bytes": 223962,
+          "sha256": "0f0ad17294ccdffd1c870cf8d28fa2edb16148bc954be98172a8ff3949885ce3"
+        },
+        {
+          "kind": "FAR_MOBILE",
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/far-mobile/critical.png",
+          "bytes": 230876,
+          "sha256": "e100d02b63be9772cb071c9a2cc8307c90b7b61d03704dbb1e8f2f33e8b0ba2d"
+        },
+        {
+          "kind": "FAR_MOBILE",
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/far-mobile/damaged.png",
+          "bytes": 230874,
+          "sha256": "4d7061857918263954edd6b22d12b99b4bf0f8e7babe510407fa31f041fd6905"
+        },
+        {
+          "kind": "FAR_MOBILE",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/far-mobile/intact.png",
+          "bytes": 230965,
+          "sha256": "1d9f931dc12708cfacf375253f7ebf063ef8bc3ced46b48deaef296ee78df5f9"
+        },
+        {
+          "kind": "FRONT_SILHOUETTE",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/orientation/front_silhouette.png",
+          "bytes": 223749,
+          "sha256": "3886966065426639d7f9561e6b2624e9533f85cfbec87b4a4db0d0ee65f375e6"
+        },
+        {
+          "kind": "GLB",
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/exports/critical.glb",
+          "bytes": 80664,
+          "sha256": "33a924f037d44bda121a8ef69d066cb500b9ddb7f38d590b4128e6cfd2a96032"
+        },
+        {
+          "kind": "GLB",
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/exports/damaged.glb",
+          "bytes": 94500,
+          "sha256": "1d8e63f81ae6e4d0f29dd037ee671c3f52cacf8e166a42d162e381c883643184"
+        },
+        {
+          "kind": "GLB",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/exports/intact.glb",
+          "bytes": 89420,
+          "sha256": "f930ea0f5d74623ba7839c92f709539f500284488f0e96619bd88523498915f0"
+        },
+        {
+          "kind": "HERO",
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/hero/critical.png",
+          "bytes": 815173,
+          "sha256": "b0fa5a93f4f9705bfb939ce3f3f7f7769fd08701d0833087ea2ba49ce60559e9"
+        },
+        {
+          "kind": "HERO",
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/hero/damaged.png",
+          "bytes": 824796,
+          "sha256": "580a15035ad9caf97c6737c59eea83fd8cd6f5207639638fb44b7ebf126dca87"
+        },
+        {
+          "kind": "HERO",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/hero/intact.png",
+          "bytes": 820129,
+          "sha256": "80b11f4207b20481408dc13e25641ea396a03d057a42aa3ebafde06dad1bda45"
+        },
+        {
+          "kind": "PORTRAIT_MOBILE",
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/portrait-mobile/critical.png",
+          "bytes": 241337,
+          "sha256": "6da84a7b8eac69879322399e77ceb1ee39d6ee5ae1bb61251ea8b86ae8375ac5"
+        },
+        {
+          "kind": "PORTRAIT_MOBILE",
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/portrait-mobile/damaged.png",
+          "bytes": 242805,
+          "sha256": "38d58f0a0505a2e0b738caf18e75a2b2d17ec0624f44d930841320ffadae6951"
+        },
+        {
+          "kind": "PORTRAIT_MOBILE",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/portrait-mobile/intact.png",
+          "bytes": 242154,
+          "sha256": "3452038c5d2e307744159a6e26be9d73dbfc98b53af9a52e86065507b2f799fb"
+        },
+        {
+          "kind": "STATE_SILHOUETTE",
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/state-silhouette/critical.png",
+          "bytes": 225171,
+          "sha256": "c5ed0b5f224562c1961a8a2c1b578bfc24a2ad3caf2c3459292e19a042445b0d"
+        },
+        {
+          "kind": "STATE_SILHOUETTE",
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/state-silhouette/damaged.png",
+          "bytes": 224661,
+          "sha256": "e3be72ad02410a1ea2862a32c4b993a6ae4ab498b5cf2ec0ed78fd7641d48b7d"
+        },
+        {
+          "kind": "STATE_SILHOUETTE",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/state-silhouette/intact.png",
+          "bytes": 224740,
+          "sha256": "c8bc94c62b3ea99091ff54c773e009d8c591cae636b0acd524fa21e670423d1a"
+        }
+      ],
+      "silhouetteCases": [
+        {
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/state-silhouette/critical.png",
+          "sha256": "c5ed0b5f224562c1961a8a2c1b578bfc24a2ad3caf2c3459292e19a042445b0d",
+          "maskAreaRatio": 0.02165798611111111,
+          "bboxWidthRatio": 0.15625,
+          "bboxHeightRatio": 0.25,
+          "frameContactPixels": 0,
+          "pass": true
+        },
+        {
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/state-silhouette/damaged.png",
+          "sha256": "e3be72ad02410a1ea2862a32c4b993a6ae4ab498b5cf2ec0ed78fd7641d48b7d",
+          "maskAreaRatio": 0.027513020833333332,
+          "bboxWidthRatio": 0.1515625,
+          "bboxHeightRatio": 0.2916666666666667,
+          "frameContactPixels": 0,
+          "pass": true
+        },
+        {
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/state-silhouette/intact.png",
+          "sha256": "c8bc94c62b3ea99091ff54c773e009d8c591cae636b0acd524fa21e670423d1a",
+          "maskAreaRatio": 0.028953993055555554,
+          "bboxWidthRatio": 0.15625,
+          "bboxHeightRatio": 0.3,
+          "frameContactPixels": 0,
+          "pass": true
+        }
+      ],
+      "stateComparisons": [
+        {
+          "fromState": "intact",
+          "toState": "damaged",
+          "intersectionOverUnion": 0.9237024988910247,
+          "differenceRatio": 0.07629750110897526,
+          "minimumDifference": 0.012,
+          "pass": true
+        },
+        {
+          "fromState": "intact",
+          "toState": "critical",
+          "intersectionOverUnion": 0.6498302207130731,
+          "differenceRatio": 0.35016977928692694,
+          "minimumDifference": 0.045,
+          "pass": true
+        }
+      ],
+      "severityOrdering": {
+        "damagedDifferenceRatio": 0.07629750110897526,
+        "criticalDifferenceRatio": 0.35016977928692694,
+        "minimumCriticalLead": 0.008,
+        "pass": true
+      },
+      "orientationComparison": {
+        "fromState": "intact",
+        "toState": "intact",
+        "intersectionOverUnion": 0.7073757349011224,
+        "differenceRatio": 0.2926242650988776,
+        "minimumDifference": 0.025,
+        "pass": true
+      },
+      "mobileFraming": [
+        {
+          "kind": "FAR_MOBILE",
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/far-mobile/critical.png",
+          "foregroundAreaRatio": 0.0014670138888888888,
+          "foregroundBboxHeightRatio": 0.06666666666666667,
+          "frameContactPixels": 0,
+          "pass": true
+        },
+        {
+          "kind": "FAR_MOBILE",
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/far-mobile/damaged.png",
+          "foregroundAreaRatio": 0.0018489583333333333,
+          "foregroundBboxHeightRatio": 0.07222222222222222,
+          "frameContactPixels": 0,
+          "pass": true
+        },
+        {
+          "kind": "FAR_MOBILE",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/far-mobile/intact.png",
+          "foregroundAreaRatio": 0.0019487847222222222,
+          "foregroundBboxHeightRatio": 0.075,
+          "frameContactPixels": 0,
+          "pass": true
+        },
+        {
+          "kind": "PORTRAIT_MOBILE",
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/portrait-mobile/critical.png",
+          "foregroundAreaRatio": 0.06498263888888889,
+          "foregroundBboxHeightRatio": 0.2515625,
+          "frameContactPixels": 0,
+          "pass": true
+        },
+        {
+          "kind": "PORTRAIT_MOBILE",
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/portrait-mobile/damaged.png",
+          "foregroundAreaRatio": 0.07833767361111112,
+          "foregroundBboxHeightRatio": 0.2953125,
+          "frameContactPixels": 0,
+          "pass": true
+        },
+        {
+          "kind": "PORTRAIT_MOBILE",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/salvaged-frontier/portrait-mobile/intact.png",
+          "foregroundAreaRatio": 0.08319878472222222,
+          "foregroundBboxHeightRatio": 0.3015625,
+          "frameContactPixels": 0,
+          "pass": true
+        }
+      ],
+      "issues": []
+    },
+    {
+      "territoryId": "clean-tactical-diorama",
+      "status": "PASS",
+      "fullBuildReportSha256": "6767a9acdec62242c8af6fad42ac9ee59cdc7aab08cc7eb56e3a75c84b48654d",
+      "geometry": {
+        "variantCount": 3,
+        "maximumTriangles": 920,
+        "triangleBudget": 3500,
+        "exportCount": 3,
+        "fullRenderCount": 36
+      },
+      "grammarAuditStatus": "PASS",
+      "determinism": {
+        "status": "PASS",
+        "runExitCodes": [
+          0,
+          0
+        ],
+        "canonicalReportSha256": "86692ad978c9edcc88a0900332e81065fc377928c74ae5781b77c69b9c271c8b",
+        "exportSha256": {
+          "intact": "88a76d59214eb90dfa8e077eadba59a2f535e9471c75deb2a6afcf42f455291f",
+          "damaged": "7f3f501a4c14afc42fbbef91ef15d374d6ffc95bbd06c0d28a1f3e3203f19e3d",
+          "critical": "69e4a6b110f35b6e18353f01f4f447d6be17b34bb6c1440dda4f30415e5fcfb7"
+        }
+      },
+      "portableArtifacts": [
+        {
+          "kind": "BACK_SILHOUETTE",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/orientation/back_silhouette.png",
+          "bytes": 207580,
+          "sha256": "dd8f5864844ff71012da130001f7abbef5c9aa014508d5687c655080d0347a32"
+        },
+        {
+          "kind": "FAR_MOBILE",
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/far-mobile/critical.png",
+          "bytes": 211288,
+          "sha256": "66cc1dad3d423218ba21f9ece7ee712cf72fc435494b494b5a39921ef740f14f"
+        },
+        {
+          "kind": "FAR_MOBILE",
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/far-mobile/damaged.png",
+          "bytes": 211858,
+          "sha256": "3ea0fbde831df75319b465b65ebbb0cb4448b80ad0cbd1e7fc1b47d038881ef4"
+        },
+        {
+          "kind": "FAR_MOBILE",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/far-mobile/intact.png",
+          "bytes": 211646,
+          "sha256": "ae15aa1677dc798598509ccf51d640471ed91444db4e3d8e01a8cb9c9465a6e8"
+        },
+        {
+          "kind": "FRONT_SILHOUETTE",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/orientation/front_silhouette.png",
+          "bytes": 207789,
+          "sha256": "edb568e901bf80162c89b6f20f06f16439789d2f87e36759710b571f0b66687d"
+        },
+        {
+          "kind": "GLB",
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/exports/critical.glb",
+          "bytes": 64052,
+          "sha256": "69e4a6b110f35b6e18353f01f4f447d6be17b34bb6c1440dda4f30415e5fcfb7"
+        },
+        {
+          "kind": "GLB",
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/exports/damaged.glb",
+          "bytes": 72568,
+          "sha256": "7f3f501a4c14afc42fbbef91ef15d374d6ffc95bbd06c0d28a1f3e3203f19e3d"
+        },
+        {
+          "kind": "GLB",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/exports/intact.glb",
+          "bytes": 69736,
+          "sha256": "88a76d59214eb90dfa8e077eadba59a2f535e9471c75deb2a6afcf42f455291f"
+        },
+        {
+          "kind": "HERO",
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/hero/critical.png",
+          "bytes": 797409,
+          "sha256": "e5e77722f3d59a6d3e35447907d5f2201d3c1c0128a7f8a9787619ffef7345d7"
+        },
+        {
+          "kind": "HERO",
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/hero/damaged.png",
+          "bytes": 828861,
+          "sha256": "a9ce50322f2453a154a718421df33fd4b7990a4e1cafbe962967226fa3f09c2e"
+        },
+        {
+          "kind": "HERO",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/hero/intact.png",
+          "bytes": 823315,
+          "sha256": "58f220185457b305042c6cd22a08137a7ab367ac9dc4e01cd1270319c42f1e5b"
+        },
+        {
+          "kind": "PORTRAIT_MOBILE",
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/portrait-mobile/critical.png",
+          "bytes": 223347,
+          "sha256": "500b9ce6b9bebe7b18c1aded3d87f1e04927af4825a4f5b657a15d220ddd9e40"
+        },
+        {
+          "kind": "PORTRAIT_MOBILE",
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/portrait-mobile/damaged.png",
+          "bytes": 227843,
+          "sha256": "1fb5ba873b03703bc378d2dc37d6f5744758f4eeb2861561c16d6fe721dd435a"
+        },
+        {
+          "kind": "PORTRAIT_MOBILE",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/portrait-mobile/intact.png",
+          "bytes": 226412,
+          "sha256": "ca7ba8537d71bb550e08c48b89d76ec3a92c48f648f90554fc8d28e04452d450"
+        },
+        {
+          "kind": "STATE_SILHOUETTE",
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/state-silhouette/critical.png",
+          "bytes": 207360,
+          "sha256": "a9424c7453cd38c5977df2d11f0b442eb0dd19c542f30801bbd893b3ee88abbf"
+        },
+        {
+          "kind": "STATE_SILHOUETTE",
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/state-silhouette/damaged.png",
+          "bytes": 207058,
+          "sha256": "a2c4ce916deec2b3d1aadade33ae183b8f1da9d8a55caa289685fd2460410550"
+        },
+        {
+          "kind": "STATE_SILHOUETTE",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/state-silhouette/intact.png",
+          "bytes": 206791,
+          "sha256": "3471c0454c3fd5ce1c1cb757cabe2b8364459ede0c8e6149ab4d0283f16a6517"
+        }
+      ],
+      "silhouetteCases": [
+        {
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/state-silhouette/critical.png",
+          "sha256": "a9424c7453cd38c5977df2d11f0b442eb0dd19c542f30801bbd893b3ee88abbf",
+          "maskAreaRatio": 0.02178385416666667,
+          "bboxWidthRatio": 0.134375,
+          "bboxHeightRatio": 0.25833333333333336,
+          "frameContactPixels": 0,
+          "pass": true
+        },
+        {
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/state-silhouette/damaged.png",
+          "sha256": "a2c4ce916deec2b3d1aadade33ae183b8f1da9d8a55caa289685fd2460410550",
+          "maskAreaRatio": 0.027799479166666665,
+          "bboxWidthRatio": 0.15,
+          "bboxHeightRatio": 0.2916666666666667,
+          "frameContactPixels": 0,
+          "pass": true
+        },
+        {
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/state-silhouette/intact.png",
+          "sha256": "3471c0454c3fd5ce1c1cb757cabe2b8364459ede0c8e6149ab4d0283f16a6517",
+          "maskAreaRatio": 0.02837673611111111,
+          "bboxWidthRatio": 0.1546875,
+          "bboxHeightRatio": 0.3,
+          "frameContactPixels": 0,
+          "pass": true
+        }
+      ],
+      "stateComparisons": [
+        {
+          "fromState": "intact",
+          "toState": "damaged",
+          "intersectionOverUnion": 0.900029359953024,
+          "differenceRatio": 0.09997064004697598,
+          "minimumDifference": 0.012,
+          "pass": true
+        },
+        {
+          "fromState": "intact",
+          "toState": "critical",
+          "intersectionOverUnion": 0.6756560823546469,
+          "differenceRatio": 0.3243439176453531,
+          "minimumDifference": 0.045,
+          "pass": true
+        }
+      ],
+      "severityOrdering": {
+        "damagedDifferenceRatio": 0.09997064004697598,
+        "criticalDifferenceRatio": 0.3243439176453531,
+        "minimumCriticalLead": 0.008,
+        "pass": true
+      },
+      "orientationComparison": {
+        "fromState": "intact",
+        "toState": "intact",
+        "intersectionOverUnion": 0.8812071330589849,
+        "differenceRatio": 0.1187928669410151,
+        "minimumDifference": 0.025,
+        "pass": true
+      },
+      "mobileFraming": [
+        {
+          "kind": "FAR_MOBILE",
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/far-mobile/critical.png",
+          "foregroundAreaRatio": 0.0014453125,
+          "foregroundBboxHeightRatio": 0.06666666666666667,
+          "frameContactPixels": 0,
+          "pass": true
+        },
+        {
+          "kind": "FAR_MOBILE",
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/far-mobile/damaged.png",
+          "foregroundAreaRatio": 0.0016710069444444444,
+          "foregroundBboxHeightRatio": 0.075,
+          "frameContactPixels": 0,
+          "pass": true
+        },
+        {
+          "kind": "FAR_MOBILE",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/far-mobile/intact.png",
+          "foregroundAreaRatio": 0.0017621527777777778,
+          "foregroundBboxHeightRatio": 0.075,
+          "frameContactPixels": 0,
+          "pass": true
+        },
+        {
+          "kind": "PORTRAIT_MOBILE",
+          "stateId": "critical",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/portrait-mobile/critical.png",
+          "foregroundAreaRatio": 0.06538628472222222,
+          "foregroundBboxHeightRatio": 0.2625,
+          "frameContactPixels": 0,
+          "pass": true
+        },
+        {
+          "kind": "PORTRAIT_MOBILE",
+          "stateId": "damaged",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/portrait-mobile/damaged.png",
+          "foregroundAreaRatio": 0.08454861111111112,
+          "foregroundBboxHeightRatio": 0.2984375,
+          "frameContactPixels": 0,
+          "pass": true
+        },
+        {
+          "kind": "PORTRAIT_MOBILE",
+          "stateId": "intact",
+          "path": "evidence/transfer/turret-fast-v1/clean-tactical-diorama/portrait-mobile/intact.png",
+          "foregroundAreaRatio": 0.09002170138888889,
+          "foregroundBboxHeightRatio": 0.3078125,
+          "frameContactPixels": 0,
+          "pass": true
+        }
+      ],
+      "issues": []
+    }
+  ],
+  "crossTerritoryComparisons": [
+    {
+      "fromState": "intact",
+      "toState": "intact",
+      "intersectionOverUnion": 0.8701626472237801,
+      "differenceRatio": 0.12983735277621988,
+      "minimumDifference": 0.04,
+      "pass": true,
+      "territoryA": "industrial-toy-defense",
+      "territoryB": "salvaged-frontier"
+    },
+    {
+      "fromState": "intact",
+      "toState": "intact",
+      "intersectionOverUnion": 0.9176590182979959,
+      "differenceRatio": 0.0823409817020041,
+      "minimumDifference": 0.04,
+      "pass": true,
+      "territoryA": "industrial-toy-defense",
+      "territoryB": "clean-tactical-diorama"
+    },
+    {
+      "fromState": "intact",
+      "toState": "intact",
+      "intersectionOverUnion": 0.8363686917836786,
+      "differenceRatio": 0.16363130821632144,
+      "minimumDifference": 0.04,
+      "pass": true,
+      "territoryA": "salvaged-frontier",
+      "territoryB": "clean-tactical-diorama"
+    }
+  ],
+  "evidencePackageSha256": "86cfb1650997310572d31e5c85d08534d0a73eabf9f7cb3cb54dae918bd5a0c1",
+  "reviewArtifacts": [
+    {
+      "kind": "HTML_GALLERY",
+      "path": "evidence/transfer/turret-fast-v1/review/index.html",
+      "bytes": 7522,
+      "sha256": "87812625ada6e433558af45cb64153392c15dad55ba42104c4641b94dca2d0ed"
+    },
+    {
+      "kind": "HERO_CONTACT_SHEET",
+      "path": "evidence/transfer/turret-fast-v1/review/hero-contact-sheet.png",
+      "bytes": 352789,
+      "sha256": "68e0e8ba037a7b6a091148edb6af07d9b35e51f7d34d56bd6b42283088a6c173"
+    },
+    {
+      "kind": "SILHOUETTE_CONTACT_SHEET",
+      "path": "evidence/transfer/turret-fast-v1/review/silhouette-contact-sheet.png",
+      "bytes": 257740,
+      "sha256": "37b40e6615aa87947d01642d354a9f168226b9958f31a1945d818a730746ea47"
+    }
+  ],
+  "humanReview": {
+    "status": "PENDING",
+    "selectedTerritory": null,
+    "reviewer": null,
+    "reviewedAt": null,
+    "evidencePackageSha256": null,
+    "decision": null,
+    "scoreTotal": null
+  },
+  "issues": [],
+  "blockingReasons": [
+    "Human art authority has not approved turret_fast_v1 against the eventually selected territory and this exact evidence package.",
+    "No human-selected territory is recorded in the transfer review; the automated proof remains cross-territory preflight."
+  ]
+}

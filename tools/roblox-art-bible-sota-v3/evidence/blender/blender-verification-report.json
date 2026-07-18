@@ -1,0 +1,89 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/blender-verification-report.schema.json",
+  "schemaVersion": "3.0.0",
+  "status": "PASS",
+  "generatedAt": "2026-07-17T13:10:12.212361Z",
+  "blenderExecutable": "C:\\Program Files\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "inputHashes": {
+    "generator": "56595b8c3e615f19ff84d4f9e52969d9a63be0c6b48150d29173b0f4a3016880",
+    "materials": "41fadb667eb50a2252e6721649afee1b38b98a667ea7c2051f5f465ad9896b83"
+  },
+  "territories": [
+    {
+      "territoryId": "industrial-toy-defense",
+      "status": "PASS",
+      "runExitCodes": [
+        0,
+        0
+      ],
+      "canonicalReportSha256": "5f88a8bd6a849575d1a5c1ec882f6319811bc91f90c0c3fb3f963d9c02dbb73b",
+      "exportSha256": {
+        "barricade/intact": "35a39bd8d182343ca255650c6860146c0592a8e27bbb97396fd429d7532e9493",
+        "barricade/damaged": "3ad993dc4bd9b0890666e6b1908447be65e60d16fba5dae1b32505a69e385e79",
+        "barricade/critical": "57518c35a40863aa9a0ec3790300edacb7f84bc40f7570f7542e11f6143ab953",
+        "objective_core/intact": "8b697d9c344c128416f253054be342dc7b1ef473f4614cb641779d0a8471d91f",
+        "objective_core/damaged": "d2bcde98add00ee26b3558d282cdde9f44e35814d27f30a9b83087f22b568762",
+        "objective_core/critical": "23198adf6df7485ce4013ebf98622be8017c0e14189fff94a29776f79d1a6548",
+        "enemy_standard/intact": "d83a515fc8d0916719f435d599888da57dff01e83ee4bb6fccfa094d115f7b55",
+        "enemy_standard/damaged": "8b28dee11db698910743b6dc822c711d99fa03de6543cff5c1dd6feae8b743ff",
+        "enemy_standard/critical": "8dee21efc795c4d61ce9c6d44f80a9cae019c6b7985b90fe6c1711fb0b2aaa63",
+        "floor_module/intact": "5015f30fbdbbe2f9274ab2a57c316a17111977f7e1060b75164f74dd197d69f5",
+        "floor_module/damaged": "9bcfcf4c49b01f9da32bd3c1713b8b26434efa35e4bb78651d2e3d9fdb0b1f95",
+        "damage_effect/damaged": "a63b6f3cdc6c0eeff4abd0797314d390378fd8483194d54450e25ef991d6443b",
+        "damage_effect/critical": "c8758dc1ee8ca8f50522f01fa170e035192298a565b32d49900e36c62cbc78f8"
+      },
+      "issues": []
+    },
+    {
+      "territoryId": "salvaged-frontier",
+      "status": "PASS",
+      "runExitCodes": [
+        0,
+        0
+      ],
+      "canonicalReportSha256": "f0b91659c081afa03a442679e8fed5ffac7c4ecd72d28fb33a9bac86c71b693a",
+      "exportSha256": {
+        "barricade/intact": "c4fa3039487e585713f2ff37761870172955c1e82bdd39c32530ed86bb349171",
+        "barricade/damaged": "077cbb1eb1405ddaf0267e165fc153cc0088d458ebe2e62077a981a1d661ebc2",
+        "barricade/critical": "c69a170b0caaddd37acedbf474b3b6692a0add8e16a6762aec05f79a9efc9c91",
+        "objective_core/intact": "2f60bda8315732caac61251b97bc93af828af601bc8c4a14eb73933d16427278",
+        "objective_core/damaged": "37f1f05b64b1533a3ac6f00d80d22fb544319268e6964f26d9b22d824c00cf18",
+        "objective_core/critical": "e3d840078ddc15c904a66dbae2ca7c9d45cefb42f4b3f892f5c3df26c041e1cd",
+        "enemy_standard/intact": "23900095a876b8b475c9736a33e38afcc45a7e3197804f133d6f61610449eeaf",
+        "enemy_standard/damaged": "39f70bd8212af3b61329aad26ade4afe9d99d7faf333169d050e14d27fc30363",
+        "enemy_standard/critical": "b4698ab08794573276dd23944e9d0de764b70e9831926ccf500f36d7b66ba675",
+        "floor_module/intact": "49ee15e853055bcf0897f61fecbde003e536322f54e76946f30074db8b5744a8",
+        "floor_module/damaged": "3913cc0b28520809626511fa295691edcdc3d9c92584f669285a3e82127ad754",
+        "damage_effect/damaged": "7c7caf09d1d040b917690b354f00ccb0d3adf60db8505851a6e517864f8ddbb1",
+        "damage_effect/critical": "f8046c9ee412152d754a22ea088be3f880ffe2b151d3fb71954aa896e114323b"
+      },
+      "issues": []
+    },
+    {
+      "territoryId": "clean-tactical-diorama",
+      "status": "PASS",
+      "runExitCodes": [
+        0,
+        0
+      ],
+      "canonicalReportSha256": "5d2538ccb9312cbfe79b65b9093e280b8594afbb20b1a08c135233b9bc0e1170",
+      "exportSha256": {
+        "barricade/intact": "ff2c7397d656f954ec9c59db33c562496206c6d7286dcd63480285285ad88707",
+        "barricade/damaged": "516051d9d4abcad91ea94357b58dd6c2d62310dd79498250f300bd36c05c5ff8",
+        "barricade/critical": "2a8cec41b16865cc77d7dd4a3f36ff73564714aeb331e2e8921b879bf32a5172",
+        "objective_core/intact": "1853a61fd7e8525fd227ad0c3ccce563e374bbf87379dd4c750e60dd2972b584",
+        "objective_core/damaged": "338a28f9d8f86209651013e320dc7e11e96da03b1fc4a5c6dea018d37b05d2b7",
+        "objective_core/critical": "0c9ad5e816651e9a1e76e3e276920591fa88684d3568f3382737bebc9528a88a",
+        "enemy_standard/intact": "83fd1516e3e42864e421d65906856ef11db30cde08a0e4fdabed504bc0a20625",
+        "enemy_standard/damaged": "5afb1d1c0904693081714f6e73d2ffc3b0d7353be485dad2b08a9c7936ebd445",
+        "enemy_standard/critical": "afe1e748a71e8526ca6046bf49291cc17222de109768fb5d0e4a59bb6c2128c8",
+        "floor_module/intact": "d0f8da477cf5e71ea85a417fd6eb4b814b8c475f93ec77c598d13b20e05d8f5e",
+        "floor_module/damaged": "21142cc8e75f953e30c08600a8bfdb8b8469c88cbeaf10eaaee11f56227a6f39",
+        "damage_effect/damaged": "9a22876b1cc02b9f6202208cf85031ee9e0782a11932600ce2dcd025335dad48",
+        "damage_effect/critical": "7e75987a6f05253986e6f8abd6570b6f4f9f69545b6af59be8eadf518d7fc480"
+      },
+      "issues": []
+    }
+  ],
+  "issues": []
+}

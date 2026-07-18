@@ -1,0 +1,111 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/camera-rig.schema.json",
+  "schemaVersion": "2.0.0",
+  "fieldOfView": {
+    "degrees": 70.0,
+    "mode": "Vertical"
+  },
+  "coordinateContract": {
+    "targetPoint": "fixed world point per camera, expressed in Blender X/Y/Z after axis conversion",
+    "positionFormula": "target + spherical(distance, azimuth, elevation)",
+    "lookAt": "fixed target point",
+    "forwardAxis": "-Z in Blender camera local space"
+  },
+  "gameplayCamera": {
+    "distanceStuds": 16.0,
+    "azimuthDegrees": 25.0,
+    "elevationDegrees": 18.0,
+    "targetHeightStuds": 2.5
+  },
+  "validationCameras": {
+    "near": {
+      "distanceStuds": 15.0,
+      "azimuthDegrees": 35.0,
+      "elevationDegrees": 14.0,
+      "targetHeightStuds": 2.75,
+      "derivedCameraHeightStuds": 6.378828
+    },
+    "mid": {
+      "distanceStuds": 30.0,
+      "azimuthDegrees": 35.0,
+      "elevationDegrees": 12.0,
+      "targetHeightStuds": 2.75,
+      "derivedCameraHeightStuds": 8.987351
+    },
+    "far": {
+      "distanceStuds": 60.0,
+      "azimuthDegrees": 35.0,
+      "elevationDegrees": 10.5,
+      "targetHeightStuds": 2.75,
+      "derivedCameraHeightStuds": 13.684132
+    },
+    "front": {
+      "distanceStuds": 20.0,
+      "azimuthDegrees": 0.0,
+      "elevationDegrees": 4.0,
+      "targetHeightStuds": 2.75,
+      "derivedCameraHeightStuds": 4.145129
+    },
+    "back": {
+      "distanceStuds": 20.0,
+      "azimuthDegrees": 180.0,
+      "elevationDegrees": 4.0,
+      "targetHeightStuds": 2.75,
+      "derivedCameraHeightStuds": 4.145129
+    },
+    "three_quarter": {
+      "distanceStuds": 22.0,
+      "azimuthDegrees": 35.0,
+      "elevationDegrees": 16.0,
+      "targetHeightStuds": 2.75,
+      "derivedCameraHeightStuds": 8.814022
+    }
+  },
+  "resolutions": [
+    {
+      "id": "mobile_landscape_hard",
+      "width": 640,
+      "height": 360,
+      "orientation": "landscape",
+      "required": true
+    },
+    {
+      "id": "mobile_landscape_mid",
+      "width": 960,
+      "height": 540,
+      "orientation": "landscape",
+      "required": true
+    },
+    {
+      "id": "reference_landscape",
+      "width": 1280,
+      "height": 720,
+      "orientation": "landscape",
+      "required": true
+    },
+    {
+      "id": "mobile_narrow_portrait",
+      "width": 360,
+      "height": 640,
+      "orientation": "portrait",
+      "required": true
+    },
+    {
+      "id": "mobile_tall_portrait",
+      "width": 540,
+      "height": 960,
+      "orientation": "portrait",
+      "required": false
+    }
+  ],
+  "backgrounds": [
+    "world_neutral_light",
+    "world_neutral_dark"
+  ],
+  "cameraValidation": {
+    "verticalFovToleranceDegrees": 0.01,
+    "positionToleranceStuds": 0.005,
+    "rotationToleranceDegrees": 0.01
+  },
+  "rule": "Any camera contract change requires a schema-versioned recalibration and invalidates prior screen-space evidence."
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0.0",
+  "states": [
+    {
+      "id": "intact",
+      "visualChange": "Two aligned barrels, complete socket and closed service mass communicate a fast ready defense with full tracking capability. Both barrels align and both muzzle guards remain complete. The service mass is closed and the interaction socket is complete.",
+      "invariants": [
+        "Four-point-eight by five-point-four by five-point-two dimensions and bottom-center pivot remain fixed.",
+        "Twin-barrel intact identity, forward aim and rear service mass remain recognizable.",
+        "The interaction socket stays on the player-safe side and never becomes a muzzle.",
+        "Damage follows the same component chain: barrel, guard, structure, upper-body posture and socket.",
+        "Foundation footprint and rotation axis remain stable across states and territories."
+      ]
+    }
+  ],
+  "independentStateDesignForbidden": true
+}

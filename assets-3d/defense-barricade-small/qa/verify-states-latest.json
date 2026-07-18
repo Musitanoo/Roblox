@@ -1,0 +1,646 @@
+﻿{
+  "assetKey": "defense_barricade_small",
+  "blendBinaryDeterminism": {
+    "reason": "source.blend records its output path; semantic, geometry, Roblox export and decoded render content are authoritative",
+    "required": false
+  },
+  "compileResults": {
+    "runA": [
+      {
+        "assetKey": "defense_barricade_small",
+        "commandExitCode": 0,
+        "fbxUpdate": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\intact\\asset-update.fbx",
+        "geometry": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\intact\\geometry.json",
+        "glb": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\intact\\asset.glb",
+        "log": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\intact\\blender.log",
+        "manifest": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\intact\\manifest.json",
+        "renders": [
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\intact\\renders\\front.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\intact\\renders\\rear.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\intact\\renders\\left.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\intact\\renders\\right.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\intact\\renders\\top.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\intact\\renders\\perspective.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\intact\\renders\\mobile_distance.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\intact\\renders\\silhouette.png"
+        ],
+        "revision": 5,
+        "stateId": "intact",
+        "status": "PASS"
+      },
+      {
+        "assetKey": "defense_barricade_small",
+        "commandExitCode": 0,
+        "fbxUpdate": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\damaged\\asset-update.fbx",
+        "geometry": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\damaged\\geometry.json",
+        "glb": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\damaged\\asset.glb",
+        "log": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\damaged\\blender.log",
+        "manifest": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\damaged\\manifest.json",
+        "renders": [
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\damaged\\renders\\front.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\damaged\\renders\\rear.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\damaged\\renders\\left.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\damaged\\renders\\right.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\damaged\\renders\\top.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\damaged\\renders\\perspective.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\damaged\\renders\\mobile_distance.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\damaged\\renders\\silhouette.png"
+        ],
+        "revision": 5,
+        "stateId": "damaged",
+        "status": "PASS"
+      },
+      {
+        "assetKey": "defense_barricade_small",
+        "commandExitCode": 0,
+        "fbxUpdate": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\critical\\asset-update.fbx",
+        "geometry": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\critical\\geometry.json",
+        "glb": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\critical\\asset.glb",
+        "log": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\critical\\blender.log",
+        "manifest": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\critical\\manifest.json",
+        "renders": [
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\critical\\renders\\front.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\critical\\renders\\rear.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\critical\\renders\\left.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\critical\\renders\\right.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\critical\\renders\\top.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\critical\\renders\\perspective.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\critical\\renders\\mobile_distance.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a\\critical\\renders\\silhouette.png"
+        ],
+        "revision": 5,
+        "stateId": "critical",
+        "status": "PASS"
+      }
+    ],
+    "runB": [
+      {
+        "assetKey": "defense_barricade_small",
+        "commandExitCode": 0,
+        "fbxUpdate": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\intact\\asset-update.fbx",
+        "geometry": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\intact\\geometry.json",
+        "glb": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\intact\\asset.glb",
+        "log": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\intact\\blender.log",
+        "manifest": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\intact\\manifest.json",
+        "renders": [
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\intact\\renders\\front.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\intact\\renders\\rear.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\intact\\renders\\left.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\intact\\renders\\right.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\intact\\renders\\top.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\intact\\renders\\perspective.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\intact\\renders\\mobile_distance.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\intact\\renders\\silhouette.png"
+        ],
+        "revision": 5,
+        "stateId": "intact",
+        "status": "PASS"
+      },
+      {
+        "assetKey": "defense_barricade_small",
+        "commandExitCode": 0,
+        "fbxUpdate": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\damaged\\asset-update.fbx",
+        "geometry": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\damaged\\geometry.json",
+        "glb": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\damaged\\asset.glb",
+        "log": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\damaged\\blender.log",
+        "manifest": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\damaged\\manifest.json",
+        "renders": [
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\damaged\\renders\\front.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\damaged\\renders\\rear.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\damaged\\renders\\left.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\damaged\\renders\\right.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\damaged\\renders\\top.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\damaged\\renders\\perspective.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\damaged\\renders\\mobile_distance.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\damaged\\renders\\silhouette.png"
+        ],
+        "revision": 5,
+        "stateId": "damaged",
+        "status": "PASS"
+      },
+      {
+        "assetKey": "defense_barricade_small",
+        "commandExitCode": 0,
+        "fbxUpdate": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\critical\\asset-update.fbx",
+        "geometry": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\critical\\geometry.json",
+        "glb": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\critical\\asset.glb",
+        "log": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\critical\\blender.log",
+        "manifest": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\critical\\manifest.json",
+        "renders": [
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\critical\\renders\\front.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\critical\\renders\\rear.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\critical\\renders\\left.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\critical\\renders\\right.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\critical\\renders\\top.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\critical\\renders\\perspective.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\critical\\renders\\mobile_distance.png",
+          "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-b\\critical\\renders\\silhouette.png"
+        ],
+        "revision": 5,
+        "stateId": "critical",
+        "status": "PASS"
+      }
+    ]
+  },
+  "contractSha256": "b4284bf1075e1509d3d78b5965e107020b97af11ac970d2a475414dd22bcd17d",
+  "publishedComparison": {
+    "publishedRoot": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\states",
+    "referenceRoot": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\run-a",
+    "schemaVersion": "1.0.0",
+    "stateCoverage": [
+      "intact",
+      "damaged",
+      "critical"
+    ],
+    "states": [
+      {
+        "checks": {
+          "fbxArtifactIntegrity": {
+            "passed": true,
+            "published": true,
+            "reference": true
+          },
+          "fbxCrossPathBinaryDeterminism": {
+            "reason": "FBX embeds normalized source-path length; raw binary identity is authoritative only at canonical paths",
+            "required": false
+          },
+          "geometry": true,
+          "glb": true,
+          "renders": [
+            {
+              "passed": true,
+              "published": "b96eb657380341d02df11e7b098c0c6825e9940b71df026bbf189018c09dbb27",
+              "reference": "b96eb657380341d02df11e7b098c0c6825e9940b71df026bbf189018c09dbb27",
+              "view": "front"
+            },
+            {
+              "passed": true,
+              "published": "0100e292a6269d428c8b68e6770a1f367ec20473bd51623e06fa7ce5095cf3ca",
+              "reference": "0100e292a6269d428c8b68e6770a1f367ec20473bd51623e06fa7ce5095cf3ca",
+              "view": "rear"
+            },
+            {
+              "passed": true,
+              "published": "2254b8137cc828159e84488b946b672685e61dea627e53df4d6dac8290f48d54",
+              "reference": "2254b8137cc828159e84488b946b672685e61dea627e53df4d6dac8290f48d54",
+              "view": "left"
+            },
+            {
+              "passed": true,
+              "published": "2941cad10d3e7ce67b438f9fea4d23b6a0cb3343f6122f36560ad979a8295523",
+              "reference": "2941cad10d3e7ce67b438f9fea4d23b6a0cb3343f6122f36560ad979a8295523",
+              "view": "right"
+            },
+            {
+              "passed": true,
+              "published": "66dcb48a5a86b6384b98d479f8deda6f3e56ec81c22116f6e4fbc51d84c29c77",
+              "reference": "66dcb48a5a86b6384b98d479f8deda6f3e56ec81c22116f6e4fbc51d84c29c77",
+              "view": "top"
+            },
+            {
+              "passed": true,
+              "published": "e4e8ac71a1cb48fdd77ced48807b27d72a3828c84cf1228f22ba094f79a793fe",
+              "reference": "e4e8ac71a1cb48fdd77ced48807b27d72a3828c84cf1228f22ba094f79a793fe",
+              "view": "perspective"
+            },
+            {
+              "passed": true,
+              "published": "0f67ae620f0a4f80895235a338ae339e60720c555005d8d022cdad09698f0522",
+              "reference": "0f67ae620f0a4f80895235a338ae339e60720c555005d8d022cdad09698f0522",
+              "view": "silhouette"
+            },
+            {
+              "passed": true,
+              "published": "ad8b367349e97e3071ccf1b12b545b19a74150e4137b3ecd87614a207a48431d",
+              "reference": "ad8b367349e97e3071ccf1b12b545b19a74150e4137b3ecd87614a207a48431d",
+              "view": "mobile_distance"
+            }
+          ],
+          "semantic": true
+        },
+        "stateId": "intact",
+        "status": "PASS"
+      },
+      {
+        "checks": {
+          "fbxArtifactIntegrity": {
+            "passed": true,
+            "published": true,
+            "reference": true
+          },
+          "fbxCrossPathBinaryDeterminism": {
+            "reason": "FBX embeds normalized source-path length; raw binary identity is authoritative only at canonical paths",
+            "required": false
+          },
+          "geometry": true,
+          "glb": true,
+          "renders": [
+            {
+              "passed": true,
+              "published": "30174b97e0fbab04b917ac4624a4f26400b5fa5a75f174c8a7381dc74f04020d",
+              "reference": "30174b97e0fbab04b917ac4624a4f26400b5fa5a75f174c8a7381dc74f04020d",
+              "view": "front"
+            },
+            {
+              "passed": true,
+              "published": "cca675471decc3478877cace050817aa4b2ade2f250c0d7d2424fdc61c7a14f6",
+              "reference": "cca675471decc3478877cace050817aa4b2ade2f250c0d7d2424fdc61c7a14f6",
+              "view": "rear"
+            },
+            {
+              "passed": true,
+              "published": "0a33878a56d8757196abb12d6072c850aa523e60d4e0e9c4bcddd16f5841ad8d",
+              "reference": "0a33878a56d8757196abb12d6072c850aa523e60d4e0e9c4bcddd16f5841ad8d",
+              "view": "left"
+            },
+            {
+              "passed": true,
+              "published": "ec48b44012ebb280ba409e30b1e1ffb30b35fe92440465eb48d0764d70938725",
+              "reference": "ec48b44012ebb280ba409e30b1e1ffb30b35fe92440465eb48d0764d70938725",
+              "view": "right"
+            },
+            {
+              "passed": true,
+              "published": "d9fff5dfaefec71d1ce32b84dad48304d3dfd6f3ad7aa24103ccd7484e3cadfe",
+              "reference": "d9fff5dfaefec71d1ce32b84dad48304d3dfd6f3ad7aa24103ccd7484e3cadfe",
+              "view": "top"
+            },
+            {
+              "passed": true,
+              "published": "a5fff004f511f3d3ac8aadc2f807b630b0b44acbb3c619cc5084a26a9a572077",
+              "reference": "a5fff004f511f3d3ac8aadc2f807b630b0b44acbb3c619cc5084a26a9a572077",
+              "view": "perspective"
+            },
+            {
+              "passed": true,
+              "published": "35218cc884bce7bc53ba7ad94dbc8de2d7f90ec6d8d19e29eba82402f057e431",
+              "reference": "35218cc884bce7bc53ba7ad94dbc8de2d7f90ec6d8d19e29eba82402f057e431",
+              "view": "silhouette"
+            },
+            {
+              "passed": true,
+              "published": "e8a08280e4aaeace12bab666d658a084587d35051a0a91dbf2f78fef85a89a08",
+              "reference": "e8a08280e4aaeace12bab666d658a084587d35051a0a91dbf2f78fef85a89a08",
+              "view": "mobile_distance"
+            }
+          ],
+          "semantic": true
+        },
+        "stateId": "damaged",
+        "status": "PASS"
+      },
+      {
+        "checks": {
+          "fbxArtifactIntegrity": {
+            "passed": true,
+            "published": true,
+            "reference": true
+          },
+          "fbxCrossPathBinaryDeterminism": {
+            "reason": "FBX embeds normalized source-path length; raw binary identity is authoritative only at canonical paths",
+            "required": false
+          },
+          "geometry": true,
+          "glb": true,
+          "renders": [
+            {
+              "passed": true,
+              "published": "eaf64755583dcc31a1efefe9ff16c23575347b1cf39b5104fc98e4f35b5b04ea",
+              "reference": "eaf64755583dcc31a1efefe9ff16c23575347b1cf39b5104fc98e4f35b5b04ea",
+              "view": "front"
+            },
+            {
+              "passed": true,
+              "published": "27b246e731736088d3f5e45214e16b51223428bc3611177d5d75fa8198f2f742",
+              "reference": "27b246e731736088d3f5e45214e16b51223428bc3611177d5d75fa8198f2f742",
+              "view": "rear"
+            },
+            {
+              "passed": true,
+              "published": "953e154c92b08b67f2f316e9fa859a3e342cc84da82bd6aeb4e296806190e366",
+              "reference": "953e154c92b08b67f2f316e9fa859a3e342cc84da82bd6aeb4e296806190e366",
+              "view": "left"
+            },
+            {
+              "passed": true,
+              "published": "c34cc7def710b72424bd3d853ebf8e4e01ee8b28a6bce08cca41202b2d569e81",
+              "reference": "c34cc7def710b72424bd3d853ebf8e4e01ee8b28a6bce08cca41202b2d569e81",
+              "view": "right"
+            },
+            {
+              "passed": true,
+              "published": "2f0a5a34ec8f93cfe5b641d137f006722ad8c00e4df0b8986e035c9600c56606",
+              "reference": "2f0a5a34ec8f93cfe5b641d137f006722ad8c00e4df0b8986e035c9600c56606",
+              "view": "top"
+            },
+            {
+              "passed": true,
+              "published": "680cb7dbfb9edc7dbda83790074eccf5d04fde81ffbdf83d040bb6023fb359b5",
+              "reference": "680cb7dbfb9edc7dbda83790074eccf5d04fde81ffbdf83d040bb6023fb359b5",
+              "view": "perspective"
+            },
+            {
+              "passed": true,
+              "published": "ab0b04ce7d3ec074e5456416f0a4b7893a6e06a3fd7b3681d54ecc2a53d11a46",
+              "reference": "ab0b04ce7d3ec074e5456416f0a4b7893a6e06a3fd7b3681d54ecc2a53d11a46",
+              "view": "silhouette"
+            },
+            {
+              "passed": true,
+              "published": "55db9d9fe6be10428d4215db3a922015e6bd873dfbc1f091071b835f4bb6638d",
+              "reference": "55db9d9fe6be10428d4215db3a922015e6bd873dfbc1f091071b835f4bb6638d",
+              "view": "mobile_distance"
+            }
+          ],
+          "semantic": true
+        },
+        "stateId": "critical",
+        "status": "PASS"
+      }
+    ],
+    "status": "PASS"
+  },
+  "report": "C:\\Project\\Roblox\\assets-3d\\defense-barricade-small\\build\\state-determinism\\determinism-report.json",
+  "revision": 5,
+  "schemaVersion": "1.0.0",
+  "stateCoverage": [
+    "intact",
+    "damaged",
+    "critical"
+  ],
+  "stateDistinctness": {
+    "glbHashesUnique": true,
+    "semanticHashesUnique": true
+  },
+  "stateInvariants": [
+    {
+      "checks": {
+        "componentNames": true,
+        "dimensionsStuds": true,
+        "pivot": true,
+        "triangleCount": true
+      },
+      "passed": true,
+      "stateId": "intact"
+    },
+    {
+      "checks": {
+        "componentNames": true,
+        "dimensionsStuds": true,
+        "pivot": true,
+        "triangleCount": true
+      },
+      "passed": true,
+      "stateId": "damaged"
+    },
+    {
+      "checks": {
+        "componentNames": true,
+        "dimensionsStuds": true,
+        "pivot": true,
+        "triangleCount": true
+      },
+      "passed": true,
+      "stateId": "critical"
+    }
+  ],
+  "states": [
+    {
+      "checks": {
+        "fbx": {
+          "passed": true,
+          "runA": "5daa99479cc9c4075cd166e5e7a8603add99063f7849fae1e6150fc38f383d6f",
+          "runB": "5daa99479cc9c4075cd166e5e7a8603add99063f7849fae1e6150fc38f383d6f"
+        },
+        "geometry": {
+          "passed": true,
+          "runA": "b37f4773fb93c2e202ba1b87145c38753828ee91b4ca226d136754c72b910966",
+          "runB": "b37f4773fb93c2e202ba1b87145c38753828ee91b4ca226d136754c72b910966"
+        },
+        "glb": {
+          "passed": true,
+          "runA": "a62554006ce0273c71dbe39c1b9d04fc2bedbef60a22160d30beb32b8827dc40",
+          "runB": "a62554006ce0273c71dbe39c1b9d04fc2bedbef60a22160d30beb32b8827dc40"
+        },
+        "renders": [
+          {
+            "passed": true,
+            "runA": "b96eb657380341d02df11e7b098c0c6825e9940b71df026bbf189018c09dbb27",
+            "runB": "b96eb657380341d02df11e7b098c0c6825e9940b71df026bbf189018c09dbb27",
+            "view": "front"
+          },
+          {
+            "passed": true,
+            "runA": "0100e292a6269d428c8b68e6770a1f367ec20473bd51623e06fa7ce5095cf3ca",
+            "runB": "0100e292a6269d428c8b68e6770a1f367ec20473bd51623e06fa7ce5095cf3ca",
+            "view": "rear"
+          },
+          {
+            "passed": true,
+            "runA": "2254b8137cc828159e84488b946b672685e61dea627e53df4d6dac8290f48d54",
+            "runB": "2254b8137cc828159e84488b946b672685e61dea627e53df4d6dac8290f48d54",
+            "view": "left"
+          },
+          {
+            "passed": true,
+            "runA": "2941cad10d3e7ce67b438f9fea4d23b6a0cb3343f6122f36560ad979a8295523",
+            "runB": "2941cad10d3e7ce67b438f9fea4d23b6a0cb3343f6122f36560ad979a8295523",
+            "view": "right"
+          },
+          {
+            "passed": true,
+            "runA": "66dcb48a5a86b6384b98d479f8deda6f3e56ec81c22116f6e4fbc51d84c29c77",
+            "runB": "66dcb48a5a86b6384b98d479f8deda6f3e56ec81c22116f6e4fbc51d84c29c77",
+            "view": "top"
+          },
+          {
+            "passed": true,
+            "runA": "e4e8ac71a1cb48fdd77ced48807b27d72a3828c84cf1228f22ba094f79a793fe",
+            "runB": "e4e8ac71a1cb48fdd77ced48807b27d72a3828c84cf1228f22ba094f79a793fe",
+            "view": "perspective"
+          },
+          {
+            "passed": true,
+            "runA": "0f67ae620f0a4f80895235a338ae339e60720c555005d8d022cdad09698f0522",
+            "runB": "0f67ae620f0a4f80895235a338ae339e60720c555005d8d022cdad09698f0522",
+            "view": "silhouette"
+          },
+          {
+            "passed": true,
+            "runA": "ad8b367349e97e3071ccf1b12b545b19a74150e4137b3ecd87614a207a48431d",
+            "runB": "ad8b367349e97e3071ccf1b12b545b19a74150e4137b3ecd87614a207a48431d",
+            "view": "mobile_distance"
+          }
+        ],
+        "semantic": {
+          "passed": true,
+          "runA": "16d97ca72570f60745f79bc58f94d23026a39e7be45cc618348586a5f659464d",
+          "runB": "16d97ca72570f60745f79bc58f94d23026a39e7be45cc618348586a5f659464d"
+        }
+      },
+      "stateId": "intact",
+      "status": "PASS"
+    },
+    {
+      "checks": {
+        "fbx": {
+          "passed": true,
+          "runA": "dd35378b78c4fb1e0658c729a8c11829e1573d6579f03163b32eaa6d869b7370",
+          "runB": "dd35378b78c4fb1e0658c729a8c11829e1573d6579f03163b32eaa6d869b7370"
+        },
+        "geometry": {
+          "passed": true,
+          "runA": "b37f4773fb93c2e202ba1b87145c38753828ee91b4ca226d136754c72b910966",
+          "runB": "b37f4773fb93c2e202ba1b87145c38753828ee91b4ca226d136754c72b910966"
+        },
+        "glb": {
+          "passed": true,
+          "runA": "474c4146a930b57760c5c3bba1c25dc5a83ca806ae536971afab4e7946d3bf96",
+          "runB": "474c4146a930b57760c5c3bba1c25dc5a83ca806ae536971afab4e7946d3bf96"
+        },
+        "renders": [
+          {
+            "passed": true,
+            "runA": "30174b97e0fbab04b917ac4624a4f26400b5fa5a75f174c8a7381dc74f04020d",
+            "runB": "30174b97e0fbab04b917ac4624a4f26400b5fa5a75f174c8a7381dc74f04020d",
+            "view": "front"
+          },
+          {
+            "passed": true,
+            "runA": "cca675471decc3478877cace050817aa4b2ade2f250c0d7d2424fdc61c7a14f6",
+            "runB": "cca675471decc3478877cace050817aa4b2ade2f250c0d7d2424fdc61c7a14f6",
+            "view": "rear"
+          },
+          {
+            "passed": true,
+            "runA": "0a33878a56d8757196abb12d6072c850aa523e60d4e0e9c4bcddd16f5841ad8d",
+            "runB": "0a33878a56d8757196abb12d6072c850aa523e60d4e0e9c4bcddd16f5841ad8d",
+            "view": "left"
+          },
+          {
+            "passed": true,
+            "runA": "ec48b44012ebb280ba409e30b1e1ffb30b35fe92440465eb48d0764d70938725",
+            "runB": "ec48b44012ebb280ba409e30b1e1ffb30b35fe92440465eb48d0764d70938725",
+            "view": "right"
+          },
+          {
+            "passed": true,
+            "runA": "d9fff5dfaefec71d1ce32b84dad48304d3dfd6f3ad7aa24103ccd7484e3cadfe",
+            "runB": "d9fff5dfaefec71d1ce32b84dad48304d3dfd6f3ad7aa24103ccd7484e3cadfe",
+            "view": "top"
+          },
+          {
+            "passed": true,
+            "runA": "a5fff004f511f3d3ac8aadc2f807b630b0b44acbb3c619cc5084a26a9a572077",
+            "runB": "a5fff004f511f3d3ac8aadc2f807b630b0b44acbb3c619cc5084a26a9a572077",
+            "view": "perspective"
+          },
+          {
+            "passed": true,
+            "runA": "35218cc884bce7bc53ba7ad94dbc8de2d7f90ec6d8d19e29eba82402f057e431",
+            "runB": "35218cc884bce7bc53ba7ad94dbc8de2d7f90ec6d8d19e29eba82402f057e431",
+            "view": "silhouette"
+          },
+          {
+            "passed": true,
+            "runA": "e8a08280e4aaeace12bab666d658a084587d35051a0a91dbf2f78fef85a89a08",
+            "runB": "e8a08280e4aaeace12bab666d658a084587d35051a0a91dbf2f78fef85a89a08",
+            "view": "mobile_distance"
+          }
+        ],
+        "semantic": {
+          "passed": true,
+          "runA": "0cb3cca56133817f6ba47e705e9ae74379d816d9d82081a2c735e816ba58c797",
+          "runB": "0cb3cca56133817f6ba47e705e9ae74379d816d9d82081a2c735e816ba58c797"
+        }
+      },
+      "stateId": "damaged",
+      "status": "PASS"
+    },
+    {
+      "checks": {
+        "fbx": {
+          "passed": true,
+          "runA": "efb0eb73d505c5c583d53ab2ea9693412623612d5d2153e1597e039f7c4f92f4",
+          "runB": "efb0eb73d505c5c583d53ab2ea9693412623612d5d2153e1597e039f7c4f92f4"
+        },
+        "geometry": {
+          "passed": true,
+          "runA": "b37f4773fb93c2e202ba1b87145c38753828ee91b4ca226d136754c72b910966",
+          "runB": "b37f4773fb93c2e202ba1b87145c38753828ee91b4ca226d136754c72b910966"
+        },
+        "glb": {
+          "passed": true,
+          "runA": "786ecf444133c4dacaea1f94d3802168bfa9e869330644a1e16e1100c98a65dc",
+          "runB": "786ecf444133c4dacaea1f94d3802168bfa9e869330644a1e16e1100c98a65dc"
+        },
+        "renders": [
+          {
+            "passed": true,
+            "runA": "eaf64755583dcc31a1efefe9ff16c23575347b1cf39b5104fc98e4f35b5b04ea",
+            "runB": "eaf64755583dcc31a1efefe9ff16c23575347b1cf39b5104fc98e4f35b5b04ea",
+            "view": "front"
+          },
+          {
+            "passed": true,
+            "runA": "27b246e731736088d3f5e45214e16b51223428bc3611177d5d75fa8198f2f742",
+            "runB": "27b246e731736088d3f5e45214e16b51223428bc3611177d5d75fa8198f2f742",
+            "view": "rear"
+          },
+          {
+            "passed": true,
+            "runA": "953e154c92b08b67f2f316e9fa859a3e342cc84da82bd6aeb4e296806190e366",
+            "runB": "953e154c92b08b67f2f316e9fa859a3e342cc84da82bd6aeb4e296806190e366",
+            "view": "left"
+          },
+          {
+            "passed": true,
+            "runA": "c34cc7def710b72424bd3d853ebf8e4e01ee8b28a6bce08cca41202b2d569e81",
+            "runB": "c34cc7def710b72424bd3d853ebf8e4e01ee8b28a6bce08cca41202b2d569e81",
+            "view": "right"
+          },
+          {
+            "passed": true,
+            "runA": "2f0a5a34ec8f93cfe5b641d137f006722ad8c00e4df0b8986e035c9600c56606",
+            "runB": "2f0a5a34ec8f93cfe5b641d137f006722ad8c00e4df0b8986e035c9600c56606",
+            "view": "top"
+          },
+          {
+            "passed": true,
+            "runA": "680cb7dbfb9edc7dbda83790074eccf5d04fde81ffbdf83d040bb6023fb359b5",
+            "runB": "680cb7dbfb9edc7dbda83790074eccf5d04fde81ffbdf83d040bb6023fb359b5",
+            "view": "perspective"
+          },
+          {
+            "passed": true,
+            "runA": "ab0b04ce7d3ec074e5456416f0a4b7893a6e06a3fd7b3681d54ecc2a53d11a46",
+            "runB": "ab0b04ce7d3ec074e5456416f0a4b7893a6e06a3fd7b3681d54ecc2a53d11a46",
+            "view": "silhouette"
+          },
+          {
+            "passed": true,
+            "runA": "55db9d9fe6be10428d4215db3a922015e6bd873dfbc1f091071b835f4bb6638d",
+            "runB": "55db9d9fe6be10428d4215db3a922015e6bd873dfbc1f091071b835f4bb6638d",
+            "view": "mobile_distance"
+          }
+        ],
+        "semantic": {
+          "passed": true,
+          "runA": "380e1a0ecc4db221680feeb4160d2ccc69448d5e56884729e2e6ad7f64a22720",
+          "runB": "380e1a0ecc4db221680feeb4160d2ccc69448d5e56884729e2e6ad7f64a22720"
+        }
+      },
+      "stateId": "critical",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "visualCanon": {
+    "canonId": "vc_barricade__salvaged-frontier__v1",
+    "path": "C:\\Project\\Roblox\\tools\\roblox-art-bible-sota-v3\\art\\canonical-visuals\\salvaged-frontier\\barricade.json",
+    "productionEligible": false,
+    "sha256": "5e196aa1ab2bdaaa9c024d250ea76f82b134848b4dcd32b2741f7970c5c77e58",
+    "status": "CANDIDATE",
+    "triangleMaximum": 2000
+  }
+}

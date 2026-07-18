@@ -1,0 +1,455 @@
+{
+  "absoluteMaximumTriangles": 2000,
+  "boundsBlender": {
+    "maximum": [
+      4.0,
+      1.0,
+      4.0
+    ],
+    "minimum": [
+      -4.0,
+      -1.0,
+      0.0
+    ]
+  },
+  "dimensionsStuds": {
+    "depth": 2.0,
+    "height": 4.0,
+    "width": 8.0
+  },
+  "errors": [],
+  "objects": [
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_FootL",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_FootR",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_FootUpperL",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_FootUpperR",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_FootToeL",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_FootToeR",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_RailBottom",
+      "nonManifoldEdges": 0,
+      "triangles": 92,
+      "uvOutsideZeroOne": 0,
+      "vertices": 48
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_RailTop",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_RailTopL",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_RailTopR",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_PostL",
+      "nonManifoldEdges": 0,
+      "triangles": 92,
+      "uvOutsideZeroOne": 0,
+      "vertices": 48
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_PostR",
+      "nonManifoldEdges": 0,
+      "triangles": 92,
+      "uvOutsideZeroOne": 0,
+      "vertices": 48
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_CornerCapL",
+      "nonManifoldEdges": 0,
+      "triangles": 92,
+      "uvOutsideZeroOne": 0,
+      "vertices": 48
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_CornerCapR",
+      "nonManifoldEdges": 0,
+      "triangles": 92,
+      "uvOutsideZeroOne": 0,
+      "vertices": 48
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_MullionL",
+      "nonManifoldEdges": 0,
+      "triangles": 44,
+      "uvOutsideZeroOne": 0,
+      "vertices": 24
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_MullionR",
+      "nonManifoldEdges": 0,
+      "triangles": 44,
+      "uvOutsideZeroOne": 0,
+      "vertices": 24
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_PanelBackingL",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_PanelBackingC",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_PanelBackingR",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_PanelL",
+      "nonManifoldEdges": 0,
+      "triangles": 92,
+      "uvOutsideZeroOne": 0,
+      "vertices": 48
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_PanelC",
+      "nonManifoldEdges": 0,
+      "triangles": 92,
+      "uvOutsideZeroOne": 0,
+      "vertices": 48
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_PanelR",
+      "nonManifoldEdges": 0,
+      "triangles": 92,
+      "uvOutsideZeroOne": 0,
+      "vertices": 48
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_RepairBrace",
+      "nonManifoldEdges": 0,
+      "triangles": 44,
+      "uvOutsideZeroOne": 0,
+      "vertices": 24
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_RepairJointTop",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_RepairJointBottom",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_RepairBoltTop",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_RepairBoltBottom",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_TopRailInset",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_LowerServiceRecess",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_CornerRepairPatchL",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_FootGussetL",
+      "nonManifoldEdges": 0,
+      "triangles": 12,
+      "uvOutsideZeroOne": 0,
+      "vertices": 8
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_FootGussetR",
+      "nonManifoldEdges": 0,
+      "triangles": 12,
+      "uvOutsideZeroOne": 0,
+      "vertices": 8
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_FrameBoltL",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_FrameBoltR",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_PanelLatchL",
+      "nonManifoldEdges": 0,
+      "triangles": 12,
+      "uvOutsideZeroOne": 0,
+      "vertices": 8
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_PanelLatchC",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_PanelLatchR",
+      "nonManifoldEdges": 0,
+      "triangles": 12,
+      "uvOutsideZeroOne": 0,
+      "vertices": 8
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_FootWearPlateR",
+      "nonManifoldEdges": 0,
+      "triangles": 12,
+      "uvOutsideZeroOne": 0,
+      "vertices": 8
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_RearBraceL",
+      "nonManifoldEdges": 0,
+      "triangles": 44,
+      "uvOutsideZeroOne": 0,
+      "vertices": 24
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_RearBraceR",
+      "nonManifoldEdges": 0,
+      "triangles": 44,
+      "uvOutsideZeroOne": 0,
+      "vertices": 24
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_ServiceHousing",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    },
+    {
+      "degenerateFaces": 0,
+      "looseVertices": 0,
+      "materialSlots": 1,
+      "name": "DEF_BarricadeSmall_Light",
+      "nonManifoldEdges": 0,
+      "triangles": 28,
+      "uvOutsideZeroOne": 0,
+      "vertices": 16
+    }
+  ],
+  "pivot": {
+    "baseHeight": 0.0,
+    "contract": "BASE_CENTER"
+  },
+  "status": "PASS",
+  "targetDimensionsStuds": {
+    "depth": 2.0,
+    "height": 4.0,
+    "width": 8.0
+  },
+  "targetTriangleCount": 1500,
+  "triangleCount": 1688
+}

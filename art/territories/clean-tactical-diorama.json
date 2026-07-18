@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "clean-tactical-diorama",
+  "status": "CANDIDATE",
+  "vision": "A crisp tactical playset where fortress, threat and state read as deliberate game pieces before surface detail appears.",
+  "pillars": ["crisp plane hierarchy", "low surface noise", "game-piece silhouette", "precise semantic insets", "strong negative space"],
+  "antiPillars": ["sterile white sci-fi", "micro-panels", "thin holograms", "flat unweighted boxes", "UI painted onto meshes"],
+  "shapeGrammar": {
+    "primary": ["clean slab", "concentric core", "trapezoid support"],
+    "secondary": ["single inset", "edge band", "external targeting bracket"],
+    "signature": "one recessed semantic plane bounded by a dark structural frame",
+    "asymmetryPolicy": "near-symmetry; asymmetry reserved for threat and damage"
+  },
+  "palette": {"neutralDark": "#303946", "neutralMid": "#798492", "neutralLight": "#CFD6DD", "buildable": "#D99A38", "interactive": "#5FE0D1", "critical": "#E6534E", "enemy": "#718F5D"},
+  "materialBias": ["painted_metal", "polymer", "rubber"],
+  "bevelFamiliesStuds": {"primary": [0.10, 0.16], "secondary": [0.05, 0.08], "tertiary": [0.02, 0.03]},
+  "damageLanguage": "one clean silhouette break and one exposed internal plane; no texture-only damage"
+}

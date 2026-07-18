@@ -1,0 +1,381 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/transfer-studio-report.schema.json",
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "vector3": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "prefixItems": [
+        {"type": "number", "exclusiveMinimum": 0},
+        {"type": "number", "exclusiveMinimum": 0},
+        {"type": "number", "exclusiveMinimum": 0}
+      ],
+      "items": false
+    }
+  },
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "status",
+    "generatedAt",
+    "environment",
+    "assetId",
+    "privacy",
+    "inputHashes",
+    "environmentChecks",
+    "hierarchyChecks",
+    "assetChecks",
+    "reuseChecks",
+    "sceneChecks",
+    "playtestChecks",
+    "captureChecks",
+    "issues"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/transfer-studio-report.schema.json"
+    },
+    "schemaVersion": {"const": "1.0.0"},
+    "status": {"enum": ["PASS", "PARTIAL", "BLOCKED", "FAIL"]},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "environment": {"const": "staging"},
+    "assetId": {"const": "turret_fast_v1"},
+    "privacy": {
+      "type": "object",
+      "required": [
+        "rawPlaceIdIncluded",
+        "rawCreatorIdIncluded",
+        "rawAssetIdsIncluded",
+        "rawApiKeyIncluded",
+        "studioInstanceIdIncluded"
+      ],
+      "properties": {
+        "rawPlaceIdIncluded": {"const": false},
+        "rawCreatorIdIncluded": {"const": false},
+        "rawAssetIdsIncluded": {"const": false},
+        "rawApiKeyIncluded": {"const": false},
+        "studioInstanceIdIncluded": {"const": false}
+      },
+      "unevaluatedProperties": false
+    },
+    "inputHashes": {
+      "type": "object",
+      "required": [
+        "transferManifest",
+        "transferPublicationReport",
+        "transferEvidencePackage",
+        "stageTransferTool",
+        "studioMcpClient",
+        "materialRules",
+        "industrialTerritory",
+        "salvagedTerritory",
+        "cleanTerritory"
+      ],
+      "properties": {
+        "transferManifest": {"$ref": "#/$defs/sha256"},
+        "transferPublicationReport": {"$ref": "#/$defs/sha256"},
+        "transferEvidencePackage": {"$ref": "#/$defs/sha256"},
+        "stageTransferTool": {"$ref": "#/$defs/sha256"},
+        "studioMcpClient": {"$ref": "#/$defs/sha256"},
+        "materialRules": {"$ref": "#/$defs/sha256"},
+        "industrialTerritory": {"$ref": "#/$defs/sha256"},
+        "salvagedTerritory": {"$ref": "#/$defs/sha256"},
+        "cleanTerritory": {"$ref": "#/$defs/sha256"}
+      },
+      "unevaluatedProperties": false
+    },
+    "environmentChecks": {
+      "type": "object",
+      "required": [
+        "singleStudioInstance",
+        "editModeVerified",
+        "deploymentMarkedStaging",
+        "localConfigComplete",
+        "savedCloudPlaceVerified",
+        "expectedCreatorMatches",
+        "creatorAllowlistVerified"
+      ],
+      "properties": {
+        "singleStudioInstance": {"type": "boolean"},
+        "editModeVerified": {"type": "boolean"},
+        "deploymentMarkedStaging": {"type": "boolean"},
+        "localConfigComplete": {"type": "boolean"},
+        "savedCloudPlaceVerified": {"type": "boolean"},
+        "expectedCreatorMatches": {"type": "boolean"},
+        "creatorAllowlistVerified": {"type": "boolean"}
+      },
+      "unevaluatedProperties": false
+    },
+    "hierarchyChecks": {
+      "type": "object",
+      "required": [
+        "transactionApplied",
+        "assetKitPresent",
+        "territoryFolderCount",
+        "assetFolderCount",
+        "stateCount",
+        "stagingRootRemoved"
+      ],
+      "properties": {
+        "transactionApplied": {"type": "boolean"},
+        "assetKitPresent": {"type": "boolean"},
+        "territoryFolderCount": {"type": "integer", "minimum": 0, "maximum": 3},
+        "assetFolderCount": {"type": "integer", "minimum": 0, "maximum": 3},
+        "stateCount": {"type": "integer", "minimum": 0, "maximum": 9},
+        "stagingRootRemoved": {"type": "boolean"}
+      },
+      "unevaluatedProperties": false
+    },
+    "assetChecks": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 9,
+      "items": {
+        "type": "object",
+        "required": [
+          "territoryId",
+          "stateId",
+          "sourceSha256",
+          "expectedBounds",
+          "observedBounds",
+          "maximumBoundsErrorPercent",
+          "partCount",
+          "meshPartCount",
+          "meshIdsPresent",
+          "sourceIdentityMatches",
+          "styledMeshPartCount",
+          "unboundStyleRoleCount",
+          "maximumColorChannelError",
+          "materialBindingsPass",
+          "visualSettingsPass",
+          "hitboxPass",
+          "pass"
+        ],
+        "properties": {
+          "territoryId": {
+            "enum": [
+              "industrial-toy-defense",
+              "salvaged-frontier",
+              "clean-tactical-diorama"
+            ]
+          },
+          "stateId": {"enum": ["intact", "damaged", "critical"]},
+          "sourceSha256": {"$ref": "#/$defs/sha256"},
+          "expectedBounds": {"$ref": "#/$defs/vector3"},
+          "observedBounds": {"$ref": "#/$defs/vector3"},
+          "maximumBoundsErrorPercent": {"type": "number", "minimum": 0},
+          "partCount": {"type": "integer", "minimum": 1},
+          "meshPartCount": {"type": "integer", "minimum": 1},
+          "meshIdsPresent": {"type": "boolean"},
+          "sourceIdentityMatches": {"type": "boolean"},
+          "styledMeshPartCount": {"type": "integer", "minimum": 0},
+          "unboundStyleRoleCount": {"type": "integer", "minimum": 0},
+          "maximumColorChannelError": {"type": "number", "minimum": 0},
+          "materialBindingsPass": {"type": "boolean"},
+          "visualSettingsPass": {"type": "boolean"},
+          "hitboxPass": {"type": "boolean"},
+          "pass": {"type": "boolean"}
+        },
+        "unevaluatedProperties": false
+      }
+    },
+    "reuseChecks": {
+      "type": "array",
+      "minItems": 0,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": [
+          "territoryId",
+          "copyCount",
+          "observedCount",
+          "distinctSourceSha256Count",
+          "distinctSignatureCount",
+          "pass"
+        ],
+        "properties": {
+          "territoryId": {
+            "enum": [
+              "industrial-toy-defense",
+              "salvaged-frontier",
+              "clean-tactical-diorama"
+            ]
+          },
+          "copyCount": {"enum": [30, 100]},
+          "observedCount": {"type": "integer", "minimum": 0, "maximum": 100},
+          "distinctSourceSha256Count": {"type": "integer", "minimum": 0},
+          "distinctSignatureCount": {"type": "integer", "minimum": 0},
+          "pass": {"type": "boolean"}
+        },
+        "unevaluatedProperties": false
+      }
+    },
+    "sceneChecks": {
+      "type": "object",
+      "required": [
+        "scenePresent",
+        "candidateCount",
+        "stressGroupCount",
+        "placeholderCount",
+        "cameraCount",
+        "referenceAvatarPresent"
+      ],
+      "properties": {
+        "scenePresent": {"type": "boolean"},
+        "candidateCount": {"type": "integer", "minimum": 0, "maximum": 9},
+        "stressGroupCount": {"type": "integer", "minimum": 0, "maximum": 6},
+        "placeholderCount": {"type": "integer", "minimum": 0},
+        "cameraCount": {"type": "integer", "minimum": 0},
+        "referenceAvatarPresent": {"type": "boolean"}
+      },
+      "unevaluatedProperties": false
+    },
+    "playtestChecks": {
+      "type": "object",
+      "required": [
+        "started",
+        "clientDataModelObserved",
+        "serverDataModelObserved",
+        "stopped",
+        "newRelevantErrorCount",
+        "pass"
+      ],
+      "properties": {
+        "started": {"type": "boolean"},
+        "clientDataModelObserved": {"type": "boolean"},
+        "serverDataModelObserved": {"type": "boolean"},
+        "stopped": {"type": "boolean"},
+        "newRelevantErrorCount": {"type": "integer", "minimum": 0},
+        "pass": {"type": "boolean"}
+      },
+      "unevaluatedProperties": false
+    },
+    "captureChecks": {
+      "type": "object",
+      "required": ["status", "attempted", "captureCount", "captures"],
+      "properties": {
+        "status": {"enum": ["NOT_REQUESTED", "PASS", "BLOCKED", "FAIL"]},
+        "attempted": {"type": "boolean"},
+        "captureCount": {"type": "integer", "minimum": 0, "maximum": 3},
+        "captures": {
+          "type": "array",
+          "minItems": 0,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "required": ["territoryId", "path", "bytes", "sha256", "source"],
+            "properties": {
+              "territoryId": {
+                "enum": [
+                  "industrial-toy-defense",
+                  "salvaged-frontier",
+                  "clean-tactical-diorama"
+                ]
+              },
+              "path": {
+                "type": "string",
+                "pattern": "^evidence/transfer/turret-fast-v1/studio-captures/[^/]+\\.(png|jpg)$"
+              },
+              "bytes": {"type": "integer", "minimum": 1},
+              "sha256": {"$ref": "#/$defs/sha256"},
+              "source": {"const": "studio_mcp_screen_capture"}
+            },
+            "unevaluatedProperties": false
+          }
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "issues": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "uniqueItems": true
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {"status": {"const": "PASS"}},
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "assetChecks": {
+            "minItems": 9,
+            "maxItems": 9,
+            "items": {
+              "properties": {
+                "materialBindingsPass": {"const": true},
+                "unboundStyleRoleCount": {"const": 0},
+                "visualSettingsPass": {"const": true},
+                "pass": {"const": true}
+              }
+            }
+          },
+          "reuseChecks": {
+            "minItems": 6,
+            "maxItems": 6,
+            "items": {"properties": {"pass": {"const": true}}}
+          },
+          "issues": {"maxItems": 0},
+          "environmentChecks": {
+            "properties": {
+              "singleStudioInstance": {"const": true},
+              "editModeVerified": {"const": true},
+              "deploymentMarkedStaging": {"const": true},
+              "localConfigComplete": {"const": true},
+              "savedCloudPlaceVerified": {"const": true},
+              "expectedCreatorMatches": {"const": true},
+              "creatorAllowlistVerified": {"const": true}
+            }
+          },
+          "hierarchyChecks": {
+            "properties": {
+              "transactionApplied": {"const": true},
+              "assetKitPresent": {"const": true},
+              "territoryFolderCount": {"const": 3},
+              "assetFolderCount": {"const": 3},
+              "stateCount": {"const": 9},
+              "stagingRootRemoved": {"const": true}
+            }
+          },
+          "sceneChecks": {
+            "properties": {
+              "scenePresent": {"const": true},
+              "candidateCount": {"const": 9},
+              "stressGroupCount": {"const": 6},
+              "placeholderCount": {"const": 0},
+              "cameraCount": {"const": 3},
+              "referenceAvatarPresent": {"const": true}
+            }
+          },
+          "playtestChecks": {
+            "properties": {
+              "started": {"const": true},
+              "clientDataModelObserved": {"const": true},
+              "serverDataModelObserved": {"const": true},
+              "stopped": {"const": true},
+              "newRelevantErrorCount": {"const": 0},
+              "pass": {"const": true}
+            }
+          },
+          "captureChecks": {
+            "properties": {
+              "status": {"const": "PASS"},
+              "attempted": {"const": true},
+              "captureCount": {"const": 3},
+              "captures": {"minItems": 3, "maxItems": 3}
+            }
+          }
+        }
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}

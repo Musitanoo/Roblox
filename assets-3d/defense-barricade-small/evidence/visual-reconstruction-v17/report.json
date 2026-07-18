@@ -1,0 +1,153 @@
+{
+  "schemaVersion": "1.1.0",
+  "evidenceId": "defense-barricade-small-visual-reconstruction-v17",
+  "assetKey": "defense_barricade_small",
+  "contractRevision": 17,
+  "generatedAt": "2026-07-17T18:48:00+02:00",
+  "status": "PARTIAL",
+  "automationStatus": "PASS",
+  "internalVisualStatus": "PASS",
+  "humanReviewStatus": "PENDING",
+  "productionApproved": false,
+  "authority": {
+    "contractSha256": "98d3e0f01af7c14c8be8c4d2b3ebccd4f167dfa586f435d8662924699dc28876",
+    "precanonicalReference": "../../precanonical/results/defense-barricade-web-001-result-001/raw/generated-001.png",
+    "precanonicalReferenceSha256": "219ebd23eff48a3c32413c4ca80660ba725b4689bf523b61b6eaa79ac17865bd",
+    "visualCanonId": "vc_barricade__salvaged-frontier__v1",
+    "visualCanonSha256": "5e196aa1ab2bdaaa9c024d250ea76f82b134848b4dcd32b2741f7970c5c77e58",
+    "visualCanonStatus": "CANDIDATE",
+    "visualCanonProductionEligible": false,
+    "generatorSha256": "4d9dd176eb8aec26ace12e70a9ea4cf0fe1adccf2976677f40bc976cf3eeb67e"
+  },
+  "reconstruction": {
+    "componentCount": 42,
+    "triangleCount": 1688,
+    "targetTriangleCount": 1500,
+    "absoluteMaximumTriangles": 2000,
+    "dimensionsStuds": [
+      8.0,
+      4.0,
+      2.0
+    ],
+    "dimensionTolerancePercent": 0.25,
+    "pivot": "BASE_CENTER",
+    "materialCount": 8,
+    "mainManifest": "../../build/manifest.json",
+    "mainManifestSha256": "876a4198150a782c3bd9cd4ee5d58594a287180a0313d5f29c2bdf1b5fffdfd8",
+    "geometrySha256": "85404393edaa275979381c345f600fadf0c2f4fd876fbedcb1650e6f3b512f8b",
+    "semanticSha256": "ead3d02586c5c038acec6ff76cf77ac76cd1c5102f3cb4abe46f402c97d80ac3",
+    "geometryStatus": "PASS",
+    "renderVerificationStatus": "PASS"
+  },
+  "stateFamily": {
+    "coverage": [
+      "intact",
+      "damaged",
+      "critical"
+    ],
+    "topologyPreserved": true,
+    "componentNamesPreserved": true,
+    "dimensionsPreserved": true,
+    "pivotPreserved": true,
+    "triangleCountPreserved": true,
+    "semanticHashesUnique": true,
+    "glbHashesUnique": true,
+    "publishedComparisonStatus": "PASS",
+    "determinismReport": "../../build/state-determinism/determinism-report.json",
+    "determinismReportSha256": "a964e84de13dbe4f672d60bc4f27f528039dccc83c2130142ca37c1bca679df7",
+    "statesManifest": "../../build/states/states-manifest.json",
+    "statesManifestSha256": "1ebd80b25afbce1f26214b7e7781f2f167be19700d5b7607224d472d7321f48b",
+    "reviewBoard": "../../build/states/state-review.html",
+    "reviewBoardSha256": "b5386a4ea36b827c49c9b18aeb26ee51350949033d41d0aee7486923dc789292"
+  },
+  "renderDeterminism": {
+    "comparisonSchemaVersion": "1.1.0",
+    "decodedFormat": "non-interlaced RGBA8",
+    "runABViewCount": 24,
+    "runABExactViewCount": 24,
+    "runABBoundedToleranceViewCount": 0,
+    "maximumDifferentPixelCount": 0,
+    "maximumChannelDelta": 0
+  },
+  "stateArtifacts": [
+    {
+      "stateId": "intact",
+      "triangleCount": 1688,
+      "semanticSha256": "ead3d02586c5c038acec6ff76cf77ac76cd1c5102f3cb4abe46f402c97d80ac3",
+      "glbSha256": "32b613113a4cf68c1b62ba29e1007e92ade14b91c73023d1f74e89a8d6bb20bb",
+      "fbxSha256": "f187c557c8bd915f3905f45f67de947e731abc2bae9a16d7e72cbe3e57d9d275",
+      "manifestSha256": "137a0c5c2865755647859080cbbdf945da7adb87d4dc6903b3caa7d395d33239",
+      "sourceBlendSha256": "8c8856965012b69d044f42ca1149d36e6b32d85c63521ec8e56e50d31736f08c"
+    },
+    {
+      "stateId": "damaged",
+      "triangleCount": 1688,
+      "semanticSha256": "5af8b06311066acc0feaaa3f5c0605c25355b65898090aa74432b0b5e7bee6bf",
+      "glbSha256": "59781065278c8d9e9cbb0d4d77b4a98eca906c06671f3a6e74ea6920d78efac1",
+      "fbxSha256": "0665ad60b36379bd6c87d8a8779a3a9940c1e20b66c50e16b52678a33ddf4a03",
+      "manifestSha256": "8f03222ba5c6dd89a509765c884cacf1305888c5e7c4d2eca22791192c11753c",
+      "sourceBlendSha256": "c8b66d330f440837eca824d41882347c930554e96f28e843be27e4138f0095c7"
+    },
+    {
+      "stateId": "critical",
+      "triangleCount": 1688,
+      "semanticSha256": "b20b76c68d26cd697f4bd62d1a08119b839bc24640ed387f20955e85d727ba78",
+      "glbSha256": "e53c716d3fb1c72ab4763a7ac0bc901b1923601cb6f9e7a9791c58d47918fdb1",
+      "fbxSha256": "35ca119b2a856d853541aaaba4af4455b445a673ab8dfed1394cbbbf3a0d2e53",
+      "manifestSha256": "f779d904fa0490439cd84b6aa0dced0e98bfeb4df620c63d98610a56ca06c9c9",
+      "sourceBlendSha256": "8e0986fde1bb06d23b59b8efda262dba8f9922628db6a58096e03935ff3108b4"
+    }
+  ],
+  "workbench": {
+    "sessionId": "defense-barricade-small-panel-edge-v16d",
+    "mode": "EXPLORE",
+    "status": "PASS",
+    "decision": "SOURCE_PROMOTION_VERIFIED",
+    "lifecycle": "CLOSED",
+    "referenceImmutability": "PASS",
+    "changedComponentCount": 3,
+    "triangleDelta": 192,
+    "session": "../../workbench/defense-barricade-small-panel-edge-v16d/session.json",
+    "sessionSha256": "a563746b20b27fd9f11d06f0e2716a477d916cf077ca82db9ccb94bbf9c5f9e2",
+    "promotionReport": "../../workbench/defense-barricade-small-panel-edge-v16d/promotion-report.json",
+    "promotionReportSha256": "76feefdaccb2831e7b8b67041db2383da67cc1ebf5612ba69c020bfa929dc848",
+    "candidateReproductionStatus": "PASS",
+    "binaryDeterminismStatus": "PASS"
+  },
+  "visualReview": {
+    "review": "../../review.json",
+    "score": 90,
+    "status": "PARTIAL",
+    "automationReviewStatus": "PASS",
+    "humanReviewStatus": "PENDING",
+    "rubric": {
+      "silhouette": 23,
+      "proportions": 18,
+      "artDirection": 18,
+      "gameplayReadability": 19,
+      "originality": 12
+    }
+  },
+  "verification": {
+    "stateCompilation": "PASS",
+    "stateDeterminism": "PASS",
+    "stateInvariantCount": 3,
+    "stateInvariantPassCount": 3,
+    "publishedStateSynchronization": "PASS",
+    "workbenchPromotion": "PASS",
+    "workbenchReferenceImmutability": "PASS",
+    "geometryFingerprintReproduction": "PASS"
+  },
+  "unresolvedProductionGates": [
+    "visualCanonHumanLock",
+    "humanArtReview",
+    "cloudPackageV1",
+    "cloudSamePackageV2",
+    "studioStagingConfirmed",
+    "studioPackageIntegration",
+    "studioGoldenLighting",
+    "physicalMobile",
+    "benchmark1_30_100",
+    "cleanFrozenProvenance"
+  ]
+}

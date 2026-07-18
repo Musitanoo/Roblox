@@ -1,0 +1,175 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/art-direction.schema.json",
+  "schemaVersion": "2.0.0",
+  "version": "0.3.0",
+  "status": "CANDIDATE_SELECTED",
+  "productionApproved": false,
+  "finalTerritory": "salvaged-frontier",
+  "project": {
+    "name": "Roblox Top 1",
+    "genre": "cooperative persistent fortress defense",
+    "platformPriority": "mobile-first",
+    "playerCount": {
+      "min": 1,
+      "max": 4
+    },
+    "visualProtagonist": "player_fortress",
+    "northStar": "The fortress is the protagonist; every visual event must preserve cause, direction, target and priority."
+  },
+  "axisContract": {
+    "designAndRoblox": {
+      "x": "width",
+      "y": "height",
+      "z": "depth",
+      "upAxis": "Y"
+    },
+    "blender": {
+      "x": "width",
+      "y": "depth",
+      "z": "height",
+      "upAxis": "Z"
+    },
+    "conversion": {
+      "robloxToBlender": [
+        "x",
+        "z",
+        "y"
+      ],
+      "blenderToRoblox": [
+        "x",
+        "z",
+        "y"
+      ]
+    },
+    "unit": "stud",
+    "oneBlenderUnitEqualsStud": true
+  },
+  "creativeConstraints": {
+    "tone": [
+      "stylized",
+      "expressive",
+      "non_gore",
+      "lightly_unsettling",
+      "occasionally_funny",
+      "highly_readable"
+    ],
+    "mustPreserveRobloxAvatarIdentity": true,
+    "spectacleMustNotOcclude": [
+      "direction",
+      "target",
+      "cause",
+      "priority"
+    ],
+    "mustCommunicate": [
+      "front_back",
+      "danger",
+      "interaction",
+      "damage_state",
+      "destruction_direction"
+    ]
+  },
+  "territories": [
+    "industrial-toy-defense",
+    "salvaged-frontier",
+    "clean-tactical-diorama"
+  ],
+  "comparisonInvariants": [
+    "asset_functions",
+    "asset_dimensions",
+    "pivots",
+    "gameplay_states",
+    "triangle_budgets",
+    "texture_budgets",
+    "camera_rig",
+    "lighting_profiles",
+    "backgrounds",
+    "resolutions",
+    "render_passes",
+    "revision_rounds",
+    "review_questions"
+  ],
+  "screenSpaceRules": {
+    "projectionModel": "exact_angular_vertical_fov",
+    "formulaForward": "pixels = viewportHeight * (2*atan(thickness/(2*distance))) / verticalFovRadians",
+    "formulaInverse": "thickness = 2*distance*tan((pixels/viewportHeight*verticalFovRadians)/2)",
+    "calibrationViewport": {
+      "width": 640,
+      "height": 360
+    },
+    "verticalFieldOfViewDegrees": 70.0,
+    "bands": {
+      "primary": {
+        "distanceStuds": 60.0,
+        "minimumPixels": 3.0,
+        "nominalThicknessStuds": 0.610871,
+        "productionSafetyFactor": 1.25,
+        "productionMinimumThicknessStuds": 0.763588
+      },
+      "secondary": {
+        "distanceStuds": 30.0,
+        "minimumPixels": 3.0,
+        "nominalThicknessStuds": 0.305435,
+        "productionSafetyFactor": 1.25,
+        "productionMinimumThicknessStuds": 0.381794
+      },
+      "tertiary": {
+        "distanceStuds": 15.0,
+        "minimumPixels": 2.0,
+        "nominalThicknessStuds": 0.101811,
+        "productionSafetyFactor": 1.5,
+        "productionMinimumThicknessStuds": 0.152717
+      }
+    },
+    "recalibrationRule": "Any FOV, FieldOfViewMode, camera distance, or validation resolution change invalidates prior thresholds."
+  },
+  "detailHierarchy": {
+    "measurementMethod": "detail_band_render_non_overlapping_pixel_masks",
+    "maskColors": {
+      "primary": "#FF0000",
+      "secondary": "#00FF00",
+      "tertiary": "#0000FF"
+    },
+    "targetProjectedAreaRatio": {
+      "primary": 0.72,
+      "secondary": 0.23,
+      "tertiary": 0.05
+    },
+    "sumTolerance": 0.02,
+    "deletionRule": "A detail serving neither silhouette, function, nor identity is removed."
+  },
+  "forbidden": [
+    "thin_loose_wires",
+    "floating_fragments_without_gameplay",
+    "decorative_microtext",
+    "unbounded_grunge",
+    "color_only_state",
+    "subpixel_silhouette_features",
+    "unique_duplicate_mesh_uploads",
+    "unlicensed_production_reference",
+    "masked_tool_failure",
+    "unverified_external_pass"
+  ],
+  "gates": {
+    "requiredHardGateIds": [
+      "three_territories_built",
+      "human_territory_selection",
+      "calibration_kit_coherent",
+      "silhouette_recognition_60",
+      "function_recognition_mobile",
+      "grayscale_and_cvd",
+      "materials_four_lights",
+      "state_recognition",
+      "group_30_visual",
+      "roblox_technical_budgets",
+      "provenance_complete",
+      "weighted_score_90",
+      "sixth_asset_transfer_proof",
+      "studio_golden_scene",
+      "real_device_mobile"
+    ],
+    "weightedScoreMinimum": 90.0,
+    "humanSelectionRequired": true,
+    "automaticSelectionForbidden": true,
+    "sixthAssetTransferProofRequired": true
+  }
+}

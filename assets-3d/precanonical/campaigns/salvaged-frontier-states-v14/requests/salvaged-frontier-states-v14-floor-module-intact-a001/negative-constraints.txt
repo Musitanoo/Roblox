@@ -1,0 +1,33 @@
+- No text, captions, labels, letters, numbers, logos or invented alphabet.
+- No four alternative concepts, silhouette variants or design options inside the four quadrants.
+- No second gameplay state and no state comparison in the same image.
+- No interpretation other than the single target state intact.
+- No independent redesign between quadrants or between gameplay states.
+- No photorealism, military realism, bleak monochrome or literal construction-toy identity.
+- No color-only gameplay state; shape, silhouette, posture and value must agree.
+- No invented rear, underside, mechanism, component, weapon or decoration.
+- No geometric emblem, badge, pseudo-logo, triangular mark or unexplained assembly symbol.
+- No cinematic depth of field, environmental scene or unrelated prop.
+- No operational overlay, transient event or terminal runtime state mixed into the primary target state.
+- No visual claim that exceeds the explicit gameplay-truth boundary.
+- No critical state, deep hole, raised collision step, broken walkable plane or invalid placement implication.
+- No random crack network, unique tile redesign, painted arrow, false button or noisy top-surface greebles.
+- No environment, adjacent invented module type or perspective distortion that hides the square grid.
+- random crack network
+- raised micro-detail that harms movement
+- unique mesh for every repeated tile
+- painted arrows, text or false interaction buttons
+- color-only damage
+- unmatched edge keys
+- baked shadows or dirt in the albedo
+- random junk pile silhouette
+- uniform rust
+- decorative repair with no causal reason
+- more than three visible material families
+- loose cable spaghetti
+- asymmetry that changes gameplay anchors
+- literal construction-toy motifs or pristine molded-plastic identity
+- thin_loose_wires
+- microtext
+- free_floating_fragments
+- detail_without_silhouette_function_identity

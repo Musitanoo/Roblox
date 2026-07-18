@@ -1,0 +1,865 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/visual-canon.schema.json",
+  "schemaVersion": "1.0.0",
+  "canonId": "vc_enemy_standard__salvaged-frontier__v1",
+  "assetId": "enemy_standard",
+  "territoryId": "salvaged-frontier",
+  "version": 1,
+  "status": "CANDIDATE",
+  "authority": {
+    "gdd": {
+      "path": "Roblox_Top_1_Game_Design_Document_v1.0.md",
+      "sha256": "fd3ba04f92d3b1578d8c7ebfd5d1d8b3a571bd0a5da910f9b45b3720983dc6a6"
+    },
+    "retention": {
+      "path": "plans/product-innovation-retention-doctrine.md",
+      "sha256": "98c1e9b2be8601c4ecc94b4e5da997fcfd73bf75b9b99c18831b61b71dc24562"
+    },
+    "artDirection": {
+      "path": "art/art-direction.json",
+      "sha256": "ab1e3b2607fc916fa660fb20b90c2b62ee6985a866c3a65090bef4996a7eef22"
+    },
+    "calibration": {
+      "path": "art/calibration/calibration-kit.json",
+      "sha256": "8a33c6c8a9b5a02ef460f5e698907a4d6d623e2f5c475047cd3dbdccc102ace9"
+    },
+    "shapeLanguage": {
+      "path": "art/shape-language/rules.json",
+      "sha256": "76fcd0eaaace7f34d7fb88fdc6470315518efd8e586649393ceb32356a7addc7"
+    },
+    "materials": {
+      "path": "art/materials/material-rules.json",
+      "sha256": "41fadb667eb50a2252e6721649afee1b38b98a667ea7c2051f5f465ad9896b83"
+    },
+    "selectedConstitution": {
+      "path": "art/selected/salvaged-frontier-constitution.json",
+      "sha256": "03b7c0ea39bb273ab5d2f6fd4e81f0c7c9ff7183f7f6262bcfb23d69d2654594"
+    }
+  },
+  "identity": {
+    "canonicalName": "Violet Frontier Rôdeur",
+    "category": "baseline_zombie_walker",
+    "gameplayFunction": "standard walking horde enemy",
+    "worldRole": "The readable standard zombie of the horde: a fair baseline pressure unit that lets players judge route, damage and defensive choices without borrowing the wall-breaking silhouette of a brute.",
+    "affiliation": "hostile_horde",
+    "manufactureContext": "A stylized undead body transformed by a stable violet frontier bloom. Biology is always primary; sparse hardened growth expresses hostile adaptation without player-built armor, copper repair authorship or mechanical chassis language.",
+    "emotionalIntent": "Immediately recognizable as a zombie, lightly unsettling and tenacious with a touch of awkward physical absurdity, but never realistic, graphic, tragic or gore-dependent.",
+    "technologyLevel": "undead biological threat with hardened frontier growth",
+    "character": [
+      "shambling",
+      "hungry",
+      "tenacious",
+      "awkward",
+      "legible"
+    ],
+    "territoryVisualThesis": "A memorable violet frontier zombie whose visible face, head-led hunch, unequal open hands and broken-crown biological bloom oppose the fortress's calm construction grammar while remaining instantly readable in a horde."
+  },
+  "instantRead": {
+    "oneSecondPromise": "A hunched violet zombie with a visible face, reaching unequal arms and a broken-crown shoulder bloom advances toward the fortress and shows weakening through posture before color.",
+    "orientationCue": "The bowed zombie head, dark face cavity, forward jaw and reaching arm lead the hunched body; the violet bloom sweeps from one side of the crown toward the opposite shoulder and never reads as a visor.",
+    "interactionCue": "No friendly socket, complete ring, service panel or repair affordance exists; the face and hands are target cues, not interaction controls.",
+    "dangerCue": "A forward cranial profile, open reaching hands, bent pursuit posture and a short pre-swipe draw-back communicate attack intent without giant fists or weapon props.",
+    "relationToPlayer": "A hostile but fair baseline zombie whose facing, swipe preparation, stagger and collapse support immediate recognition, causal combat reading and honest post-failure understanding.",
+    "responsibleElements": [
+      "bowed zombie head with dark face cavity and graphic jaw",
+      "hunched pear-shaped violet torso",
+      "one reaching forearm and one lower dragging forearm",
+      "oblique broken-crown violet bloom crossing one shoulder",
+      "bent separated legs with broad simple feet",
+      "The bowed zombie head, dark face cavity, forward jaw and reaching arm lead the hunched body; the violet bloom sweeps from one side of the crown toward the opposite shoulder and never reads as a visor.",
+      "No friendly socket, complete ring, service panel or repair affordance exists; the face and hands are target cues, not interaction controls.",
+      "A forward cranial profile, open reaching hands, bent pursuit posture and a short pre-swipe draw-back communicate attack intent without giant fists or weapon props."
+    ]
+  },
+  "dimensions": {
+    "unit": "stud",
+    "width": 2.5,
+    "height": 5.5,
+    "depth": 2.5,
+    "toleranceStuds": 0.005,
+    "pivot": "feet_center",
+    "proportionRules": [
+      "The hunched pear-shaped torso occupies roughly forty-two percent of total height and remains narrower than a brute.",
+      "The cranial mass occupies sixteen to twenty percent of total height and projects forward by roughly fifteen percent of body depth.",
+      "Arms are thick enough for horde readability but hands remain medium, open and smaller than the head so the unit never promises wall-breaking force.",
+      "Bent legs occupy roughly one third of total height and preserve a clear gap between the feet at mobile distance.",
+      "The asymmetrical violet bloom stays inside the two-and-a-half-stud width and cannot become a horn, backpack, armor plate or second head."
+    ]
+  },
+  "silhouette": {
+    "targetReadDistanceStuds": 60,
+    "views": {
+      "front": "A clearly undead violet rôdeur with a bowed visible head, dark expressive face cavity, hunched pear torso, unequal reaching arms and bent separated legs.",
+      "back": "A continuous biological back and one oblique hardened violet bloom reveal the same hunched anatomy without service boxes, armor chassis or invented machinery.",
+      "left": "The forward skull, jaw, rounded upper back and one lower dragging forearm create an unmistakable shambling zombie profile.",
+      "right": "The counter-profile preserves the head-led hunch while the shorter reaching arm and shoulder bloom explain controlled asymmetry.",
+      "top": "The head, hunched spine and hands form a compact forward arrow through pose, while the body itself remains rounded and biological rather than wedge-armored.",
+      "bottom": "Two broad simplified feet, bent ankle connections and a stable animation footprint remain readable and compatible with the feet-center pivot.",
+      "threeQuarterFront": "The canonical read combines visible zombie face, forward cranial hood, hunched violet body, one reaching hand, one lower dragging hand and the oblique shoulder bloom.",
+      "threeQuarterBack": "The rounded spine, asymmetric bloom path, bent legs and hanging arms remain anatomically compatible with the front view and contain no mechanical invention.",
+      "gameCamera": "At horde scale the unit reads as one purple shambling zombie token: head-led, hunched, open-handed and visibly stateful without surface noise."
+    },
+    "recognitionLandmarks": [
+      "bowed zombie head with dark face cavity and graphic jaw",
+      "hunched pear-shaped violet torso",
+      "one reaching forearm and one lower dragging forearm",
+      "oblique broken-crown violet bloom crossing one shoulder",
+      "bent separated legs with broad simple feet"
+    ],
+    "negativeSpaces": [
+      "clean gap between each open hand and the torso",
+      "triangular gap below the reaching forearm",
+      "clear separation between bent legs and feet",
+      "small neck shadow separating head from upper torso"
+    ],
+    "intentionalAsymmetry": "Twenty-four-percent controlled asymmetry expresses adaptation inside a seventy-five-to-eighty-five-percent standardized chassis; footprint, facing, collision promise, pivots and gameplay anchors remain fixed.",
+    "distanceRule": "The primary function, orientation and state must remain readable at 60 studs in the canonical mobile landscape and portrait views."
+  },
+  "formHierarchy": {
+    "targetRatios": {
+      "primary": 0.72,
+      "secondary": 0.23,
+      "tertiary": 0.05
+    },
+    "primary": [
+      "hunched pear-shaped biological torso",
+      "forward bowed zombie head",
+      "two thick unequal arm arcs",
+      "two bent leg masses"
+    ],
+    "secondary": [
+      "asymmetric hardened violet crown-to-shoulder bloom",
+      "dark face cavity with graphic jaw plane",
+      "open simplified hands",
+      "raised shoulder and collapsed shoulder rhythm"
+    ],
+    "tertiary": [
+      "two unequal raspberry eye wells",
+      "one to three broad bloom facets",
+      "few large non-gory impact creases"
+    ],
+    "territoryConstructionTranslation": "A bowed zombie head, hunched pear torso, thick unequal arm arcs and bent legs establish the standard rôdeur first; one integrated violet crown-to-shoulder bloom carries hostile frontier adaptation without armor, repair authorship or brute mass."
+  },
+  "construction": {
+    "components": [
+      {
+        "id": "HunchedBody",
+        "function": "Carry the standard zombie identity, center of mass and readable health posture.",
+        "position": "central body",
+        "form": "hunched pear-shaped biological torso",
+        "materialRole": "primary",
+        "relationship": "Supports the bowed head, unequal shoulders, hanging arms and bent legs as one continuous anatomy.",
+        "mobility": "mobile",
+        "visibility": "Visible from every gameplay angle.",
+        "readingRole": "Primary silhouette carrier that separates the rôdeur from player avatars, robots and brutes."
+      },
+      {
+        "id": "ZombieHead",
+        "function": "Declare zombie identity, facing, hostile awareness and emotional expression.",
+        "position": "forward upper body",
+        "form": "bowed cranial hood around a dark face cavity and broad graphic jaw",
+        "materialRole": "threat",
+        "relationship": "Emerges from a short neck shadow ahead of the hunched torso rather than being embedded as a sensor.",
+        "mobility": "mobile",
+        "visibility": "Dominant from front, sides and three-quarter gameplay views.",
+        "readingRole": "Provides the one-second zombie read and prevents visor, golem or faceless-mech interpretation."
+      },
+      {
+        "id": "ShamblingArms",
+        "function": "Communicate pursuit, swipe timing and standard close-range danger without promising brute force.",
+        "position": "lateral front body",
+        "form": "two thick unequal arm arcs with medium open hands",
+        "materialRole": "primary",
+        "relationship": "One forearm reaches forward while the other hangs lower; both remain anatomically attached at visible shoulders.",
+        "mobility": "mobile",
+        "visibility": "Readable from front, sides and game camera without dominating the torso.",
+        "readingRole": "Signals zombie pursuit and pre-swipe telegraph while staying clearly weaker than a wall-attacking brute."
+      },
+      {
+        "id": "StaggerLegs",
+        "function": "Provide honest locomotion, a recognizable shamble and state-dependent loss of balance.",
+        "position": "lower body",
+        "form": "two bent unequal legs with broad simplified feet",
+        "materialRole": "primary",
+        "relationship": "Carry the hunched body with one knee leading and preserve the fixed feet-center gameplay footprint.",
+        "mobility": "mobile",
+        "visibility": "Visible at near and mid range and retained as two separated masses at far range.",
+        "readingRole": "Makes standard walking pressure and worsening stability readable without color."
+      },
+      {
+        "id": "FrontierBloom",
+        "function": "Provide a distinctive violet horde identity and a single causal non-gory damage path.",
+        "position": "one side of cranial crown across opposite upper shoulder",
+        "form": "one oblique broken-crown hardened biological growth",
+        "materialRole": "secondary",
+        "relationship": "Follows the body surface as an integrated growth and never floats, straps on, forms armor or creates a second silhouette role.",
+        "mobility": "destructible",
+        "visibility": "Readable from front, back and both three-quarter views without becoming a horn.",
+        "readingRole": "Commercial recognition landmark and controlled state-break carrier for the violet horde."
+      }
+    ],
+    "plausibilityRules": [
+      "Every visible part belongs to a named component and has a functional relationship to at least one neighboring component.",
+      "No part floats, interpenetrates without an approved joint, or relies on unexplained support.",
+      "Moving, replaceable and destructible components preserve declared axes, anchors and clearance.",
+      "The compiler may simplify tertiary finish but may not remove a primary or secondary semantic component."
+    ],
+    "stableNamingRule": "Component IDs and gameplay anchors never change without an approved canon revision."
+  },
+  "artDirection": {
+    "territoryThesis": "A hopeful fortress culture of intelligent survival: calm standardized chassis make every tool dependable, while one or two visible adaptations turn scarcity, repair and shared history into proud authorship without post-apocalyptic noise.",
+    "shapeGrammar": [
+      "thick standardized rectangles and trapezoids",
+      "large protected apertures and explicit load-bearing joints",
+      "one localized offset brace or replacement module",
+      "mismatched but compatible secondary masses",
+      "visible replacement, reinforcement, sealing or rerouting logic"
+    ],
+    "exaggeration": "Function, load paths, service access and the single authored adaptation are enlarged enough to read on mobile; distress, dirt and tiny mechanics never carry identity.",
+    "edgeLanguage": "Large consistent structural bevels create calm readable highlights; only the boundary of an approved repair may use a sharper cut or visibly renewed edge, and nothing becomes razor-thin.",
+    "detailDensity": "Low secondary construction density and extremely low tertiary density; seventy-two percent primary mass, twenty-three percent functional secondary structure and five percent causal finish.",
+    "asymmetry": "Twenty-four-percent controlled asymmetry expresses adaptation inside a seventy-five-to-eighty-five-percent standardized chassis; footprint, facing, collision promise, pivots and gameplay anchors remain fixed.",
+    "materialLanguage": "Deep coated structure, reclaimed composite panels, exposed durable metal, matte contacts and rare contextual wood surround carefully protected interaction technology.",
+    "paletteLogic": "Deep slate and bone-sand create a quiet frontier base; sun-baked copper identifies player intervention, while mint interaction, raspberry threat, gold warning and red critical remain bounded semantic roles.",
+    "surfaceTreatment": "Broad calm planes, one or two patch boundaries and directional abrasion tell a construction history without uniform grime, material roulette or photoreal texture chatter.",
+    "wearLogic": "Every scar must name a cause: prior impact, heat, hand contact, ground abrasion or an approved repair operation; damage widens one causal chain and repair reverses it.",
+    "signatureDetails": [
+      "bowed dark zombie face framed by violet anatomy",
+      "one reaching open hand and one lower dragging forearm",
+      "one oblique broken-crown bloom from skull to opposite shoulder"
+    ],
+    "forbidden": [
+      "random junk pile silhouette",
+      "uniform rust",
+      "decorative repair with no causal reason",
+      "more than three visible material families",
+      "loose cable spaghetti",
+      "asymmetry that changes gameplay anchors",
+      "literal construction-toy motifs or pristine molded-plastic identity"
+    ]
+  },
+  "materials": [
+    {
+      "zoneId": "body_zone",
+      "family": "stylized_violet_undead_skin",
+      "semanticRole": "primary",
+      "valueRange": "deep eggplant shadow to desaturated plum midtone",
+      "surfaceFinish": "Broad matte faceted biological planes with soft dry highlights and no realistic pores.",
+      "wear": "Large directional compressions and dry creases only where impacts or repeated motion justify them.",
+      "boundaryRule": "Continuous skin mass stays distinct from the face cavity and hardened bloom; it never becomes armor paneling.",
+      "lightingBehavior": "Violet identity remains visible in gameplay, high-contrast and adverse-night lighting without neon emission.",
+      "territoryTranslation": "Use deep eggplant shadows, desaturated plum skin, a muted mid-violet hardened bloom and tiny raspberry facial cues. Surfaces are matte, broad and biological with one causal dry fracture. Forbid sun-copper, mint, bone-sand panel grids, coated chassis, service technology, metal armor and photoreal flesh."
+    },
+    {
+      "zoneId": "face_zone",
+      "family": "graphic_hostile_face_cavity",
+      "semanticRole": "threat",
+      "valueRange": "near-dark cavity with contained raspberry focal marks",
+      "surfaceFinish": "Clean graphic recess, two unequal eye wells and one broad jaw plane rather than a visor or detailed mouth.",
+      "wear": "State changes interrupt one eye well and jaw posture, never add blood or realistic teeth.",
+      "boundaryRule": "Raspberry remains below the hostile coverage cap and cannot spread across the body.",
+      "lightingBehavior": "The face reads through cavity shape and value even when the raspberry accent is removed or seen in grayscale.",
+      "territoryTranslation": "Use deep eggplant shadows, desaturated plum skin, a muted mid-violet hardened bloom and tiny raspberry facial cues. Surfaces are matte, broad and biological with one causal dry fracture. Forbid sun-copper, mint, bone-sand panel grids, coated chassis, service technology, metal armor and photoreal flesh."
+    },
+    {
+      "zoneId": "bloom_zone",
+      "family": "hardened_frontier_violet_bloom",
+      "semanticRole": "secondary",
+      "valueRange": "muted mid-violet with one pale dry fracture interior",
+      "surfaceFinish": "One to three broad mineral-biological facets integrated into the skin, never metallic, crystalline-noisy or armored.",
+      "wear": "One causal fracture widens across damaged and critical states.",
+      "boundaryRule": "The bloom follows one fixed crown-to-shoulder path and never becomes horns, spikes, a backpack or random body coverage.",
+      "lightingBehavior": "Maintains one readable oblique landmark without specular glitter or emissive bloom.",
+      "territoryTranslation": "Use deep eggplant shadows, desaturated plum skin, a muted mid-violet hardened bloom and tiny raspberry facial cues. Surfaces are matte, broad and biological with one causal dry fracture. Forbid sun-copper, mint, bone-sand panel grids, coated chassis, service technology, metal armor and photoreal flesh."
+    },
+    {
+      "zoneId": "reach_zone",
+      "family": "stylized_undead_extremity",
+      "semanticRole": "primary",
+      "valueRange": "slightly darker violet than the torso",
+      "surfaceFinish": "Large simple finger blocks and calm palm planes suitable for mobile silhouette reading.",
+      "wear": "Dry contact abrasion is limited to leading palm and fingertips.",
+      "boundaryRule": "Hands stay open, medium-sized and anatomically attached; no gauntlets, fists or tool-like joints.",
+      "lightingBehavior": "Arm-to-torso negative space remains legible during horde overlap.",
+      "territoryTranslation": "Use deep eggplant shadows, desaturated plum skin, a muted mid-violet hardened bloom and tiny raspberry facial cues. Surfaces are matte, broad and biological with one causal dry fracture. Forbid sun-copper, mint, bone-sand panel grids, coated chassis, service technology, metal armor and photoreal flesh."
+    }
+  ],
+  "semanticZones": [
+    {
+      "id": "face_zone",
+      "purpose": "Declare zombie identity, facing and immediate hostile intent.",
+      "shapeRule": "Bowed head, dark face cavity and broad jaw plane.",
+      "valueRule": "Small high-contrast focal region inside a darker violet cranial mass.",
+      "colorRole": "threat",
+      "motionRule": "head leads and snaps toward target",
+      "vfxAnchor": "face_cavity",
+      "audioRole": "zombie_vocal_telegraph"
+    },
+    {
+      "id": "body_zone",
+      "purpose": "Carry violet faction identity and readable health posture.",
+      "shapeRule": "Hunched pear torso with a rounded biological back.",
+      "valueRule": "Dominant deep eggplant-to-plum mass.",
+      "colorRole": "primary",
+      "motionRule": "uneven forward shamble",
+      "vfxAnchor": "torso_center",
+      "audioRole": "body_impacts"
+    },
+    {
+      "id": "reach_zone",
+      "purpose": "Show the standard zombie's close-range swipe family.",
+      "shapeRule": "Medium open hands on unequal thick arm arcs.",
+      "valueRule": "Hands separate from torso through value and negative space without becoming brighter focal points than the face.",
+      "colorRole": "primary",
+      "motionRule": "short draw-back then readable swipe",
+      "vfxAnchor": "open_hand_impacts",
+      "audioRole": "swipe_windup"
+    },
+    {
+      "id": "bloom_zone",
+      "purpose": "Carry distinctive horde identity and the single causal damage path.",
+      "shapeRule": "One oblique crown-to-shoulder growth with broad facets.",
+      "valueRule": "Mid-violet secondary mass separated from the darker body.",
+      "colorRole": "secondary",
+      "motionRule": "follows body with no independent animation",
+      "vfxAnchor": "bloom_break",
+      "audioRole": "dry_bloom_fracture"
+    },
+    {
+      "id": "vulnerability_zone",
+      "purpose": "Make worsening health readable without blood, organs or detached body parts.",
+      "shapeRule": "Collapsed shoulder, buckled knee and one widening break through the bloom.",
+      "valueRule": "Pale dry inner fiber or dark void remains localized at the causal break.",
+      "colorRole": "warning",
+      "motionRule": "stagger then incomplete recovery",
+      "vfxAnchor": "largest_damage",
+      "audioRole": "strain_and_stagger"
+    }
+  ],
+  "states": [
+    {
+      "id": "intact",
+      "summary": "A complete violet rôdeur advances in a stable hunch with its zombie face visible, one hand reaching, one forearm hanging lower and the oblique frontier bloom unbroken.",
+      "invariants": [
+        "Two-and-a-half by five-and-a-half by two-and-a-half bounds and feet-center pivot remain fixed.",
+        "The bowed zombie head, visible face cavity, hunched pear torso, unequal open-handed arms, bent legs and oblique violet bloom remain recognizable.",
+        "The unit remains the standard rôdeur and never gains the giant fists, shoulder width, armor mass or wall-breaking promise of a brute.",
+        "Deep violet biology remains the dominant faction read; raspberry stays local to hostile facial anatomy and red stays local to critical state.",
+        "No player copper, mint interaction language, bone-sand panel grid, mechanical visor, service chassis or proud repair history appears.",
+        "Damage derives from the same body and bloom through posture, one causal fracture and loss of balance without changing gameplay anchors.",
+        "Threat direction and zombie identity remain readable before VFX, sound or color."
+      ],
+      "changes": [
+        "The head leads ahead of the hunched torso while both eyes, jaw plane, arms, legs and bloom remain complete.",
+        "One open hand reaches toward the route and the other hangs lower, establishing the canonical asymmetry without injury."
+      ],
+      "cues": {
+        "shape": [
+          "clear bowed zombie head and jaw",
+          "stable hunched pear torso",
+          "one reaching arm and one lower arm",
+          "two bent separated legs",
+          "unbroken oblique crown-to-shoulder bloom"
+        ],
+        "silhouette": [
+          "clear bowed zombie head and jaw",
+          "stable hunched pear torso",
+          "one reaching arm and one lower arm",
+          "two bent separated legs",
+          "unbroken oblique crown-to-shoulder bloom"
+        ],
+        "value": [
+          "dominant deep violet body mass",
+          "dark face cavity framed by a mid-violet head",
+          "secondary bloom lighter than body but darker than warning"
+        ],
+        "color": [
+          "deep eggplant and desaturated plum dominate the complete body",
+          "raspberry remains limited to the two unequal eye wells and inner jaw cue",
+          "no warning gold or critical red spread"
+        ],
+        "light": [
+          "two contained unequal hostile eye wells remain steady",
+          "violet body and bloom are non-emissive"
+        ],
+        "motion": [
+          "steady uneven shamble with head leading",
+          "short visible arm draw-back before swipe",
+          "complete recovery after each step"
+        ],
+        "vfx": [
+          "minimal dry foot contact only",
+          "no ambient aura, fog or body glow"
+        ],
+        "audio": [
+          "recognizable low zombie rasp distinct from machinery",
+          "uneven foot drag",
+          "short vocal inhale before swipe"
+        ]
+      },
+      "componentOperations": [
+        {
+          "componentId": "ZombieHead",
+          "operation": "EMIT",
+          "description": "Keep both contained raspberry eye wells steady while the face cavity, not the light, carries identity."
+        },
+        {
+          "componentId": "ShamblingArms",
+          "operation": "PRESERVE",
+          "description": "Preserve one reaching open hand and one lower open hand without giant fists."
+        },
+        {
+          "componentId": "FrontierBloom",
+          "operation": "PRESERVE",
+          "description": "Keep the single oblique crown-to-shoulder bloom complete and integrated into the body."
+        }
+      ],
+      "transitions": [
+        {
+          "to": "damaged",
+          "durationSeconds": 0.25,
+          "sequence": [
+            "directional hit reaction",
+            "bloom-side shoulder drops",
+            "same-side arm begins to drag",
+            "one eye well interrupts",
+            "gait loses full recovery"
+          ],
+          "reversible": false
+        }
+      ],
+      "territoryTranslation": "Damage drops the bloom-side shoulder, drags the same attached arm and opens one dry fracture; critical state widens that exact break, buckles one knee and lowers the same body without gore, detached limbs or new anatomy."
+    },
+    {
+      "id": "damaged",
+      "summary": "The same violet rôdeur staggers with its bloom-side shoulder lowered, one attached arm dragging and one broad dry fracture crossing the established bloom while the face and route pressure remain clear.",
+      "invariants": [
+        "Two-and-a-half by five-and-a-half by two-and-a-half bounds and feet-center pivot remain fixed.",
+        "The bowed zombie head, visible face cavity, hunched pear torso, unequal open-handed arms, bent legs and oblique violet bloom remain recognizable.",
+        "The unit remains the standard rôdeur and never gains the giant fists, shoulder width, armor mass or wall-breaking promise of a brute.",
+        "Deep violet biology remains the dominant faction read; raspberry stays local to hostile facial anatomy and red stays local to critical state.",
+        "No player copper, mint interaction language, bone-sand panel grid, mechanical visor, service chassis or proud repair history appears.",
+        "Damage derives from the same body and bloom through posture, one causal fracture and loss of balance without changing gameplay anchors.",
+        "Threat direction and zombie identity remain readable before VFX, sound or color."
+      ],
+      "changes": [
+        "The bloom-side shoulder drops and twists the hunched torso eight to twelve degrees without changing the footprint.",
+        "The same-side forearm hangs lower and trails while the opposite hand remains able to reach.",
+        "One broad fracture exposes pale dry fiber inside the existing bloom and one eye well intermittently darkens."
+      ],
+      "cues": {
+        "shape": [
+          "one visibly collapsed shoulder",
+          "one dragging attached forearm below the opposite hand",
+          "torso twist with head still facing forward",
+          "single broad break across the established bloom",
+          "both feet remain separated and grounded"
+        ],
+        "silhouette": [
+          "one visibly collapsed shoulder",
+          "one dragging attached forearm below the opposite hand",
+          "torso twist with head still facing forward",
+          "single broad break across the established bloom",
+          "both feet remain separated and grounded"
+        ],
+        "value": [
+          "warning contrast localized to the bloom fracture",
+          "one darker eye well",
+          "lower dragging arm separated from torso by negative space"
+        ],
+        "color": [
+          "violet body remains dominant",
+          "warning accent remains local to the dry bloom fracture",
+          "raspberry face cue persists on the functioning eye side"
+        ],
+        "light": [
+          "one eye well briefly interrupts after impacts",
+          "no body glow and no color-only state change"
+        ],
+        "motion": [
+          "asymmetric stagger with incomplete shoulder recovery",
+          "same-side arm drag",
+          "slower but still readable swipe preparation"
+        ],
+        "vfx": [
+          "one short dry bloom chip at the causal hit",
+          "brief directional dust below the dragging foot",
+          "no blood, sparks or persistent particles"
+        ],
+        "audio": [
+          "uneven foot cadence",
+          "dry bloom crack on transition",
+          "strained zombie rasp before swipe"
+        ]
+      },
+      "componentOperations": [
+        {
+          "componentId": "ShamblingArms",
+          "operation": "ROTATE",
+          "description": "Lower the bloom-side attached arm into a visible drag while the opposite open hand remains the active swipe cue."
+        },
+        {
+          "componentId": "HunchedBody",
+          "operation": "DEFORM",
+          "description": "Drop one shoulder and introduce a bounded torso twist without changing dimensions, pivot or hit volume."
+        },
+        {
+          "componentId": "FrontierBloom",
+          "operation": "BREAK",
+          "description": "Create one broad dry fracture along the fixed bloom path with no detached anatomy or gore."
+        },
+        {
+          "componentId": "ZombieHead",
+          "operation": "EMIT",
+          "description": "Interrupt one eye well while preserving the graphic face cavity and forward zombie read."
+        }
+      ],
+      "transitions": [
+        {
+          "to": "critical",
+          "durationSeconds": 0.3,
+          "sequence": [
+            "second major stagger",
+            "bloom fracture widens along the same path",
+            "one knee buckles",
+            "torso falls lower",
+            "dragging arm loses swipe function",
+            "face rhythm breaks into long dark gaps"
+          ],
+          "reversible": false
+        }
+      ],
+      "territoryTranslation": "Damage drops the bloom-side shoulder, drags the same attached arm and opens one dry fracture; critical state widens that exact break, buckles one knee and lowers the same body without gore, detached limbs or new anatomy."
+    },
+    {
+      "id": "critical",
+      "summary": "The same violet rôdeur remains recognizable in a low failing shamble: one knee buckles, the bloom-side arm trails unusably, the original bloom fracture widens and the face signal breaks into long dark gaps.",
+      "invariants": [
+        "Two-and-a-half by five-and-a-half by two-and-a-half bounds and feet-center pivot remain fixed.",
+        "The bowed zombie head, visible face cavity, hunched pear torso, unequal open-handed arms, bent legs and oblique violet bloom remain recognizable.",
+        "The unit remains the standard rôdeur and never gains the giant fists, shoulder width, armor mass or wall-breaking promise of a brute.",
+        "Deep violet biology remains the dominant faction read; raspberry stays local to hostile facial anatomy and red stays local to critical state.",
+        "No player copper, mint interaction language, bone-sand panel grid, mechanical visor, service chassis or proud repair history appears.",
+        "Damage derives from the same body and bloom through posture, one causal fracture and loss of balance without changing gameplay anchors.",
+        "Threat direction and zombie identity remain readable before VFX, sound or color."
+      ],
+      "changes": [
+        "The bloom-side knee buckles and lowers the hunched body while both feet preserve the gameplay footprint.",
+        "The already dragging arm remains attached but loses active swipe posture; the opposite hand and bowed head preserve forward intent.",
+        "The existing bloom fracture widens to reveal more pale dry fiber and the face keeps only a sparse irregular raspberry pulse."
+      ],
+      "cues": {
+        "shape": [
+          "low hunched body over one buckled knee",
+          "one trailing unusable arm and one weak forward hand",
+          "bowed zombie head still leading the route",
+          "widened break in the same oblique bloom",
+          "no detached limbs or new anatomy"
+        ],
+        "silhouette": [
+          "low hunched body over one buckled knee",
+          "one trailing unusable arm and one weak forward hand",
+          "bowed zombie head still leading the route",
+          "widened break in the same oblique bloom",
+          "no detached limbs or new anatomy"
+        ],
+        "value": [
+          "dark collapsed violet body",
+          "small pale dry fracture inside the bloom",
+          "face cavity remains readable during long dark gaps"
+        ],
+        "color": [
+          "deep violet remains the dominant faction identity",
+          "critical red is confined to the existing bloom break or one eye well",
+          "no full-body red, neon purple or color-only state"
+        ],
+        "light": [
+          "single irregular eye pulse with long dark gaps",
+          "critical signal never replaces the face silhouette"
+        ],
+        "motion": [
+          "short failing shamble over one buckled knee",
+          "trailing arm no longer prepares a swipe",
+          "opposite arm recovery is greatly slowed"
+        ],
+        "vfx": [
+          "brief dry dust at each failed step",
+          "rare tiny bloom chip from the existing fracture",
+          "no persistent fog, blood or spark shower"
+        ],
+        "audio": [
+          "broken dragging step rhythm",
+          "low interrupted zombie rasp",
+          "dry strain at the existing bloom fracture"
+        ]
+      },
+      "componentOperations": [
+        {
+          "componentId": "StaggerLegs",
+          "operation": "ROTATE",
+          "description": "Buckle the bloom-side knee while preserving both foot anchors and the fixed gameplay footprint."
+        },
+        {
+          "componentId": "HunchedBody",
+          "operation": "ROTATE",
+          "description": "Lower the same body into a failing hunch without changing its identity, bounds or collision promise."
+        },
+        {
+          "componentId": "ShamblingArms",
+          "operation": "MOVE",
+          "description": "Keep the damaged-side arm attached and visibly unusable while the opposite hand weakly preserves forward intent."
+        },
+        {
+          "componentId": "FrontierBloom",
+          "operation": "EXPOSE",
+          "description": "Widen the existing dry fracture along the same bloom path without adding a new wound or fragment family."
+        },
+        {
+          "componentId": "ZombieHead",
+          "operation": "EMIT",
+          "description": "Use one sparse irregular eye pulse with long dark gaps while the face cavity remains readable unlit."
+        }
+      ],
+      "transitions": [],
+      "territoryTranslation": "Damage drops the bloom-side shoulder, drags the same attached arm and opens one dry fracture; critical state widens that exact break, buckles one knee and lowers the same body without gore, detached limbs or new anatomy."
+    }
+  ],
+  "invariants": [
+    "Two-and-a-half by five-and-a-half by two-and-a-half bounds and feet-center pivot remain fixed.",
+    "The bowed zombie head, visible face cavity, hunched pear torso, unequal open-handed arms, bent legs and oblique violet bloom remain recognizable.",
+    "The unit remains the standard rôdeur and never gains the giant fists, shoulder width, armor mass or wall-breaking promise of a brute.",
+    "Deep violet biology remains the dominant faction read; raspberry stays local to hostile facial anatomy and red stays local to critical state.",
+    "No player copper, mint interaction language, bone-sand panel grid, mechanical visor, service chassis or proud repair history appears.",
+    "Damage derives from the same body and bloom through posture, one causal fracture and loss of balance without changing gameplay anchors.",
+    "Threat direction and zombie identity remain readable before VFX, sound or color."
+  ],
+  "allowedVariations": [
+    {
+      "id": "bloom_facets",
+      "range": "one to three broad facets inside the fixed crown-to-shoulder path",
+      "justification": "Adds individual horde variation without changing silhouette family, component count or damage topology."
+    },
+    {
+      "id": "gait_phase",
+      "range": "full walk cycle inside shared head, shoulder, hand and foot pose limits",
+      "justification": "Prevents synchronized horde motion while preserving the same readable attack and state telegraphs."
+    },
+    {
+      "id": "broad_mottling",
+      "range": "zero to two low-contrast plum value patches larger than a hand",
+      "justification": "Breaks uniformity without creating texture noise or carrying gameplay state."
+    }
+  ],
+  "forbidden": [
+    "robot, mech, armored golem, powered suit or faceless machine interpretation",
+    "visor, sensor slit, chest core, service box, mechanical joint or panelized chassis",
+    "giant fists, wall-breaking hands, brute shoulder width or heroic combat stance",
+    "player-like Roblox avatar proportions or readable human clothing costume",
+    "copper repair bands, mint interaction lights, bone-sand armor panels or friendly buildable grammar",
+    "neon purple emission across the body or color-only zombie identity",
+    "thin noodle limbs, tiny hands or noisy finger silhouettes",
+    "gore, blood, exposed organs, realistic wounds or realistic rows of teeth",
+    "decorative horns, spikes, wings, weapons or random crystals",
+    "detached limbs, floating fragments or cross-state anatomy redesign",
+    "cute mascot face, comic smile or friendly eye treatment",
+    "hidden front direction or face visible only through lighting",
+    "uniform particle fog, swarming flies or effects that obscure the body",
+    "random junk pile silhouette",
+    "uniform rust",
+    "decorative repair with no causal reason",
+    "more than three visible material families",
+    "loose cable spaghetti",
+    "asymmetry that changes gameplay anchors",
+    "literal construction-toy motifs or pristine molded-plastic identity",
+    "thin_loose_wires",
+    "microtext",
+    "free_floating_fragments",
+    "detail_without_silhouette_function_identity"
+  ],
+  "visualPacket": {
+    "status": "SPECIFIED",
+    "coverageRule": "If a component or state is absent from every bound board, the canon is incomplete and cannot be LOCKED.",
+    "boards": [
+      {
+        "id": "orthographic",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "perspective",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "black_silhouette",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "component_breakdown",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "proportions",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "materials",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "semantic_zones",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "all_states",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "state_comparison",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "mobile_near",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "mobile_mid",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "mobile_far",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "lighting_matrix",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "repetition_1",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "repetition_30",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "repetition_100",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      },
+      {
+        "id": "required_and_forbidden_annotations",
+        "required": true,
+        "status": "SPECIFIED",
+        "evidence": []
+      }
+    ]
+  },
+  "generationContract": {
+    "mode": "RECONSTRUCT_CANON_DO_NOT_AUTHOR_OBJECT",
+    "obligations": [
+      "Reconstruct every primary and secondary component defined by this canon.",
+      "Produce every required state from the same component structure and stable anchors.",
+      "Preserve the one-second function, front, interaction, danger and state readings.",
+      "Record this canon ID and exact SHA-256 in the compliance envelope."
+    ],
+    "constraints": [
+      "Dimensions are 2.5 x 5.5 x 2.5 studs with tolerance 0.005.",
+      "Triangle budget maximum is 5000.",
+      "Texture class is medium.",
+      "Pivot is feet_center and component anchors remain stable.",
+      "One UV set and one material slot maximum per production mesh component."
+    ],
+    "tolerances": [
+      "Dimension error may not exceed 0.005 stud.",
+      "Only the explicitly listed allowedVariations may vary.",
+      "Tertiary details may be simplified when they fall below the minimum mobile screen-space band."
+    ],
+    "forbidden": [
+      "robot, mech, armored golem, powered suit or faceless machine interpretation",
+      "visor, sensor slit, chest core, service box, mechanical joint or panelized chassis",
+      "giant fists, wall-breaking hands, brute shoulder width or heroic combat stance",
+      "player-like Roblox avatar proportions or readable human clothing costume",
+      "copper repair bands, mint interaction lights, bone-sand armor panels or friendly buildable grammar",
+      "neon purple emission across the body or color-only zombie identity",
+      "thin noodle limbs, tiny hands or noisy finger silhouettes",
+      "gore, blood, exposed organs, realistic wounds or realistic rows of teeth",
+      "decorative horns, spikes, wings, weapons or random crystals",
+      "detached limbs, floating fragments or cross-state anatomy redesign",
+      "cute mascot face, comic smile or friendly eye treatment",
+      "hidden front direction or face visible only through lighting",
+      "uniform particle fog, swarming flies or effects that obscure the body",
+      "random junk pile silhouette",
+      "uniform rust",
+      "decorative repair with no causal reason",
+      "more than three visible material families",
+      "loose cable spaghetti",
+      "asymmetry that changes gameplay anchors",
+      "literal construction-toy motifs or pristine molded-plastic identity",
+      "thin_loose_wires",
+      "microtext",
+      "free_floating_fragments",
+      "detail_without_silhouette_function_identity"
+    ],
+    "complianceReportRequired": true,
+    "minimumStatusForExploration": "CANDIDATE",
+    "minimumStatusForProduction": "LOCKED",
+    "silentCanonMutationForbidden": true
+  },
+  "approval": {
+    "required": true,
+    "status": "PENDING",
+    "approvedBy": null,
+    "approvedAt": null,
+    "decisionRecord": null,
+    "approvedEvidencePackageSha256": null,
+    "revisionReason": null
+  },
+  "provenance": {
+    "sourceKind": "AUTHORED_CANON_COMPILED_FROM_GDD_RETENTION_AND_ART_GRAMMAR",
+    "authoredAt": "2026-07-16T15:36:48Z",
+    "authoredBy": "Codex under founder authority; human lock still required",
+    "generator": "tools.art.build_visual_canons",
+    "inputHashes": {
+      "source": "9c3800fbd37f04e31353a53231ad6c53d0a2a4919c22b9b68232c898f7054cce",
+      "gdd": "fd3ba04f92d3b1578d8c7ebfd5d1d8b3a571bd0a5da910f9b45b3720983dc6a6",
+      "retention": "98c1e9b2be8601c4ecc94b4e5da997fcfd73bf75b9b99c18831b61b71dc24562",
+      "artDirection": "ab1e3b2607fc916fa660fb20b90c2b62ee6985a866c3a65090bef4996a7eef22",
+      "calibration": "8a33c6c8a9b5a02ef460f5e698907a4d6d623e2f5c475047cd3dbdccc102ace9",
+      "shapeLanguage": "76fcd0eaaace7f34d7fb88fdc6470315518efd8e586649393ceb32356a7addc7",
+      "materials": "41fadb667eb50a2252e6721649afee1b38b98a667ea7c2051f5f465ad9896b83",
+      "selectedConstitution": "03b7c0ea39bb273ab5d2f6fd4e81f0c7c9ff7183f7f6262bcfb23d69d2654594",
+      "territory": "3b59d12273d24e5aea3b7a06611aafffad495f482a1696dc4a1c1fc41749f3d6",
+      "generator": "2a83313dfad161ba97b6e9d1f7c2ec9c5b6c07d0a407d5a6654ac605b09a91d8"
+    }
+  }
+}

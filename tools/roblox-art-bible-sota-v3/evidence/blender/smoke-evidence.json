@@ -1,0 +1,1735 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/smoke-evidence.schema.json",
+  "schemaVersion": "3.0.0",
+  "status": "PASS",
+  "generatedAt": "2026-07-17T06:35:30.121979Z",
+  "evidenceTier": "SMOKE_COMPLETE",
+  "rendererTruth": "BLENDER_PREFLIGHT_ONLY_STUDIO_IS_CANONICAL",
+  "territories": [
+    {
+      "territoryId": "industrial-toy-defense",
+      "status": "PASS",
+      "buildReportSha256": "c64bbd7be5788adc31c09e61d117aa9fa0d8e19e54e00b2c98361adaa8ad51bc",
+      "inputHashes": {
+        "territory": "376db838f206a46e114993ab5c666a155341215931069b879527666ebd144450",
+        "calibration": "8a33c6c8a9b5a02ef460f5e698907a4d6d623e2f5c475047cd3dbdccc102ace9",
+        "camera": "f2daf7d92ff4db38a588cb29588c5856c8894ec0c11d30d3d01c527bf7cd8d44",
+        "renderMatrix": "1912f4b47aeb6064f8022bc3275b3b881cfeed39e1c3421800112c30d1b211f2",
+        "lighting": "8e3db2df064ac33f79703e21aa702709a7162fa43b56d07f706e3af03647e085",
+        "materials": "41fadb667eb50a2252e6721649afee1b38b98a667ea7c2051f5f465ad9896b83",
+        "generator": "56595b8c3e615f19ff84d4f9e52969d9a63be0c6b48150d29173b0f4a3016880"
+      },
+      "expectedRenderCount": 108,
+      "actualRenderCount": 108,
+      "renderEvidenceComplete": true,
+      "renderEvidence": [
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__intact__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "0a9926ba067a9b9e022c94ae42dac96893fcb56615c31cefdc6e06c33baa1f9c"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__intact__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "219fc48966ca8cf6778e58574538761d458be41221d36f5262d0ea3eab96da24"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__intact__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "a935c377901438a0a3582b97e2cd3e9f2f026c01da9ef38953f75089c39a2c01"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__intact__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "9a92a87d3a39ecf0bd7ae5489a1afc0a6528461d421d38e04df915907b43b1e0"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__intact__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "a4aa9a64ea30b165ea1df24afbd4619bee628a11b1bc7bd79fb052e1aa1badda"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__intact__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "2c41eeaa10a5f8be6071e261b7c49fee3c232337df8ace6e880a36642eb124c3"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__intact__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "84b0e2ddc5e4afe985a56b3d9dc52df33f8dd0ec432f233952d82705a491791a"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__intact__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "33e08391c60fd8eddeed653e5e3ee36e69cc4c40c82515bfa9ae75cc7f10521c"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__intact__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "dcd70710d45ed1ad6251e1d27819635af61bcea8b4546af0b6bb852a6e542914"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__intact__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "fea9bc0752abe1268d294bfd74364fdc49f15d7378c4156f8349b5f081818aaf"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__intact__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "cc660fb0998e452ab80b7415a9b49ea8a1fe711db8371eafe5190a044380f427"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__intact__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "f749d65883b9ac68381495f9905bb3b5e7d74ed9ec5877fcba8f002c45d417f6"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__critical__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "15ca8a5e64f18450b32000b3553e4b937187f19b451f648a993d24cf58992a4c"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__critical__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "72cd4677acc51f6ac5a092aa72881df2f92897e8ee9f8a8fa4384864ebd47336"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__critical__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "017917c0501b21fc2257384f99cdf0789f1e839550033e064eadef7d6458dbc1"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__critical__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "0d9403d10ce2efbe25a4de06ff92c041a80edca157475254fb60831e94e569b4"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__critical__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "28a30021f543cdbbc0065fb2173741107498bab84f8400ede2f36ac4ff407c14"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__critical__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "207b90df8947948554569cb7a2abf41cd33065f96ed60b57ce4dcd9b555c9b0c"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__critical__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "25e22fcc5f69e900b9790db25dd11a4de14ce5fc8df654c7e659f09885ef22ee"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__critical__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "0bf6c2f2bec0abdc4030208e2f5de72281356c9a6608c88beea758ccc19cea62"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__critical__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "a8c1090a9f0775849551a3147b914a8e66962c1fa74f136c9fc84a481d2f5126"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__critical__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "f1c107db582b34a8824612ec43dfd744427f4662097d2b65d6ee5f881eb491b2"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__critical__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "dddd49fda8df84e9d744e4cf3ce6da7361014339b54cb4575a3ad46075a40948"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__critical__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "0db483ac0404da2a3f358bbd8b911e6378f6ae221a8d21ac843a7702db05b0e6"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__intact__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "cf2dc008a0e5d95cca76686e5a2aef9a0913ae0b8c57a500a560b809a7ba595a"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__intact__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "7dd0b8db15f89f0d3a9585c68623f73aafa6d63198dc8be66069efc300882bd6"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__intact__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "9af06db3b82e4574cb0027d14cbe5daf5330d09abbadab6c49c9ea5b62f726b0"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__intact__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "8e061f99ee6f39e12efd104eb4f7dbcf31e5e3a1740923b7a01cc97e3cd0005b"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__intact__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "a7b5e18adf82d3eb51063f1757b7bcf90fce692080e52ffefe79016b790167b1"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__intact__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "cd7494d13eeb6358e0e254b1ea4886901855fb970656dcbfa863ef97253e8aa3"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__intact__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "6c2e40e27673056f9d5b2239198de501b7e2626be157deb39073030ac4552bc0"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__intact__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "3abd848604890bfff1f758d341aff6579b4be85ee4de816b5430a3405fefebef"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__intact__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "64efc5348fe49651835b482a6c4b0b027f866392dc6be033dabcce03ea2ae0a7"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__intact__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "73f17cc074b856b86d7839af6b29beebffec397297bdf41d2d0d6bb5c5330c9b"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__intact__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "5ad4cf095cdac2609b806a2f6b7b7eeda78d60ee023bfd69a79b985b2edf7cec"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__intact__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "9ca4fd9984284160b99e5467b44028ed236d67a42b69f77bac2e50f68a50b91d"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__critical__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "179c0cd766043d416500de7e7d9180664b744c9e90240db59f0011f25e2ad59d"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__critical__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "59e66d74755200c49d10ada71d65639be66de40dd399dc4a2c2d7ca8d70449fe"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__critical__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "fab92de84470cea1ab9aa6d94e2337e4654932476b15a348e94e82fb9aa9d409"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__critical__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "5c915cb021cdb72e21b1f2e405ee2ffa6571851d43c9f2b7b966a1db82e09e33"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__critical__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "712b1fc7f566a2ff621e2d97ef7b3a977e84c2cbb0c22b7f601eb5e81edf50f7"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__critical__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "06dc34eca7820f6546de70c734be3c443345081a1ad77f14b90a035bf8d14f89"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__critical__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "2d4ea44549249205cf19f663f9cef1543e5bc5bdac5e1c214e5aed0b46f20a74"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__critical__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "345e2f720380b9beb87efe9bf1e7321b05be384e8f48a30ca01a93e44bce7378"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__critical__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "777d7d7a40e173e4766ec40b1ae2cbd0d01fd45c992a8482e1b6d9c7706b4a20"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__critical__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "4e033e6e059d32c50ecf02d2101f9866dad5a6b3d3fe2bcfaa38658fb922e3d5"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__critical__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "f4c9d593b4978c8a55da18a086d59e04c0d77821925bfbd5d9a6f414df1d901a"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__critical__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "85c29ab489b831536586a8537ffb15a80c3d6b3d4c724b97af8945ec655a9343"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__intact__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "468e25069c4931247e02c4cb696c1bec39bbee811800fe323b10a32d2c697728"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__intact__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "28fbb6936759bcf13bf2c7c701d443982ad27f07d8db26220a49108a26524fc1"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__intact__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "4abbdfe53a9191668841078f7c7776bca3d83b33dae8bb6ec13b1bae4bf1f08a"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__intact__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "881f8c628ef8ca0331ab32c862b8955837fb29f4f8b387aa715517561fc481eb"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__intact__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "733b36e2ceea28bd7185682850ca90ba0b44b3182d441e43443986c94d746dc6"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__intact__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "284e4772b27202b748e52a739b38ef5880438a748ca9e5a44bb0f7246b85e49d"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__intact__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "1a953fe1f3dff3847ff875f783d06d21ae354ae3830abbad9d2d0b507fed916a"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__intact__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "98b5151d256f6e8d448e9882490e959414fca54b153d9a38d2e24bf6b9802f2a"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__intact__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "7bc48f7f2876c844f0dba549b49834d6e8bc848266581ae8fc05df45dd0e1ebb"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__intact__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "8fd6c380e24258f96b1273f8c5516c3783670e363c3621b34c3985ac95b3d25c"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__intact__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "ff683d9af89c43f207b9fbfe1a12370358174861fc6971c298bb8ca35ad30304"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__intact__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "f96ec4e7d3fc4649497d695874d7f7075290184398634d897f572e2a74c2a7dd"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__critical__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "7441ddad4dbb055afd9ec4d7be879c3a94b0f6f3460577bedd31ba617306929c"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__critical__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "3944e70dd61ff3ef9e7e79a46af0435d2e400e13ef60aab48ca939d687e5f1ad"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__critical__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "9f3b5b17c7345fb390f235f74d36537918091092c59c36d59d6f40b37ce12fd3"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__critical__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "1bd1da0832ce71621d000f193a91404457f8e72632a5c70d318f9868e1eec305"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__critical__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "fa33168d65168bf3c94f8f504e222be30d7882b50425603de125de76f8ab0b72"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__critical__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "096da52da9aa288846f1b8e959c8a5d4c073fc27c0beb8bfd1a6abec99df0671"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__critical__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "b5f26aaabb83409553a12f345e52827b32f026ca0bd9a48d15210cfc05735715"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__critical__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "ae1cd13b5a70ba6ef35352e862351c118659fcfa43cb93745bb7cb7b646b9fc2"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__critical__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "1a7b01349cd63763a857e409e8c2137f1919fc5e45722484b3a32d7824c4bd1c"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__critical__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "f65cc59d7fb5275f5ca570fe811aba00588f6572deb40c0e943a6c70436289f2"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__critical__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "c09daf42030f4ce5afb071073d90adf5148dd6c4ab5389c51ce5ca9a6e03cd19"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__critical__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "fc36712b306d7347316f20cfd040184ed52f98481b58c28ae2e5ae96629f3edc"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__floor_module__intact__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "cd84d3cc3ac88007a2932e75b2fe69290f3f3a119425c236fe7257880ea0d170"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__floor_module__intact__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "c30277af7855d3505ea2d09eeb18f0b748101efdcbdb8434e892ec7697ce0bd2"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__floor_module__intact__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "c9ccb41f37b5d9ca7c854a6094617025606256ef0ff02421f407657bd573e3af"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__floor_module__intact__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "0203e43d8b88b5c9ebd56208134b787a95f25b59ef3d279a2ab8dc5aa9a19eea"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__floor_module__intact__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "225727f2162758b7b389b41c0058fde704d0eb1aeedd554d1112c85366719c79"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__floor_module__intact__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "cf1ab0d583cedc378df40158fb0a0dcaa4a761ab6b986089ecba26d6982e8757"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__floor_module__intact__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "015bb6134ecfe4543e2dfe7ecc8ca5089488d281fc2902f32cb0479d03f5bad4"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__floor_module__intact__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "8d65686becc685e83b42a09f93b4111226ede62b413b8db76aa93323a819cba4"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__floor_module__intact__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "28fcda3b31d874b5c9cb442493521e4d156dd1d0190c6dfc1eedef06b2914bda"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__floor_module__intact__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "9c1dd3fa2631f33aaadf1e71b5d14c608acd63209959384da7a735e1565ed7c2"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__floor_module__intact__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "7d4a4ad7a34f729e175a03a5c9e730e80c001726c87872c761fd7f1ce98f9301"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__floor_module__intact__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "85c053abef3e95401c8358e056a22a6126f9eb401df5838a1a0086e556dbb6fc"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__damage_effect__critical__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "a22d542466b76a4aad9e37386422910c8660b5368ca715664882742086e5f62f"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__damage_effect__critical__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "c5396a6acfb2ea40dd7550befc8ab0ba66dc1fa0cac2fa143bcafb9b9d68b991"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__damage_effect__critical__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "4001f8c7859ac310cd3b1e6bcdd2dca1772a75a1f70cafed1edf46e1ec285703"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__damage_effect__critical__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "e251b29bdd3c47dc2b25b239c54d3d6aceec1828764c58308e9baea57c1450d5"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__damage_effect__critical__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "152ae47f990b0868743f7837f9bbe44a5d7fad27fbcf644f4f8b02c7022182fa"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__damage_effect__critical__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "95cfd0449f1d27942c8f485403728972a425abc892494911423407c11308fc77"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__damage_effect__critical__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "3b4bc67aae8f0e615c3913e6c1e47f02882f9f71ff53cc146ade7062812836fd"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__damage_effect__critical__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "ec23a6563cd5f3299da9a83b9bb4dd66f9d9e21d1101c177f585a3371aeee154"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__damage_effect__critical__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "5d1ee78be013eec07e4942e11bf5aefe9ca8fc86651f16d9de9eaed73b1fa5d0"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__damage_effect__critical__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "9301834a88478dd27fbf6b9be850e206eff878fb4b3aee475cbb56195ebc7d9a"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__damage_effect__critical__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "195e711e980c605729c9fc6918d6cb82b264e7bc91590d68f185ee64699e1363"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__damage_effect__critical__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "147a16fbd8741568409fe6d64349d06527c011449544ff4c6aeb81581be682ee"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__intact__far__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__silhouette.png",
+          "sha256": "845caacc5b74ace01f9da931e669ae9cc3386e5de5b3cf3ee1a978b0c22a809e"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__intact__far__Lighting_Neutral_QA__world_neutral_dark__mobile_landscape_hard__silhouette.png",
+          "sha256": "bfbc1b98758ca6c155311ae79d46d462363d484a1b254096518c4a721a7bf5fa"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__intact__far__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__silhouette.png",
+          "sha256": "36f4175fb31d0a68fc30725537e029edc1b840852c0628ae6c346e4baa672c90"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__intact__far__Lighting_Neutral_QA__world_neutral_dark__mobile_landscape_hard__silhouette.png",
+          "sha256": "b70708cd14e4841f485dbbf6080b13685205be123f0452f7e387b73132a7d163"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__intact__far__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__silhouette.png",
+          "sha256": "7307018f7330201949a5bc6397d855fa54dbd6f5dfd7fe16ce125d6236a36184"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__intact__far__Lighting_Neutral_QA__world_neutral_dark__mobile_landscape_hard__silhouette.png",
+          "sha256": "c95f255c2a88e46ed7be7fc98d529f9e202413edf39833cf21590470e9411839"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__floor_module__intact__far__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__silhouette.png",
+          "sha256": "04cab880a24bd775092ed32d459a2d4212b6614d7e7e7abfbaeef688d55a6baa"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__floor_module__intact__far__Lighting_Neutral_QA__world_neutral_dark__mobile_landscape_hard__silhouette.png",
+          "sha256": "040bbca113294ca174de529eaf316315208c3ae2e92a35db4484458feca1bc0f"
+        },
+        {
+          "jobId": "detail_band_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__barricade__intact__near__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__detail_band.png",
+          "sha256": "8ccba03ba4d6740c3857ea582e160232e046c3ec5b320673bfd64787e711c239"
+        },
+        {
+          "jobId": "detail_band_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__objective_core__intact__near__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__detail_band.png",
+          "sha256": "38c2fda0fa7c32b212c0e3635689b6e8b8adaca10dfc836e2375751748747b12"
+        },
+        {
+          "jobId": "detail_band_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__enemy_standard__intact__near__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__detail_band.png",
+          "sha256": "39203f6a38d7201df6053365c09e04a4a0b3d1929cf298183a81240577212c8a"
+        },
+        {
+          "jobId": "detail_band_smoke",
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__floor_module__intact__near__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__detail_band.png",
+          "sha256": "8ec15b4d4e8836513a552d73ec6f52d8bac1476bab78796a28218db900b54d77"
+        }
+      ],
+      "stressEvidence": [
+        {
+          "sceneId": "stress_barricade_30",
+          "count": 30,
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__stress_barricade_30.png",
+          "sha256": "50871e657347b4d93d954f3b963e9a949bb4c0200efdf0955c198b424abfe335"
+        },
+        {
+          "sceneId": "stress_enemy_standard_30",
+          "count": 30,
+          "path": "build/industrial-toy-defense/renders/smoke/industrial-toy-defense__stress_enemy_standard_30.png",
+          "sha256": "91557215d90241af2cd7b7489fd95606cc19d4f7651fbbac45475767a33c0c8c"
+        }
+      ]
+    },
+    {
+      "territoryId": "salvaged-frontier",
+      "status": "PASS",
+      "buildReportSha256": "a24c59dc55061c81d8fd0a41981e8c9e08a6da028003eeed16e1141724818b54",
+      "inputHashes": {
+        "territory": "c0d4adf11e932f649812ce58cb07239264fbbc73690d90ee8eb044dcd4f52361",
+        "calibration": "8a33c6c8a9b5a02ef460f5e698907a4d6d623e2f5c475047cd3dbdccc102ace9",
+        "camera": "f2daf7d92ff4db38a588cb29588c5856c8894ec0c11d30d3d01c527bf7cd8d44",
+        "renderMatrix": "1912f4b47aeb6064f8022bc3275b3b881cfeed39e1c3421800112c30d1b211f2",
+        "lighting": "8e3db2df064ac33f79703e21aa702709a7162fa43b56d07f706e3af03647e085",
+        "materials": "41fadb667eb50a2252e6721649afee1b38b98a667ea7c2051f5f465ad9896b83",
+        "generator": "56595b8c3e615f19ff84d4f9e52969d9a63be0c6b48150d29173b0f4a3016880"
+      },
+      "expectedRenderCount": 108,
+      "actualRenderCount": 108,
+      "renderEvidenceComplete": true,
+      "renderEvidence": [
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__intact__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "ec713ff4aa8509462d69e7c23d5f683b278bb63947a3c3b71cb2418ccea72756"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__intact__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "d0ec9e98e0f038daa7808940a972bf870ba80fa4f9808d77b534d4ec381c43ea"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__intact__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "be91d54bd142763f3970cbe5533cf91f56d8609d2b9dc459a92f9de80880c05b"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__intact__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "cc65382149c716220e2a6ab6467b60698833c4223f490a3ff19db8758e6843b9"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__intact__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "6b9e7507897d4c20e015b4133b1bfd239dd4195eabf46e68ca6d17fec63507eb"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__intact__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "14f48914cb61f52cae8cc831305c81cc29234c9435dcb2dd11fc401b5fe23c2f"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__intact__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "e903d4a6d2b8c33962a7a79c5d4248d0aa657c1c65652cb4fe9afe211663f6f2"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__intact__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "7194ef739a37a991f9af1bc0959edd64418e2668063ca599c2d26861f6bff627"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__intact__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "e74cd0df84a77723c784af5aada0ada32a00ec3408a2147a619d9949430e9aa9"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__intact__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "6a544571dc8f6de864895ce043b5031b207a15adf4ea8687a1ba6d11215efc0d"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__intact__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "7c6ab0072181a88151fa833ba02131efcce2464f0d842f9b45d247c2aee7fbd9"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__intact__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "381ff145c21f6e1252ac10aebd8fe32a6dd360f60f8535388f42e5184d9ffa00"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__critical__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "6ec35d0e77988d825fd150ae3e13848274cb1ec291e2c38d4a41c476dc81e3b4"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__critical__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "347db116124fcf21d660672f8cce346af4550d084aa077a5a9052c16045bcd12"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__critical__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "f5acbfa1c835c522d15ab49b21ee67a7f7d339a157ba6d8a423d53cd902cc16c"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__critical__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "52d9603faf3eeff26c065accac877ba719e2f8053671b6d78cda651c64e22f4c"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__critical__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "5d7aadfe73018e15debbffdccd9ad6efbb468dfffd68c3ca4d16c62f4f5aeeac"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__critical__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "860ba31db4b487f91ecae4ef1f74fa3674f833629d9d31e1c74c2bbb7e0fed66"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__critical__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "8006ce83b4a623be04ea3aaf60edf1b9e9d8d2e154d9e265c2a7985d60f4b10b"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__critical__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "853c33a0d52b563437bb80f21fdda17258526afdde9cfac73f7ad8ab6811965a"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__critical__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "41e410b62ec68ac50e02becee5f73eaa4bd0bf26c62612bb0fe98b6e87a009d5"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__critical__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "36e0a2b6467290ff163c14b4278dc7c2a56f955c4a3ed039af4630f86e38d188"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__critical__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "5ff046dca315f36caf769d3ef402fdc7e2b7a40245ade5c940c07bfed8fb4519"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__critical__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "5bd4941f8ebd58918a1a5b42c53209e7d98109445c2cc8ae16bd0321b0684c25"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__intact__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "a4881de7f22c4a61d790333a208994f254ab1f10e510799ffc38ca5deb39e9d8"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__intact__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "582c1699bda6e9a934c0bb617f09b63c6547a88e1db63f64dd0104f044681ba1"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__intact__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "15653f2074c4d88ce708901a8505dd17a77137f1313c95f30de04b622e72fd5e"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__intact__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "a410425b45963caba36e9ba775bc07cfc61ae53b0dcd7637bc520806e0cb7cdc"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__intact__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "37d11b318ea6d2300926c912c756d9bb16e657af75de0ed19fc855c63638e0c6"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__intact__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "8615011dc965b5524b948889e4e8735a7692f17cdc23a73c00e132df99b11821"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__intact__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "a282083a669e0502ada9618e5e61f0460b85eb279c8fba59d25a7b5f1d4e55f8"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__intact__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "83dda3efff1e668c4b6e51b2d0701229f82c40d61857ecf65fc4b212a32d28a2"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__intact__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "b8857f5476066f0dd9fa5448061cfb871a2095ee43453e9f06791942cc87bb7c"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__intact__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "2c86baadcd703aae81ab68f9042f9c6998483cfad6e24171096ef2a7387a594c"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__intact__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "bc29755ff0e41432a5d7604a73c50d23c47c6a084cee68d40e33b30accde4901"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__intact__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "467e5c86653f26d308664ef01cf4a137d1651c75f747c33324a3446bb302f9e0"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__critical__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "0c7c0e73c7c90e2fbe1fde009f329bf70c49d7db2e997e4d8f38588d9145e75e"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__critical__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "26662dd489804ef7cba6cbc70348d0e22d9517143c7c65ecdee73c73a0572695"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__critical__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "921011097976a830b33ef14169754fda3abb101c7604990e445f495863a7e145"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__critical__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "0b2466f8c9fcb2411761dc650759c176adbafc5d66f82ca5ccaa365d32bcb58c"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__critical__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "7fb7cd877a8ae315eda230e15f2a31524e7d2f2a937a805fc14779603d7a75ed"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__critical__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "3ec58ee1d109cd46abf465d258d198c40e5e01632465706c00b02b703c9e05f0"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__critical__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "933b618879a15095b152e13bbcbe484a786f095aedef7640eab27d65d89a9e38"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__critical__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "5bf06cd65f181fa7d4f1ee2fbd81a5dde505d8291a619eb8cffbfba80bb8155e"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__critical__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "6cda2f8d445ab2d9c81fd18c533588aa41fa1ab0f271bc614aa7696bde30ad75"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__critical__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "50d79fe1288c441518ec7b0e047ac8b43cab1bdb96fade224cd71fe4b26e8e00"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__critical__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "b5f70017c831904fa2ef17535d67a2f5a0945829f4013cbfd8787070edc4094a"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__critical__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "370cb8c751cde4341a1d1b6b0382f35354f4731a8915cbdc28cf3d8ebd73e236"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__intact__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "7abff0ba6db869f18d5eade121e2fc383bef965cac985ee4d84752c1eeac67c8"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__intact__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "41d26457912fb0d1f0751b85c9b453bcfcb001f694c5c01426ac5ee928d5ed16"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__intact__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "f582af4ae70f05516399ff55155dfc213db662eaae1f3d7ed40df5d34f85c2e2"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__intact__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "90a447124bf73f94484d384e696bd1c4f50551a96bee2d4e6b3bf7fbcda081e0"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__intact__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "363f6a35566b3d5cd36fa71198d36fe4ae95b6a1f28548293246dfa8997e5e38"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__intact__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "2cc35f4ac9aa8226c219c9457db8b636e1e21eba329ffff93a2d30594789d4c7"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__intact__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "3a351d709f85562610224c7c4850dae63b2ee9303a40f55a17186ac18a493488"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__intact__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "f583187c21e6732461c273d3aca5b426c3abe88a97f0a6d8f6073db6b2fe20c5"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__intact__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "9037a61e9f6cdedab0f97c67474f8011f46b5783795994ec2c181edba0a68479"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__intact__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "56b0d4940ea640b55bfa25cd4887cf4f99580a6b889bbb195d117a26d64d10ca"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__intact__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "aa1859e864f3cf5cdf07136df155e8d434d6af8d823463eb5635f945dc980aef"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__intact__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "b45faebbc61ed181294d32f010f6a1167fdf043a154b0fbb5dfa9f7f4668d604"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__critical__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "2763d68c7bd20213e2788d33834258e9afc54548008a153ca6fc01e2922bc78f"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__critical__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "f34ee51f7af6b1b8f5f5aca73354bd6ac7c696f6c7d035b5fd9fafe77c9af3bc"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__critical__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "974001381f645095893a500f359a761b56034117e43e94b440b8b9cabb787ecb"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__critical__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "d46f9c0aa52760644c412091ceced1fc06ced872b306990ae15f45a1bd38c23e"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__critical__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "96fa3c4ffe94062894feae699685769505342743a032440740aaf8afeaa91ac5"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__critical__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "9ad61a2c08bdd133a8a8defd8707207b84780c540899bb355fcfad7542686354"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__critical__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "b8fb0b0f666b1807748a3776f53064746d666a1fbb5aca0ef99a7b0822e3f9dd"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__critical__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "b6b70fbbe59a6f80f720d9be9b4e45582f85fd7011a9734c0687faec37b9bcc7"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__critical__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "da9de1c8e2b6f7954e5db19bd0122bba281f1062916cbbd6cbdfc85aaecd92cf"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__critical__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "9b3fefebf64459bcd30b6ddc136bd19e103d112392d3057ccd4a75dc87932c90"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__critical__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "967431734fe8f504d0a1b7719416711622de559684255a50c48b3e19cf086b87"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__critical__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "9f69d9a87f4300d4cf91da2336f7fab1ba0e2fbba68899d4f93d735bfc0db98b"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__floor_module__intact__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "3e38871a39618d2056d4500d11de787bd493511cae50c7cd5663d817558d1ee7"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__floor_module__intact__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "b97866b69947b2bcea7c78ecb0647ca5bce70431a5d225f14088414ee1f9c3c7"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__floor_module__intact__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "bc76a6e930b49e783c3b3ccc457582bc589eb41b9e917022113a65bcb4f47f80"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__floor_module__intact__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "6e17dcda0d8ed3664b69577503b2e393d283f13675a659939577ccb7fa490c32"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__floor_module__intact__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "bc9333ce1876a0fe69451b8f52507873070cb0f93645550803c8a24a7d8b2abd"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__floor_module__intact__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "a2c20ec25414f49a525341630e15e407a4cd964ab1f1462e06825a38f4ac5f45"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__floor_module__intact__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "51e8b01515576cdabd2b61e17bbda125f6d7257ce8e3abb48a81a69b401ab1e5"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__floor_module__intact__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "e0826dc728017992019acbdb89d444c22e7717c650e8878dea59bd918fed685a"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__floor_module__intact__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "56ba3d253725b93855a9fedc808c24374ea59d09a955c7ed073d86fbfc37b0bf"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__floor_module__intact__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "d7bc7cd8ae3953e9378cfe2332b57ec1f597b940990958f1015b2d16de412b11"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__floor_module__intact__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "5f21c085c7362ca8677ddff02a80ac84b9652602bb0c04d4e7524f0808f8b20d"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__floor_module__intact__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "6a36d957162ca7aa26d90ac004391df147858408f0eef4e6f87480775e2faefa"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__damage_effect__critical__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "39faa738c3b7f6cde0f7c9f902916d6f9d77753a0de0fa70c232acf04cf3c0f4"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__damage_effect__critical__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "d4c68ce5dce7b816d8fbdfb3318f8371afc205e2af06a636c33edab8f868b508"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__damage_effect__critical__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "378c35455aa3ff9dd7ba4ba0fd64ebb5209abe3900c5c8ade7b857a82e9e404e"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__damage_effect__critical__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "60e35ba83d5c654bc971b245da83c888cba3ec80a6e012e5cf90ea5d09c7e3e0"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__damage_effect__critical__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "0a3fc73e27f81697db69dd34b4117469559287b86241fedbd11e9a5a5aae4bf3"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__damage_effect__critical__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "d26687ea9666894dff4494f39b08fb5cf613cc677d67fda75503c490f8e66c05"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__damage_effect__critical__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "315b50cc22219be1b999820b734c6e19de0d6d7d25d1998b9ff85fb2756ed3bd"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__damage_effect__critical__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "a056379624c4f42e73d674f800615539d88e2573e5f59d8becf8df27963b3c3d"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__damage_effect__critical__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "6a60c4a86fcfce042de4aa45825937fb13a1c535b41f924098f33b659a906b30"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__damage_effect__critical__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "6922483ec3f7b5b801b625f4bb3973f1e0ba0f5c1d6c7fcfa00c9a0632c24852"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__damage_effect__critical__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "e29b7bb36b209aaa30c48fdea23b05c54ab854e370829f12671ac78f429cb399"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__damage_effect__critical__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "4fe9e772ff57ed4dc184f314f729cdc2f236ad43cee819768ef73757655f2ac8"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__intact__far__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__silhouette.png",
+          "sha256": "552d28231544b8dc6168c034561665b3c824e7ade574c0d91ab284efc6e9ee75"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__intact__far__Lighting_Neutral_QA__world_neutral_dark__mobile_landscape_hard__silhouette.png",
+          "sha256": "577af431f2ae0458554b4db34b16a3998a8bbb40dd0ff362bcc3da90a54144f4"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__intact__far__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__silhouette.png",
+          "sha256": "5fe9a8444b44037e893448329941a83c97953d1fd7ca1ccf905a3191eef870e5"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__intact__far__Lighting_Neutral_QA__world_neutral_dark__mobile_landscape_hard__silhouette.png",
+          "sha256": "dc879210e297e34c59c22842121b6ea98332f6c69485b372ecb8b8c09505b85b"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__intact__far__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__silhouette.png",
+          "sha256": "4b2658f964a7944d1b9eb0a29784cdaf5d0528bdcb5b6ef4957ae3ef8b9d10b6"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__intact__far__Lighting_Neutral_QA__world_neutral_dark__mobile_landscape_hard__silhouette.png",
+          "sha256": "96f89ef520658969d153470c7d71c888084cac75fb6cee036d9c7f06368e67cc"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__floor_module__intact__far__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__silhouette.png",
+          "sha256": "7b50320d153680325960360990bdfd968987da2f13ed5bf9e70d793a19532762"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__floor_module__intact__far__Lighting_Neutral_QA__world_neutral_dark__mobile_landscape_hard__silhouette.png",
+          "sha256": "1cffc0c6296fe916625fc147b35f0bb5267560bf19efd2357ed10ba966b98f90"
+        },
+        {
+          "jobId": "detail_band_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__barricade__intact__near__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__detail_band.png",
+          "sha256": "b155c3ffb486a0669d7f21778bfe765b93a438fc4379261bea95e69a06017599"
+        },
+        {
+          "jobId": "detail_band_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__objective_core__intact__near__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__detail_band.png",
+          "sha256": "0426324d9a795a968bb93fa121bf1cee07b0544acdab14cf99c6a4de235fc7d0"
+        },
+        {
+          "jobId": "detail_band_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__enemy_standard__intact__near__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__detail_band.png",
+          "sha256": "0862ea314d04f859e0bf6694a392af1646c8f512d8bd9f7e4742f57ad11ff597"
+        },
+        {
+          "jobId": "detail_band_smoke",
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__floor_module__intact__near__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__detail_band.png",
+          "sha256": "4bdc25249691fa495155f374cc658fed0c83f9e9bafebe61a17d739987324032"
+        }
+      ],
+      "stressEvidence": [
+        {
+          "sceneId": "stress_barricade_30",
+          "count": 30,
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__stress_barricade_30.png",
+          "sha256": "112417792a03f76cd32ab18a9ef75ef28831856171d4aa07d7e6820966232efc"
+        },
+        {
+          "sceneId": "stress_enemy_standard_30",
+          "count": 30,
+          "path": "build/salvaged-frontier/renders/smoke/salvaged-frontier__stress_enemy_standard_30.png",
+          "sha256": "54937910be1c6cb801bf852b53a135051b53f0d3bcad26a711aecaa8bbb88870"
+        }
+      ]
+    },
+    {
+      "territoryId": "clean-tactical-diorama",
+      "status": "PASS",
+      "buildReportSha256": "188450f8c0775621e7830494e0732fe20a6effb82f8f3d36cb775b7f1e03493f",
+      "inputHashes": {
+        "territory": "dbd1c6cb8aa43922a884751abcb8d0895e312439eb17d0ed501a5d3e50282d3c",
+        "calibration": "8a33c6c8a9b5a02ef460f5e698907a4d6d623e2f5c475047cd3dbdccc102ace9",
+        "camera": "f2daf7d92ff4db38a588cb29588c5856c8894ec0c11d30d3d01c527bf7cd8d44",
+        "renderMatrix": "1912f4b47aeb6064f8022bc3275b3b881cfeed39e1c3421800112c30d1b211f2",
+        "lighting": "8e3db2df064ac33f79703e21aa702709a7162fa43b56d07f706e3af03647e085",
+        "materials": "41fadb667eb50a2252e6721649afee1b38b98a667ea7c2051f5f465ad9896b83",
+        "generator": "56595b8c3e615f19ff84d4f9e52969d9a63be0c6b48150d29173b0f4a3016880"
+      },
+      "expectedRenderCount": 108,
+      "actualRenderCount": 108,
+      "renderEvidenceComplete": true,
+      "renderEvidence": [
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__intact__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "c6fad5843a5c1fab4f0a8c180aa8886349f2cfdfecbe26a0f42e7cf40d048fab"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__intact__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "7aeb768c9ea30edbd75857ff3e0b4689f35b75b764ada159a24d5219efa14534"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__intact__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "2fbea7e4addacd6ef357049af183890fb25c6acfdb343d4b15465bda2aa74089"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__intact__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "bb624794a5a3443006e776c2893d8bec9a718f68b7cf79071ad573a15566f2eb"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__intact__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "4146e524555fb15bd23c2cbee1671937986b763e830672ede7d63bfcdd6e7eb6"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__intact__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "64c5b35170da2b7849e0500aca22c74ffbd73df84507801cca891eceaeb5c664"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__intact__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "f59828877f9b6e2c77c892e9a4557dd160aed0bdefbde6161187471040720738"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__intact__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "f6c7a3aca5b674d6c83e173cc6e07da00ce762911604f1cd317b1dd475297466"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__intact__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "142c5a1252841374771c724149a8a7db5b181a53a3b7336b970d373cfa063460"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__intact__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "2006e227a219a259d6697b0c48a0e2d73d8257c0a8e58db48e386f3236915f20"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__intact__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "b9357ecb6726b19eb074f905ad43f38a201bf7f65f6a6a59886812342e6d5349"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__intact__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "a16afa59c910b9b05021b06c94e428897c2612c8fe4171744f03b665db60eb90"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__critical__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "acdc37a8f37caf6a6270ec26a56e4567036bca815fe7ed117b72d01bbe9c2b1a"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__critical__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "a90ac45e6f1bf154a0c0c20d77405a0359cb88841f13fc18cc4e19d44ca73b07"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__critical__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "68d59a7669fd2ebe5c9b129323503e59663b3e17d3ae795edc5414f061cc11b3"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__critical__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "c8943de0cd0058ca6a4fc52ac91a67e5e5f187d5a91b7c15a56afe19de85f67e"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__critical__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "ea55817bfb02da41cbb1dbc99d01b7ab00136663a1e8b03dec64774c0e993c2e"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__critical__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "c55f0d7a31905d7d79ce660fe4537932d6ff8cf36ef5da1c170217d2dd675fcf"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__critical__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "caf75cfc0e555f3fa66c20b69a750f902d5ceb360e60cff94fad35b945758bd0"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__critical__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "a37bfc35b22c86f3ddb6b6fac651a4401845ef579438fad8de2e8a3efffba6f1"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__critical__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "f0cb70c2179fc164d6cf9336bcd7d4b75389b971e7cde44ab32dad81109b2d9e"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__critical__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "1d2606417fd668f5d5f872939f55e00e31f8606c5c2e6d86d0f705963faf7a04"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__critical__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "2edb6b172fc305f6a50cd242e3a3bb0e0ddaaf278abb67c0215dd72bad17e493"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__critical__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "c5c3d2eb5fb7deda4b97a5855c5bc918c65fb3670733ebcd07f72731bc69da7b"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__intact__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "89ea1bd2f23286d89fdfcdcc30adf6e517bf525bcef4f2b88bbbdb4fbbad60ba"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__intact__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "4a4be7f1cd31102f1cdec91fc534357808e40e01fc31b5bf98ae9879babd00ce"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__intact__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "e9de6dbd4fddfd4a876f37224684e6d75fbeb34afaeef5cf8f11d358b586ac09"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__intact__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "b9fe5e61946c9008e5dc12eca34b0e033190862a140101913c034b09eec8f8bb"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__intact__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "7a957adff72198cc7d994cedcb5002087033a63eb8c7da8be664c91782ee6b3d"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__intact__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "7e048a435f215d36d4cdbf5067206d14a27659ac20970c6c0ed74e82b1f0f9db"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__intact__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "9ba1b99453884ade44f806b65b23d513b4f73ee61ab6df4ca54cbeede27eb150"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__intact__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "ea91b0ff081275ad2ef6c729c6fd2b660580f917fe137daf3acd84f36bbb70cf"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__intact__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "26b32fc23984dec5b37d4ab62431aadf8c6ce96d3a119db66ede86023320b872"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__intact__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "ae5f0636caaf04dfc66ae6612719617f490e12a624704de90a4b1f03b75606f7"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__intact__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "85ca40fe94836765321f34023f765472a0ac037e291b865fe0b40a9774f2569e"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__intact__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "bd8107905fe35295957e353893eca9112a43db6424f96d42430a595299f021ac"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__critical__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "9258f4e7201069174d7900ddb85b62b198b39dad40380f5c6e0698cca86a2312"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__critical__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "846b67b3192a775bf2a30fe6835a3afad96ae955a56f691dfe69d7b663c16180"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__critical__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "ac7536e0661e77c68227e23fb443cadc5c58674c0b49e90335bc23c1e00d9698"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__critical__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "d467b73c40fdc2056ac404074fc77793f411ae6824bbcdd3bf12d4699658326c"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__critical__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "bc1c6c6de4dca6ea097c43a8675236f65b1f189e66ad1b7a0c0ec867775d95cf"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__critical__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "a740c5b544c1c1549d56af10545f81b52077758fcdf42b7ef5b47de3342c2d02"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__critical__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "2529dfa0fa360a7324d0cfdbd99570c7c34633d82ae5353b846f27ab41bd266d"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__critical__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "5786fec61281099233af7ce3f811565f5d3f0033cef8e0510d968431a71bc538"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__critical__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "5bfe616856d53879612c54732f2dbadb9c3104bed57925ebd2953478273dc003"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__critical__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "00c8538611819e50d586024dff987df438c0d5a06009c677ba9079edb476cbbd"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__critical__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "840ec37671a28003db956e36758142dbbb8738012dadc2f34b9d9c1f75dd33c7"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__critical__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "2aea308ee6a8c2a32e2958753cae22462ddbda7e48c037ded3d813e8f9a15f2c"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__intact__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "f8c719f8483c4e3ac455e8878341ba9df0caa5c112109aa02fde7e489c1d448d"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__intact__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "71d84d8f6b0a8bbd2cb1f0223c73a950aa4e950a263014c220c8ba5b41a41405"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__intact__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "569a117cb5b841961f2daeeae240d5a792d34cddc2fa2e7e35eb40627c44d33d"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__intact__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "19ce685d8a72eb4563d05458aeff2b8e6dc29507bd43cab7f6eef1bde3ba4d73"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__intact__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "f01556367dd70a1341c0cd5e79542a910050e2c45210dc38ba88eba28bdecfc9"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__intact__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "87d0ccb84471128e2ca92e9242e27ba4d6963aafc8fb54d4d831e5c9f3c26297"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__intact__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "67a8a8ad71fefea0bd63d81643d153279b21ce107086289a9a7f4d6bef9380e0"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__intact__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "9c43028f5247f7d3ac5950a5a71745fb80fd85659f1eecf887f04e634fe45ce8"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__intact__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "950104815a3edb17d975b9f0ef4d0fccebd7bc74ada1989d982284c60af42073"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__intact__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "dfc37ad9e1d5717a74de6c2944a64fac102367cd284400cf1c94a44e09d2d7e8"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__intact__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "2603338661b905769ad5901af1b2fe6794e9c5aa5f99a01192c904fdb26659c4"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__intact__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "c333b6b8c3714eca04a2e66b874294323c4302e3460d2e69b2198e9eacbdc9c5"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__critical__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "57a208fd887115c48ce3ba981b04b0e90cad0e538ba3754059ca1854da9cef62"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__critical__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "d3fd681091732c6636a5b8bb4d716cd0d0843b860a0541763b751cf670f6abc9"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__critical__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "d974657bae46ddc39b6f676a505383509766a5a9d0ceab3ccea0116f00b6ba75"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__critical__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "e3591eed359a4cb4a86e6fd4c17893aafa1bb75067c1e9455cf3c6b4477d853e"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__critical__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "f5e0f00299f37006d7cb78867dac2e57c65afd837d2545281fce6b7a38261e54"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__critical__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "b4a99da7ed493e220a8403ca6d4734b3d06131adfe5fb4be431bfc55388f8f70"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__critical__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "530ae97159b4d391673362e9866b9c4d92b830eb456b9f79dcd827be94ab1085"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__critical__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "188de9d965046f8b10b09ef7b4d4e01e813dabb83c43b6e59b88ad59e3de46a7"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__critical__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "ece24b5506b6fd427851ed2bd9736c82d4fb0e37c708aaa193055d8a950d8f48"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__critical__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "9ae958f3e3ab02dacf9dd307a456e6f4e2695641f1174a9e5051c418122b06c0"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__critical__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "17b06bd54517ad41521a1264a73be462450d196ad19be047e67518b343ebf148"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__critical__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "76d3af2edc686dd3969d8ccb129702997e4333da42e760ad24a732fec37f3a4a"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__floor_module__intact__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "609c862cb0e82b915754372227e8913896b998ad6c6e69ad459615963c269b83"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__floor_module__intact__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "9b2a5bb993f7490a4b502f92095c7a80250c20705ff7d8f94a1017944a9f7f56"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__floor_module__intact__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "f8eb4f9068fff72a5c5736344d19106a7912f8ee03a7ceec3a25ef97866d53f9"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__floor_module__intact__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "58093e5da407218a878e1da7fc17e6fa2c64d7bcb0ae974120fd5a6338a19b03"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__floor_module__intact__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "e703640a1c83bbb83a41cc3e719fd95c6e56bc0b09351971ed8fa220a7417cc2"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__floor_module__intact__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "bc62faaf4e1dd43913c64231f1b79bbebd645b375fd201d9ea8878400359ef2f"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__floor_module__intact__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "d35d41659aacc97c88f4c440a5bbff5ac6363fb623baf98cba5aa47c985e7a0a"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__floor_module__intact__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "22973df7052b71beb84cae9bd5998820aaa6b5f8f9b86a2aee9d1e36a848dd0f"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__floor_module__intact__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "510051678a5afd9c6b8c91c374d829d823d3ed45896d1d32aa34d4a22d9c92fb"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__floor_module__intact__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "5a68b321ec80df9b35ccf96e53d0cc1e44c2700562ae3bc6188755595090e53e"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__floor_module__intact__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "977f6091ef5f15f573c585676a6ceb65d3d0bf195a0eb87c930f89de50cbc5b1"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__floor_module__intact__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "1e16ea6c4fb1a8f64fdc221d77848f4dd329b116f2eb5a807d6eee6495c551f9"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__damage_effect__critical__near__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "acd25182a3d9d39fd6fe3eda6f7f6881dc1b0686629a051270dbb64f47d81bb0"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__damage_effect__critical__near__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "5549618155fee3c6163b25752b33ad27afc2f88ae5efa4c184ef49d49459b897"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__damage_effect__critical__near__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "ffcbc1517c902bf9d1da1bffa7b3c3cf53c442869fce61fba68b2750f9f9387c"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__damage_effect__critical__near__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "160575eb331cdd5f9f53d3fe984e88a2d54a48548508ef30803f93b17ad8f39f"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__damage_effect__critical__mid__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "1b125457f1938a7f6882f9ef89c2ad1cb362d316790b591c5ed44bdbde3874ba"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__damage_effect__critical__mid__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "ecaacd9d6af941cc63b9493fea3ba4c00bc9b2d980e686927a03688308b65b0e"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__damage_effect__critical__mid__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "56d989fe41f90dd10e8316906481afa354482e99d38684bec284058b413e4977"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__damage_effect__critical__mid__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "cd9127448750c3b2a23cd8db35cc7f35f55fdac8c694838e75e7c7d6ad5ce66f"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__damage_effect__critical__far__Lighting_Gameplay_Default__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "15685cc2f40e3f5a2503530ce6032d7b8a6ed9a86ef6c04d71612afd6f78c426"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__damage_effect__critical__far__Lighting_Gameplay_Default__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "6fb0c5d9f4cb2152b88ea620f2fee440882d24e1f5bdc7ad2a4645992b4a1515"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__damage_effect__critical__far__Lighting_Adverse_Night__world_neutral_light__mobile_landscape_hard__beauty.png",
+          "sha256": "a8449ce74e1d00edf77cc928211a92d518ac2ceb58533b7c42b7dcbeb7c5dcf4"
+        },
+        {
+          "jobId": "mobile_semantic_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__damage_effect__critical__far__Lighting_Adverse_Night__world_neutral_dark__mobile_landscape_hard__beauty.png",
+          "sha256": "11eea9561afb1aac92357ba17d6d80d1d7d037939ed0b25b9158260d9d8c05c2"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__intact__far__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__silhouette.png",
+          "sha256": "bc171a843e370c6394682c97ffd0c64719d99f62a2e3944d133a3fb559477d7f"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__intact__far__Lighting_Neutral_QA__world_neutral_dark__mobile_landscape_hard__silhouette.png",
+          "sha256": "a15854f27aca0d6924055a155dc8ae9bd4e2251b24b5fa9a10fbcaa6b777d772"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__intact__far__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__silhouette.png",
+          "sha256": "547ee4335c111569ea544bb0137e9d42c9f4f83485a64e016af6592378d84be8"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__intact__far__Lighting_Neutral_QA__world_neutral_dark__mobile_landscape_hard__silhouette.png",
+          "sha256": "5bb8d0e941761b16386eab10ca0b8f36639c13573ba315cc10d4687f4d68b611"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__intact__far__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__silhouette.png",
+          "sha256": "36b902224ffe86f30fecea5f0809a30336d79f61110eba0ec262d2b6fd94231a"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__intact__far__Lighting_Neutral_QA__world_neutral_dark__mobile_landscape_hard__silhouette.png",
+          "sha256": "a297825c03a8c3578ac0368f97c0d1f75ea79f9eaa80d03d6121481584638b00"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__floor_module__intact__far__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__silhouette.png",
+          "sha256": "5b84a0fbdb3972bd880273db11122d276e2895b233702081fb8f56d185d5e90f"
+        },
+        {
+          "jobId": "far_silhouette_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__floor_module__intact__far__Lighting_Neutral_QA__world_neutral_dark__mobile_landscape_hard__silhouette.png",
+          "sha256": "9bf64a6751799da9abde5c18a1efccac89c7414444642dd749c76ca5f2be5343"
+        },
+        {
+          "jobId": "detail_band_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__barricade__intact__near__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__detail_band.png",
+          "sha256": "8ae5e69fc177c0e5ce6c81bb27237f8c6e53de8752c4d7bf8db6b42a8b44a804"
+        },
+        {
+          "jobId": "detail_band_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__objective_core__intact__near__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__detail_band.png",
+          "sha256": "1b340ed0c2f97e18c0cc6009f51719564f75a5828568c9c143f230eb56c08392"
+        },
+        {
+          "jobId": "detail_band_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__enemy_standard__intact__near__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__detail_band.png",
+          "sha256": "9ca594cc51f2742621fbf76cb0dcea56ffb94cd06ee030abb5f4225177323ae8"
+        },
+        {
+          "jobId": "detail_band_smoke",
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__floor_module__intact__near__Lighting_Neutral_QA__world_neutral_light__mobile_landscape_hard__detail_band.png",
+          "sha256": "7b2606c474c81ca1ee8889c3c8d17732ec227c648a301fb9b163742e34dacd74"
+        }
+      ],
+      "stressEvidence": [
+        {
+          "sceneId": "stress_barricade_30",
+          "count": 30,
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__stress_barricade_30.png",
+          "sha256": "308b656bcb3b4a616a16fffe7d836afc42ecd0954d455d0008d2b92863d02371"
+        },
+        {
+          "sceneId": "stress_enemy_standard_30",
+          "count": 30,
+          "path": "build/clean-tactical-diorama/renders/smoke/clean-tactical-diorama__stress_enemy_standard_30.png",
+          "sha256": "92bd2f2a02dbc863ead318ac2f811a1ed1008e973ffac6dc448cab782b99ff1d"
+        }
+      ]
+    }
+  ],
+  "totalExpectedRenderCount": 324,
+  "totalActualRenderCount": 324,
+  "totalStressRenderCount": 6,
+  "artifactsBundled": false,
+  "artifactRetentionNote": "Hashes attest the locally validated build artifacts. The reproducible build/ directory and render images are intentionally excluded from the release ZIP.",
+  "issues": []
+}

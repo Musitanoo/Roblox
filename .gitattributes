@@ -1,0 +1,25 @@
+* text=auto
+
+.gitattributes text eol=lf
+.gitignore text eol=lf
+.editorconfig text eol=lf
+.luaurc text eol=lf
+.styluaignore text eol=lf
+*.luau text eol=lf
+*.lua text eol=lf
+*.json text eol=lf
+*.md text eol=lf whitespace=-trailing-space,-blank-at-eof
+*.ps1 text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Preserve the exact upstream Luau LSP definitions snapshot.
+tools/luau-lsp/globalTypes.d.luau whitespace=-blank-at-eof
+tools/roblox-art-bible-sota-v3/studio/tooling/globalTypes.d.luau whitespace=-blank-at-eof
+
+# Preserve deterministic generated review markup without rewriting package evidence.
+tools/roblox-art-bible-sota-v3/build-iteration-v5/review/index.html whitespace=-trailing-space
+
+*.rbxl binary
+*.rbxm binary

@@ -1,0 +1,279 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://roblox-top1.local/schemas/task-protocol.schema.json",
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "studyId",
+    "minimumParticipants",
+    "presentation",
+    "taskGroups",
+    "exitQuestions",
+    "privacy"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://roblox-top1.local/schemas/task-protocol.schema.json"
+    },
+    "schemaVersion": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "studyId": {
+      "type": "string",
+      "minLength": 8
+    },
+    "minimumParticipants": {
+      "type": "integer",
+      "minimum": 8
+    },
+    "presentation": {
+      "type": "object",
+      "properties": {
+        "exposureSeconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "noTerritoryNames": {
+          "type": "boolean"
+        },
+        "randomizeBlindLabelOrder": {
+          "type": "boolean"
+        },
+        "sameDeviceClassPerParticipant": {
+          "type": "boolean"
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": [
+        "exposureSeconds",
+        "noTerritoryNames",
+        "randomizeBlindLabelOrder",
+        "sameDeviceClassPerParticipant"
+      ]
+    },
+    "taskGroups": {
+      "type": "object",
+      "required": [
+        "silhouette_60",
+        "function_30_mobile",
+        "state_15_30"
+      ],
+      "properties": {
+        "silhouette_60": {
+          "type": "object",
+          "required": [
+            "distanceStuds",
+            "resolutionId",
+            "tasks"
+          ],
+          "properties": {
+            "distanceStuds": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              }
+            },
+            "resolutionId": {
+              "type": "string"
+            },
+            "tasks": {
+              "type": "array",
+              "minItems": 3,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "taskId": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_\\-]*$"
+                  },
+                  "assetId": {
+                    "enum": [
+                      "barricade",
+                      "objective_core",
+                      "enemy_standard",
+                      "floor_module",
+                      "damage_effect"
+                    ]
+                  },
+                  "prompt": {
+                    "type": "string",
+                    "minLength": 10
+                  },
+                  "answerType": {
+                    "enum": [
+                      "single_choice",
+                      "direction_choice"
+                    ]
+                  }
+                },
+                "required": [
+                  "taskId",
+                  "assetId",
+                  "prompt",
+                  "answerType"
+                ],
+                "unevaluatedProperties": false
+              }
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        "function_30_mobile": {
+          "type": "object",
+          "required": [
+            "distanceStuds",
+            "resolutionId",
+            "tasks"
+          ],
+          "properties": {
+            "distanceStuds": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              }
+            },
+            "resolutionId": {
+              "type": "string"
+            },
+            "tasks": {
+              "type": "array",
+              "minItems": 3,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "taskId": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_\\-]*$"
+                  },
+                  "assetId": {
+                    "enum": [
+                      "barricade",
+                      "objective_core",
+                      "enemy_standard",
+                      "floor_module",
+                      "damage_effect"
+                    ]
+                  },
+                  "prompt": {
+                    "type": "string",
+                    "minLength": 10
+                  },
+                  "answerType": {
+                    "enum": [
+                      "single_choice",
+                      "direction_choice"
+                    ]
+                  }
+                },
+                "required": [
+                  "taskId",
+                  "assetId",
+                  "prompt",
+                  "answerType"
+                ],
+                "unevaluatedProperties": false
+              }
+            }
+          },
+          "unevaluatedProperties": false
+        },
+        "state_15_30": {
+          "type": "object",
+          "required": [
+            "distanceStuds",
+            "resolutionId",
+            "tasks"
+          ],
+          "properties": {
+            "distanceStuds": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              }
+            },
+            "resolutionId": {
+              "type": "string"
+            },
+            "tasks": {
+              "type": "array",
+              "minItems": 3,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "taskId": {
+                    "type": "string",
+                    "pattern": "^[a-z][a-z0-9_\\-]*$"
+                  },
+                  "assetId": {
+                    "enum": [
+                      "barricade",
+                      "objective_core",
+                      "enemy_standard",
+                      "floor_module",
+                      "damage_effect"
+                    ]
+                  },
+                  "prompt": {
+                    "type": "string",
+                    "minLength": 10
+                  },
+                  "answerType": {
+                    "enum": [
+                      "single_choice",
+                      "direction_choice"
+                    ]
+                  }
+                },
+                "required": [
+                  "taskId",
+                  "assetId",
+                  "prompt",
+                  "answerType"
+                ],
+                "unevaluatedProperties": false
+              }
+            }
+          },
+          "unevaluatedProperties": false
+        }
+      },
+      "unevaluatedProperties": false
+    },
+    "exitQuestions": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string"
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "properties": {
+        "blindMapExcludedFromReviewerPackage": {
+          "type": "boolean"
+        },
+        "collectNames": {
+          "type": "boolean"
+        },
+        "participantIdsPseudonymous": {
+          "type": "boolean"
+        }
+      },
+      "unevaluatedProperties": false,
+      "required": [
+        "blindMapExcludedFromReviewerPackage",
+        "collectNames",
+        "participantIdsPseudonymous"
+      ]
+    }
+  },
+  "unevaluatedProperties": false
+}

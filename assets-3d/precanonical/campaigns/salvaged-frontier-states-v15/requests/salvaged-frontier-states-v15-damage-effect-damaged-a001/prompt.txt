@@ -1,0 +1,132 @@
+GPT IMAGE 2 — ONE OBJECT, ONE GAMEPLAY STATE, ONE IMAGE
+
+Use the `gpt-image-2` image model. If that exact model is not selected or
+visible in the interface, stop and do not substitute another model.
+
+Generate exactly one image: a clean 2x2 state-definition board. Every quadrant
+must depict the exact same object construction in the exact same target state.
+
+CROSS-VIEW IDENTITY LOCK — THIS IS NOT A FOUR-CONCEPT SHEET
+- Freeze one exact source-to-impact vector, contact anchor, wedge grammar, arc family and fragment count across all quadrants.
+- Treat the board as four diagnostic views of one frozen transient event, never a physical prop or four explosion concepts.
+- The black silhouette must preserve directional taper and open target space.
+
+TARGET
+- Object: Directional Damage Effect (`damage_effect`)
+- State: `damaged` only
+- Art direction: Salvaged Frontier owns world identity; Industrial Toy Defense
+  contributes disciplined one-second readability only.
+- Canon: vc_damage_effect__salvaged-frontier__v1
+- Gameplay function: communicate hit direction, damage severity and impact cause
+- One-second promise: A clear wedge, arc and few large fragments point back to the impact source and distinguish serious from critical damage.
+- Dimensions: 4.0 x 4.0 x
+  4.0 Roblox studs; pivot impact_center.
+
+BOARD LAYOUT
+- Top left: hero three-quarter front, complete object visible.
+- Top right: three-quarter rear, same construction and state.
+- Bottom left: solid black silhouette, no internal shading.
+- Bottom right: elevated Roblox third-person mobile gameplay camera.
+- Keep identical scale and recognizable proportions across the two perspective
+  views; this is a turnaround proof, not a concept-variation sheet.
+- Neutral mid-gray background, neutral studio light, no environment or props.
+- No captions, labels, letters, numbers, logos or generated text in the image.
+- Do not show intact/damaged/critical comparisons or any second gameplay state.
+
+IDENTITY AND CONSTRUCTION
+- World role: A short-lived visual sentence that tells the player where the hit came from, what it struck and how severe the consequence is.
+- Emotional intent: Punchy, satisfying and informative without obscuring the target, camera or next decision.
+- Territory thesis: A forceful graphic impact sentence whose large vector wedge, bent arc and two or three material-matched fragments preserve target visibility and frontier tactility.
+- Front/orientation: The dominant cone or wedge aligns with incoming force and terminates at the exact impact anchor.
+- Interaction read: No interaction affordance is present; the effect only explains an event.
+- Danger read: Severity grows through angle, scale, fragmentation, timing and audio, never through hue alone.
+- Recognition landmarks: dominant directional wedge, impact-centered arc, two or three large fragments, short residual tail
+- Negative spaces: clear target center after flash, open space opposite the impact vector, gaps between large fragments
+
+REQUIRED COMPONENTS
+- ImpactFlash: compact flash at impact center; Mark the exact contact point for less than the maximum flash duration. Relationship: Anchored to the target contact and immediately yields to the directional shape. Reading role: Pins the event to the correct target.
+- DirectionalWedge: cone, wedge or arc at aligned through impact center; Communicate incoming force direction and primary severity. Relationship: Starts opposite the source and terminates at the impact anchor. Reading role: Carries cause and direction before decorative fragments.
+- MajorFragments: two or three large shapes at along outgoing force vector; Reinforce material response and severity with a bounded fragment count. Relationship: Emerge from the impact anchor and never become persistent geometry. Reading role: Supports severity without particle fog.
+- ResidualTrail: smoke, spark or energy streak at thin vector-aligned tail; Preserve causality briefly after the primary impact shape ends. Relationship: Fades from source vector toward the impact center. Reading role: Allows a late glance to recover hit direction.
+
+FORM HIERARCHY
+- Primary 72%: directional cone or wedge, impact arc
+- Secondary 23%: two or three large fragments, short directional streak
+- Tertiary 5% maximum: few sparks, thin residual smoke, brief contact flash
+- Construction translation: The effect inherits Industrial-level shape economy and direction clarity, then expresses Salvaged Frontier through material-matched fragments, warm edge sparks and restrained dusty weight.
+
+MATERIAL SYSTEM
+- direction_zone: stylized_energy_or_dust; critical; high contrast but bounded; Graphic solid shapes with soft controlled falloff, not realistic volumetric fog. Wear: Not applicable; the effect is transient.
+- severity_zone: material_response_fragments; bareMetal; middle to bright accents; Large simple fragments derived from the struck material family. Wear: Not applicable beyond the event frame.
+
+TARGET STATE CONTRACT — `damaged`
+- Summary: A compact directional impact explains one serious but repairable hit with one wedge, one arc and two large fragments.
+- Required changes:
+- Primary shape uses the lower approved scale and lifetime.
+- Two large fragments and a short residual trail reinforce direction.
+- Shape and silhouette cues:
+- single compact wedge
+- two separated fragments
+- clear open space around target
+- Value cues:
+- brief bright contact point
+- mid-high directional mass
+- Color cues:
+- warning-dominant palette
+- critical color absent or minimal
+- Light cues:
+- flash under 0.12 seconds
+- no persistent emission
+- Motion posture implied in the still:
+- fast directional expansion
+- short controlled decay
+- VFX cues, kept sparse and non-obscuring:
+- two large fragments
+- thin residual vector
+- Component operations:
+- DirectionalWedge / EMIT: Emit the compact force-aligned primary shape.
+- MajorFragments / EMIT: Emit exactly two large readable fragments.
+- Territory translation: One compact vector wedge, one continuous bent arc and two or three target-matched fragments identify a meaningful hit while preserving target silhouette and lane visibility.
+
+GAMEPLAY TRUTH BOUNDARY — DO NOT VISUALIZE UNPROVEN BEHAVIOR
+- Contract status: VISUAL_ONLY
+- Contract reference: PD-08
+- Trigger: A validated event classifies the hit as serious but non-critical.
+- Capability effect: The effect reports an existing damage outcome and never calculates or changes it.
+- Collision effect: The effect is non-collidable, non-queryable and transient.
+- Permitted visual claim: One compact wedge, one arc and two major fragments reveal contact, source direction and repairable severity.
+- Hard claim boundary: Material fragments may echo the struck surface but may not invent hidden geometry or persistent debris.
+
+RUNTIME STATE SCOPE — ONE PRIMARY STATE ONLY
+- Primary generation states for this object:
+  damaged, critical.
+- This image depicts only `damaged`. Do not compose operational overlays,
+  transients or the terminal state into this primary reference.
+- Operational overlays excluded from this image:
+  none.
+- Transient states excluded from this image:
+  reduced_motion.
+- Terminal runtime-only state excluded from primary generation: none.
+- Composition rule: Select exactly one severity grammar and instantiate it from the real source-to-impact vector, target material response and accessibility settings.
+- Coverage boundary: Damaged and critical are event-severity reference grammars, not persistent object health states or physical meshes.
+
+INVARIANTS — NEVER CHANGE
+- Impact-center pivot and four-stud bounds remain fixed.
+- The dominant shape aligns with the real incoming-force vector.
+- Target, direction and severity remain readable without color.
+- Hit flash, primary shape and residual durations remain within calibration limits.
+- The effect never persists as collidable or queryable gameplay geometry.
+
+NO IMAGE REFERENCE
+- Construct only from this closed canon contract.
+
+STYLE DISCIPLINE
+- Use graphic solid impact shapes, material-matched broad fragments and restrained dusty weight with no physical chassis.
+- Salvaged Frontier appears through tactile material response and warm bounded edge accents, not repair history or construction grammar.
+- Prioritize target visibility, direction and severity over spectacle.
+- The image is precanonical visual evidence only. It does not authorize hidden geometry, canon lock or production.
+
+FINAL OUTPUT SELF-CHECK — FAIL RATHER THAN IMPROVISE
+- All quadrants depict the same frozen vector, contact point, fragment count and target severity.
+- The target center and incoming direction remain visible in grayscale.
+- Nothing reads as a manufactured object, collision volume or persistent debris.

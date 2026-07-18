@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0.0",
+  "stage": "state_definition",
+  "views": [
+    "hero_three_quarter_front",
+    "three_quarter_rear",
+    "black_silhouette",
+    "mobile_landscape"
+  ],
+  "sameObjectAcrossViews": true
+}

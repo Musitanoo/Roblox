@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0.0",
+  "states": [
+    {
+      "id": "intact",
+      "visualChange": "A forward-driven, balanced baseline threat with active sensor, heavy hands and a steady gait toward the fortress. Torso remains compressed and forward-biased. Both heavy hands and the forward sensor are fully active.",
+      "invariants": [
+        "Two-and-a-half by five-and-a-half by two-and-a-half bounds and feet-center pivot remain fixed.",
+        "Forward sensor, compressed torso, heavy hands and short legs remain recognizable.",
+        "The enemy never becomes player-proportioned or gains friendly interaction language.",
+        "Damage changes posture and exposure without changing hitbox anchors arbitrarily.",
+        "Threat direction remains readable before attack VFX or audio."
+      ]
+    }
+  ],
+  "independentStateDesignForbidden": true
+}

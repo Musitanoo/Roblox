@@ -1,0 +1,35 @@
+{
+  "$schema": "https://roblox-top1.local/schemas/precanonical-result.schema.json",
+  "schemaVersion": "1.0.0",
+  "resultId": "salvaged-frontier-states-v3-enemy-standard-intact-a001-result-001",
+  "requestId": "salvaged-frontier-states-v3-enemy-standard-intact-a001",
+  "status": "WEB_RESULT_IMPORTED",
+  "importedAt": "2026-07-17T20:25:25.275671Z",
+  "request": {
+    "path": "C:\\Project\\Roblox\\assets-3d\\precanonical\\campaigns\\salvaged-frontier-states-v3\\requests\\salvaged-frontier-states-v3-enemy-standard-intact-a001\\request.json",
+    "sha256": "a8f88ff2c674e643517f3f0e63f3b1188b277fbabbc7c514339225921d32cd2b"
+  },
+  "promptHash": "77379a566ae0c9406662466026d3213dfb8e41309f7ac5a57671fd99cf3c6624",
+  "generationIndex": 1,
+  "provenance": {
+    "surface": "ChatGPT Web / ChatGPT Images",
+    "modelName": "gpt-image-2",
+    "modelNameEvidence": "UI_CONFIRMED",
+    "downloadMethod": "manual_download"
+  },
+  "images": [
+    {
+      "path": "raw/generated-001.png",
+      "sha256": "aa75680ec71e7073c623d8c8acd4565379d53c541e12f107f13fb44158e318ec",
+      "bytes": 1564996,
+      "width": 1254,
+      "height": 1254,
+      "format": "PNG"
+    }
+  ],
+  "resultDigest": "4a5cebb183904bf434bdf90973e49cb62f54f3d0f7f8a18285c9d41dad506e32",
+  "canonical": false,
+  "geometryAuthority": false,
+  "humanReviewStatus": "PENDING",
+  "productionApproved": false
+}

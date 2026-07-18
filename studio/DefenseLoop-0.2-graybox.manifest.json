@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "slice": "Defense Loop 0.2",
+  "milestone": "graybox-readability",
+  "sourceBaselineCommit": "907aa46",
+  "localSnapshot": {
+    "relativePath": "studio/DefenseLoop-0.2-graybox.rbxl",
+    "format": "rbxl",
+    "length": 108498,
+    "sha256": "90A4BA9BD5748650B1D5BA4A1CB3A222DA696EAC28BB24BC44D133823FDB4B9B",
+    "capturedUtc": "2026-07-15T10:01:10.8349299Z"
+  },
+  "workspaceDelta": {
+    "lane02": {
+      "className": "Folder",
+      "colorLanguage": "cyan borders and forward arrows on blue-black asphalt",
+      "nodes": [
+        { "name": "Node01", "position": { "x": -18, "y": 0.1, "z": 20 }, "size": { "x": 8, "y": 0.2, "z": 11 }, "yawDegrees": 0, "nestedVisualParts": 5 },
+        { "name": "Node02", "position": { "x": -18, "y": 0.1, "z": 9 }, "size": { "x": 8, "y": 0.2, "z": 11 }, "yawDegrees": 0, "nestedVisualParts": 5 },
+        { "name": "Node03", "position": { "x": -18, "y": 0.1, "z": -2 }, "size": { "x": 8, "y": 0.2, "z": 13.5 }, "yawDegrees": -26.565, "nestedVisualParts": 5 },
+        { "name": "Node04", "position": { "x": -12, "y": 0.1, "z": -14 }, "size": { "x": 8, "y": 0.2, "z": 16.5 }, "yawDegrees": -47.49, "nestedVisualParts": 5 }
+      ]
+    },
+    "enemySpawn02": {
+      "className": "Part",
+      "position": { "x": -18, "y": 0.25, "z": 27 },
+      "size": { "x": 7, "y": 0.5, "z": 7 },
+      "material": "Neon",
+      "color": { "r": 255, "g": 126, "b": 47 },
+      "billboardText": "ROUTE 2 / ENTRÉE BRUTE"
+    }
+  },
+  "templateDelta": {
+    "brute": {
+      "className": "Model",
+      "primaryPart": "Root",
+      "parts": 14,
+      "descendants": 24,
+      "scripts": 0,
+      "bounds": { "x": 12.1, "y": 11.2, "z": 5.73 },
+      "basicZombieBoundsForComparison": { "x": 4.85, "y": 6.45, "z": 3 },
+      "roleText": "BRUTE • BRISE-MURS",
+      "visualLanguage": "wide orange armored silhouette, oversized metal shoulders and fists, red eyes"
+    }
+  },
+  "readabilityEvidence": {
+    "primaryRouteLanguage": "yellow arrows and red entrance",
+    "secondaryRouteLanguage": "cyan arrows and borders with orange entrance",
+    "nearestLane02NodeDistanceByPad": {
+      "Pad01": 12.1,
+      "Pad02": 25.3,
+      "Pad03": 10.3,
+      "Pad04": 19
+    },
+    "temporaryPreviewPresent": false,
+    "serverSmoke": {
+      "phase": "PREPARATION",
+      "coreHealth": 500,
+      "remoteCount": 2,
+      "runtimeEnemies": 0,
+      "serverWarningsOrErrors": 0,
+      "clientWarningsOrErrors": 0
+    }
+  }
+}
